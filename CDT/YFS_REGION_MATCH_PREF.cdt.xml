@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<YFS_REGION_MATCH_PREFList TableName="YFS_REGION_MATCH_PREF">
-<RegionMatchPref AddressFieldAlias="State" Country="US"
-    Createprogid=".YCPGenericMasterData"
-    Createts="2010-10-21T20:19:08-04:00" Createuserid="admin" Lockid="0"
-    Modifyprogid="YDKConfigDeploy" Modifyts="2013-07-31T19:27:16-04:00"
-    Modifyuserid="oms_config" RegionMatchPrefKey="2010102120190814959"/>
-</YFS_REGION_MATCH_PREFList>

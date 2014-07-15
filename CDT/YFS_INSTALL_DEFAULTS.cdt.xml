@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<YFS_INSTALL_DEFAULTSList TableName="YFS_INSTALL_DEFAULTS">
-<InstallDefaults Country="US" Createprogid="XMLMigrator"
-    Createts="2010-11-30T16:32:52-05:00" Createuserid="SYSTEM"
-    InstallDefaultsKey="DEFAULT" Instance=" " Language="en" Lockid="0"
-    Modifyprogid="YDKConfigDeploy" Modifyts="2010-11-30T16:32:52-05:00"
-    Modifyuserid="sterling" Variant=" " Version=" "/>
-</YFS_INSTALL_DEFAULTSList>

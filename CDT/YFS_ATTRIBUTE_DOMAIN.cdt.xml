@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<YFS_ATTRIBUTE_DOMAINList TableName="YFS_ATTRIBUTE_DOMAIN">
-<AttributeDomain AttributeDomainID="ItemAttribute"
-    AttributeDomainKey="20101018162521836" Createprogid="XMLMigrator"
-    Createts="2010-10-18T16:25:21-04:00" Createuserid="SYSTEM"
-    Lockid="0" LongDescription="Domain For Item Attribute"
-    Modifyprogid="YDKConfigDeploy" Modifyts="2010-10-18T16:25:21-04:00"
-    Modifyuserid="sterling" OrganizationCode="DEFAULT" Purpose="ITEM" ShortDescription="Item Attribute"/>
-</YFS_ATTRIBUTE_DOMAINList>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<YFS_HOLD_TYPE_TRANList TableName="YFS_HOLD_TYPE_TRAN">
-<HoldTypeTran Createprogid=".YEntityServlet"
-    Createts="2011-05-03T19:29:15-04:00" Createuserid="admin"
-    HoldEffectLevel="ORDER" HoldTypeKey="2011050319291562685"
-    HoldTypeTranKey="2011050319291562688" Lockid="0"
-    Modifyprogid="YDKConfigDeploy" Modifyts="2011-05-03T19:29:15-04:00"
-    Modifyuserid="sterling" Purpose="PREVENT" TransactionId="KOHLS_INCLUDE_INVOICE.0001.ex"/>
-</YFS_HOLD_TYPE_TRANList>

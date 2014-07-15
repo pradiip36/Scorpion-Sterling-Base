@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<YFS_TRAN_ROLLBACK_STATUSList TableName="YFS_TRAN_ROLLBACK_STATUS">
-<TransactionRollbackStatus Createprogid="XMLMigrator"
-    Createts="2010-11-30T16:33:25-05:00" Createuserid="SYSTEM"
-    Lockid="0" Modifyprogid="YDKConfigDeploy"
-    Modifyts="2010-11-30T16:33:25-05:00" Modifyuserid="sterling"
-    StatusKey="ORDER_STATUS_1300"
-    TranRollbackStatusKey="ACCEPT_RESERVATION" TransactionKey="ACCEPT_RESERVATION"/>
-</YFS_TRAN_ROLLBACK_STATUSList>
