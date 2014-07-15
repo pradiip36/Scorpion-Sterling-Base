@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="ShipmentSearchExtn"
+        extnPackage="extn.shipment.search"
+        originalScreen="wsc.shipment.search.ShipmentSearch"
+        originalScreenPackage="wsc.shipment.search" type="diffrential">
+        <Items>
+            <ContentPane _sc_extensibility_moveOrder="3"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="txt_lastName" uId="extn_contentpaneName"/>
+            <Button _sc_extensibility_moveOrder="6"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="SST_SearchButtonBar"
+                label="$(_scSimpleBundle:extn_Print_Expired_Order_Reports)"
+                renderHidden="true" uId="extn_buttonPrintExpiredPicks"/>
+            <CheckBox _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="ckListStatus"
+                label="$(_scSimpleBundle:extn_Expired_Orders)" uId="extn_checkbox_expiredStatus">
+                <BindingData>
+                    <UncheckedValue value="N"/>
+                    <CheckedValue value="Y"/>
+                    <TargetBindings>
+                        <TargetBinding
+                            namespace="extn_expiredOrders_input"
+                            path="isChecked" scExtensibilityArrayItemId="extn_TargetBindings_0"/>
+                    </TargetBindings>
+                </BindingData>
+            </CheckBox>
+            <CheckBox _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="isGiftRecpt" renderHidden="true"/>
+            <TextField _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="txt_orderNo" label="$(_scBundle:extn_Order_Receipt_Number)"/>
+            <TextField _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="txt_shipmentNo" renderHidden="true"/>
+            <TextField _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="txt_assignedToUsr" renderHidden="true"/>
+            <TextField _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="txt_emailId" label="$(_scBundle:Label_Email)"/>
+            <TextField _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="txt_lastName" label="$(_scBundle:extn_Name_Last_First_)"/>
+            <TextField _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="txt_firstName" uId="txt_lastName"/>
+            <TextField _sc_extensibility_moveOrder="4"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpaneName" uId="txt_lastName"/>
+            <TextField _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="txt_firstName" label="$(_scSimpleBundle:blank)"/>
+            <TextField _sc_extensibility_moveOrder="5"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneName" uId="txt_firstName"/>
+        </Items>
+        <Namespaces>
+            <TargetNamespaces>
+                <Target
+                    description="check to see if search for expired orders "
+                    isExtn="true"
+                    scExtensibilityArrayItemId="extn_TargetNamespaces_2" value="extn_expiredOrders_input"/>
+            </TargetNamespaces>
+        </Namespaces>
+        <Subscribers>
+            <Local>
+                <Subscriber description="custom initialization"
+                    eventId="afterScreenInit" isExtn="true" sequence="51">
+                    <Handler methodName="extInitialize"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+    </ScreenExtension>
+</ExtensionMetaData>

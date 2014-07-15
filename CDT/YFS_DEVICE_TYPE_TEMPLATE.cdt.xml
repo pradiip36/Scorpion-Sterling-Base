@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<YFS_DEVICE_TYPE_TEMPLATEList TableName="YFS_DEVICE_TYPE_TEMPLATE">
+<DeviceTypeTemplate Createprogid="XMLMigrator"
+    Createts="2010-10-18T16:25:52-04:00" Createuserid="SYSTEM"
+    DeviceType="Printer"
+    DeviceTypeParamsXML="&lt;Attributes>  &lt;Attribute Name=&quot;DropDirectory&quot; DisplayName=&quot;DropDirectory&quot; Value=&quot;&quot; DataType=&quot;Text-255&quot; Modifiable=&quot;Y&quot; IsNotDeletable=&quot;Y&quot; /> &lt;Attribute Name=&quot;PrinterAlias&quot; DisplayName=&quot;PrinterAlias&quot; Value=&quot;&quot; DataType=&quot;Text-40&quot; Modifiable=&quot;Y&quot; IsNotDeletable=&quot;Y&quot; /> &lt;Attribute Name=&quot;PrintServerHostName&quot; DisplayName=&quot;PrintServerHostName&quot; Value=&quot;&quot; DataType=&quot;Text-40&quot; Modifiable=&quot;Y&quot; IsNotDeletable=&quot;Y&quot; /> &lt;Attribute Name=&quot;PrintServerPort&quot; DisplayName=&quot;PrintServerPort&quot; Value=&quot;2723&quot; DataType=&quot;Count&quot; Modifiable=&quot;Y&quot; IsNotDeletable=&quot;Y&quot; /> &lt;/Attributes>"
+    DeviceTypeTemplateKey="201010181625523574" Lockid="0"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2010-10-18T16:25:52-04:00" Modifyuserid="sterling"/>
+<DeviceTypeTemplate Createprogid="XMLMigrator"
+    Createts="2010-10-18T16:25:52-04:00" Createuserid="SYSTEM"
+    DeviceType="WeighingScale"
+    DeviceTypeParamsXML="&lt;Attributes> &lt;Attribute Name=&quot;ClassName&quot; DisplayName=&quot;ClassName&quot; Value=&quot;&quot; DataType=&quot;Text-255&quot; Modifiable=&quot;Y&quot; IsNotDeletable=&quot;Y&quot; /> &lt;Attribute Name=&quot;PortId&quot; DisplayName=&quot;PortId&quot; Value=&quot;COM1&quot; DataType=&quot;Text-40&quot; Modifiable=&quot;Y&quot; IsNotDeletable=&quot;Y&quot; /> &lt;Attribute Name=&quot;BaudRate&quot; DisplayName=&quot;BaudRate&quot; Value=&quot;9600&quot; DataType=&quot;Integer&quot; Modifiable=&quot;Y&quot; IsNotDeletable=&quot;Y&quot; />  &lt;Attribute Name=&quot;DataBits&quot; DisplayName=&quot;DataBits&quot; Value=&quot;8&quot; DataType=&quot;Integer&quot; Modifiable=&quot;Y&quot; IsNotDeletable=&quot;Y&quot; />    &lt;Attribute Name=&quot;StopBits&quot; DisplayName=&quot;StopBits&quot; Value=&quot;1&quot; DataType=&quot;Integer&quot; Modifiable=&quot;Y&quot; IsNotDeletable=&quot;Y&quot; />   &lt;Attribute Name=&quot;Parity&quot; DisplayName=&quot;Parity&quot; Value=&quot;&quot; DataType=&quot;Text-40&quot; Modifiable=&quot;Y&quot; IsNotDeletable=&quot;Y&quot; />   &lt;Attribute Name=&quot;FlowIn&quot; DisplayName=&quot;FlowIn&quot; Value=&quot;&quot; DataType=&quot;Text-40&quot; Modifiable=&quot;Y&quot; IsNotDeletable=&quot;Y&quot; />   &lt;Attribute Name=&quot;FlowOut&quot; DisplayName=&quot;FlowOut&quot; Value=&quot;&quot; DataType=&quot;Text-40&quot; Modifiable=&quot;Y&quot; IsNotDeletable=&quot;Y&quot; />&lt;/Attributes>"
+    DeviceTypeTemplateKey="201010181625523575" Lockid="0"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2010-10-18T16:25:52-04:00" Modifyuserid="sterling"/>
+</YFS_DEVICE_TYPE_TEMPLATEList>

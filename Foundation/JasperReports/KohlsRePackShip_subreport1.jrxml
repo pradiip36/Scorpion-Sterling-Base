@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="KohlsRePackShip_subreport1" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<queryString language="xPath">
+		<![CDATA[/Shipment/ShipmentLines/ShipmentLine]]>
+	</queryString>
+	<field name="ItemID" class="java.lang.String">
+		<fieldDescription><![CDATA[OrderLine/Item/@ItemID]]></fieldDescription>
+	</field>
+	<field name="UPCCode" class="java.lang.String">
+		<fieldDescription><![CDATA[Item/@Upc01]]></fieldDescription>
+	</field>
+	<field name="ItemDesc" class="java.lang.String">
+		<fieldDescription><![CDATA[Item/PrimaryInformation/@Description]]></fieldDescription>
+	</field>
+	<field name="ColorCode" class="java.lang.String">
+		<fieldDescription><![CDATA[Item/Extn/@ExtnColorDesc]]></fieldDescription>
+	</field>
+	<field name="SizeCode" class="java.lang.String">
+		<fieldDescription><![CDATA[Item/Extn/@ExtnSizeDesc]]></fieldDescription>
+	</field>
+	<field name="ExtnIsGiftItem" class="java.lang.String">
+		<fieldDescription><![CDATA[Item/Extn/@ExtnIsGiftItem]]></fieldDescription>
+	</field>
+	<field name="ExtnBOGOSeq" class="java.lang.Integer">
+		<fieldDescription><![CDATA[Extn/@ExtnBOGOSeq]]></fieldDescription>
+	</field>
+	<field name="OrderedQty" class="java.lang.String">
+		<fieldDescription><![CDATA[OrderLine/@OrderedQty]]></fieldDescription>
+	</field>
+	<field name="Quantity" class="java.lang.String">
+		<fieldDescription><![CDATA[@Quantity]]></fieldDescription>
+	</field>
+	<field name="ExtnReturnPrice" class="java.lang.String">
+		<fieldDescription><![CDATA[Extn/@ExtnReturnPrice]]></fieldDescription>
+	</field>
+	<field name="TaxPercentage1_1" class="java.lang.String">
+		<fieldDescription><![CDATA[OrderLine/LineTaxes/LineTax[1]/@TaxPercentage]]></fieldDescription>
+	</field>
+	<field name="TaxPercentage1_2" class="java.lang.String">
+		<fieldDescription><![CDATA[OrderLine/LineTaxes/LineTax[2]/@TaxPercentage]]></fieldDescription>
+	</field>
+	<field name="TaxPercentage1_3" class="java.lang.String">
+		<fieldDescription><![CDATA[OrderLine/LineTaxes/LineTax[3]/@TaxPercentage]]></fieldDescription>
+	</field>
+	<field name="TaxPercentage1_4" class="java.lang.String">
+		<fieldDescription><![CDATA[OrderLine/LineTaxes/LineTax[4]/@TaxPercentage]]></fieldDescription>
+	</field>
+	<field name="TaxPercentage1_5" class="java.lang.String">
+		<fieldDescription><![CDATA[OrderLine/LineTaxes/LineTax[5]/@TaxPercentage]]></fieldDescription>
+	</field>
+	<field name="UnitCost" class="java.lang.String">
+		<fieldDescription><![CDATA[OrderLine/LinePriceInfo/@UnitPrice]]></fieldDescription>
+	</field>
+	<field name="TaxSymbol" class="java.lang.String">
+		<fieldDescription><![CDATA[@TaxSymbol]]></fieldDescription>
+	</field>
+	<field name="TaxPercentage" class="java.lang.String">
+		<fieldDescription><![CDATA[@TaxPercentage]]></fieldDescription>
+	</field>
+	<field name="UpcBarcodePrint" class="java.lang.String">
+		<fieldDescription><![CDATA[ancestor::Shipment/@UpcBarcodePrint]]></fieldDescription>
+	</field>
+	<field name="ExtnGiftFrom" class="java.lang.String">
+		<fieldDescription><![CDATA[OrderLine/Extn/@ExtnGiftFrom]]></fieldDescription>
+	</field>
+	<field name="ExtnGiftMessage" class="java.lang.String">
+		<fieldDescription><![CDATA[OrderLine/Extn/@ExtnGiftMessage]]></fieldDescription>
+	</field>
+	<field name="ExtnGiftTo" class="java.lang.String">
+		<fieldDescription><![CDATA[OrderLine/Extn/@ExtnGiftTo]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="24" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="24" forecolor="#FFFFFF" backcolor="#000000"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="58" height="24" forecolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="Helvetica-Narrow" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[  SKU #]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="58" y="0" width="87" height="24" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Center">
+					<font fontName="Helvetica-Narrow" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UPC#]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="148" y="0" width="172" height="24" forecolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="Helvetica-Narrow" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DESCRIPTION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="0" width="35" height="24" forecolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="Helvetica-Narrow" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[QTY.
+ORD.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="0" width="35" height="24" forecolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="Helvetica-Narrow" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[QTY.
+SENT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="0" width="45" height="24" forecolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="Helvetica-Narrow" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UNIT
+PRICE
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="0" width="50" height="24" forecolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="Helvetica-Narrow" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RETURN
+QTY.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="499" y="0" width="56" height="24" forecolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="Helvetica-Narrow" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RETURN
+CODE
+]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="71" splitType="Stretch">
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="0" width="55" height="71" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font fontName="Helvetica-Narrow" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ItemID}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="1" y="0" width="1" height="71" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true"/>
+			</line>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="58" y="0" width="87" height="12" isPrintWhenDetailOverflows="true"/>
+				<textElement textAlignment="Center">
+					<font fontName="Helvetica-Narrow" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{UPCCode}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="148" y="0" width="172" height="25" isPrintWhenDetailOverflows="true"/>
+				<textElement>
+					<font fontName="Helvetica-Narrow" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ItemDesc}+ "\n" + (($F{ColorCode}!=null)&&!($F{ColorCode}.equalsIgnoreCase(""))?($F{ColorCode}+" "+"\\"):"")+ (($F{SizeCode}!=null)&&!($F{SizeCode}.equalsIgnoreCase(""))?($F{SizeCode}):"")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="148" y="49" width="65" height="10" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[$F{ExtnBOGOSeq}> 0]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Helvetica-Narrow" size="8"/>
+				</textElement>
+				<text><![CDATA[BUY ONE, GET ONE]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="198" y="59" width="30" height="10" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[$F{ExtnBOGOSeq}> 0]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Helvetica-Narrow" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["\$"+$F{UnitCost}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="148" y="59" width="40" height="10" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[$F{ExtnBOGOSeq}> 0]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Helvetica-Narrow" size="8"/>
+				</textElement>
+				<text><![CDATA[ITEM PRICE ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="355" y="0" width="35" height="20"/>
+				<textElement>
+					<font fontName="Helvetica-Narrow" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="0" width="35" height="20"/>
+				<textElement>
+					<font fontName="Helvetica-Narrow" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{OrderedQty}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="390" y="0" width="45" height="20">
+					<printWhenExpression><![CDATA[$F{UnitCost}!= null && !$F{UnitCost}.equalsIgnoreCase("")]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Helvetica-Narrow" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[((($F{ExtnIsGiftItem}== null) ||!$F{ExtnIsGiftItem}.equalsIgnoreCase("Y"))?(($F{ExtnBOGOSeq}>0)?$F{ExtnReturnPrice}:"\$"+$F{UnitCost}):"")]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="450" y="0" width="1" height="71" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="500" y="0" width="1" height="71" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="554" y="0" width="1" height="71" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true"/>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="435" y="0" width="15" height="20"/>
+				<textElement>
+					<font fontName="Helvetica-Narrow" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{TaxSymbol}]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="58" y="12" width="84" height="28" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[($F{UpcBarcodePrint}.equalsIgnoreCase( "Y" ))&& ($F{UPCCode}!=null)&& !($F{UPCCode}.equalsIgnoreCase(""))]]></printWhenExpression>
+				</reportElement>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128" drawText="false" checksumRequired="false" barHeight="40">
+					<jr:codeExpression><![CDATA[$F{UPCCode}]]></jr:codeExpression>
+				</jr:barbecue>
+			</componentElement>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="148" y="25" width="208" height="11" isPrintWhenDetailOverflows="true">
+					<printWhenExpression><![CDATA[($F{ExtnGiftMessage}!=null)&&!($F{ExtnGiftMessage}.equalsIgnoreCase(""))]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Helvetica-Narrow" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[(($F{ExtnGiftMessage}!=null)&&!($F{ExtnGiftMessage}.equalsIgnoreCase(""))?$F{ExtnGiftMessage}:"")]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="148" y="38" width="208" height="11" isPrintWhenDetailOverflows="true">
+					<printWhenExpression><![CDATA[(($F{ExtnGiftFrom}!=null)&&!($F{ExtnGiftFrom}.equalsIgnoreCase(""))) || (($F{ExtnGiftTo}!=null)&&!($F{ExtnGiftTo}.equalsIgnoreCase("")))]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="Helvetica-Narrow" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Gift From:"+(($F{ExtnGiftFrom}!=null)&&!($F{ExtnGiftFrom}.equalsIgnoreCase(""))?($F{ExtnGiftFrom}):"")+"    "+"Gift To:"+(($F{ExtnGiftTo}!=null)&&!($F{ExtnGiftTo}.equalsIgnoreCase(""))?($F{ExtnGiftTo}):"")]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

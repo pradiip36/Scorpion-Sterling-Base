@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report135" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" >
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\IBM_ADMIN\\workspace\\com.kohls.ibm.ocf.pca\\resources"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="xPath">
+		<![CDATA[/StoreShipments/Pickslip/Shipments/Shipment]]>
+	</queryString>
+	<field name="AddressLine1" class="java.lang.String">
+		<fieldDescription><![CDATA[ToAddress/@AddressLine1]]></fieldDescription>
+	</field>
+	<field name="AddressLine2" class="java.lang.String">
+		<fieldDescription><![CDATA[ToAddress/@AddressLine2]]></fieldDescription>
+	</field>
+	<field name="AddressLine3" class="java.lang.String">
+		<fieldDescription><![CDATA[ToAddress/@AddressLine3]]></fieldDescription>
+	</field>
+	<field name="City" class="java.lang.String">
+		<fieldDescription><![CDATA[ToAddress/@City]]></fieldDescription>
+	</field>
+	<field name="Country" class="java.lang.String">
+		<fieldDescription><![CDATA[ToAddress/@Country]]></fieldDescription>
+	</field>
+	<field name="FirstName" class="java.lang.String">
+		<fieldDescription><![CDATA[ToAddress/@FirstName]]></fieldDescription>
+	</field>
+	<field name="LastName" class="java.lang.String">
+		<fieldDescription><![CDATA[ToAddress/@LastName]]></fieldDescription>
+	</field>
+	<field name="State" class="java.lang.String">
+		<fieldDescription><![CDATA[ToAddress/@State]]></fieldDescription>
+	</field>
+	<field name="ZipCode" class="java.lang.String">
+		<fieldDescription><![CDATA[ToAddress/@ZipCode]]></fieldDescription>
+	</field>
+	<field name="ItemID" class="java.lang.String">
+		<fieldDescription><![CDATA[ShipmentLines/ShipmentLine/@ItemID]]></fieldDescription>
+	</field>
+	<field name="Quantity" class="java.lang.String">
+		<fieldDescription><![CDATA[ShipmentLines/ShipmentLine/@Quantity]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="251" splitType="Stretch">
+			<subreport isUsingCache="false">
+				<reportElement  key="subreport-1" positionType="Float" x="15" y="158" width="445" height="36"/>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("//ShipmentLines//ShipmentLine")]]></dataSourceExpression>
+				<subreportExpression><![CDATA["C:/Users/IBM_ADMIN/workspace/com.kohls.ibm.ocf.pca/resources/reports/report21.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="false">
+				<reportElement  key="subreport-1" positionType="Float" x="0" y="194" width="445" height="36"/>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("//ShipmentLines//ShipmentLine")]]></dataSourceExpression>
+				<subreportExpression><![CDATA["C:/Users/IBM_ADMIN/workspace/com.kohls.ibm.ocf.pca/resources/reports/report22.jasper"]]></subreportExpression>
+			</subreport>
+			<frame>
+				<reportElement  x="132" y="56" width="258" height="79"/>
+				<box>
+					<pen lineWidth="2.0" lineStyle="Double"/>
+					<topPen lineWidth="2.0" lineStyle="Double"/>
+					<leftPen lineWidth="2.0" lineStyle="Double"/>
+					<bottomPen lineWidth="2.0" lineStyle="Double"/>
+					<rightPen lineWidth="2.0" lineStyle="Double"/>
+				</box>
+				<textField>
+					<reportElement  x="1" y="0" width="100" height="20"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{FirstName}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement  x="105" y="58" width="100" height="20"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{City}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement  x="158" y="38" width="100" height="20"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{AddressLine3}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement  x="0" y="19" width="100" height="20"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{AddressLine1}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement  x="1" y="58" width="100" height="20"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{Country}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement  x="158" y="19" width="100" height="20"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{AddressLine2}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<textField>
+				<reportElement  x="290" y="55" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{LastName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement  x="177" y="12" width="179" height="25"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PICK SLIP REPRINT]]></text>
+			</staticText>
+			<textField pattern="MM/dd/yyyy">
+				<reportElement  x="445" y="12" width="100" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<break>
+				<reportElement  x="0" y="242" width="100" height="1"/>
+			</break>
+		</band>
+	</detail>
+</jasperReport>

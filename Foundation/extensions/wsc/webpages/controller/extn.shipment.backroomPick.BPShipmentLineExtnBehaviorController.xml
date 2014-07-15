@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.shipment.backroomPick.BPShipmentLineExtnBehaviorController"
+    requestMethodSupported="POST" screenId="extn.shipment.backroomPick.BPShipmentLineExtn">
+    <MashupRefs>
+        <MashupRef extnType="ADD" mashupId="extn_undoScan"
+            mashupRefId="extn_undoScan" permissionId=""/>
+        <MashupRef extnType="ADD" mashupId="extnShortageReason"
+            mashupRefId="extn_setShortageReason" permissionId=""/>
+    </MashupRefs>
+</Controller>

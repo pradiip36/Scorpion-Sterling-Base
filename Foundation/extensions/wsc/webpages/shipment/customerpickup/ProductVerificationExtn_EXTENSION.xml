@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="ProductVerificationExtn"
+        extnPackage="extn.shipment.customerpickup"
+        originalScreen="wsc.shipment.customerpickup.ProductVerification"
+        originalScreenPackage="wsc.shipment.customerpickup" type="diffrential">
+        <Items>
+            <ContentPane _sc_extensibility_moveOrder="5"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_button_suspend" uId="extn_contentpaneNameOrderNo"/>
+            <Button _sc_extensibility_moveOrder="3"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="pickAll"
+                label="$(_scSimpleBundle:extn_Suspend_Pick_Up)" uId="extn_button_suspend"/>
+            <Button _sc_extensibility_moveOrder="4"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="Hold_LocationLabel" uId="extn_button_suspend"/>
+            <Button _sc_extensibility_moveOrder="8"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_button_suspend"
+                label="$(_scSimpleBundle:extn_Void1)" uId="extn_button_void"/>
+            <Button _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="pickAll" renderHidden="true"/>
+            <Button _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="addProductButton" label="$(_scSimpleBundle:extn_Add)"/>
+            <DataLabel _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="productScanPanel"
+                label="$(_scBundle:extn_Customer_Name)" uId="extn_datalabel_customerName">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="concatCustomerName"
+                        namespace="CancellationReasonList" path="Shipment.BillToAddress.FirstName"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="6"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpaneNameOrderNo" uId="extn_datalabel_customerName"/>
+            <DataLabel _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="productScanPanel"
+                label="$(_scBundle:Order_Number)" uId="extn_datalabel_orderNo">
+                <BindingData>
+                    <SourceBinding namespace="extn_shipmentInfo_input" path="Shipment.OrderNo"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="7"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneNameOrderNo" uId="extn_datalabel_orderNo"/>
+            <DataLabel _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="Hold_LocationLabel" renderHidden="true"/>
+            <DataLabel _sc_extensibility_moveOrder="9"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="Hold_LocationLabel"
+                label="$(_scBundle:Label_Hold_Location)" uId="extn_datalabel_HoldLocation"/>
+            <TextField _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="scanProductIdTxt" label="$(_scBundle:extn_Scan_or_enter_SKU_UPC)"/>
+        </Items>
+        <Namespaces>
+            <SourceNamespaces>
+                <Source description="additional shipment info"
+                    isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_6" value="extn_shipmentInfo_input"/>
+                <Source description="ship node information"
+                    isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_7" value="extn_shipNode_info"/>
+                <Source description="suspend receipt info" isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_8" value="extn_receiptSuspendMessage_info"/>
+                <Source description="void receipt message info"
+                    isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_9" value="extn_receiptVoidMessage_info"/>
+                <Source isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_10" value="extn_getShipmentLisrForReceiptID_suspend"/>
+                <Source isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_11" value="extn_commCode4Receipt_suspend"/>
+                <Source isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_12" value="extn_shipNode_info_suspend"/>
+                <Source isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_13" value="extn_getShipmentDetailsForReceipt_output"/>
+                <Source isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_14" value="extn_commCode4Receipt_diamond"/>
+            </SourceNamespaces>
+        </Namespaces>
+        <Subscribers>
+            <Local>
+                <Subscriber eventId="afterScreenInit" isExtn="true" sequence="51">
+                    <Handler methodName="extInitialize"/>
+                </Subscriber>
+                <Subscriber
+                    description="adds EJ record for customer verification"
+                    eventId="afterScreenInit" isExtn="true" sequence="52">
+                    <Handler methodName="addEJEntryCustomerVerified"/>
+                </Subscriber>
+                <Subscriber
+                    description="save the pickup information and suspend"
+                    eventId="extn_button_suspend_onClick" isExtn="true" sequence="51">
+                    <Handler methodName="suspendPickup"/>
+                </Subscriber>
+                <Subscriber description="process void op"
+                    eventId="extn_button_void_onClick" isExtn="true" sequence="51">
+                    <Handler methodName="voidOrder"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+        <MashupRefs>
+            <Init>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getShipNode_mashup"
+                    mashupRefId="extn_getShipNode_mashup" sourceNamespace="extn_shipNode_info_suspend"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getCommonCodes_mashup"
+                    mashupRefId="extn_diamon_comCodes"
+                    restoredToOOB="true" sourceNamespace="extn_commCode4Receipt_diamond"/>
+                <MashupRef extnType="ADD"
+                    mashupId="getReceiptCommonCodes"
+                    mashupRefId="extn_receipt_commCodes"
+                    restoredToOOB="true" sourceNamespace="extn_commCode4Receipt_suspend"/>
+            </Init>
+            <Behavior>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getShipment_pickupInfo" mashupRefId="extn_getPickupInfo_mashup"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_changeShipment_suspend" mashupRefId="extn_saveSuspendedPickup_mashup"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getConfigurablePrompts" mashupRefId="extn_getConfigurablePrompts_mashup"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_EJRecord_mashup" mashupRefId="extn_addEJTransCustomerVerified"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getShipmentListFor_receipt_maship" mashupRefId="extn_getShipmentListForReceiptID_suspend"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getReceiptCommonCodes_mashup" mashupRefId="extn_getReceiptCommonCodes_suspend"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getShipmentDetails_receipt_mashup" mashupRefId="extn_getShipmentDetails_receipt_suspend"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getCommonCodes_mashup" mashupRefId="extn_getReceiptCommonCodes_diamond"/>
+            </Behavior>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

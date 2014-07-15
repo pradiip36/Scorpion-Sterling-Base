@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ShipmentLines SellerOrganizationCode="">
+<ShipmentLine ShipmentLineKey="" Quantity="" ShipmentLineNo="" ItemID="" BackroomPickedQuantity="" LocationId="" StoreNumber="" ShortPickIndicator="" AssignedToUser="" ReasonCode="" ReasonText="">
+<Shipment ShipmentNo = "" ShipmentKey="" />
+</ShipmentLine>
+</ShipmentLines>
+	

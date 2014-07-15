@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema attributeFormDefault="unqualified"
+    elementFormDefault="qualified"
+    targetNamespace="http://www.sterlingcommerce.com/documentation"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:yfc="http://www.sterlingcommerce.com/documentation" xmlns:yfctype="http://www.sterlingcommerce.com/documentation/types">
+    <xsd:annotation
+        yfc:fileName="GetLocationInventorySupply_getLocationInventorySupply_input.xsd" yfc:rootElement="InventorySupplies">
+        <xsd:appinfo source="yfc:structure">
+            <InventorySupplies>
+                <InventorySupply hasAttributes="Y"/>
+            </InventorySupplies>
+        </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:import
+        namespace="http://www.sterlingcommerce.com/documentation/types" schemaLocation="datatypes.xsd"/>
+    <xsd:element name="InventorySupplies" type="yfc:InventorySuppliesXSDType"/>
+    <xsd:complexType name="InventorySuppliesXSDType">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="yfc:InventorySupply"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="InventorySupply">
+        <xsd:annotation yfc:tableName="YFS_INVENTORY_SUPPLY">
+            <xsd:documentation>This table stores all inventory supply information.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+            <xsd:attribute name="ItemID" type="xsd:string" use="required"/>
+            <xsd:attribute name="OrganizationCode" type="xsd:string" use="required"/>
+            <xsd:attribute name="ProductClass" type="xsd:string" use="required"/>
+            <xsd:attribute name="ShipNode" type="yfctype:Key" use="required">
+                <xsd:annotation yfc:columnName="SHIPNODE_KEY" yfc:tableName="YFS_INVENTORY_SUPPLY">
+                    <xsd:documentation>The ship node where this inventory supply is located.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:attribute>
+            <xsd:attribute name="UnitOfMeasure" type="xsd:string" use="optional"/>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

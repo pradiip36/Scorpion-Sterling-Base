@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="PickupOrderLineDetailsExtn"
+        extnPackage="extn.shipment.customerpickup"
+        originalScreen="wsc.shipment.customerpickup.PickupOrderLineDetails"
+        originalScreenPackage="wsc.shipment.customerpickup" type="diffrential">
+        <Items>
+            <ContentPane _sc_extensibility_moveOrder="6"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="shipmentLineDetailsContainer" uId="extn_contentpaneOrderedQty"/>
+            <ContentPane _sc_extensibility_moveOrder="7"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="QtyUomPanel" uId="extn_contentpaneOrderedQty"/>
+            <ContentPane _sc_extensibility_moveOrder="9"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="ContentPane1" uId="extn_contentpanePickedQty"/>
+            <ContentPane _sc_extensibility_moveOrder="18"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="productScanStatusPanel"
+                renderHidden="true" uId="extn_image_shortage"/>
+            <ContentPane _sc_extensibility_moveOrder="11"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="ContentPane1" uId="extn_contentpaneScannedQty"/>
+            <ContentPane _sc_extensibility_moveOrder="16"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="QuantityPanel" uId="extn_contentpaneScannedQty"/>
+            <Button _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="itemdescriptionLink"
+                label="$(_scSimpleBundle:extn_Undo)" renderHidden="true" uId="extn_button_undo"/>
+            <Button _sc_extensibility_moveOrder="3"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="itemdescriptionLink" uId="extn_button_undo"/>
+            <Button _sc_extensibility_moveOrder="4"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="cmbShortagesResolution" uId="extn_button_undo"/>
+            <Button _sc_extensibility_moveOrder="15"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneScannedQty" uId="extn_button_undo"/>
+            <Label _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="itemdescriptionLink" renderHidden="true"/>
+            <Label _sc_extensibility_moveOrder="17"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="QtyUomPanel"
+                class="fieldLabel blockComponent" uId="extn_item_description">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="getItemDescriptionWithSKU"
+                        namespace="ShipmentLine" path="ShipmentLine.OrderLine.ItemDetails.PrimaryInformation.ShortDescription"/>
+                </BindingData>
+            </Label>
+            <NumberTextBox _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="txtScannedQuantity" renderHidden="true"/>
+            <NumberTextBox _sc_extensibility_moveOrder="12"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpaneScannedQty" uId="txtScannedQuantity"/>
+            <FilteringSelect _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="cmbShortagesResolution" label="$(_scBundle:extn_Missing_Reason)"/>
+            <DataLabel _sc_extensibility_moveOrder="20"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="QtyUomPanel"
+                label="$(_scBundle:extn_Kohls_UPC)" uId="extn_datalabel_KohlsUPC">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getKohlsUPC"
+                        namespace="ShipmentLine" path="ShipmentLine.OrderLine.ItemDetails.ItemAliasList"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="quantityLabelDetails" renderHidden="true"/>
+            <DataLabel _sc_extensibility_moveOrder="5"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="QtyUomPanel"
+                label="$(_scBundle:extn_Ordered_Quantity)" uId="extn_datalabelOrderedQty">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="getOriginalOrderedQuantity"
+                        namespace="ShipmentLine" path="ShipmentLine.OrderLine.OriginalOrderedQty"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="8"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpaneOrderedQty" uId="extn_datalabelOrderedQty"/>
+            <DataLabel _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="OrderNoLabel" renderHidden="true"/>
+            <DataLabel _sc_extensibility_moveOrder="10"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpanePickedQty"
+                label="$(_scBundle:extn_Picked_Quantity)" uId="extn_datalabelQtyPicked">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="getBackroomPickQty"
+                        namespace="ShipmentLine" path="ShipmentLine.BackroomPickedQuantity"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="lblScannedQuantity"
+                label="$(_scBundle:OrderedQuantity)" renderHidden="true" uId="extn_datalabel_quantityLabel">
+                <BindingData>
+                    <SourceBinding namespace="ShipmentLine" path="ShipmentLine.Quantity"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="14"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneScannedQty"
+                label="$(_scBundle:ScannedQuantity)"
+                renderHidden="false" uId="extn_datalabelScannedQty">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="getScannedQuantity"
+                        namespace="PickAll_Input" path="Quantity"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="quantityLabel" label="$(_scBundle:OrderedQuantity)"/>
+            <DataLabel _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="remove"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="_extensibilityHiddenWidgetsHolder" uId="quantityLabel"/>
+            <Image _sc_extensibility_moveOrder="19"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_image_shortage"
+                appendToContextRoot="true"
+                imageSrc="wsc/resources/css/icons/images/shortLine.png"
+                renderHidden="false" uId="extn_short_image"/>
+        </Items>
+        <StaticBindingList>
+            <StaticBinding>
+                <SourceBinding namespace="ShipmentLine" path="ShipmentLine.OrderLine.ItemDetails.PrimaryInformation.ShortDescription"/>
+                <TargetBinding namespace="ShipmentLine_Output" path="ShipmentLine.OrderLine.ItemDetails.PrimaryInformation.ShortDescription"/>
+            </StaticBinding>
+        </StaticBindingList>
+        <Subscribers>
+            <Local>
+                <Subscriber eventId="afterScreenInit" isExtn="true" sequence="51">
+                    <Handler methodName="extnInitialize"/>
+                </Subscriber>
+                <Subscriber description="decrease the scanned quantity"
+                    eventId="extn_button_undo_onClick" isExtn="true" sequence="51">
+                    <Handler methodName="undoQuantity"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+    </ScreenExtension>
+</ExtensionMetaData>

@@ -1,0 +1,6 @@
+<Organization OrganizationKey="" OrganizationName="">
+	<Calendars>
+		<Calendar CalendarId="Required" CalendarKey="" OrganizationCode="">
+		</Calendar>
+	</Calendars>
+</Organization>

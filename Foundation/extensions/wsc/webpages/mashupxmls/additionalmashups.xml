@@ -1,0 +1,759 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mashups>
+    <mashup description="" endpoint="EP_ORDER"
+        id="extn_getKohlsCustomerVerificationList" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API Name="getCommonCodeList">
+            <Input>
+                <CommonCode CodeType="CUST_VERFN_REASON" OrganizationCode="xml:CurrentUser:/User/@EnterpriseCode"/>
+            </Input>
+            <Template>
+                <CommonCodeList>
+                    <CommonCode CodeLength="" CodeLongDescription=""
+                        CodeName="" CodeShortDescription="" CodeType=""
+                        CodeValue="" CommonCodeKey="" OrganizationCode=""/>
+                </CommonCodeList>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.isccs.common.mashups.SCCSBaseMashup"/>
+        <APINamespace
+            inputNS="extn_getKohlsCustomerVerificationList_input" outputNS="extn_getKohlsCustomerVerificationList_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_ORDER"
+        id="extn_changeShipmentPickUp_mashup" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API Name="changeShipment">
+            <Input>
+                <Shipment ShipmentKey="">
+                    <Extn ExtnPickedCustFirstName ="" ExtnPickedCustLastName ="" ExtnPickupFirstName="" ExtnPickupIDReason="" ExtnPickupLastName=""/>
+                </Shipment>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.isccs.common.mashups.SCCSBaseMashup"/>
+        <APINamespace inputNS="extn_changeShipmentPickUp_mashup_input" outputNS="extn_changeShipmentPickUp_mashup_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_ORDER"
+        id="extn_changeShipment_suspend" mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="changeShipment">
+            <Input>
+                <Shipment ShipmentKey="">
+                    <ShipmentLines>
+                        <ShipmentLine ShipmentLineKey="">
+                            <Extn ExtnSuspendedPickupQty=""/>
+                        </ShipmentLine>
+                    </ShipmentLines>
+                    <Extn ExtnSuspendedPickup=""/>
+                </Shipment>
+            </Input>
+            <Template>
+                <Shipment ShipmentKey=""/>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.isccs.common.mashups.SCCSBaseMashup"/>
+        <APINamespace inputNS="extn_changeShipment_suspend_input" outputNS="extn_changeShipment_suspend_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <!--end of code incorporated by maseehs-->
+    <mashup description="" endpoint="EP_CONFIG"
+        id="extn_getSuspVoidReceipt_mashup" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API Name="getCommonCodeList">
+            <Input>
+                <CommonCode OrganizationCode="xml:CurrentUser:/User/@EnterpriseCode"/>
+            </Input>
+            <Template>
+                <CommonCodeList>
+                    <CommonCode CodeName="" CodeShortDescription=""
+                        CodeType="" CodeValue="" CommonCodeKey="" OrganizationCode=""/>
+                </CommonCodeList>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_getSuspVoidReceipt_mashup_input" outputNS="extn_getSuspVoidReceipt_mashup_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <!--code incorporated by maseehs-->
+    <mashup description="" endpoint="EP_CONFIG"
+        id="extn_EJRecord_mashup" mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="KOHLSCreateStoreEvents">
+            <Input>
+                <ShipmentStoreEvents EventType="" OrderHeaderKey=""
+                    OrderNo="" ShipmentKey=""/>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.isccs.common.mashups.SCCSBaseMashup"/>
+        <APINamespace inputNS="extn_EJRecord_mashup_input" outputNS="extn_EJRecord_mashup_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_CONFIG"
+        id="extn_getReceiptCommonCodes_mashup" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API Name="getCommonCodeList">
+            <Input>
+                <CommonCode ApplicationCode="" ApplicationVersion=""
+                    CallingOrganizationCode="" CodeLength=""
+                    CodeLongDescription="" CodeName=""
+                    CodeShortDescription="" CodeSymbol="" CodeType=""
+                    CodeValue="" CommonCodeKey="" DocumentType=""
+                    MeantForEnterprise="" MeantForInternal=""
+                    MeantForSupplier="" OrganizationCode=""
+                    QualifiedTagId="" SystemDefinedCode="">
+                    <LocalizedAttributes/>
+                </CommonCode>
+            </Input>
+            <Template>
+                <CommonCodeList>
+                    <CommonCode CodeLength="" CodeLongDescription=""
+                        CodeName="" CodeShortDescription=""
+                        CodeSymbol="" CodeType="" CodeValue=""
+                        CommonCodeKey="" DocumentType=""
+                        MeantForEnterprise="" MeantForInternal=""
+                        MeantForSupplier="" OrganizationCode=""
+                        QualifiedTagId="" SystemDefinedCode="" ValidQualifiedTag="">
+                        <CommonCodeAttributeList>
+                            <CommonCodeAttribute Name="" Value=""/>
+                        </CommonCodeAttributeList>
+                        <LocalizedAttributes/>
+                    </CommonCode>
+                </CommonCodeList>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.isccs.common.mashups.SCCSBaseMashup"/>
+        <APINamespace inputNS="extn_getReceiptCommonCodes_mashup_input" outputNS="extn_getReceiptCommonCodes_mashup_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_CONFIG"
+        id="extn_getOrderDetail4Receipt_mashup" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API Name="getOrderDetails">
+            <Input>
+                <Order ApproverUserID="" DocumentType=""
+                    EnterpriseCode="" GetFundsAvailable=""
+                    IgnorePendingChanges="" OrderHeaderKey="" OrderNo=""/>
+            </Input>
+            <Template>
+                <Order Status="">
+                    <Notes>
+                        <Note NoteText="" ReasonCode=""/>
+                    </Notes>
+                </Order>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.isccs.common.mashups.SCCSBaseMashup"/>
+        <APINamespace inputNS="extn_getOrderDetail4Receipt_mashup_input" outputNS="extn_getOrderDetail4Receipt_mashup_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_CONFIG"
+        id="extn_getUserFoReceipt_mashup" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API Name="getUserList">
+            <Input>
+                <User UserKey=""/>
+            </Input>
+            <Template>
+                <UserList TotalNumberOfRecords="">
+                    <User Activateflag="" BillingaddressKey=""
+                        BusinessKey="" ContactaddressKey=""
+                        CreatorOrganizationKey="" DataSecurityGroupId=""
+                        DepartmentCode="" DisplayUserID=""
+                        EnterpriseCode="" Imagefile="" IsCustomer=""
+                        Localecode="" LoginStatus="" Loginid=""
+                        Longdesc="" MenuId="" NoteKey=""
+                        OrganizationKey="" ParentUserKey=""
+                        PasswordPolicyId="" PreferenceKey=""
+                        Pwdlastchangedon="" Salt="" UserKey=""
+                        UsergroupKey="" Username="" Usertype="">
+                        <ContactPersonInfo AddressLine1=""
+                            AddressLine2="" AddressLine3=""
+                            AddressLine4="" AddressLine5=""
+                            AddressLine6="" AlternateEmailID=""
+                            Beeper="" City="" Company="" Country=""
+                            DayFaxNo="" DayPhone="" Department=""
+                            EMailID="" ErrorTxt="" EveningFaxNo=""
+                            EveningPhone="" FirstName="" HttpUrl=""
+                            IsCommercialAddress="" JobTitle=""
+                            LastName="" MiddleName="" MobilePhone=""
+                            OtherPhone="" PersonID="" PersonInfoKey=""
+                            PreferredShipAddress="" State="" Suffix=""
+                            TaxGeoCode="" Title="" UseCount=""
+                            VerificationStatus="" ZipCode=""/>
+                        <UserDelegateList>
+                            <UserDelegate ActiveFlag=""
+                                DelegateUserID="" DelegationPurpose=""
+                                EffectiveEndDate=""
+                                EffectiveStartDate=""
+                                IsPrimaryDelegate="" UserDelegateKey="" UserID=""/>
+                        </UserDelegateList>
+                        <BillingPersonInfo AddressLine1=""
+                            AddressLine2="" AddressLine3=""
+                            AddressLine4="" AddressLine5=""
+                            AddressLine6="" AlternateEmailID=""
+                            Beeper="" City="" Company="" Country=""
+                            DayFaxNo="" DayPhone="" Department=""
+                            EMailID="" ErrorTxt="" EveningFaxNo=""
+                            EveningPhone="" FirstName="" HttpUrl=""
+                            IsCommercialAddress="" JobTitle=""
+                            LastName="" MiddleName="" MobilePhone=""
+                            OtherPhone="" PersonID="" PersonInfoKey=""
+                            PreferredShipAddress="" State="" Suffix=""
+                            TaxGeoCode="" Title="" UseCount=""
+                            VerificationStatus="" ZipCode=""/>
+                        <UserGroupLists>
+                            <UserGroupList IsPrimary=""
+                                UserGroupListKey="" UserKey="" UsergroupKey=""/>
+                        </UserGroupLists>
+                        <QueueSubscriptionList>
+                            <QueueSubscription QueueKey=""
+                                QueueSubscriptionKey="" UserKey=""/>
+                        </QueueSubscriptionList>
+                    </User>
+                </UserList>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.isccs.common.mashups.SCCSBaseMashup"/>
+        <APINamespace inputNS="extn_getUserFoReceipt_mashup_input" outputNS="extn_getUserFoReceipt_mashup_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_ORDER"
+        id="extn_getConfigurablePrompts" mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="getItemDetails">
+            <Input>
+                <Item ItemID=""
+                    OrganizationCode="xml:CurrentUser:/User/@EnterpriseCode" UnitOfMeasure=""/>
+            </Input>
+            <Template>
+                <Item ItemID="">
+                    <AdditionalAttributeList>
+                        <AdditionalAttribute Name="" Value=""/>
+                    </AdditionalAttributeList>
+                </Item>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.isccs.common.mashups.SCCSBaseMashup"/>
+        <APINamespace inputNS="extn_getConfigurablePrompts_input" outputNS="extn_getConfigurablePrompts_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_ORDER" id="extn_EJRecord_mashup"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="KOHLSCreateStoreEvents">
+            <Input>
+                <ShipmentStoreEvents EventType="" OrderHeaderKey=""
+                    OrderNo="" ShipmentKey=""/>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.isccs.common.mashups.SCCSBaseMashup"/>
+        <APINamespace inputNS="extn_EJRecord_mashup_input" outputNS="extn_EJRecord_mashup_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <!--end of code incorporated by maseehs-->
+    <!--end of code incorporated by maseehs-->
+    <mashup description="" endpoint="EP_CONFIG"
+        id="extn_getItemLocationDetails_mashup" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API FlowName="KohlsUpdateItemLocationForStorePickWebservice">
+            <Input>
+                <Shipment ShipmentKey=""/>
+            </Input>
+            <Template>
+                <Shipment/>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.isccs.common.mashups.SCCSBaseMashup"/>
+        <APINamespace inputNS="extn_getItemLocationDetails_mashup_input" outputNS="extn_getItemLocationDetails_mashup_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_CONFIG"
+        id="getShipmentDetailsMLSGIV" mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="KohlsUpdateItemLocationForStorePickWebservice">
+            <Input>
+                <Shipment
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode"
+                    SellerOrganizationCode="xml:CurrentStore:/Store/@EnterpriseCode"
+                    ShipNode="xml:CurrentStore:/Store/@ShipNode"
+                    ShipmentKey="xml:scControllerInput:/Shipment/@ShipmentKey" ShipmentNo=""/>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="getShipmentDetailsMLSGIV_input" outputNS="getShipmentDetailsMLSGIV_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_CONFIG" id="extn_undoScan"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="changeShipment">
+            <Input>
+                <Shipment ShipmentKey="">
+                    <ShipmentLines>
+                        <ShipmentLine BackroomPickedQuantity="" ShipmentLineKey=""/>
+                    </ShipmentLines>
+                </Shipment>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_undoScan_input" outputNS="extn_undoScan_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_CONFIG"
+        id="extn_chkMgrOverride_mashup" mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="KohlsCheckManagerOverrideRule">
+            <Input>
+                <Shipment ShipmentId="" TransactionInfoID=""
+                    dataCaptureFname="" dataCaptureLname=""
+                    dataCaptureReasonCode="" givenCustName=""
+                    givenFname="" givenLname=""/>
+            </Input>
+            <Template>
+                <Validation TransactionInfoID="" returnCode=""/>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.isccs.common.mashups.SCCSBaseMashup"/>
+        <APINamespace inputNS="extn_chkMgrOverride_input" outputNS="extn_chkMgrOverride_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_CONFIG"
+        id="extn_saveMgrOverride_mashup" mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="KohlsSaveManagerOverride">
+            <Input>
+                <Login Password="" ShipmentId="" TransactionInfoID="" UserName=""/>
+            </Input>
+            <Template>
+                <User errorCode="" returnCode=""/>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.isccs.common.mashups.SCCSBaseMashup"/>
+        <APINamespace inputNS="extn_saveMgrOverride_input" outputNS="extn_saveMgrOverride_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_CONFIG" id="markAsReturned"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="KohlsBopusProcessPendingReturnService">
+            <Input>
+                <ShipmentStoreEvents ShipNode="" ShipmentKey=""/>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="markAsReturned_input" outputNS="markAsReturned_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_CONFIG"
+        id="extn_getShipmentListForPickup" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API Name="getShipmentList">
+            <Input>
+                <Shipment
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode"
+                    MaximumRecords="" SearchGiftAddresses="" ShipNode="">
+                    <BillToAddress DayPhone="" EMailID="" FirstName="" LastName=""/>
+                    <ShipmentLines>
+                        <ShipmentLine OrderNo="">
+                            <OrderLine DeliveryMethod="PICK">
+                                <PersonInfoMarkFor DayPhone=""
+                                    EMailID="" FirstName="" LastName=""/>
+                            </OrderLine>
+                        </ShipmentLine>
+                    </ShipmentLines>
+                </Shipment>
+            </Input>
+            <Template>
+                <Shipments GiftRecipient="" TotalNumberOfRecords="">
+                    <Shipment ShipNode="" ShipmentKey="" Status=""/>
+                </Shipments>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.shipment.customerpickup.mashups.WSCCustomerPickupGetShipmentLineListMashup"/>
+        <APINamespace inputNS="extn_getShipmentListForPickup_input" outputNS="extn_getShipmentListForPickup_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_CONFIG"
+        id="extn_getLocationDetails_mashup" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API FlowName="KohlsBOPUSGetLocationDesc">
+            <Input>
+                <Shipment HoldLocationFlag="N" ShipmentKey="">
+                    <Locations>
+                        <Location LocationID=""/>
+                    </Locations>
+                </Shipment>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.isccs.common.mashups.SCCSBaseMashup"/>
+        <APINamespace inputNS="extn_getLocationDetails_mashup_input" outputNS="extn_getLocationDetails_mashup_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_ORDER"
+        id="extn_setShortageReason" mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="changeShipment">
+            <Input>
+                <Shipment
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode" ShipmentKey="xml:scControllerInput:/Shipment/@ShipmentKey">
+                    <ShipmentLines>
+                        <ShipmentLine ExtnShortageReason="" ShipmentLineKey="xml:scControllerInput:/Shipment/@ShipmentKey"/>
+                    </ShipmentLines>
+                </Shipment>
+            </Input>
+            <Template>
+                <CommonCodeList>
+                    <CommonCode CodeLength="" CodeLongDescription=""
+                        CodeName="" CodeShortDescription="" CodeType=""
+                        CodeValue="" CommonCodeKey="" OrganizationCode=""/>
+                </CommonCodeList>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.isccs.common.mashups.SCCSBaseMashup"/>
+        <APINamespace inputNS="extn_getShortageResolutions_input" outputNS="extn_getShortageResolutions_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_CONFIG" id="extnShortageReason"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="changeShipment">
+            <Input>
+                <Shipment Action="MODIFY" ShipmentKey="">
+                    <ShipmentLines>
+                        <ShipmentLine ShipmentLineKey="">
+                            <Extn ExtnShortageReason=""/>
+                        </ShipmentLine>
+                    </ShipmentLines>
+                </Shipment>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extnShortageReason_input" outputNS="extnShortageReason_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_CONFIG"
+        id="extn_getShipmentListFor_receipt_maship" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API Name="getShipmentList">
+            <Input>
+                <Shipment ShipmentKey=""/>
+            </Input>
+            <Template>
+                <Shipments>
+                    <Shipment EnterpriseCode="" OrderNo="">
+                        <Extn ExtnSAReceiptID="" ExtnStorePreencReceiptID=""/>
+                    </Shipment>
+                </Shipments>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.isccs.common.mashups.SCCSBaseMashup"/>
+        <APINamespace
+            inputNS="extn_getShipmentListFor_receipt_maship_input" outputNS="extn_getShipmentListFor_receipt_maship_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_ORDER"
+        id="extn_getShipment_pickupInfo" mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="getShipmentDetails">
+            <Input>
+                <Shipment ShipmentKey="xml:scControllerInput:/Shipment/@ShipmentKey"/>
+            </Input>
+            <Template>
+                <Shipment ShipmentKey="">
+                    <ShipmentLines>
+                        <ShipmentLine BackroomPickedQuantity=""
+                            Quantity="" ShipmentLineKey="">
+                            <Extn ExtnSuspendedPickupQty=""/>
+                        </ShipmentLine>
+                    </ShipmentLines>
+                    <Extn ExtnHoldLocationDesc="" ExtnPickupFirstName=""
+                        ExtnPickupLastName="" ExtnSuspendedPickup=""/>
+                </Shipment>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.isccs.common.mashups.SCCSBaseMashup"/>
+        <APINamespace inputNS="extn_getShipment_pickupInfo_input" outputNS="extn_getShipment_pickupInfo_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="gets the shipments by receipt id"
+        endpoint="EP_CONFIG" id="extn_getShipmentsByReceiptId"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="getShipmentList">
+            <Input>
+                <Shipment>
+                    <Extn ExtnStorePreencReceiptID=""/>
+                </Shipment>
+            </Input>
+            <Template>
+                <Shipments TotalNumberOfRecords="">
+                    <Shipment AssignedToUserId="" DeliveryCode=""
+                        DeliveryMethod="" ExpectedShipmentDate=""
+                        OrderNo="" ShipDate="" ShipNode=""
+                        ShipmentKey="" ShipmentNo="">
+                        <Status Description=""/>
+                        <BillToAddress DayPhone="" EMailID=""
+                            FirstName="" LastName="" PersonInfoKey=""/>
+                        <Extn ExtnSuspendedPickup=""/>
+                    </Shipment>
+                </Shipments>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_getShipmentsByReceiptId_input" outputNS="extn_getShipmentsByReceiptId_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="Gets the username from the login"
+        endpoint="EP_CONFIG" id="extn_getUsername" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API Name="getUserList">
+            <Input>
+                <User Loginid=""/>
+            </Input>
+            <Template>
+                <UserList>
+                    <User Username=""/>
+                </UserList>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_getUsername_input" outputNS="extn_getUsername_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="description 2" endpoint="EP_ORDER"
+        id="extn_getShipmentDetails_receipt_mashup" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API Name="getShipmentDetails">
+            <Input>
+                <Shipment ReadFromHistory="" SellerOrganizationCode=""
+                    ShipNode="" ShipmentKey="" ShipmentNo=""/>
+            </Input>
+            <Template>
+                <Shipment OrderNo="" ShipDate="" ShipNode="">
+                    <BillToAddress FirstName="" LastName=""/>
+                    <ShipmentLines TotalNumberOfRecords="">
+                        <ShipmentLine ItemDesc="" ItemID=""
+                            OrderLineKey="" OrderNo="" Quantity="">
+                            <OrderLine GiftFlag="" RemainingQty="">
+                                <ItemDetails>
+                                    <ItemAliasList>
+                                    <ItemAlias AliasValue=""/>
+                                    </ItemAliasList>
+                                    <CategoryList>
+                                    <Category CategoryID=""
+                                    CategoryKey="" CategoryPath=""/>
+                                    </CategoryList>
+                                    <Extn ExtnDept=""/>
+                                </ItemDetails>
+                            </OrderLine>
+                            <Order OrderDate=""/>
+                        </ShipmentLine>
+                    </ShipmentLines>
+                    <Extn ExtnStorePreencReceiptID=""/>
+                </Shipment>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.isccs.common.mashups.SCCSBaseMashup"/>
+        <APINamespace
+            inputNS="extn_getShipmentDetails_receipt_mashup_input" outputNS="extn_getShipmentDetails_receipt_mashup_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_CONFIG"
+        id="extn_getMLSGIVDetails" mashuptype="XAPI" resourceId="" transactional="true">
+        <API FlowName="KohlsUpdateItemLocationForStorePickWebservice">
+            <Input/>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_getMLSGIVDetails_input" outputNS="extn_getMLSGIVDetails_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_ORDER"
+        id="extn_getShortageResolutions" mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="getCommonCodeList">
+            <Input>
+                <CommonCode CodeType="SHORT_REAS_TYPE" OrganizationCode="DEFAULT">
+                    <OrderBy>
+                        <Attribute Name="CodeLongDescription"/>
+                    </OrderBy>
+                </CommonCode>
+            </Input>
+            <Template>
+                <CommonCodeList>
+                    <CommonCode CodeLength="" CodeLongDescription=""
+                        CodeName="" CodeShortDescription="" CodeType=""
+                        CodeValue="" CommonCodeKey="" OrganizationCode=""/>
+                </CommonCodeList>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.isccs.common.mashups.SCCSBaseMashup"/>
+        <APINamespace inputNS="extn_getShortageResolutions_input" outputNS="extn_getShortageResolutions_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup
+        description="This mashup gets all of the receipt common codes."
+        endpoint="EP_CONFIG" id="getReceiptCommonCodes"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="getCommonCodeList">
+            <Input>
+                <CommonCode ApplicationCode="" ApplicationVersion=""
+                    CallingOrganizationCode="" CodeLength=""
+                    CodeLongDescription="" CodeName=""
+                    CodeShortDescription="" CodeSymbol="RECEIPT_MSG"
+                    CodeType="" CodeValue="" CommonCodeKey=""
+                    DocumentType="" MeantForEnterprise=""
+                    MeantForInternal="" MeantForSupplier=""
+                    OrganizationCode="" QualifiedTagId="" SystemDefinedCode="">
+                    <LocalizedAttributes/>
+                </CommonCode>
+            </Input>
+            <Template>
+                <CommonCodeList>
+                    <CommonCode CodeLength="" CodeLongDescription=""
+                        CodeName="" CodeShortDescription=""
+                        CodeSymbol="" CodeType="" CodeValue=""
+                        CommonCodeKey="" DocumentType=""
+                        MeantForEnterprise="" MeantForInternal=""
+                        MeantForSupplier="" OrganizationCode=""
+                        QualifiedTagId="" SystemDefinedCode="" ValidQualifiedTag="">
+                        <CommonCodeAttributeList>
+                            <CommonCodeAttribute Name="" Value=""/>
+                        </CommonCodeAttributeList>
+                        <LocalizedAttributes/>
+                    </CommonCode>
+                </CommonCodeList>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="getReceiptCommonCodes_input" outputNS="getReceiptCommonCodes_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup
+        description="This mashup gets the user list of the user based on the login ID"
+        endpoint="EP_CONFIG" id="getUserList" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API Name="getUserList">
+            <Input>
+                <User Loginid=""/>
+            </Input>
+            <Template>
+                <UserList>
+                    <User Username=""/>
+                </UserList>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="getUserList_input" outputNS="getUserList_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_CONFIG" id="setUsername"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="changeShipment">
+            <Input>
+                <Shipment ShipmentKey="">
+                    <Extn ExtnUsername=""/>
+                </Shipment>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="setUsername_input" outputNS="setUsername_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_CONFIG" id="getAllUsers"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="getUserList">
+            <Input>
+                <User OrganizationKey="xml:CurrentStore:/Store/@ShipNode"/>
+            </Input>
+            <Template>
+                <UserList>
+                    <User Loginid="" Username=""/>
+                </UserList>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="getAllUsers_input" outputNS="getAllUsers_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup
+        description="This mashup gets the list of common codes for diamond departments."
+        endpoint="EP_CONFIG" id="extn_getCommonCodes_mashup"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="getCommonCodeList">
+            <Input>
+                <CommonCode CodeType="DIAMOND_DEPARTMENTS"/>
+            </Input>
+            <Template>
+                <CommonCodeList>
+                    <CommonCode CodeLength="" CodeLongDescription=""
+                        CodeName="" CodeShortDescription=""
+                        CodeSymbol="" CodeType="" CodeValue=""
+                        CommonCodeKey="" DocumentType=""
+                        MeantForEnterprise="" MeantForInternal=""
+                        MeantForSupplier="" OrganizationCode=""
+                        QualifiedTagId="" SystemDefinedCode="" ValidQualifiedTag="">
+                        <CommonCodeAttributeList>
+                            <CommonCodeAttribute Name="" Value=""/>
+                        </CommonCodeAttributeList>
+                        <LocalizedAttributes/>
+                    </CommonCode>
+                </CommonCodeList>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.isccs.common.mashups.SCCSBaseMashup"/>
+        <APINamespace inputNS="extn_getCommonCodes_mashup_input" outputNS="extn_getCommonCodes_mashup_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="gets shipnode info" endpoint="EP_CONFIG"
+        id="extn_getShipNode_mashup" mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="getShipNodeList">
+            <Input>
+                <ShipNode ShipNode="xml:CurrentStore:/Store/@ShipNode"/>
+            </Input>
+            <Template>
+                <ShipNodeList>
+                    <ShipNode ShipNode="">
+                        <ShipNodePersonInfo AddressLine1=""
+                            AddressLine2="" City="" DayPhone="" State="" ZipCode=""/>
+                        <Organization OrganizationName=""/>
+                    </ShipNode>
+                </ShipNodeList>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_getShipNode_mashup_input" outputNS="extn_getShipNode_mashup_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="" endpoint="EP_CONFIG" id="assignUser"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="changeShipment">
+            <Input>
+                <Shipment
+                    AssignedToUserId="xml:CurrentUser:/User/@Loginid"
+                    SellerOrganizationCode="xml:CurrentStore:/Store/@ShipNode"
+                    ShipNode="xml:CurrentStore:/Store/@ShipNode" ShipmentKey="">
+                    <Extn ExtnUsername="xml:CurrentUser:/User/@Username"/>
+                </Shipment>
+            </Input>
+            <Template/>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="assignUser_input" outputNS="assignUser_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+    <mashup description="set status as Expired" endpoint="EP_CONFIG"
+        id="extn_MarkAsReturned_mashup" mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="changeShipmentStatus">
+            <Input>
+                <Shipment BaseDropStatus="1400.2"
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode"
+                    SellerOrganizationCode="xml:CurrentStore:/Store/@EnterpriseCode"
+                    ShipNode="xml:CurrentStore:/Store/@ShipNode"
+                    ShipmentKey="" TransactionId="Change To Expired.0001.ex"/>
+            </Input>
+            <Template>
+                <Shipment ShipNode="" ShipmentKey=""/>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.wsc.common.mashups.WSCBaseMashup"/>
+        <APINamespace inputNS="extn_MarkAsReturned_mashup_input" outputNS="extn_MarkAsReturned_mashup_output"/>
+        <AlternateResourceIds/>
+    </mashup>
+</mashups>

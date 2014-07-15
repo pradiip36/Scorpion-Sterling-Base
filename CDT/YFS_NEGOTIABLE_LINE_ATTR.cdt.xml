@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<YFS_NEGOTIABLE_LINE_ATTRList TableName="YFS_NEGOTIABLE_LINE_ATTR">
+<NegotiableLineAttr AttributeName="ShipDate" CanSplitGroup=" "
+    CanSplitLine="Y" Createprogid="SYSTEM"
+    Createts="2010-11-30T16:33:30-05:00" Createuserid="SYSTEM"
+    Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-11-30T16:33:30-05:00" Modifyuserid="sterling"
+    NegotiableLineAttrKey="DEFAULT1" NegotiationRuleKey="DEFAULT"/>
+<NegotiableLineAttr AttributeName="DeliveryDate" CanSplitGroup=" "
+    CanSplitLine="Y" Createprogid="SYSTEM"
+    Createts="2010-11-30T16:33:30-05:00" Createuserid="SYSTEM"
+    Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-11-30T16:33:30-05:00" Modifyuserid="sterling"
+    NegotiableLineAttrKey="DEFAULT2" NegotiationRuleKey="DEFAULT"/>
+<NegotiableLineAttr AttributeName="FreightTerms" CanSplitGroup=" "
+    CanSplitLine="Y" Createprogid="SYSTEM"
+    Createts="2010-11-30T16:33:30-05:00" Createuserid="SYSTEM"
+    Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-11-30T16:33:30-05:00" Modifyuserid="sterling"
+    NegotiableLineAttrKey="DEFAULT3" NegotiationRuleKey="DEFAULT"/>
+<NegotiableLineAttr AttributeName="Price" CanSplitGroup=" "
+    CanSplitLine="Y" Createprogid="SYSTEM"
+    Createts="2010-11-30T16:33:30-05:00" Createuserid="SYSTEM"
+    Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-11-30T16:33:30-05:00" Modifyuserid="sterling"
+    NegotiableLineAttrKey="DEFAULT4" NegotiationRuleKey="DEFAULT"/>
+<NegotiableLineAttr AttributeName="ItemID" CanSplitGroup=" "
+    CanSplitLine="Y" Createprogid="SYSTEM"
+    Createts="2010-11-30T16:33:30-05:00" Createuserid="SYSTEM"
+    Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-11-30T16:33:30-05:00" Modifyuserid="sterling"
+    NegotiableLineAttrKey="DEFAULT5" NegotiationRuleKey="DEFAULT"/>
+<NegotiableLineAttr AttributeName="ProductClass" CanSplitGroup=" "
+    CanSplitLine="Y" Createprogid="SYSTEM"
+    Createts="2010-11-30T16:33:30-05:00" Createuserid="SYSTEM"
+    Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-11-30T16:33:30-05:00" Modifyuserid="sterling"
+    NegotiableLineAttrKey="DEFAULT6" NegotiationRuleKey="DEFAULT"/>
+<NegotiableLineAttr AttributeName="UnitOfMeasure" CanSplitGroup=" "
+    CanSplitLine="Y" Createprogid="SYSTEM"
+    Createts="2010-11-30T16:33:30-05:00" Createuserid="SYSTEM"
+    Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-11-30T16:33:30-05:00" Modifyuserid="sterling"
+    NegotiableLineAttrKey="DEFAULT7" NegotiationRuleKey="DEFAULT"/>
+</YFS_NEGOTIABLE_LINE_ATTRList>

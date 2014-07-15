@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="OpenPicksPortletExtn"
+        extnPackage="extn.home.portlets"
+        originalScreen="wsc.home.portlets.OpenPicksPortlet"
+        originalScreenPackage="wsc.home.portlets" type="diffrential">
+        <Items>
+            <CheckBox _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="chk_BackroomPickup"
+                checked="true" label="$(_scSimpleBundle:Option_ReadyForBackroomPickup)"/>
+            <CheckBox _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="chk_PicksInProgress" label="$(_scSimpleBundle:Option_PicksInProgress)"/>
+            <CheckBox _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="chk_CustomerPickup" label="$(_scSimpleBundle:Option_ReadyForCustomerPickup)"/>
+            <CheckBox _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="chk_ShipmentComplete" label="$(_scSimpleBundle:Option_ShipmentComplete)"/>
+            <CheckBox _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="chk_OwnedByMe"
+                checked="false"
+                label="$(_scSimpleBundle:extn_Unassigned)" uId="extn_Unassigned">
+                <BindingData>
+                    <UncheckedValue value="N"/>
+                    <CheckedValue value="Y"/>
+                    <SourceBinding namespace="filterParams_output" path="Filter.Unassigned"/>
+                    <TargetBindings>
+                        <TargetBinding namespace="filterParams_input"
+                            path="Filter.Unassigned" scExtensibilityArrayItemId="extn_TargetBindings_0"/>
+                    </TargetBindings>
+                </BindingData>
+            </CheckBox>
+            <CheckBox _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="chk_OwnedByMe"
+                checked="false" label="$(_scSimpleBundle:extn_Assigned)" uId="extn_Assigned">
+                <BindingData>
+                    <UncheckedValue value="N"/>
+                    <CheckedValue value="Y"/>
+                    <SourceBinding namespace="filterParams_output" path="Filter.Assigned"/>
+                    <TargetBindings>
+                        <TargetBinding namespace="filterParams_input"
+                            path="Filter.Assigned" scExtensibilityArrayItemId="extn_TargetBindings_0"/>
+                    </TargetBindings>
+                </BindingData>
+            </CheckBox>
+            <CheckBox _sc_extensibility_moveOrder="3"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_Assigned"
+                checked="true" label="$(_scSimpleBundle:extn_Jewelry)" uId="extn_Jewelry">
+                <BindingData>
+                    <UncheckedValue value="N"/>
+                    <CheckedValue value="Y"/>
+                    <SourceBinding namespace="filterParams_output" path="Filter.Jewelry"/>
+                    <TargetBindings>
+                        <TargetBinding namespace="filterParams_input"
+                            path="Filter.Jewelry" scExtensibilityArrayItemId="extn_TargetBindings_0"/>
+                    </TargetBindings>
+                </BindingData>
+            </CheckBox>
+            <CheckBox _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="chk_OwnedByMe" label="$(_scSimpleBundle:Option_Picks_owned_by_me)"/>
+            <CheckBox _sc_extensibility_moveOrder="4"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="txt_FilterOrderNo"
+                label="$(_scSimpleBundle:extn_Salesfloor)" uId="extn_sales">
+                <BindingData>
+                    <UncheckedValue value="N"/>
+                    <CheckedValue value="Y"/>
+                    <SourceBinding namespace="filterParams_output" path="Filter.Sales"/>
+                    <TargetBindings>
+                        <TargetBinding namespace="filterParams_input"
+                            path="Filter.Sales" scExtensibilityArrayItemId="extn_TargetBindings_0"/>
+                    </TargetBindings>
+                </BindingData>
+            </CheckBox>
+            <CheckBox _sc_extensibility_moveOrder="5"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="txt_FilterOrderNo"
+                label="$(_scSimpleBundle:extn_Stockroom)" uId="extn_stock">
+                <BindingData>
+                    <UncheckedValue value="N"/>
+                    <CheckedValue value="Y"/>
+                    <SourceBinding namespace="filterParams_output" path="Filter.Stock"/>
+                    <TargetBindings>
+                        <TargetBinding namespace="filterParams_input"
+                            path="Filter.Stock" scExtensibilityArrayItemId="extn_TargetBindings_0"/>
+                    </TargetBindings>
+                </BindingData>
+            </CheckBox>
+            <CheckBox _sc_extensibility_moveOrder="6"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="txt_FilterOrderNo"
+                label="$(_scSimpleBundle:extn_mixed)" uId="extn_mixed">
+                <BindingData>
+                    <UncheckedValue value="N"/>
+                    <CheckedValue value="Y"/>
+                    <SourceBinding namespace="filterParams_output" path="Filter.Mixed"/>
+                    <TargetBindings>
+                        <TargetBinding namespace="filterParams_input"
+                            path="Filter.Mixed" scExtensibilityArrayItemId="extn_TargetBindings_0"/>
+                    </TargetBindings>
+                </BindingData>
+            </CheckBox>
+            <CheckBox _sc_extensibility_moveOrder="7"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_mixed"
+                label="$(_scSimpleBundle:extn_Orders_With_Alerts)" uId="extn_Orders With Alerts">
+                <BindingData>
+                    <UncheckedValue value="N"/>
+                    <CheckedValue value="Y"/>
+                    <SourceBinding namespace="filterParams_output" path="Filter.Alert"/>
+                    <TargetBindings>
+                        <TargetBinding namespace="filterParams_input"
+                            path="Filter.Alert" scExtensibilityArrayItemId="extn_TargetBindings_0"/>
+                    </TargetBindings>
+                </BindingData>
+            </CheckBox>
+            <Label _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="portletName" value="$(_scSimpleBundle:extn_Open_Orders)"/>
+        </Items>
+        <Subscribers>
+            <Local>
+                <Subscriber description="custom initialization method"
+                    eventId="afterScreenInit" isExtn="true" sequence="56">
+                    <Handler methodName="extInitialize"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+    </ScreenExtension>
+</ExtensionMetaData>

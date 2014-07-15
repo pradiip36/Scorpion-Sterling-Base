@@ -1,0 +1,161 @@
+#!/usr/bin/ksh
+#######################################################################
+#
+#     Program Name:  OFK032
+#           Author:  Sharib Imam
+#Responsible Group:  Order Management Systems 
+#     Date Created:  2011-09-29
+#  Program Purpose:  This script is responsible for purging COSA Report. It is a tool only intended for daily 
+#                    purge older data. 
+#
+#                    The script requires 2 parameters.  
+#                    Parm 1 is the DB login id
+#                    Parm 2 is the Number of Days for which data has to be purged
+#
+#          Example:  OFK032 ot 60
+#
+# Modification Log:
+#                    02/09/2014 - Todd Winter(TKMAZ37) - Linux Conversion
+#                          Removed ESP upload, added support for environments A-E,
+#                          fixed env variables, added echoing of the ESP log
+#
+#
+#
+########################################################################
+
+#PARAMETERS
+
+parms=$#
+
+USAGE="Usage: $0 <dblogin_env> <no_of_days>"
+
+if [ $parms -gt 0 ]
+then
+   script=$0
+   dblogin_env=$1
+   no_of_days=$2
+else
+   print "$USAGE"
+   return_status=2
+
+   ${K_SRC}/is/IS_ESP_upld.sh
+   exit ${return_status}
+fi
+
+thedate=`date`
+
+
+###########################################################
+#
+#       F   U   N   C   T   I   O   N   S 
+#
+###########################################################
+
+check_cosaReportRun()
+{
+echo "The DBLOGIN is: ${DBLOGIN}"
+row_count=`sqlplus -s ${DBLOGIN} << !
+
+set head off
+set trims on
+set heading off
+
+SELECT COUNT(*) FROM STERLING.KL_COSA_REPORT_RUN 
+WHERE MODIFYTS < TRUNC(SYSDATE)-${no_of_days};
+!`
+}
+
+purge_cosaReportRun()
+{
+deleted_row_count=`sqlplus -s ${DBLOGIN} << !
+
+set head off
+set trims on
+set heading off
+
+DELETE FROM STERLING.KL_COSA_REPORT_RUN 
+WHERE MODIFYTS < TRUNC(SYSDATE)-${no_of_days};
+
+COMMIT;
+!`
+
+}
+
+###########################################################
+# 
+#               M    A    I    N
+#
+###########################################################
+########################################################################
+# RUN REQUIRED PROFILES
+#   Execute the user's profile
+print 'BEGIN LOADING PROFILE'
+  export PATH="/usr/local/bin:$PATH"
+  . /srv/apps/profile/admin
+print 'END LOADING PROFILE'
+print
+
+
+########################################################################
+
+readonly log="${K_LOG}/of/OFK032_$(date -u +%Y-%m-%dT%T)_${$}.txt"
+########################################################################
+
+{
+
+print ${USAGE}
+print
+print
+
+#   Execute the Kohl's database environment
+# Commenting 
+print 'BEGIN LOADING ksetdblogin'
+. ${K_SH}/ksetdblogin ${dblogin_env} 
+#DBLOGIN=sterlingb/stbrl1of@OT0097
+print 'END LOADING ksetdblogin'
+print
+########################################################################
+
+  check_cosaReportRun
+
+  # Check Query Result 
+  query_check=$?
+  
+  if [[ ${query_check} -eq 0 ]] then
+  
+  # Check Count to delete
+  if [[ ${row_count} -gt 0 ]] then
+  
+    print "Purging ${no_of_days} days old data for COSA Report from STERLING.KL_COSA_REPORT_RUN table."
+    purge_cosaReportRun
+    print "Purged ${row_count} row(s) from STERLING.KL_COSA_REPORT_RUN table."   
+	
+  else
+    
+    print "No records need to be deleted."
+    print "Exiting."
+    print
+	
+  fi
+    
+  else
+  print "Error in executing the query."
+  print
+fi
+
+return_status=$?
+echo "Return Status of OFK032: ${return_status}"
+
+} > ${log} 2>&1
+
+########################################################################
+# Display log file for ESP
+fold -w 131 ${log}
+########################################################################
+
+  
+
+########################################################################
+# Exit the script with the return code from your batch program
+exit ${return_status}
+########################################################################

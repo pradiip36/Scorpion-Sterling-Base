@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<YCS_CARRIER_SERVICEList TableName="YCS_CARRIER_SERVICE">
+<CarrService Carrier="UPSN" CarrierServiceKey="000000000000000000000001"
+    Createprogid="XMLMigrator" Createts="2010-11-30T16:33:53-05:00"
+    Createuserid="SYSTEM" Description="Next Day Air" Lockid="0"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2010-11-30T16:33:53-05:00"
+    Modifyuserid="sterling" Service="01"/>
+<CarrService Carrier="UPSN" CarrierServiceKey="000000000000000000000002"
+    Createprogid="XMLMigrator" Createts="2010-11-30T16:33:53-05:00"
+    Createuserid="SYSTEM" Description="2nd Day Air" Lockid="0"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2010-11-30T16:33:53-05:00"
+    Modifyuserid="sterling" Service="02"/>
+<CarrService Carrier="UPSN" CarrierServiceKey="000000000000000000000003"
+    Createprogid="XMLMigrator" Createts="2010-11-30T16:33:53-05:00"
+    Createuserid="SYSTEM" Description="Ground" Lockid="0"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2010-11-30T16:33:53-05:00"
+    Modifyuserid="sterling" Service="03"/>
+<CarrService Carrier="UPSN" CarrierServiceKey="000000000000000000000004"
+    Createprogid="XMLMigrator" Createts="2010-11-30T16:33:53-05:00"
+    Createuserid="SYSTEM" Description="Express" Lockid="0"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2010-11-30T16:33:53-05:00"
+    Modifyuserid="sterling" Service="07"/>
+<CarrService Carrier="UPSN" CarrierServiceKey="000000000000000000000005"
+    Createprogid="XMLMigrator" Createts="2010-11-30T16:33:53-05:00"
+    Createuserid="SYSTEM" Description="Worldwide Expedited" Lockid="0"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2010-11-30T16:33:53-05:00"
+    Modifyuserid="sterling" Service="08"/>
+<CarrService Carrier="UPSN" CarrierServiceKey="000000000000000000000006"
+    Createprogid="XMLMigrator" Createts="2010-11-30T16:33:53-05:00"
+    Createuserid="SYSTEM" Description="Standard" Lockid="0"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2010-11-30T16:33:53-05:00"
+    Modifyuserid="sterling" Service="11"/>
+<CarrService Carrier="UPSN" CarrierServiceKey="000000000000000000000007"
+    Createprogid="XMLMigrator" Createts="2010-11-30T16:33:53-05:00"
+    Createuserid="SYSTEM" Description="3 Day Select" Lockid="0"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2010-11-30T16:33:53-05:00"
+    Modifyuserid="sterling" Service="12"/>
+<CarrService Carrier="UPSN" CarrierServiceKey="000000000000000000000008"
+    Createprogid="XMLMigrator" Createts="2010-11-30T16:33:53-05:00"
+    Createuserid="SYSTEM" Description="Next Day Air Saver" Lockid="0"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2010-11-30T16:33:53-05:00"
+    Modifyuserid="sterling" Service="13"/>
+<CarrService Carrier="UPSN" CarrierServiceKey="000000000000000000000009"
+    Createprogid="XMLMigrator" Createts="2010-11-30T16:33:53-05:00"
+    Createuserid="SYSTEM" Description="Next Day Air Early AM" Lockid="0"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2010-11-30T16:33:53-05:00"
+    Modifyuserid="sterling" Service="14"/>
+<CarrService Carrier="UPSN" CarrierServiceKey="000000000000000000000010"
+    Createprogid="XMLMigrator" Createts="2010-11-30T16:33:53-05:00"
+    Createuserid="SYSTEM" Description="Economy" Lockid="0"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2010-11-30T16:33:53-05:00"
+    Modifyuserid="sterling" Service="21"/>
+<CarrService Carrier="UPSN" CarrierServiceKey="000000000000000000000011"
+    Createprogid="XMLMigrator" Createts="2010-11-30T16:33:53-05:00"
+    Createuserid="SYSTEM" Description="Worldwide Express Plus"
+    Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-11-30T16:33:53-05:00" Modifyuserid="sterling" Service="54"/>
+<CarrService Carrier="UPSN" CarrierServiceKey="000000000000000000000012"
+    Createprogid="XMLMigrator" Createts="2010-11-30T16:33:53-05:00"
+    Createuserid="SYSTEM" Description="2nd Day Air AM" Lockid="0"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2010-11-30T16:33:53-05:00"
+    Modifyuserid="sterling" Service="59"/>
+<CarrService Carrier="UPSN" CarrierServiceKey="000000000000000000000013"
+    Createprogid="XMLMigrator" Createts="2010-11-30T16:33:53-05:00"
+    Createuserid="SYSTEM" Description="Express Saver" Lockid="0"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2010-11-30T16:33:53-05:00"
+    Modifyuserid="sterling" Service="65"/>
+<CarrService Carrier="UPSN" CarrierServiceKey="000000000000000000000014"
+    Createprogid="XMLMigrator" Createts="2010-11-30T16:33:53-05:00"
+    Createuserid="SYSTEM" Description="Contract Print Return Lable"
+    Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-11-30T16:33:53-05:00" Modifyuserid="sterling" Service="107"/>
+<CarrService Carrier="UPSN" CarrierServiceKey="000000000000000000000015"
+    Createprogid="XMLMigrator" Createts="2010-11-30T16:33:53-05:00"
+    Createuserid="SYSTEM" Description="Worldwide Express" Lockid="0"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2010-11-30T16:33:53-05:00"
+    Modifyuserid="sterling" Service="71"/>
+</YCS_CARRIER_SERVICEList>

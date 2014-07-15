@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OrderLine OrderLineKey="" PrimeLineNo="" SubLineNo="" StatusQuantity="">
+    <Item ItemID="" ProductClass="" UnitOfMeasure=""/>
+    <Order DocumentType="" EnterpriseCode="" OrderHeaderKey="" OrderNo=""/>
+    <FromStatuses>
+        <OrderStatus OrderHeaderKey="" OrderLineKey=""
+            OrderLineScheduleKey="" OrderReleaseKey=""
+            OrderReleaseStatusKey="" PipelineKey="" ReceivingNode=""
+            ShipNode="" Status="" StatusDate="" StatusDescription=""
+            StatusQty="" StatusReason="" TotalQuantity="">
+            <Details ExpectedDeliveryDate="" ExpectedShipmentDate=""
+                ShipByDate="" TagNumber=""/>
+        </OrderStatus>
+    </FromStatuses>
+    <ToStatuses>
+        <OrderStatus OrderHeaderKey="" OrderLineKey=""
+            OrderLineScheduleKey="" OrderReleaseKey=""
+            OrderReleaseStatusKey="" PipelineKey="" ReceivingNode=""
+            ShipNode="" Status="" StatusDate="" StatusDescription=""
+            StatusQty="" StatusReason="" TotalQuantity="">
+            <Details ExpectedDeliveryDate="" ExpectedShipmentDate=""
+                ShipByDate="" TagNumber=""/>
+        </OrderStatus>
+    </ToStatuses>
+</OrderLine>

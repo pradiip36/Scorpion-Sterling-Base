@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<YFS_DEVICE_TYPEList TableName="YFS_DEVICE_TYPE">
+<DeviceType Createprogid="XMLMigrator"
+    Createts="2010-11-30T16:33:22-05:00" Createuserid="SYSTEM"
+    Description="Printer" DeviceType="Printer" DeviceTypeKey="Printer"
+    Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-11-30T16:33:22-05:00" Modifyuserid="sterling" SystemDefined="Y"/>
+<DeviceType Createprogid="XMLMigrator"
+    Createts="2010-11-30T16:33:22-05:00" Createuserid="SYSTEM"
+    Description="Weighing Scale" DeviceType="WeighingScale"
+    DeviceTypeKey="WeighingScale" Lockid="0"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2010-11-30T16:33:22-05:00"
+    Modifyuserid="sterling" SystemDefined="Y"/>
+</YFS_DEVICE_TYPEList>

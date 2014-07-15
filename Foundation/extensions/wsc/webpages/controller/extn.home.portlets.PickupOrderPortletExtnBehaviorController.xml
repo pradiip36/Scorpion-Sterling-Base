@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.home.portlets.PickupOrderPortletExtnBehaviorController"
+    requestMethodSupported="POST" screenId="extn.home.portlets.PickupOrderPortletExtn">
+    <MashupRefs>
+        <MashupRef extnType="ADD" mashupId="extn_getSessionInfo_mashup"
+            mashupRefId="extn_getSessionInfo_mashup" permissionId=""/>
+        <MashupRef extnType="ADD"
+            mashupId="extn_getShipmentsByReceiptId"
+            mashupRefId="extn_searchReceiptId" permissionId=""/>
+        <MashupRef extnType="ADD"
+            mashupId="extn_getShipmentListForPickup"
+            mashupRefId="extn_searchPickupOrders" permissionId=""/>
+    </MashupRefs>
+</Controller>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mashups>
+	<mashup description="This mashup will call the KohlsItemSafetyFactorSearchService to get the list of the Items which belongs to a Dept/Class/SubClass combination" endpoint="SBC_CONFIG_END_POINT" mashuptype="XAPI" id="getCategoryItemList_ForSafetyFactor" transactional="true">
+		<classInformation name="com.sterlingcommerce.ui.web.platform.mashup.SCUIPaginatedXAPIMashup"/>
+		<API Name="getItemList">
+			<Input>
+				<Item OrganizationCode="" UnitOfMeasure="">
+					<Extn ExtnDept="" ExtnClass="" ExtnSubClass=""/>
+				</Item>
+			</Input>
+			<Template>
+				<ItemList>
+					<Item ItemID="" UnitOfMeasure="">
+					<PrimaryInformation ShortDescription="" />
+					<InventoryParameters OnhandSafetyFactorPercentage="" OnhandSafetyFactorQuantity=""/>
+					</Item>
+				</ItemList>
+			</Template>
+		</API>
+	</mashup>
+
+	<mashup description="This mashup will call the KohlsItemSafetyFactorUpdateService to insert the record for the Safety Factor adjustment in the EXTN_ITEM_SAFETY_PERC table for a Dept/Class/SubClass combination" endpoint="SBC_CONFIG_END_POINT" mashuptype="XAPI" id="KohlsItemSafetyFactorUpdateService" transactional="true">
+		<classInformation name="com.sterlingcommerce.ui.web.platform.mashup.SCUIXAPIMashup"/>
+			<API FlowName="KohlsItemSafetyFactorUpdateService">
+				<Input>
+					<ExtnItemSafetyFactor CatDepartment="" CatClass="" CatSubClass="" SafetyFactor="" SftFlag="" SafetyOperation="" UserID="" />
+				</Input>
+				<Template>
+					  <ExtnItemSafetyFactor CatClass="" CatDepartment="" CatSubClass="" Createprogid="" Createts="" Createuserid="" DefaultSafetyFactor="" ExtnItemSafetyFactorKey="" Modifyprogid="" Modifyts="" Modifyuserid="" Processed="" ProgramID="" SafetyFactor="" SafetyOperation="" SftFlag="" UserID="" /> 
+				</Template>
+			</API>
+	</mashup>
+</mashups>
+

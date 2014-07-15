@@ -1,0 +1,2125 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Licensed Materials - Property of IBM
+IBM Sterling Business Center
+(C) Copyright IBM Corp. 2010, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="sbc-item" namespace="/sbc/item" extends="scuiimpl">
+	<default-class-ref class="com.sterlingcommerce.sbc.core.struts.SBCDefaultStrutsAction"></default-class-ref>
+	<global-results>
+            <result name="MASHUPERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="VALIDATIONERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="AUTHORIZATIONERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="error">/sbc/jsps/apierror.jsp</result>
+			<result name="APIERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="DATAVALIDATIONERROR">/jsps/datavalidationerror.jsp</result>
+	</global-results>
+<!-- Classification Management starts -->
+	<action name="getclassificationlistdata" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">loadclassificationlist</param>
+			<param name="resourceId">SBCITM00066</param>
+			<result name="success">/sbc/itemadmin/classification/manage/loadclassificationlist.jsp</result>
+	</action>
+	<action name="saveclassificationlist" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">modifyclassificationlist</param>
+			<param name="inputNs">modifyclassificationlist_input</param>
+			<param name="outputNs">modifyclassificationlist_output</param>
+			<param name="resourceId">SBCITM00067</param>
+			<result name="success">/sbc/itemadmin/classification/manage/loadclassificationlist.jsp</result>
+	</action>
+	<action name="classificationlisttree" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">classificationmanagement-getCategoryListTree</param>
+			<param name="inputNs">getCategoryList_input</param>
+			<param name="outputNs">getCategoryList_output</param>
+			 <param name="resourceId">SBCITM00066</param>
+			<result name="success">/sbc/core/widget/settreedata.jsp</result>
+	</action>
+	<action name="classificationdetailtree" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">classificationmanagement-getCategoryDomainDetailTree</param>
+			<param name="inputNs">getCategoryDomainDetails_input</param>
+			<param name="outputNs">getCategoryDomainDetails_output</param>
+			<param name="resourceId">SBCITM00066</param>
+			<result name="success">/sbc/itemadmin/classification/manage/manageclassificationdetails.jsp</result>
+	</action>
+	<action name="classificationdomaindetail" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="resourceId">SBCITM00069</param>
+			<param name="mashupId">classificationmanagement-loaddata</param>
+			<result name="success">/sbc/itemadmin/classification/manage/classificationdomaindetail.jsp</result>
+	</action>
+	<action name="loadcreateclassificationdomain" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="resourceId">SBCITM00067</param>
+			<param name="mashupId">classificationmanagement-loaddataforcreatedomain</param>
+			<result name="success">/sbc/itemadmin/classification/manage/loadcreateclassificationdomain.jsp</result>
+	</action>
+	<action name="loadcreateclassification">
+		<param name="resourceId">SBCITM00068</param>
+		<result name="success">/sbc/itemadmin/classification/manage/loadcreateclassification.jsp</result>
+	</action>
+	<action name="classificationdetail" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">classificationmanagement_getCategoryDetails</param>
+			<param name="inputNs">classificationdetail_input</param>
+			<param name="outputNs">classificationdetail_output</param>
+			<param name="resourceId">SBCITM00071</param>
+			<result name="success">/sbc/itemadmin/classification/manage/classificationdetail.jsp</result>
+		</action>
+		<action name="modifyclassification" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">classificationmanagement_modifyclassification</param>
+			<param name="inputNs">classificationdomaindetail_input</param>
+			<param name="outputNs">classificationdomaindetail_output</param>
+			<param name="resourceId">SBCITM00068</param>
+			<result name="success">/sbc/itemadmin/category/manage/detail/modifydomaindetail.jsp</result>
+		</action>
+
+		<action name="createclassification" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">classificationmanagement_manageCategory</param>
+			<param name="inputNs">createCategory_input</param>
+			<param name="outputNs">createCategory_output</param>
+			<param name="resourceId">SBCITM00068</param>
+			<result name="APIERROR">/sbc/itemadmin/classification/manage/createclassificationvalueerror.jsp</result>
+			<result name="success" type="chain">
+				<param name="actionName">classificationdetail</param>
+				<param name="namespace">/sbc/item</param>
+			 </result>
+		</action>
+		<action name="createclassificationdomain" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">classificationmanagement-createCategoryDomain</param>
+			<param name="inputNs">createCategoryDomain_input</param>
+			<param name="outputNs">createCategoryDomain_output</param>
+			<param name="resourceId">SBCITM00067</param>
+			<result name="APIERROR">/sbc/itemadmin/classification/manage/createclassificationerror.jsp</result>
+			<result name="success" type="chain">
+				<param name="actionName">classificationdetailtree</param>
+				<param name="namespace">/sbc/item</param>
+			 </result>
+		</action>
+		<action name="modifyclassificationdomain" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">classificationmanagement-savedataforclassificationdomain</param>
+			<param name="resourceId">SBCITM00067</param>
+			<result name="success">/sbc/itemadmin/classification/manage/donothingresult.jsp</result>
+		</action>
+		<action name="deleteclassificationdomain" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">classificationmanagement_modifyCategoryDomain</param>
+			<param name="inputNs">modifyCategoryDomain_input</param>
+			<param name="outputNs">modifyCategoryDomain_output</param>
+			<param name="resourceId">SBCITM00067</param>
+			<result name="success" type="chain">
+				<param name="actionName">getclassificationlistdata</param>
+				<param name="namespace">/sbc/item</param>
+			 </result>
+		</action>
+		<action name="deleteclassification" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">classificationmanagement_manageCategory</param>
+			<param name="inputNs">manageCategory_input</param>
+			<param name="outputNs">manageCategory_output</param>
+			<param name="resourceId">SBCITM00068</param>
+			<result name="success">/sbc/itemadmin/classification/manage/donothingresult.jsp</result>
+		</action>
+		<action name="loadclassificationitemlist" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction" >
+			<param name="mashupId">classificationmanagement-getItemList</param>
+			<param name="inputNs">getItemList_input</param>
+			<param name="outputNs">getItemList_output</param>
+			<param name="resourceId">SBCITM00072</param>
+			<result name="success">/sbc/itemadmin/classification/manage/loadmanageclassificationitem.jsp</result>
+		</action>
+		<action name="getclassificationitemlist" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction" >
+			<param name="mashupId">classificationmanagement-getItemList</param>
+			<param name="inputNs">getItemList_input</param>
+			<param name="outputNs">getItemList_output</param>
+			<param name="resourceId">SBCITM00072</param>
+			<result name="success">/sbc/itemadmin/category/manage/item/categoryitemlist.jsp</result>
+		</action>
+		<action name="manageclassificationitem" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction" >
+			<param name="mashupId">classificationmanagement-manageItem</param>
+			<param name="inputNs">manageItem_input</param>
+			<param name="outputNs">manageItem_output</param>
+			<param name="resourceId">SBCITM00068</param>
+			<result name="success">/sbc/core/donothingresulthandler.jsp</result>
+		</action>
+		<action name="moveclasssificationitem" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction"	>
+			<param name="mashupId">classificationmanagement-manageItemMultiAPI</param>
+			<param name="resourceId">SBCITM00068</param>
+			<result name="success">/sbc/core/donothingresulthandler.jsp</result>
+		</action>
+		<action name="classificationdetailtreelookup" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">classificationmanagement-getCategoryDomainDetailTree</param>
+			<param name="inputNs">getCategoryDomainDetails_input</param>
+			<param name="outputNs">getCategoryDomainDetails_output</param>
+			<param name="resourceId">SBCITM00071</param>
+			<result name="success">/sbc/common/classification/tree/loadclassificationtreelookup.jsp</result>
+		</action>
+
+		<action name="classificationattrassignment" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			   <param name="mashupId">classificationattrassignment_multiAPI</param>
+			   <param name="resourceId">SBCITM00073</param>
+			  <result name="success">/sbc/itemadmin/classification/manage/loadmanageclassificationattr.jsp</result>
+		</action>
+		<action name="classificationgetattributeconfiguration" class="com.sterlingcommerce.sbc.common.SBCMultiXAPI">
+			<param name="mashupId">classificationmanagement-getattributeconfiguration</param>
+			<param name="inputNs">getAttributeList_input</param>
+			<param name="outputNs">getAttributeList_output</param>
+			<param name="resourceId">SBCITM00073</param>
+			<result name="success">/sbc/itemadmin/category/manage/attribute/getattributeconfig.jsp</result>
+		</action>
+		<action name="manageClassificationSaveAttribute" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">classificationmanagement_manageCategory</param>
+			<param name="inputNs">manageCategory_input</param>
+			<param name="outputNs">manageCategory_output</param>
+			<param name="resourceId">SBCITM00068</param>
+			<result name="success" type="chain">
+				<param name="actionName">classificationattrassignment</param>
+				<param name="namespace">/sbc/item</param>
+			 </result>
+		</action>
+		<action name="manageClassificationDeleteAttribute" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">classificationmanagement-manageClassificationDeleteAttribute</param>
+			<param name="inputNs">manageCategory_input</param>
+			<param name="outputNs">manageCategory_output</param>
+			<param name="resourceId">SBCITM00068</param>
+			<result name="success">/sbc/itemadmin/category/manage/attribute/managecategorysaveattr.jsp</result>
+		</action>
+<!-- Classification Management ends -->
+	<action name="beforeitemstrutsactioncall" class="com.sterlingcommerce.sbc.item.actions.SBCBeforeItemStrutsAction">
+	   <param name="resourceId">SBCITM00001</param>
+	   <result name="success" type="chain">
+	 	  <param name="actionName">${actionName}</param>
+	   	  <param name="namespace">/sbc/item</param>
+	   </result>
+	</action>
+	<!-- Item Instructions -->
+	<action name="iteminstructions" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+		<param name="mashupId">instructions</param>
+		<param name="resourceId">SBCITM00023</param>
+		<result name="success">/sbc/itemadmin/item/manage/basic/iteminstructions.jsp</result>
+	</action>
+	<action name="saveiteminstructions" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+		<param name="mashupId">manageitem_itemflow</param>
+		<param name="inputNs">manageItem_Input</param>
+		<param name="outputNs">manageItem_output</param>
+		<param name="resourceId">SBCITM00054</param>
+		<result name="success">/sbc/itemadmin/item/manage/basic/additeminstructionsresult.jsp</result>
+	</action>
+	<!-- Item Instructions -->
+	<!-- Extended Fields -->
+	<action name="extendedfields" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+		<param name="mashupId">extendedfields</param>
+		<param name="resourceId">SBCITM00038</param>
+		<result name="success">/sbc/itemadmin/item/manage/others/extendedfields.jsp</result>
+	</action>
+	<action name="manageitem" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+		<param name="mashupId">manageitem_itemflow</param>
+		<param name="inputNs">manageItem_Input</param>
+		<param name="outputNs">manageItem_Output</param>
+		<param name="resourceId">SBCITM00054</param>
+		<result name="success">/sbc/core/donothingresulthandler.jsp</result>
+	</action>
+	<!-- Eof Extended Fields -->
+	<!-- Node Items -->
+	<action name="nodeitems" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+		<param name="mashupId">nodeitems</param>
+		<param name="resourceId">SBCITM00028</param>
+		<result name="success">/sbc/itemadmin/item/manage/fulfillment/nodeitems.jsp</result>
+	</action>
+	<action name="nodesearchpopup">
+		<param name="resourceId">SBCITM00028</param>
+		<result name="success">/sbc/itemadmin/item/manage/fulfillment/nodesearchpopup.jsp</result>
+	</action>
+	<action name="searchnodes" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+		<param name="mashupId">nodeitems-getShipNodeList</param>
+		<param name="inputNs">getShipNodeList_input</param>
+		<param name="outputNs">getShipNodeList_output</param>
+		<param name="resourceId">SBCITM00028</param>
+		<result name="success">/sbc/itemadmin/item/manage/fulfillment/nodesearchresults.jsp</result>
+	</action>
+	<action name="createitemnodedefn" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+		<param name="mashupId">nodeitems-createItemNodeDefn</param>
+		<param name="inputNs">itemNodeDefn_input</param>
+		<param name="outputNs">itemNodeDefn_output</param>
+		<param name="resourceId">SBCITM00054</param>
+		<result name="success">/sbc/itemadmin/item/manage/fulfillment/managenodeitemresult.jsp</result>
+	</action>
+	<action name="deleteitemnodedefn" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+		<param name="mashupId">nodeitems-deleteItemNodeDefn</param>
+		<param name="inputNs">itemNodeDefn_input</param>
+		<param name="outputNs">itemNodeDefn_output</param>
+		<param name="resourceId">SBCITM00054</param>
+		<result name="success">/sbc/itemadmin/item/manage/fulfillment/managenodeitemresult.jsp</result>
+	</action>
+	<action name="modifyitemnodedefnlist" class="com.sterlingcommerce.sbc.common.SBCMultiXAPI">
+		<param name="mashupId">nodeitems-modifyItemNodeDefnList</param>
+		<param name="inputNs">modifyItemNodeDefnListInput</param>
+		<param name="outputNs">itemNodeDefn_output</param>
+		<param name="resourceId">SBCITM00054</param>
+		<result name="success">/sbc/itemadmin/item/manage/fulfillment/managenodeitemresult.jsp</result>
+	</action>
+	<!-- Eof Node Items -->
+	<!-- Sub Catalog Organization Assignment -->
+	<action name="opensubcatalogorganizations">
+		<param name="resourceId">SBCITM00080</param>
+		<result name="success">/sbc/itemadmin/common/subcatalogorganization/subcatalogorgassignment.jsp</result>
+	</action>
+	<action name="getsubcatalogorglist" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+		<param name="mashupId">getsubcatalogorglist</param>
+		<param name="inputNs">getSubCatalogOrgList_input</param>
+		<param name="outputNs">getSubCatalogOrgList_output</param>
+		<param name="resourceId">SBCITM00080</param>
+		<result name="success">/sbc/itemadmin/common/subcatalogorganization/getsubcatalogorglist.jsp</result>
+	</action>
+	<action name="managesubcatalogorgassignment" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+		<param name="mashupId">manageSubCatalogOrgAssignment</param>
+		<param name="inputNs">manageSubCatalogOrg_input</param>
+		<param name="outputNs">manageSubCatalogOrg_output</param>
+		<param name="resourceId">SBCITM00080</param>
+		<result name="success">/sbc/itemadmin/common/subcatalogorganization/managesubcatalogorgresult.jsp</result>
+	</action>
+	<!-- Eof Sub Catalog Organization Assignment -->
+<!-- Manage Item Associations starts -->
+		<action name="getitemassociationdata" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+				<param name="mashupId">item-manageassociations</param>
+				<param name="inputNs">getitemassociations</param>
+				<param name="outputNs">getitemassociationdata</param>
+				<param name="resourceId">SBCITM00032</param>
+				<result name="success">/sbc/itemadmin/item/manage/merchandising/manageassociations.jsp</result>
+		</action>
+		<action name="modifyitemassociations" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+				<param name="mashupId">manageassociations_multiapi</param>
+				<param name="resourceId">SBCITM00054</param>
+				<result name="success">/sbc/itemadmin/item/manage/merchandising/modifyitemassociationsresult.jsp</result>
+		</action>
+		<action name="manageitemforassociations" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+				<param name="mashupId">manageitem_itemflow</param>
+				<param name="inputNs">manageitemassociationsinput</param>
+				<param name="outputNs">manageitemassociationsoutput</param>
+				<param name="resourceId">SBCITM00054</param>
+				<result name="success">/sbc/itemadmin/item/manage/merchandising/modifyitemassociationsresult.jsp</result>
+		</action>
+<!-- Manage Item Associations ends -->
+<!-- Manage Item Variations starts -->
+		<action name="getitemvariationsdata" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			   <param name="mashupId">manageitemvariations_multiapi</param>
+			   <param name="resourceId">SBCITM00048</param>
+			   <result name="success" type="chain">
+				<param name="actionName">variationsdata</param>
+				<param name="namespace">/sbc/item</param>
+			 </result>
+		</action>
+		<action name="variationsdata" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			   <param name="mashupId">manageitemvariations_getItemDetailsForVariations</param>
+			   <param name="inputNs">getItemVarDetailsInput</param>
+			   <param name="outputNs">getItemDetailsOutput</param>
+			   <param name="resourceId">SBCITM00048</param>
+			   <result name="success" type="chain">
+					<param name="actionName">getitemlistdata</param>
+					<param name="namespace">/sbc/item</param>
+			 </result>
+		</action>
+		<action name="getitemlistdata" class="com.sterlingcommerce.sbc.item.actions.SBCOpenManageVariationsAction">
+				<param name="mashupId">manageitemvariations_getitemdetails</param>
+				<param name="inputNs">getitemdetailsinput</param>
+				<param name="outputNs">getitemvariationsdata</param>
+				<param name="resourceId">SBCITM00048</param>
+				<result name="success">/sbc/itemadmin/item/manage/others/managevariations.jsp</result>
+				<result name="ItemAdded">/sbc/itemadmin/item/manage/others/manageitemforvariations.jsp</result>
+		</action>
+		<action name="manageitemvariations" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+				<param name="mashupId">manageitemvariations_manageItem</param>
+				<param name="resourceId">SBCITM00054</param>
+				<result name="success" type="chain">
+					<param name="actionName">getitemvariationsdata</param>
+					<param name="namespace">/sbc/item</param>
+				</result>
+		</action>
+		<action name="additemvariations" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+				<param name="mashupId">manageitem_itemflow</param>
+				<param name="inputNs">manageitemvariationsinput</param>
+				<param name="outputNs">manageitemvariationsoutput</param>
+				<param name="resourceId">SBCITM00054</param>
+				<result name="success" type="chain">
+					<param name="actionName">getitemvariationsdata</param>
+					<param name="namespace">/sbc/item</param>
+				</result>
+		</action>
+		<action name="removeitemvariations" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+				<param name="mashupId">manageitem_itemflow</param>
+				<param name="inputNs">manageitemvariationsinput</param>
+				<param name="outputNs">manageitemvariationsoutput</param>
+				<param name="resourceId">SBCITM00054</param>
+				<result name="success">/sbc/core/donothingresulthandler.jsp</result>
+		</action>
+<!-- Manage Item Variations ends -->
+<!-- Manage Item Classifications starts -->
+		<action name="getitemclassificationdata" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			   <param name="mashupId">seamanageclassifications_multiapi</param>
+			   <param name="resourceId">SBCITM00046</param>
+			   <result name="success">/sbc/itemadmin/item/manage/specifications/manageclassifications.jsp</result>
+		</action>
+		<action name="manageitemclassifications_save" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+				<param name="mashupId">manageitem_itemflow</param>
+				<param name="inputNs">manageiteminput</param>
+				<param name="outputNs">manageitemoutput</param>
+				<param name="resourceId">SBCITM00054</param>
+				<result name="success">/sbc/itemadmin/item/manage/specifications/manageitemresult.jsp</result>
+		</action>
+<!-- Manage Item Classifications ends-->
+<!-- Manage Item Attributes starts -->
+		<action name="getitemattributesdata" class="com.sterlingcommerce.sbc.item.mashup.SBCManageAttributesDefaultingMashup">
+				<param name="mashupId">manageItemAttributes_getItemDetails</param>
+				<param name="inputNs">getItemDetailsInput</param>
+				<param name="outputNs">getItemAttributesData</param>
+				<param name="resourceId">SBCITM00047</param>
+				<result name="success">/sbc/itemadmin/item/manage/specifications/manageattributes.jsp</result>
+		</action>
+		<action name="getattributes" class="com.sterlingcommerce.sbc.item.mashup.SBCManageAttributesMashup">
+				<param name="mashupId">manageItemAttributes_getItemDetailsForAttribute</param>
+				<param name="inputNs">getAttributesInput</param>
+				<param name="outputNs">getAttributesOutput</param>
+				<param name="resourceId">SBCITM00047</param>
+				<result name="success">/sbc/itemadmin/item/manage/specifications/attributehandler.jsp</result>
+		</action>
+		<action name="manageitemattributes" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+				<param name="mashupId">manageitem_itemflow</param>
+				<param name="inputNs">manageitemforcreateinput</param>
+				<param name="outputNs">manageitemforcreateoutput</param>
+				<param name="resourceId">SBCITM00054</param>
+				<result name="success">/sbc/itemadmin/item/manage/specifications/manageitemattributesresult.jsp</result>
+		</action>
+		<action name="manageitemattributes_multiapi" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+				<param name="mashupId">seamanageattributes_multiapi</param>
+				<param name="resourceId">SBCITM00054</param>
+				<result name="success">/sbc/itemadmin/item/manage/specifications/manageitemattributesresult.jsp</result>
+		</action>
+		<action name="getattributedetails_multiapi" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+				<param name="mashupId">attributedetails-loadattribute</param>
+				<param name="resourceId">SBCITM00047</param>
+				<result name="success" type="chain">
+					<param name="actionName">getAttributeDataTypeList</param>
+					<param name="namespace">/sbc/item</param>
+				</result>
+				
+		</action>
+		<action name="getAttributeDataTypeList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+				<param name="mashupId">getAttributeDataTypeList</param>
+			    <param name="inputNs">getAttributeDataTypeList_input</param>
+			    <param name="outputNs">getAttributeDataTypeList_output</param>
+				<result name="success">/sbc/itemadmin/attribute/manage/getattributedetails.jsp</result>
+		</action>
+
+<!-- Manage Item Attributes ends -->
+		<action name="relatedTasks" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+                        <param name="mashupId">relatedTasks</param>
+                        <param name="inputNs">relatedTasks_input</param>
+                        <param name="outputNs">relatedTasks_output</param>
+                        <result name="success">/sbc/common/relatedtasks.jsp</result>
+		</action>
+		<action name="classificationList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+					<param name="mashupId">item-getClassificationPurposeList</param>
+					<param name="inputNs">getClassificationPurposeList_input</param>
+					<param name="outputNs">getClassificationPurposeList_output</param>
+					<param name="resourceId">SBCITM00066</param>
+					<result name="success">/sbc/itemadmin/classification/manage/classificationlist.jsp</result>
+		</action>
+		<action name="aliasesandkeyword" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">seaitemaliases_multiAPI</param>
+			<param name="resourceId">SBCITM00031</param>
+			<result name="success">/sbc/itemadmin/item/manage/basic/aliasesandkeywords.jsp</result>
+		</action>
+		<action name="loadcreateitem" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">createitem_multiapi</param>
+			<param name="resourceId">SBCITM00054</param>
+			<result name="success">/sbc/itemadmin/item/create/createitem.jsp</result>
+		</action>
+		<!-- Item Primary Info-->
+		<action name="itemprimaryinfo" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">itemdetails_primaryinfo</param>
+			<param name="inputNs">getItemDetails_Input</param>
+			<param name="outputNs">getItemDetails_Output</param>
+			<param name="resourceId">SBCITM00001</param>
+			<result name="success">/sbc/itemadmin/item/manage/basic/itemdetailsprimaryinforesult.jsp</result>
+		</action>
+		<action name="getcontentlocation" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">asset-getcontentlocation</param>
+			<param name="outputNs">getcontentlocation_Output</param>
+			<param name="resourceId">SBCITM00049</param>
+			<result name="success">/sbc/common/contentLocationListResult.jsp</result>
+		</action>
+		<action name="deleteitem" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">deleteItem</param>
+			<param name="inputNs">manageItem_Input</param>
+			<param name="outputNs">manageItem_Output</param>
+			<param name="resourceId">SBCITM00054</param>
+			<result name="success">/sbc/itemadmin/item/manage/basic/deleteitem.jsp</result>
+		<!--	<result name="success" type="redirectAction">
+		        <param name="actionName">sbcHome</param>
+		        <param name="namespace">/sbc</param>
+		    </result> -->
+		</action>
+		<!-- Eof Item Primary Info-->
+		<action name="createitem" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">createitem_ForCreate</param>
+			<param name="inputNs">itemdetails_input</param>
+			<param name="outputNs">itemdetails_output</param>
+			<param name="resourceId">SBCITM00054</param>
+			<result name="success">/sbc/core/donothingresulthandler.jsp</result>
+			<result name="APIERROR">/sbc/itemadmin/item/create/createitemerror.jsp</result>
+		</action>
+		<action name="createitemwithcategory" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">createitem_WithCategory</param>
+			<param name="resourceId">SBCITM00054</param>
+			<result name="success">/sbc/core/donothingresulthandler.jsp</result>
+			<result name="APIERROR">/sbc/itemadmin/item/create/createitemerror.jsp</result>
+		</action>
+		<action name="aftercreateitem" class="com.sterlingcommerce.sbc.item.actions.SBCAfterCreateItemAction">
+			<param name="mashupId">itemdetails_primaryinfo</param>
+			<param name="inputNs">itemdetailsNS</param>
+			<param name="outputNs">itemDetailsOutput</param>
+			<param name="resourceId">SBCITM00054</param>
+			<result name="success">/sbc/itemadmin/item/manage/basic/createitemresult.jsp</result>
+		</action>
+		<action name="itemdetails" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">seaitemdetails_multiAPI</param>
+			<param name="resourceId">SBCITM00049</param>
+			<result name="success" type="chain">
+				<param name="actionName">itemdetails_forvariations</param>
+				<param name="namespace">/sbc/item</param>
+			 </result>
+		</action>
+		<action name="itemdetails_forvariations" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">itemdetails_forvariations</param>
+			<param name="inputNs">itemdetailsforvariations_input</param>
+			<param name="outputNs">itemdetailsforvariations_output</param>
+			<param name="resourceId">SBCITM00048</param>
+			<result name="success">/sbc/itemadmin/item/manage/basic/itemdetails.jsp</result>
+		</action>
+		<action name="itemdetailsmanageitem" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">itemdetails_manageItem_multiApi</param>
+			<param name="resourceId">SBCITM00049</param>
+			<result name="success">/sbc/itemadmin/item/manage/basic/resultItemDetailsManageItem.jsp</result>
+		</action>
+		<action name="itemdetailspostmanageitem" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">itemdetails_getItemDetails</param>
+			<param name="inputNs">getitemdetailsinput</param>
+			<param name="outputNs">getitemdetailsoutput</param>
+			<param name="resourceId">SBCITM00049</param>
+			<result name="success">/sbc/itemadmin/item/manage/basic/itemdetailspostmanageitemresult.jsp</result>
+		</action>
+		<action name="fulfillment" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">seafulfillment_multiAPI</param>
+			<param name="resourceId">SBCITM00025</param>
+			<result name="success">/sbc/itemadmin/item/manage/fulfillment/fulfillment.jsp</result>
+		</action>
+		<action name="marketingandsales" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">marketingandsales_multiAPI</param>
+			<param name="resourceId">SBCITM00029</param>
+			<result name="success">/sbc/itemadmin/item/manage/merchandising/marketingandsales.jsp</result>
+		</action>
+		<action name="marketingandsalesmentmanageitem" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">manageitem_itemflow</param>
+			<param name="inputNs">manageIteminput</param>
+			<param name="outputNs">manageItemoutput</param>
+			<param name="resourceId">SBCITM00054</param>
+			<result name="success">/sbc/itemadmin/item/manage/merchandising/manageitemresult.jsp</result>
+		</action>
+
+		<action name="itemsearch" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">item-ItemStatus</param>
+			<param name="inputNs">itemStatus_input</param>
+			<param name="outputNs">itemStatus_output</param>
+			<param name="resourceId">SBCITM00055</param>
+			<!-- <param name="mashupId">itemsearchinit_multiAPI</param> -->
+			<result name="success" type="chain">
+				<param name="actionName">itemTypeList</param>
+				<param name="namespace">/sbc/item</param>
+		    </result>
+		</action>
+		<!-- Attribute Allowed Values Search Start-->
+		<action name="launchAttributeAllowedValueSearch">
+			<param name="resourceId">SBCITM00055</param>
+			<result name="success">/sbc/itemadmin/attribute/search/launchAttributeAllowedValueSearch.jsp</result>
+		</action>
+		<action name="allowedValuesSearch_getAttributeAllowedValueList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">allowedValuesSearchMashup</param>
+			<param name="inputNs">allowedValues_input</param>
+			<param name="outputNs">allowedValues_output</param>
+			<param name="resourceId">SBCITM00055</param>
+			<result name="success">/sbc/itemadmin/attribute/search/allowedValueSearchResults.jsp</result>
+		</action>
+		<action name="getTextAttributeAllowedValues" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">allowedValuesMashup</param>
+			<param name="inputNs">getTextAllowedValues_input</param>
+			<param name="outputNs">getTextAllowedValues_output</param>
+			<!--<param name="resourceId">SBCITM00055</param> -->
+			<result name="success">/sbc/itemadmin/category/manage/attribute/loadtextattrvalues.jsp</result>
+		</action>
+		<!-- Attribute Allowed Values Search End-->
+		<action name="itemTypeList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">itemsearch-ItemCharacteristic</param>
+			<param name="inputNs">getItemTypeListInput</param>
+			<param name="outputNs">getItemTypeListOutput</param>
+			<param name="resourceId">SBCITM00055</param>
+			<result name="success">/sbc/itemadmin/item/itemsearch/itemsearch.jsp</result>
+		</action>
+		<action name="getItemTypeList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">itemsearch-ItemCharacteristic</param>
+			<param name="inputNs">getItemTypeListInput</param>
+			<param name="outputNs">getItemTypeListOutput</param>
+			<param name="resourceId">SBCITM00055</param>
+			<result name="success">/sbc/itemadmin/item/itemsearch/itemtypelist.jsp</result>
+		</action>
+		<action name="validateItem" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">item-validateItem</param>
+			<param name="inputNs">itemSearch_input</param>
+			<param name="outputNs">itemSearch_output</param>
+			<param name="resourceId">SBCITM00055</param>
+			<result name="success">/sbc/itemadmin/item/itemsearch/itemsearchlistresult.jsp</result>
+		</action>
+		<action name="searchitemaction" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">item-searchItem</param>
+			<param name="inputNs">itemSearch_input</param>
+			<param name="outputNs">itemSearch_output</param>
+			<param name="resourceId">SBCSYS00001</param>
+			<result name="success">/sbc/itemadmin/item/itemsearch/itemsearchlistresult.jsp</result>
+		</action>
+		<action name="quickitemsearch" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">quickitemsearch-itemsearch</param>
+			<param name="inputNs">itemSearch_input</param>
+			<param name="outputNs">itemSearch_output</param>
+			<param name="resourceId">SBCITM00055</param>
+			<result name="success">/sbc/itemadmin/item/itemsearch/itemsearchlistresult.jsp</result>
+		</action>
+		<action name="relatedtasks" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">item-relatedTasksLoader</param>
+			<param name="resourceId">SBCITM00001</param>
+		</action>
+		<action name="itemsearchpopup" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">item-ItemStatus</param>
+			<param name="inputNs">itemStatus_input</param>
+			<param name="outputNs">itemStatus_output</param>
+			<param name="resourceId">SBCSYS00001</param>
+			<result name="success" type="chain">
+				<param name="actionName">itemTypeListInPopup</param>
+				<param name="namespace">/sbc/item</param>
+		    </result>
+		</action>
+		<action name="itemTypeListInPopup" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">itemsearch-ItemCharacteristic</param>
+			<param name="inputNs">getItemTypeListInput</param>
+			<param name="outputNs">getItemTypeListOutput</param>
+			<param name="resourceId">SBCSYS00001</param>
+			<result name="success">/sbc/itemadmin/item/itemsearch/itemsearchpopup.jsp</result>
+		</action>
+<!-- Service Options starts -->
+		<action name="serviceoptssearch">
+			<param name="resourceId">SBCITM00111</param>
+			<result name="success">/sbc/itemadmin/item/itemsearch/serviceoptionsearch.jsp</result>
+		</action>
+		<action name="createserviceoption">
+			<param name="resourceId">SBCITM00112</param>
+			<result name="success">/sbc/itemadmin/item/serviceoptions/create/createserviceoption.jsp</result>
+		</action>
+		<action name="createserviceoption-manageitem" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">createitem_ForCreate</param>
+			<param name="inputNs">itemdetails_input</param>
+			<param name="outputNs">itemdetails_output</param>
+			<param name="resourceId">SBCITM00112</param>
+			<result name="APIERROR">/sbc/itemadmin/item/serviceoptions/create/createserviceoptionerror.jsp</result>
+			<result name="success">/sbc/core/donothingresulthandler.jsp</result>
+		</action>
+		<action name="serviceoptionprimaryinfo" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">item-primaryServiceInfoGetItemDetails</param>
+			<param name="inputNs">itemdetailsNS</param>
+			<param name="outputNs">getItemDetails_output</param>
+			<param name="resourceId">SBCITM00111</param>			
+			<result name="success">/sbc/itemadmin/item/serviceoptions/manage/serviceoptionprimaryinformation.jsp</result>
+		</action>
+		<action name="createserviceoption-getitemuommasterlist" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">createservice_getItemUOMMasterList</param>
+			<param name="inputNs">getItemUOMMasterList_input</param>
+			<param name="outputNs">getItemUOMMasterList_output</param>
+			<param name="resourceId">SBCITM00111</param>
+			<result name="success">/sbc/itemadmin/item/serviceoptions/create/createserviceoptiongetmasteruomlistresult.jsp</result>
+		</action>
+		<action name="primaryServiceOptionManageItem" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">manageitem_itemflow</param>
+			<param name="inputNs">manageItem_input</param>
+			<param name="outputNs">manageItem_output</param>
+			<param name="resourceId">SBCITM00112</param>
+			<result name="success">/sbc/itemadmin/item/serviceoptions/manage/serviceoptionmanageitemresult.jsp</result>
+		</action>
+<!-- Service Options ends -->
+<!-- Search Service Options starts -->
+		<action name="serviceoptionsearch">
+			<param name="resourceId">SBCITM00057</param>
+			<result name="success">/sbc/itemadmin/item/itemsearch/serviceoptionsearch.jsp</result>
+		</action>
+		<action name="searchserviceoptionaction" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">item-searchServiceOption</param>
+			<param name="inputNs">itemSearch_input</param>
+			<param name="outputNs">itemSearch_output</param>
+			<param name="resourceId">SBCITM00057</param>
+			<result name="success">/sbc/itemadmin/item/itemsearch/serviceoptionsearchlistresult.jsp</result>
+		</action>
+		<action name="serviceoptionsearchpopup">
+			<param name="resourceId">SBCITM00057</param>
+			<result name="success">/sbc/itemadmin/item/itemsearch/serviceoptionsearchpopup.jsp</result>
+		</action>
+		<action name="getItemStatusList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">item-getStatusList</param>
+			<param name="inputNs">itemStatusList_input</param>
+			<param name="outputNs">itemStatusList_output</param>
+			<param name="resourceId">SBCITM00057</param>
+			<result name="success">/sbc/itemadmin/item/itemsearch/itemstatuslistresult.jsp</result>
+		</action>
+<!-- Search Service Options ends -->
+<!-- Search Service starts -->
+		<action name="servicesearch" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<!-- <param name="mashupId">sbcservicesearchinit_multiAPI</param>
+			<result name="success">/sbc/itemadmin/item/itemsearch/servicesearch.jsp</result> -->
+			<param name="mashupId">item-ItemStatus</param>
+			<param name="inputNs">itemStatus_input</param>
+			<param name="outputNs">itemStatus_output</param>
+			<param name="resourceId">SBCITM00057</param>
+			<result name="success" type="chain">
+				<param name="actionName">servicecharacteristic</param>
+				<param name="namespace">/sbc/item</param>
+		    </result>
+		</action>
+		<action name="servicecharacteristic" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">servicesearch-ServiceCharacteristic</param>
+			<param name="inputNs">getServiceCharacteristicListInput</param>
+			<param name="outputNs">getServiceCharacteristicListOutput</param>
+			<param name="resourceId">SBCITM00057</param>
+			<result name="success">/sbc/itemadmin/item/itemsearch/servicesearch.jsp</result>
+		</action>
+		<action name="getservicecharacteristiclist" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">servicesearch-ServiceCharacteristic</param>
+			<param name="inputNs">getServiceCharacteristicListInput</param>
+			<param name="outputNs">getServiceCharacteristicListOutput</param>
+			<param name="resourceId">SBCITM00057</param>
+			<result name="success">/sbc/itemadmin/item/itemsearch/getservicecharacteristiclist.jsp</result>
+		</action>
+		<action name="searchserviceaction" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">item-searchService</param>
+			<param name="inputNs">itemSearch_input</param>
+			<param name="outputNs">itemSearch_output</param>
+			<param name="resourceId">SBCITM00057</param>
+			<result name="success">/sbc/itemadmin/item/itemsearch/servicesearchlistresult.jsp</result>
+		</action>
+		<!--
+		<action name="servicesearchpopup" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">servicesearch-ServiceCharacteristic</param>
+			<param name="inputNs">getServiceCharacteristicListInput</param>
+			<param name="outputNs">getServiceCharacteristicListOutput</param>
+			<param name="resourceId">SBCITM00057</param>
+			<result name="success">/sbc/itemadmin/item/itemsearch/servicesearchpopup.jsp</result>
+		</action>
+		-->
+		<action name="servicesearchpopup" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">item-ItemStatus</param>
+			<param name="inputNs">itemStatus_input</param>
+			<param name="outputNs">itemStatus_output</param>
+			<param name="resourceId">SBCITM00057</param>
+			<result name="success" type="chain">
+				<param name="actionName">serviceCharacteristicListInPopup</param>
+				<param name="namespace">/sbc/item</param>
+		    </result>
+		</action>
+		<action name="serviceCharacteristicListInPopup" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">servicesearch-ServiceCharacteristic</param>
+			<param name="inputNs">getServiceCharacteristicListInput</param>
+			<param name="outputNs">getServiceCharacteristicListOutput</param>
+			<param name="resourceId">SBCITM00057</param>
+			<result name="success">/sbc/itemadmin/item/itemsearch/servicesearchpopup.jsp</result>
+		</action>
+	<!-- Search Service ends -->
+
+
+<!--****************************-->
+<!-- Start Attribute Management -->
+<!--****************************-->
+		<action name="openattributemanagement" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">loadAttributeTree</param>
+			<param name="inputNs">getAttributeDomainDetails_input</param>
+			<param name="outputNs">getAttributeDomainDetails_output</param>
+			<!--<param name="resourceId">SBCITM00002</param>-->
+			<result name="success">/sbc/itemadmin/attribute/attrmanagement.jsp</result>
+		</action>
+		<action name="attributemanagement-getAttributeGroupListForDomain" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">attributemanagement-getAttributeDomainChildren</param>
+			<param name="inputNs">getAttributeGroupList_input</param>
+			<param name="outputNs">getAttributeGroupList_output</param>
+			<!--<param name="resourceId">SBCSYS00001</param>-->
+			<result name="success">/sbc/core/widget/settreedata.jsp</result>
+		</action>
+		<action name="attributemanagement-getAttributeGroupListForGroup" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">attributemanagement-getAttributeGroupChildren</param>
+			<param name="requestMethodSupported">ALL</param>
+			<!--<param name="resourceId">SBCSYS00001</param>-->
+			<result name="success">/sbc/core/widget/settreedata.jsp</result>
+		</action>
+		<action name="attributemanagement-changeAttributeSequence" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">attributedetails-manageattribute</param>
+			<param name="inputNs">manageAttribute_input</param>
+			<param name="outputNs">manageAttribute_output</param>
+			<!--<param name="resourceId">SBCITM00099</param>-->
+			<result name="success">/sbc/core/donothingresulthandler.jsp</result>
+			<result name="APIERROR">/sbc/itemadmin/attribute/manage/manageattributeerror.jsp</result>
+		</action>
+		<action name="attributemanagement-changeAttributeGroupSequence" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">attributegroupdetails-manageattributegroup</param>
+			<param name="inputNs">manageAttributeGroup_input</param>
+			<param name="outputNs">manageAttributeGroup_output</param>
+			<!--<param name="resourceId">SBCITM00099</param>-->
+			<result name="success">/sbc/core/donothingresulthandler.jsp</result>
+		</action>
+		<action name="attributemanagement-loadspecifiPath" class="com.sterlingcommerce.sbc.common.SBCMultiXAPI">
+			<param name="mashupId">attributemanagement-getAttributeGroupChildren</param>
+			<param name="inputNs">loadspecifiPath_input</param>
+			<param name="outputNs">loadspecifiPath_output</param>
+			<!--<param name="resourceId">SBCITM00002</param>-->
+			<result name="success">/sbc/itemadmin/attribute/loadtreepath.jsp</result>
+		</action>
+<!-- Attribute Domain Details starts -->
+		<action name="attributedomaindetails-getattributedomaindetails" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">attributedomaindetails-getattributedomaindetails</param>
+			<result name="success">/sbc/itemadmin/attribute/manage/getattributedomaindetails.jsp</result>
+			<param name="inputNs">getAttributeDomainDetails_input</param>
+			<param name="outputNs">getAttributeDomainDetails_output</param>
+			<!--<param name="resourceId">SBCITM00003</param>-->
+		</action>
+		<action name="attributedomaindetails-manageattributedomain" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">attributedomaindetails-manageattributedomain</param>
+			<result name="success">/sbc/itemadmin/attribute/manage/manageattributedomain.jsp</result>
+			<param name="inputNs">manageAttributeDomain_input</param>
+			<param name="outputNs">manageAttributeDomain_output</param>
+			<!--<param name="resourceId">SBCITM00099</param>-->
+		</action>
+<!-- Attribute Domain Details ends-->
+<!-- Attribute Group Details starts -->
+		<action name="attributegroupdetails-createattributegroup" >
+			<result name="success">/sbc/itemadmin/attribute/manage/createattributegroup.jsp</result>
+			<!--<param name="resourceId">SBCITM00099</param>-->
+		</action>
+		<action name="attributegroupdetails-getattributegroupdetails" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">attributegroupdetails-getattributegroupdetails</param>
+			<result name="success">/sbc/itemadmin/attribute/manage/getattributegroupdetails.jsp</result>
+			<param name="inputNs">getAttributeGroupDetails_input</param>
+			<param name="outputNs">getAttributeGroupDetails_output</param>
+			<!--<param name="resourceId">SBCITM00004</param>-->
+		</action>
+		<action name="attributegroupdetails-manageattributegroup" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">attributegroupdetails-manageattributegroup</param>
+			<result name="success">/sbc/itemadmin/attribute/manage/manageattributegroup.jsp</result>
+			<result name="APIERROR">/sbc/itemadmin/attribute/manage/createattributegrouperror.jsp</result>
+			<param name="inputNs">manageAttributeGroup_input</param>
+			<param name="outputNs">manageAttributeGroup_output</param>
+			<!--<param name="resourceId">SBCITM00099</param>-->
+		</action>
+		<action name="attributegroupdetails-deleteattributegroup" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">attributegroupdetails-manageattributegroup</param>
+			<result name="success">/sbc/itemadmin/attribute/manage/deleteattributegroup.jsp</result>
+			<param name="inputNs">manageAttributeGroup_input</param>
+			<param name="outputNs">manageAttributeGroup_output</param>
+			<!--<param name="resourceId">SBCITM00099</param>-->
+		</action>
+	<!-- Attribute Group Details ends-->
+	<!-- Load attribute and fetch attribute formats-->
+		<action name="attributedetails-loaddata"
+		class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getAttributeDataTypeList</param>
+			<param name="inputNs">getAttributeDataTypeList_input</param>
+			<param name="outputNs">getAttributeDataTypeList_output</param>
+			<result name="success" type="chain">
+					<param name="actionName">loadattribute-getdatatypelist</param>
+					<param name="namespace">/sbc/item</param> 
+			</result>
+		</action>			
+		<action name="loadattribute-getdatatypelist" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">attributedetails-loadattribute</param>
+			<!--<param name="resourceId">SBCITM00099</param>-->
+			<result name="success">/sbc/itemadmin/attribute/manage/getattributedetails.jsp</result>
+		</action>
+	<!-- End load attribute and fetch attribute formats-->
+	<!-- Create attribute and fetch attribute formats-->
+		<action name="attributedetails-createentityattribute"
+		class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getEntityAttributeDataTypeList</param>
+			<param name="inputNs">getAttributeDataTypeList_input</param>
+			<param name="outputNs">getAttributeDataTypeList_output</param>
+			<result name="success" type="chain">
+					<param name="actionName">createattribute-getdatatypelist</param>
+					<param name="namespace">/sbc/item</param> 
+			</result>
+		</action>	
+		<action name="attributedetails-createattribute"
+		class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getAttributeDataTypeList</param>
+			<param name="inputNs">getAttributeDataTypeList_input</param>
+			<param name="outputNs">getAttributeDataTypeList_output</param>
+			<result name="success" type="chain">
+					<param name="actionName">createattribute-getdatatypelist</param>
+					<param name="namespace">/sbc/item</param> 
+			</result>
+		</action>		
+		<action name="createattribute-getdatatypelist" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">attributedetails-createattribute</param>
+			<!--<param name="resourceId">SBCITM00099</param>-->
+			<result name="success">/sbc/itemadmin/attribute/manage/createattribute.jsp</result>
+		</action>
+	<!-- End create attribute and fetch attribute formats-->
+		
+		
+	
+		<action name="attributedetails-manageattribute" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">attributedetails-manageattribute</param>
+			<result name="success">/sbc/itemadmin/attribute/manage/manageattribute.jsp</result>
+			<result name="APIERROR">/sbc/itemadmin/attribute/manage/manageattributeerror.jsp</result>
+			<param name="inputNs">manageAttribute_input</param>
+			<param name="outputNs">manageAttribute_output</param>
+			<!--<param name="resourceId">SBCITM00099</param>-->
+		</action>
+		<action name="attributedetails-deleteattribute" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">attributedetails-manageattribute</param>
+			<result name="success">/sbc/itemadmin/attribute/manage/deleteattribute.jsp</result>
+			<result name="APIERROR">/sbc/itemadmin/attribute/manage/manageattributeerror.jsp</result>
+			<param name="inputNs">manageAttribute_input</param>
+			<param name="outputNs">manageAttribute_output</param>
+			<!--<param name="resourceId">SBCITM00099</param>-->
+		</action>
+		<action name="attributedetails-reloadpostfix" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">attributedetails-getattributepostfixlist</param>
+			<result name="success">/sbc/itemadmin/attribute/manage/attrdetails/reloadpostfixes.jsp</result>
+			<param name="inputNs">getAttrPostFix_input</param>
+			<param name="outputNs">getAttrPostFix_output</param>
+			<!--<param name="resourceId">SBCITM00002</param>-->
+		</action>
+		<action name="openattributelookup" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">loadAttributeTree</param>
+			<param name="inputNs">getAttributeDomainDetails_input</param>
+			<param name="outputNs">getAttributeDomainDetails_output</param>
+			<!--<param name="resourceId">SBCSYS00001</param>-->
+			<result name="success">/sbc/itemadmin/attribute/manage/openattributelookup.jsp</result>
+		</action>
+		<action name="attributemanagement-getattributeConfiguration" class="com.sterlingcommerce.sbc.item.mashup.SBCGetAttributeConfigAction">
+			<param name="mashupId">attributelookup-getattributeconfiguration</param>
+			<param name="inputNs">getAttributeList_input</param>
+			<param name="outputNs">getAttributeList_output</param>
+			<!--<param name="resourceId">SBCSYS00001</param>-->
+			<result name="success">/sbc/itemadmin/attribute/search/getattributeconfig.jsp</result>
+		</action>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Attribute Details ends-->
+<!-- Boolean Attribute Details start-->
+		<action name="booleanattrdetails-getbooleanattribute" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">booleanattrdetails-getattributedetails</param>
+			<result name="success">/sbc/itemadmin/attribute/manage/attrdetails/getbooleanattribute.jsp</result>
+			<param name="inputNs">getAttributeDetails_input</param>
+			<param name="outputNs">getAttributeDetails_output</param>
+			<!--<param name="resourceId">SBCITM00006</param>-->
+		</action>
+		<action name="booleanattrdetails-managebooleanattribute" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">attributedetails-manageattribute</param>
+			<result name="success">/sbc/itemadmin/attribute/manage/attrdetails/managebooleanattribute.jsp</result>
+			<result name="APIERROR">/sbc/itemadmin/attribute/manage/manageattributeerror.jsp</result>
+			<param name="inputNs">manageAttribute_input</param>
+			<param name="outputNs">manageAttribute_output</param>
+			<!--<param name="resourceId">SBCITM00099</param>-->
+		</action>
+<!-- Boolean Attribute Details ends-->
+<!-- Number Attribute Details start-->
+		<action name="numberattrdetails-getattributedetails" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction" >
+			<param name="mashupId">numberattrdetails-getattributedetails</param>
+			<param name="inputNs">getAttributeDetails_input</param>
+			<param name="outputNs">getAttributeDetails_output</param>
+			<!--<param name="resourceId">SBCITM00007</param>-->
+			<result name="success">/sbc/itemadmin/attribute/manage/attrdetails/getnumberattribute.jsp</result>
+		</action>
+		<action name="numberattrdetails-managenumberattribute" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">attributedetails-manageattribute</param>
+			<result name="success">/sbc/itemadmin/attribute/manage/attrdetails/managenumberattribute.jsp</result>
+			<result name="APIERROR">/sbc/itemadmin/attribute/manage/manageattributeerror.jsp</result>
+			<param name="inputNs">manageAttribute_input</param>
+			<param name="outputNs">manageAttribute_output</param>
+			<!--<param name="resourceId">SBCITM00099</param>-->
+		</action>
+<!-- Number Attribute Details ends-->
+<!-- Text Attribute Details start-->
+		<action name="textattributedetails-gettextattribute" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">textattributedetails-getattributedetails</param>
+			<!-- <result name="success">/sbc/itemadmin/attribute/manage/attrdetails/gettextattribute.jsp</result> -->
+			<param name="inputNs">getAttributeDetails_input</param>
+			<param name="outputNs"> getAttributeDetails_output</param>
+			<!--<param name="resourceId">SBCITM00008</param>-->
+			<result name="success" type="chain">
+				<param name="actionName">gettextattributeallowedValues</param>
+				<param name="namespace">/sbc/item</param>
+		    </result>
+		</action>
+		<action name="gettextattributeallowedValues" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">textattributedetails-getAllowedValuelist</param>
+			<param name="inputNs">getAllowedValuelist_input</param>
+			<param name="outputNs">getAllowedValuelist_output</param>
+			<!--<param name="resourceId">SBCITM00008</param>-->
+			<result name="success">/sbc/itemadmin/attribute/manage/attrdetails/gettextattribute.jsp</result>
+		</action>
+		<action name="attrallowedvaluespaginationaction" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">textattributedetails-getAllowedValuelist</param>
+			<param name="inputNs">getAllowedValuelist_input</param>
+			<param name="outputNs">getAllowedValuelist_output</param>
+			<!--<param name="resourceId">SBCITM00008</param>-->
+			<result name="success">/sbc/itemadmin/attribute/manage/attrdetails/getallowedvaluelist.jsp</result>
+		</action>
+		<action name="textattributedetails-managetextattribute" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">attributedetails-managetextattribute</param>
+			<result name="success">/sbc/itemadmin/attribute/manage/attrdetails/managetextattribute.jsp</result>
+			<result name="APIERROR">/sbc/itemadmin/attribute/manage/manageattributeerror.jsp</result>
+			<param name="inputNs">manageAttribute_input</param>
+			<param name="outputNs">manageAttribute_output</param>
+			<!--<param name="resourceId">SBCITM00099</param>-->
+		</action>
+		<action name="textattributedetails-removevalidvalue" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">attributedetails-manageattribute</param>
+			<result name="success">/sbc/itemadmin/attribute/manage/attrdetails/removetextattributevalue.jsp</result>
+			<result name="APIERROR">/sbc/itemadmin/attribute/manage/manageattributeerror.jsp</result>
+			<param name="inputNs">manageAttribute_input</param>
+			<param name="outputNs">manageAttribute_output</param>
+			<!--<param name="resourceId">SBCITM00099</param>-->
+		</action>
+<!-- Text Attribute Details ends-->
+<!-- Derived Attribute Details start-->
+		<action name="derivedattrdetails-getderivedattribute" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">derivedattrdetails-getattributedetails</param>
+			<result name="success">/sbc/itemadmin/attribute/manage/attrdetails/getderivedattribute.jsp</result>
+			<param name="inputNs">getAttributeDetails_input</param>
+			<param name="outputNs">getAttributeDetails_output</param>
+			<!--<param name="resourceId">SBCITM00009</param>-->
+		</action>
+		<action name="derivedattrdetails-managederivedattribute" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">attributedetails-manageattribute</param>
+			<result name="success">/sbc/itemadmin/attribute/manage/attrdetails/managederivedattribute.jsp</result>
+			<result name="APIERROR">/sbc/itemadmin/attribute/manage/manageattributeerror.jsp</result>
+			<param name="inputNs">manageAttribute_input</param>
+			<param name="outputNs">manageAttribute_output</param>
+			<!--<param name="resourceId">SBCITM00099</param>-->
+		</action>
+		<action name="derivedattrdetails-removevalidvalue" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">attributedetails-manageattribute</param>
+			<result name="success">/sbc/itemadmin/attribute/manage/attrdetails/removederivedattributevalue.jsp</result>
+			<result name="APIERROR">/sbc/itemadmin/attribute/manage/manageattributeerror.jsp</result>
+			<param name="inputNs">manageAttribute_input</param>
+			<param name="outputNs">manageAttribute_output</param>
+			<!--<param name="resourceId">SBCITM00009</param>-->
+		</action>
+<!-- Derived Attribute Details ends-->
+<!-- Derived Attribute List start-->
+		<action name="derivedattributes-loaddata" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">derivedattributes-multiapi</param>
+			<!--<param name="resourceId">SBCITM00010</param>-->
+			<result name="success">/sbc/itemadmin/attribute/manage/derivedattributes/getattributelist.jsp</result>
+		</action>
+<!-- Derived Attribute List end-->
+<!-- Attribute Assets Start -->
+		<action name="attributeassets-getattributeassets" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">attributeassets-loadattributeassets</param>
+			<!--<param name="resourceId">SBCITM00011</param>-->
+			<result name="success">/sbc/itemadmin/attribute/manage/assets/getassetlist.jsp</result>
+		</action>
+		<action name="attributeassets-manageattributeassets" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">attributeassets-manageattributeassets</param>
+			<result name="success">/sbc/itemadmin/attribute/manage/assets/manageassetlist.jsp</result>
+			<result name="APIERROR">/sbc/itemadmin/attribute/manage/manageattributeerror.jsp</result>
+			<param name="inputNs">manageAttribute_input</param>
+			<param name="outputNs">manageAttribute_output</param>
+			<!--<param name="resourceId">SBCITM00099</param>-->
+		</action>
+		<action name="attributevalueassets-getattributevalueassets" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">attributevalueassets-loadattributevalueassets</param>
+			<!--<param name="resourceId">SBCITM00012</param>-->
+			<result name="success">/sbc/itemadmin/attribute/manage/assets/loadassetdetail.jsp</result>
+		</action>
+<!-- Attribute Assets End -->
+<!--**************************-->
+<!-- End Attribute Management -->
+<!--**************************-->
+<!-- Create Service start-->
+		<action name="createservice">
+			<param name="resourceId">SBCITM00056</param>
+			<result name="success">/sbc/itemadmin/item/services/create/createservice.jsp</result>
+		</action>
+		<action name="createservice-manageitem" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">createitem_ForCreate</param>
+			<param name="inputNs">itemdetails_input</param>
+			<param name="outputNs">itemdetails_output</param>
+			<param name="resourceId">SBCITM00056</param>
+			<result name="APIERROR">/sbc/itemadmin/item/services/create/createserviceerror.jsp</result>
+			<result name="success">/sbc/core/donothingresulthandler.jsp</result>
+		</action>
+		<action name="createservice-getservicetypelistaction" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">item-createServiceGetServiceTypeList</param>
+			<result name="success">/sbc/itemadmin/item/services/create/createservicegetservicetypelistresult.jsp</result>
+			<param name="inputNs">serviceTypeList_input</param>
+			<param name="outputNs">serviceTypeList_output</param>
+			<param name="resourceId">SBCITM00056</param>
+		</action>
+		<action name="createservice-getitemuommasterlist" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">createservice_getItemUOMMasterList</param>
+			<param name="inputNs">getItemUOMMasterList_input</param>
+			<param name="outputNs">getItemUOMMasterList_output</param>
+			<param name="resourceId">SBCITM00056</param>
+			<result name="success">/sbc/itemadmin/item/services/create/createservicegetmasteruomlistresult.jsp</result>
+		</action>
+<!-- Create Service ends-->
+		<action name="serviceprimaryinfo" class="com.sterlingcommerce.sbc.item.actions.SBCOpenServiceItemDetailsAction">
+			<param name="mashupId">item-serviceprimaryinfo-multiapi</param>
+			<param name="resourceId">SBCITM00057</param>
+			<result name="ProvidedOrDeliveryService">/sbc/itemadmin/item/services/manage/serviceprimaryinformation.jsp</result>
+			<result name="OtherServices">/sbc/itemadmin/item/services/manage/otherserviceprimaryinfo.jsp</result>
+		</action>
+		<action name="primaryServiceInfoManageItem" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">manageitem_itemflow</param>
+			<param name="inputNs">manageItem_input</param>
+			<param name="outputNs">manageItem_output</param>
+			<param name="resourceId">SBCITM00056</param>
+			<result name="success">/sbc/itemadmin/item/services/manage/primaryserviceinfomanageitemresult.jsp</result>
+		</action>
+		<action name="servicepimaryinfogetcommoncodelistaction" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">item-serviceprimaryinfogetcommoncodelist</param>
+			<param name="inputNs">getCommonCodeList_input</param>
+			<param name="outputNs">getCommonCodeList_output</param>
+			<param name="resourceId">SBCITM00057</param>
+			<result name="success">/sbc/itemadmin/item/services/manage/serviceprimaryinfogetcommoncodelistresult.jsp</result>
+		</action>
+<!-- Service Items Primary Info ends-->
+		<action name="primaryOtherServiceInfoManageItemAction" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">manageitem_itemflow</param>
+			<param name="inputNs">manageItem_input</param>
+			<param name="outputNs">manageItem_output</param>
+			<param name="resourceId">SBCITM00056</param>
+			<result name="success">/sbc/itemadmin/item/services/manage/primaryotherserviceinfomanageitemresult.jsp</result>
+		</action>
+		<action name="primaryOtherServiceInfogetcommoncodelistaction" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">item-primaryOtherServiceInfogetcommoncodelist</param>
+			<param name="inputNs">getCommonCodeList_input</param>
+			<param name="outputNs">getCommonCodeList_output</param>
+			<param name="resourceId">SBCITM00057</param>
+			<result name="success">/sbc/itemadmin/item/services/manage/primaryOtherServiceInfogetcommoncodelistresult.jsp</result>
+		</action>
+<!-- Other Service Items Primary Info ends-->
+		<action name="serviceActivityListManageItemAction" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+				<param name="mashupId">manageitem_itemflow</param>
+				<param name="inputNs">manageItem_input</param>
+				<param name="outputNs">manageItem_output</param>
+				<param name="resourceId">SBCITM00056</param>
+				<result name="success">/sbc/itemadmin/item/services/manage/serviceactivitylistmanageitemresult.jsp</result>
+			</action>
+			<action name="manageserviceactivities" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+				<param name="mashupId">item-serviceActivityListGetItemDetails</param>
+				<param name="inputNs">itemdetailsNS</param>
+				<param name="outputNs">getItemDetails_output</param>
+				<param name="resourceId">SBCITM00045</param>
+				<result name="success">/sbc/itemadmin/item/services/manage/serviceactivities.jsp</result>
+			</action>
+			<action name="serviceActivityListGetActivityListAction" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+				<param name="mashupId">item-serviceActivityListGetActivityList</param>
+				<param name="inputNs">getActivityList_input</param>
+				<param name="outputNs">getActivityList_output</param>
+				<param name="resourceId">SBCITM00045</param>
+				<result name="success">/sbc/itemadmin/item/services/manage/serviceactivitylistgetactivitylistresult.jsp</result>
+			</action>
+<!-- Manage Service Activities ends-->
+		<action name="manageserviceoptions" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+				<param name="mashupId">item-manageServiceOptionsGetItemDetails</param>
+				<param name="inputNs">itemdetailsNS</param>
+				<param name="outputNs">getItemDetails_output</param>
+				<param name="resourceId">SBCITM00044</param>
+				<result name="success">/sbc/itemadmin/item/services/manage/serviceoptions.jsp</result>
+			</action>
+			<action name="manageServiceOptionsManageItemAction" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+				<param name="mashupId">manageitem_itemflow</param>
+				<param name="inputNs">manageItem_input</param>
+				<param name="outputNs">manageItem_output</param>
+				<param name="resourceId">SBCITM00056</param>
+				<result name="success">/sbc/itemadmin/item/services/manage/manageserviceoptionsmanageitemresult.jsp</result>
+			</action>
+<!-- Manage Service Options ends-->
+		<action name="manageserviceskills" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">item-manageServiceSkillsGetItemDetails</param>
+			<param name="inputNs">itemdetailsNS</param>
+			<param name="outputNs">getItemDetails_output</param>
+			<param name="resourceId">SBCITM00043</param>
+			<result name="success">/sbc/itemadmin/item/services/manage/serviceskills.jsp</result>
+		</action>
+		<action name="manageServiceSkillsManageItemAction" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">manageitem_itemflow</param>
+			<param name="inputNs">manageItem_input</param>
+			<param name="outputNs">manageItem_output</param>
+			<param name="resourceId">SBCITM00056</param>
+			<result name="success">/sbc/itemadmin/item/services/manage/manageserviceskillsmanageitemresult.jsp</result>
+		</action>
+		<action name="manageServiceSkillGetServiceSkillListAction" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">item-manageServiceSkillsGetServiceSkillList</param>
+			<param name="inputNs">getServiceSkillList_input</param>
+			<param name="outputNs">getServiceSkillList_output</param>
+			<param name="resourceId">SBCITM00043</param>
+			<result name="success">/sbc/itemadmin/item/services/manage/manageserviceskillgetserviceskilllistresult.jsp</result>
+		</action>
+<!-- Manage Service Skills ends-->
+<!-- Return Fulfillment starts-->
+		<action name="returnfulfillmentdata" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+				<param name="mashupId">item-returnFulfillmentGetItemDetails</param>
+				<param name="inputNs">getItemDetails_input</param>
+				<param name="outputNs">getItemDetails_output</param>
+				<param name="resourceId">SBCITM00026</param>
+				<result name="success">/sbc/itemadmin/item/manage/fulfillment/returnfulfillment.jsp</result>
+		</action>
+		<action name="managereturnfulfillment" >
+			<param name="resourceId">SBCITM00026</param>
+			<result name="success">/sbc/itemadmin/item/manage/fulfillment/returnfulfillment.jsp</result>
+		</action>
+		<action name="returnFulfillmentGetItemDetailsAction" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">item-returnFulfillmentGetItemDetails</param>
+			<param name="inputNs">getItemDetails_input</param>
+			<param name="outputNs">getItemDetails_output</param>
+			<param name="resourceId">SBCITM00026</param>
+			<result name="success">/sbc/itemadmin/item/manage/fulfillment/returnfulfillmentgetitemdetailsresult.jsp</result>
+		</action>
+		<action name="returnFulfillmentManageItemAction" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">manageitem_itemflow</param>
+			<param name="inputNs">manageItem_input</param>
+			<param name="outputNs">manageItem_output</param>
+			<param name="resourceId">SBCITM00054</param>
+			<result name="success">/sbc/itemadmin/item/manage/fulfillment/returnfulfillmentmanageitemresult.jsp</result>
+		</action>
+<!-- Return Fulfillment ends-->
+<!-- Manage Inventory starts-->
+		<action name="manageinventory_multiapi" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">seamanageinventory_multiapi</param>
+			<param name="resourceId">SBCITM00027</param>
+			<result name="success">/sbc/itemadmin/item/manage/inventory/manageinventory.jsp</result>
+		</action>
+		<action name="getTagIdentifierList">
+			<param name="resourceId">SBCITM00027</param>
+			<result name="success">/sbc/itemadmin/item/manage/inventory/getTagIdentifierListResult.jsp</result>
+		</action>
+		<action name="manageinventory" >
+			<param name="resourceId">SBCITM00027</param>
+			<result name="success">/sbc/itemadmin/item/manage/inventory/manageinventory.jsp</result>
+		</action>
+		<action name="manageinventorygetitemdetailsaction" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">item-manageInventoryGetItemDetails</param>
+			<param name="inputNs">getItemDetails_input</param>
+			<param name="outputNs">getItemDetails_output</param>
+			<param name="resourceId">SBCITM00027</param>
+			<result name="success">/sbc/itemadmin/item/manage/inventory/manageinventorygetitemdetailsresult.jsp</result>
+		</action>
+		<action name="manageinventorymanageitemaction" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">manageitem_itemflow</param>
+			<param name="inputNs">manageItem_input</param>
+			<param name="outputNs">manageItem_output</param>
+			<param name="resourceId">SBCITM00054</param>
+			<result name="success">/sbc/itemadmin/item/manage/inventory/manageinventorymanageitemresult.jsp</result>
+		</action>
+		<action name="manageinventorygetatpruleslistaction" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">item-manageinventorygetatpruleslist</param>
+			<param name="inputNs">getAtpRuleList_input</param>
+			<param name="outputNs">getAtpRuleList_output</param>
+			<param name="resourceId">SBCITM00027</param>
+			<result name="success">/sbc/itemadmin/item/manage/inventory/manageinventorygetatpruleslistresult.jsp</result>
+		</action>
+		<action name="manageinventorygetinventorymonitorruleslistaction" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">item-manageinventorygetinventorymonitorruleslist</param>
+			<param name="inputNs">getInventoryMonitorRulesList_input</param>
+			<param name="outputNs">getInventoryMonitorRulesList_output</param>
+			<param name="resourceId">SBCITM00027</param>
+			<result name="success">/sbc/itemadmin/item/manage/inventory/manageinventorygetinventorymonitorruleslistresult.jsp</result>
+		</action>
+		<action name="manageinventorygetcommoncodelistaction" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">item-manageinventorygetcommoncodelist</param>
+			<param name="inputNs">getCommonCodeList_input</param>
+			<param name="outputNs">getCommonCodeList_output</param>
+			<param name="resourceId">SBCITM00027</param>
+			<result name="success">/sbc/itemadmin/item/manage/inventory/manageinventorygetcommoncodelistresult.jsp</result>
+		</action>
+		<action name="manageinventorygetentityattributelistaction" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">item-manageinventorygetentityattributelist</param>
+			<param name="inputNs">getEntityAttributeList_input</param>
+			<param name="outputNs">getEntityAttributeList_output</param>
+			<param name="resourceId">SBCITM00027</param>
+			<result name="success">/sbc/itemadmin/item/manage/inventory/manageinventorygetentityattributelistresult.jsp</result>
+		</action>
+		<action name="manageinventorygetrolelistaction" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">item-manageinventorygetRoleList</param>
+			<param name="inputNs">getRoleList_input</param>
+			<param name="outputNs">getRoleList_output</param>
+			<param name="resourceId">SBCITM00027</param>
+			<result name="success">/sbc/itemadmin/item/manage/inventory/manageinventorygetrolelistresult.jsp</result>
+		</action>
+		<action name="manageinventorygetorganizationlistaction" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">item-manageinventorygetorganizationlist</param>
+			<param name="inputNs">getOrganizationList_input</param>
+			<param name="outputNs">getOrganizationList_output</param>
+			<param name="resourceId">SBCITM00027</param>
+			<result name="success">/sbc/itemadmin/item/manage/inventory/manageinventorygetorganizationlistresult.jsp</result>
+		</action>
+<!-- Manage Inventory ends-->
+<!-- Get Unit Of Measure starts-->
+		<action name="loadmanageuom" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">item-manageUom-getItemDetails_multiapi</param>
+			<param name="resourceId">SBCITM00022</param>
+			<result name="success">/sbc/itemadmin/item/manage/basic/manageuom.jsp</result>
+		</action>
+		<action name="manageuom_multiapi" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+				<param name="mashupId">seamanageuom_multiapi</param>
+				<param name="resourceId">SBCITM00022</param>
+				<result name="success">/sbc/itemadmin/item/manage/basic/resultitemdetails.jsp</result>
+		</action>
+		<action name="manageuommanageitem" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">manageitem_itemflow</param>
+			<param name="inputNs">manageItemInput</param>
+			<param name="outputNs">manageItemOutput</param>
+			<param name="resourceId">SBCITM00054</param>
+			<result name="success">/sbc/itemadmin/item/manage/basic/manageuommanageitemresult.jsp</result>
+		</action>
+<!-- Get Unit Of Measure ends-->
+<!-- Prod Item Associations for Manage Service starts-->
+
+		<action name="openManageProdItemAssoc" >
+			<param name="resourceId">SBCITM00110</param>
+			<result name="success">/sbc/itemadmin/item/services/manage/proditems/servicedetailsmanageitem.jsp</result>
+		</action>
+		<action name="itemAssocGetProdItemListAction" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">manageService-getProdItemAssoc</param>
+			<param name="inputNs">itemDetails_input</param>
+			<param name="outputNs">itemDetails_output</param>
+			<param name="resourceId">SBCITM00110</param>
+			<result name="success">/sbc/itemadmin/item/services/manage/proditems/servicedetailsgetitemassoclistresult.jsp</result>
+		</action>
+		<action name="itemAssocGetServiceSkillListAction" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">manageService-getServiceSkillList</param>
+			<param name="inputNs">serviceSkillList_input</param>
+			<param name="outputNs">serviceSkillList_output</param>
+			<param name="resourceId">SBCITM00110</param>
+			<result name="success">/sbc/itemadmin/item/services/manage/proditems/servicedetailsmanageitemassocgetserviceskilllistresult.jsp</result>
+		</action>
+		<action name="manageAssocItemAction" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">manageservice_itemassoc</param>
+			<param name="inputNs">manageItem_input</param>
+			<param name="outputNs">manageItem_output</param>
+			<param name="resourceId">SBCITM00110</param>
+			<result name="success">/sbc/itemadmin/item/services/manage/proditems/servicedetailmanageassocitemresult.jsp</result>
+		</action>
+
+		<action name="openManageProdItemAssocData" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+				<param name="mashupId">manageService-getProdItemAssoc_multiapi</param>
+				<param name="resourceId">SBCITM00110</param>
+				<result name="success">/sbc/itemadmin/item/services/manage/proditems/servicedetailsmanageitem.jsp</result>
+		</action>
+
+<!-- Prod Item Associations for Manage Service ends-->
+<!-- Item Details Manage Service starts-->
+		<action name="itemdetailsmanageservicedata" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+				<param name="mashupId">item-getServiceList_multiapi</param>
+				<param name="resourceId">SBCITM00040</param>
+				<result name="success">/sbc/itemadmin/item/manage/services/itemdetailsmanageservice.jsp</result>
+		</action>
+		<action name="itemdetailsmanagedeliveryservicedata" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+				<param name="mashupId">item-getServiceList_multiapi</param>
+				<param name="resourceId">SBCITM00039</param>
+				<result name="success">/sbc/itemadmin/item/manage/services/itemdetailsmanagedeliveryservice.jsp</result>
+		</action>
+		<action name="itemdetailsmanagereturnpickupservicedata" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+				<param name="mashupId">item-getServiceList_multiapi</param>
+				<param name="resourceId">SBCITM00042</param>
+				<result name="success">/sbc/itemadmin/item/manage/services/itemdetailsmanagereturnpickupservice.jsp</result>
+		</action>
+		<action name="itemdetailsmanageservice" >
+			<param name="resourceId">SBCITM00040</param>
+			<result name="success">/sbc/itemadmin/item/manage/services/itemdetailsmanageservice.jsp</result>
+		</action>
+		<action name="getServiceListAction" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">item-getServiceList</param>
+			<param name="inputNs">itemDetails_input</param>
+			<param name="outputNs">itemDetails_output</param>
+			<param name="resourceId">SBCITM00040</param>
+			<result name="success">/sbc/itemadmin/item/manage/services/itemdetailsmanageservicegetservicelistresult.jsp</result>
+		</action>
+		<action name="getServiceSkillListAction" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">item-getServiceSkillList</param>
+			<param name="inputNs">serviceSkillList_input</param>
+			<param name="outputNs">serviceSkillList_output</param>
+			<param name="resourceId">SBCITM00040</param>
+			<result name="success">/sbc/itemadmin/item/manage/services/itemdetailsmanageservicegetserviceskilllistresult.jsp</result>
+		</action>
+		<action name="manageItemAction" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">manageitem_itemflow</param>
+			<param name="inputNs">manageItem_input</param>
+			<param name="outputNs">manageItem_output</param>
+			<param name="resourceId">SBCITM00054</param>
+			<result name="success">/sbc/itemadmin/item/manage/services/itemdetailsmanageservicemanageitemresult.jsp</result>
+		</action>
+<!-- Item Details Manage Service ends-->
+<!-- Item Details Manage Other Service starts-->
+		<action name="itemdetailsmanageotherservicedata" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+				<param name="mashupId">item-manageOtherServiceGetItemDetails</param>
+				<param name="inputNs">getItemDetails_input</param>
+				<param name="outputNs">getItemDetails_output</param>
+				<param name="resourceId">SBCITM00042</param>
+				<result name="success">/sbc/itemadmin/item/manage/services/itemdetailsmanageotherservices.jsp</result>
+		</action>
+		<action name="itemdetailsmanageotherservice" >
+			<param name="resourceId">SBCITM00042</param>
+			<result name="success">/sbc/itemadmin/item/manage/services/itemdetailsmanageotherservices.jsp</result>
+		</action>
+		<action name="manageOtherServiceGetItemDetailsAction" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">item-manageOtherServiceGetItemDetails</param>
+			<param name="inputNs">getItemDetails_input</param>
+			<param name="outputNs">getItemDetails_output</param>
+			<param name="resourceId">SBCITM00042</param>
+			<result name="success">/sbc/itemadmin/item/manage/services/manageotherservicegetitemdetailsresult.jsp</result>
+		</action>
+		<action name="manageOtherServiceManageItemAction" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">manageitem_itemflow</param>
+			<param name="inputNs">manageItem_input</param>
+			<param name="outputNs">manageItem_output</param>
+			<param name="resourceId">SBCITM00054</param>
+			<result name="success">/sbc/itemadmin/item/manage/services/manageotherservicemanageitemresult.jsp</result>
+		</action>
+<!-- Item Details Manage Other Service ends-->
+<!-- Common Classification Fields starts-->
+		<action name="commonclassificationfields_multiapi" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">item-commonclassificationfields_multiapi</param>
+			<param name="resourceId">SBCITM00074</param>
+			<result name="success">/sbc/itemadmin/classification/manage/classificationvaluedetails.jsp</result>
+		</action>
+		<action name="managecategory" >
+			<param name="resourceId">SBCITM00074</param>
+			<result name="success">/sbc/itemadmin/classification/manage/managecategory.jsp</result>
+		</action>
+		<action name="managecategory" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">item-commonclassificationfields-managecategory</param>
+			<param name="inputNs">manageCategory_input</param>
+			<param name="outputNs">manageCategory_output</param>
+			<param name="resourceId">SBCITM00074</param>
+			<result name="success">/sbc/itemadmin/classification/manage/managecategory.jsp</result>
+		</action>
+		<action name="getOptionList">
+			<param name="resourceId">SBCITM00074</param>
+			<result name="success">/sbc/itemadmin/classification/manage/commonclassificationfieldsruleoptions.jsp</result>
+		</action>
+		<action name="getOptionListForRootCategory">
+			<param name="resourceId">SBCITM00074</param>
+			<result name="success">/sbc/itemadmin/classification/manage/commonclassificationfieldsruleoptionsforrootcategory.jsp</result>
+		</action>
+		<action name="getClassificationItemAttributeList">
+			<param name="resourceId">SBCITM00074</param>
+			<result name="success">/sbc/itemadmin/classification/manage/classificationitemattributelist.jsp</result>
+		</action>
+<!-- Common Classification Fields ends-->
+<!-- Entitlements Start-->
+		<action name="searchentitlement" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">basicEntitlementSearch_getEntitlementRuleList</param>
+			<param name="inputNs">getEntitlementRuleListInput</param>
+			<param name="outputNs">getEntitlementRuleListOutput</param>
+			<param name="resourceId">SBCITM00075</param>
+			<result name="success">/sbc/itemadmin/entitlement/search/entitlementsearchlistresult.jsp</result>
+		</action>
+		<action name="entitlementdetail" class="com.sterlingcommerce.sbc.item.actions.SBCOpenItemEntitlementDetailsAction">
+			<param name="mashupId">basicEntitlementSearch_getEntitlementRuleDetails</param>
+			<param name="inputNs">getEntitlementRuleDetailsInput</param>
+			<param name="outputNs">getEntitlementRuleDetailsOutput</param>
+			<param name="resourceId">SBCITM00076</param>
+			<result name="selling">/sbc/itemadmin/entitlement/manage/sellingentitlement.jsp</result>
+		</action>
+		<action name="entitlementdetail-buying" class="com.sterlingcommerce.sbc.item.actions.SBCOpenItemEntitlementDetailsAction">
+			<param name="mashupId">basicEntitlementSearch_getEntitlementRuleDetails_buying</param>
+			<param name="inputNs">getEntitlementRuleDetailsInput</param>
+			<param name="outputNs">getEntitlementRuleDetailsOutput</param>
+			<param name="resourceId">SBCITM00075</param>
+			<result name="buying" type="chain">
+				<param name="actionName">entitlementdetail-itemlist-multiapi</param>
+				<param name="namespace">/sbc/item</param>
+		    </result>
+		</action>
+		<action name="entitlementdetail-itemlist-multiapi" class="com.sterlingcommerce.sbc.common.SBCMultiXAPI">
+			<param name="mashupId">entitlementdetail-itemlist-multiapi</param>
+			<param name="inputNs">getEntitlementRuleDetailItemList_input</param>
+			<param name="outputNs">getEntitlementRuleDetailItemList_output</param>
+			<param name="resourceId">SBCITM00075</param>
+			<result name="success" type="chain">
+				<param name="actionName">entitlementdetail-multiapi</param>
+				<param name="namespace">/sbc/item</param>
+		    </result>
+		</action>
+		<action name="entitlementdetail-multiapi" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			 <param name="mashupId">createbuyingentitlement_multiAPI</param>
+			 <param name="resourceId">SBCITM00075</param>
+			<result name="success">/sbc/itemadmin/entitlement/manage/buyingentitlement.jsp</result>
+		</action>
+		<action name="getEntitlementAssignmentList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getEntitlementAssignmentList</param>
+			<param name="inputNs">getEntitlementAssignmentList_input</param>
+			<param name="outputNs">getEntitlementAssignmentList_output</param>
+			<param name="resourceId">SBCITM00075</param>
+			<result name="success" type="chain">
+				<param name="actionName">getSpecificEntitlementAssignmentListPaginated</param>
+				<param name="namespace">/sbc/item</param>
+		    </result>
+		</action>
+		<!-- This action is called to get the paginated specific assignments -->
+		<action name="getSpecificEntitlementAssignmentListPaginated" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">getSpecificEntitlementAssignmentList</param>
+			<param name="inputNs">getSpecificEntitlementAssignmentList_input</param>
+			<param name="outputNs">getSpecificEntitlementAssignmentList_output</param>
+			<param name="resourceId">SBCITM00075</param>
+			<result name="success">/sbc/itemadmin/entitlement/manage/getentitlementcustomerassignment.jsp</result>
+		</action>
+		<!-- This action is called to get the paginated specific assignments after manage API is called for delete or update of the entity -->
+		<action name="getSpecificEntitlementAssignmentListPaginatedAfterManage" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">getSpecificEntitlementAssignmentList</param>
+			<param name="inputNs">getSpecificEntitlementAssignmentList_input</param>
+			<param name="outputNs">getSpecificEntitlementAssignmentList_output</param>
+			<param name="resourceId">SBCITM00075</param>
+			<result name="success">/sbc/itemadmin/entitlement/manage/getentitlementspecificcustomerassignment.jsp</result>
+		</action>
+		<action name="saveentitlementdetails_buying_multiapi" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			 <param name="mashupId">saveentitlementdetails_buying_multiapi</param>
+			 <param name="resourceId">SBCITM00075</param>
+			<result name="success">/sbc/itemadmin/entitlement/manage/entitlementresult_buying.jsp</result>
+		</action>
+		<action name="deleteentitlement" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">deleteentitlement</param>
+			<param name="inputNs">deleteEntitlementRuleInput</param>
+			<param name="outputNs">deleteEntitlementRuleOutput</param>
+			<param name="resourceId">SBCITM00077</param>
+			<result name="success">/sbc/itemadmin/entitlement/manage/deleteentitlement.jsp</result>
+		</action>
+		<action name="viewmoreitemspopup">
+			<param name="resourceId">SBCITM00075</param>
+			<result name="success">/sbc/itemadmin/entitlement/common/openviewmoreitemspopup.jsp</result>
+		</action>
+
+		<action name="entitlementdetail-itemlist-pagination" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">entitlementdetail-itemlist-pagination</param>
+			<param name="inputNs">getEntitlementRuleDetailItemList_input</param>
+			<param name="outputNs">getEntitlementRuleDetailItemList_output</param>
+			<param name="resourceId">SBCITM00075</param>
+			<result name="success">/sbc/itemadmin/entitlement/common/entitlementitemlistsearch.jsp</result>
+		</action>
+		<action name="saveentitlementdetails" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">saveentitlementdetails</param>
+			<param name="inputNs">manageEntitlementInput</param>
+			<param name="outputNs">manageEntitlementOutput</param>
+			<param name="resourceId">SBCITM00077</param>
+			<result name="success">/sbc/itemadmin/entitlement/manage/entitlementresult.jsp</result>
+			<result name="APIERROR">/sbc/itemadmin/entitlement/manage/entitlementresulterror.jsp</result>
+		</action>
+		<action name="verifycustomerassignment" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">customerverification_API</param>
+			<param name="inputNs">getItemListForOrderingInput</param>
+			<param name="outputNs">getItemListForOrderingOutput</param>
+			<param name="resourceId">SBCITM00079</param>
+			<result name="success">/sbc/itemadmin/entitlement/manage/verifycustomerassignmentresult.jsp</result>
+		</action>
+		<action name="saveaddedstores" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">manageEntitlementAssignment</param>
+			<param name="inputNs">addorganizationInput</param>
+			<param name="outputNs">addorganizationOutput</param>
+			<param name="resourceId">SBCITM00078</param>
+			<result name="success">/sbc/itemadmin/entitlement/search/saveaddedstoresresult.jsp</result>
+		</action>
+		<action name="deletestorefront" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">manageEntitlementAssignmentForDeletion</param>
+			<param name="inputNs">deleteorganizationInput</param>
+			<param name="outputNs">deleteorganizationOutput</param>
+			<param name="resourceId">SBCITM00078</param>
+			<result name="success">/sbc/itemadmin/entitlement/manage/deletestoresresult.jsp</result>
+		</action>
+		<action name="searchstorefrontsrolelist" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">sellingentitlement_getRoleList</param>
+			<param name="inputNs">getRoleListInput</param>
+			<param name="outputNs">entitlementgetRoleListOutput</param>
+			<param name="resourceId">SBCITM00076</param>
+			<result name="success">/sbc/itemadmin/entitlement/search/storefrontrolesearchresult.jsp</result>
+		</action>
+		<action name="entitlementgetOrganizationList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">sellingentitlement_getOrganizationList</param>
+			<param name="inputNs">getOrganizationListInput</param>
+			<param name="outputNs">getOrganizationListOutput</param>
+			<param name="resourceId">SBCITM00076</param>
+			<result name="success">/sbc/itemadmin/entitlement/search/orglistresult.jsp</result>
+		</action>
+		<action name="manageEntitlementAssignment" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">manageEntitlementAssignmentForBuying</param>
+			<param name="inputNs">manageEntitlementAssignment_input</param>
+			<param name="outputNs">manageEntitlementAssignment_output</param>
+			<param name="resourceId">SBCITM00075</param>
+			<result name="success">/sbc/itemadmin/entitlement/manage/manageentitlementcustomerassignment.jsp</result>
+		</action>
+		 <action name="manageEntitlementAssignmentForDeletion" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">manageEntitlementAssignmentForDeletionForBuying</param>
+			<param name="inputNs">manageEntitlementAssignmentForDelete_input</param>
+			<param name="outputNs">manageEntitlementAssignment_output</param>
+			<param name="resourceId">SBCITM00075</param>
+			<result name="success">/sbc/itemadmin/entitlement/manage/manageentitlementcustomerassignment.jsp</result>
+		</action>
+
+		<action name="entitlementsearch">
+			<param name="resourceId">SBCITM00075</param>
+			<result name="success">/sbc/itemadmin/entitlement/search/entitlementsearch.jsp</result>
+		</action>
+		<action name="storefrontsearchpopup" >
+			<param name="resourceId">SBCITM00076</param>
+			<result name="success">/sbc/itemadmin/entitlement/search/storefrontsearchpopup.jsp</result>
+		</action>
+		<action name="searchstorefronts" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">sellingentitlement_getOrganizationList</param>
+			<param name="inputNs">entitlementgetOrganizationListInput</param>
+			<param name="outputNs">entitlementOrganizationListOutput</param>
+			<param name="resourceId">SBCITM00076</param>
+			<result name="success">/sbc/itemadmin/entitlement/search/storefrontsearchresults.jsp</result>
+		</action>
+		<action name="saveaddedstores" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">manageEntitlementAssignment</param>
+			<param name="inputNs">addorganizationInput</param>
+			<param name="outputNs">addorganizationOutput</param>
+			<param name="resourceId">SBCITM00078</param>
+			<result name="success">/sbc/itemadmin/entitlement/search/saveaddedstoresresult.jsp</result>
+		</action>
+		<action name="createbuyingentitlement" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			 <param name="mashupId">createbuyingentitlement_multiAPI</param>
+			 <param name="resourceId">SBCITM00077</param>
+			<result name="success">/sbc/itemadmin/entitlement/manage/createbuyingentitlement.jsp</result>
+		</action>
+		<action name="createsellingentitlement" >
+			<param name="resourceId">SBCITM00078</param>
+			<result name="success">/sbc/itemadmin/entitlement/manage/createsellingentitlement.jsp</result>
+		</action>
+		<action name="customerverification" >
+			<param name="resourceId">SBCITM00079</param>
+			<result name="success">/sbc/itemadmin/entitlement/manage/customerverification.jsp</result>
+		</action>
+<!-- Entitlements End-->
+<!-- Catagory Start -->
+		<action name="catalogmaintancetree" class="com.sterlingcommerce.sbc.item.actions.SBCCategoryDetailTreeAction">
+			<param name="mashupId">catalogManagement-getClassificationPurposeListMaster</param>
+			<param name="inputNs">getClassificationPurposeList_input</param>
+			<param name="outputNs">getClassificationPurposeList_output</param>
+			<param name="resourceId">SBCITM00050</param>
+			<result name="success" type="chain">
+				<param name="actionName">catalogdetailtree</param>
+				<param name="namespace">/sbc/item</param>
+		   </result>
+		   <result name="subCatalogSuccess" type="chain">
+				<param name="actionName">subcatalogdetailtree</param>
+				<param name="namespace">/sbc/item</param>
+		   </result>
+		</action>
+		<action name="catalogsellingtree" class="com.sterlingcommerce.sbc.item.actions.SBCCategoryDetailTreeAction">
+			<param name="mashupId">catalogManagement-getClassificationPurposeListSelling</param>
+			<param name="inputNs">getClassificationPurposeList_input</param>
+			<param name="outputNs">getClassificationPurposeList_output</param>
+			<param name="resourceId">SBCITM00050</param>
+			<result name="success" type="chain">
+					<param name="actionName">catalogdetailtree</param>
+					<param name="namespace">/sbc/item</param>
+			</result>
+			<result name="subCatalogSuccess" type="chain">
+				<param name="actionName">subcatalogdetailtree</param>
+				<param name="namespace">/sbc/item</param>
+		   </result>
+		</action>
+		<action name="catalogdetailtree" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">catalogmanagement-getCategoryDomainDetailTree</param>
+			<param name="inputNs">getCategoryDomainDetails_input</param>
+			<param name="outputNs">getCategoryDomainDetails_output</param>
+			<param name="resourceId">SBCITM00050</param>
+			<result name="success">/sbc/itemadmin/category/manage/detail/managecatalogdetails.jsp</result>
+		</action>
+		<action name="subcatalogdetailtree" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">catalogmanagement-getSubCatalogCategoryTree</param>
+			<param name="resourceId">SBCITM00050</param>
+			<result name="success">/sbc/itemadmin/category/manage/detail/subcatalog_managecatalogdetails.jsp</result>
+		</action>
+		<action name="categorylisttree" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">catalogManagement-getCategoryListTree</param>
+			<param name="inputNs">getCategoryList_input</param>
+			<param name="outputNs">getCategoryList_output</param>
+			<param name="resourceId">SBCSYS00001</param>
+			<result name="success">/sbc/core/widget/settreedata.jsp</result>
+		</action>
+		<action name="mastercatalog" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">catalogList-masterCatalog</param>
+			<param name="inputNs">masterCatalog_input</param>
+			<param name="outputNs">masterCatalog_output</param>
+			<param name="resourceId">SBCITM00050</param>
+			<result name="success" type="chain">
+					<param name="actionName">catalogdetailtree</param>
+					<param name="namespace">/sbc/item</param>
+			   </result>
+		</action>
+		<action name="managecataloglist" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction"	>
+			<param name="mashupId">catalogManagement-manageCatalogList</param>
+			<param name="resourceId">SBCITM00050</param>
+			<result name="success">/sbc/itemadmin/category/manage/cataloglist/managecataloglist.jsp</result>
+		</action>
+		<action name="manageSellingCatalogCP" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">catalogmanagement-manageClassificationPurposeSelling</param>
+			<param name="inputNs">manageSellingCP_input</param>
+			<param name="outputNs">manageSellingCP_output</param>
+			<param name="resourceId">SBCITM00050</param>
+			<result name="success">/sbc/itemadmin/category/manage/cataloglist/managesellingcatalog.jsp</result>
+		</action>
+		<action name="catalogdetail" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">categoryManagement-getCategoryDetailsWithClassification</param>
+			<param name="resourceId">SBCITM00050</param>
+			<result name="success">/sbc/itemadmin/category/manage/detail/categorydomaindetail.jsp</result>
+		</action>
+		<action name="sellingcataloglookup" class="com.sterlingcommerce.sbc.item.actions.SBCCategoryDetailTreeAction">
+			<param name="mashupId">catalogManagement-getClassificationPurposeListSelling</param>
+			<param name="inputNs">getClassificationPurposeList_input</param>
+			<param name="outputNs">getClassificationPurposeList_output</param>
+			<param name="resourceId">SBCSYS00001</param>
+			<result name="success" type="chain">
+					<param name="actionName">catalogdetailtreelookup</param>
+					<param name="namespace">/sbc/item</param>
+			 </result>
+			 <result name="subCatalogSuccess" type="chain">
+				<param name="actionName">subcatalogdetailtreelookup</param>
+				<param name="namespace">/sbc/item</param>
+		   </result>
+		</action>
+		<action name="catalogdetailtreelookup" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">catalogmanagement-getCategoryDomainDetailTree</param>
+			<param name="inputNs">getCategoryDomainDetails_input</param>
+			<param name="outputNs">getCategoryDomainDetails_output</param>
+			<param name="resourceId">SBCSYS00001</param>
+			<result name="success">/sbc/common/category/tree/loadcategorytreelookup.jsp</result>
+		</action>
+		<action name="subcatalogdetailtreelookup" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">catalogmanagement-getSubCatalogCategoryTree</param>
+			<param name="resourceId">SBCITM00050</param>
+			<result name="success">/sbc/common/category/tree/subcatalog_loadcategorytreelookup.jsp</result>
+		</action>
+	<action name="saveitemaliases" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction"	>
+			<param name="mashupId">saveitemaliases</param>
+			<param name="resourceId">SBCITM00031</param>
+			<result name="success">/sbc/itemadmin/item/manage/basic/aliasesmanageitemresult.jsp</result>
+		</action>
+		<action name="fulfillmentmanageitem" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction"	>
+			<param name="mashupId">manageitem_itemflow</param>
+			<param name="inputNs">fulfillmentmanageitem_Input</param>
+			<param name="outputNs">fulfillmentmanageitem_Output</param>
+			<param name="resourceId">SBCITM00025</param>
+			<result name="success">/sbc/itemadmin/item/manage/fulfillment/managefulfillmentresult.jsp</result>
+		</action>
+		<action name="loadcreatecatalog">
+			<param name="resourceId">SBCITM00051</param>
+			<result name="success">/sbc/itemadmin/category/manage/create/loadcreatecatalog.jsp</result>
+		</action>
+		<action name="createcatalog" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction"	>
+			<param name="mashupId">catalogManagement_createCategoryDomainMultiAPI</param>
+			<param name="resourceId">SBCITM00051</param>
+			<result name="success">/sbc/itemadmin/category/manage/detail/managecatalogdetails.jsp</result>
+		</action>
+		<action name="modifycatalog" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction"	>
+			<param name="mashupId">catalogManagement_modifyCategoryDomain</param>
+			<param name="inputNs">categorydomaindetail_input</param>
+			<param name="outputNs">categorydomaindetail_output</param>
+			<param name="resourceId">SBCITM00060</param>
+			<result name="success">/sbc/itemadmin/category/manage/detail/modifydomaindetail.jsp</result>
+		</action>
+
+		<action name="categorydetail" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">catalogManagement_getCategoryDetailsMultiAPI</param>
+			<param name="resourceId">SBCITM00050</param>
+			<result name="success" type="chain">
+				<param name="actionName">loadcategoryitemlist</param>
+				<param name="namespace">/sbc/item</param>
+			 </result>
+		</action>
+		<action name="loadcreatecategory">
+			<param name="resourceId">SBCITM00058</param>
+			<result name="success">/sbc/itemadmin/category/manage/create/loadcreatecategory.jsp</result>
+		</action>
+	<!--	<action name="createcategory" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction"	>
+			<param name="mashupId">catalogManagement-manageCategory</param>
+			<param name="resourceId">SBCITM00058</param>
+			<result name="APIERROR">/sbc/itemadmin/category/manage/create/createCategoryError.jsp</result>
+			<result name="success">/sbc/itemadmin/category/manage/create/createcategoryoutput.jsp</result>
+		</action>	-->
+		<action name="createcategory" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction"	>
+			<param name="mashupId">catalogManagement-manageCategory</param>
+			<param name="inputNs">createCategory_input</param>
+			<param name="outputNs">createCategory_output</param>
+			<param name="resourceId">SBCITM00058</param>
+			<result name="APIERROR">/sbc/itemadmin/category/manage/create/createCategoryError.jsp</result>
+			<result name="success" type="chain">
+				<param name="actionName">categorydetail</param>
+				<param name="namespace">/sbc/item</param>
+			 </result>
+		</action>
+		<action name="changecategorygroupsequence" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">catalogManagement-manageCategory</param>
+			<param name="inputNs">manageCategory_input</param>
+			<param name="outputNs">manageCategory_output</param>
+			<param name="resourceId">SBCITM00061</param>
+			<result name="success">/sbc/core/donothingresulthandler.jsp</result>
+		</action>
+				<action name="loadbundlecomponents" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction" >
+			<param name="mashupId">bundle_getitemdetails</param>
+			<param name="inputNs">itemDetailsInput</param>
+			<param name="outputNs">itemDetailsOutput</param>
+			<param name="resourceId">SBCITM00024</param>
+			<result name="success">/sbc/itemadmin/item/manage/components/bundle/bundlecomponent.jsp</result>
+		</action>
+			<action name="getbundlecomponents" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction" >
+			<param name="mashupId">bundle_getitemdetails</param>
+			<param name="inputNs">itemDetailsInput</param>
+			<param name="outputNs">itemDetailsOutput</param>
+			<param name="resourceId">SBCITM00024</param>
+			<result name="success">/sbc/itemadmin/item/manage/components/bundle/bundlecomponentdetails.jsp</result>
+		</action>
+		<action name="managebundlecomponents" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction" >
+			<param name="mashupId">manageitem_itemflow</param>
+			<param name="inputNs">savebundlecomponentitemdetailsinput</param>
+			<param name="outputNs">manageitemoutput</param>
+			<param name="resourceId">SBCITM00024</param>
+			<result name="success" type="chain">
+				<param name="actionName">getbundlecomponents</param>
+				<param name="namespace">/sbc/item</param>
+			 </result>
+		</action>
+		<action name="searchsubcatlogorg" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction" >
+			<param name="mashupId">sellingentitlement_getOrganizationList</param>
+			<param name="inputNs">getOrganizationListInput</param>
+			<param name="outputNs">getOrganizationListOutput</param>
+			<param name="resourceId">SBCITM00080</param>
+			<result name="success">/sbc/itemadmin/entitlement/search/orglistresult.jsp</result>
+		</action>
+		<action name="sellingentitlementsearch">
+			<param name="resourceId">SBCITM00076</param>
+			<result name="success">/sbc/itemadmin/entitlement/search/sellingentitlementsearch.jsp</result>
+		</action>
+		<action name="managecategoryitem" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction" >
+			<param name="mashupId">catalogManagement-getItemList</param>
+			<param name="inputNs">getItemList_input</param>
+			<param name="outputNs">getItemList_output</param>
+			<param name="resourceId">SBCITM00061</param>
+			<result name="success">/sbc/itemadmin/category/manage/item/loadmanagecategoryitem.jsp</result>
+		</action>
+		<action name="loadcategoryitemlist" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction" >
+			<param name="mashupId">catalogManagement-getItemList</param>
+			<param name="inputNs">getItemList_input</param>
+			<param name="outputNs">getItemList_output</param>
+			<param name="resourceId">SBCITM00062</param>
+			<result name="success">/sbc/itemadmin/category/manage/detail/categorydetail.jsp</result>
+		</action>
+		<action name="getcategoryitemlist" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction" >
+			<param name="mashupId">catalogManagement-getItemList</param>
+			<param name="inputNs">getItemList_input</param>
+			<param name="outputNs">getItemList_output</param>
+			<param name="resourceId">SBCITM00062</param>
+			<result name="success">/sbc/itemadmin/category/manage/item/categoryitemlist.jsp</result>
+		</action>
+		<action name="modifycategoryitem" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction" >
+			<param name="mashupId">catalogManagement-modifyCategoryItem</param>
+			<param name="inputNs">modifyCategoryItem_input</param>
+			<param name="outputNs">modifyCategoryItem_output</param>
+			<param name="resourceId">SBCITM00062</param>
+			<result name="success">/sbc/core/donothingresulthandler.jsp</result>
+		</action>
+		<action name="movecategoryitem" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction"	>
+			<param name="mashupId">catalogManagement-modifyCategoryItemMultiAPI</param>
+			<param name="resourceId">SBCITM00062</param>
+			<result name="APIERROR">/sbc/itemadmin/category/manage/item/movetocategoryerror.jsp</result>
+			<result name="success">/sbc/core/donothingresulthandler.jsp</result>
+		</action>
+		<action name="deletecategorydomain" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">catalogManagement_modifyCategoryDomain</param>
+			<param name="inputNs">modifyCategoryDomain_input</param>
+			<param name="outputNs">modifyCategoryDomain_output</param>
+			<param name="resourceId">SBCITM00061</param>
+			<result name="success" type="chain">
+				<param name="actionName">managecataloglist</param>
+				<param name="namespace">/sbc/item</param>
+			 </result>
+		</action>
+		<action name="categoryDetailForKeyWords" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction"	>
+			<param name="mashupId">getCategoryDetails_ForKeyWords</param>
+			<param name="inputNs">categoryDetailForKeyWords_input</param>
+			<param name="outputNs">categoryDetailForKeyWords_output</param>
+			<param name="resourceId">SBCITM00063</param>
+			<result name="success">/sbc/itemadmin/category/manage/detail/categorydetailforkeywords.jsp</result>
+		</action>
+		<action name="modifyCategory" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction"	>
+			<param name="mashupId">classificationmanagement_modifyclassification</param>
+			<param name="inputNs">modifyCategory_input</param>
+			<param name="outputNs">modifyCategory_output</param>
+			<param name="resourceId">SBCITM00061</param>
+			<result name="success">/sbc/itemadmin/category/manage/detail/modifydomaindetail.jsp</result>
+		</action>
+		<action name="categoryassetmanagement" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			   <param name="mashupId">assetmanagementforcategory_multiAPI</param>
+			   <param name="resourceId">SBCITM00064</param>
+			   <result name="success">/sbc/itemadmin/category/manage/detail/assetmanagementforcategory.jsp</result>
+		</action>
+		<action name="manageCategoryForAssets" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			   <param name="mashupId">manageCategoryForAssets</param>
+			   <param name="inputNs">manageCategoryForAssets_input</param>
+				<param name="outputNs">manageCategoryForAssets_output</param>
+				<param name="resourceId">SBCITM00064</param>
+			   <result name="success">/sbc/itemadmin/category/manage/detail/modifydomaindetail.jsp</result>
+		</action>
+		<action name="modifycategorydetail" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction"	>
+			<param name="mashupId">catalogManagement_manageCategory</param>
+			<param name="inputNs">modifyCategory_input</param>
+			<param name="outputNs">modifyCategory_output</param>
+			<param name="resourceId">SBCITM00061</param>
+			<result name="success">/sbc/itemadmin/category/manage/detail/modifydomaindetail.jsp</result>
+		</action>
+		<action name="doaminassetmanagement" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			   <param name="mashupId">doaminassetmanagement_multiAPI</param>
+			   <param name="resourceId">SBCITM00059</param>
+			   <result name="success">/sbc/itemadmin/category/manage/detail/domainassetmanagement.jsp</result>
+		</action>
+		<action name="modifyDomainAssets" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			   <param name="mashupId">modifyDomainAssets</param>
+			   <param name="inputNs">modifyDomainAssets_input</param>
+				<param name="outputNs">modifyDomainAssets_output</param>
+				 <param name="resourceId">SBCITM00059</param>
+			   <result name="success">/sbc/itemadmin/category/manage/detail/modifydomaindetail.jsp</result>
+		</action>
+		<action name="itemassetmanagement" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			   <param name="mashupId">itemassetmanagement_multiAPI</param>
+			    <param name="resourceId">SBCITM00059</param>
+			  <result name="success">/sbc/itemadmin/item/manage/merchandising/getassetlistforitem.jsp</result>
+		</action>
+		<action name="categoryattrassignment" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			  <param name="mashupId">categoryattrassignment_multiAPI</param>
+			   <param name="resourceId">SBCITM00065</param>
+			  <result name="success" type="chain">
+				<param name="actionName">categoryitemattrgrouptypelist</param>
+				<param name="namespace">/sbc/item</param>
+			 </result>
+		</action>
+		<action name="categoryitemattrgrouptypelist" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			  <param name="mashupId">catalogManagement-getItemAttributeGroupTypeList</param>
+			  <param name="inputNs">getItemAttributeGroupTypeList_input</param>
+			  <param name="outputNs">getItemAttributeGroupTypeList_output</param>
+			  <param name="resourceId">SBCITM00065</param>
+			  <result name="success">/sbc/itemadmin/category/manage/attribute/loadmanagecategoryattr.jsp</result>
+		</action>
+		<action name="categorygetattributeconfiguration" class="com.sterlingcommerce.sbc.common.SBCMultiXAPI">
+			<param name="mashupId">catalogManagement-getattributeconfiguration</param>
+			<param name="inputNs">getAttributeList_input</param>
+			<param name="outputNs">getAttributeList_output</param>
+			<param name="resourceId">SBCITM00065</param>
+			<result name="success">/sbc/itemadmin/category/manage/attribute/getattributeconfig.jsp</result>
+		</action>
+		<action name="manageCategorySaveAttribute" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">catalogManagement-manageCategorySaveAttribute</param>
+			<param name="inputNs">manageCategory_input</param>
+			<param name="outputNs">manageCategory_output</param>
+			<param name="resourceId">SBCITM00065</param>
+			<result name="success" type="chain">
+				<param name="actionName">categoryattrassignment</param>
+				<param name="namespace">/sbc/item</param>
+			 </result>
+		</action>
+		<action name="manageCategoryDeleteAttribute" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">catalogManagement-manageCategoryDeleteAttribute</param>
+			<param name="inputNs">manageCategory_input</param>
+			<param name="outputNs">manageCategory_output</param>
+			<param name="resourceId">SBCITM00065</param>
+			<result name="success">/sbc/itemadmin/category/manage/attribute/managecategorysaveattr.jsp</result>
+		</action>
+		<action name="managecategorykeywords" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction"	>
+			<param name="mashupId">catalogManagement-manageCategoryKeyWords</param>
+			<param name="inputNs">modifyCategory_input</param>
+			<param name="outputNs">modifyCategory_output</param>
+			<param name="resourceId">SBCITM00063</param>
+			<result name="success">/sbc/itemadmin/category/manage/detail/modifydomaindetail.jsp</result>
+		</action>
+		<action name="categorydetailforitem" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction"	>
+			<param name="mashupId">catalogManagement_getCategoryDetails</param>
+			<param name="inputNs">categorydetail_input</param>
+			<param name="outputNs">categorydetail_output</param>
+			<param name="resourceId">SBCITM00062</param>
+			<result name="success">/sbc/itemadmin/category/manage/item/loadmanagecategoryitem.jsp</result>
+		</action>
+		<action name="getpreviewitemdetails" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">item-getpreviewitemdetails</param>
+			<param name="inputNs">getpreviewitemdetails_input</param>
+			<param name="outputNs">getpreviewitemdetails_output</param>
+			<param name="resourceId">SBCITM00049</param>
+			<result name="success">/sbc/itemadmin/common/previewitemdetails/loadpreviewitemdetails.jsp</result>
+		</action>
+		<!-- Struts for localization starts-->
+		<action name="iteminfo4l10n" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">itemdetails_l10n</param>
+			<param name="inputNs">getItemDetails_Input</param>
+			<param name="outputNs">getItemDetails_Output</param>
+			<param name="resourceId">SBCITM00049</param>
+			<result name="success">/sbc/itemadmin/item/manage/basic/itemdetailsprimaryinforesult.jsp</result>
+		</action>
+		<action name="manageitem4l10n" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">manageitem_itemflow</param>
+			<param name="inputNs">manageItem_Input</param>
+			<param name="outputNs">manageItem_Output</param>
+			<param name="resourceId">SBCITM00049</param>
+			<result name="success">/sbc/core/donothingresulthandler.jsp</result>
+		</action>
+		<action name="itemassetinfo4l10n" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">itemdetails_l10n</param>
+			<param name="inputNs">getAssetDetails_Input</param>
+			<param name="outputNs">getAssetDetails_Output</param>
+			<param name="resourceId">SBCITM00030</param>
+			<result name="success">/sbc/itemadmin/common/asset/assetdetailsresult.jsp</result>
+		</action>
+		<action name="categorydomaindtl4l10n" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getCategoryDomainDetail4l10n</param>
+			<param name="inputNs">getCategoryDomainDetails_Input</param>
+			<param name="outputNs">getCategoryDomainDetails_Output</param>
+			<param name="resourceId">SBCITM00060</param>
+			<result name="success">/sbc/itemadmin/classification/manage/categorydomaindetailsresult.jsp</result>
+		</action>
+		<action name="categorydomaindtl4assetsl10n" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getCategoryDomainDetail4l10n</param>
+			<param name="inputNs">getAssetDetails_Input</param>
+			<param name="outputNs">getAssetDetails_Output</param>
+			<param name="resourceId">SBCITM00059</param>
+			<result name="success">/sbc/itemadmin/common/asset/assetdetailsresult.jsp</result>
+		</action>
+		<action name="categorydetails4l10n" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getCategoryDetail4l10n</param>
+			<param name="inputNs">getCategoryDomainDetails_Input</param>
+			<param name="outputNs">getCategoryDomainDetails_Output</param>
+			<param name="resourceId">SBCITM00061</param>
+			<result name="success">/sbc/itemadmin/classification/manage/categorydomaindetailsresult.jsp</result>
+		</action>
+		<action name="categorydetails4assetl10n" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getCategoryDetail4l10n</param>
+			<param name="inputNs">getAssetDetails_Input</param>
+			<param name="outputNs">getAssetDetails_Output</param>
+			<param name="resourceId">SBCITM00064</param>
+			<result name="success">/sbc/itemadmin/common/asset/assetdetailsresult.jsp</result>
+		</action>
+		<action name="modifycategorydtls4l10n" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">managecategory4l10n</param>
+			<param name="inputNs">manageCategory_input</param>
+			<param name="outputNs">manageCategory_output</param>
+			<param name="resourceId">SBCITM00061</param>
+			<result name="success">/sbc/itemadmin/classification/manage/donothingresult.jsp</result>
+		</action>
+		<action name="modifycategorydomaindtls4l10n" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">modifyclassificationlist</param>
+			<param name="inputNs">modifyclassificationlist_input</param>
+			<param name="outputNs">modifyclassificationlist_output</param>
+			<param name="resourceId">SBCITM00060</param>
+			<result name="success">/sbc/itemadmin/classification/manage/donothingresult.jsp</result>
+		</action>
+		<action name="attributedomaindtls4l10n" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getAttributeDomainDetails4l10n</param>
+			<param name="inputNs">getAttributeDomainDetails_input</param>
+			<param name="outputNs">getAttributeDomainDetails_output</param>
+			<param name="resourceId">SBCITM00003</param>
+			<result name="success">/sbc/itemadmin/attribute/manage/getattributedomaindetails.jsp</result>
+		</action>
+		<action name="attributegroupdtls4l10n" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getAttributeGroupDetails4l10n</param>
+			<param name="inputNs">getAttributeGroupDetails_input</param>
+			<param name="outputNs">getAttributeGroupDetails_output</param>
+			<param name="resourceId">SBCITM00004</param>
+			<result name="success">/sbc/itemadmin/attribute/manage/getattributegroupdetails.jsp</result>
+		</action>
+		<action name="attributedetails4l10n" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getAttributeDetails4l10n</param>
+			<param name="inputNs">getAttributeDetails_input</param>
+			<param name="outputNs">getAttributeDetails_output</param>
+			<param name="resourceId">SBCITM00005</param>
+			<result name="success">/sbc/itemadmin/attribute/manage/attrdetails/gettextattribute.jsp</result>
+		</action>
+		<action name="attributedetails4assetl10n" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getAttributeDetails4l10n</param>
+			<param name="inputNs">getAssetDetails_Input</param>
+			<param name="outputNs">getAssetDetails_Output</param>
+			<param name="resourceId">SBCITM00011</param>
+			<result name="success">/sbc/itemadmin/common/asset/assetdetailsresult.jsp</result>
+		</action>
+		<action name="modifyattributedomaindtls4l10n" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">attributedomaindetails-manageattributedomain</param>
+			<param name="inputNs">manageAttributeDomain_input</param>
+			<param name="outputNs">manageAttributeDomain_output</param>
+			<param name="resourceId">SBCITM00003</param>
+			<result name="success">/sbc/itemadmin/classification/manage/donothingresult.jsp</result>
+		</action>
+		<action name="modifyattributegroupdtls4l10n" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">attributegroupdetails-manageattributegroup</param>
+			<param name="inputNs">manageAttributeGroup_input</param>
+			<param name="outputNs">manageAttributeGroup_output</param>
+			<param name="resourceId">SBCITM00004</param>
+			<result name="success">/sbc/itemadmin/classification/manage/donothingresult.jsp</result>
+		</action>
+		<action name="modifyattributedetails4l10n" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">attributedetails-manageattribute</param>
+			<param name="inputNs">manageAttribute_input</param>
+			<param name="outputNs">manageAttribute_output</param>
+			<param name="resourceId">SBCITM00005</param>
+			<result name="success">/sbc/itemadmin/classification/manage/donothingresult.jsp</result>
+			<result name="APIERROR">/sbc/itemadmin/attribute/manage/manageattributeerror.jsp</result>
+		</action>
+		<!-- Struts for localization ends-->
+		<action name="configModelLookup">
+			<param name="resourceId">SBCITM00001</param>
+			<result name="success">/sbc/itemadmin/common/configmodel/configModelLookup.jsp</result>
+		</action>
+		<action name="getModelGrpAndModels" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getModelGrpAndModels</param>
+			<param name="inputNs">getModelGroupsAndModels_input</param> 
+			<param name="outputNs">getModelGroupsAndModels_output</param>
+			<param name="resourceId">SBCITM00001</param>
+			<result name="APIERROR">/sbc/itemadmin/common/configmodel/configurationError.jsp</result>
+			<result name="success">/sbc/itemadmin/common/configmodel/getModelGrpAndModels.jsp</result>
+		</action>
+		<action name="getConfigDetails" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getConfigDetails</param>
+			<param name="inputNs">getConfigDetails_input</param>
+			<param name="outputNs">getConfigDetails_output</param>
+			<param name="resourceId">SBCITM00001</param>
+			<result name="success">/sbc/itemadmin/common/configmodel/getConfigDetails.jsp</result>
+		</action>
+		<action name="bomhandler" class="com.sterlingcommerce.sbc.item.actions.SBCItemConfigBOMHandler">
+			<param name="resourceId">SBCITM00001</param>
+			<result name="success">/sbc/common/itemconfigcallback.jsp</result>
+		</action>
+		<action name="launchVisualProductModeler">
+			<param name="resourceId">SBCITM00001</param>
+			<result name="success">/sbc/itemadmin/common/visualmodeler/launchvisualmodeler.jsp</result>
+		</action>
+		<action name="getservicecharacteristiclistPopup" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">servicesearch-ServiceCharacteristicForPricingPopups</param>
+			<param name="inputNs">getServiceCharacteristicListInput</param>
+			<param name="outputNs">getServiceCharacteristicListOutput</param>
+			<param name="resourceId">SBCITM00057</param>
+			<result name="success">/sbc/itemadmin/item/itemsearch/getservicecharacteristiclist.jsp</result>
+		</action>
+		<action name="VM-Test-Configure">		
+			<param name="requestMethodSupported">ALL</param>
+			<result name="success">/sbc/common/ConfiguratorRedirect.jsp</result>
+		</action>
+	</package>
+</struts>

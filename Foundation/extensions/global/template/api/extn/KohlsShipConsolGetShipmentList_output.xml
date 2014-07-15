@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shipment ShipNode="" ShipmentKey="" ShipmentNo="" Status="" >
+<ShipmentLines>
+<ShipmentLine>
+<OrderLine OrderLineKey=""/>
+</ShipmentLine>
+</ShipmentLines>
+<Extn ExtnCustNotificationSent="" />
+</Shipment>

@@ -1,0 +1,18 @@
+Ext.namespace('sc.sbc.kohls.item.ineligibility');
+
+sc.sbc.kohls.item.ineligibility.KohlsViewItems = function(config) {
+    sc.sbc.kohls.item.ineligibility.KohlsViewItems.superclass.constructor.call(this, config);
+}
+Ext.extend(sc.sbc.kohls.item.ineligibility.KohlsViewItems, sc.plat.ui.ExtensibleScreen, {
+    className: 'sc.sbc.kohls.item.ineligibility.KohlsViewItems',
+    getUIConfig: sc.sbc.kohls.item.ineligibility.KohlsViewItemsUIConfig,
+    namespaces: {
+        target: [''],
+        source: ['']
+    },
+    namespacesDesc: {
+        targetDesc: [''],
+        sourceDesc: ['']
+    }
+});
+Ext.reg('seaItemSearch4', sc.sbc.kohls.item.ineligibility.KohlsViewItems);

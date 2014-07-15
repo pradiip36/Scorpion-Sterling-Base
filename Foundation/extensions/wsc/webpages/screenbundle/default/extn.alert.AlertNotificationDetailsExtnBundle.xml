@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.alert.AlertNotificationDetailsExtnBundle" screenId="extn.alert.AlertNotificationDetailsExtn">
+    <BundleEntries>
+        <BundleEntry bundleEntryId="extn_button_pick_Button_label"
+            bundleKey="Pick" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_button_pick"/>
+    </BundleEntries>
+</ScreenBundle>

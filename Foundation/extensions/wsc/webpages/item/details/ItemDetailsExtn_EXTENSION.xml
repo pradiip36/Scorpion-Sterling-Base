@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="ItemDetailsExtn"
+        extnPackage="extn.item.details"
+        originalScreen="isccs.item.details.ItemDetails"
+        originalScreenPackage="isccs.item.details" type="diffrential">
+        <Items>
+            <ContentPane _sc_extensibility_moveOrder="16"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_SKUNumber"
+                class="isccsScreen singlecolumntable" uId="extn_otherPrimaryPane"/>
+            <ContentPane _sc_extensibility_moveOrder="21"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="ItemMoreImages"
+                title="$(_scSimpleBundle:extn_Locations)" uId="extn_locationPanel"/>
+            <ContentPane _sc_extensibility_moveOrder="22"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="refreshRelatedItem" uId="extn_locationPanel"/>
+            <ContentPane _sc_extensibility_moveOrder="23"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="tab1" uId="extn_locationPanel"/>
+            <ContentPane _sc_extensibility_moveOrder="24"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="ItemOverview" uId="extn_locationPanel"/>
+            <ContentPane _sc_extensibility_moveOrder="25"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="tab1" uId="extn_locationPanel"/>
+            <ContentPane _sc_extensibility_moveOrder="26"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="tab1" uId="pnlImages"/>
+            <ContentPane _sc_extensibility_moveOrder="27"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="tab1" uId="pnlImages"/>
+            <ContentPane _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="pnlRelated_Items" renderHidden="true"/>
+            <Label _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="fieldset_primaryPanel"
+                class="primaryInformation blockComponent productModalTitle" uId="extn_lblItemDesc">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="getItemDescription"
+                        namespace="extn_ShipmentLine" path="OrderLine.ItemDetails.PrimaryInformation.DisplayItemDescription"/>
+                </BindingData>
+            </Label>
+            <Label _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="fieldset_primaryPanel" uId="extn_lblItemDesc"/>
+            <Label _sc_extensibility_moveOrder="3"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="DST_SecondaryInfoPanel" uId="extn_lblItemDesc"/>
+            <Label _sc_extensibility_moveOrder="4"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="selVariation" uId="extn_lblItemDesc"/>
+            <Label _sc_extensibility_moveOrder="5"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="variationItemPnl" uId="extn_lblItemDesc"/>
+            <Label _sc_extensibility_moveOrder="6"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="pnlOverview" uId="extn_lblItemDesc"/>
+            <Label _sc_extensibility_moveOrder="7"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="DST_SecondaryInfoPanel" uId="extn_lblItemDesc"/>
+            <Label _sc_extensibility_moveOrder="8"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="DST_SecondaryInfoPanel" uId="extn_lblItemDesc"/>
+            <Label _sc_extensibility_moveOrder="9"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="variationPanel" uId="extn_lblItemDesc"/>
+            <Label _sc_extensibility_moveOrder="10"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="variationItemPnl" uId="extn_lblItemDesc"/>
+            <Label _sc_extensibility_moveOrder="11"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="pricePanel" uId="extn_lblItemDesc"/>
+            <ScreenRef _sc_extensibility_moveOrder="28"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_locationPanel"
+                className="ItemLocations" handleInit="true"
+                packageName="extn.item.details" uId="extn_itemLocations"/>
+            <DataLabel _sc_extensibility_moveOrder="12"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_lblItemDesc"
+                class="autoLabelZeroWidth"
+                label="$(_scBundle:extn_SKU_)" uId="extn_SKUNumber">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getSKU"
+                        namespace="extn_ShipmentLine" path="ItemID"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="17"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_otherPrimaryPane" uId="extn_SKUNumber"/>
+            <DataLabel _sc_extensibility_moveOrder="13"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_SKUNumber"
+                class="autoLabelZeroWidth"
+                label="$(_scBundle:extn_SKU_Status)" uId="extn_SKUStatus">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getSKUStatus"
+                        namespace="extn_ShipmentLine" path="SkuStatus"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="18"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_otherPrimaryPane" uId="extn_SKUStatus"/>
+            <DataLabel _sc_extensibility_moveOrder="14"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="pricePanel"
+                class="autoLabelZeroWidth" label="$(_scBundle:extn_UPC)" uId="extn_UPC">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getUPC"
+                        namespace="extn_ShipmentLine" path="OrderLine.ItemDetails.ItemAliasList.ItemAlias"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="19"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_otherPrimaryPane" uId="extn_UPC"/>
+            <DataLabel _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lblUnitPrice" renderHidden="true"/>
+            <DataLabel _sc_extensibility_moveOrder="15"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lblUnitPrice"
+                class="autoLabelZeroWidth"
+                label="$(_scSimpleBundle:extn_Retail_price)" uId="extn_retailPrice">
+                <BindingData>
+                    <CurrencyBinding namespace="extn_ShipmentLine" path="OrderLine.ItemDetails.PrimaryInformation.CostCurrency"/>
+                    <SourceBinding dynamicBindingFunc="getRetailPrice"
+                        namespace="extn_ShipmentLine" path="OrderLine.LinePriceInfo.RetailPrice"/>
+                </BindingData>
+            </DataLabel>
+            <Image _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="itemImage" renderHidden="true"/>
+            <Image _sc_extensibility_moveOrder="20"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="itemImage" uId="extn_OpenAPIImage">
+                <BindingData>
+                    <ImageBindings>
+                        <ImageIcon path="ImageID"/>
+                        <ImageUrl path="ImageLocation"/>
+                    </ImageBindings>
+                    <SourceBinding namespace="extn_ShipmentLine" path="OrderLine.ItemDetails.PrimaryInformation"/>
+                </BindingData>
+            </Image>
+        </Items>
+        <Namespaces>
+            <SourceNamespaces>
+                <Source
+                    description="This is the shipment line that contains the item for this screen to be displayed"
+                    isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_5" value="extn_ShipmentLine"/>
+            </SourceNamespaces>
+        </Namespaces>
+    </ScreenExtension>
+</ExtensionMetaData>

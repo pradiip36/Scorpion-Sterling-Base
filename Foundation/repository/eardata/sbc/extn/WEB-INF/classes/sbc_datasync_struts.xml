@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Licensed Materials - Property of IBM
+IBM Sterling Business Center
+(C) Copyright IBM Corp. 2012, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="sea-datasync" namespace="/sbc/datasync" extends="scuiimpl">
+		<default-class-ref class="com.sterlingcommerce.sbc.core.struts.SBCDefaultStrutsAction" />
+		<global-results>
+			<result name="MASHUPERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="VALIDATIONERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="AUTHORIZATIONERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="error">/sbc/jsps/apierror.jsp</result>
+			<result name="APIERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="DATAVALIDATIONERROR">/jsps/datavalidationerror.jsp</result>
+		</global-results>
+		<action name="opencreatesyncprofile" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">datasync_getTableGroupCommonCodeList</param>
+			<param name="inputNs">getCommonCodeList_Input</param>
+			<param name="outputNs">getCommonCodeList_Output</param>
+			<param name="resourceId">SBCSYS00302</param>
+			<result name="success">/sbc/datasync/profile/create/createsyncprofile.jsp</result>
+		</action>
+		<action name="opensyncProfileDetailsFromSearch" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">syncProfieDetails_multiAPI</param>
+			<result name="success">/sbc/datasync/profile/create/opensyncprofiledetails.jsp</result>
+		</action>
+
+		<action name="createsyncprofile" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">datasync_manageSyncProfile</param>
+			<param name="inputNs">manageSyncProfile_Input</param>
+			<param name="outputNs">manageSyncProfile_Output</param>
+			<result name="success">/sbc/common/defaultresponse.jsp</result>
+			<result name="APIERROR">/sbc/datasync/profile/create/createSyncProfileError.jsp</result>
+		</action>
+		<action name="managesyncprofile" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">datasync_manageSyncProfile</param>
+			<param name="inputNs">manageSyncProfile_Input</param>
+			<param name="outputNs">manageSyncProfile_Output</param>
+			<result name="success">/sbc/common/defaultresponse.jsp</result>
+		</action>
+		<action name="syncprofilesearch" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">datasync_getTableGroupCommonCodeList</param>
+			<param name="inputNs">getCommonCodeList_Input</param>
+			<param name="outputNs">getCommonCodeList_Output</param>
+			<param name="resourceId">SBCSYS00303</param>
+			<result name="success">/sbc/datasync/profile/search/syncprofilesearch.jsp</result>
+		</action>
+		<action name="searchsyncprofiles" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">datasync_getSyncProfileList</param>
+			<param name="inputNs">getSyncProfileList_Input</param>
+			<param name="outputNs">getSyncProfileList_Output</param>
+			<result name="success">/sbc/common/defaultresponse.jsp</result>
+		</action>
+		<action name="openSyncSubscription">
+			<!-- <param name="resourceId">SBCSYS00304</param> -->
+			<result name="success">/sbc/datasync/subscription/create/opencreatesubscription.jsp</result>
+		</action>
+		<action name="syncsubscriptionsearch">
+			<result name="success">/sbc/datasync/subscription/search/subscriptionsearch.jsp</result>
+		</action>
+		<action name="searchsyncsubscription" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">datasync_searchSyncSubscriptionList</param>
+			<param name="inputNs">getSyncSubscriptionList_Input</param>
+			<param name="outputNs">getSyncSubscriptionList_Output</param>
+			<result name="success">/sbc/common/defaultresponse.jsp</result>
+		</action>
+
+		<action name="getdatasynctablegroup" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">datasync_getTableGroupCommonCodeList</param>
+			<param name="inputNs">getCommonCodeList</param>
+			<param name="outputNs">getCommonCodeList_output</param>
+			<result name="success">/sbc/common/advancedsearch/getCommonCodeList.jsp</result>
+		</action>
+
+		<action name="syncsubscriptionsearchdetails" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">profileadd_manageSyncSubscription</param>
+			<param name="inputNs">manageSyncsubscription_Input</param>
+			<param name="outputNs">manageSyncsubscription_Output</param>
+			<result name="success">/sbc/datasync/subscription/manage/managesyncsubscription.jsp</result>
+		</action>
+
+		<action name="launchsyncsubscriptionsearchpopup">
+			<result name="success">/sbc/datasync/subscription/search/syncsubscriptionsearchpopup.jsp</result>
+		</action>
+		<action name="launchsynctargetsearchpopup">
+			<result name="success">/sbc/datasync/target/search/synctargetsearchpopup.jsp</result>
+		</action>
+
+		<action name="createsynctarget" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">synctarget_getOrganizationListMashup</param>
+			<param name="inputNs">getOrganizationList_input</param>
+			<param name="outputNs">getOrganizationList_output</param>
+			<param name="resourceId">SBCSYS00307</param>
+			<result name="success">/sbc/datasync/target/create/createsynctarget.jsp</result>
+		</action>
+		<action name="savesynctarget" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">datasync_manageSyncTarget</param>
+			<param name="inputNs">manageSyncTarget_Input</param>
+			<param name="outputNs">manageSyncTarget_Output</param>
+			<param name="resourceId">SBCSYS00307</param>
+			<result name="success">/sbc/datasync/target/create/synctargetcreated.jsp</result>
+			<result name="APIERROR">/sbc/datasync/target/create/createSyncTargetError.jsp</result>
+		</action>
+		<action name="managesynctarget" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">datasync_manageSyncTarget</param>
+			<param name="inputNs">manageSyncTarget_Input</param>
+			<param name="outputNs">manageSyncTarget_Output</param>
+			<result name="success">/sbc/datasync/target/manage/subscriptionAddManageTarget.jsp</result>
+		</action>
+		<action name="getsynctarget" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">datasync_targetDetailsMultiAPI</param>
+			<param name="resourceId">SBCSYS00309</param>
+			<result name="success">/sbc/datasync/target/create/synctargetdetail.jsp</result>
+		</action>
+
+		<action name="synctargetsearch" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">synctarget_getOrganizationListMashup</param>
+			<param name="inputNs">getOrganizationList_input</param>
+			<param name="outputNs">getOrganizationList_output</param>
+			<param name="resourceId">SBCSYS00308</param>
+			<result name="success">/sbc/datasync/target/search/synctargetsearch.jsp</result>
+		</action>
+		<action name="searchsyncTargets" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">datasync_searchSyncTargetList</param>
+			<param name="inputNs">getSyncTargetList_Input</param>
+			<param name="outputNs">getSyncTargetList_Output</param>
+			<param name="resourceId">SBCSYS00308</param>
+			<result name="success">/sbc/datasync/target/search/synctargetsearchresults.jsp</result>
+		</action>
+
+		<action name="deletesynctarget" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">delete_syncTarget</param>
+			<param name="inputNs">deleteSyncTarget_Input</param>
+			<param name="outputNs">deleteSyncTarget_Output</param>
+			<param name="resourceId">SBCSYS00309</param>
+			<result name="success">/sbc/datasync/target/manage/managesynctargetdelete.jsp</result>
+		</action>
+
+		<action name="createsyncsubscription" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">datasync_manageSyncSubscription</param>
+			<param name="inputNs">manageSyncsubscription_Input</param>
+			<param name="outputNs">manageSyncsubscription_Output</param>
+			<result name="success">/sbc/datasync/subscription/manage/managesyncsubscription.jsp</result>
+			<result name="APIERROR">/sbc/datasync/subscription/create/createSyncSubscriptionError.jsp</result>
+		</action>
+		<action name="launchsyncprofilesearchpopup" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">datasync_getTableGroupCommonCodeList</param>
+			<param name="inputNs">getCommonCodeList_Input</param>
+			<param name="outputNs">getCommonCodeList_Output</param>
+			<param name="resourceId">SBCSYS00303</param>
+			<result name="success">/sbc/datasync/profile/search/syncprofilesearchpopup.jsp</result>
+		</action>
+		<action name="managesyncsubscription" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">profileadd_manageSyncSubscription</param>
+			<param name="inputNs">manageSyncsubscriptionProfile_Input</param>
+			<param name="outputNs">manageSyncsubscriptionProfile_Output</param>
+			<result name="success" type="chain">
+				<param name="actionName">searchsyncprofiles</param>
+				<param name="namespace">/sbc/datasync</param>
+			</result>
+		</action>
+		<action name="managesyncsubscriptiontargetadd" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">profileadd_manageSyncSubscription</param>
+			<param name="inputNs">manageSyncsubscriptionTarget_Input</param>
+			<param name="outputNs">manageSyncsubscriptionTarget_Output</param>
+			<result name="success">/sbc/common/defaultresponse.jsp</result>
+		</action>
+		<action name="syncsubscriptionprimarydetails" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">profileadd_manageSyncSubscription</param>
+			<param name="inputNs">primarySyncsubscription_Input</param>
+			<param name="outputNs">primarySyncsubscription_Output</param>
+			<result name="success">/sbc/common/defaultresponse.jsp</result>
+		</action>
+		<action name="deletesyncsubscription" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">delete_syncSubscription</param>
+			<param name="inputNs">deleteSyncsubscription_Input</param>
+			<param name="outputNs">deleteSyncsubscription_Output</param>
+			<result name="success">/sbc/datasync/subscription/manage/manageSyncSubscriptionForDelete.jsp</result>
+		</action>
+		<action name="deleteprofilefromsubscription" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">profileadd_manageSyncSubscription</param>
+			<param name="inputNs">deleteprofilesubscription_Input</param>
+			<param name="outputNs">deleteprofilesubscription_Output</param>
+			<result name="success" type="chain">
+				<param name="actionName">searchsyncprofiles</param>
+				<param name="namespace">/sbc/datasync</param>
+			</result>
+		</action>
+
+		<action name="searchtargettingorganizations" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">synctarget_getOrganizationList</param>
+			<param name="inputNs">getOrganizationList_input</param>
+			<param name="outputNs">getOrganizationList_output</param>
+			<param name="resourceId">SBCSYS00001</param>
+			<result name="success">/sbc/common/organization/organizationsearchresults.jsp</result>
+		</action>
+		<action name="launchprofilequerysearchpopup">
+			<param name="resourceId">SBCSYS00302</param>
+			<result name="success">/sbc/datasync/profile/search/querysearchpopup.jsp</result>
+		</action>
+
+		<action name="searchprofilequery" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">datasync_getQueryList</param>
+			<param name="inputNs">getQueryList_Input</param>
+			<param name="outputNs">getQueryList_Output</param>
+			<param name="resourceId">SBCSYS00302</param>
+			<result name="success">/sbc/datasync/profile/search/profilequerysearchresult.jsp</result>
+		</action>
+
+		<action name="deletetargetfromsubscription" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">profileadd_manageSyncSubscription</param>
+			<param name="inputNs">deletetargetsubscription_Input</param>
+			<param name="outputNs">deletetargetsubscription_Output</param>
+			<result name="success">/sbc/common/defaultresponse.jsp</result>
+		</action>
+		<action name="deletesyncprofile" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">delete_syncProfile</param>
+			<param name="inputNs">deleteSyncProfile_Input</param>
+			<param name="outputNs">deleteSyncProfile_Output</param>
+			<result name="success">/sbc/datasync/target/manage/managesynctargetdelete.jsp</result>
+		</action>
+	</package>
+</struts>

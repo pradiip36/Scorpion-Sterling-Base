@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shipment ActualShipmentDate=""
+    CarrierServiceCode="" DocumentType=""
+    EnterpriseCode="" SCAC=""
+    SellerOrganizationCode="" ShipmentKey="" ShipNode="" ShipmentNo="">
+    <Extn ExtnCustNotificationSent=""/>
+    <ToAddress AddressLine1="" AddressLine2=""
+        AddressLine3="" City="" Country=""
+        DayPhone="" Department="" EMailID=""
+        FirstName="" LastName="" MiddleName=""
+        State="" ZipCode=""/>
+    <Containers/>
+    <ShipmentLines>
+        <ShipmentLine ChainedFromOrderHeaderKey="" ItemDesc=""
+            ItemID="" OrderHeaderKey=""
+            OrderLineKey="" OrderNo=""
+            PrimeLineNo="" ProductClass="" Quantity=""
+            ReleaseNo="" ShipmentLineNo="" SubLineNo="" UnitOfMeasure="">
+            <Extn/>
+        </ShipmentLine>
+    </ShipmentLines>
+</Shipment>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DelimitedSenderSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation='delimitedsender.xsd'>
+   <ParserDefaults  DefaultRecordDelimiter="Newline" DefaultFieldDelimiter="|" DefaultEscapeCharacter="\" DefaultPadCharacter="|" RecordIdStartPosition="1" SkipCarriageReturn="true">
+      <FileHeader FileHeaderId="000" FileHeaderStartPos="1" FileHeaderLength="20">MISMATCH</FileHeader>      
+	  <FileTrailer FileTrailerId="666" FileTrailerStartPos="1" FileTrailerLength="20">All Done</FileTrailer>
+   </ParserDefaults>
+
+   <ElementMapList><!-- maps elements in XML to records in flat file -->
+      <ElementMap ElementName="Items" RecordId="Record">
+         <AttributeMap AttributeName="ItemID" FieldName="ITEMID"/>
+         <AttributeMap AttributeName="Date" FieldName="DATE"/>
+         <AttributeMap AttributeName="ShipNode" FieldName="SHIPNODE"/>
+		 <AttributeMap AttributeName="ActualQuantity" FieldName="ACTQUANTITY"/>
+		 <AttributeMap AttributeName="ChangedQuantity" FieldName="CHANQUANTITY"/>
+		 <AttributeMap AttributeName="ExpectedQuantity" FieldName="EXPQUANTITY"/>         
+      </ElementMap>    
+	  
+   </ElementMapList>
+
+   <RecordDefinitions>
+      <Record RecordId="Record" Name="Record">
+         <Field Name="DATE"  FieldPosition="2" />
+         <Field Name="SHIPNODE"  FieldPosition="3" />
+         <Field Name="ITEMID"  FieldPosition="4" /> 
+		 <Field Name="ACTQUANTITY"  FieldPosition="5" />
+		 <Field Name="CHANQUANTITY"  FieldPosition="6" />
+		 <Field Name="EXPQUANTITY"  FieldPosition="7" />
+		 
+      </Record>      
+   </RecordDefinitions>
+</DelimitedSenderSchema>

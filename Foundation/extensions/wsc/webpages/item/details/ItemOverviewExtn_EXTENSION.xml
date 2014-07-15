@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="ItemOverviewExtn"
+        extnPackage="extn.item.details"
+        originalScreen="isccs.item.details.ItemOverview"
+        originalScreenPackage="isccs.item.details" type="diffrential">
+        <Items>
+            <ContentPane _sc_extensibility_moveOrder="5"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lblExtendedDesc"
+                class="isccsScreen singlecolumntable" uId="extn_itemDetailsPane"/>
+            <Label _sc_extensibility_moveOrder="19"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_SKUDescriptionLabel"
+                class="primaryInformation blockComponent productModalTitle"
+                uId="extn_ItemDetailsLabel" value="$(_scSimpleBundle:extn_Item_Details)"/>
+            <DataLabel _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="overviewPnl"
+                label="$(_scBundle:extn_Stockroom_Quantity)" uId="extn_stockRoomQtyLabel">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="getStockRoomQuantity"
+                        namespace="itemOverviewModel" path="StockRoomQuantity"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="3"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="lblBrandValue" uId="extn_stockRoomQtyLabel"/>
+            <DataLabel _sc_extensibility_moveOrder="4"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="lblBrandValue"
+                label="$(_scBundle:extn_Salesfloor_Quantity)" uId="extn_salesFloorQtyLabel">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="getSalesFloorQuantity"
+                        namespace="itemOverviewModel" path="SalesFloorQuantity"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lblBrandValue" renderHidden="true"/>
+            <DataLabel _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lblBrandIdValue" renderHidden="true"/>
+            <DataLabel _sc_extensibility_moveOrder="6"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_itemDetailsPane"
+                class="autoLabelZeroWidth"
+                label="$(_scBundle:extn_SKU_Description)" uId="extn_SKUDescriptionLabel">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="getSKUDescription"
+                        namespace="itemOverviewModel" path="OrderLine.ItemDetails.PrimaryInformation.Description"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="7"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_itemDetailsPane"
+                class="autoLabelZeroWidth"
+                label="$(_scBundle:extn_Brand)" uId="extn_brandLabel">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getBrand"
+                        namespace="itemOverviewModel" path="Brand"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="8"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_itemDetailsPane"
+                class="autoLabelZeroWidth"
+                label="$(_scBundle:extn_Color)" uId="extn_colorLabel">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getColor"
+                        namespace="itemOverviewModel" path="OrderLine.ItemDetails.Extn.ExtnColorDesc"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="9"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_colorLabel"
+                class="autoLabelZeroWidth"
+                label="$(_scBundle:extn_Size)" uId="extn_sizeLabel">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getSize"
+                        namespace="itemOverviewModel" path="OrderLine.ItemDetails.Extn.ExtnSize"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="10"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_sizeLabel"
+                class="autoLabelZeroWidth"
+                label="$(_scBundle:extn_Style_Number)" uId="extn_styleNumberLabel">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getVendorNum"
+                        namespace="itemOverviewModel" path="OrderLine.ItemDetails.Extn.ExtnVendorStyleNo"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="18"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_boxIDLabel"
+                class="autoLabelZeroWidth"
+                label="$(_scBundle:extn_Style_Description)" uId="extn_styleDescriptionLabel">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getVendorDesc"
+                        namespace="itemOverviewModel" path="OrderLine.ItemDetails.Extn.ExtnVendorStyleDesc"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="12"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_styleNumberLabel"
+                class="autoLabelZeroWidth"
+                label="$(_scBundle:extn_Box_ID)" uId="extn_boxIDLabel">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getBoxID"
+                        namespace="itemOverviewModel" path="BoxID"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="13"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_boxIDLabel"
+                class="autoLabelZeroWidth"
+                label="$(_scBundle:Label_Department)" uId="extn_departmentLabel">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getDepartment"
+                        namespace="itemOverviewModel" path="OrderLine.ItemDetails.Extn.ExtnDept"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="14"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_departmentLabel"
+                class="autoLabelZeroWidth"
+                label="$(_scBundle:extn_Major_Class)" uId="extn_majorClassLabel">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getMajorClass"
+                        namespace="itemOverviewModel" path="OrderLine.ItemDetails.Extn.ExtnClass"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="15"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_majorClassLabel"
+                class="autoLabelZeroWidth"
+                label="$(_scBundle:extn_Sub_Class)" uId="extn_subClassLabel">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getSubClass"
+                        namespace="itemOverviewModel" path="OrderLine.ItemDetails.Extn.ExtnSubClass"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="16"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_subClassLabel"
+                class="autoLabelZeroWidth"
+                label="$(_scBundle:extn_Floorpad)" uId="extn_floorPadLabel">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getFloorpad"
+                        namespace="itemOverviewModel" path="Floorpad"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="17"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_floorPadLabel"
+                class="autoLabelZeroWidth"
+                label="$(_scBundle:extn_UPCs)" uId="extn_upcsLabel">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getUPCs"
+                        namespace="itemOverviewModel" path="OrderLine.ItemDetails.ItemAliasList"/>
+                </BindingData>
+            </DataLabel>
+        </Items>
+    </ScreenExtension>
+</ExtensionMetaData>

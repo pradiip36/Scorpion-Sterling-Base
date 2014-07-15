@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mashups>
+    <mashup id="backroomPick_saveHoldLocationToShipment">
+        <API Name="changeShipment">
+            <Input>
+                <Shipment
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode"
+                    HoldLocation="" ShipmentKey="">
+                    <Extn ExtnHoldLocationDesc="" ExtnHoldLocationID=""/>
+                </Shipment>
+            </Input>
+            <Template>
+                <Shipment HoldLocation="" ShipmentKey="" ShipmentNo=""/>
+            </Template>
+        </API>
+    </mashup>
+    <mashup id="backroomPick_getHoldLocationForShipment">
+        <API Name="getShipmentDetails">
+            <Input>
+                <Shipment
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode" ShipmentKey="xml:scControllerInput:/Shipment/@ShipmentKey"/>
+            </Input>
+            <Template>
+                <Shipment HoldLocation="" ShipmentKey="" ShipmentNo="">
+                    <Extn ExtnHoldLocationDesc="" ExtnHoldLocationID=""/>
+                </Shipment>
+            </Template>
+        </API>
+    </mashup>
+    <mashup id="customerpickup_getShipmentDetailByOriginalShipmentKey">
+        <API Name="getSortedShipmentDetails">
+            <Input>
+                <Shipment
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode" ShipmentKey=""/>
+            </Input>
+            <Template>
+                <Shipment ShipmentKey="" ShipmentNo="" Status="" TransactionId="">
+                    <ShipmentLines>
+                        <ShipmentLine BackroomPickedQuantity=""
+                            OrderHeaderKey="" OrderLineKey="" OrderNo=""
+                            Quantity="" ShipmentKey=""
+                            ShipmentLineKey="" ShipmentLineNo="" ShipmentSubLineNo="">
+                            <OrderLine GiftFlag="" IsBundleParent="" ItemGroupCode="">
+                                <ItemDetails ItemGroupCode="" ItemID="" UnitOfMeasure="">
+                                    <PrimaryInformation
+                                    ExtendedDisplayDescription=""
+                                    ImageID="" ImageLabel="" ImageLocation=""/>
+                                </ItemDetails>
+                            </OrderLine>
+                        </ShipmentLine>
+                    </ShipmentLines>
+                    <Extn ExtnHoldLocationDesc=""/>
+                </Shipment>
+            </Template>
+        </API>
+    </mashup>
+    <mashup id="shipmentSearch_getShipmentList">
+        <API Name="getShipmentList">
+            <Input>
+                <Shipment ApplyQueryTimeout="" AssignedToUserId=""
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode"
+                    EnterpriseCode="" MaximumRecords="" QueryTimeout=""
+                    ShipNode="" ShipmentNo="" Status="">
+                    <BillToAddress DayPhone="" EMailID="" FirstName="" LastName=""/>
+                    <ShipmentLines>
+                        <ShipmentLine OrderNo="">
+                            <OrderLine DeliveryMethod="PICK" GiftFlag="" ShipNode="">
+                                <PersonInfoMarkFor DayPhone=""
+                                    EMailID="" FirstName="" LastName=""/>
+                            </OrderLine>
+                        </ShipmentLine>
+                    </ShipmentLines>
+                </Shipment>
+            </Input>
+            <Template>
+                <Shipments>
+                    <Shipment AssignedToUserId="" DeliveryCode=""
+                        DeliveryMethod="" ExpectedShipmentDate=""
+                        HoldLocation="" OrderNo="" ShipDate=""
+                        ShipNode="" ShipmentKey="" ShipmentNo="" StatusDate="">
+                        <Extn ExtnExpirationDate=""
+                            ExtnHoldLocationDesc=""
+                            ExtnShipmentIndicator="" ExtnSuspendedPickup=""/>
+                        <Status Description=""/>
+                        <BillToAddress DayPhone="" EMailID=""
+                            FirstName="" LastName="" PersonInfoKey=""/>
+                    </Shipment>
+                </Shipments>
+            </Template>
+        </API>
+    </mashup>
+    <mashup id="shipmentSummary_getShipmentDetails">
+        <API Name="getShipmentDetails">
+            <Input>
+                <Shipment
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode"
+                    SellerOrganizationCode="xml:CurrentStore:/Store/@EnterpriseCode"
+                    ShipNode="xml:CurrentStore:/Store/@ShipNode"
+                    ShipmentKey="xml:scControllerInput:/Shipment/@ShipmentKey" ShipmentNo="xml:scControllerInput:/Shipment/@ShipmentNo"/>
+            </Input>
+            <Template>
+                <Shipment AssignedToUserId="" Currency=""
+                    DeliveryCode="" DeliveryMethod="" EnterpriseCode=""
+                    ExpectedShipmentDate="" OrderNo="" ShipmentKey=""
+                    ShipmentNo="" StatusDate="">
+                    <ShipmentLines>
+                        <ShipmentLine BackroomPickedQuantity="">
+                            <OrderLine Status="">
+                                <PersonInfoMarkFor Country=""
+                                    DayPhone="" EMailID="" FirstName=""
+                                    LastName="" PersonInfoKey=""/>
+                                <ItemDetails>
+                                    <PrimaryInformation ShortDescription=""/>
+                                </ItemDetails>
+                            </OrderLine>
+                            <Order OrderDate="">
+                                <PaymentMethods>
+                                    <PaymentMethod CreditCardName=""
+                                    CreditCardNo=""
+                                    CreditCardType=""
+                                    DisplayCreditCardNo=""
+                                    PaymentKey="" PaymentType="" PaymentTypeGroup=""/>
+                                </PaymentMethods>
+                            </Order>
+                        </ShipmentLine>
+                    </ShipmentLines>
+                    <Extn ExtnExpirationDate="" ExtnHoldLocationDesc=""
+                        ExtnPickedCustFirstName=""
+                        ExtnPickedCustLastName="" ExtnPickupFirstName=""
+                        ExtnPickupLastName="" ExtnShipmentIndicator="" ExtnSuspendedPickup=""/>
+                    <BillToAddress AddressLine1="" City="" Country=""
+                        DayFaxNo="" DayPhone="" EMailID=""
+                        EveningFaxNo="" EveningPhone="" FirstName=""
+                        IsCommercialAddress="" LastName="" MiddleName=""
+                        MobilePhone="" PersonInfoKey=""
+                        PreferredShipAddress="" State="" ZipCode=""/>
+                    <Status Description="" Status=""/>
+                    <ShipNode ShipNode="" ShipNodeAddressKey=""
+                        ShipnodeKey="" ShipnodeType="" ShippingNode="">
+                        <ShipNodePersonInfo AddressLine1="" City=""
+                            Country="" DayFaxNo="" DayPhone=""
+                            EMailID="" EveningFaxNo="" EveningPhone=""
+                            FirstName="" IsCommercialAddress=""
+                            LastName="" MiddleName="" MobilePhone=""
+                            PersonInfoKey="" PreferredShipAddress=""
+                            State="" ZipCode=""/>
+                    </ShipNode>
+                </Shipment>
+            </Template>
+        </API>
+    </mashup>
+    <mashup id="openPicksPortlet_getShipmentListInit">
+        <API Name="getShipmentList">
+            <Input>
+                <Shipment
+                    AssignedToUserId="xml:CurrentUser:/User/@Loginid"
+                    AssignedToUserIdQryType="NE" DeliveryMethod="PICK"
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode"
+                    MaximumRecords="5" OrderNo="" ShipNode="xml:CurrentStore:/Store/@ShipNode">
+                    <OrderBy>
+                        <Attribute Name="ExpectedShipmentDate"/>
+                    </OrderBy>
+                    <ComplexQuery>
+                        <Or>
+                            <Exp Name="Status" QryType="FLIKE" Value="1100.70.06.10"/>
+                            <Exp Name="Status" QryType="FLIKE" Value="1100.70.06.20"/>
+                        </Or>
+                    </ComplexQuery>
+                    <Extn ExtnUsername=""/>
+                </Shipment>
+            </Input>
+            <Template>
+                <Shipments TotalNumberOfRecords="">
+                    <Shipment AssignedToUserId=""
+                        ExpectedShipmentDate="" HoldLocation=""
+                        OrderNo="" ShipmentKey="" ShipmentNo=""
+                        Status="" TotalNumOfSKUS="">
+                        <BillToAddress AddressLine1="" AddressLine2=""
+                            City="" Country="" DayFaxNo="" DayPhone=""
+                            EMailID="" EveningFaxNo="" EveningPhone=""
+                            FirstName="" IsCommercialAddress=""
+                            LastName="" MiddleName="" MobilePhone=""
+                            PersonInfoKey="" PreferredShipAddress=""
+                            State="" ZipCode=""/>
+                        <Extn ExtnUsername=""/>
+                    </Shipment>
+                </Shipments>
+            </Template>
+        </API>
+    </mashup>
+</mashups>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Licensed Materials - Property of IBM
+IBM Sterling Business Center
+(C) Copyright IBM Corp. 2010, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="kohls-sbc-item" namespace="/sbc/item" extends="scuiimpl">
+	<default-class-ref class="com.sterlingcommerce.sbc.core.struts.SBCDefaultStrutsAction"></default-class-ref>
+	<global-results>
+            <result name="MASHUPERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="VALIDATIONERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="AUTHORIZATIONERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="error">/sbc/jsps/apierror.jsp</result>
+			<result name="APIERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="DATAVALIDATIONERROR">/jsps/datavalidationerror.jsp</result>
+	</global-results>
+	<action name="kohlsItemineligibilityHome" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">kohls-open-searchpage</param>
+			<param name="inputNs">itemStatus_input</param>
+			<param name="outputNs">itemStatus_output</param>
+			<result name="success" type="chain">
+				<param name="actionName">itemTypeListNew</param>
+				<param name="namespace">/sbc/item</param>
+		    </result>		
+	</action>
+	<action name="itemTypeListNew" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">itemsearch-ItemCharacteristic</param>
+			<param name="inputNs">getItemTypeListInput</param>
+			<param name="outputNs">getItemTypeListOutput</param>
+			<result name="success">/extn/sbc/kohls/item/ineligibility/itemsearch.jsp</result>
+	</action>
+	<action name="kohlsItemeligibilityList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">kohls-item-list</param>
+			<param name="inputNs">kohlsitemList_input</param>
+			<param name="outputNs">kohlsitemList_output</param>
+			<result name="success">/extn/sbc/kohls/item/ineligibility/kohlslistitems.jsp</result>
+	</action>
+	<action name="kohlsViewItemeligibilityList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">kohls-item-list</param>
+			<param name="inputNs">kohlsitemList_input</param>
+			<param name="outputNs">kohlsitemList_output</param>
+			<result name="success">/extn/sbc/kohls/item/ineligibility/kohlsViewlistitems.jsp</result>
+	</action>
+	<action name="kohlsUpdateInelgDateRange"  class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			   <param name="mashupId">kohls-update-inelg-items</param>
+			   <param name="inputNs">updateInelgInput</param>
+			   <param name="outputNs">updateInelgOutput</param>
+    		   <result name="success">/extn/sbc/kohls/item/ineligibility/kohlsupdatedaterange.jsp</result>
+	</action>
+		<action name="kohlsDeleterInelgData"  class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			   <param name="mashupId">kohls-delete-inelg-items</param>
+			   <param name="inputNs">deleteInelgInput</param>
+			   <param name="outputNs">deleteInelgOutput</param>
+    		   <result name="success">/extn/sbc/kohls/item/ineligibility/kohlsdeleteinelgdata.jsp</result>
+	</action>
+    	
+		<action name="kohlsAddStoreEligibility" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">kohls-open-searchpage</param>
+			<param name="inputNs">kohlsinelgitemList_input</param>
+			<param name="outputNs">kohlsinelgitemList_output</param>
+			<result name="success">/extn/sbc/kohls/item/ineligibility/KohlsItemSearch.jsp</result>
+		</action>
+		
+		<action name="kohlsitemsearch" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">kohlsitemsearch-itemsearch</param>
+			<param name="inputNs">itemSearch_input</param>
+			<param name="outputNs">itemSearch_output</param>
+			<result name="success">/extn/sbc/kohls/item/ineligibility/KohlsItemResults.jsp</result>
+		</action>
+		<action name="searchitemaction3" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">kohls-item-searchItem</param>
+			<param name="inputNs">itemSearch_input</param>
+			<param name="outputNs">itemSearch_output</param>
+			<result name="success">/extn/sbc/kohls/item/ineligibility/itemsearchlistresult.jsp</result>
+		</action>
+		<action name="kohlsAddInelgDateRange"  class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			   <param name="mashupId">kohls-add-inelg-items</param>
+			   <param name="inputNs">addInelgInput</param>
+			   <param name="outputNs">addInelgOutput</param>
+    		   <result name="success">/extn/sbc/kohls/item/ineligibility/kohlsaddedaterange</result>
+		</action>
+	<action name="vendorSearch">
+	<result name="success">/extn/sbc/kohls/item/eligibility/vendorSearch.jsp</result>
+	</action>
+	<action name="getVendorList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">vendor-getVendorList</param>
+			<param name="inputNs">getVendorListInput</param>
+			<param name="outputNs">getVendorListOutput</param>
+			<result name="success">/extn/sbc/kohls/item/eligibility/getVendorList.jsp</result>
+		</action>
+			<action name="getVendorListForInelg" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">vendor-getVendorList</param>
+			<param name="inputNs">getVendorListInput</param>
+			<param name="outputNs">getVendorListOutput</param>
+			<result name="success">/extn/sbc/kohls/item/ineligibility/getVendorList.jsp</result>
+		</action>
+	<!--From here begin Srikanth-->
+	<action name="bulkItemEligibility" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">itemsearch-bulkItemEligibility</param>
+			<param name="inputNs">itemStatus_input</param>
+			<param name="outputNs">itemStatus_output</param>
+			<result name="success">/extn/sbc/kohls/item/eligibility/itemsearch.jsp</result>			
+			<!--result name="success" type="chain">
+				<param name="actionName">itemdetails_forvariations</param>
+				<param name="namespace">/sbc/item</param>
+			 </result-->
+	</action>
+	<action name="selectedItemEligibility" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">itemsearch-selectedItemEligibility</param>
+			<param name="inputNs">itemStatus_input</param>
+			<param name="outputNs">itemStatus_output</param>
+			<result name="success">extn/sbc/kohls/item/eligibility/itemsearch.jsp</result>			
+			<!--result name="success" type="chain">
+				<param name="actionName">itemdetails_forvariations</param>
+				<param name="namespace">/sbc/item</param>
+			 </result-->
+	</action>
+	<action name="kohlsItemeligibilityHome" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">kohls-open-searchpage</param>
+			<param name="inputNs">itemStatus_input</param>
+			<param name="outputNs">itemStatus_output</param>
+			<result name="success" type="chain">
+				<param name="actionName">itemTypeListNew2</param>
+				<param name="namespace">/sbc/item</param>
+		    </result>		
+	</action>
+	
+	<action name="itemTypeListNew2" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">itemsearch-ItemCharacteristic</param>
+			<param name="inputNs">getItemTypeListInput</param>
+			<param name="outputNs">getItemTypeListOutput</param>
+			<result name="success">/extn/sbc/kohls/item/eligibility/itemsearch.jsp</result>
+	</action>
+	
+	<action name="searchitemaction4" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">	
+			<param name="mashupId">kohlsitemsearch-itemsearch</param>					
+			<param name="inputNs">itemSearch_input</param>
+			<param name="outputNs">itemSearch_output</param>
+			<result name="success">/extn/sbc/kohls/item/eligibility/itemsearchlistresult.jsp</result>
+	</action>
+
+	
+	<action name="kohlsSetEligibleAsCommoncode" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">kohls-seteligible-commoncode</param>
+			<param name="inputNs">itemStatus_input</param>
+			<param name="outputNs">itemStatus_output</param>
+			<result name="success">/extn/sbc/kohls/item/eligibility/itemeligblecommoncode.jsp</result>		
+	</action>	
+	
+	<!--till Here end Srikanth-->
+	
+	<!-- Safety Factor Adjustment feature -->
+	<action name="kohlsOpenCatalogSellingTreeForSafetyFactor" class="com.sterlingcommerce.sbc.item.actions.SBCCategoryDetailTreeAction">
+			<param name="mashupId">catalogManagement-getClassificationPurposeListSelling</param>
+			<param name="inputNs">getClassificationPurposeList_input</param>
+			<param name="outputNs">getClassificationPurposeList_output</param>
+			<param name="resourceId">SBCITM00050</param>
+			<result name="success" type="chain">
+					<param name="actionName">kohlsCatalogdetailtree</param>
+					<param name="namespace">/sbc/item</param>
+			</result>
+			<result name="subCatalogSuccess" type="chain">
+				<param name="actionName">kohlsSubcatalogdetailtree</param>
+				<param name="namespace">/sbc/item</param>
+		   </result>
+		</action>
+		
+		<action name="kohlsCatalogdetailtree" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">catalogmanagement-getCategoryDomainDetailTree</param>
+			<param name="inputNs">getCategoryDomainDetails_input</param>
+			<param name="outputNs">getCategoryDomainDetails_output</param>
+			<param name="resourceId">SBCITM00050</param>
+			<result name="success">/extn/sbc/kohls/item/safetyfactor/sbcKohlsSafetyFactorDetailScreen.jsp</result>
+		</action>
+		<action name="kohlsSubcatalogdetailtree" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">catalogmanagement-getSubCatalogCategoryTree</param>
+			<param name="resourceId">SBCITM00050</param>
+			<result name="success">/extn/sbc/kohls/item/safetyfactor/sbcKohlsSafetyFactorDetailScreen.jsp</result>
+		</action>
+		
+		<action name="getCategoryItemList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">getCategoryItemList_ForSafetyFactor</param>
+			<param name="inputNs">getCategoryItemList_input</param>
+			<param name="outputNs">getCategoryItemList_output</param>
+			<param name="resourceId">SBCITM00050</param>
+			<result name="success">/extn/sbc/kohls/item/safetyfactor/kohlsGetCategoryItemList.jsp</result>
+		</action>
+		
+		<action name="KohlsItemSafetyFactorUpdateService" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">KohlsItemSafetyFactorUpdateService</param>
+			<param name="inputNs">KohlsItemSafetyFactorUpdateService_input</param>
+			<param name="outputNs">KohlsItemSafetyFactorUpdateService_output</param>
+			<param name="resourceId">SBCITM00050</param>
+			<result name="success">/extn/sbc/kohls/item/safetyfactor/successKohlsItemSafetyFactorUpdateService.jsp</result>
+		</action>
+	<!-- Safety Factor Adjustment feature -->
+	</package>
+</struts>

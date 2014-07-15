@@ -1,0 +1,158 @@
+		<div>
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_contentpaneName' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '3' , 
+		_sc_extensibility_referenceUId : 'txt_lastName' , 
+		_sc_extensibility_position : 'before'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_buttonPrintExpiredPicks' , 
+		renderHidden : true , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '6' , 
+		_sc_extensibility_referenceUId : 'SST_SearchButtonBar' , 
+		_sc_extensibility_position : 'last'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Print_Expired_Order_Reports')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/CheckBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_checkbox_expiredStatus' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '1' , 
+		_sc_extensibility_referenceUId : 'ckListStatus' , 
+		_sc_extensibility_position : 'after'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Expired_Orders')
+,	
+			 	bindingData : 	{
+		 uncheckedValue : 	{
+		 value : 			'N'
+	}
+,
+		 targetBinding : 	[
+	 		{
+		 path : 			'isChecked'
+,
+		 namespace : 			'extn_expiredOrders_input'
+,
+		 scExtensibilityArrayItemId : 			'extn_TargetBindings_0'
+	}
+	]
+,
+		 checkedValue : 	{
+		 value : 			'Y'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/CheckBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'isGiftRecpt'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/TextBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'txt_orderNo'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_Order_Receipt_Number')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/TextBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'txt_shipmentNo'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/TextBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'txt_assignedToUsr'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/TextBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'txt_emailId'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('Label_Email')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/TextBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'txt_lastName'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_Name_Last_First_')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/TextBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'txt_lastName' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '2' , 
+		_sc_extensibility_referenceUId : 'txt_firstName' , 
+		_sc_extensibility_position : 'before'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/TextBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'txt_lastName' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '4' , 
+		_sc_extensibility_referenceUId : 'extn_contentpaneName' , 
+		_sc_extensibility_position : 'first'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/TextBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'txt_firstName'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('blank')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/TextBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'txt_firstName' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '5' , 
+		_sc_extensibility_referenceUId : 'extn_contentpaneName' , 
+		_sc_extensibility_position : 'last'  
+	 					}">
+		 	</div>  
+		</div>

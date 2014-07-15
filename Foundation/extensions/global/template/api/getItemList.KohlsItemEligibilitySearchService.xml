@@ -1,0 +1,6 @@
+<ItemList>
+<Item ItemID="" UnitOfMeasure="" >
+<PrimaryInformation ShortDescription="" PrimarySupplier="" IsHazmat="" IsLiquid="" IsBulkExclusionAllowed="" ItemType="" /> 
+<Extn ExtnDept="" ExtnClass="" ExtnSubClass="" ExtnStyle="" ExtnBreakable="" ExtnShipAlone="" ExtnCageItem="" /> 
+</Item>
+</ItemList>

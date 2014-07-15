@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- getItemDetails Output XML -->
+<Item ItemID="" ItemKey="" OrganizationCode="" UnitOfMeasure="" DisplayItemId="" ItemGroupCode="" >
+    <PrimaryInformation  ProductLine=" " ItemType=" " />
+	<Extn ExtnDept="" ExtnClass="" ExtnSubClass=""/>	
+</Item>

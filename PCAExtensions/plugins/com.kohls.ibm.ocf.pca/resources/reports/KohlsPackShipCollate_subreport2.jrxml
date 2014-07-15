@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="KohlsPackShip_subreport2"
+
+		 language="groovy"		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="612"
+		 pageHeight="1008"
+		 columnWidth="612"
+		 columnSpacing="0"
+		 leftMargin="0"
+		 rightMargin="0"
+		 topMargin="0"
+		 bottomMargin="0"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<parameter name="SUBREPORT_DIR" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["C:\\Kohls\\jasper\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="xPath"><![CDATA[/Shipment]]></queryString>
+
+	<field name="ShipmentNo" class="java.lang.String">
+		<fieldDescription><![CDATA[@ShipmentNo]]></fieldDescription>
+	</field>
+	<field name="CarrierServiceCode" class="java.lang.String">
+		<fieldDescription><![CDATA[@RequestedCarrierServiceCode]]></fieldDescription>
+	</field>
+	<field name="CreditCardType1" class="java.lang.String">
+		<fieldDescription><![CDATA[Containers/Container/ContainerDetails/ContainerDetail/ShipmentLine/Order/PaymentMethods/PaymentMethod[1]/@CreditCardType]]></fieldDescription>
+	</field>
+	<field name="DisplayCreditCardNo1" class="java.lang.String">
+		<fieldDescription><![CDATA[Containers/Container/ContainerDetails/ContainerDetail/ShipmentLine/Order/PaymentMethods/PaymentMethod[1]/@DisplayCreditCardNo]]></fieldDescription>
+	</field>
+	<field name="CreditCardType2" class="java.lang.String">
+		<fieldDescription><![CDATA[Containers/Container/ContainerDetails/ContainerDetail/ShipmentLine/Order/PaymentMethods/PaymentMethod[2]/@CreditCardType]]></fieldDescription>
+	</field>
+	<field name="DisplayCreditCardNo2" class="java.lang.String">
+		<fieldDescription><![CDATA[Containers/Container/ContainerDetails/ContainerDetail/ShipmentLine/Order/PaymentMethods/PaymentMethod[2]/@DisplayCreditCardNo]]></fieldDescription>
+	</field>
+	<field name="OrderDate" class="java.lang.String">
+		<fieldDescription><![CDATA[Containers/Container/ContainerDetails/ContainerDetail/ShipmentLine/Order/@OrderDate]]></fieldDescription>
+	</field>
+	<field name="IsGiftOrder" class="java.lang.String">
+		<fieldDescription><![CDATA[@IsGiftOrder]]></fieldDescription>
+	</field>
+
+	<variable name="TotalShippingCharge" class="java.lang.Double" resetType="Report" calculation="Nothing">
+		<variableExpression><![CDATA[$V{TotalShippingCharge}]]></variableExpression>
+		<initialValueExpression><![CDATA[0.0]]></initialValueExpression>
+	</variable>
+	<variable name="LastPage" class="java.lang.Boolean" resetType="Report" calculation="Nothing">
+		<variableExpression><![CDATA[true]]></variableExpression>
+		<initialValueExpression><![CDATA[true]]></initialValueExpression>
+	</variable>
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="75"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						x="26"
+						y="13"
+						width="35"
+						height="12"
+						key="staticText"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="Arial" size="7"/>
+					</textElement>
+				<text><![CDATA[Shipping]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="100"
+						y="0"
+						width="74"
+						height="9"
+						key="staticText"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="Arial" size="7" isUnderline="false"/>
+					</textElement>
+				<text><![CDATA[SHIPPING METHOD]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="100"
+						y="12"
+						width="89"
+						height="9"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="Arial" size="7"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{CarrierServiceCode}]]></textFieldExpression>
+				</textField>
+				<line direction="TopDown">
+					<reportElement
+						x="100"
+						y="9"
+						width="68"
+						height="1"
+						key="line"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<staticText>
+					<reportElement
+						x="100"
+						y="27"
+						width="74"
+						height="9"
+						key="staticText">
+							<printWhenExpression><![CDATA[($F{IsGiftOrder}==null)
+|| $F{IsGiftOrder}.equalsIgnoreCase("")
+|| ($F{IsGiftOrder}.equalsIgnoreCase("N"))]]></printWhenExpression>
+						</reportElement>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="Arial" size="7" isUnderline="false"/>
+					</textElement>
+				<text><![CDATA[PAYMENT METHOD]]></text>
+				</staticText>
+				<line direction="TopDown">
+					<reportElement
+						x="100"
+						y="38"
+						width="68"
+						height="1"
+						key="line">
+							<printWhenExpression><![CDATA[($F{IsGiftOrder}==null)
+|| $F{IsGiftOrder}.equalsIgnoreCase("")
+|| ($F{IsGiftOrder}.equalsIgnoreCase("N"))]]></printWhenExpression>
+						</reportElement>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="100"
+						y="42"
+						width="145"
+						height="15"
+						key="textField">
+							<printWhenExpression><![CDATA[($F{IsGiftOrder}==null)
+|| $F{IsGiftOrder}.equalsIgnoreCase("")
+|| ($F{IsGiftOrder}.equalsIgnoreCase("N"))]]></printWhenExpression>
+						</reportElement>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="Helvetica-Narrow" size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[($F{CreditCardType1}!= null )
+?
+    ($F{CreditCardType1}.equalsIgnoreCase("VISA"))
+    ?"VISA1 "+$F{DisplayCreditCardNo1}
+    :($F{CreditCardType1}.equalsIgnoreCase("DISC"))
+      ?"DISCOVER "+$F{DisplayCreditCardNo1}
+      :($F{CreditCardType1}.equalsIgnoreCase("AMEX"))
+      ?"AMERICAN EXPRESS "+$F{DisplayCreditCardNo1}
+      :($F{CreditCardType1}.equalsIgnoreCase("MSTR_CARD"))
+      ?"MASTER CARD "+$F{DisplayCreditCardNo1}
+      :($F{CreditCardType1}.equalsIgnoreCase("KL_GIFT_CARD"))
+	  ?"KOHLS GC/KMRC "+$F{DisplayCreditCardNo1}
+	   :($F{CreditCardType1}.equalsIgnoreCase("KL_CHRG_CARD"))
+      ?"KOHLS CHARGE "+$F{DisplayCreditCardNo1}
+      :""
+    
+:""]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="100"
+						y="57"
+						width="145"
+						height="15"
+						key="textField">
+							<printWhenExpression><![CDATA[($F{IsGiftOrder}==null)
+|| $F{IsGiftOrder}.equalsIgnoreCase("")
+|| ($F{IsGiftOrder}.equalsIgnoreCase("N"))]]></printWhenExpression>
+						</reportElement>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="Helvetica-Narrow" size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[($F{CreditCardType2}!= null )
+?($F{CreditCardType2}.equalsIgnoreCase("VISA"))
+    ?"VISA1 "+$F{DisplayCreditCardNo2}
+    :($F{CreditCardType2}.equalsIgnoreCase("DISC"))
+      ?"DISCOVER "+$F{DisplayCreditCardNo2}
+      :($F{CreditCardType2}.equalsIgnoreCase("AMEX"))
+      ?"AMERICAN EXPRESS "+$F{DisplayCreditCardNo2}
+      :($F{CreditCardType2}.equalsIgnoreCase("MSTR_CARD"))
+      ?"MASTER CARD "+$F{DisplayCreditCardNo2}
+      :($F{CreditCardType2}.equalsIgnoreCase("KL_GIFT_CARD"))
+	  ?"KOHLS GC/KMRC "+$F{DisplayCreditCardNo2}
+	   :($F{CreditCardType2}.equalsIgnoreCase("KL_CHRG_CARD"))
+      ?"KOHLS CHARGE "+$F{DisplayCreditCardNo2}
+      :""
+    
+:""]]></textFieldExpression>
+				</textField>
+				<line direction="TopDown">
+					<reportElement
+						x="450"
+						y="0"
+						width="1"
+						height="72"
+						key="line"
+						stretchType="RelativeToBandHeight"/>
+					<graphicElement stretchType="RelativeToBandHeight"/>
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						x="500"
+						y="0"
+						width="1"
+						height="72"
+						key="line"
+						stretchType="RelativeToBandHeight"/>
+					<graphicElement stretchType="RelativeToBandHeight"/>
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						mode="Transparent"
+						x="554"
+						y="0"
+						width="1"
+						height="72"
+						key="line"
+						stretchType="RelativeToTallestObject"
+						positionType="Float"
+						isPrintInFirstWholeBand="true"
+						isPrintWhenDetailOverflows="true"/>
+					<graphicElement stretchType="RelativeToTallestObject"/>
+				</line>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="323"
+						y="41"
+						width="116"
+						height="0"
+						key="subreport"/>
+					<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/Shipment/ShipmentCharges/ShipmentCharge")]]></dataSourceExpression>
+					<returnValue subreportVariable="shippingCharge" toVariable="TotalShippingCharge"/>
+					<subreportExpression  class="java.lang.String"><![CDATA["KohlsPackShip_subreport2_subreport1.jasper"]]></subreportExpression>
+				</subreport>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Report" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="231"
+						y="0"
+						width="198"
+						height="9"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="Arial" size="7"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[($V{TotalShippingCharge} >0.0)?"SHIPPING SURCHARGE: \$"+$V{TotalShippingCharge}.toString():""]]></textFieldExpression>
+				</textField>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="330"
+						y="12"
+						width="65"
+						height="15"
+						key="subreport"
+						positionType="Float"
+						isRemoveLineWhenBlank="true"
+						isPrintWhenDetailOverflows="true">
+							<printWhenExpression><![CDATA[($F{IsGiftOrder}==null)
+|| $F{IsGiftOrder}.equalsIgnoreCase("")
+|| ($F{IsGiftOrder}.equalsIgnoreCase("N"))]]></printWhenExpression>
+						</reportElement>
+					<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/Shipment/PopulateTaxes/PopulateTax")]]></dataSourceExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA["KohlsPackShipCollate_subreport2_subreport2.jasper"]]></subreportExpression>
+				</subreport>
+				<staticText>
+					<reportElement
+						x="330"
+						y="28"
+						width="120"
+						height="44"
+						key="staticText"
+						positionType="Float"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font fontName="Arial" size="7"/>
+					</textElement>
+				<text><![CDATA[Returns will reduce the value of Kohl’s Cash and/or the refund amount. See details printed on Kohl’s Cash coupon.]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="10"
+						y="45"
+						width="70"
+						height="19"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial Narrow" size="7"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{ShipmentNo}]]></textFieldExpression>
+				</textField>
+				<line direction="TopDown">
+					<reportElement
+						mode="Transparent"
+						x="1"
+						y="0"
+						width="1"
+						height="74"
+						key="line-1"
+						stretchType="RelativeToTallestObject"
+						positionType="Float"
+						isPrintInFirstWholeBand="true"
+						isPrintWhenDetailOverflows="true"/>
+					<graphicElement stretchType="RelativeToTallestObject"/>
+				</line>
+				<image  scaleImage="RetainShape" vAlign="Top" hAlign="Left" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Opaque"
+						x="9"
+						y="28"
+						width="77"
+						height="13"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="barcode-1"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<graphicElement stretchType="NoStretch" pen="None" fill="Solid" />
+					<imageExpression class="java.awt.Image"><![CDATA[it.businesslogic.ireport.barcode.BcImage.getBarcodeImage(5,$F{ShipmentNo},false,false,null,0,50)]]></imageExpression>
+				</image>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

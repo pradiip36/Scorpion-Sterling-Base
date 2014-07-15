@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="CustomerIdentificationExtn"
+        extnPackage="extn.shipment.customerpickup"
+        originalScreen="wsc.shipment.customerpickup.CustomerIdentification"
+        originalScreenPackage="wsc.shipment.customerpickup" type="diffrential">
+        <Items>
+            <ContentPane _sc_extensibility_moveOrder="6"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="systemMessagePanelPopup" uId="extn_second_row_pane"/>
+            <ContentPane _sc_extensibility_moveOrder="10"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_contentpaneCustValidationPane" uId="extn_second_row_pane"/>
+            <ContentPane _sc_extensibility_moveOrder="8"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_second_row_pane"
+                class="customerMessageBox" uId="extn_contentpaneCustValidationPane"/>
+            <Button _sc_extensibility_moveOrder="5"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="cmbCustVerfMethod"
+                label="$(_scSimpleBundle:extn_Void)" uId="extn_button_void"/>
+            <Button _sc_extensibility_moveOrder="7"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_second_row_pane" uId="extn_button_void"/>
+            <Label _sc_extensibility_moveOrder="9"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpaneCustValidationPane"
+                class="primaryInformation"
+                uId="extn_labelCustomerValidationMessage" value="$(_scSimpleBundle:extn_Validate_customer_using_a_government_issued_photo_ID_)"/>
+            <FilteringSelect _sc_extensibility_operation="change" _sc_extensibility_referenceUId="cmbCustVerfMethod"/>
+            <FilteringSelect _sc_extensibility_moveOrder="4"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_textfield_lastName"
+                label="$(_scBundle:extn_verification_reason)"
+                renderHidden="true" uId="extn_filteringselect_verificationReason">
+                <BindingData>
+                    <OptionsBinding
+                        descriptionField="CodeShortDescription"
+                        namespace="extn_getKohlsVerificationReasonList_output"
+                        path="CommonCodeList.CommonCode" valueField="CodeShortDescription"/>
+                </BindingData>
+            </FilteringSelect>
+            <TextField _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="cmbCustVerfMethod"
+                label="$(_scBundle:Customer_first_name)"
+                renderHidden="true" uId="extn_textfield_firstName"/>
+            <TextField _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_textfield_firstName"
+                label="$(_scBundle:Label_Customer_last_name)"
+                renderHidden="true" uId="extn_textfield_lastName"/>
+        </Items>
+        <Namespaces>
+            <SourceNamespaces>
+                <Source description="output for verification reason"
+                    isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_2" value="extn_getKohlsVerificationReasonList_output"/>
+                <Source description="void receipt info" isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_3" value="extn_receiptVoidMessage_info"/>
+                <Source isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_4" value="extn_shipNode_info_void"/>
+                <Source isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_5" value="extn_commCode4Receipt_diamond"/>
+                <Source
+                    description="common codes for void receipt messages"
+                    isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_6" value="extn_commCode4Receipt_void"/>
+            </SourceNamespaces>
+            <TargetNamespaces>
+                <Target isExtn="true"
+                    scExtensibilityArrayItemId="extn_TargetNamespaces_2" value="extn_getShipmentLisrForReceiptID_void"/>
+                <Target isExtn="true"
+                    scExtensibilityArrayItemId="extn_TargetNamespaces_3" value="extn_commCode4Receipt_void"/>
+                <Target isExtn="true"
+                    scExtensibilityArrayItemId="extn_TargetNamespaces_4" value="extn_getShipmentDetailsForReceipt_void"/>
+            </TargetNamespaces>
+        </Namespaces>
+        <Subscribers>
+            <Local>
+                <Subscriber description="initializes entry stuff"
+                    eventId="afterScreenInit" isExtn="true" sequence="51">
+                    <Handler methodName="extInitialize"/>
+                </Subscriber>
+                <Subscriber description="Manager Override"
+                    eventId="saveCurrentPage" isExtn="true" sequence="19">
+                    <Handler description="Manager Override check" methodName="checkForOverride"/>
+                </Subscriber>
+                <Subscriber
+                    description="check to see if exception is selected"
+                    eventId="cmbCustVerfMethod_onChange" isExtn="true" sequence="51">
+                    <Handler methodName="checkForException"/>
+                </Subscriber>
+                <Subscriber
+                    description="This subscriber will display the void dialog box"
+                    eventId="extn_button_void_onClick" isExtn="true" sequence="51">
+                    <Handler methodName="displayVoidPrompt"/>
+                </Subscriber>
+                <Subscriber eventId="extn_button_void_onKeyUp"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="displayVoidPrompt"/>
+                </Subscriber>
+                <Subscriber eventId="cmbCustVerfMethod_appValidation"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="afterVerificationDropDownValidation"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+        <MashupRefs>
+            <Init>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getShipNode_mashup"
+                    mashupRefId="extn_getShipNode_mashup_void" sourceNamespace="extn_shipNode_info_void"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getKohlsCustomerVerificationList"
+                    mashupRefId="extn_getKohlsCustomerVerificationList" sourceNamespace="extn_getKohlsVerificationReasonList_output"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getCommonCodes_mashup"
+                    mashupRefId="extn_getReceiptCommonCodes_diamond" sourceNamespace="extn_commCode4Receipt_diamond"/>
+                <MashupRef extnType="ADD"
+                    mashupId="getReceiptCommonCodes"
+                    mashupRefId="extn_getReceiptCommonCodes" sourceNamespace="extn_commCode4Receipt_void"/>
+            </Init>
+            <Behavior>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_EJRecord_mashup" mashupRefId="extn_addEJforBeginPickup"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_changeShipmentPickUp_mashup" mashupRefId="extn_changeShipmentPickUp"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_chkMgrOverride_mashup" mashupRefId="extn_chkMgrOverride_mashup"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_saveMgrOverride_mashup" mashupRefId="extn_saveMgrOverride_mashup"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getCommonCodes_mashup" mashupRefId="extn_getReceiptCommonCodes_diamond"/>
+            </Behavior>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

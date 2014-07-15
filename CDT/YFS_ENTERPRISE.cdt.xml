@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<YFS_ENTERPRISEList TableName="YFS_ENTERPRISE">
+<Enterprise Activateflag="Y" BillingaddressKey=" "
+    CommercialContactKey=" " ContactaddressKey=" "
+    CorporateaddressKey=" " Createprogid="CONFIG"
+    Createts="2010-11-30T16:32:59-05:00" Createuserid="SYSTEM"
+    DefaultDistributionRuleId=" " EnterpriseKey="DEFAULT"
+    Enterprisecode="DEFAULT" Enterprisename="DEFAULT"
+    IsDeliverySourcingKept=" " IsServiceSourcingKept=" "
+    IsSourcingKept=" " LegalContactKey=" " Localecode="en_US_EST"
+    Lockid="0" Logoimagefile=" " Longdesc=" "
+    Modifyprogid="YDKConfigDeploy" Modifyts="2010-11-30T16:32:59-05:00"
+    Modifyuserid="sterling" NoteKey=" " TaxpayerId=" "
+    UseDefaultDistribution="Y" UseDefaultOrderStatusRules="Y"/>
+<Enterprise Activateflag=" " BillingaddressKey=" "
+    CommercialContactKey=" " ContactaddressKey=" "
+    CorporateaddressKey=" " Createprogid=".YCPOrgDetailsAPI"
+    Createts="2012-06-27T14:42:14-04:00" Createuserid="tkmayy0"
+    DefaultDistributionRuleId=" " EnterpriseKey="KOHLS-RETAIL"
+    Enterprisecode="KOHLS-RETAIL" Enterprisename="Kohl’s Retail"
+    IsDeliverySourcingKept=" " IsServiceSourcingKept=" "
+    IsSourcingKept=" " LegalContactKey=" " Localecode=" " Lockid="0"
+    Logoimagefile=" " Longdesc=" " Modifyprogid="YDKConfigDeploy"
+    Modifyts="2012-06-27T14:42:14-04:00" Modifyuserid="sterling"
+    NoteKey=" " TaxpayerId=" " UseDefaultDistribution="N" UseDefaultOrderStatusRules="N"/>
+<Enterprise Activateflag=" " BillingaddressKey=" "
+    CommercialContactKey=" " ContactaddressKey=" "
+    CorporateaddressKey=" " Createprogid=".YCPOrgDetailsAPI"
+    Createts="2010-10-20T16:52:33-04:00" Createuserid="admin"
+    DefaultDistributionRuleId=" " EnterpriseKey="KOHLS.COM"
+    Enterprisecode="KOHLS.COM" Enterprisename="Kohl’s E Commerce"
+    IsDeliverySourcingKept=" " IsServiceSourcingKept=" "
+    IsSourcingKept=" " LegalContactKey=" " Localecode=" " Lockid="0"
+    Logoimagefile=" " Longdesc=" " Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-10-20T16:52:33-04:00" Modifyuserid="sterling"
+    NoteKey=" " TaxpayerId=" " UseDefaultDistribution="N" UseDefaultOrderStatusRules="N"/>
+</YFS_ENTERPRISEList>

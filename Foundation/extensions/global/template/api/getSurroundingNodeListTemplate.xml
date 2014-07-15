@@ -1,0 +1,6 @@
+<GetSurroundingNodeList DistanceToConsider="" DistanceToConsiderUOM="" FulfillmentType="" NodeType="" OrganizationCode=""> 
+<NodeList> 
+<Node NodeType="" ShipNode="" ShipnodeKey="" ShipnodeType="" ShippingNode="" > 
+</Node> 
+</NodeList> 
+</GetSurroundingNodeList> 

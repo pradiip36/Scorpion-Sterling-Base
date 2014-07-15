@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="PickDetailsExtn"
+        extnPackage="extn.home" originalScreen="wsc.home.PickDetails"
+        originalScreenPackage="wsc.home" type="diffrential">
+        <Items>
+            <ContentPane _sc_extensibility_moveOrder="8"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_assignUser"
+                class="blockComponent" uId="extn_buttonPane"/>
+            <Button _sc_extensibility_moveOrder="7"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="btn_PickAction"
+                class="blockComponent"
+                label="$(_scSimpleBundle:extn_Assign)" showLabel="true" uId="extn_assignUser"/>
+            <Button _sc_extensibility_moveOrder="9"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_buttonPane" uId="extn_assignUser"/>
+            <Button _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="btn_PickAction" renderHidden="true"/>
+            <Button _sc_extensibility_moveOrder="10"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_buttonPane" uId="btn_PickAction"/>
+            <Button _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="pnlPickInfoCol3"
+                label="$(_scSimpleBundle:extn_UpdateHold)"
+                renderHidden="true" uId="extn_update_hold"/>
+            <Button _sc_extensibility_moveOrder="11"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_buttonPane" uId="extn_update_hold"/>
+            <Button _sc_extensibility_moveOrder="3"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="pnlPickInfoCol3"
+                label="$(_scSimpleBundle:Action_Continue)"
+                renderHidden="true" uId="extn_continue"/>
+            <Button _sc_extensibility_moveOrder="12"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_buttonPane" uId="extn_continue"/>
+            <Button _sc_extensibility_moveOrder="5"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_continue"
+                label="$(_scSimpleBundle:extn_Resume)"
+                renderHidden="true" uId="extn_Resume"/>
+            <Button _sc_extensibility_moveOrder="13"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_buttonPane" uId="extn_Resume"/>
+            <Label _sc_extensibility_moveOrder="6"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="lbl_AssociateName" uId="extn_lbl_AssociateName">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getUsername"
+                        namespace="Shipment" path="Shipment.Extn.ExtnUsername"/>
+                </BindingData>
+            </Label>
+            <Label _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lbl_AssociateName" renderHidden="true"/>
+            <DataLabel _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="lbl_OrderNum" uId="extn_datalabel_totalproducts">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="getFormattedTotalSkus"
+                        namespace="Shipment" path="Shipment.TotalNumOfPickableSKUs"/>
+                </BindingData>
+            </DataLabel>
+        </Items>
+        <Subscribers>
+            <Local>
+                <Subscriber description="Enable Resume Button"
+                    eventId="afterScreenInit" isExtn="true" sequence="18">
+                    <Handler methodName="EnableResume"/>
+                </Subscriber>
+                <Subscriber description="Enable the Update Hold Button"
+                    eventId="afterScreenInit" isExtn="true" sequence="19">
+                    <Handler methodName="EnableUpdateHold"/>
+                </Subscriber>
+                <Subscriber description="Update the hold location"
+                    eventId="extn_update_hold_onClick" isExtn="true" sequence="51">
+                    <Handler
+                        description="This Method Updates the hold locations" methodName="updateHold"/>
+                </Subscriber>
+                <Subscriber
+                    description="Show Continue Button for different Statuses"
+                    eventId="extn_continue_onClick" isExtn="true" sequence="51">
+                    <Handler description="Show Continue Butoon" methodName="showContinue"/>
+                </Subscriber>
+                <Subscriber description="custom mashup handler event"
+                    eventId="onExtnMashupCompletion" isExtn="true" sequence="51">
+                    <Handler methodName="handleExtnMashupCompletion"/>
+                </Subscriber>
+                <Subscriber description="Resume the picking process"
+                    eventId="extn_Resume_onClick" isExtn="true" sequence="51">
+                    <Handler
+                        description="This method resumes the picking process  at which point an audit entry will be created to indicate that the picking has resumed." methodName="addResumeEJRecord"/>
+                </Subscriber>
+                <Subscriber eventId="extn_assignUser_onClick"
+                    isExtn="true" sequence="19">
+                    <Handler methodName="assignUser"/>
+                </Subscriber>
+                <Subscriber eventId="extn_assignUser_onKeyUp"
+                    isExtn="true" sequence="19">
+                    <Handler methodName="assignUser"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+        <MashupRefs>
+            <Behavior>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getItemLocationDetails_mashup" mashupRefId="extn_getItemLocations_mashup"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_EJRecord_mashup" mashupRefId="extn_addEJTransPickupResumed"/>
+                <MashupRef extnType="ADD" mashupId="assignUser" mashupRefId="extn_assignUser"/>
+                <MashupRef extnType="ADD"
+                    mashupId="backroomPick_changeShipmentStatusToInProgress"
+                    mashupRefId="extn_changeShipmentToInProgress" restoredToOOB="true"/>
+            </Behavior>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

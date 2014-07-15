@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema attributeFormDefault="unqualified"
+    elementFormDefault="qualified"
+    targetNamespace="http://www.sterlingcommerce.com/documentation"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:yfc="http://www.sterlingcommerce.com/documentation" xmlns:yfctype="http://www.sterlingcommerce.com/documentation/types">
+    <xsd:annotation
+        yfc:fileName="KohlsInventoryUpdateToMLSSTUB_updateLocationItems_input.xsd" yfc:rootElement="Items">
+        <xsd:appinfo source="yfc:structure">
+            <Items>
+                <RequestLocationItem>
+                    <DetailsIndicator/>
+                    <ItemId/>
+                    <ItemIdType/>
+                    <Quantity/>
+                    <ShortPickIndicator/>
+                </RequestLocationItem>
+            </Items>
+        </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:import
+        namespace="http://www.sterlingcommerce.com/documentation/types" schemaLocation="datatypes.xsd"/>
+    <xsd:element name="Items" type="yfc:ItemsXSDType"/>
+    <xsd:complexType name="ItemsXSDType">
+        <xsd:all>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="yfc:RequestLocationItem"/>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:element name="RequestLocationItem">
+        <xsd:complexType>
+            <xsd:all>
+                <xsd:element maxOccurs="1" minOccurs="0" ref="yfc:DetailsIndicator"/>
+                <xsd:element maxOccurs="1" minOccurs="0" ref="yfc:ItemId"/>
+                <xsd:element maxOccurs="1" minOccurs="0" ref="yfc:ItemIdType"/>
+                <xsd:element maxOccurs="1" minOccurs="0" ref="yfc:Quantity"/>
+                <xsd:element maxOccurs="1" minOccurs="0" ref="yfc:ShortPickIndicator"/>
+            </xsd:all>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="DetailsIndicator">
+        <xsd:complexType/>
+    </xsd:element>
+    <xsd:element name="ItemId">
+        <xsd:complexType/>
+    </xsd:element>
+    <xsd:element name="ItemIdType">
+        <xsd:complexType/>
+    </xsd:element>
+    <xsd:element name="Quantity">
+        <xsd:complexType/>
+    </xsd:element>
+    <xsd:element name="ShortPickIndicator">
+        <xsd:complexType/>
+    </xsd:element>
+</xsd:schema>

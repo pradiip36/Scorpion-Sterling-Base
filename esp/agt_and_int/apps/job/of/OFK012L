@@ -1,0 +1,161 @@
+#!/usr/bin/ksh
+#
+#     Program Name:  OFK012L
+#           Author:  Mark Yearling
+#     Date Created:  2011, January
+#  Program Purpose:  This stub calls onto a OF run sqlscript for kicking off 
+#                    a SQL script whose data comprises the Order Visibility
+#                    Detail information. 
+#         Argument:  <release>
+#          Example:  OFK012L A
+#
+# Modification Log:
+#                    02/09/2014 - Todd Winter(TKMAZ37) - Linux Conversion
+#                          Removed ESP upload, added support for environments A-E,
+#                          fixed env variables, added echoing of the ESP log
+#
+#
+#
+########################################################################
+########################################################################
+# DATA PART OF PROGRAM
+########################################################################
+########################################################################
+
+########################################################################
+# SET PARAMETER VALUES
+readonly scriptname=${0}
+typeset -u release_env
+readonly release_env=${1}
+
+readonly SQLSCRIPT="Order_Visibility_Detail.sql"
+readonly SPOOL_FILE="${K_SRC}/of/ovr_bold.dat"
+
+readonly dblogin_env="o${release_env}"
+readonly USER=`whoami`
+readonly REMOTE_SVR="ag000034"
+readonly REMOTE_DIR="${K_SRC}/of"
+# a09003u1.kohls.com 10.2.42.19 port: 21, /prod/file/etl/appserv/cw/SrcFiles/es/
+########################################################################
+
+
+if [[ ${release_env} == [A-E] ]] then
+  release_log="of_${release_env}"
+else
+  release_log="of"
+fi
+
+########################################################################
+# RUN REQUIRED PROFILES
+#   Execute the user's profile
+print 'BEGIN LOADING PROFILE'
+  export PATH="/usr/local/bin:$PATH"
+  . /srv/apps/profile/admin
+print 'END LOADING PROFILE'
+print
+
+#   Execute the Kohl's database environment
+#print 'BEGIN LOADING ksetdblogin'
+#. ${K_SH}/ksetdblogin ${dblogin_env}
+#print 'END LOADING ksetdblogin'
+#print
+
+########################################################################
+
+
+########################################################################
+# SET JOB CONSTANTS
+readonly log="${K_LOG}/${release_log}/OFK012_$(date -u +%Y-%m-%dT%T)_${$}.txt"
+
+readonly oms_sql_script="${K_SRC}/of/OF_run_sqlscript.sh OFK012 ${K_SH}/ksetdblogin@${dblogin_env} ${K_SRC}/of/${SQLSCRIPT}@${SPOOL_FILE}"
+
+readonly oms_scp_script="scp -v -i ${KEY} ${SPOOL_FILE} ${USER}@${REMOTE_SVR}:${REMOTE_DIR}"
+########################################################################
+
+
+########################################################################
+# VARIABLES THAT WILL BE SET IN THE PROCEDURE PART OF PROGRAM
+unset omsscriptrc
+unset rc
+########################################################################
+
+########################################################################
+########################################################################
+# PROCEDURE PART OF PROGRAM
+########################################################################
+########################################################################
+{
+  print "START SCRIPT'S STDOUT/STDERR"
+  print
+
+  # EXECUTE THE SCRIPT
+  print "OMS SCRIPT: ${oms_sql_script}"
+  print
+
+  ${oms_sql_script}
+
+  # CHECK THE RETURN CODE
+  let omsscriptrc=${?}
+
+  print "SQL SCRIPT EXECUTED WITH RC ${omsscriptrc}"
+  print
+
+  if [ ${omsscriptrc} -eq 0 ]
+  then
+
+  print "FTPing File to ECOMM"
+ 
+  KEY="$HOME/.ssh/known_hosts"
+
+  if [ ! -f ${KEY} ]
+  then
+    print "Private key not found at ${KEY}"
+    print "* Please create it with \"ssh-keygen -t dsa\" *"
+    print "Cannot continue transferring file"
+  else
+    print "Transferring file...${SPOOL_FILE}"
+    print "${oms_scp_script}"
+ 
+    ${oms_scp_script}
+ 
+    # CHECK THE RETURN CODE
+    let omsscriptrc=${?}
+
+    if [ ${omsscriptrc} -eq 0 ]
+    then
+      print "Copy File Successful!"
+      print
+    else
+      print "Copy File Failed!"
+      print
+    fi
+  fi
+  else
+    print "SQL Script Failed"
+    print
+  fi
+
+  print
+  print "END SCRIPT'S STDOUT/STDERR"
+  print
+  print "ARG0: CALLING PROGRAM       = ${scriptname}"
+  print "ARG1: RELEASE ENVIRONMENT   = ${release_env}"
+  print "VAL:  LOGS DIRECTORY        = `hostname`:${K_LOG}"
+  print "VAL:  SOURCE CODE DIRECTORY = `hostname`:${K_SRC}"
+  print "VAL:  FULL PATH TO LOG FILE = `hostname`:${log}"
+  print "VAL:  FULL PATH TO SCRIPT   = `hostname`:${oms_script}"
+  print "VAR:  RC FROM THE SCRIPT    = ${omsscriptrc}"
+
+} > ${log} 2>&1
+
+########################################################################
+# Display log file for ESP
+fold -w 131 ${log}
+########################################################################
+
+
+
+########################################################################
+# Exit the script with the return code from your batch program
+exit ${rc}
+########################################################################

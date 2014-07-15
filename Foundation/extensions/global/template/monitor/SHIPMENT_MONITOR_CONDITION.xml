@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shipment ActualDeliveryDate=" " ActualFreightCharge=" "
+ActualShipmentDate=" " AppointmentNo=" " 
+BolNo=" " BuyerOrganizationCode=" " CarrierAccountNo=" "
+CarrierServiceCode=" " CarrierType=" " Code=" " CommercialValue=" "
+Createprogid=" " Createts=" " Createuserid=" " Currency=" "
+DeliveryCode=" " DeliveryPlanKey=" " DeliveryTS=" "
+DestinationZone=" " DownLoadCount=" " EnterpriseCode=" "
+ExpectedDeliveryDate=" " ExpectedShipmentDate=" "
+ExportTaxpayerID=" " FreightTerms=" " FromAddressKey=" "
+FromAppointment=" " HasOtherShipments=" " HazardousMaterialFlag=" "
+HeldForConfirmation=" " ITDate=" " ITNo=" " Lockid=" "
+ManifestNo=" " Modifyprogid=" " Modifyts=" " Modifyuserid=" "
+NextAlertTs=" " NumOfCartons=" " NumOfPallets=" "
+DocumentType=" " OriginZone=" " PackListType=" "
+ParentShipmentKey=" " PickListNo=" " PickticketNo=" "
+PipelineKey=" " PodNo=" " ProNo=" " ReceivingNode=" " SCAC=" "
+SealNo=" " SellerOrganizationCode=" " ShipDate=" " ShipMode=" "
+ShipNode=" " ShipVia=" " ShipmentClosedFlag=" "
+ShipmentConfirmUpdatesDone=" " ShipmentContainerizedFlag=" "
+ShipmentDeliverUpdatesDone=" " ShipmentKey=" " ShipmentNo=" "
+ShipmentPlannedFlag=" " ShipmentType=" " Status=" " StatusDate=" "
+ToAddressKey=" " ToAppointment=" " TotalActualCharge=" "
+TotalEstimatedCharge=" " TotalVolume=" " TotalVolumeUOM=" "
+TotalWeight=" " TotalWeightUOM=" " TrackingNo=" " TrailerNo=" ">
+<ShipmentLines>
+<ShipmentLine>
+<OrderLine ReqCancelDate=""/>
+</ShipmentLine>
+</ShipmentLines>
+	<EvaluatingMonitorRule CalendarException="" Age="" AgeType="" ComparisonDateSubType="" ComparisonDateType="" 
+	ComparisonStatus="" ConditionKey="" DateSubTypeToMonitor="" DateTypeToMonitor=""
+	FlowKey="" MonitorConsolidationKey="" MonitorRuleKey="" MonitorType=""
+	PipelineKey="" Priority="" ProcessTypeKey="" StatusToMonitor=""/>
+	<Extn ExtnCustNotificationSent=""/>
+</Shipment>

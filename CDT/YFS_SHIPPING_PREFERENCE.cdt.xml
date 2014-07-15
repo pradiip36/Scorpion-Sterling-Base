@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<YFS_SHIPPING_PREFERENCEList TableName="YFS_SHIPPING_PREFERENCE">
+<ShippingPreference BuyerOrganizationCode=" "
+    Createprogid=".YEntityServlet" Createts="2010-10-21T17:22:46-04:00"
+    Createuserid="admin" CustomerClassification=" " DocumentType="0001"
+    EnterpriseOrgCode="KOHLS.COM" ItemClassification=" " ItemID=" "
+    LineType=" " Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-10-21T17:22:46-04:00" Modifyuserid="sterling"
+    OverShipPercentage="0.00" SellerOrganizationCode=" "
+    ShippingPreferenceKey="2010102117224614481" VendorClassification=" "/>
+</YFS_SHIPPING_PREFERENCEList>

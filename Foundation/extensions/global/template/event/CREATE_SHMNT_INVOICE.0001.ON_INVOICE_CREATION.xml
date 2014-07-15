@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OrderInvoice OrderHeaderKey="">
+	<TaxBreakupList TotalNumberOfRecords="">
+		<TaxBreakup ChargeCategory="" ChargeName="" 
+			LineKey="" Tax=""  TaxName="" TaxPercentage="" />
+	</TaxBreakupList>
+	<LineDetails TotalNumberOfRecords="">
+		<LineDetail OrderLineKey="">
+			<LineChargeList TotalNumberOfRecords="">
+				<LineCharge ChargeName="" ChargeCategory=""
+					ChargePerLine="" InvoicedChargePerLine="" />
+			</LineChargeList>
+		</LineDetail>
+	</LineDetails>
+</OrderInvoice>
+

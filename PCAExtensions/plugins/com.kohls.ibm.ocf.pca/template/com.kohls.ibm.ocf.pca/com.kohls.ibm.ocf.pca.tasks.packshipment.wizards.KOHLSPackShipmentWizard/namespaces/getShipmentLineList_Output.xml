@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ShipmentLines>
+    <ShipmentLine ItemDesc="" ItemID=""
+    OrderNo="" PlacedQuantity="" ProductClass="" Quantity="" ShipmentLineKey="" ShipmentLineNo="" UnitOfMeasure="" >
+        <ContainerDetails TotalNumberOfRecords="">
+            <ContainerDetail ContainerNo="" ShipmentLineKey="" ContainerDetailsKey="" ItemID=""
+                ProductClass="" Quantity=""/>
+        </ContainerDetails>
+    <Shipment IsPackProcessComplete="" ShipmentContainerizedFlag="" 
+        ShipmentKey="" 
+        ShipmentType="" ShipmentNo="" Status="" />     
+    </ShipmentLine>
+</ShipmentLines>

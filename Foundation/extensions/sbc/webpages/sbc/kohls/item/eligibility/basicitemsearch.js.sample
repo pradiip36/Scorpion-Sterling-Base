@@ -1,0 +1,18 @@
+Ext.namespace('sc.sbc.kohls.item.eligibility');
+
+sc.sbc.kohls.item.eligibility.BasicItemSearch = function(config) {
+    sc.sbc.kohls.item.eligibility.BasicItemSearch.superclass.constructor.call(this, config);
+}
+Ext.extend(sc.sbc.kohls.item.eligibility.BasicItemSearch, sc.plat.ui.ExtensibleScreen, {
+    className: 'sc.sbc.kohls.item.eligibility.BasicItemSearch',
+    getUIConfig: sc.sbc.kohls.item.eligibility.BasicItemSearchUIConfig,
+    namespaces: {
+        target: [],
+        source: []
+    },
+    namespacesDesc: {
+        targetDesc: [],
+        sourceDesc: []
+    }
+});
+Ext.reg('seaBasicItemSearch3', sc.sbc.kohls.item.eligibility.BasicItemSearch);

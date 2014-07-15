@@ -1,0 +1,47 @@
+#!/usr/bin/ksh
+#
+# Name:         OFK006L
+# Author:       Craig Kehoe
+# Date Created: 2011, May
+# Date Created: 2011, September
+# Date Created: 2012, August
+# Date Changed: 2013, May - eFC4 Upgrade
+#
+# Purpose
+# -------
+# This script provides an interface by which a scheduling system may
+# invoke commands, functions, programs and scripts that are local to
+# this application server.
+#
+# Arguments
+# ---------
+#     -c runcommand [-p profile] [-r retvalscript] [-u loguploadscript]
+#                   [-e email address] [-1 minimum days]
+#                   [-2 maximum days]
+#
+# Note that "-c runcommand" is the only mandatory argument.
+#
+########################################################################
+
+readonly my_name="${0}"
+readonly my_invocation="${@}"
+readonly my_pid="${$}"
+readonly my_starting_datetime="$(date +%Y%m%dT%H%M%S%Z)"
+K_SRC=/prod/apps
+K_LOG=/logs/prod
+
+readonly efcsqlfilenm="${K_SRC}/of/OF_efc_shpmts.sql"
+readonly efc2012sqlfilenm="${K_SRC}/of/OF_efc_shpmts_2012.sql"
+readonly omssqlfilenm="${K_SRC}/of/OF_oms_shpmts.sql"
+readonly efc1spoolfilenm="${K_LOG}/of/OF_efc1_shpmts.spool"
+readonly efc2spoolfilenm="${K_LOG}/of/OF_efc2_shpmts.spool"
+readonly efc3spoolfilenm="${K_LOG}/of/OF_efc3_shpmts.spool"
+readonly efc4spoolfilenm="${K_LOG}/of/OF_efc4_shpmts.spool"
+readonly omsspoolfilenm="${K_LOG}/of/OF_oms_shpmts.spool"
+readonly omssortedfilenm="${K_LOG}/of/OF_oms_shpmts.sorted"
+readonly allefcssortedfilenm="${K_LOG}/of/OF_all_efc_shpmts.sorted"
+readonly missingdatafilenm=\
+"${K_LOG}/of/OF_missing_shpmts${my_starting_datetime}.dat"
+
+. ${K_SRC}/job/OFKMRPP
+

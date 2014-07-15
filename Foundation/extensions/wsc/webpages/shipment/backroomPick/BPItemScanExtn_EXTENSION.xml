@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="BPItemScanExtn"
+        extnPackage="extn.shipment.backroomPick"
+        originalScreen="wsc.shipment.backroomPick.BPItemScan"
+        originalScreenPackage="wsc.shipment.backroomPick" type="diffrential">
+        <Items>
+            <HiddenField _sc_extensibility_moveOrder="30"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_buttonSuspend"
+                type="hidden" uId="extn_stockroomContext"/>
+            <HiddenField _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_ItemPickingLocation"
+                renderHidden="true" type="hidden" uId="extn_hfItemPickingLocation"/>
+            <HiddenField _sc_extensibility_moveOrder="29"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_labelItemPickingLocation"
+                type="hidden" uId="extn_lastLocationScanned_value"/>
+            <ContentPane _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="systemMessagePanelPopup" renderHidden="true"/>
+            <ContentPane _sc_extensibility_moveOrder="19"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="shipmentDetails" uId="extn_contentpaneButtonsPane"/>
+            <ContentPane _sc_extensibility_moveOrder="7"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="shipmentDetails"
+                class="productCell" uId="extn_contentpaneOrderNoCustNameDueTime"/>
+            <ContentPane _sc_extensibility_moveOrder="8"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_name" uId="extn_contentpaneOrderNoCustNameDueTime"/>
+            <ContentPane _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="productScanForm" class="itemInput"/>
+            <ContentPane _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="PickUpItemContainer" uId="extn_ItemPickingLocation"/>
+            <Button _sc_extensibility_moveOrder="21"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpaneButtonsPane"
+                label="$(_scSimpleBundle:extn_Suspend)" uId="extn_buttonSuspend"/>
+            <Button _sc_extensibility_moveOrder="22"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneButtonsPane"
+                label="$(_scSimpleBundle:Action_Refresh)" uId="extn_buttonRefresh"/>
+            <Button _sc_extensibility_moveOrder="23"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneButtonsPane"
+                label="$(_scSimpleBundle:extn_Complete)" uId="extn_buttonComplete"/>
+            <Button _sc_extensibility_moveOrder="24"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneButtonsPane"
+                label="$(_scSimpleBundle:extn_Start_Pick)" uId="extn_buttonStartPick"/>
+            <Button _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="addProductButton" label="$(_scSimpleBundle:extn_Enter)"/>
+            <Button _sc_extensibility_moveOrder="4"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_labelItemPickingLocation"
+                class="idxSpecialButton addItem"
+                label="$(_scSimpleBundle:extn_Go_to_Sales_Floor)" uId="extn_btnItemPickingLocation"/>
+            <Label _sc_extensibility_moveOrder="25"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="shipmentDetails"
+                class="primaryInformation productTitle inline"
+                uId="extn_labelOrderDetails" value="$(_scSimpleBundle:extn_Order_Details)"/>
+            <DataLabel _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lblOrderNo" class="lineDetailsPanel  autoLabelZeroWidth"/>
+            <DataLabel _sc_extensibility_moveOrder="12"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneOrderNoCustNameDueTime" uId="lblOrderNo"/>
+            <DataLabel _sc_extensibility_moveOrder="15"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneOrderNoCustNameDueTime" uId="lblOrderNo"/>
+            <DataLabel _sc_extensibility_moveOrder="16"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneOrderNoCustNameDueTime" uId="lblOrderNo"/>
+            <DataLabel _sc_extensibility_moveOrder="5"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="shipmentDetails"
+                class="lineDetailsPanel inline autoLabelZeroWidth"
+                label="$(_scBundle:extn_Name)" uId="extn_name">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getCustomerName"
+                        namespace="backroomPick_getShipmentDetails_output" path="Shipment.BillToAddress"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="10"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneOrderNoCustNameDueTime" uId="extn_name"/>
+            <DataLabel _sc_extensibility_moveOrder="17"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneOrderNoCustNameDueTime" uId="extn_name"/>
+            <DataLabel _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="DueInTime"
+                class="duein autoLabelZeroWidth" label="$(_scBundle:extn_Pick_Up_Time_In)"/>
+            <DataLabel _sc_extensibility_moveOrder="11"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneOrderNoCustNameDueTime" uId="DueInTime"/>
+            <DataLabel _sc_extensibility_moveOrder="18"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneOrderNoCustNameDueTime" uId="DueInTime"/>
+            <DataLabel _sc_extensibility_moveOrder="31"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="addProductButton"
+                label="$(_scBundle:extn_SKU_UPC_Scanned)"
+                renderHidden="false" uId="extn_lastLocationScanned"/>
+            <DataLabel _sc_extensibility_moveOrder="32"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lastProductScannedDetailsScreenRef" uId="extn_lastLocationScanned"/>
+            <DataLabel _sc_extensibility_moveOrder="33"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_ItemPickingLocation" uId="extn_lastLocationScanned"/>
+            <DataLabel _sc_extensibility_moveOrder="3"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_hfItemPickingLocation"
+                class="shipmentNo"
+                label="$(_scBundle:extn_Current_Location)" uId="extn_labelItemPickingLocation"/>
+            <TextField _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="scanProductIdTxt" label="$(_scBundle:extn_Scan_Location_Product1)"/>
+        </Items>
+        <Namespaces>
+            <SourceNamespaces>
+                <Source description="all the item information"
+                    isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_5" value="extn_itemLocations_output"/>
+            </SourceNamespaces>
+            <TargetNamespaces>
+                <Target
+                    description="Holds mappings of MLS Locations to Items"
+                    isExtn="true"
+                    scExtensibilityArrayItemId="extn_TargetNamespaces_2" value="extn_mlsLocationsModel"/>
+            </TargetNamespaces>
+        </Namespaces>
+        <Subscribers>
+            <Local>
+                <Subscriber eventId="afterScreenInit" isExtn="true" sequence="51">
+                    <Handler methodName="extnInitialize"/>
+                </Subscriber>
+                <Subscriber eventId="afterScreenLoad" isExtn="true" sequence="51">
+                    <Handler methodName="displayWidgets"/>
+                </Subscriber>
+                <Subscriber eventId="afterScreenLoad" isExtn="true" sequence="52">
+                    <Handler methodName="hideNextButton"/>
+                </Subscriber>
+                <Subscriber eventId="afterScreenLoad" isExtn="true" sequence="53">
+                    <Handler methodName="checkContextForShipmentLines"/>
+                </Subscriber>
+                <Subscriber
+                    eventId="extn_btnItemPickingLocation_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="filterbyPickingLocation"/>
+                </Subscriber>
+                <Subscriber
+                    description="Transitions to Hold location screen after associate has finished picking."
+                    eventId="extn_buttonComplete_onClick" isExtn="true" sequence="51">
+                    <Handler methodName="completeButtonAction"/>
+                </Subscriber>
+                <Subscriber description="Refreshes the screen"
+                    eventId="extn_buttonRefresh_onClick" isExtn="true" sequence="51">
+                    <Handler methodName="handleReloadScreen"/>
+                </Subscriber>
+                <Subscriber
+                    description="Suspends the order and return to home screen"
+                    eventId="extn_buttonSuspend_onClick" isExtn="true" sequence="51">
+                    <Handler methodName="suspendButtonAction"/>
+                </Subscriber>
+                <Subscriber
+                    description="Transitions to the picking screen"
+                    eventId="extn_buttonStartPick_onClick" isExtn="true" sequence="51">
+                    <Handler methodName="startPickButtonAction"/>
+                </Subscriber>
+                <Subscriber eventId="pickingContextChanged"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="checkContext"/>
+                </Subscriber>
+                <Subscriber eventId="onExtnMashupCompletion"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="handleExtnMashupCompletion"/>
+                </Subscriber>
+                <Subscriber eventId="afterBehaviorMashupCall"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="handleAfterBehavior"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+        <MashupRefs>
+            <Behavior>
+                <MashupRef extnType="ADD"
+                    mashupId="alertNotificationDetails_resolveException" mashupRefId="extn_resolve_exception"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getItemLocationDetails_mashup" mashupRefId="extn_getItemLocation_mashup"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_EJRecord_mashup" mashupRefId="extn_addSuspendEJEntry"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getLocationDetails_mashup" mashupRefId="extn_getLocationDetails"/>
+                <MashupRef extnType="ADD"
+                    mashupId="getShipmentDetailsMLSGIV" mashupRefId="extn_refreshShipmentDetails"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getMLSGIVDetails" mashupRefId="extn_getMLSGIVDetails"/>
+            </Behavior>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

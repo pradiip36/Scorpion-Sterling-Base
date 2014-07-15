@@ -1,0 +1,413 @@
+		<div>
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_itemDetailsPane' , 
+		_sc_extensibility_operation : 'insert' , 
+		'class' : 'isccsScreen singlecolumntable' , 
+		_sc_extensibility_moveOrder : '5' , 
+		_sc_extensibility_referenceUId : 'lblExtendedDesc' , 
+		_sc_extensibility_position : 'after'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_ItemDetailsLabel' , 
+		_sc_extensibility_operation : 'insert' , 
+		'class' : 'primaryInformation blockComponent productModalTitle' , 
+		_sc_extensibility_moveOrder : '19' , 
+		_sc_extensibility_referenceUId : 'extn_SKUDescriptionLabel' , 
+		_sc_extensibility_position : 'before'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_Item_Details')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_stockRoomQtyLabel' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '2' , 
+		_sc_extensibility_referenceUId : 'overviewPnl' , 
+		_sc_extensibility_position : 'after'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_Stockroom_Quantity')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'StockRoomQuantity'
+,
+		 dynamicBindingFunc : 			'getStockRoomQuantity'
+,
+		 namespace : 			'itemOverviewModel'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_stockRoomQtyLabel' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '3' , 
+		_sc_extensibility_referenceUId : 'lblBrandValue' , 
+		_sc_extensibility_position : 'before'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_salesFloorQtyLabel' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '4' , 
+		_sc_extensibility_referenceUId : 'lblBrandValue' , 
+		_sc_extensibility_position : 'before'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_Salesfloor_Quantity')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'SalesFloorQuantity'
+,
+		 dynamicBindingFunc : 			'getSalesFloorQuantity'
+,
+		 namespace : 			'itemOverviewModel'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'lblBrandValue'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'lblBrandIdValue'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_SKUDescriptionLabel' , 
+		_sc_extensibility_operation : 'insert' , 
+		'class' : 'autoLabelZeroWidth' , 
+		_sc_extensibility_moveOrder : '6' , 
+		_sc_extensibility_referenceUId : 'extn_itemDetailsPane' , 
+		_sc_extensibility_position : 'first'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_SKU_Description')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'OrderLine.ItemDetails.PrimaryInformation.Description'
+,
+		 dynamicBindingFunc : 			'getSKUDescription'
+,
+		 namespace : 			'itemOverviewModel'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_brandLabel' , 
+		_sc_extensibility_operation : 'insert' , 
+		'class' : 'autoLabelZeroWidth' , 
+		_sc_extensibility_moveOrder : '7' , 
+		_sc_extensibility_referenceUId : 'extn_itemDetailsPane' , 
+		_sc_extensibility_position : 'last'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_Brand')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Brand'
+,
+		 dynamicBindingFunc : 			'getBrand'
+,
+		 namespace : 			'itemOverviewModel'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_colorLabel' , 
+		_sc_extensibility_operation : 'insert' , 
+		'class' : 'autoLabelZeroWidth' , 
+		_sc_extensibility_moveOrder : '8' , 
+		_sc_extensibility_referenceUId : 'extn_itemDetailsPane' , 
+		_sc_extensibility_position : 'last'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_Color')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'OrderLine.ItemDetails.Extn.ExtnColorDesc'
+,
+		 dynamicBindingFunc : 			'getColor'
+,
+		 namespace : 			'itemOverviewModel'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_sizeLabel' , 
+		_sc_extensibility_operation : 'insert' , 
+		'class' : 'autoLabelZeroWidth' , 
+		_sc_extensibility_moveOrder : '9' , 
+		_sc_extensibility_referenceUId : 'extn_colorLabel' , 
+		_sc_extensibility_position : 'after'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_Size')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'OrderLine.ItemDetails.Extn.ExtnSize'
+,
+		 dynamicBindingFunc : 			'getSize'
+,
+		 namespace : 			'itemOverviewModel'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_styleNumberLabel' , 
+		_sc_extensibility_operation : 'insert' , 
+		'class' : 'autoLabelZeroWidth' , 
+		_sc_extensibility_moveOrder : '10' , 
+		_sc_extensibility_referenceUId : 'extn_sizeLabel' , 
+		_sc_extensibility_position : 'after'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_Style_Number')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'OrderLine.ItemDetails.Extn.ExtnVendorStyleNo'
+,
+		 dynamicBindingFunc : 			'getVendorNum'
+,
+		 namespace : 			'itemOverviewModel'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_styleDescriptionLabel' , 
+		_sc_extensibility_operation : 'insert' , 
+		'class' : 'autoLabelZeroWidth' , 
+		_sc_extensibility_moveOrder : '18' , 
+		_sc_extensibility_referenceUId : 'extn_boxIDLabel' , 
+		_sc_extensibility_position : 'before'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_Style_Description')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'OrderLine.ItemDetails.Extn.ExtnVendorStyleDesc'
+,
+		 dynamicBindingFunc : 			'getVendorDesc'
+,
+		 namespace : 			'itemOverviewModel'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_boxIDLabel' , 
+		_sc_extensibility_operation : 'insert' , 
+		'class' : 'autoLabelZeroWidth' , 
+		_sc_extensibility_moveOrder : '12' , 
+		_sc_extensibility_referenceUId : 'extn_styleNumberLabel' , 
+		_sc_extensibility_position : 'after'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_Box_ID')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'BoxID'
+,
+		 dynamicBindingFunc : 			'getBoxID'
+,
+		 namespace : 			'itemOverviewModel'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_departmentLabel' , 
+		_sc_extensibility_operation : 'insert' , 
+		'class' : 'autoLabelZeroWidth' , 
+		_sc_extensibility_moveOrder : '13' , 
+		_sc_extensibility_referenceUId : 'extn_boxIDLabel' , 
+		_sc_extensibility_position : 'after'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('Label_Department')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'OrderLine.ItemDetails.Extn.ExtnDept'
+,
+		 dynamicBindingFunc : 			'getDepartment'
+,
+		 namespace : 			'itemOverviewModel'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_majorClassLabel' , 
+		_sc_extensibility_operation : 'insert' , 
+		'class' : 'autoLabelZeroWidth' , 
+		_sc_extensibility_moveOrder : '14' , 
+		_sc_extensibility_referenceUId : 'extn_departmentLabel' , 
+		_sc_extensibility_position : 'after'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_Major_Class')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'OrderLine.ItemDetails.Extn.ExtnClass'
+,
+		 dynamicBindingFunc : 			'getMajorClass'
+,
+		 namespace : 			'itemOverviewModel'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_subClassLabel' , 
+		_sc_extensibility_operation : 'insert' , 
+		'class' : 'autoLabelZeroWidth' , 
+		_sc_extensibility_moveOrder : '15' , 
+		_sc_extensibility_referenceUId : 'extn_majorClassLabel' , 
+		_sc_extensibility_position : 'after'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_Sub_Class')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'OrderLine.ItemDetails.Extn.ExtnSubClass'
+,
+		 dynamicBindingFunc : 			'getSubClass'
+,
+		 namespace : 			'itemOverviewModel'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_floorPadLabel' , 
+		_sc_extensibility_operation : 'insert' , 
+		'class' : 'autoLabelZeroWidth' , 
+		_sc_extensibility_moveOrder : '16' , 
+		_sc_extensibility_referenceUId : 'extn_subClassLabel' , 
+		_sc_extensibility_position : 'after'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_Floorpad')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Floorpad'
+,
+		 dynamicBindingFunc : 			'getFloorpad'
+,
+		 namespace : 			'itemOverviewModel'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_upcsLabel' , 
+		_sc_extensibility_operation : 'insert' , 
+		'class' : 'autoLabelZeroWidth' , 
+		_sc_extensibility_moveOrder : '17' , 
+		_sc_extensibility_referenceUId : 'extn_floorPadLabel' , 
+		_sc_extensibility_position : 'after'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_UPCs')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'OrderLine.ItemDetails.ItemAliasList'
+,
+		 dynamicBindingFunc : 			'getUPCs'
+,
+		 namespace : 			'itemOverviewModel'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		</div>

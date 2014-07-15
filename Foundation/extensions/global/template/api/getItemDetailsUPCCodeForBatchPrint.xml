@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Item ItemID="" ItemKey="" OrganizationCode="" UnitOfMeasure="" DisplayItemId="" ItemGroupCode="" >
+<PrimaryInformation ShortDescription="" PrimarySupplier="" />
+<Extn  ExtnDept=""/>
+  <ItemAliasList>
+	<ItemAlias AliasName="" AliasValue=""/>
+  </ItemAliasList>
+</Item>

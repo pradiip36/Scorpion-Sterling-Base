@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="PicksInProgressPortletExtn"
+        extnPackage="extn.home.portlets"
+        originalScreen="wsc.home.portlets.PicksInProgressPortlet"
+        originalScreenPackage="wsc.home.portlets" type="diffrential">
+        <Items>
+            <Label _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="portletName" value="$(_scSimpleBundle:My_Picks_In_Progress)"/>
+        </Items>
+        <Subscribers>
+            <Local>
+                <Subscriber description="custom initialization method"
+                    eventId="afterScreenInit" isExtn="true" sequence="56">
+                    <Handler methodName="extInitialize"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+        <MashupRefs>
+            <Behavior>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_EJRecord_mashup" mashupRefId="extn_addEJTransPickupResumed"/>
+            </Behavior>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

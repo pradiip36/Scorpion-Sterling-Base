@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<YFS_INV_AVAIL_SAFETY_FACTORList TableName="YFS_INV_AVAIL_SAFETY_FACTOR">
+<InvAvailSafetyFactor Createprogid=".YCPGenericMasterData"
+    Createts="2012-06-26T14:41:23-04:00" Createuserid="tkmayy0"
+    InvAvailSafetyFactorKey="2012062614412451226" Lockid="0"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2012-06-26T14:41:23-04:00"
+    Modifyuserid="sterling" OrganizationCode="DEFAULT"
+    SafetyFactorPercentage="0.00" SupplyType="ONHAND"/>
+</YFS_INV_AVAIL_SAFETY_FACTORList>

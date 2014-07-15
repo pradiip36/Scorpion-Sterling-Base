@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.shipment.customerpickup.ProductVerificationExtnInitController"
+    requestMethodSupported="POST" screenId="extn.shipment.customerpickup.ProductVerificationExtn">
+    <Group isAggregator="Y"/>
+    <MashupRefs>
+        <MashupRef extnType="ADD" mashupId="extn_getShipNode_mashup"
+            mashupRefId="extn_getShipNode_mashup" permissionId=""/>
+        <MashupRef extnType="ADD" mashupId="extn_getCommonCodes_mashup"
+            mashupRefId="extn_diamon_comCodes" permissionId=""/>
+        <MashupRef extnType="ADD" mashupId="getReceiptCommonCodes"
+            mashupRefId="extn_receipt_commCodes" permissionId=""/>
+    </MashupRefs>
+</Controller>

@@ -1,0 +1,15 @@
+<OrderList>
+	<Order DocumentType="" EnterpriseCode="" OrderNo="">
+		<OrderLines>
+			<OrderLine CarrierServiceCode="" ItemID="" OrderedQty="" PrimeLineNo="" Quantity="" SCAC="" SubLineNo="" UnitOfMeasure="" OrderLineKey="" MaxLineStatus="" DeliveryMethod="">
+				<Item ItemDesc="" ItemID="" ItemShortDesc="" UnitOfMeasure=""/>
+				<Shipnode ShipNode="" Description="">
+					<ShipNodePersonInfo AddressLine1="" AddressLine2="" AddressLine3="" City="" Country="" State="" ZipCode=""/>
+				</Shipnode>
+				<OrderStatuses>
+					<OrderStatus ShipNode="" Status="" StatusDate="" StatusDescription="" StatusQty=""/>
+				</OrderStatuses>
+			</OrderLine>
+		</OrderLines>
+	</Order>
+</OrderList>

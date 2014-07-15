@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema attributeFormDefault="unqualified"
+    elementFormDefault="qualified"
+    targetNamespace="http://www.sterlingcommerce.com/documentation/KOHLSEODSettlementSummaryWebService/EODSettlement/output"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:yfc="http://www.sterlingcommerce.com/documentation/KOHLSEODSettlementSummaryWebService/EODSettlement/output" xmlns:yfctype="http://www.sterlingcommerce.com/documentation/types">
+    <xsd:annotation
+        yfc:fileName="KOHLSEODSettlementSummaryWebService_EODSettlement_output.xsd" yfc:rootElement="OMSEODRECORD">
+        <xsd:appinfo source="yfc:structure">
+            <OMSEODRECORD>
+                <FILE-CREATION-DATE/>
+                <START-DATE-TIME/>
+                <END-DATE-TIME/>
+                <TOTAL-VISA-SALE-AMOUNT/>
+                <TOTAL-VISA-REFUND-AMOUNT/>
+                <TOTAL-MASTERCARD-SALE-AMOUNT/>
+                <TOTAL-MASTERCARD-REFUND-AMOUNT/>
+                <TOTAL-DISCOVERY-SALE-AMOUNT/>
+                <TOTAL-DISCOVERY-REFUND-AMOUNT/>
+                <TOTAL-AMEX-SALE-AMOUNT/>
+                <TOTAL-AMEX-REFUND-AMOUNT/>
+                <TOTAL-KOHLS_CHARGE-SALE-AMOUNT/>
+                <TOTAL-KOHLS_CHARGE-REFUND-AMOUNT/>
+            </OMSEODRECORD>
+        </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:import
+        namespace="http://www.sterlingcommerce.com/documentation/types" schemaLocation="datatypes.xsd"/>
+    <xsd:element name="OMSEODRECORD" type="yfc:OMSEODRECORDXSDType"/>
+    <xsd:complexType name="OMSEODRECORDXSDType">
+        <xsd:all>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="yfc:FILE-CREATION-DATE"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="yfc:START-DATE-TIME"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="yfc:END-DATE-TIME"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="yfc:TOTAL-VISA-SALE-AMOUNT"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="yfc:TOTAL-VISA-REFUND-AMOUNT"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="yfc:TOTAL-MASTERCARD-SALE-AMOUNT"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="yfc:TOTAL-MASTERCARD-REFUND-AMOUNT"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="yfc:TOTAL-DISCOVERY-SALE-AMOUNT"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="yfc:TOTAL-DISCOVERY-REFUND-AMOUNT"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="yfc:TOTAL-AMEX-SALE-AMOUNT"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="yfc:TOTAL-AMEX-REFUND-AMOUNT"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="yfc:TOTAL-KOHLS_CHARGE-SALE-AMOUNT"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="yfc:TOTAL-KOHLS_CHARGE-REFUND-AMOUNT"/>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:element name="FILE-CREATION-DATE">
+        <xsd:complexType>
+		   <xsd:simpleContent>
+				<xsd:extension base="xsd:string">
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+    </xsd:element>
+    <xsd:element name="START-DATE-TIME">
+        <xsd:complexType>
+		   <xsd:simpleContent>
+				<xsd:extension base="xsd:string">
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+    </xsd:element>
+    <xsd:element name="END-DATE-TIME">
+        <xsd:complexType>
+		   <xsd:simpleContent>
+				<xsd:extension base="xsd:string">
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+    </xsd:element>
+    <xsd:element name="TOTAL-VISA-SALE-AMOUNT">
+        <xsd:complexType>
+		   <xsd:simpleContent>
+				<xsd:extension base="xsd:string">
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+    </xsd:element>
+    <xsd:element name="TOTAL-VISA-REFUND-AMOUNT">
+        <xsd:complexType>
+		   <xsd:simpleContent>
+				<xsd:extension base="xsd:string">
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+    </xsd:element>
+    <xsd:element name="TOTAL-MASTERCARD-SALE-AMOUNT">
+        <xsd:complexType>
+		   <xsd:simpleContent>
+				<xsd:extension base="xsd:string">
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+    </xsd:element>
+    <xsd:element name="TOTAL-MASTERCARD-REFUND-AMOUNT">
+        <xsd:complexType>
+		   <xsd:simpleContent>
+				<xsd:extension base="xsd:string">
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+    </xsd:element>
+    <xsd:element name="TOTAL-DISCOVERY-SALE-AMOUNT">
+        <xsd:complexType>
+		   <xsd:simpleContent>
+				<xsd:extension base="xsd:string">
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+    </xsd:element>
+    <xsd:element name="TOTAL-DISCOVERY-REFUND-AMOUNT">
+        <xsd:complexType>
+		   <xsd:simpleContent>
+				<xsd:extension base="xsd:string">
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+    </xsd:element>
+    <xsd:element name="TOTAL-AMEX-SALE-AMOUNT">
+        <xsd:complexType>
+		   <xsd:simpleContent>
+				<xsd:extension base="xsd:string">
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+    </xsd:element>
+    <xsd:element name="TOTAL-AMEX-REFUND-AMOUNT">
+        <xsd:complexType>
+		   <xsd:simpleContent>
+				<xsd:extension base="xsd:string">
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+    </xsd:element>
+    <xsd:element name="TOTAL-KOHLS_CHARGE-SALE-AMOUNT">
+        <xsd:complexType>
+		   <xsd:simpleContent>
+				<xsd:extension base="xsd:string">
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+    </xsd:element>
+    <xsd:element name="TOTAL-KOHLS_CHARGE-REFUND-AMOUNT">
+        <xsd:complexType>
+		   <xsd:simpleContent>
+				<xsd:extension base="xsd:string">
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+    </xsd:element>
+</xsd:schema>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Licensed Materials - Property of IBM
+IBM Sterling Business Center
+(C) Copyright IBM Corp. 2011, 2012 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="sbc-inventory" namespace="/sbc/inventory" extends="scuiimpl">
+	<default-class-ref class="com.sterlingcommerce.sbc.core.struts.SBCDefaultStrutsAction"></default-class-ref>
+	<global-results>
+            <result name="MASHUPERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="VALIDATIONERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="AUTHORIZATIONERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="error">/sbc/jsps/apierror.jsp</result>
+			<result name="APIERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="DATAVALIDATIONERROR">/jsps/datavalidationerror.jsp</result>
+	</global-results>
+
+		<action name="changeCapacityUom">
+			<param name="resourceId">SBCINV00005</param>
+			<result name="success">/sbc/inventory/manage/changecapacityuom.jsp</result>
+		</action>
+
+	<action name="manageNodeCapacity" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+    	<param name="mashupId">manageNodeCapacity_multiApi</param>
+    	<param name="resourceId">SBCINV00005</param>
+		<result name="success">/sbc/inventory/manage/nodecapacity.jsp</result>
+	</action>
+	<action name="createResourcePool" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+	        <param name="resourceId">SBCINV00005</param>
+			<param name="mashupId">createResourcePoolMashup</param>
+			<param name="inputNs">createResourcePoolInput</param>
+			<param name="outputNs">resourcePoolOutput</param>
+  	     	<result name="success">/sbc/inventory/manage/manageresourcepoolresult.jsp</result>
+	</action>
+	<action name="deleteResourcePool" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="resourceId">SBCINV00005</param>
+			<param name="mashupId">deleteResourcePool</param>
+			<param name="inputNs">deleteResourcePoolInput</param>
+			<param name="outputNs">deleteResourcePoolOutput</param>
+  	     	<result name="success">/sbc/core/donothingresulthandler.jsp</result>
+	</action>
+
+	<action name="getWeeklyCapacity" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+	        <param name="resourceId">SBCINV00005</param>
+			<param name="mashupId">getweeklycapacity</param>
+			<param name="inputNs">getWeeklyCapacityInput</param>
+			<param name="outputNs">getWeeklyCapacityOutput</param>
+  	     	<result name="success">/sbc/inventory/manage/getResourcePoolCapacity.jsp</result>
+	</action>
+	   <action name="managecapacity" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getResourcePoolListId</param>
+			<param name="inputNs">getResourcePoolListInput</param>
+			<param name="outputNs">getResourcePoolOutput</param>
+			<param name="resourceId">SBCINV00005</param>
+			 <result name="success">/sbc/inventory/manage/managecapacity.jsp</result>
+		</action>
+	   <action name="managestandardcapacity" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getstandardcapacity</param>
+			<param name="inputNs">getstandardcapacityInput</param>
+			<param name="outputNs">getResourcePoolOutput</param>
+			<param name="resourceId">SBCINV00005</param>
+			 <result name="success">/sbc/inventory/manage/managestandardcapacity.jsp</result>
+		</action>
+		<action name="savestandardcapacity" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="resourceId">SBCINV00005</param>
+			<param name="mashupId">savestandardcapacity</param>
+			<param name="inputNs">savestandardcapacityInput</param>
+			<param name="outputNs">standardcapacityOutput</param>
+			<result name="APIERROR">/sbc/inventory/manage/capacitydateoverlaperror.jsp</result>
+  	     	<result name="success">/sbc/inventory/manage/getstandardcapacity.jsp</result>
+	   </action>
+		<action name="saveweeklycapacity" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="resourceId">SBCINV00005</param>
+			<param name="mashupId">saveweeklycapacity</param>
+			<param name="inputNs">saveweeklycapacityInput</param>
+			<param name="outputNs">saveweeklycapacityOutput</param>
+  	     	<result name="success">/sbc/core/donothingresulthandler.jsp</result>
+	   </action>
+	   	<action name="deletestandardcapacity" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+	   	    <param name="resourceId">SBCINV00005</param>
+			<param name="mashupId">deletestandardcapacity</param>
+			<param name="inputNs">deletestandardcapacityInput</param>
+			<param name="outputNs">standardcapacityOutput</param>
+  	     	<result name="success">/sbc/inventory/manage/getstandardcapacity.jsp</result>
+	   </action>
+    	<action name="deleteAndCreateResourcePool" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="resourceId">SBCINV00005</param>
+			<param name="mashupId">deleteResourcePool</param>
+			<param name="inputNs">deleteResourcePoolInput</param>
+			<param name="outputNs">deleteResourcePoolOutput</param>
+  	 		<result name="success" type="chain">
+					<param name="actionName">createResourcePool</param>
+					<param name="namespace">/sbc/inventory</param>
+			</result>
+	 </action>
+	 <action name="manageweeklycapacity">
+			<param name="resourceId">SBCINV00005</param>
+			 <result name="success">/sbc/inventory/manage/manageweeklycapacity.jsp</result>
+	</action>
+	<action name="searchnodes" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+		<param name="mashupId">nodeitems-getShipNodeList</param>
+		<param name="inputNs">getShipNodeList_input</param>
+		<param name="outputNs">getShipNodeList_output</param>
+		<param name="resourceId">SBCINV00005</param>
+		<result name="success">/sbc/itemadmin/item/manage/fulfillment/nodesearchresults.jsp</result>
+	</action>
+		<action name="standardcapacityperiodpopup">
+				<param name="resourceId">SBCINV00005</param>
+				<result name="success">/sbc/inventory/manage/standardcapacityperiod.jsp</result>
+			</action>
+
+	</package>
+
+</struts>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.shipment.backroomPick.BPUpdateHoldLocationExtnBundle" screenId="extn.shipment.backroomPick.BPUpdateHoldLocationExtn">
+    <BundleEntries>
+        <BundleEntry
+            bundleEntryId="extn_skipThisStepButton_Button_label"
+            bundleKey="extn_Assign_Later"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_skipThisStepButton"/>
+        <BundleEntry bundleEntryId="extn_Complete_Button_label"
+            bundleKey="extn_Complete_Order"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_Complete"/>
+    </BundleEntries>
+</ScreenBundle>

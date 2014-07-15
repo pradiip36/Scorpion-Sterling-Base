@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OrderList>
+	<Order CustomerEMailID="" OrderNo="" OrderDate="" Status="">
+		<OrderLines>
+			<OrderLine ReqCancelDate="" OrderedQty="" PackListType=""
+				Status="" OrderLineKey="">
+				<Shipnode ShipNode="" Description="">
+					<ShipNodePersonInfo AddressLine1=""
+						AddressLine2="" City="" ZipCode="" State="" />
+				</Shipnode>
+				<Item ItemShortDesc="" ItemID="">
+					<Extn ExtnColorDesc="" ExtnSizeDesc="" />
+				</Item>
+				<OrderStatuses>
+					<OrderStatus StatusDescription="" StatusDate="" />
+				</OrderStatuses>
+				<LinePriceInfo IsPriceLocked="" ListPrice=""
+					RetailPrice="" TaxableFlag="" UnitPrice="" />
+				<Extn />
+			</OrderLine>
+		</OrderLines>
+		<PersonInfoBillTo FirstName="" LastName=""
+			AddressLine1="" AddressLine2="" City="" ZipCode="" State="" />
+		<PaymentMethods>
+			<PaymentMethod CreditCardNo="" />
+		</PaymentMethods>
+		<Notes/>
+	</Order>
+</OrderList>

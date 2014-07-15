@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<YFS_BASE_PACK_DO_NOT_MIXList TableName="YFS_BASE_PACK_DO_NOT_MIX">
+<BasePackDoNotMix BasePackDoNotMixKey="CaseCustomerPO"
+    Createprogid="XMLMigrator" Createts="2010-11-30T16:36:09-05:00"
+    Createuserid="SYSTEM" FieldName="CustomerPoNo"
+    FieldNameDesc="Customer PO #" Lockid="0"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2010-11-30T16:36:09-05:00"
+    Modifyuserid="sterling" Purpose="Case" SystemDefined="Y"/>
+<BasePackDoNotMix BasePackDoNotMixKey="CaseDepartmentCode"
+    Createprogid="XMLMigrator" Createts="2010-11-30T16:36:09-05:00"
+    Createuserid="SYSTEM" FieldName="DepartmentCode"
+    FieldNameDesc="Department Code" Lockid="0"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2010-11-30T16:36:09-05:00"
+    Modifyuserid="sterling" Purpose="Case" SystemDefined="Y"/>
+<BasePackDoNotMix BasePackDoNotMixKey="CaseItemId"
+    Createprogid="XMLMigrator" Createts="2010-11-30T16:36:09-05:00"
+    Createuserid="SYSTEM" FieldName="ItemID" FieldNameDesc="Item ID"
+    Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-11-30T16:36:09-05:00" Modifyuserid="sterling"
+    Purpose="Case" SystemDefined="Y"/>
+<BasePackDoNotMix BasePackDoNotMixKey="CaseMarkFor"
+    Createprogid="XMLMigrator" Createts="2010-11-30T16:36:09-05:00"
+    Createuserid="SYSTEM" FieldName="MarkForKey"
+    FieldNameDesc="Mark For" Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-11-30T16:36:09-05:00" Modifyuserid="sterling"
+    Purpose="Case" SystemDefined="Y"/>
+<BasePackDoNotMix BasePackDoNotMixKey="CaseProductClass"
+    Createprogid="XMLMigrator" Createts="2010-11-30T16:36:09-05:00"
+    Createuserid="SYSTEM" FieldName="ProductClass"
+    FieldNameDesc="Product Class" Lockid="0"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2010-11-30T16:36:09-05:00"
+    Modifyuserid="sterling" Purpose="Case" SystemDefined="Y"/>
+<BasePackDoNotMix BasePackDoNotMixKey="CaseUnitOfMeasure"
+    Createprogid="XMLMigrator" Createts="2010-11-30T16:36:09-05:00"
+    Createuserid="SYSTEM" FieldName="UnitOfMeasure"
+    FieldNameDesc="Unit Of Measure" Lockid="0"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2010-11-30T16:36:09-05:00"
+    Modifyuserid="sterling" Purpose="Case" SystemDefined="Y"/>
+<BasePackDoNotMix BasePackDoNotMixKey="PalletCustomerPO"
+    Createprogid="XMLMigrator" Createts="2010-11-30T16:36:09-05:00"
+    Createuserid="SYSTEM" FieldName="CustomerPoNo"
+    FieldNameDesc="Customer PO #" Lockid="0"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2010-11-30T16:36:09-05:00"
+    Modifyuserid="sterling" Purpose="Pallet" SystemDefined="Y"/>
+<BasePackDoNotMix BasePackDoNotMixKey="PalletDepartmentCode"
+    Createprogid="XMLMigrator" Createts="2010-11-30T16:36:09-05:00"
+    Createuserid="SYSTEM" FieldName="DepartmentCode"
+    FieldNameDesc="Department Code" Lockid="0"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2010-11-30T16:36:09-05:00"
+    Modifyuserid="sterling" Purpose="Pallet" SystemDefined="Y"/>
+<BasePackDoNotMix BasePackDoNotMixKey="PalletItemId"
+    Createprogid="XMLMigrator" Createts="2010-11-30T16:36:09-05:00"
+    Createuserid="SYSTEM" FieldName="ItemID" FieldNameDesc="Item ID"
+    Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-11-30T16:36:09-05:00" Modifyuserid="sterling"
+    Purpose="Pallet" SystemDefined="Y"/>
+<BasePackDoNotMix BasePackDoNotMixKey="PalletMarkFor"
+    Createprogid="XMLMigrator" Createts="2010-11-30T16:36:09-05:00"
+    Createuserid="SYSTEM" FieldName="MarkForKey"
+    FieldNameDesc="Mark For" Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-11-30T16:36:09-05:00" Modifyuserid="sterling"
+    Purpose="Pallet" SystemDefined="Y"/>
+<BasePackDoNotMix BasePackDoNotMixKey="PalletProductClass"
+    Createprogid="XMLMigrator" Createts="2010-11-30T16:36:09-05:00"
+    Createuserid="SYSTEM" FieldName="ProductClass"
+    FieldNameDesc="Product Class" Lockid="0"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2010-11-30T16:36:09-05:00"
+    Modifyuserid="sterling" Purpose="Pallet" SystemDefined="Y"/>
+<BasePackDoNotMix BasePackDoNotMixKey="PalletUnitOfMeasure"
+    Createprogid="XMLMigrator" Createts="2010-11-30T16:36:09-05:00"
+    Createuserid="SYSTEM" FieldName="UnitOfMeasure"
+    FieldNameDesc="Unit Of Measure" Lockid="0"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2010-11-30T16:36:09-05:00"
+    Modifyuserid="sterling" Purpose="Pallet" SystemDefined="Y"/>
+</YFS_BASE_PACK_DO_NOT_MIXList>

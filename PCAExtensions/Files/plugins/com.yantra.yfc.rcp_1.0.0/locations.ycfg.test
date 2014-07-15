@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Locations>
+	<Location id="AG000033" proxyServer="" proxyPort="" updateType="pull">
+		<Config Name="DEFAULT" 
+	        Protocol = "http"
+	        BaseUrl = "intra-qa.tst.kohls.com"
+	        PortNumber  = "80"
+	        ApiUrl = "/omstest/smcfs/RcpServlet"
+ 	        CompressionEnabled="Y">
+		</Config>
+
+		<Config Name="IMAGE" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        DefaultApiUrl = "/icons/rcp/404.jpeg"
+		        ApiUrl = "/icons/rcp/$param1$.gif">
+		</Config>
+		
+		<Config Name="IMAGE_SMALL" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        ApiUrl = "/icons/rcp/$param1$.gif"
+				DefaultApiUrl = "/icons/rcp/404.gif">
+		</Config>
+		
+		<Config Name="IMAGE_BIG" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        ApiUrl = "/icons/rcp/$param1$.jpeg"
+				DefaultApiUrl = "/icons/rcp/404.jpeg">
+		</Config>
+		
+		<Config Name="HELP" 
+	         Protocol = "http"
+	         BaseUrl = "localhost"
+	         PortNumber  = "7001"
+			 ApiUrl = "/yantradocs/yfscommon/online_help/$param1/wwhelp/wwhimpl/common/html/wwhelp.htm?context=$param2_userguide&amp;topic=$param3">
+		</Config>	
+	</Location>
+	<Location id="OCF STRESS QA" proxyServer="" proxyPort="" updateType="pull">
+		<Config Name="DEFAULT" 
+	        Protocol = "http"
+	        BaseUrl = "xloms-ofmc001s"
+	        PortNumber  = "15882"
+	        ApiUrl = "/smcfs/RcpServlet"
+ 	        CompressionEnabled="Y">
+		</Config>
+
+		<Config Name="IMAGE" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        DefaultApiUrl = "/icons/rcp/404.jpeg"
+		        ApiUrl = "/icons/rcp/$param1$.gif">
+		</Config>
+		
+		<Config Name="IMAGE_SMALL" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        ApiUrl = "/icons/rcp/$param1$.gif"
+				DefaultApiUrl = "/icons/rcp/404.gif">
+		</Config>
+		
+		<Config Name="IMAGE_BIG" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        ApiUrl = "/icons/rcp/$param1$.jpeg"
+				DefaultApiUrl = "/icons/rcp/404.jpeg">
+		</Config>
+		
+		<Config Name="HELP" 
+	         Protocol = "http"
+	         BaseUrl = "localhost"
+	         PortNumber  = "7001"
+			 ApiUrl = "/yantradocs/yfscommon/online_help/$param1/wwhelp/wwhimpl/common/html/wwhelp.htm?context=$param2_userguide&amp;topic=$param3">
+		</Config>	
+	</Location>
+	<Location id="LOCAL" proxyServer="" proxyPort="" updateType="push">
+		<Config Name="IMAGE" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        ApiUrl = "/icons/rcp/$param1$.gif">
+		</Config>
+		<Config Name="IMAGE_SMALL" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        ApiUrl = "/icons/rcp/$param1$.gif"
+				DefaultApiUrl = "/icons/rcp/404.gif">
+		</Config>
+		<Config Name="IMAGE_BIG" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        ApiUrl = "/icons/rcp/$param1$.jpeg"
+				DefaultApiUrl = "/icons/rcp/404.jpeg">
+		</Config>
+	</Location>
+	<Location id="DEFAULT" proxyServer="" proxyPort="" updateType="pull">
+		<Config Name="DEFAULT" 
+	        Protocol = "http"
+	        BaseUrl = "localhost"
+	        PortNumber  = "7001"
+	        ApiUrl = "/$WEB_APP_NAME$/RcpServlet"
+ 	        CompressionEnabled="Y">
+		</Config>
+
+		<Config Name="IMAGE" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        DefaultApiUrl = "/icons/rcp/404.jpeg"
+		        ApiUrl = "/icons/rcp/$param1$.gif">
+		</Config>
+		
+		<Config Name="IMAGE_SMALL" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        ApiUrl = "/icons/rcp/$param1$.gif"
+				DefaultApiUrl = "/icons/rcp/404.gif">
+		</Config>
+		
+		<Config Name="IMAGE_BIG" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        ApiUrl = "/icons/rcp/$param1$.jpeg"
+				DefaultApiUrl = "/icons/rcp/404.jpeg">
+		</Config>
+		
+		<Config Name="HELP" 
+	         Protocol = "http"
+	         BaseUrl = "localhost"
+	         PortNumber  = "7001"
+			 ApiUrl = "/yantradocs/yfscommon/online_help/$param1/wwhelp/wwhimpl/common/html/wwhelp.htm?context=$param2_userguide&amp;topic=$param3">
+		</Config>
+		
+	</Location>
+	<Location id="OMSSB2" proxyServer="" proxyPort="" updateType="pull">
+		<Config Name="DEFAULT" 
+	        Protocol = "http"
+	        BaseUrl = "10.1.70.150"
+	        PortNumber  = "17000"
+	        ApiUrl = "/smcfs/RcpServlet"
+ 	        CompressionEnabled="Y">
+		</Config>
+
+		<Config Name="IMAGE" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        DefaultApiUrl = "/icons/rcp/404.jpeg"
+		        ApiUrl = "/icons/rcp/$param1$.gif">
+		</Config>
+		
+		<Config Name="IMAGE_SMALL" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        ApiUrl = "/icons/rcp/$param1$.gif"
+				DefaultApiUrl = "/icons/rcp/404.gif">
+		</Config>
+		
+		<Config Name="IMAGE_BIG" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        ApiUrl = "/icons/rcp/$param1$.jpeg"
+				DefaultApiUrl = "/icons/rcp/404.jpeg">
+		</Config>
+		
+		<Config Name="HELP" 
+	         Protocol = "http"
+	         BaseUrl = "localhost"
+	         PortNumber  = "7001"
+			 ApiUrl = "/yantradocs/yfscommon/online_help/$param1/wwhelp/wwhimpl/common/html/wwhelp.htm?context=$param2_userguide&amp;topic=$param3">
+		</Config>
+		
+	</Location>
+
+	<Location id="LOCAL" proxyServer="" proxyPort="" updateType="push">
+		<Config Name="IMAGE" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        ApiUrl = "/icons/rcp/$param1$.gif">
+		</Config>
+		<Config Name="IMAGE_SMALL" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        ApiUrl = "/icons/rcp/$param1$.gif"
+				DefaultApiUrl = "/icons/rcp/404.gif">
+		</Config>
+		<Config Name="IMAGE_BIG" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        ApiUrl = "/icons/rcp/$param1$.jpeg"
+				DefaultApiUrl = "/icons/rcp/404.jpeg">
+		</Config>
+	</Location>
+	<Location id="REMOTE" proxyServer="" proxyPort="" updateType="">
+		<Config Name="IMAGE" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        ApiUrl = "/icons/rcp/$param1$.gif">
+		</Config>
+	
+		<Config Name="IMAGE_SMALL" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        ApiUrl = "/icons/rcp/$param1$.gif"
+				DefaultApiUrl = "/icons/rcp/404.gif">
+		</Config>
+	
+		<Config Name="IMAGE_BIG" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        ApiUrl = "/icons/rcp/$param1$.jpeg"
+				DefaultApiUrl = "/icons/rcp/404.jpeg">
+		</Config>
+	</Location>
+	<Location id="SecureLocation" proxyServer="" proxyPort="" updateType="">
+		<Config Name="DEFAULT" 
+	        Protocol = "http"
+	        BaseUrl = "localhost"
+	        PortNumber  = "7001"
+	        HttpsPortNumber  = "7002"
+	        ApiUrl = "/$WEB_APP_NAME$/RcpServlet"
+ 	        CompressionEnabled="Y">
+		</Config>
+		<Config Name="IMAGE" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        ApiUrl = "/icons/rcp/$param1$.gif">
+		</Config>
+	
+		<Config Name="IMAGE_SMALL" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        ApiUrl = "/icons/rcp/$param1$.gif"
+				DefaultApiUrl = "/icons/rcp/404.gif">
+		</Config>
+	
+		<Config Name="IMAGE_BIG" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        ApiUrl = "/icons/rcp/$param1$.jpeg"
+				DefaultApiUrl = "/icons/rcp/404.jpeg">
+		</Config>
+	</Location>
+</Locations>

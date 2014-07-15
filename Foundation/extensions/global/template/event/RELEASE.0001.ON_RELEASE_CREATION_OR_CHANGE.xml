@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OrderRelease OrderDate=""
+    OrderHeaderKey="" ShipNode="" DocumentType="" DeliveryMethod="">
+	<Order DocumentType="" EnterpriseCode=""
+     OrderNo="" >
+		<Notes NumberOfNotes="">
+			<Note Createts="" NoteText="" ReasonCode="" SequenceNo=""/>
+		</Notes>
+		<Extn ExtnHdrGiftReceiptID="" />
+	</Order>
+	<OrderLines>
+		<OrderLine CarrierServiceCode="" DeliveryMethod="" OrderedQty="" PrimeLineNo="" Quantity="" SubLineNo="" SCAC="">
+			<Item ItemID="" UnitOfMeasure=""/>
+			<Extn ExtnOCF=""/>
+			<Shipnode ShipNode="" Description="">
+				<ShipNodePersonInfo AddressLine1="" AddressLine2="" AddressLine3="" City="" Country="" State="" ZipCode=""/>
+			</Shipnode>
+			<OrderStatuses>
+				<OrderStatus ShipNode="" Status="" StatusDate="" StatusDescription="" StatusQty=""/>
+			</OrderStatuses>
+		</OrderLine>
+	</OrderLines>
+</OrderRelease>

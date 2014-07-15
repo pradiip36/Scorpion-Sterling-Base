@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.shipment.backroomPick.BPItemScanExtnBehaviorController"
+    requestMethodSupported="POST" screenId="extn.shipment.backroomPick.BPItemScanExtn">
+    <MashupRefs>
+        <MashupRef extnType="ADD"
+            mashupId="alertNotificationDetails_resolveException"
+            mashupRefId="extn_resolve_exception" permissionId=""/>
+        <MashupRef extnType="ADD"
+            mashupId="extn_getItemLocationDetails_mashup"
+            mashupRefId="extn_getItemLocation_mashup" permissionId=""/>
+        <MashupRef extnType="ADD" mashupId="extn_EJRecord_mashup"
+            mashupRefId="extn_addSuspendEJEntry" permissionId=""/>
+        <MashupRef extnType="ADD"
+            mashupId="extn_getLocationDetails_mashup"
+            mashupRefId="extn_getLocationDetails" permissionId=""/>
+        <MashupRef extnType="ADD" mashupId="getShipmentDetailsMLSGIV"
+            mashupRefId="extn_refreshShipmentDetails" permissionId=""/>
+        <MashupRef extnType="ADD" mashupId="extn_getMLSGIVDetails"
+            mashupRefId="extn_getMLSGIVDetails" permissionId=""/>
+    </MashupRefs>
+</Controller>

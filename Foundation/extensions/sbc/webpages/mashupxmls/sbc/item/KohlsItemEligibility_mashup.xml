@@ -1,0 +1,121 @@
+<mashups>   
+	 <mashup description="get OrgList mashup" endpoint="SBC_CONFIG_END_POINT" 
+    		mashuptype="XAPI" id="item-getDefaultOrganizationList" transactional="true">
+        <classInformation name="com.sterlingcommerce.ui.web.platform.mashup.SCUIXAPIMashup"/>
+       <API Name="getCommonCodeList">
+            <Input>
+                <CommonCode CodeType="ITEM_STATUS" CallingOrganizationCode="xml:CurrentContextOrg:/Organization/@OrganizationCode" />
+            </Input>
+            <Template>
+                <CommonCodeList>
+                    <CommonCode CodeShortDescription="" CodeValue=""/>
+                </CommonCodeList>
+            </Template>
+        </API>    
+   </mashup>
+   
+   <mashup description="Bulk Update Item Eligibility" endpoint="SBC_CONFIG_END_POINT" 
+    		mashuptype="XAPI" id="itemsearch-bulkItemEligibility" transactional="true">
+        <classInformation name="com.sterlingcommerce.ui.web.platform.mashup.SCUIXAPIMashup"/>
+       <API FlowName="KohlsItemEligibilityBulkUpdateListService">
+            <Input>  
+				<ItemEligibility  Store="xml:CurrentContextOrg:/Organization/@OrganizationCode"  User="xml:CurrentUser:/User/@Loginid" Processed="N"/> 		
+            </Input>
+            <Template>
+                
+            </Template>
+        </API>    
+   </mashup>
+   
+   <mashup description="Bulk Update Item Eligibility" endpoint="SBC_CONFIG_END_POINT" 
+    		mashuptype="XAPI" id="itemsearch-selectedItemEligibility" transactional="true">
+        <classInformation name="com.sterlingcommerce.ui.web.platform.mashup.SCUIXAPIMashup"/>
+	  <API FlowName="KohlsItemEligibilitySetItemListService">
+       <!--API Name="manageItem"-->
+            <Input>
+                <ItemList>				
+					<Item Action="Modify"  OrganizationCode="xml:CurrentContextOrg:/Organization/@OrganizationCode">
+						<PrimaryInformation PrimarySupplier="" />
+						<Extn ExtnDepartment="" ExtnClass="" ExtnSubClass="" ExtnStyle="" ExtnStyleQryType=""/>
+					</Item>
+				</ItemList>
+            </Input>
+            <Template>
+                
+            </Template>
+        </API>    
+   </mashup>
+   
+   <mashup description="Quick Search Item mashup" endpoint="SBC_CATALOG_END_POINT" 
+        		mashuptype="XAPI" id="kohlsitemsearch-itemsearch" transactional="true">
+            <classInformation name="com.sterlingcommerce.ui.web.platform.mashup.SCUIPaginatedXAPIMashup"/>			
+         
+			<API FlowName="KohlsItemEligibilitySearchService">			
+                <Input>
+                    <Item ItemID="" ItemIDQryType="LIKE"  >
+			    <PrimaryInformation PrimarySupplier="" PrimarySupplierQryType="LIKE" /> 
+			    <Extn ExtnStyle="" ExtnStyleQryType="LIKE" ExtnDepartment="" ExtnClass="" ExtnSubClass=""/>
+				</Item>
+                </Input>                
+				 <Template>
+                <ItemList>
+                    <Item ItemGroupCode="" ItemID="" ItemKey="" IsShippingCntr="" 
+                        OrganizationCode="" UnitOfMeasure="" SubCatalogOrganizationCode="">
+                        <PrimaryInformation EffectiveEndDate="" KitCode="" IsModelItem="" 
+                            EffectiveStartDate="" ItemType="" ProductLine="" ShortDescription="" Status="" IsReturnService=""/>
+                        <Extn ExtnStyle="" ExtnDept="" ExtnClass="" ExtnSubClass="" />
+                        <ClassificationCodes/>
+                    </Item>
+                </ItemList>
+            </Template>
+            </API>
+    </mashup>
+   
+   <mashup description="Item List mashup" endpoint="SBC_CONFIG_END_POINT" 
+    		mashuptype="XAPI" id="kohls-item-list" transactional="true">
+	<classInformation name="com.sterlingcommerce.ui.web.platform.mashup.SCUIXAPIMashup"/>
+	<API Name="getCommonCodeList">
+	<Input>
+	<CommonCode CodeType="ITEM_STATUS" CallingOrganizationCode="xml:CurrentContextOrg:/Organization/@OrganizationCode" />
+	</Input>
+	<Template>
+	<CommonCodeList>
+	<CommonCode CodeShortDescription="" CodeValue=""/>
+	</CommonCodeList>
+	</Template>
+	</API>
+</mashup>
+<!-- from here -->
+<mashup description="Item Status mashup" endpoint="SBC_CONFIG_END_POINT" 
+    		mashuptype="XAPI" id="kohls-open-searchpage" transactional="true">
+        <classInformation name="com.sterlingcommerce.ui.web.platform.mashup.SCUIXAPIMashup"/>
+       <API Name="getCommonCodeList">
+            <Input>
+                <CommonCode CodeType="ITEM_STATUS" CallingOrganizationCode="xml:CurrentContextOrg:/Organization/@OrganizationCode" />
+            </Input>
+            <Template>
+                <CommonCodeList>
+                    <CommonCode CodeShortDescription="" CodeValue=""/>
+                </CommonCodeList>
+            </Template>
+        </API>    
+   </mashup>
+   <mashup description="Item Status mashup" endpoint="SBC_CONFIG_END_POINT" 
+    		mashuptype="XAPI" id="kohls-seteligible-commoncode" transactional="true">
+        <classInformation name="com.sterlingcommerce.ui.web.platform.mashup.SCUIXAPIMashup"/>
+       <API Name="getCommonCodeList">
+            <Input>               
+				 <CommonCode CodeType="KOHLS_SET_ELIGIBL_AS" CallingOrganizationCode="xml:CurrentContextOrg:/Organization/@OrganizationCode" />
+            </Input>
+            <Template>
+                <CommonCodeList>
+                    <CommonCode CodeShortDescription="" CodeValue=""/>
+                </CommonCodeList>
+            </Template>
+        </API>    
+   </mashup>
+       
+	
+	<!--till here-->
+
+</mashups>

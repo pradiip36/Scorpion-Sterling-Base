@@ -1,0 +1,36 @@
+<div><div data-dojo-type="sc/plat/dojo/widgets/Image" data-dojo-props="		'class' : 'itemImageDetailsDiv' , 
+		uId : 'itemImage'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 imageBindings : 	{
+		 imageUrl : 	{
+		 path : 			'Image'
+,
+		 dynamicBindingFunc : 			'getImageLocation'
+	}
+,
+		 imageIcon : 	{
+		 path : 			'Image'
+,
+		 dynamicBindingFunc : 			'getImageID'
+	},
+		 defaultImage : 	{
+		 style : 			''
+,
+		 styleClass : 			'noItemImage'
+,
+		 src : 			''
+	}
+	}
+,
+		 sourceBinding : 	{
+		 path : 			'Image'
+,
+		 namespace : 			'Image'
+	}
+	}
+			}
+		}
+"></div></div>

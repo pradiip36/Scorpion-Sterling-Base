@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="ResolutionExtn"
+        extnPackage="extn.shipment.customerpickup"
+        originalScreen="wsc.shipment.customerpickup.Resolution"
+        originalScreenPackage="wsc.shipment.customerpickup" type="diffrential">
+        <Items>
+            <Button _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="systemMessagePanelPopup"
+                label="$(_scSimpleBundle:extn_Suspend)" uId="extn_suspendButton"/>
+            <Button _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="shortagesPanel" uId="extn_suspendButton"/>
+            <Button _sc_extensibility_moveOrder="3"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="shortagesTitle" uId="extn_suspendButton"/>
+            <Button _sc_extensibility_moveOrder="4"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="shortagesTitle"
+                label="$(_scSimpleBundle:extn_Void)" uId="extn_voidButton"/>
+        </Items>
+        <Namespaces>
+            <SourceNamespaces>
+                <Source isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_5" value="extn_shipNode_info_suspend"/>
+                <Source description="Suspend Common Codes" isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_6" value="extn_SuspendCommonCodes"/>
+                <Source description="Diamond Common Codes" isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_7" value="extn_DiamondCommonCodes"/>
+            </SourceNamespaces>
+        </Namespaces>
+        <Subscribers>
+            <Local>
+                <Subscriber eventId="afterScreenInit" isExtn="true" sequence="51">
+                    <Handler methodName="extnInitialize"/>
+                </Subscriber>
+                <Subscriber eventId="extn_voidButton_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="voidShipmentLines"/>
+                </Subscriber>
+                <Subscriber eventId="extn_voidButton_onKeyUp"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="voidShipmentLines"/>
+                </Subscriber>
+                <Subscriber eventId="extn_suspendButton_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="suspendShipment"/>
+                </Subscriber>
+                <Subscriber eventId="extn_suspendButton_onKeyUp"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="suspendShipment"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+        <MashupRefs>
+            <Init>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getShipNode_mashup"
+                    mashupRefId="extn_getShipNode_mashup" sourceNamespace="extn_shipNode_info_suspend"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getCommonCodes_mashup"
+                    mashupRefId="extn_getReceiptCommonCodes_diamond" sourceNamespace="extn_DiamondCommonCodes"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getReceiptCommonCodes_mashup"
+                    mashupRefId="extn_getReceiptCommonCodes_suspend" sourceNamespace="extn_SuspendCommonCodes"/>
+            </Init>
+            <Behavior>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_changeShipment_suspend" mashupRefId="extn_saveSuspendedPickup_mashup"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getShipmentDetails_receipt_mashup" mashupRefId="extn_getShipmentDetailsForReceipt_suspend"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getCommonCodes_mashup" mashupRefId="extn_commCode4Receipt_diamond"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_EJRecord_mashup"
+                    mashupRefId="extn_addEJTransCustomerVerified" restoredToOOB="true"/>
+            </Behavior>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

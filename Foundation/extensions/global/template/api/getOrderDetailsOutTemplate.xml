@@ -1,0 +1,6 @@
+<Order CarrierServiceCode="" DocumentType="" EnterpriseCode=""> <OrderLines TotalNumberOfRecords=""><OrderLine FulfillmentType=""> 
+<Item ItemDesc="" ItemID="" UnitOfMeasure=""/> 
+</OrderLine> 
+</OrderLines> 
+<PersonInfoShipTo AddressID="" AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" City="" Company="" Country="" Latitude="" Longitude=""  PersonID="" State="" Suffix="" ZipCode=""/>
+</Order>

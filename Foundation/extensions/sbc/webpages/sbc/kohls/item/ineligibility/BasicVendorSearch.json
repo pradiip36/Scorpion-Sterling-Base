@@ -1,0 +1,358 @@
+{
+ "model": {
+  "sciId": {
+   "id": "sciId",
+   "value": "seaBasicVendorSearch",
+   "type": "string"
+  },
+  "className": {
+   "id": "className",
+   "value": "sc.sbc.kohls.item.ineligibility.BasicVendorSearch",
+   "type": "string"
+  },
+  "superclassName": {
+   "id": "superclassName",
+   "value": "sc.plat.ui.ExtensibleScreen",
+   "type": "string"
+  },
+  "regXtype": {
+   "id": "regXtype",
+   "value": "seaBasicVendorSearch",
+   "type": "string"
+  },
+  "header": {
+   "id": "header",
+   "value": "false",
+   "type": "boolean"
+  },
+  "layout": {
+   "id": "layout",
+   "value": "anchor",
+   "type": "string"
+  },
+  "autoScroll": {
+   "id": "autoScroll",
+   "value": "true",
+   "type": "boolean"
+  },
+  "items": {
+   "id": "items",
+   "value": [{
+    "id": "",
+    "value": {
+     "sciId": {
+      "id": "sciId",
+      "value": "pnlBasicSearch",
+      "type": "string"
+     },
+     "title": {
+      "id": "title",
+      "value": "Find Vendor",
+      "type": "string"
+     },
+     "layout": {
+      "id": "layout",
+      "value": "table",
+      "type": "string"
+     },
+     "ctCls": {
+      "id": "ctCls",
+      "value": "panelWidth",
+      "type": "string"
+     },
+     "border": {
+      "id": "border",
+      "value": "false",
+      "type": "boolean"
+     },
+     "header": {
+      "id": "header",
+      "value": "false",
+      "type": "boolean"
+     },
+     "items": {
+      "id": "items",
+      "value": [{
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "lblVendorID",
+         "type": "string"
+        },
+        "text": {
+         "id": "text",
+         "value": "VendorID",
+         "type": "string"
+        },
+        "cls": {
+         "id": "cls",
+         "value": "sc-plat-label",
+         "type": "string"
+        },
+        "defid": "label"
+       },
+       "type": "label"
+      },
+      {
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "cmbContains",
+         "type": "string"
+        },
+        "editable": {
+         "id": "editable",
+         "value": "false",
+         "type": "boolean"
+        },
+        "value": {
+         "id": "value",
+         "value": [{
+          "id": "",
+          "value": "Contains",
+          "type": "string"
+         }],
+         "type": "array"
+        },
+        "width": {
+         "id": "width",
+         "value": "100",
+         "type": "number"
+        },
+        "colspan": {
+         "id": "colspan",
+         "value": "1",
+         "type": "number"
+        },
+        "defid": "combo"
+       },
+       "type": "combo"
+      },
+      {
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "txtVendorID",
+         "type": "string"
+        },
+        "cls": {
+         "id": "cls",
+         "value": "sc-plat-editable-text sbc-search-textfield",
+         "type": "string"
+        },
+        "colspan": {
+         "id": "colspan",
+         "value": "1",
+         "type": "number"
+        },
+        "bindingData": {
+         "id": "bindingData",
+         "value": {
+          "targetBinding": {
+           "id": "targetBinding",
+           "value": [{
+            "id": "",
+            "value": "getVendorListInput:Organization.OrganizationCode",
+            "type": "string"
+           }],
+           "type": "array"
+          },
+          "sourceBinding": {
+           "id": "sourceBinding",
+           "value": "SavedSearch:SearchWrapper.Organization.OrganizationCode",
+           "type": "string"
+          },
+          "defid": "object"
+         },
+         "type": "object"
+        },
+        "defid": "textfield"
+       },
+       "type": "textfield"
+      },
+      {
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "lblName",
+         "type": "string"
+        },
+        "text": {
+         "id": "text",
+         "value": "Name",
+         "type": "string"
+        },
+        "cls": {
+         "id": "cls",
+         "value": "sc-plat-label",
+         "type": "string"
+        },
+        "defid": "label"
+       },
+       "type": "label"
+      },
+      {
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "cmbContains1",
+         "type": "string"
+        },
+        "width": {
+         "id": "width",
+         "value": "100",
+         "type": "number"
+        },
+        "editable": {
+         "id": "editable",
+         "value": "false",
+         "type": "boolean"
+        },
+        "readOnly": {
+         "id": "readOnly",
+         "value": "true",
+         "type": "boolean"
+        },
+        "value": {
+         "id": "value",
+         "value": "Contains",
+         "type": "string"
+        },
+        "defid": "combo"
+       },
+       "type": "combo"
+      },
+      {
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "txtVendorName",
+         "type": "string"
+        },
+        "cls": {
+         "id": "cls",
+         "value": "sc-plat-editable-text sbc-search-textfield",
+         "type": "string"
+        },
+        "colspan": {
+         "id": "colspan",
+         "value": "2",
+         "type": "number"
+        },
+        "bindingData": {
+         "id": "bindingData",
+         "value": {
+          "targetBinding": {
+           "id": "targetBinding",
+           "value": [{
+            "id": "",
+            "value": "getVendorListInput:Organization.OrganizationName",
+            "type": "string"
+           }],
+           "type": "array"
+          },
+          "sourceBinding": {
+           "id": "sourceBinding",
+           "value": "SavedSearch:SearchWrapper.Organization.OrganizationName",
+           "type": "string"
+          },
+          "defid": "object"
+         },
+         "type": "object"
+        },
+        "defid": "textfield"
+       },
+       "type": "textfield"
+      }],
+      "type": "array"
+     },
+     "autoHeight": {
+      "id": "autoHeight",
+      "value": "false",
+      "type": "boolean"
+     },
+     "autoWidth": {
+      "id": "autoWidth",
+      "value": "true",
+      "type": "boolean"
+     },
+     "layoutConfig": {
+      "id": "layoutConfig",
+      "value": {
+       "columns": {
+        "id": "columns",
+        "value": "3",
+        "type": "number"
+       },
+       "defid": "tableLayoutConfig"
+      },
+      "type": "object"
+     },
+     "defid": "panel"
+    },
+    "type": "panel"
+   }],
+   "type": "array"
+  },
+  "namespaces": {
+   "id": "namespaces",
+   "value": {
+    "target": {
+     "id": "target",
+     "value": [{
+      "id": "",
+      "value": {
+       "name": {
+        "id": "name",
+        "value": "",
+        "type": "string"
+       },
+       "description": {
+        "id": "description",
+        "value": "",
+        "type": "string"
+       },
+       "defid": "target"
+      },
+      "type": "target"
+     }],
+     "type": "array"
+    },
+    "source": {
+     "id": "source",
+     "value": [{
+      "id": "",
+      "value": {
+       "name": {
+        "id": "name",
+        "value": "",
+        "type": "string"
+       },
+       "description": {
+        "id": "description",
+        "value": "",
+        "type": "string"
+       },
+       "defid": "source"
+      },
+      "type": "source"
+     }],
+     "type": "array"
+    },
+    "defid": "namespaces"
+   },
+   "type": "object"
+  },
+  "defid": "screen"
+ },
+ "version": "0.3.0b",
+ "type": "SCREEN",
+ "_verificationText": "VerificationText",
+ "dataSources": {}
+}

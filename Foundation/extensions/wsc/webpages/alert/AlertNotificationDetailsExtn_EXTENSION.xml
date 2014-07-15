@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="AlertNotificationDetailsExtn"
+        extnPackage="extn.alert"
+        originalScreen="wsc.alert.AlertNotificationDetails"
+        originalScreenPackage="wsc.alert" type="diffrential">
+        <Items>
+            <Button _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="btn_PickAction"
+                label="$(_scSimpleBundle:Pick)" renderHidden="false"
+                scExcludeForDirtyCheck="false" uId="extn_button_pick"/>
+        </Items>
+        <Subscribers>
+            <Local>
+                <Subscriber eventId="afterScreenInit" isExtn="true" sequence="19">
+                    <Handler methodName="hideExistingButtons"/>
+                </Subscriber>
+                <Subscriber eventId="extn_button_pick_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="pickReadyForPickOrders"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+    </ScreenExtension>
+</ExtensionMetaData>

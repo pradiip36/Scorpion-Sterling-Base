@@ -1,0 +1,1332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+    <configsynch>
+        <Settings CustomEntityClass="" MaxChangesToDisplay="" ReportsDir="">
+            <AuditDeployment ValidateLockid="n" ValidateOldValues="y" ValidateRecordExistsBeforeDelete="y"/>
+        </Settings>
+        <!-- Source Databases Defined -->
+        <SourceDatabases>
+            <Database Name="MASTERCONFIG_RELEASE-A_SRC"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@ag000056.tst.kohls.com:1598:OQ0098"
+                schema="sterling" user="sterling"/>
+            <Database Name="MASTERCONFIG_RELEASE-B_SRC"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@OR0098Q.tst.kohls.com:1598:OQ0098"
+                schema="sterlingb" user="sterlingb"/>
+            <Database Name="TEST_RELEASE-B_SRC"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@ag000036.tst.kohls.com:1597:OT0097"
+                schema="sterlingb" user="sterlingb"/>
+            <Database Name="MasterConfigCDTXML" className=""
+                dbType="XML"
+                folder="/kohls/prop/of/CDT_Files" jdbcURL=""
+                schema="" user=""/>
+            <Database Name="QA_RELEASE_B_SRC"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@ag000040.tst.kohls.com:1587:OQ0097"
+                schema="sterlingb" user="sterlingb"/>
+            <Database Name="PRODUCTION_SRC"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=am000052-vip)(PORT=1526))(ADDRESS=(PROTOCOL=TCP)(HOST=am000053-vip)(PORT=1526))(LOAD_BALANCE=yes)(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=OMSTXNSRVC)(FAILOVER_MODE=(TYPE=SELECT)(METHOD=BASIC))))"
+                schema="sterling" user="sterling"/>
+            <Database Name="PRODUCTION_NODE1_DIRECT_SRC"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@am000052-vip.kohls.com:1526:OP00971"
+                schema="sterling" user="sterling"/>
+            <Database Name="PRODUCTION_NODE2_DIRECT_SRC"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@am000053-vip:1526:OP00972"
+                schema="sterling" user="sterling"/>
+            <Database Name="TEST_LINUX_RELEASE-A_SRC"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder=""
+                jdbcURL="jdbc:oracle:thin:@OR0149T:1549:OT0149"
+                schema="sterling" user="Sterling"/>
+            <Database Name="TEST_LINUX_RELEASE-B_SRC"
+                className="oracle.jdbc.OracleDriver" dbType="" folder=""
+                jdbcURL="jdbc:oracle:thin:@OR1149T:1649:OT1149"
+                schema="sterling" user="sterling"/>
+            <Database Name="TEST_LINUX_RELEASE-C_SRC"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder=""
+                jdbcURL="jdbc:oracle:thin:@or2145t.tst.kohls.com:1745:OT2145"
+                schema="Sterling" user="Sterling"/>
+            <Database Name="QA_LINUX_RELEASE-A_SRC"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder=""
+                jdbcURL="jdbc:oracle:thin:@OR0145Q:1521/OQ0145_APP_OMSECAN2.kohls.com"
+                schema="sterling" user="Sterling"/>
+            <Database Name="QA_LINUX_RELEASE-B_SRC"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder=""
+                jdbcURL="jdbc:oracle:thin:@OR0145Q:1521/OQ0145_APP_OMSECBN2.kohls.com"
+                schema="sterlingb" user="sterlingb"/>
+            <Database Name="QA_LINUX_RELEASE-C_SRC"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder=""
+                jdbcURL="jdbc:oracle:thin:@or0145q:1521/OQ0145_APP_OMSECCN1.kohls.com"
+                schema="sterlingc" user="sterlingc"/>
+            <Database Name="QA_LINUX_RELEASE-D_SRC"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder=""
+                jdbcURL="jdbc:oracle:thin:@or0145q:1521/OQ0145_APP_OMSECDN2.kohls.com"
+                schema="sterlingd" user="sterlingd"/>
+            <Database Name="QA_LINUX_RELEASE-E_SRC"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder=""
+                jdbcURL="jdbc:oracle:thin:@or0145q:1521/OQ0145_APP_OMSECDN2.kohls.com"
+                schema="sterlinge" user="sterlinge"/>
+            <Database Name="QA_LINUX_RELEASE-F_SRC"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder=""
+                jdbcURL="jdbc:oracle:thin:@or0145q:1521/OQ0145_APP_OMSEFC.kohls.com"
+                schema="sterlingf" user="sterlingf"/>
+            <Database Name="STRESS_LINUX_RELEASE-A_SRC"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder=""
+                jdbcURL="jdbc:oracle:thin:@OR0145S:1521/OS0145_APP_OMSEC1N1.kohls.com"
+                schema="sterling" user="sterling"/>
+            <Database Name="STRESS_LINUX_RELEASE-B_SRC"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder=""
+                jdbcURL="jdbc:oracle:thin:@OR1145S:1521/OS1145_APP_OMSBN2.kohls.com"
+                schema="sterling" user="sterling"/>
+            <Database Name="PRODUCTION_LINUX_SRC"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder=""
+                jdbcURL="jdbc:oracle:thin:@OR0145P:1521/OP0145_APP_OMSECOM1N1.kohls.com"
+                schema="sterling" user="sterling"/>
+            <Database Name="PRODUCTION_LINUX_SRC"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder=""
+                jdbcURL="jdbc:oracle:thin:@OR0145P:1521/OP0145_APP_OMSECOM1N1.kohls.com"
+                schema="sterling" user="sterling"/>
+            <Database Name="TEST_B_SOURCE" className="oracle.jdbc.OracleDriver"
+                   dbType="oracle" folder=""
+                   httpurl="" httpuser=""
+                   jdbcURL="jdbc:oracle:thin:@or1145t.tst.kohls.com:1597:OT1145"
+                   schema="sterling" user="sterling"/>
+            <Database Name="MASTERCONFIG_LINUX_SRC"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@nlg01888:1572:oq0172"
+                schema="OMS_CONFIG" user="oms_config"/>
+        </SourceDatabases>
+        <!-- Target Databases Defined -->
+        <TargetDatabases>
+            <Database Name="MasterConfigCDTXMLTarget" className=""
+                dbType="XML"
+                folder="/kohls/prop/of/CDT_Files" jdbcURL=""
+                schema="" user=""/>
+            <Database Name="MASTERCONFIG_RELEASE-A"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@ag000056.tst.kohls.com:1598:OQ0098"
+                schema="sterling" user="sterling"/>
+            <Database Name="MASTERCONFIG_RELEASE-A_BLANK"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@ag000056.tst.kohls.com:1598:OQ0098"
+                schema="sterling" user="sterling"/>
+            <Database Name="MASTERCONFIG_RELEASE-B"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@OR0098Q.tst.kohls.com:1598:OQ0098"
+                schema="sterlingb" user="sterlingb"/>
+            <Database Name="MASTERCONFIG_RELEASE-B_BLANK"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@OR0098Q.tst.kohls.com:1598:OQ0098"
+                schema="sterlingb" user="sterlingb"/>
+            <Database Name="TEST_RELEASE_A"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@OR0145T.tst.kohls.com:1545:OT0145"
+                schema="sterling" user="sterling"/>
+            <Database Name="TEST_RELEASE_B"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@OR1145T.tst.kohls.com:1545:OT1145"
+                schema="sterling" user="sterling"/>
+            <Database Name="TEST_RELEASE_C"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@OR2145T.tst.kohls.com:1745:OT2145"
+                schema="sterling" user="sterling"/>				
+            <Database Name="QA_RELEASE_A"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@ag000040.tst.kohls.com:1587:OQ0097"
+                schema="sterling" user="sterling"/>
+            <Database Name="QA_RELEASE_B"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@ag000040.tst.kohls.com:1587:OQ0097"
+                schema="sterlingb" user="sterlingb"/>
+            <Database Name="STRESS" className="oracle.jdbc.OracleDriver"
+                dbType="oracle" folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@ag000054-vip.tst.kohls.com:1527:OS00971"
+                schema="sterling" user="sterling"/>
+            <Database Name="PRODUCTION"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=am000052-vip)(PORT=1526))(ADDRESS=(PROTOCOL=TCP)(HOST=am000053-vip)(PORT=1526))(LOAD_BALANCE=yes)(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=OMSTXNSRVC)(FAILOVER_MODE=(TYPE=SELECT)(METHOD=BASIC))))"
+                schema="sterling" user="sterling"/>
+            <Database Name="PRODUCTION_NODE1_DIRECT"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@am000052-vip:1526:OP00971"
+                schema="sterling" user="sterling"/>
+            <Database Name="PRODUCTION_NODE2_DIRECT"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@am000053-vip:1526:OP00972"
+                schema="sterling" user="sterling"/>
+            <Database Name="TEST_LINUX_RELEASE-A_TGT"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@OR0149T:1549:OT0149"
+                schema="sterling" user="sterling"/>
+            <Database Name="TEST_LINUX_RELEASE-B_TGT"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@OR1149T:1649:OT1149"
+                schema="sterling" user="sterling"/>
+            <Database Name="TEST_LINUX_RELEASE-C_TGT"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@or2145t.tst.kohls.com:1745:OT2145"
+                schema="sterling" user="sterling"/>
+            <Database Name="QA_LINUX_RELEASE-A_TGT"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@OR0145Q:1521/OQ0145.kohls.com"
+                schema="sterling" user="sterling"/>
+            <Database Name="QA_LINUX_RELEASE-B_TGT"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@OR0145Q:1521/OQ0145.kohls.com"
+                schema="sterlingb" user="sterlingb"/>
+            <Database Name="QA_LINUX_RELEASE-C_TGT"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@or0145q:1521/OQ0145.kohls.com"
+                schema="sterlingc" user="sterlingc"/>
+            <Database Name="QA_LINUX_RELEASE-D_TGT"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@or0145q:1521/OQ0145.kohls.com"
+                schema="sterlingd" user="sterlingd"/>
+            <Database Name="QA_LINUX_RELEASE-E_TGT"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@or0145q:1521/OQ0145.kohls.com"
+                schema="sterlinge" user="sterlinge"/>
+            <Database Name="QA_LINUX_RELEASE-F_TGT"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@or0145q:1521/OQ0145.kohls.com"
+                schema="sterlingf" user="sterlingf"/>
+            <Database Name="LEARN_LINUX_TGT"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@or0145l.tst.kohls.com:1542/OL0145_APP_OMS.kohls.com"
+                schema="sterling" user="sterling"/>
+            <Database Name="STRESS_LINUX_RELEASE-A_TGT"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@OR0145S:1521/OS0145.kohls.com"
+                schema="sterling" user="sterling"/>
+            <Database Name="STRESS_LINUX_RELEASE-B_TGT"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@OR1145S:1521/OS1145_APP_OMSBN2.kohls.com"
+                schema="sterling" user="sterling"/>
+            <Database Name="PRODUCTION_LINUX_TGT"
+                className="oracle.jdbc.OracleDriver" dbType="oracle"
+                folder="" httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@OR0145P:1521/OP0145_APP_OMSECOM1N1.kohls.com"
+                schema="sterling" user="sterling"/>
+            <Database Name="TEST_B_TARGET" className="oracle.jdbc.OracleDriver"
+                dbType="oracle" folder=""
+                httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@OR1145T.tst.kohls.com:1745:OT1145"
+                schema="sterling" user="sterling"/>
+            <Database Name="QA_C_TARGET" className="oracle.jdbc.OracleDriver"
+                dbType="oracle" folder=""
+                httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=or0145q)(PORT=1521))(FAILOVER=ON)(LOAD_BALANCE=OFF)(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=OQ0145_APP_OMSECCN1.kohls.com)))"
+                schema="sterlingc" user="sterlingc"/>
+            <Database Name="QA_D_TARGET" className="oracle.jdbc.OracleDriver"
+                dbType="oracle" folder=""
+                httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=or0145q)(PORT=1521))(FAILOVER=ON)(LOAD_BALANCE=OFF)(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=OQ0145_APP_OMSECCN1.kohls.com)))"
+                schema="sterlingd" user="sterlingd"/>
+            <Database Name="STRESS_TARGET" className="oracle.jdbc.OracleDriver"
+                dbType="oracle" folder=""
+                httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=or0145s)(PORT=1521))(FAILOVER=ON)(LOAD_BALANCE=OFF)(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=OS0145_APP_OMSEC1N1.KOHLS.COM)))"
+                schema="sterling" user="sterling"/> 
+            <Database Name="MASTERCONFIG_LINUX_TGT" className="oracle.jdbc.OracleDriver"
+                dbType="oracle" folder=""
+                httpurl="" httpuser=""
+                jdbcURL="jdbc:oracle:thin:@nlg01888:1572:oq0172"
+                schema="OMS_CONFIG" user="oms_config"/>
+        </TargetDatabases>
+        <!-- Source - Target Pairs Defined -->
+		<SourceTargetPrefs>
+			<SourceTargetPrefs>
+				<SourceTargetPair SourceDatabase="MasterConfigCDTXML" TargetDatabase="MASTERCONFIG_RELEASE-A">
+					<Transformations>
+						<Table Name="">
+							<Column Name="">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_USER"/>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<!-- MASTERCONFIG_RELEASE-A_BLANK Used for inital Load to clear out and bulk load all files into the Master Config env for Rel A -->
+				<SourceTargetPair SourceDatabase="MasterConfigCDTXML" TargetDatabase="MASTERCONFIG_RELEASE-A_BLANK">
+					<Transformations>
+						<Table Name="">
+							<Column Name="">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name=""/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name=""/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="MasterConfigCDTXML" TargetDatabase="MASTERCONFIG_RELEASE-B">
+					<Transformations>
+						<Table Name="">
+							<Column Name="">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_USER"/>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<!-- MASTERCONFIG_RELEASE-B_BLANK Used for inital Load to clear out and bulk load all files into the Master Config env for Rel B -->
+				<SourceTargetPair SourceDatabase="MasterConfigCDTXML" TargetDatabase="MASTERCONFIG_RELEASE-B_BLANK">
+					<Transformations>
+						<Table Name="">
+							<Column Name="">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name=""/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name=""/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="MasterConfigCDTXML" TargetDatabase="TEST_RELEASE_A">
+					<Transformations>
+						<Table Name="YFS_SUB_FLOW">
+							<Column Name="CONFIG_XML">
+								<Transform Match="5" Replace="1" XPath="xml:/SubFlowConfig/Link/Properties/@Threads"/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_USER"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="MasterConfigCDTXML" TargetDatabase="TEST_RELEASE_B">
+					<Transformations>
+						<Table Name="YFS_SUB_FLOW">
+							<Column Name="CONFIG_XML">
+								<Transform Match="5" Replace="1" XPath="xml:/SubFlowConfig/Link/Properties/@Threads"/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_USER"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="MasterConfigCDTXML" TargetDatabase="TEST_RELEASE_C">
+					<Transformations>
+						<Table Name="YFS_SUB_FLOW">
+							<Column Name="CONFIG_XML">
+								<Transform Match="5" Replace="1" XPath="xml:/SubFlowConfig/Link/Properties/@Threads"/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_USER"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>				
+				<SourceTargetPair SourceDatabase="MasterConfigCDTXML" TargetDatabase="QA_RELEASE_A">
+					<Transformations>
+						<Table Name="YFS_SUB_FLOW">
+							<Column Name="CONFIG_XML">
+								<Transform Match="5" Replace="2" XPath="xml:/SubFlowConfig/Link/Properties/@Threads"/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_USER"/>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="MasterConfigCDTXML" TargetDatabase="QA_RELEASE_B">
+					<Transformations>
+						<Table Name="YFS_SUB_FLOW">
+							<Column Name="CONFIG_XML">
+								<Transform Match="5" Replace="2" XPath="xml:/SubFlowConfig/Link/Properties/@Threads"/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_USER"/>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="MasterConfigCDTXML" TargetDatabase="STRESS">
+					<Transformations>
+						<Table Name="">
+							<Column Name="">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_USER"/>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="MasterConfigCDTXML" TargetDatabase="PRODUCTION_NODE1_DIRECT">
+					<Transformations>
+						<Table Name="">
+							<Column Name="">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_USER"/>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="MasterConfigCDTXML" TargetDatabase="PRODUCTION_NODE2_DIRECT">
+					<Transformations>
+						<Table Name="">
+							<Column Name="">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_USER"/>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<!-- Used to extract Master CDT XMLs from the Master Config env for Rel A to the local filesystem -->
+				<SourceTargetPair SourceDatabase="MASTERCONFIG_RELEASE-A_SRC" TargetDatabase="MasterConfigCDTXMLTarget">
+					<Transformations>
+						<Table Name="">
+							<Column Name="">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_USER"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<!-- Used to extract Master CDT XMLs from the Master Config env for Rel B to the local filesystem -->
+				<SourceTargetPair SourceDatabase="MASTERCONFIG_RELEASE-B_SRC" TargetDatabase="MasterConfigCDTXMLTarget">
+					<Transformations>
+						<Table Name="">
+							<Column Name="">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_USER"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<!-- Used to extract Master CDT XMLs from the Master Config env for Rel B to the local filesystem -->
+				<SourceTargetPair SourceDatabase="TEST_RELEASE-B_SRC" TargetDatabase="STRESS">
+					<Transformations>
+						<Table Name="">
+							<Column Name="">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_USER"/>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<!-- Used to get a full CDT extract from PROD to the local filesystem -->
+				<SourceTargetPair SourceDatabase="PRODUCTION_NODE1_DIRECT_SRC" TargetDatabase="MasterConfigCDTXMLTarget">
+					<Transformations>
+						<Table Name="">
+							<Column Name="">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_USER"/>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<!-- Used to get a full CDT extract from PROD to the local filesystem -->
+				<SourceTargetPair SourceDatabase="QA_RELEASE_B_SRC" TargetDatabase="MasterConfigCDTXMLTarget">
+					<Transformations>
+						<Table Name="">
+							<Column Name="">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_USER"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="TEST_LINUX_RELEASE-B_SRC" TargetDatabase="STRESS_LINUX_RELEASE-A_TGT">
+					<Transformations>
+						<Table Name="">
+							<Column Name="">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_USER"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="MasterConfigCDTXML" TargetDatabase="TEST_LINUX_RELEASE-A_TGT">
+					<Transformations>
+						<Table Name="YFS_SUB_FLOW">
+							<Column Name="CONFIG_XML">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_USER"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="MasterConfigCDTXML" TargetDatabase="TEST_LINUX_RELEASE-B_TGT">
+					<Transformations>
+						<Table Name="YFS_SUB_FLOW">
+							<Column Name="CONFIG_XML">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_USER"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="MasterConfigCDTXML" TargetDatabase="TEST_LINUX_RELEASE-C_TGT">
+					<Transformations>
+						<Table Name="YFS_SUB_FLOW">
+							<Column Name="CONFIG_XML">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_USER"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="MasterConfigCDTXML" TargetDatabase="QA_LINUX_RELEASE-A_TGT">
+					<Transformations>
+						<Table Name="YFS_SUB_FLOW">
+							<Column Name="CONFIG_XML">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_USER"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="MasterConfigCDTXML" TargetDatabase="QA_LINUX_RELEASE-B_TGT">
+					<Transformations>
+						<Table Name="YFS_SUB_FLOW">
+							<Column Name="CONFIG_XML">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_USER"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="MasterConfigCDTXML" TargetDatabase="QA_LINUX_RELEASE-C_TGT">
+					<Transformations>
+						<Table Name="YFS_SUB_FLOW">
+							<Column Name="CONFIG_XML">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_USER"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="MasterConfigCDTXML" TargetDatabase="QA_LINUX_RELEASE-D_TGT">
+					<Transformations>
+						<Table Name="YFS_SUB_FLOW">
+							<Column Name="CONFIG_XML">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_USER"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="MasterConfigCDTXML" TargetDatabase="LEARN_LINUX_TGT">
+					<Transformations>
+						<Table Name="YFS_SUB_FLOW">
+							<Column Name="CONFIG_XML">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_USER"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+						<Table Name="YFS_BASE_COMMON_CODE"/>
+						<Table Name="YFS_FLOW"/>
+						<Table Name="YFS_SUB_FLOW"/>
+						<Table Name="YFS_COMMON_CODE"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="MasterConfigCDTXML" TargetDatabase="QA_LINUX_RELEASE-E_TGT">
+					<Transformations>
+						<Table Name="YFS_SUB_FLOW">
+							<Column Name="CONFIG_XML">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_USER"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>				
+				<SourceTargetPair SourceDatabase="MasterConfigCDTXML" TargetDatabase="QA_LINUX_RELEASE-F_TGT">
+					<Transformations>
+						<Table Name="YFS_SUB_FLOW">
+							<Column Name="CONFIG_XML">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_USER"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>				
+				<SourceTargetPair SourceDatabase="MasterConfigCDTXML" TargetDatabase="STRESS_LINUX_RELEASE-A_TGT">
+					<Transformations>
+						<Table Name="YFS_SUB_FLOW">
+							<Column Name="CONFIG_XML">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_USER"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="MasterConfigCDTXML" TargetDatabase="STRESS_LINUX_RELEASE-B_TGT">
+					<Transformations>
+						<Table Name="YFS_SUB_FLOW">
+							<Column Name="CONFIG_XML">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_USER"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="MasterConfigCDTXML" TargetDatabase="PRODUCTION_LINUX_TGT">
+					<Transformations>
+						<Table Name="YFS_SUB_FLOW">
+							<Column Name="CONFIG_XML">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_USER"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="PRODUCTION_LINUX_SRC" TargetDatabase="MasterConfigCDTXMLTarget">
+					<Transformations>
+						<Table Name="YFS_SUB_FLOW">
+							<Column Name="CONFIG_XML">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_USER"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="TEST_LINUX_RELEASE-A_SRC" TargetDatabase="MasterConfigCDTXMLTarget">
+					<Transformations>
+						<Table Name="YFS_SUB_FLOW">
+							<Column Name="CONFIG_XML">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_USER"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="TEST_LINUX_RELEASE-B_SRC" TargetDatabase="MasterConfigCDTXMLTarget">
+					<Transformations>
+						<Table Name="YFS_SUB_FLOW">
+							<Column Name="CONFIG_XML">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_USER"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="TEST_LINUX_RELEASE-C_SRC" TargetDatabase="MasterConfigCDTXMLTarget">
+					<Transformations>
+						<Table Name="YFS_SUB_FLOW">
+							<Column Name="CONFIG_XML">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_USER"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="QA_LINUX_RELEASE-A_SRC" TargetDatabase="MasterConfigCDTXMLTarget">
+					<Transformations>
+						<Table Name="YFS_SUB_FLOW">
+							<Column Name="CONFIG_XML">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_USER"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="QA_LINUX_RELEASE-B_SRC" TargetDatabase="MasterConfigCDTXMLTarget">
+					<Transformations>
+						<Table Name="YFS_SUB_FLOW">
+							<Column Name="CONFIG_XML">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_USER"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="QA_LINUX_RELEASE-A_SRC" TargetDatabase="MasterConfigCDTXMLTarget">
+					<Transformations>
+						<Table Name="YFS_SUB_FLOW">
+							<Column Name="CONFIG_XML">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_USER"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="QA_LINUX_RELEASE-B_SRC" TargetDatabase="MasterConfigCDTXMLTarget">
+					<Transformations>
+						<Table Name="YFS_SUB_FLOW">
+							<Column Name="CONFIG_XML">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_USER"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="QA_LINUX_RELEASE-C_SRC" TargetDatabase="MasterConfigCDTXMLTarget">
+					<Transformations>
+						<Table Name="YFS_SUB_FLOW">
+							<Column Name="CONFIG_XML">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_USER"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="QA_LINUX_RELEASE-D_SRC" TargetDatabase="MasterConfigCDTXMLTarget">
+					<Transformations>
+						<Table Name="YFS_SUB_FLOW">
+							<Column Name="CONFIG_XML">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_USER"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="QA_LINUX_RELEASE-E_SRC" TargetDatabase="MasterConfigCDTXMLTarget">
+					<Transformations>
+						<Table Name="YFS_SUB_FLOW">
+							<Column Name="CONFIG_XML">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_USER"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="QA_LINUX_RELEASE-F_SRC" TargetDatabase="MasterConfigCDTXMLTarget">
+					<Transformations>
+						<Table Name="YFS_SUB_FLOW">
+							<Column Name="CONFIG_XML">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_USER"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+
+				<!-- Used for pushing TestC into TestB : OCF SFS -->
+				<SourceTargetPair SourceDatabase="MasterConfigCDTXML" TargetDatabase="MASTERCONFIG_LINUX_TGT">
+					<Transformations>
+						<Table Name="">
+							<Column Name="">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_USER"/>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="MASTERCONFIG_LINUX_SRC" TargetDatabase="MasterConfigCDTXMLTarget">
+					<Transformations>
+						<Table Name="">
+							<Column Name="">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_USER"/>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="STRESS_LINUX_RELEASE-A_SRC" TargetDatabase="MasterConfigCDTXMLTarget">
+					<Transformations>
+						<Table Name="">
+							<Column Name="">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_USER"/>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="STRESS_LINUX_RELEASE-B_SRC" TargetDatabase="MasterConfigCDTXMLTarget">
+					<Transformations>
+						<Table Name="">
+							<Column Name="">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_USER"/>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="MasterConfigCDTXML" TargetDatabase="TEST_B_TARGET">
+					<Transformations>
+						<Table Name="">
+							<Column Name="">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_USER"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="MasterConfigCDTXML" TargetDatabase="PRODUCTION_LINUX_SRC">
+					<Transformations>
+						<Table Name="">
+							<Column Name="">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_USER"/>
+						<Table Name="PLT_DB_POOL"/>
+						<Table Name="PLT_DB_COLONY"/>
+						<Table Name="PLT_DB_COLONY_POOL"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+				<SourceTargetPair SourceDatabase="MASTERCONFIG_LINUX_SRC" TargetDatabase="QA_LINUX_RELEASE-A_TGT">
+					<Transformations>
+						<Table Name="">
+							<Column Name="">
+								<Transform Match="" Replace="" XPath=""/>
+							</Column>
+						</Table>
+					</Transformations>
+					<Ignore>
+						<Table Name="YFS_USER"/>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_PERSON_INFO"/>
+					</Ignore>
+					<AppendOnly>
+						<Table Name="YFS_USER_GROUP"/>
+					</AppendOnly>
+				</SourceTargetPair>
+			</SourceTargetPrefs>
+		</SourceTargetPrefs>
+	</configsynch>
+</preferences>

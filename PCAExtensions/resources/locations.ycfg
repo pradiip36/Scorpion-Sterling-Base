@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Locations>
+	<Location id="PRODUCTION" proxyServer="" proxyPort="" updateType="pull">
+		<Config Name="DEFAULT" 
+	        Protocol = "http"
+	        BaseUrl = "xloms-ofmc000p.kohls.com"
+	        PortNumber  = ""
+	        ApiUrl = "/smcfs/RcpServlet"
+ 	        CompressionEnabled="Y">
+		</Config>
+
+		<Config Name="IMAGE" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        DefaultApiUrl = "/icons/rcp/404.jpeg"
+		        ApiUrl = "/icons/rcp/$param1$.gif">
+		</Config>
+		
+		<Config Name="IMAGE_SMALL" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        ApiUrl = "/icons/rcp/$param1$.gif"
+				DefaultApiUrl = "/icons/rcp/404.gif">
+		</Config>
+		
+		<Config Name="IMAGE_BIG" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        ApiUrl = "/icons/rcp/$param1$.jpeg"
+				DefaultApiUrl = "/icons/rcp/404.jpeg">
+		</Config>
+		
+		<Config Name="HELP" 
+	         Protocol = "http"
+	         BaseUrl = "localhost"
+	         PortNumber  = "7001"
+			 ApiUrl = "/yantradocs/yfscommon/online_help/$param1/wwhelp/wwhimpl/common/html/wwhelp.htm?context=$param2_userguide&amp;topic=$param3">
+		</Config>	
+	</Location>
+	<Location id="STRESS" proxyServer="" proxyPort="" updateType="pull">
+		<Config Name="DEFAULT" 
+	        Protocol = "http"
+	        BaseUrl = "xloms-00s.gtm-int.kohls.com"
+	        PortNumber  = ""
+	        ApiUrl = "/smcfs/RcpServlet"
+ 	        CompressionEnabled="Y">
+		</Config>
+
+		<Config Name="IMAGE" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        DefaultApiUrl = "/icons/rcp/404.jpeg"
+		        ApiUrl = "/icons/rcp/$param1$.gif">
+		</Config>
+		
+		<Config Name="IMAGE_SMALL" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        ApiUrl = "/icons/rcp/$param1$.gif"
+				DefaultApiUrl = "/icons/rcp/404.gif">
+		</Config>
+		
+		<Config Name="IMAGE_BIG" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        ApiUrl = "/icons/rcp/$param1$.jpeg"
+				DefaultApiUrl = "/icons/rcp/404.jpeg">
+		</Config>
+		
+		<Config Name="HELP" 
+	         Protocol = "http"
+	         BaseUrl = "localhost"
+	         PortNumber  = "7001"
+			 ApiUrl = "/yantradocs/yfscommon/online_help/$param1/wwhelp/wwhimpl/common/html/wwhelp.htm?context=$param2_userguide&amp;topic=$param3">
+		</Config>	
+	</Location>
+
+	<Location id="QA_A" proxyServer="" proxyPort="" updateType="pull">
+		<Config Name="DEFAULT" 
+	        Protocol = "https"
+	        BaseUrl = "xloms-ofmc00aq.tst.kohls.com"
+	        PortNumber  = ""
+	        ApiUrl = "/smcfs/RcpServlet"
+ 	        CompressionEnabled="Y">
+		</Config>
+
+		<Config Name="IMAGE" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        DefaultApiUrl = "/icons/rcp/404.jpeg"
+		        ApiUrl = "/icons/rcp/$param1$.gif">
+		</Config>
+		
+		<Config Name="IMAGE_SMALL" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        ApiUrl = "/icons/rcp/$param1$.gif"
+				DefaultApiUrl = "/icons/rcp/404.gif">
+		</Config>
+		
+		<Config Name="IMAGE_BIG" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        ApiUrl = "/icons/rcp/$param1$.jpeg"
+				DefaultApiUrl = "/icons/rcp/404.jpeg">
+		</Config>
+		
+		<Config Name="HELP" 
+	         Protocol = "http"
+	         BaseUrl = "localhost"
+	         PortNumber  = "7001"
+			 ApiUrl = "/yantradocs/yfscommon/online_help/$param1/wwhelp/wwhimpl/common/html/wwhelp.htm?context=$param2_userguide&amp;topic=$param3">
+		</Config>	
+	</Location>
+	<Location id="TEST_B" proxyServer="" proxyPort="" updateType="pull">
+		<Config Name="DEFAULT" 
+	        Protocol = "https"
+	        BaseUrl = "xloms-ofmc00bt.tst.kohls.com"
+	        PortNumber  = ""
+	        ApiUrl = "/smcfs/RcpServlet"
+ 	        CompressionEnabled="Y">
+		</Config>
+
+		<Config Name="IMAGE" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        DefaultApiUrl = "/icons/rcp/404.jpeg"
+		        ApiUrl = "/icons/rcp/$param1$.gif">
+		</Config>
+		
+		<Config Name="IMAGE_SMALL" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        ApiUrl = "/icons/rcp/$param1$.gif"
+				DefaultApiUrl = "/icons/rcp/404.gif">
+		</Config>
+		
+		<Config Name="IMAGE_BIG" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        ApiUrl = "/icons/rcp/$param1$.jpeg"
+				DefaultApiUrl = "/icons/rcp/404.jpeg">
+		</Config>
+		
+		<Config Name="HELP" 
+	         Protocol = "http"
+	         BaseUrl = "localhost"
+	         PortNumber  = "7001"
+			 ApiUrl = "/yantradocs/yfscommon/online_help/$param1/wwhelp/wwhimpl/common/html/wwhelp.htm?context=$param2_userguide&amp;topic=$param3">
+		</Config>	
+	</Location>
+	<Location id="QA_C" proxyServer="" proxyPort="" updateType="pull">
+		<Config Name="DEFAULT" 
+	        Protocol = "http"
+	        BaseUrl = "xloms1-gt-00cq.tst.kohls.com"
+	        PortNumber  = ""
+	        ApiUrl = "/smcfs/RcpServlet"
+ 	        CompressionEnabled="Y">
+		</Config>
+
+		<Config Name="IMAGE" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        DefaultApiUrl = "/icons/rcp/404.jpeg"
+		        ApiUrl = "/icons/rcp/$param1$.gif">
+		</Config>
+		
+		<Config Name="IMAGE_SMALL" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        ApiUrl = "/icons/rcp/$param1$.gif"
+				DefaultApiUrl = "/icons/rcp/404.gif">
+		</Config>
+		
+		<Config Name="IMAGE_BIG" 
+		        Protocol = "http"
+		        BaseUrl = "localhost"
+		        PortNumber  = "80"
+		        ApiUrl = "/icons/rcp/$param1$.jpeg"
+				DefaultApiUrl = "/icons/rcp/404.jpeg">
+		</Config>
+		
+		<Config Name="HELP" 
+	         Protocol = "http"
+	         BaseUrl = "localhost"
+	         PortNumber  = "7001"
+			 ApiUrl = "/yantradocs/yfscommon/online_help/$param1/wwhelp/wwhimpl/common/html/wwhelp.htm?context=$param2_userguide&amp;topic=$param3">
+		</Config>	
+	</Location>
+</Locations>

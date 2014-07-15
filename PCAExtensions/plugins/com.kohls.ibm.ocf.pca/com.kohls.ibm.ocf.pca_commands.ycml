@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<forms>
+    <form Id="com.kohls.ibm.ocf.pca.tasks.packshipment.wizards.KOHLSPackShipmentWizard">
+        <Wizard>
+            <WizardEntities>
+                <WizardEntity id="KOHLSPackContainerPage" impl="com.kohls.ibm.ocf.pca.tasks.packshipment.wizardpages.KOHLSPackShipmentPage" start="true" type="PAGE" xPos="64" yPos="51"/>
+            </WizardEntities>
+            <WizardTransitions/>
+        </Wizard>
+        <commands>
+            <command APIName="KOHLSGetShipmentDetailsForPackingService" APIType="SERVICE" Name="KOHLSGetShipmentDetailsForPackingService" URL="" inputNamespace="" outputNamespace="" postCommand=""
+                preCommand="" version=""/>
+            <command APIName="KohlsModifyStoreShipment" APIType="SERVICE" Name="KohlsModifyStoreShipment" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand="" version=""/>
+            <command APIName="translateBarCode" APIType="API" Name="TranslateBarCode" URL="" inputNamespace="TranslateBarCode_Input" outputNamespace="TranslateBarCode_Output" postCommand="" preCommand=""/>
+            <command APIName="KOHLSAddContainerToShipmentService" APIType="SERVICE" Name="KOHLSAddContainerToShipmentService" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+            <command APIName="KOHLSGetShipmentContainerDetailsService" APIType="SERVICE" Name="KOHLSGetShipmentContainerDetailsService" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+            <command APIName="KohlsReprintLabelSyncWebService" APIType="SERVICE" Name="KohlsReprintLabelSyncWebService" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+        	<command APIName="getCommonCodeList" APIType="API" Name="getCommonCodeList" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+    		<command APIName="getCommonCodeList" APIType="API" Name="getCommonCodeListForReasonCodes" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+        	<command APIName="KOHLSGetShipmentContainerDetailsService" APIType="SERVICE" Name="KOHLSGetShipmentContainerDetailsServiceForClose" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+            <command APIName="KOHLSGetShipmentContainerDetailsService" APIType="SERVICE" Name="KOHLSGetShipmentContainerDetailsServiceForVoid" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+ 			<command APIName="getShipmentContainerDetails" APIType="API" Name="getShipmentContainerDetails" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+     		<command APIName="getCommonCodeList" APIType="API" Name="getCommonCodeForReasonCode" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+        	<command APIName="changeShipmentContainer" APIType="API" Name="changeShipmentContainerForCloseContainer" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+      		<command APIName="changeShipment" APIType="API" Name="changeShipmentContainerForVoidLabel" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+        	<command APIName="changeShipmentContainer" APIType="API" Name="changeShipmentContainer" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+  			<command APIName="KohlsVoidLabelSyncWebService" APIType="SERVICE" Name="KohlsVoidLabelSyncWebService" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+     		<command APIName="KohlsShipSyncWebService" APIType="SERVICE" Name="KohlsShipSyncWebService" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+      		<command APIName="changeShipment" APIType="API" Name="changeShipmentContainerForSavingReasonCode" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+       		<command APIName="getCommonCodeList" APIType="API" Name="getCommonCodeListForTAREValue" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+       		<command APIName="getCommonCodeList" APIType="API" Name="getCommonCodeListForTARE" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+       		<command APIName="getCommonCodeList" APIType="API" Name="getCommonCodeListForPrintLabel" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+      		<command APIName="changeShipment" APIType="API" Name="changeShipment" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+      		<command APIName="unpackShipment" APIType="API" Name="unpackShipment" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+      		<command APIName="KOHLSUnpackShipmentService" APIType="SERVICE" Name="KOHLSUnpackShipmentService" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+			<!-- Start changes for SFS June Release -->
+			<!-- Start changes for SFS June Release -->
+			<command APIName="KOHLSRePrintPackSlipService" APIType="SERVICE" Name="KOHLSRePrintPackSlipService" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand="" />
+<!-- End changes for SFS June Release -->
+			<!-- End changes for SFS June Release -->
+        </commands>
+        <namespaces>
+            <namespace name="TranslateBarCode_Input" templateName="TranslateBarCode_Input" type="input"/>
+            <namespace name="TranslateBarCode_Output" templateName="TranslateBarCode_Output" type="output"/>
+        </namespaces>
+    </form>
+    <form Id="com.kohls.ibm.ocf.pca.tasks.printpackslip.wizards.KOHLSPrintPackSlipWizard">
+        <Wizard>
+            <WizardEntities>
+                <WizardEntity id="KOHLSPrintPackSlip" impl="com.kohls.ibm.ocf.pca.tasks.printpackslip.wizardpages.KOHLSPrintPackSlip" start="true" type="PAGE" xPos="64" yPos="51"/>
+            </WizardEntities>
+            <WizardTransitions/>
+        </Wizard>
+        <commands>
+            <command APIName="getItemList" APIType="API" Name="GetItemList" URL="" inputNamespace="" outputNamespace="getItemList_output" postCommand="" preCommand="" version="ver77"/>
+            <command APIName="getDeviceList" APIType="API" Name="GetDeviceList" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+            <command APIName="KOHLSProcessPrintPackSlipService" APIType="SERVICE" Name="KOHLSProcessPrintPackSlipService" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+            <command APIName="KOHLSGetAvailableCartsForPrintMultis" APIType="SERVICE" Name="KOHLSGetAvailableCartsForPrintMultis" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+        </commands>
+        <namespaces>
+            <namespace name="getItemList_output" templateName="getItemList_output" type="output"/>
+        </namespaces>
+    </form>
+    <form Id="com.yantra.pca.sop.rcp.tasks.outboundexecution.searchshipment.wizards.SOPOBEShipmentSearchWizard">
+        <commands>
+            <command APIName="KOHLSRePrintPackSlipService" APIType="SERVICE" Name="KOHLSRePrintPackSlipService" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+            <command APIName="KOHLSSopPrintPickTicketService" APIType="SERVICE" Name="KOHLSSopPrintPickTicketService" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+            <command APIName="changeShipmentStatus" APIType="API" Name="ChangeShipmentStatus" URL="" inputNamespace="" outputNamespace="changeShipmentStatus_output" postCommand="" preCommand="" version=""/>
+            <command APIName="KOHLSGetStatusList" APIType="SERVICE" Name="KOHLSGetStatusList" URL="" inputNamespace="KOHLSGetStatusListInPut" outputNamespace="KOHLSGetStatusListOutPut" postCommand="" preCommand=""/>
+            <command APIName="KOHLSGetShipmentDetailsSyncService" APIType="SERVICE" Name="KOHLSGetShipmentDetailsSyncService" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+            <command APIName="KohlsProcessSinglePrintSyncService" APIType="SERVICE" Name="KohlsProcessSinglePrintSyncService" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+            <command APIName="changeShipmentStatus" APIType="API" Name="changeShipmentStatusPostStorePickListPrint" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+        </commands>
+    </form>
+    <form Id="com.yantra.pca.sop.rcp.tasks.outboundexecution.pickup.recordcustomerpick.wizards.SOPRecordCustomerPickWizard">
+        <commands>
+            <command APIName="KohlsConfirmCustomerPickService" APIType="SERVICE" Name="ConfirmCustomerPick" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+        </commands>
+    </form>
+    <form Id="com.kohls.ibm.ocf.pca.tasks.printSingles.wizards.KOHLSMassSinglesPrintWizard">
+        <Wizard>
+            <WizardEntities>
+                <WizardEntity id="KOHLSMassSinglesPrintScreen" impl="com.kohls.ibm.ocf.pca.tasks.printSingles.wizardpages.KOHLSMassSinglesPrintScreen" start="true" type="PAGE" xPos="64" yPos="51"/>
+            </WizardEntities>
+            <WizardTransitions/>
+        </Wizard>
+        <commands>
+            <command APIName="KOHLSGetMassPrintSinglesListService" APIType="SERVICE" Name="KOHLSGetMassPrintSinglesListService" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand="" version=""/>
+            <command APIName="getDeviceList" APIType="API" Name="GetDeviceList" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+            <command APIName="KOHLSInvokeSinglesMassPrintService" APIType="SERVICE" Name="KOHLSInvokeSinglesMassPrintService" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+        </commands>
+    </form>
+    <form Id="com.kohls.ibm.ocf.pca.tasks.reprintbatch.wizards.KOHLSReprintBatchWizard">
+        <Wizard>
+            <WizardEntities>
+                <WizardEntity id="KOHLSReprintBatchScreen" impl="com.kohls.ibm.ocf.pca.tasks.reprintbatch.wizardpages.KOHLSReprintBatchScreen" start="true" type="PAGE" xPos="64" yPos="51"/>
+            </WizardEntities>
+            <WizardTransitions/>
+        </Wizard>
+        <commands>
+            <command APIName="getDeviceList" APIType="API" Name="GetDeviceList" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+            <command APIName="KOHLSProcessReprintBatchService" APIType="SERVICE" Name="KOHLSProcessReprintBatchService" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+            <!--command APIName="KOHLSProcessBatchPrintService" APIType="SERVICE" Name="KOHLSProcessBatchPrintService" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/-->
+            <command APIName="KohlsUpdateBatchPrintService" APIType="SERVICE" Name="KohlsUpdateBatchPrintService" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>  			
+        </commands>
+    </form>
+	 <!--- Start Drop2 changes for Batch Print -->
+    <form Id="com.kohls.ibm.ocf.pca.tasks.batchprint.wizards.KOHLSBatchPrintWizard">
+        <Wizard>
+            <WizardEntities>
+                <WizardEntity id="KOHLSBatchPrintScreen" impl="com.kohls.ibm.ocf.pca.tasks.batchprint.wizardpages.KOHLSBatchPrintScreen" start="true" type="PAGE" xPos="64" yPos="51"/>
+            </WizardEntities>
+            <WizardTransitions/>
+        </Wizard>
+        <commands>
+            <command APIName="getDeviceList" APIType="API" Name="GetDeviceList" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+            <command APIName="KohlsgetBatchListService" APIType="SERVICE" Name="KohlsgetBatchListService" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+        </commands>
+        <namespaces/>
+    </form>    
+    <form Id="com.kohls.ibm.ocf.pca.tasks.batchprint.wizards.KOHLSBatchPrintReprintWizard">
+	 <Wizard>
+            <WizardEntities>
+                <WizardEntity id="KOHLSBatchPrintReprintScreen" impl="com.kohls.ibm.ocf.pca.tasks.batchprint.wizardpages.KOHLSBatchPrintReprintScreen" start="true" type="PAGE" xPos="64" yPos="51"/>
+            </WizardEntities>
+            <WizardTransitions/>
+        </Wizard>
+        <commands>           
+            <command APIName="getDeviceList" APIType="API" Name="GetDeviceList" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>  
+            <command APIName="KOHLSProcessBatchPrintService" APIType="SERVICE" Name="KOHLSProcessBatchPrintService" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+            <command APIName="KohlsUpdateBatchPrintService" APIType="SERVICE" Name="KohlsUpdateBatchPrintService" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>  			
+        </commands>
+        <namespaces/>
+    </form>
+	 <!--- Start Drop2 changes for Batch Print -->
+
+
+
+<!-- Drop2 SIMINI - BEGIN -->
+ <form Id="com.kohls.ibm.ocf.pca.rcp.KohlsApplicationInitializer">
+        <commands>
+            <command APIName="KohlsVerifyTerminalPropertiesSyncService" APIType="SERVICE" Name="KohlsVerifyTerminalPropertiesSyncService" URL="DEFAULT" inputNamespace="" outputNamespace=""
+                postCommand="" preCommand=""/>
+        </commands>
+    </form>
+    <form Id="com.kohls.ibm.ocf.pca.tasks.siminiproperties.wizardpages.KOHLSSIMPropertiesPage">
+        <commands>
+            <command APIName="KohlsManageTerminalPropertiesService" APIType="SERVICE" Name="KohlsManageTerminalPropertiesService" URL="DEFAULT" inputNamespace="" outputNamespace="" prototype="" version="ver77"/>
+            <command APIName="KohlsModifyTerminalPropertiesService" APIType="SERVICE" Name="KohlsModifyTerminalPropertiesService" URL="DEFAULT" inputNamespace="" outputNamespace="" prototype="" version="ver77"/>
+        </commands>
+		</form>
+<!-- Drop2 SIMINI - END -->
+<!-- Start - Kohls Store Print Pick Slip Wizard definition-->
+    <form Id="com.kohls.ibm.ocf.pca.tasks.printSingles.wizards.KohlsStorePickSlipPrintWizard">
+        <Wizard>
+            <WizardEntities>
+                <WizardEntity id="KOHLSStorePickSlipPrintPage" impl="com.kohls.ibm.ocf.pca.tasks.printStorePickSlips.wizardpages.KOHLSStorePickSlipPrintPage" start="true" type="PAGE" xPos="64" yPos="51"/>
+            </WizardEntities>
+            <WizardTransitions/>
+        </Wizard>
+        <commands>
+            <command APIName="KOHLSGetShipmentListForPickSlipPrintService" APIType="SERVICE" Name="KOHLSGetShipmentListForPickSlipPrintService" URL="" inputNamespace="" outputNamespace="getShipmentList_Output" postCommand="" preCommand="" version=""/>
+             <command APIName="KOHLSStorePickSlipSyncService" APIType="SERVICE" Name="KOHLSStorePickSlipSyncService" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand="" version=""/>
+             <command APIName="KOHLSGetShipmentDetailsSyncService" APIType="SERVICE" Name="KOHLSGetShipmentDetailsSyncService" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand="" version=""/>
+             <command APIName="KohlsProcessSinglePrintSyncService" APIType="SERVICE" Name="KohlsProcessSinglePrintSyncService" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand="" version=""/>
+             
+            <command APIName="KOHLSPickSlipPrintForMultipleShipments" APIType="SERVICE" Name="KOHLSPickSlipPrintForMultipleShipments" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand="" version=""/>
+            <command APIName="changeShipmentStatus" APIType="API" Name="changeShipmentStatus" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand="" version=""/>
+        </commands>
+        <namespaces>
+            <namespace name="getShipmentList_Input" templateName="getShipmentList_Input" type="input"/>
+            <namespace name="getShipmentList_Output" templateName="getShipmentList_Output" type="output"/>
+        </namespaces>
+    </form>
+    <!-- End - Kohls Store Print Pick Slip Wizard definition-->
+    <!-- Start - Kohls Change Shipping Address -->
+    <form Id="com.kohls.ibm.ocf.pca.tasks.changeShippingAddress.wizardpages.KOHLSChangeShippingAddress">
+        <commands>
+            <command APIName="changeShipment" APIType="API" Name="changeShipment" URL="DEFAULT" inputNamespace="" outputNamespace="" prototype="" version="ver77"/>
+            <command APIName="getShipmentDetails" APIType="API" Name="getShipmentDetailsForChangeAddress" URL="DEFAULT" inputNamespace="" outputNamespace="" prototype="" version="ver77"/>
+        </commands>
+    </form>
+    <form Id="KohlsChangeShippingAddress">
+        <commands/>
+        <namespaces/>
+    </form>
+    <!-- End - Kohls Change Shipping Address -->
+     <form Id="com.kohls.ibm.ocf.pca.tasks.packshipment.popups.KOHLSRecordShortagePopup">
+        <commands>
+            <command APIName="getCommonCodeList" APIType="API" Name="getCommonCodeList" URL="DEFAULT" inputNamespace="" outputNamespace="" prototype="" version="ver77"/>
+        </commands>
+    </form>
+    
+    <form Id="com.kohls.ibm.ocf.pca.tasks.printSingles.wizards.KohlsStorePickSlipPrintWizard">
+        <commands>
+        	
+        	<command APIName="KOHLSChangeShipmentForBulkPrint" APIType="SERVICE" Name="KOHLSChangeShipmentForBulkPrint" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+        	<command APIName="KOHLSChangeShipmentForPickSlip" APIType="SERVICE" Name="KOHLSChangeShipmentForPickSlip" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+            <command APIName="KOHLSGenerateBatchNoStampAtShipmentLineService" APIType="SERVICE" Name="KOHLSGenerateBatchNoStampAtShipmentLineService" URL="" inputNamespace="" outputNamespace="" postCommand="" preCommand=""/>
+        </commands>
+    </form>
+    
+</forms>

@@ -1,0 +1,72 @@
+<div class="sc-platform-screen-default itemdetails">
+    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'isccsScreen' , 
+		colspan : 1 , 
+		uId : 'ItemLocationsContainer' , 
+		layoutAlign : 'top'  
+ ">
+ <div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="		'class' : 'primaryInformation blockComponent productModalTitle' , 
+		uId : 'lblnoValidCombination'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_Sales_Floor_Locations')
+			}
+		}
+"></div>
+<hr>
+ <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'primaryProductDetailPanel shipmentLineRepeatingPanel' , 
+		uId : 'SalesFloorContainer'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 repeatingScreen : 	{
+		 sourcenamespace : 			'ShipmentLine'
+,
+		 repeatingnamespace : 			'SalesFloorLocation'
+,
+		 path : 			'SalesFloorLocations.SalesFloorLocation'
+,
+		 repeatingscreenpath : 			'SalesFloorLocation'
+	}
+,
+		 repeatingscreenGeneratorFunction : 			'getSalesfloorLocationRepeatingScreenData'
+	}
+			}
+		}
+"></div>
+ <div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="		'class' : 'primaryInformation blockComponent productModalTitle' , 
+		uId : 'lblnoValidCombination'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_Stockroom_Locations')
+			}
+		}
+"></div>
+<hr>
+ <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'primaryProductDetailPanel shipmentLineRepeatingPanel' , 
+		uId : 'StockRoomContainer'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 repeatingScreen : 	{
+		 sourcenamespace : 			'ShipmentLine'
+,
+		 repeatingnamespace : 			'StockRoomLocation'
+,
+		 path : 			'StockRoomLocations.StockRoomLocation'
+,
+		 repeatingscreenpath : 			'StockRoomLocation'
+	}
+,
+		 repeatingscreenGeneratorFunction : 			'getStockRoomLocationRepeatingScreenData'
+	}
+			}
+		}
+"></div>
+ </div></div>

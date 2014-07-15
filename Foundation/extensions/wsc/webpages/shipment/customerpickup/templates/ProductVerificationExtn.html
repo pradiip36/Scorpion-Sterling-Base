@@ -1,0 +1,169 @@
+		<div>
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_contentpaneNameOrderNo' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '5' , 
+		_sc_extensibility_referenceUId : 'extn_button_suspend' , 
+		_sc_extensibility_position : 'after'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_button_suspend' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '3' , 
+		_sc_extensibility_referenceUId : 'pickAll' , 
+		_sc_extensibility_position : 'after'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Suspend_Pick_Up')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_button_suspend' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '4' , 
+		_sc_extensibility_referenceUId : 'Hold_LocationLabel' , 
+		_sc_extensibility_position : 'before'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_button_void' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '8' , 
+		_sc_extensibility_referenceUId : 'extn_button_suspend' , 
+		_sc_extensibility_position : 'after'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Void1')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'pickAll'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'addProductButton'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Add')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_datalabel_customerName' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '2' , 
+		_sc_extensibility_referenceUId : 'productScanPanel' , 
+		_sc_extensibility_position : 'before'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_Customer_Name')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.BillToAddress.FirstName'
+,
+		 dynamicBindingFunc : 			'concatCustomerName'
+,
+		 namespace : 			'CancellationReasonList'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_datalabel_customerName' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '6' , 
+		_sc_extensibility_referenceUId : 'extn_contentpaneNameOrderNo' , 
+		_sc_extensibility_position : 'first'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_datalabel_orderNo' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '1' , 
+		_sc_extensibility_referenceUId : 'productScanPanel' , 
+		_sc_extensibility_position : 'before'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('Order_Number')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.OrderNo'
+,
+		 namespace : 			'extn_shipmentInfo_input'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_datalabel_orderNo' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '7' , 
+		_sc_extensibility_referenceUId : 'extn_contentpaneNameOrderNo' , 
+		_sc_extensibility_position : 'last'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'Hold_LocationLabel'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_datalabel_HoldLocation' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '9' , 
+		_sc_extensibility_referenceUId : 'Hold_LocationLabel' , 
+		_sc_extensibility_position : 'after'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('Label_Hold_Location')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/TextBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'scanProductIdTxt'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_Scan_or_enter_SKU_UPC')
+			}
+		}
+	 					}">
+		 	</div>  
+		</div>

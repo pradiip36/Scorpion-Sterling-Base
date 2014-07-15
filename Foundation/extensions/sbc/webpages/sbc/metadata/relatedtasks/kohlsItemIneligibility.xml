@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Licensed Materials - Property of IBM
+IBM Sterling Business Center
+(C) Copyright IBM Corp. 2009, 2011 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+ 
+<RelatedTasks>
+	<Categories>
+		<Category CategoryID="ItemIneligibility" CategoryName="Item Ineligibility">
+			<Tasks>
+				<Task TaskName="Add Ineligible Items" ActionID="sbckohlsaddineligibilityaction" TaskID="SBCITMINEL001" />
+				<Task TaskName="View Ineligible Items"  ActionID="sbckohlslistineligibilityaction"  TaskID="SBCITMINEL002" />
+			</Tasks>
+		</Category>
+	</Categories>
+</RelatedTasks>

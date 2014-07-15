@@ -1,0 +1,46 @@
+#!/bin/env bash
+#----------------------------#
+# This job will call OFK912L
+#----------------------------#
+
+#Run home profile of current user
+[[ -f ~/.bash_profile ]] && . ~/.bash_profile
+
+#Setup some basic variables
+me=$0
+# User is either "pzoms" in prod or "nzoms" in test.
+# Server names start with a "p" or "n" depending on region.
+user=$(hostname|cut -c1)zoms
+echo user=$user
+
+#Declare rc as an integer
+typeset -i rc
+
+#Build and print the command
+Ljob=${K_SRC}/job/of/$(basename $0|awk -FU '{print $1}')L
+Ljobargs="$@"
+Ljobcmd="${Ljob} ${Ljobargs}"
+echo "Ljobcmd=${Ljobcmd}"
+
+if [[ ! -f ${Ljob} ]]; then
+    printf " Job ${Ljob} does not exist.  Cannot continue\n"
+    rc=2
+else
+    if [[ $(grep -c ^${user}: /etc/passwd) -eq 1 ]]; then
+	sudo -H -u ${user} ${Ljobcmd}
+	rc=$?
+    else
+	printf "User ${user} not defined on this host ($(hostname)).  Cannot continue.\n"
+	rc=3
+    fi
+fi
+
+#-----------------------------------------------------------#
+# Call script to build FTP control cards for transferring   #
+# Log Files and return code to the Mainframe                #
+# NOTE: Currently commented out on purpose.                 #
+#       Current standard is to NOT pull log files back to   #
+#       the  mainframe.                                     #
+#-----------------------------------------------------------#
+#${K_SRC}/is/IS_ESP_upld.sh
+exit ${rc}

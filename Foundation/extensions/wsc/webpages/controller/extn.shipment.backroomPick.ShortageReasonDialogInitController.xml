@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.shipment.backroomPick.ShortageReasonDialogInitController"
+    requestMethodSupported="POST" screenId="extn.shipment.backroomPick.ShortageReasonDialog">
+    <Group isAggregator="Y"/>
+    <MashupRefs>
+        <MashupRef extnType="ADD" mashupId="extn_getShortageResolutions"
+            mashupRefId="extn_getShortageResolutions" permissionId=""/>
+    </MashupRefs>
+</Controller>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shipment ShipmentKey="" AssignedToUserId="">
+	<ShipmentLines>
+		<ShipmentLine ShipmentLineKey="" ItemID="">
+			<Extn ExtnShortPickIndicator=""/>
+			<User UserId = "" />
+		</ShipmentLine>
+	</ShipmentLines>
+</Shipment>

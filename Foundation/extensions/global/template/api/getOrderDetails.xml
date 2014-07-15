@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--getOrderDetail Output XML-->
+<Order DocumentType="" EnterpriseCode="" OrderHeaderKey="" Createts="" 
+    OrderNo="" SCAC="" BuyerOrganizationCode="" SellerOrganizationCode="" ShipNode="" ReqDeliveryDate="" ReqShipDate="" CarrierServiceCode=""  OrderDate="">    
+    <Extn ExtnPOReceiptID=""  />
+    <OrderLines>
+        <!--1 or more order
+        line-->
+        <OrderLine OrderHeaderKey="" OrderLineKey=""
+            OrderedQty="" OrigOrderLineKey="" OriginalOrderedQty=""
+            PrimeLineNo="" ShipNode="" SubLineNo="" CarrierServiceCode="" SCAC="">     
+			<ChainedFromOrderLine OrderHeaderKey=""><Order OrderNo=""/></ChainedFromOrderLine>		
+            <Item ItemDesc="" ItemID="" ProductClass=""
+                ProductLine="" UnitOfMeasure=""/>  		
+		<Extn ExtnWrapTogetherGroupCode="" ExtnGiftWrapLineNo=" " ExtnGiftItemID=" "/>
+		<LineCharges>
+                <LineCharge ChargeCategory="" ChargeName=""
+                    ChargeNameKey="" InvoicedChargeAmount=""                    
+                    ChargeAmount="" Reference=""
+                    RemainingChargeAmount="" />
+        </LineCharges>
+		<PersonInfoShipTo  AddressLine1="" AddressLine2="" AddressLine3=""
+        AddressLine4="" City="" Company="" Country="" DayPhone=""
+        EMailID="" FirstName="" LastName="" State="" ZipCode=""/>
+		<OrderStatuses>
+			<OrderStatus  ShipNode="" Status="" StatusDate="" StatusDescription="" StatusQty="" />
+			</OrderStatuses>
+        </OrderLine>
+    </OrderLines>    
+    <HeaderCharges>
+        <HeaderCharge ChargeCategory="" ChargeName="" ChargeNameKey=""
+            InvoicedChargeAmount="" ChargeAmount="" Reference="" RemainingChargeAmount=""/>
+    </HeaderCharges>  
+	<ChargeTransactionDetails>
+
+		<ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="" AuthorizationID="" BookAmount="" ChargeTransactionKey="" ChargeType="" 
+			CollectionDate="" CreditAmount="" DebitAmount="" DistributedAmount="" ExecutionDate="" HoldAgainstBook="" OpenAuthorizedAmount="" OrderHeaderKey="" 
+			OrderInvoiceKey="" PaymentKey="" RequestAmount="" SettledAmount="" Status="" StatusReason="" TransactionDate="" TransferFromOhKey="" TransferToOhKey="" 
+			UserExitStatus="">
+		<InvoiceCollectionDetails>
+			<InvoiceCollectionDetail AmountCollected="" DateInvoiced="" InvoiceNo="" InvoiceType="" MasterInvoiceNo="" 
+			OrderInvoiceKey="" ReturnReleaseKey="" ShipmentKey="" TotalAmount="" /> 
+		</InvoiceCollectionDetails>
+		<CreditCardTransactions>
+		  <CreditCardTransaction AuthAmount="" AuthAvs="" AuthCode="" AuthReturnCode="" AuthReturnFlag="" AuthReturnMessage="" AuthTime="" 
+		  CVVAuthCode="" ChargeTransactionKey="" CreditCardTransactionKey="" InternalReturnCode="" InternalReturnFlag="" InternalReturnMessage="" 
+		  ParentKey="" Reference1="" Reference2="" RequestId="" TranAmount="" TranRequestTime="" TranReturnCode="" TranReturnFlag="" TranReturnMessage="" TranType="" /> 
+		 </CreditCardTransactions>
+
+		<PaymentMethod AwaitingAuthInterfaceAmount="" AwaitingChargeInterfaceAmount="" ChargeSequence="" CheckNo="" CheckReference="" 
+			  CreditCardExpDate="" CreditCardName="" CreditCardNo="" CreditCardType="" CustomerAccountNo="" CustomerPONo="" DisplayCreditCardNo="" 
+			  DisplayPaymentReference1="" DisplaySvcNo="" FirstName="" IncompletePaymentType="" LastName="" MaxChargeLimit="" MiddleName="" PaymentKey="" 
+			  PaymentReference1="" PaymentReference2="" PaymentReference3="" PaymentType="" RequestedAuthAmount="" RequestedChargeAmount="" SuspendAnyMoreCharges="" 
+			  SvcNo="" TotalAltRefundedAmount="" TotalAuthorized="" TotalCharged="" TotalRefundedAmount="" UnlimitedCharges="" /> 	
+		</ChargeTransactionDetail>
+	</ChargeTransactionDetails>
+	<PaymentMethods>
+      <PaymentMethod AwaitingAuthInterfaceAmount="" AwaitingChargeInterfaceAmount="" BillToKey="" ChargeSequence="" CheckNo="" CheckReference="" CreditCardExpDate="" CreditCardName="" CreditCardNo="" CreditCardType="" CustomerAccountNo="" CustomerPONo="" DisplayCreditCardNo="" DisplayCustomerAccountNo="" DisplayPaymentReference1="" DisplaySvcNo="" FirstName="" FundsAvailable="" GetFundsAvailableUserExitInvoked="" IncompletePaymentType="" LastName="" MaxChargeLimit="" MiddleName="" PaymentKey="" PaymentReference1="" PaymentReference2="" PaymentReference3="" PaymentType="" RequestedAuthAmount="" RequestedChargeAmount="" SuspendAnyMoreCharges="" SvcNo="" TotalAuthorized="" TotalCharged="" TotalRefundedAmount="" UnlimitedCharges="">
+  
+  </PaymentMethod>
+  </PaymentMethods>
+</Order>

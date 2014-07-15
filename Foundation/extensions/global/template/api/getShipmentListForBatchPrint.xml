@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shipment TotalNumberOfRecords=""  CarrierServiceCode="" DocumentType="" OrderHeaderKey="" OrderNo="" 
+ SellerOrganizationCode="" ShipNode="" ShipmentKey="" ShipmentNo="">
+ <Extn ExtnCartNumber="" ExtnDSVInvoiceNumber="" ExtnIsShipAlone="" ExtnSALineGiftReceiptID=""
+        ExtnSAReceiptID="" ExtnShipmentFamily="" ExtnStoreRdcReceiptID="" ExtnWMSShipmentNo=""/>
+    	
+    <ToAddress AddressLine1="" AddressLine2="" AddressLine3="" City="" Country="" DayPhone=""
+        EMailID="" FirstName="" LastName="" State="" ZipCode=""/>
+		
+	<BillToAddress AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4=""  City="" Country=""  DayPhone="" 
+		EMailID="" FirstName="" LastName="" State=""  ZipCode=""/>
+        
+    <ShipmentLines TotalNumberOfRecords="">
+        <ShipmentLine ItemDesc="" ItemID="" OrderHeaderKey="" OrderLineKey=""
+            OrderNo="" OrderReleaseKey="" ProductClass="" Quantity=""            
+            ShipmentKey="" ShipmentLineKey="" ShipmentLineNo=""
+            ShipmentSubLineNo="" UnitOfMeasure="">
+            			
+            <Extn ExtnBatchNo="" ExtnCurrRetailPrice="" ExtnDSVLineHandlingChrg=""
+                ExtnDSVMiscChrg="" ExtnDSVUnitCost=""/>
+			<OrderLine OrderLineKey="">
+					<ItemDetails ItemID="" UnitOfMeasure="" OrganizationCode="" ProductClass="">
+						<Extn />
+					</ItemDetails>
+					<LinePriceInfo UnitPrice=""/>	
+					<LineTaxes>
+						  <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="" Reference_1="" Reference_2="" Reference_3="" RemainingTax="" Tax="" TaxName="" TaxPercentage="" /> 
+						 <TaxSummary>
+							<TaxSummaryDetail InvoicedTax="" OverallTax="" RemainingTax="" TaxName="" /> 
+						  </TaxSummary>
+					 </LineTaxes>				
+			</OrderLine>          
+			<Order OrderDate="" OrderHeaderKey="" OrderName="" OrderNo="">				
+				<Notes>
+				<Note NoteText="" ReasonCode="" SequenceNo="" TableKey=""/>
+				</Notes>
+				<PaymentMethods>
+					<PaymentMethod
+						CreditCardType="" CustomerAccountNo="" DisplayCreditCardNo=""
+						DisplayCustomerAccountNo="" >                               
+					</PaymentMethod>
+				</PaymentMethods>
+			</Order>   
+			
+        </ShipmentLine>
+    </ShipmentLines>
+</Shipment>

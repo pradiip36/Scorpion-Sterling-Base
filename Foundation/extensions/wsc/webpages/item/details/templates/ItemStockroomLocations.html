@@ -1,0 +1,58 @@
+<div class="sc-platform-screen-default itemdetails">
+    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'isccsScreen singlecolumntable' , 
+		colspan : 1 , 
+		uId : 'StockRoomPanel' , 
+		layoutAlign : 'top'  
+ "><div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		'class' : 'autoLabelZeroWidth specProd' , 
+		uId : 'location'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'StockRoomLocation.Location'
+,		dynamicBindingFunc : 			'getLocation',
+		 namespace : 			'StockRoomLocation'
+	}
+	}
+,	
+			 	label : 			this.getBundleString('Location')
+			}
+		}
+"></div>
+<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		'class' : 'autoLabelZeroWidth specProd' , 
+		uId : 'barCode'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'StockRoomLocation.BarCode'
+,		dynamicBindingFunc : 			'getBarCode',
+		 namespace : 			'StockRoomLocation'
+	}
+	}
+,	
+			 	label : 			this.getBundleString('extn_Bar_Code')
+			}
+		}
+"></div>
+<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		'class' : 'autoLabelZeroWidth specProd' , 
+		uId : 'quantity'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'StockRoomLocation.Quantity'
+,		dynamicBindingFunc : 			'getQuantity',
+		 namespace : 			'StockRoomLocation'
+	}
+	}
+,	
+			 	label : 			this.getBundleString('Quantity')
+			}
+		}
+"></div>
+</div></div>

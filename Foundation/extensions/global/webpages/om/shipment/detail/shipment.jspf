@@ -1,0 +1,58 @@
+<%!
+
+void rearrangeBundleComponents(YFCElement ShipmentDoc,YFCElement ShipmentLineDoc){
+YFCElement ShipmentLinesElem = (YFCElement)ShipmentDoc.getChildElement("ShipmentLines");
+String ShipmentLineKey = ShipmentLineDoc.getAttribute("ShipmentLineKey");
+for (Iterator i = ShipmentLinesElem.getChildren(); i.hasNext();) {
+	YFCElement child = (YFCElement)i.next();
+	if(!YFCCommon.equals("BUNDLE",child.getAttribute("KitCode")) && YFCCommon.isVoid(child.getAttribute("ParentShipmentLineKey"))){
+		ShipmentLinesElem.removeChild(child);
+		}
+	}
+YFCElement cloneShipmentLinesElem = (YFCElement)ShipmentLinesElem.cloneNode(true);
+
+for (Iterator i = ShipmentLinesElem.getChildren(); i.hasNext();) {
+	YFCElement child = (YFCElement)i.next();
+	ShipmentLinesElem.removeChild(child);
+	}
+
+for (Iterator i = cloneShipmentLinesElem.getChildren(); i.hasNext();) {
+	YFCElement child = (YFCElement)i.next();
+	String spaceString = "";
+	if(ShipmentLineKey.equals(child.getAttribute("ShipmentLineKey"))){
+	//ShipmentLinesElem.appendChild(child);
+	appendComponents(child,cloneShipmentLinesElem,ShipmentLinesElem,spaceString);
+		}	
+	}
+}
+
+void appendComponents(YFCElement ComponentElement,YFCElement BundleComponents,YFCElement outpulModelDoc,String spaceString){
+		ArrayList childComponents = new ArrayList();
+		for ( Iterator it1=BundleComponents.getChildren();it1.hasNext(); )
+			{
+			YFCElement bundleComponentElement = (YFCElement)it1.next();
+			String ParentComponentKey = bundleComponentElement.getAttribute("ParentShipmentLineKey");
+			String ComponentKey = ComponentElement.getAttribute("ShipmentLineKey");
+			if(YFCCommon.equals(ParentComponentKey,ComponentKey))
+				{
+				childComponents.add(bundleComponentElement);
+				}
+			}
+						
+		Iterator newit = childComponents.iterator();
+		int childComponentCounter = 0;
+		while(newit.hasNext()){
+			childComponentCounter++;
+			YFCElement childComponent = (YFCElement)newit.next();
+			String childComponentDesc = childComponent.getAttribute("ItemID");
+			String newChildComponentDesc = spaceString +  childComponentDesc;
+			String trimmedString = newChildComponentDesc.substring(0,newChildComponentDesc.length());
+			childComponent.setAttribute("AppendedBundleComponentID",trimmedString);
+			outpulModelDoc.appendChild(childComponent);	
+			String substr = newChildComponentDesc.substring(0,(newChildComponentDesc.length()-childComponentDesc.length()));
+			appendComponents(childComponent,BundleComponents,outpulModelDoc,substr);
+			}
+	}
+
+
+%>

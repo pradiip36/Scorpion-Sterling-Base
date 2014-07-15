@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="ShipmentEditorRTExtn"
+        extnPackage="extn.editors"
+        originalScreen="wsc.editors.ShipmentEditorRT"
+        originalScreenPackage="wsc.editors" type="diffrential">
+        <Items>
+            <TitlePane _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="relatedTaskContainer" renderHidden="true"/>
+            <Button _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lnk_RT_PrintPickTicket"
+                label="$(_scSimpleBundle:PrintPickTicket)"
+                renderHidden="true" uId="extn_button_RT_printPickTicket"/>
+            <Button _sc_extensibility_moveOrder="3"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="lnk_RT_PrintPickTicket" uId="extn_button_RT_printPickTicket"/>
+            <Button _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="lnk_RT_CustomerPick"
+                label="$(_scSimpleBundle:RT_CustomerPickup)" uId="extn_button_RT_startCustomerPick"/>
+            <Button _sc_extensibility_moveOrder="4"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_button_RT_printPickTicket" uId="extn_button_RT_startCustomerPick"/>
+            <Link _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lnk_RT_PrintPickTicket" renderHidden="true"/>
+            <Link _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lnk_RT_CustomerPick" renderHidden="true"/>
+            <Link _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lnk_RT_BackroomPick" renderHidden="true"/>
+            <Link _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lnk_RT_PrintReceipt" renderHidden="true"/>
+        </Items>
+    </ScreenExtension>
+</ExtensionMetaData>

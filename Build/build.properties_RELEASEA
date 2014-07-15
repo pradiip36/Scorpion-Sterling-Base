@@ -1,0 +1,40 @@
+#-- PROJECT INFORMATION --#
+project.name=kohls
+releaseJar=Kohls1_0
+customizedProductJar=KohlsJar
+
+#-- VERSION INFORMATION --#
+release.version=0.1.0
+
+##--ENV Information --#
+WL_HOME=/prod/prop/weblogic/10.3.0
+INSTALL_DIR=/test/prop/of_a/Foundation/
+JAVA_HOME="/prod/prop/mg/java16_pap6460-20100624_01"
+env.SOURCE_DB_1=test_xml
+env.SOURCE_PASSWORD_1=
+env.TARGET_DB_1=kohls_test_a
+env.TARGET_PASSWORD_1=st3rl1ng
+env.TARGET_HTTP_PASSWORD_1=password
+
+env.SOURCE_DB_2=test_xml
+env.SOURCE_PASSWORD_2=
+env.TARGET_DB_2=kohls_test_a
+env.TARGET_PASSWORD_2=st3rl1ng
+env.TARGET_HTTP_PASSWORD_2=password
+
+env.dev=
+env.qa=
+env.test=true
+
+mode.local=true
+
+
+#-- CVS INFORMATION --#
+cvs.user=pbelgaumkar
+cvs.pass=pb1554
+cvs.server=10.11.20.75
+cvs.root=/usr/local/cvsrep/cvsrootKohls
+cvs.fetch.dir=/test/prop/of_a/build/temp/
+cvs.module.name=Phase1-ReleaseA/dev
+devhome=${cvs.fetch.dir}/${cvs.module.name}
+release.dir=./release

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.shipment.customerpickup.SummaryExtnBundle" screenId="extn.shipment.customerpickup.SummaryExtn">
+    <BundleEntries>
+        <BundleEntry bundleEntryId="extn_btn_previous_Button_label"
+            bundleKey="extn_Previous" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_btn_previous"/>
+        <BundleEntry bundleEntryId="extn_btn_void_Button_label"
+            bundleKey="extn_Void2" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_btn_void"/>
+        <BundleEntry bundleEntryId="extn_GiftReceiptPrompt_Label_value"
+            bundleKey="extn_GiftReceiptPromptLabel"
+            bundleValueFn="_scSimpleBundle" property="value"
+            type="WIDGET" uId="extn_GiftReceiptPrompt"/>
+        <BundleEntry bundleEntryId="extn_NoofGRLabel_Label_value"
+            bundleKey="extn_Number_of_gift_receipts_to_print"
+            bundleValueFn="_scBundle" property="value" type="WIDGET" uId="extn_NoofGRLabel"/>
+    </BundleEntries>
+</ScreenBundle>

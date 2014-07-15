@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="Order">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="HeaderCharges"/>
+        <xs:element ref="HeaderTaxes"/>
+        <xs:element ref="OrderLines"/>
+        <xs:element ref="PersonInfoBillTo"/>
+        <xs:element ref="PaymentMethods"/>
+        <xs:element ref="Promotions"/>
+        <xs:element ref="Extn"/>
+      </xs:sequence>
+      <xs:attribute name="BillToID" use="required"/>
+      <xs:attribute name="CustomerEMailID" use="required"/>
+      <xs:attribute name="DocumentType" use="required" type="xs:integer"/>
+      <xs:attribute name="EnteredBy" use="required" type="xs:NCName"/>
+      <xs:attribute name="EnterpriseCode" use="required" type="xs:NCName"/>
+      <xs:attribute name="OrderDate" use="required" type="xs:dateTime"/>
+      <xs:attribute name="OrderNo" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HeaderCharges">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="HeaderCharge"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HeaderCharge">
+    <xs:complexType>
+      <xs:attribute name="ChargeAmount" use="required" type="xs:decimal"/>
+      <xs:attribute name="ChargeCategory" use="required" type="xs:NCName"/>
+      <xs:attribute name="ChargeName" use="required" type="xs:NCName"/>
+      <xs:attribute name="Reference" use="required" type="xs:NMTOKEN"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HeaderTaxes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="HeaderTax"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HeaderTax">
+    <xs:complexType>
+      <xs:attribute name="ChargeCategory" use="required" type="xs:NCName"/>
+      <xs:attribute name="ChargeName" use="required" type="xs:NCName"/>
+      <xs:attribute name="Tax" use="required" type="xs:decimal"/>
+      <xs:attribute name="TaxName" use="required"/>
+      <xs:attribute name="TaxPercentage" use="required" type="xs:decimal"/>
+      <xs:attribute name="TaxableFlag" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OrderLines">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="OrderLine"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OrderLine">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Extn"/>
+        <xs:element ref="Item"/>
+        <xs:element ref="LinePriceInfo"/>
+        <xs:element ref="LineCharges"/>
+        <xs:element ref="LineTaxes"/>
+        <xs:element ref="PersonInfoShipTo"/>
+      </xs:sequence>
+      <xs:attribute name="CarrierServiceCode" use="required"/>
+      <xs:attribute name="GiftFlag" use="required" type="xs:NCName"/>
+      <xs:attribute name="GiftWrap" use="required" type="xs:NCName"/>
+      <xs:attribute name="LineType" use="required" type="xs:NCName"/>
+      <xs:attribute name="OrderedQty" use="required" type="xs:integer"/>
+      <xs:attribute name="PackListType" use="required"/>
+      <xs:attribute name="PrimeLineNo" use="required" type="xs:integer"/>
+      <xs:attribute name="SubLineNo" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Item">
+    <xs:complexType>
+      <xs:attribute name="ItemID" use="required" type="xs:integer"/>
+      <xs:attribute name="ItemShortDesc" use="required"/>
+      <xs:attribute name="ProductClass" use="required" type="xs:NCName"/>
+      <xs:attribute name="SKUInventoried" use="required" type="xs:boolean"/>
+      <xs:attribute name="UnitOfMeasure" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinePriceInfo">
+    <xs:complexType>
+      <xs:attribute name="IsPriceLocked" use="required" type="xs:NCName"/>
+      <xs:attribute name="ListPrice" use="required" type="xs:decimal"/>
+      <xs:attribute name="RetailPrice" use="required" type="xs:decimal"/>
+      <xs:attribute name="TaxableFlag" use="required" type="xs:NCName"/>
+      <xs:attribute name="UnitPrice" use="required" type="xs:decimal"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LineCharges">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="LineCharge"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LineCharge">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="Extn"/>
+      </xs:sequence>
+      <xs:attribute name="ChargeAmount" use="required" type="xs:integer"/>
+      <xs:attribute name="ChargeCategory" use="required" type="xs:NCName"/>
+      <xs:attribute name="ChargeName" use="required" type="xs:NCName"/>
+      <xs:attribute name="ChargePerLine" use="required" type="xs:decimal"/>
+      <xs:attribute name="ChargePerUnit" type="xs:integer"/>
+      <xs:attribute name="IsBillable" use="required" type="xs:NCName"/>
+      <xs:attribute name="IsDiscount" use="required" type="xs:NCName"/>
+      <xs:attribute name="Reference" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LineTaxes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="LineTax"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LineTax">
+    <xs:complexType>
+      <xs:attribute name="ChargeCategory" use="required" type="xs:NCName"/>
+      <xs:attribute name="ChargeName" use="required" type="xs:NCName"/>
+      <xs:attribute name="Reference1" use="required"/>
+      <xs:attribute name="Reference2" use="required"/>
+      <xs:attribute name="Reference3" use="required"/>
+      <xs:attribute name="Tax" use="required" type="xs:decimal"/>
+      <xs:attribute name="TaxName" use="required" type="xs:NCName"/>
+      <xs:attribute name="TaxPercentage" use="required" type="xs:decimal"/>
+      <xs:attribute name="TaxableFlag" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PersonInfoShipTo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Extn"/>
+      </xs:sequence>
+      <xs:attribute name="AddressLine1" use="required"/>
+      <xs:attribute name="AddressLine2" use="required"/>
+      <xs:attribute name="AddressLine3" use="required"/>
+      <xs:attribute name="City" use="required" type="xs:NCName"/>
+      <xs:attribute name="Country" use="required" type="xs:NCName"/>
+      <xs:attribute name="DayPhone" use="required" type="xs:integer"/>
+      <xs:attribute name="EmailID" use="required"/>
+      <xs:attribute name="FirstName" use="required" type="xs:NCName"/>
+      <xs:attribute name="LastName" use="required" type="xs:NCName"/>
+      <xs:attribute name="State" use="required" type="xs:NCName"/>
+      <xs:attribute name="TaxGeoCode" use="required" type="xs:integer"/>
+      <xs:attribute name="ZipCode" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PersonInfoBillTo">
+    <xs:complexType>
+      <xs:attribute name="AddressLine1" use="required"/>
+      <xs:attribute name="AddressLine2" use="required"/>
+      <xs:attribute name="AddressLine3" use="required"/>
+      <xs:attribute name="City" use="required" type="xs:NCName"/>
+      <xs:attribute name="Country" use="required" type="xs:NCName"/>
+      <xs:attribute name="DayPhone" use="required" type="xs:integer"/>
+      <xs:attribute name="FirstName" use="required" type="xs:NCName"/>
+      <xs:attribute name="LastName" use="required" type="xs:NCName"/>
+      <xs:attribute name="State" use="required" type="xs:NCName"/>
+      <xs:attribute name="ZipCode" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PaymentMethods">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="PaymentMethod"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PaymentMethod">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="PaymentDetailsList"/>
+      </xs:sequence>
+      <xs:attribute name="CreditCardExpDate" use="required" type="xs:dateTime"/>
+      <xs:attribute name="CreditCardNo" use="required" type="xs:integer"/>
+      <xs:attribute name="CreditCardType" use="required" type="xs:NCName"/>
+      <xs:attribute name="DisplayCreditCardNo" use="required" type="xs:integer"/>
+      <xs:attribute name="DisplayPaymentReference1" use="required" type="xs:integer"/>
+      <xs:attribute name="MaxChargeLimit" use="required" type="xs:decimal"/>
+      <xs:attribute name="PaymentReference1" use="required"/>
+      <xs:attribute name="PaymentReference2" use="required" type="xs:NCName"/>
+      <xs:attribute name="PaymentReference3" use="required" type="xs:integer"/>
+      <xs:attribute name="PaymentType" use="required"/>
+      <xs:attribute name="SvcNo" use="required"/>
+      <xs:attribute name="UnlimitedCharges" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PaymentDetailsList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="PaymentDetails"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PaymentDetails">
+    <xs:complexType>
+      <xs:attribute name="AuthAmount" use="required" type="xs:decimal"/>
+      <xs:attribute name="AuthAvs" use="required" type="xs:NCName"/>
+      <xs:attribute name="AuthCode" use="required" type="xs:NMTOKEN"/>
+      <xs:attribute name="AuthReturnCode" use="required" type="xs:NCName"/>
+      <xs:attribute name="AuthReturnFlag" use="required" type="xs:NCName"/>
+      <xs:attribute name="AuthReturnMessage" use="required" type="xs:NCName"/>
+      <xs:attribute name="AuthTime" use="required" type="xs:dateTime"/>
+      <xs:attribute name="AuthorizationExpirationDate" use="required" type="xs:dateTime"/>
+      <xs:attribute name="AuthorizationID" use="required" type="xs:NMTOKEN"/>
+      <xs:attribute name="CVVAuthCode" use="required"/>
+      <xs:attribute name="ChargeSequence" use="required"/>
+      <xs:attribute name="ChargeType" use="required" type="xs:NCName"/>
+      <xs:attribute name="HoldAgainstBook" use="required" type="xs:NCName"/>
+      <xs:attribute name="PaymentType" use="required" type="xs:NCName"/>
+      <xs:attribute name="ProcessedAmount" use="required" type="xs:decimal"/>
+      <xs:attribute name="Reference1" use="required" type="xs:NMTOKEN"/>
+      <xs:attribute name="Reference2" use="required"/>
+      <xs:attribute name="RequestAmount" use="required" type="xs:decimal"/>
+      <xs:attribute name="RequestId" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Promotions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Promotion"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Promotion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Extn"/>
+      </xs:sequence>
+      <xs:attribute name="PromotionGroup" use="required" type="xs:NCName"/>
+      <xs:attribute name="PromotionId" use="required" type="xs:integer"/>
+      <xs:attribute name="PromotionType" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Extn">
+    <xs:complexType>
+      <xs:attribute name="ExtnCouponPercentage" type="xs:decimal"/>
+      <xs:attribute name="ExtnCurrentItemStatus" type="xs:integer"/>
+      <xs:attribute name="ExtnDSVCost" type="xs:decimal"/>
+      <xs:attribute name="ExtnGiftFrom"/>
+      <xs:attribute name="ExtnGiftMessage"/>
+      <xs:attribute name="ExtnGiftTo"/>
+      <xs:attribute name="ExtnIsHazardous" type="xs:NCName"/>
+      <xs:attribute name="ExtnIsMilitary" type="xs:NCName"/>
+      <xs:attribute name="ExtnIsPOBox" type="xs:NCName"/>
+      <xs:attribute name="ExtnKCECouponAmount" type="xs:decimal"/>
+      <xs:attribute name="ExtnKCECouponBalance" type="xs:decimal"/>
+      <xs:attribute name="ExtnKCECouponEventID" type="xs:integer"/>
+      <xs:attribute name="ExtnLineGiftReceiptID" type="xs:NCName"/>
+      <xs:attribute name="ExtnPromotionCode" type="xs:NMTOKEN"/>
+      <xs:attribute name="ExtnPromotionId"/>
+      <xs:attribute name="ExtnPromotionScheme" type="xs:integer"/>
+      <xs:attribute name="ExtnShipAlone"/>
+      <xs:attribute name="ExtnTaxableAmount" type="xs:decimal"/>
+      <xs:attribute name="ExtnWrapTogetherGroupCode"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

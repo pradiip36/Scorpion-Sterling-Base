@@ -1,0 +1,35 @@
+#
+#41ShipmentPrintServer::9949:KOHLS_HEAP_FLAGS=-Xms256m -Xmx512m
+#855ShipmentPrintServer::9948:KOHLS_HEAP_FLAGS=-Xms256m -Xmx512m
+#860ShipmentPrintServer::9947:KOHLS_HEAP_FLAGS=-Xms256m -Xmx512m
+#865ShipmentPrintServer::9946:KOHLS_HEAP_FLAGS=-Xms256m -Xmx512m
+#875ShipmentPrintServer::9945:KOHLS_HEAP_FLAGS=-Xms256m -Xmx512m
+#810ShipmentPrintServer::9944:KOHLS_HEAP_FLAGS=-Xms256m -Xmx512m
+#830ShipmentPrintServer::9943:KOHLS_HEAP_FLAGS=-Xms256m -Xmx512m
+#840ShipmentPrintServer::9942:KOHLS_HEAP_FLAGS=-Xms256m -Xmx512m
+#885ShipmentPrintServer::9941:KOHLS_HEAP_FLAGS=-Xms256m -Xmx512m
+#890ShipmentPrintServer::9940:KOHLS_HEAP_FLAGS=-Xms256m -Xmx512m
+DSVInvIntegServer::9939:
+#EFCInvSyncIntegServer::9938:KOHLS_HEAP_FLAGS=-Xms2048m -Xmx3072m
+#FileTransIntegServer::9937:
+InvAdj809IntegServer::9936:
+InvAdj819IntegServer::9935:KOHLS_HEAP_FLAGS=-Xms512m -Xmx768m
+InvAdj829IntegServer::9934:
+InvAdj873IntegServer::9933:
+#InvSyncMismatchIntegServer::9932:
+#ItemIntegServer::9931:
+JMSCreateOrderIntegServer::9930:
+KohlsCashActivation::9929:
+#KohlsGetJobsForMultisPick::9928:
+KohlsProcessFAFromCHUB::9927:KOHLS_HEAP_FLAGS=-Xms512m -Xmx768m
+KohlsProcessPOShipConfirm::9926:
+PickInvoicesIntegrationServer::9925:
+RDCInvAdjIntegServer::9924:
+ShipConfirmationServer::9923:
+StoreInvAdjIntegServer::9922:KOHLS_HEAP_FLAGS=-Xms2048m -Xmx4092m
+#StoreSyncIntegServer::9921:
+VendorIntegServer::9920:
+#CreateTOOrder::9919:
+#KohlsOMSReceiveClrMsg::9918:
+KohlsOMSProcessClrMsg::9917:
+#KohlsCreateInvActIntServer::9916:KOHLS_HEAP_FLAGS=-Xms128m -Xmx256m

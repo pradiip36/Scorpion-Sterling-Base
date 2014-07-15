@@ -1,0 +1,388 @@
+
+# Property to handle logging.
+# This property points to the location of the log4j configuration xml file.
+
+yfs.log4j.configuration=/resources/log4jconfig.xml
+
+#yfs.log4j.configuration=/resources/log4jconfig.custom.xml
+
+# This property sets the time to wait on receiving eof
+yfs.yfs.eof.wait.time=300
+# This property constant sets the path to generate mismatch report
+yfs.MismatchReport=/home/kohls/SterlingST/bin
+
+yfs.InvSnapshot=/logs/accept/of_b/sterling/InvSnapshot
+
+######### Agent Server JMS Configs ########
+yfs.KOHLS_AGENT_PROVIDER_URL=t3://xloms-ofmc001t.tst.kohls.com:17882
+yfs.KOHLS_AGENT_QCF=DEV_QCF
+
+######### Integration Server JMS Configs ########
+yfs.KOHLS_INT_PROVIDER_URL=t3://xloms-ofmc001t.tst.kohls.com:17882
+yfs.KOHLS_INT_AGENT_QCF=DEV_QCF
+
+yfs.interopservlet.security.enabled=false
+yfs.api.security.token.enabled=false
+yfs.api.security.mode=DEBUG
+yfs.api.security.enabled=N
+
+############ Agent Queue Names #########
+yfs.KOHLS_INT_OMS_SA_REL_AGT_Q=KOHLS_INT_OMS_SA_REL_AGT_Q
+yfs.KOHLS_INT_OMS_REL_AGT_Q=KOHLS_INT_OMS_REL_AGT_Q
+yfs.KOHLS_INT_OMS_ORDER_PRG=KOHLS_INT_OMS_ORDER_PRG
+yfs.KOHLS_INT_OMS_SHIPMENT_PRG_Q=KOHLS_INT_OMS_SHIPMENT_PRG_Q
+yfs.SYS_INT_SCHEDULE_ORDER_Q=SYS_INT_SCHEDULE_ORDER_Q
+yfs.SYS_INT_RELEASE_ORDER_Q=SYS_INT_RELEASE_ORDER_Q
+yfs.SYS_INT_PAYMENT_COLLECTION_Q=SYS_INT_PAYMENT_COLLECTION_Q
+yfs.SYS_INT_PAYMENT_EXECUTION_Q=SYS_INT_PAYMENT_EXECUTION_Q
+#yfs.yfs.agent.override.icf=weblogic.jndi.WLInitialContextFactory
+yfs.SYS_CREATE_INVOICE_AGENT_Q=SYS_CREATE_INVOICE_AGENT_Q
+yfs.SYS_INT_CLOSE_ORDER_Q=SYS_INT_CLOSE_ORDER_Q
+yfs.SYS_INT_SHIPMENT_INVOICE_Q=SYS_INT_SHIPMENT_INVOICE_Q
+yfs.SYS_INT_CLOSE_SHIPMENT_Q=SYS_INT_CLOSE_SHIPMENT_Q
+yfs.SYS_INT_SOURCING_RULE_SNAP_SHOT_Q=SYS_INT_SOURCING_RULE_SNAP_SHOT_Q
+yfs.SYS_INT_INVENTORY_SNAP_SHOT_Q=SYS_INT_INVENTORY_SNAP_SHOT_Q
+yfs.SYS_INT_ORDER_INVOICE_Q=SYS_INT_ORDER_INVOICE_Q
+yfs.SYS_INT_PO_RELEASE_ORDER_Q=SYS_INT_PO_RELEASE_ORDER_Q
+yfs.KOHLS_IN_OMS_DSV_INV_Q=KOHLS_IN_OMS_DSV_INV_Q
+
+############ Integration Queue Names #########
+yfs.KOHLS_OUT_OMS_PLASTIC_GIFT_CARD_ACTVN_Q=KOHLS_OUT_OMS_PLASTIC_GIFT_CARD_ACTVN_Q
+yfs.KOHLS_OUT_SEND_SHIP_CONFIRMATION_MSG_TO_ECOMM_Q=KOHLS_OUT_SEND_SHIP_CONFIRMATION_MSG_TO_ECOMM_Q
+yfs.KOHLS_IN_OMS_ALTRNTSHIPCONFIRM_Q=KOHLS_IN_OMS_ALTRNTSHIPCONFIRM_Q
+yfs.KOHLS_IN_OMS_SHIPMENT_CONFIRMATION_Q=KOHLS_IN_OMS_SHIPMENT_CONFIRMATION_Q
+yfs.KOHLS_IN_OMS_EFC1INVADJ_Q=KOHLS_IN_OMS_EFC1INVADJ_Q
+yfs.KOHLS_IN_OMS_EFC2INVADJ_Q=KOHLS_IN_OMS_EFC2INVADJ_Q
+yfs.KOHLS_IN_OMS_CREATE_ORDER_Q=KOHLS_IN_OMS_CREATE_ORDER_Q
+yfs.KOHLS_IN_OMS_INVSYNC_Q=KOHLS_IN_OMS_INVSYNC_Q
+yfs.KOHLS_IN_OMS_ITEM_Q=KOHLS_IN_OMS_ITEM_Q
+yfs.KOHLS_OUT_OMS_CANCEL_MSG_TO_ECOMM_Q=KOHLS_OUT_OMS_CANCEL_MSG_TO_ECOMM_Q
+yfs.KOHLS_COLLECT_INVENTORY_MISMATCH_Q=KOHLS_COLLECT_INVENTORY_MISMATCH_Q
+yfs.KOHLS_LOAD_INVENTORY_MISMATCH_Q=KOHLS_LOAD_INVENTORY_MISMATCH_Q
+yfs.KOHLS_OUT_OMS_RELEASE_TO_WMoS_Q=KOHLS_OUT_OMS_RELEASE_TO_WMoS_Q
+yfs.KOHLS_OUT_OMS_SEND_STATUS_MSG_TO_ECOMM_Q=KOHLS_OUT_OMS_SEND_STATUS_MSG_TO_ECOMM_Q
+yfs.KOHLS_OUT_OMS_SHIP_ALONE_MSG_TO_WMoS_Q=KOHLS_OUT_OMS_SHIP_ALONE_MSG_TO_WMoS_Q
+yfs.KOHLS_OUT_OMS_SEND_SHIP_ALONE_STATUS_MSG_TO_ECOMM_Q=KOHLS_OUT_OMS_SEND_SHIP_ALONE_STATUS_MSG_TO_ECOMM_Q
+yfs.KOHLS_GIFT_CARD_REFUND_Q=KOHLS_GIFT_CARD_REFUND_Q
+yfs.KOHLS_IN_OMS_REPRICE_INFO_Q=KOHLS_IN_OMS_REPRICE_INFO_Q
+yfs.KOHLS_OUT_OMS_SEND_INV_SNAP_SHOT_Q=KOHLS_OUT_OMS_SEND_INV_SNAP_SHOT_Q
+yfs.KOHLS_OUT_OMS_SEND_SOURCING_RULE_DETAILS_Q=KOHLS_OUT_OMS_SEND_SOURCING_RULE_DETAILS_Q
+yfs.KOHLS_OUT_PAYMENT_STATUS_TO_ECOMM=KOHLS_OUT_PAYMENT_STATUS_TO_ECOMM
+yfs.KOHLS_OUT_SO_STATUS_TO_ECOMM=KOHLS_OUT_SO_STATUS_TO_ECOMM
+yfs.KOHLS_IN_OMS_DSVINV_Q=KOHLS_IN_OMS_DSVINV_Q
+yfs.SYS_INT_SOURCING_RULE_SNAP_SHOT_Q=SYS_INT_SOURCING_RULE_SNAP_SHOT_Q
+yfs.SYS_INT_INVENTORY_SNAP_SHOT_Q=SYS_INT_INVENTORY_SNAP_SHOT_Q
+yfs.KOHLS_OUT_OMS_SEND_SOURCING_RULE_DETAILS_Q=KOHLS_OUT_OMS_SEND_SOURCING_RULE_DETAILS_Q
+yfs.KOHLS_OUT_OMS_CANCEL_MSG_TO_EDW_Q=KOHLS_OUT_OMS_CANCEL_MSG_TO_EDW_Q
+
+#######PO Qs############
+yfs.KOHLS_IN_OMS_CHUB_FA_Q=KOHLS_IN_OMS_CHUB_FA_Q
+yfs.KOHLS_IN_OMS_PO_SHIPCONF_Q=KOHLS_IN_OMS_PO_SHIPCONF_Q
+yfs.KOHLS_OUT_DSV_PO_Q=KOHLS_OUT_DSV_PO_Q
+yfs.KOHLS_INT_OMS_PORELEASE_Q=KOHLS_INT_OMS_PORELEASE_Q
+yfs.KOHLS_INT_OMS_POCREATE_Q=KOHLS_INT_OMS_POCREATE_Q
+yfs.KOHLS_INT_PO_INVOICE_Q=KOHLS_INT_PO_INVOICE_Q
+
+
+#####Release B Invoice Qs ####
+yfs.SYS_INVOICE_AGENT_Q=SYS_INVOICE_AGENT_Q
+yfs.SYS_CREATE_INVOICE_AGENT_Q=SYS_CREATE_INVOICE_AGENT_Q
+yfs.KOHLS_OUT_INVOICE_Q=KOHLS_OUT_INVOICE_Q
+
+####Queues for COSA HARD TOTAL####
+yfs.KOHLS_OUT_COSA_HARD_TOTAL_Q=KOHLS_OUT_COSA_HARD_TOTAL_Q
+
+#DB cache
+dbclassCache.YFS_ITEM_OPTION.enabled=false
+dbclassCache.YFS_ITEM_PRICE_SET.enabled=false
+dbclassCache.YFS_ITEM_PRICE_SET_DTL.enabled=false
+dbclassCache.YFS_ITEM_SERVICE_ASSC_SKILL.enabled=false
+dbclassCache.YFS_ITEM_SERVICE_ASSOC.enabled=false
+dbclassCache.YFS_ITEM_SERVICE_SKILL.enabled=false
+dbclassCache.YFS_ITEM_SHIP_NODE.enabled=false
+dbclassCache.YFS_ITEM_STATUS_RULES.enabled=false
+dbclassCache.YFS_ITEM_TAG.enabled=false
+dbclassCache.YFS_ITEM_UOM.enabled=false
+dbclassCache.YFS_ITEM_UOM_MASTER.enabled=false
+dbclassCache.YFS_ITEM.enabled=false
+dbclassCache.YFS_ITEM_ALIAS.enabled=false
+dbclassCache.YFS_ITEM_ATTR.enabled=false
+dbclassCache.YFS_ITEM_ATTR_GROUP.enabled=false
+dbclassCache.YFS_ITEM_ATTR_GROUP_LOCALE.enabled=false
+dbclassCache.YFS_ITEM_ATTR_GROUP_TYPE.enabled=false
+dbclassCache.YFS_ITEM_ATTR_GRP_TYPE_LOCALE.enabled=false
+dbclassCache.YFS_ITEM_CNSPTN_PTTN_DTL.enabled=false
+dbclassCache.YFS_ITEM_CNSPTN_PTTN_HDR.enabled=false
+dbclassCache.YFS_ITEM_COUNT_STATE.enabled=false
+dbclassCache.YFS_ITEM_EXCLUSION.enabled=false
+dbclassCache.YFS_ITEM_INSTRUCTION.enabled=false
+dbclassCache.YFS_ITEM_INSTRUCTION_CODE.enabled=false
+dbclassCache.YFS_ITEM_LOCALE.enabled=false
+dbclassCache.YFS_ITEM_NODE_DEFN.enabled=false
+lse
+dbclassCache.YFS_ITEM_ATTR_GROUP_TYPE.enabled=false
+dbclassCache.YFS_ITEM_ATTR_GRP_TYPE_LOCALE.enabled=false
+dbclassCache.YFS_ITEM_CNSPTN_PTTN_DTL.enabled=false
+dbclassCache.YFS_ITEM_CNSPTN_PTTN_HDR.enabled=false
+dbclassCache.YFS_ITEM_COUNT_STATE.enabled=false
+dbclassCache.YFS_ITEM_EXCLUSION.enabled=false
+dbclassCache.YFS_ITEM_INS
+
+####### SSO properties ######
+sso.header.username=iv-user
+sso.webseal.link=http://ag000033.tst.kohls.com:17882/smcfs/console/login.jsp
+yfs.yfs.security.singlesignon.enabled=N
+yfs.yfs.login.singlesignon.class=com.kohls.common.util.KohlsSSOManager
+yfs.yfs.login.singlesignon.checkuser=N
+
+####Iteration 4 changes####
+yfs.KOHLS_IN_OMS_CASH_ACTIVATION_Q=KOHLS_IN_OMS_CASH_ACTIVATION_Q
+
+
+######Purge Queues in Release C ###########
+
+yfs.KOHLS_INT_OMS_INV_AUDIT_PRG=OfInv_Audit_PrgQ
+yfs.KOHLS_INT_ITEM_AUDIT_PRG=OfItem_Audit_PrgQ
+yfs.KOHLS_INT_ORG_AUDIT_PRG=OfOrg_Audit_PrgQ
+yfs.KOHLS_INT_PER_INFO_PRG=OfPer_Info_PrgQ
+yfs.KOHLS_INT_PER_INFO_HIS_PRG=OfPer_Info_PrgQ
+yfs.KOHLS_INT_USER_ACT_PRG=OfUser_Act_PrgQ
+yfs.KOHLS_INT_USER_ACT_AUDIT_PRG=OfUser_Act_Audit_PrgQ
+yfs.KOHLS_INT_AUDIT_PRG=OfInt_Audit_PrgQ
+yfs.KOHLS_INT_INBOX_PRG=OfInt_Inbox_PrgQ
+yfs.KOHLS_INT_OMS_HIST_ORDER_PRG=OfPo_HistprgQ
+yfs.KOHLS_INT_OMS_SHIPMENT_HIST_PRG_Q=OfShipment_HistprgQ
+
+#######################################################################
+##### ADDED BELOW PROPERTIES FOR BOPUS FUNCTIONALITY - 02/17/2014 #####
+#######################################################################
+
+# Queues for customer notification
+yfs.KOHLS_CUSTNOTIF_ORDER_MOD_Q = OfIntCustnotif_Order_ModQ               
+yfs.KOHLS_BOPUS_ORDER_REFUND_PICKUP_MSG_TO_MARKETING = OfIntOrder_Refund_Msg_To_MarketingQ
+yfs.KOHLS_BOPUS_ORDER_MONITOR_Q = OfInt_Bopus_Order_MonitorQ
+yfs.KOHLS_BOPUS_SHIPMENT_MONITOR_Q = OfInt_Bopus_Shipment_MonitorQ
+yfs.KOHLS_ORDER_CANCEL_NOTIFICATIONQ = OfInt_Order_Cancel_NotificationQ
+yfs.KOHLS_ORDER_DELAY_Q = OfOrderDelayQ
+yfs.KOHLS_CUST_NOTIF_ORDER_CANCEL_Q = OfInt_Cust_Notif_Order_CancelQ
+yfs.KOHLS_PICKUP_CONFIRMATION_Q = OfPickedUpConfirmQ
+yfs.KOHLS_READY_FORPICKUP_Q = OfReadyForPickupQ
+yfs.KOHLS_PICKUP_REAMINDER_Q = OfPickupRemainderQ
+yfs.KOHLS_FINAL_PICKUP_REAMAINDER_Q = OfFinalPickupRemainderQ
+yfs.KOHLS_PICKEDUP_CONFIRM_Q = OfPickedUpConfirmQ
+yfs.KOHLS_OUT_OMS_SEND_SHIP_STATUS_MSG_TO_ECOMM_Q=OfOut_Send_Ship_Status_Msg_To_EcommQ
+
+#MLS Item Location WebService - [Begin]
+yfs.MLSENDPOINTURL=http://isp9911e.st.ad.kohls.com/KohlsInventoryDemandService/InventoryDemandService.svc
+yfs.MLSSYSTEMCODE=TBD
+yfs.MLSMODULE=TBD
+yfs.MLSAPPNAME=TBD
+yfs.MLSTIMEOUT=TBD
+yfs.MLSSOAPACTIONURL_PROPERTY=MLSSOAPACTIONURL
+yfs.MLSSOAPACTIONURL=http://tempuri.org/IInventoryDemandService/
+yfs.MLSSOAPOPERATION_PROPERTY=MLSSOAPACTION
+yfs.MLSSOAPACTION=GetItemLocations
+yfs.MLSHDRVERSION=TBD
+yfs.MLSTIMEOUT=5000
+yfs.MLSPREFIX_PROPERTY=MLSNAMESPACE_PREFIXES
+yfs.MLSURI_PROPERTY=MLSNAMESPACE_URIS
+yfs.MLSNAMESPACE_PREFIXES=tem,koh,koh1
+yfs.MLSNAMESPACE_URIS=http://tempuri.org,Kohls.InventoryDemand.DataContracts,http://schemas.datacontract.org/2004/07/Kohls.InventoryDemand.DataContracts
+yfs.MLS_DEFAULT_STORE_LOOKUP=9911
+yfs.MLS_ENDPOINT_URL_PREFIX=http://isp
+yfs.MLS_ENDPOINT_URL_SUFFIX=e.st.ad.kohls.com/KohlsInventoryDemandService/InventoryDemandService.svc
+yfs.MLSSOAPACTION_GETITEMLOCATIONS=GetItemLocations
+yfs.MLSSOAPACTION_GETLOCATIONDETAILS=GetLocationDetails
+yfs.MLSSOAPACTION_UPDATELOCATIONITEMS=FulfillBopusOrderItems
+yfs.END_POINT_USER_MLS=
+yfs.END_POINT_PWD_MLS=
+yfs.MLS_DEFAULT_SCANNING_LOCATION =  a39e057f-ec03-4c5e-a0c2-7e5f99971210
+#MLS Item Location WebService - [End]
+
+################################################################################
+yfs.UPDMLSENDPOINTURL=http://isp9911e.st.ad.kohls.com/KohlsInventoryDemandService/InventoryDemandService.svc
+yfs.UPDMLSSYSTEMCODE=TDB
+yfs.UPDMLSMODULE=TDB
+yfs.UPDMLSAPPNAME=TDB
+yfs.UPDMLSTIMEOUT=5000
+yfs.UPDMLSSOAPACTION=FulfillBopusOrderItems
+yfs.UPDMLSHDRVERSION=TDB
+yfs.UPDMLSTIMEOUT=TDB
+####################################################################################
+
+#GIV Specific Properties for Inventory Supply [Begin]
+yfs.GIVENDPOINTURL =TBD
+yfs.GIVSYSTEMCODE =TBD
+yfs.GIVMODULE =TBD
+yfs.GIVAPPNAME =TBD
+yfs.GIVTIMEOUT =TBD
+yfs.GIVSOAPACTION =TBD
+yfs.GIVHDRVERSION =TBD
+yfs.GIVTIMEOUT =TBD
+#GIV Specific Properties for Inventory Supply [End]
+
+# Make sure decimal points are not displayed
+yfs.install.displaydoublequantity=N
+
+# Paper pick ticket configuration
+yfs.wsc.Service_for_Print_Pick_Ticket=YCD_PrintPickTicketFOP_9.2.0
+yfs.wsc.Service_for_Print_Customer_Pick_Ack=YCD_PrintCustomerPickAcknowledgementFOP_9.3.0
+
+########Updated with test bank links from ######## on 06/06/2014#######
+yfs.CCENDPOINTURL=http://xloms5-11-02q.tst.kohls.com:18020/pg-app/v1.0/PaymentGateway?wsdl
+yfs.CCAPPNAME=PaymentGateway
+yfs.CCMODULE=Payment
+yfs.CCSYSTEMCODE=ES
+yfs.CCTIMEOUT=200000
+yfs.CCENDPOINTURL_INT=http://xloms3-11-01t.tst.kohls.com:17010/KohlsPymntGatewayV0.3/services/PaymentGateway
+yfs.CCSOAPACTION=#processTransaction
+yfs.CCHDRVERSION=1.0
+yfs.CCTOKENIZEDENDPOINTURL=http://10.210.204.45:19000/payment-gateway-app/v1.0/PaymentGateway
+yfs.CCHTTPSENDPOINTURL=https://xloms5-11-02q.tst.kohls.com:18021/pg-app/v1.0/PaymentGateway?wsdl
+yfs.CCHTTPENDPOINTURL=http://xloms5-11-02q.tst.kohls.com:18020/pg-app/v1.0/PaymentGateway?wsdl
+##############################################################################################
+
+######## Arguments for SVC-Payment ########
+yfs.SVCENDPOINTURL=https://t2ms0586.cp.ad.kohls.com:20020/svg.svc
+yfs.SVCAPPNAME=PaymentGateway
+yfs.SVCMODULE=Payment
+yfs.SVCSYSTEMCODE=ES
+yfs.SVCTIMEOUT=20000
+yfs.SVCSOAPACTION=http://tempuri.org/IStoredValueGatewayService/DoWork
+
+########Location Feed Properties and Settlement Properties ############
+#Queues for the location feed AND Invoice Settlement Queue
+yfs.KOHLS_STORE_MANAGER_QUEUE=OfStore_ManagerQ
+yfs.KOHLS_STORE_ASSOCIATE_QUEUE=OfStore_AssociateQ
+yfs.KOHLS_BOPUS_LOCATION_FEED_INBOUND_Q=OfLocation_InboundQ
+yfs.KOHLS_OUT_INVOICE_AJB_Q=OfSettlementQ
+
+######### BOPUS Alerts properties #########################
+yfs.FROM_EMAIL_ID =E3-Store<Store Number>@kohls.com
+yfs.TO_EMAIL_IDS =E3-Store<Store Number>@kohls.com,st-store<Store Number>.allmanagers@store.com
+yfs.TO_EMAIL_SEPARATOR=
+yfs.EMAIL_SUBJECT=Shipment Ready For Pick
+
+yfs.EMAIL_SERVER = localhost
+yfs.EMAIL_SUBJECT_XPATH = xml://MonitorConsolidation/Shipment/@EmailSubject
+yfs.EMAIL_BODY_TMPLT = global/template/email/KohlsStoreManager_mail.xsl
+yfs.EMAIL_FROM_ADDR = xml://MonitorConsolidation/Shipment/@FromEmailID
+#############################################################
+
+#OPEN API HTTP Connection properties - [Begin]
+yfs.BYPASS_OPEN_API=N
+yfs.OPEN_API_RESPONSE=http://media.kohls.com.edgesuite.net/is/image/kohls/689932?wid=350&hei=350&op_sharpen=1
+yfs.OPEN_API_ALT_TEXT=This is a test image
+yfs.OpenAPI_BaseURL = http://10.210.155.66:17060/openapi-rest-web/v1/product
+yfs.OpenAPI_Key = QTnFGZPyKhoN6hjLKWrS3A37yer6eW3T
+yfs.skuDetail = true
+yfs.OPEN_API_PROXY_HOST=proxy.kohls.com
+yfs.OPEN_API_PROXY_PORT=3128
+# OPEN API HTTP Connection properties - [End]
+
+##############################################################################################
+yfs.ENDPOINT_GIV = http://inventory.kohls.com/SIXBeanXapiJaxWS/locationInventorySupplyService
+yfs.ENDPOINTUSER_GIV = simUser
+yfs.ENDPOINTPASSWORD_GIV = password
+yfs.SOAPACTIONURI_GIV=SOAPACTIONURL_GIV
+yfs.SOAPACTIONURL_GIV=http://webservices.inventory.giv.kohls.com/
+yfs.SOAPACTIONOPERATION_GIV=SOAPACTIONOPERATIONPARAM_GIV_VALUE
+yfs.SOAPACTIONOPERATIONPARAM_GIV_VALUE=getLocationInventorySupply
+yfs.SOAPACTIONURIPREFIX_GIV=SOAPACTIONURIPREFIX_GIV_VALUE
+yfs.SOAPACTIONURIPREFIX_GIV_VALUE=web
+yfs.SOAPENVIRONMENT_VALUE=env
+yfs.SOAPINPUT_VALUE=input
+yfs.PROSHIPDATACONTRACTURI_GIV=PROSHIPDATACONTRACTURI_GIV_VALUE
+yfs.PROSHIPDATACONTRACTURI_GIV_VALUE=http://webservices.inventory.giv.kohls.com/documentation/GetLocationInventorySupply/getLocationInventorySupply/input
+yfs.PROSHIPDATACONTRACTPREFIX_GIV=PROSHIPDATACONTRACTPREFIX_GIV_VALUE
+yfs.PROSHIPDATACONTRACTPREFIX_GIV_VALUE=inp
+##############################################################################################
+
+###########PLU QA PROPERTIES######################################
+yfs.PLUENDPOINTURL=PLUENDPOINT
+yfs.PLUENDPOINT=http://q2ms2000.cp.ad.kohls.com/WCFServices/CPLUService/ICPLU.svc
+yfs.PLUSOAPACTION=PLULookup
+yfs.PLUSOAPACTIONURI=PLULookup
+yfs.PLULookup=http://tempuri.org/ICPLU/PLULookup
+yfs.PLUSOAPURI=PLUENDPOINT
+yfs.PLUSYSTEMCODE=ES
+yfs.PLUMODULE=Pricing
+yfs.PLUAPPNAME=PLUGateway
+###########PLU PROPERTIES END###############################
+
+##############################################################################################
+#Customer Notification WS Call - [Begin]
+yfs.ENDPOINTURL_CN=http://nlg01288.tst.kohls.com:18200/CustomerContact/OrderNotificationService.wsdl
+#yfs.ENDPOINTURL_CN=http://nlg01289.tst.kohls.com:18200/CustomerContact/OrderNotificationService.wsdl  
+yfs.SYSTEMCODE_CN=TBD
+yfs.MODULE_CN=CustomerNotifications
+yfs.APPNAME_CN=Sterling
+yfs.TIMEOUT_CN=5000
+yfs.SOAPACTION_CN=request
+yfs.HDRVERSION_CN=1.0
+yfs.SOAPACTION_CN_CANCEL=OrderCancellation
+yfs.SOAPOPERATION_PROPERTY_CN_CANCEL=SOAPACTION_CN_CANCEL
+yfs.PREFIX_PROPERTY_CN_CAN=NAMESPACE_PREFIXES_CN_CAN
+yfs.NAMESPACE_PREFIXES_CN_CAN=web,can
+yfs.SOAPACTIONURL_PROPERTY_CN=SOAPACTIONURL_CN
+yfs.SOAPACTIONURL_CN=
+yfs.URI_PROPERTY_CAN=NAMESPACE_URIS_CN_CAN
+yfs.NAMESPACE_URIS_CN_CAN=http://webservice.services.cc.ch.kohls.com,http://com/kohls/ch/cc/services/webservice/notification/cancel
+
+yfs.SOAPACTION_CN_READYFORPICK=OrderReadyForPickup
+yfs.SOAPOPERATION_PROPERTY_CN_READYFORPICK=SOAPACTION_CN_READYFORPICK
+yfs.PREFIX_PROPERTY_CN_READYFORPICK=NAMESPACE_PREFIXES_CN_READYFORPICK
+yfs.NAMESPACE_PREFIXES_CN_READYFORPICK=web,read
+yfs.URI_PROPERTY_READYFORPICK=NAMESPACE_URIS_CN_READYFORPICK
+yfs.NAMESPACE_URIS_CN_READYFORPICK=http://webservice.services.cc.ch.kohls.com,http://com/kohls/ch/cc/services/webservice/notification/ready
+
+yfs.SOAPACTION_CN_DELAY=OrderDelay
+yfs.SOAPOPERATION_PROPERTY_CN_DELAY=SOAPACTION_CN_DELAY
+yfs.PREFIX_PROPERTY_CN_DELAY=NAMESPACE_PREFIXES_CN_DELAY
+yfs.NAMESPACE_PREFIXES_CN_DELAY=web,del
+yfs.URI_PROPERTY_DELAY=NAMESPACE_URIS_CN_DELAY
+yfs.NAMESPACE_URIS_CN_DELAY=http://webservice.services.cc.ch.kohls.com,http://com/kohls/ch/cc/services/webservice/notification/delay
+
+yfs.SOAPACTION_CN_ORDEXP=OrderExpiredRefund
+yfs.SOAPOPERATION_PROPERTY_CN_ORDEXP=SOAPACTION_CN_ORDEXP
+yfs.PREFIX_PROPERTY_CN_ORDEXP=NAMESPACE_PREFIXES_CN_ORDEXP
+yfs.NAMESPACE_PREFIXES_CN_ORDEXP=web,exp
+yfs.URI_PROPERTY_ORDEXP=NAMESPACE_URIS_CN_ORDEXP
+yfs.NAMESPACE_URIS_CN_ORDEXP=http://webservice.services.cc.ch.kohls.com,http://com/kohls/ch/cc/services/webservice/notification/expired
+
+yfs.SOAPACTION_CN_ORDERMOD=OrderModification
+yfs.SOAPOPERATION_PROPERTY_CN_ORDERMOD=SOAPACTION_CN_ORDERMOD
+yfs.PREFIX_PROPERTY_CN_ORDERMOD=NAMESPACE_PREFIXES_CN_ORDERMOD
+yfs.NAMESPACE_PREFIXES_CN_ORDERMOD=web,mod
+yfs.URI_PROPERTY_ORDERMOD=NAMESPACE_URIS_CN_ORDERMOD
+yfs.NAMESPACE_URIS_CN_ORDERMOD=http://webservice.services.cc.ch.kohls.com,http://com/kohls/ch/cc/services/webservice/notification/mod
+
+yfs.SOAPACTION_CN_PICKEDUP=OrderPickedUpConfirmation
+yfs.SOAPOPERATION_PROPERTY_CN_PICKEDUP=SOAPACTION_CN_PICKEDUP
+yfs.PREFIX_PROPERTY_CN_PICKEDUP=NAMESPACE_PREFIXES_CN_PICKEDUP
+yfs.NAMESPACE_PREFIXES_CN_PICKEDUP=web,conf
+yfs.URI_PROPERTY_PICKEDUP=NAMESPACE_URIS_CN_PICKEDUP
+yfs.NAMESPACE_URIS_CN_PICKEDUP=http://webservice.services.cc.ch.kohls.com,http://com/kohls/ch/cc/services/webservice/notification/conf
+
+yfs.SOAPACTION_CN_PICKUPREMINDER=OrderPickupReminder
+yfs.SOAPOPERATION_PROPERTY_CN_PICKUPREMINDER=SOAPACTION_CN_PICKUPREMINDER
+yfs.PREFIX_PROPERTY_CN_PICKUPREMINDER=NAMESPACE_PREFIXES_CN_PICKUPREMINDER
+yfs.NAMESPACE_PREFIXES_CN_PICKUPREMINDER=web,rem
+yfs.URI_PROPERTY_PICKUPREMINDER=NAMESPACE_URIS_CN_PICKUPREMINDER
+yfs.NAMESPACE_URIS_CN_PICKUPREMINDER=http://webservice.services.cc.ch.kohls.com,http://com/kohls/ch/cc/services/webservice/notification/remind
+
+yfs.SOAPACTION_CN_FINALREMINDER=OrderPickupFinalReminder
+yfs.SOAPOPERATION_PROPERTY_CN_FINALREMINDER=SOAPACTION_CN_FINALREMINDER
+yfs.PREFIX_PROPERTY_CN_FINALREMINDER=NAMESPACE_PREFIXES_CN_FINALREMINDER
+yfs.NAMESPACE_PREFIXES_CN_FINALREMINDER=web,fin
+yfs.URI_PROPERTY_FINALREMINDER=NAMESPACE_URIS_CN_FINALREMINDER
+yfs.NAMESPACE_URIS_CN_FINALREMINDER=http://webservice.services.cc.ch.kohls.com,http://com/kohls/ch/cc/services/webservice/notification/finalremind
+
+#Customer Notification WS Call- [End]
+############################################################################################################
+
+#####New Queues for Learn environment#############################
+yfs.OF_INT_CREATE_ORDER_Q=OfIntCreate_OrderQ
+yfs.OF_INT_CHANGE_SHIPMENT_STATUS_Q=OfIntChange_Shipment_StatusQ
+yfs.KOHLS_INT_CUST_NOTIFY_Q =OfInt_Cust_NotifyQ
+yfs.KOHLS_OUT_OMS_SEND_SHIP_STATUS_MSG_TO_ECOMM_Q=OfOut_Send_Ship_Status_Msg_To_EcommQ

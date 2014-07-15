@@ -1,0 +1,229 @@
+<div class="sc-platform-screen-default abandonedbackroompickdialog">
+    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		uId : 'systemMessagePanelPopup' , 
+		renderHidden : true  
+ "></div>
+    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'isccsScreen messageSummary' , 
+		uId : 'dialogTitle'  
+ ">
+        <div data-dojo-type="sc/plat/dojo/widgets/Image" data-dojo-props="		'class' : 'messageWarningIcon' , 
+		uId : 'warningIcon'  
+ "></div>
+    </div>
+    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'isccsScreen messageSummary' , 
+		uId : 'firstRowPanel'  
+ ">
+    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'isccsScreen messageSummary inline' , 
+		uId : 'orderInfoPanel'  
+ ">
+        <div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="		spanLabel : true , 
+		uId : 'orderLabel'  , class : 'field blockComponent primaryInformation'
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_Order')
+			}
+		}
+"></div>
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'blockComponent' , 
+		uId : 'customerName'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.BillToAddress'
+,
+		 namespace : 			'Shipment',
+		 dynamicBindingFunc : 			'getCustomerName'
+	}
+	}
+,	
+			 	label : 			this.getBundleString('extn_Customer_Name')
+			}
+		}
+"></div>
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'blockComponent' , 
+		uId : 'alternateName'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.BillToAddress'
+,
+		 namespace : 			'Shipment',
+		 dynamicBindingFunc : 			'getAlternateName'
+	}
+	}
+,	
+			 	label : 			this.getBundleString('extn_Alternate_Name')
+			}
+		}
+"></div>
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'blockComponent' , 
+		uId : 'billingAddress'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Shipment.BillToAddress'
+,
+		 namespace : 			'Shipment',
+		 dynamicBindingFunc : 			'getBillingAddress'
+	}
+	}
+,	
+			 	label : 			this.getBundleString('extn_Billing_Address')
+			}
+		}
+"></div>
+    </div>
+    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'isccsScreen inline' , 
+		uId : 'exceptionPanel'  
+ ">
+        <div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="		spanLabel : true , 
+		uId : 'exceptionToVerifyLabel'  , class : 'field blockComponent primaryInformation'
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_Exception_To_Verify')
+			}
+		}
+"></div>
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'blockComponent' , 
+		uId : 'exceptionFirstName'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Exception.FirstName'
+,
+		 namespace : 			'Exception',
+		 dynamicBindingFunc : 			'getExceptionFirstName'
+	}
+	}
+,	
+			 	label : 			this.getBundleString('FirstName')
+			}
+		}
+"></div>
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'blockComponent' , 
+		uId : 'exceptionLastName'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Exception.LastName'
+,
+		 namespace : 			'Exception',
+		 dynamicBindingFunc : 			'getExceptionLastName'
+	}
+	}
+,	
+			 	label : 			this.getBundleString('LastName')
+			}
+		}
+"></div>
+		<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		spanLabel : true , 
+		'class' : 'blockComponent' , 
+		uId : 'exceptionReason'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Exception.Reason'
+,
+		 namespace : 			'Exception',
+		 dynamicBindingFunc : 			'getExceptionReasonCode'
+	}
+	}
+,	
+			 	label : 			this.getBundleString('extn_Exception_Reason')
+			}
+		}
+"></div>
+    </div>
+    </div>
+    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'messageSummary blockComponent centerAlign' , 
+		uId : 'outerDetailsContainer'  
+ ">
+        <div data-dojo-type="idx/form/TextBox" data-dojo-props="		uId : 'associateID',
+        class: 'blockComponent'
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 targetBinding : 	[
+	 		{
+		 path : 			'Admin.Username'
+,
+		 namespace : 			'Admin'
+	}
+	]
+	}
+,	
+			 	label : 			this.getBundleString('extn_Associate_ID')
+			}
+		}
+"></div>
+		<div data-dojo-type="idx/form/TextBox" data-dojo-props="		uId : 'associatePassword' ,
+		class: 'blockComponent' 
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 targetBinding : 	[
+	 		{
+		 path : 			'Admin.Password'
+,
+		 namespace : 			'Admin'
+	}
+	]
+	}
+,	
+			 	label : 			this.getBundleString('extn_Password')
+			}
+		}
+"></div>
+    </div>
+    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		'class' : 'popupNavigation messageDialogFooter' , 
+		uId : 'Popup_navigationPanel'  
+ ">
+        <div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true , 
+		showLabel : true , class : 'floatLeft',
+		uId : 'approveButton' 
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Approve')
+			}
+		}
+"></div>
+        <div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true , 
+		'class' : 'idxSecondaryButton' , 
+		showLabel : true , 
+		uId : 'cancelButton'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('Cancel')
+			}
+		}
+"></div>
+    </div>
+</div>

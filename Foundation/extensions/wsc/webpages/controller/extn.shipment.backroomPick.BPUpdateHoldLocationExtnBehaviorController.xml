@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.shipment.backroomPick.BPUpdateHoldLocationExtnBehaviorController"
+    requestMethodSupported="POST" screenId="extn.shipment.backroomPick.BPUpdateHoldLocationExtn">
+    <MashupRefs>
+        <MashupRef extnType="ADD"
+            mashupId="backroomPick_changeShipmentStatusToBackroomPicked"
+            mashupRefId="extn_change_status_br_picked" permissionId=""/>
+        <MashupRef extnType="ADD"
+            mashupId="extn_getLocationDetails_mashup"
+            mashupRefId="extn_getLocationDetails_mashup" permissionId=""/>
+    </MashupRefs>
+</Controller>

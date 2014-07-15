@@ -1,0 +1,16 @@
+<OrderList>
+	<Order DocumentType="" EnterpriseCode="" OrderNo="">
+		<Notes>
+			<Note ReasonCode="" NoteText="" />
+		</Notes>
+		<OrderLines>
+			<OrderLine CarrierServiceCode=""
+            ItemID="" OrderedQty="" PrimeLineNo=""
+            Quantity="" SCAC="" SubLineNo="" UnitOfMeasure="" OrderLineKey="" MaxLineStatus="" DeliveryMethod="">
+				<Shipnode ShipNode="" Description="">
+					<ShipNodePersonInfo AddressLine1="9035 S Howell Ave" AddressLine2="" AddressLine3="" City="Oak Creek" Country="US" State="" ZipCode="53154"/>
+				</Shipnode>
+			</OrderLine>
+		</OrderLines>
+	</Order>
+</OrderList>

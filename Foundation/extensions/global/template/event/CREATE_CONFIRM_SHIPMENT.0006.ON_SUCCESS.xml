@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shipment ActualShipmentDate=" " EnterpriseCode=" " SCAC=" " CarrierServiceCode=" " DocumentType=" " SellerOrganizationCode=" " 
+    ShipNode=" " ShipmentNo=" " PickticketNo=" " ReceivingNode="">
+    <ToAddress AddressLine1=" " AddressLine2=" " AddressLine3=" "
+         City=" " Country=" " DayPhone=" " Department=" " EMailID=" " FirstName=" "  LastName=" "  MiddleName=" "
+        State=" " ZipCode=" "/>
+    <Containers>
+        <Container BasicFreightCharge=" " ContainerGrossWeight=" "
+            ContainerGrossWeightUOM=" "  ContainerScm=" "
+            TrackingNo=" ">
+	    <ContainerDetails>
+			<ContainerDetail Quantity=" " >		
+			<ShipmentLine ItemID=" " PrimeLineNo=" " ShipmentLineNo=" " Quantity=" "/>			
+			<ShipmentTagSerials>
+				<ShipmentTagSerial Quantity=" " SerialNo=" " /> 
+			</ShipmentTagSerials>
+			</ContainerDetail>	
+		</ContainerDetails>		
+        </Container>
+    </Containers>   
+    <ShipmentLines>
+        <ShipmentLine ReleaseNo=" " ItemID=" " UnitOfMeasure=" " OrderNo=" " Quantity=" " ProductClass=" " ShipmentLineNo=" " SubLineNo=" " ItemDesc=" " PrimeLineNo=" " >		
+        </ShipmentLine>
+    </ShipmentLines>    
+	<Extn ExtnIsShipAlone=" " ExtnWMSShipmentNo=" " />
+</Shipment>

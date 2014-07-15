@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="BatchHdrStockRmShipment" language="groovy" pageWidth="554" pageHeight="838" columnWidth="554" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Kohls\\jasper\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="xPath">
+		<![CDATA[/StoreShipments/StockRoomShipments]]>
+	</queryString>
+	<field name="OrderCount" class="java.lang.String">
+		<fieldDescription><![CDATA[/StoreShipments/StockRoomShipments/@OrderCount]]></fieldDescription>
+	</field>
+	<field name="TotalUnits" class="java.lang.String">
+		<fieldDescription><![CDATA[/StoreShipments/StockRoomShipments/@TotalUnits]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="48" splitType="Stretch">
+			<subreport isUsingCache="false">
+				<reportElement key="subreport-1" positionType="Float" x="16" y="30" width="445" height="8"/>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("//ItemCounts//ItemCount")]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["BatchHdrStockRmItem.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="false">
+				<reportElement key="subreport-1" positionType="Float" mode="Transparent" x="15" y="38" width="445" height="8" backcolor="#FFFFFF"/>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("//Shipments//Shipment")]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["BatchHdrOrderDetails.jasper"]]></subreportExpression>
+			</subreport>
+			<textField>
+				<reportElement positionType="Float" x="98" y="16" width="85" height="14"/>
+				<textElement>
+					<font fontName="Helvetica-Narrow" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{OrderCount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="348" y="16" width="97" height="14"/>
+				<textElement>
+					<font fontName="Helvetica-Narrow" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{TotalUnits}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="7" y="0" width="147" height="16"/>
+				<textElement>
+					<font fontName="Helvetica-Narrow" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Available in Stock-Room]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="240" y="16" width="105" height="14"/>
+				<textElement>
+					<font fontName="Helvetica-Narrow" isBold="false"/>
+				</textElement>
+				<text><![CDATA[ Total Units Requested:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="35" y="16" width="63" height="14"/>
+				<textElement>
+					<font fontName="Helvetica-Narrow" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Total Orders]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="Float" x="154" y="9" width="393" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="Float" x="10" y="47" width="537" height="1" isPrintWhenDetailOverflows="true"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="547" y="9" width="1" height="39" isPrintWhenDetailOverflows="true"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="10" y="16" width="1" height="32" isPrintWhenDetailOverflows="true"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+</jasperReport>

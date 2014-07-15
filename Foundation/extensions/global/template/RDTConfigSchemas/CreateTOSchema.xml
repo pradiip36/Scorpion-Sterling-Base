@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlatfileDelimitedSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation='delimitedreceiver.xsd'>
+
+   <ParserDefaults DefaultRecordDelimiter="Newline" DefaultFieldDelimiter="," DefaultPadCharacter="#" RecordIdStartPosition="1">
+    </ParserDefaults>
+
+	<Root Name="OrderLines">
+   		<Header Name="OLHEADER" RecordName="OLHEADER" MinOccurence="1" MaxOccurence="1"/>
+		<Sequence Name="OrderLine" RecordName="OrderLine" MinOccurrence="1" MaxOccurrence="1000">
+		</Sequence>
+		
+	</Root>
+
+	<RecordDefinitions>
+		<Record RecordId="OLHEADER" Name="OLHEADER" XMLName="OrderLines">
+			<Field Name="test" FieldPosition="2" XMLName="test"/>
+			<Field Name="test1" FieldPosition="3" XMLName="test1"/>
+			<Field Name="test2" FieldPosition="4" XMLName="test2"/>
+			<Field Name="test3" FieldPosition="5" XMLName="test3"/>
+		</Record>
+		<Record RecordId="OrderLine" Name="OrderLine" XMLName="OrderLine">
+			<Field Name="ItemID" FieldPosition="2" XMLName="ItemID"/>
+			<Field Name="ShipNode" FieldPosition="3" XMLName="ShipNode"/>
+			<Field Name="ReceivingNode" FieldPosition="4" XMLName="ReceivingNode"/>
+			<Field Name="Qty" FieldPosition="5" XMLName="Qty"/>
+			
+		</Record>
+		
+	</RecordDefinitions>
+</FlatfileDelimitedSchema>

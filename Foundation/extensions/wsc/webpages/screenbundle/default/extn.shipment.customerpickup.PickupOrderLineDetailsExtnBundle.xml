@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.shipment.customerpickup.PickupOrderLineDetailsExtnBundle" screenId="extn.shipment.customerpickup.PickupOrderLineDetailsExtn">
+    <BundleEntries>
+        <BundleEntry bundleEntryId="extn_button_undo_Button_label"
+            bundleKey="extn_Undo" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_button_undo"/>
+        <BundleEntry
+            bundleEntryId="cmbShortagesResolution_FilteringSelect_label"
+            bundleKey="extn_Missing_Reason" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="cmbShortagesResolution"/>
+        <BundleEntry
+            bundleEntryId="extn_datalabel_KohlsUPC_DataLabel_label"
+            bundleKey="extn_Kohls_UPC" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_datalabel_KohlsUPC"/>
+        <BundleEntry
+            bundleEntryId="extn_datalabelOrderedQty_DataLabel_label"
+            bundleKey="extn_Ordered_Quantity" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_datalabelOrderedQty"/>
+        <BundleEntry
+            bundleEntryId="extn_datalabelQtyPicked_DataLabel_label"
+            bundleKey="extn_Picked_Quantity" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_datalabelQtyPicked"/>
+        <BundleEntry
+            bundleEntryId="extn_datalabel_quantityLabel_DataLabel_label"
+            bundleKey="OrderedQuantity" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_datalabel_quantityLabel"/>
+        <BundleEntry
+            bundleEntryId="extn_datalabelScannedQty_DataLabel_label"
+            bundleKey="ScannedQuantity" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_datalabelScannedQty"/>
+        <BundleEntry bundleEntryId="quantityLabel_DataLabel_label"
+            bundleKey="OrderedQuantity" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="quantityLabel"/>
+    </BundleEntries>
+</ScreenBundle>

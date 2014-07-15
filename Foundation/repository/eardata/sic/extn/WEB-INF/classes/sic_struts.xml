@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  Licensed Materials - Property of IBM 
+
+  IBM Sterling Selling and Fullfillment Suite 9.1 
+
+  (c) Copyright IBM Corp 2001, 2010 All Rights Reserved
+
+  US Government Users Restricted Rights - Use, duplication or disclosure
+  restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="configurator" namespace="/configurator" extends="struts-default" >
+		<result-types>
+			<result-type name="customJSON" class="com.comergent.reference.apps.configurator.controller.JSONResult" />
+		</result-types>
+
+		<interceptors>
+			<interceptor name="configuratorInterceptor" class="com.comergent.reference.apps.configurator.controller.ConfiguratorInterceptor" />
+			<interceptor name="releaseModelInterceptor" class="com.comergent.reference.apps.configurator.controller.ReleaseModelInterceptor" />
+
+			<interceptor-stack name="configStack">
+				<interceptor-ref name="defaultStack"/>
+				<interceptor-ref name="configuratorInterceptor"/>
+				<interceptor-ref name="releaseModelInterceptor"/>
+			</interceptor-stack>
+
+			<!-- stepwise UI actions should not execute the releaseModelInterceptor -->
+			<interceptor-stack name="stepwiseStack">
+				<interceptor-ref name="defaultStack"/>
+				<interceptor-ref name="configuratorInterceptor"/>
+			</interceptor-stack>
+		</interceptors>
+
+		<default-interceptor-ref name="configStack"/>
+
+		<action name="configure" class="com.comergent.reference.apps.configurator.controller.ConfiguratorController" >
+			<param name="DEBUG">false</param>
+			<result name="success" type="dispatcher">
+				<param name="location">${configURL}</param>
+				<param name="parse">true</param>
+			</result>
+			<result name="compileError">/sic/configurator/compileError.jsp</result>
+		</action>
+		
+		<action name="trapTestCase" class="com.comergent.reference.apps.configurator.controller.ConfiguratorController" method="trapTestCase">
+            <result name="message">/sic/configurator/regressiontestingtool/message.jsp</result>
+		</action>
+		
+		<action name="regressiontester" class="com.comergent.reference.apps.configurator.controller.ConfiguratorController" method="handleModelRegression">
+            <result name="main">/sic/configurator/regressiontestingtool/main.jsp</result>
+            <result name="message">/sic/configurator/regressiontestingtool/message.jsp</result>
+            <result name="xml">/sic/configurator/regressiontestingtool/xml.jsp</result>
+            <result name="debug">/sic/configurator/regressiontestingtool/debugapiconfiguration.jsp</result>
+		</action>
+	
+		<action name="summary" class="com.comergent.reference.apps.configurator.controller.ConfiguratorController" method="displaySummary">
+			<result name="success">/sic/configurator/summary.jsp</result>
+		</action>
+		<action name="addToCart" class="com.comergent.reference.apps.configurator.controller.ConfiguratorController" method="addToCart">
+			<result name="success">/sic/configurator/transient.jsp</result>
+		</action>
+		<action name="subModelConfig" class="com.comergent.reference.apps.configurator.controller.ConfiguratorController" method="handleSubConfig">
+			<result name="success">/sic/configurator/submodeltransient.jsp</result>
+		</action>
+		<action name="subModelReturn" class="com.comergent.reference.apps.configurator.controller.ConfiguratorController" method="subModelReturn">
+			<result name="success">/sic/configurator/submodelreturn.jsp</result>
+		</action>
+		<action name="showRuleTrace" class="com.comergent.reference.apps.configurator.controller.ConfiguratorController" method="showRuleTrace">
+			<result name="success">/sic/configurator/debug.jsp</result>
+		</action>
+		<action name="resolveConflict" class="com.comergent.reference.apps.configurator.controller.ConfiguratorController" method="resolveConflict">
+			<result name="success">/sic/configurator/resolver.jsp</result>
+		</action>
+		<action name="conflictResolution" class="com.comergent.reference.apps.configurator.controller.ConfiguratorController" method="conflictResolution">
+			<result name="success">/sic/configurator/resolverTransient.jsp</result>
+		</action>
+
+		<action name="upgrade" class="com.comergent.reference.apps.configurator.controller.ConfiguratorController" method="performUpgrade">
+			<result name="success">/sic/configurator/upgrade.jsp</result>
+		</action>
+		<action name="configstatus" class="com.comergent.reference.apps.configurator.controller.ConfiguratorStatusController" >
+			<result name="success">/sic/configurator/status.jsp</result>
+		</action>
+
+
+		<action name="getTabs" class="com.comergent.reference.apps.configurator.controller.StepwiseController" method="getTabs">
+			<interceptor-ref name="stepwiseStack" />
+			<result type="customJSON">/sic/configurator/Configurator_Stepped.jsp</result>
+		</action>
+		<action name="displayRuleTrace" class="com.comergent.reference.apps.configurator.controller.StepwiseController" method="displayRuleTrace">
+			<interceptor-ref name="stepwiseStack" />
+			<result name="success">/sic/configurator/debug.jsp</result>
+		</action>
+		<action name="reviewAndBuy" class="com.comergent.reference.apps.configurator.controller.StepwiseController" method="getSummary">
+			<interceptor-ref name="stepwiseStack" />
+			<result name="success">/sic/configurator/reviewAndBuy.jsp</result>
+		</action>
+		<action name="getOptionClasses" class="com.comergent.reference.apps.configurator.controller.StepwiseController" method="getOptionClasses">
+			<interceptor-ref name="stepwiseStack" />
+			<result type="customJSON">/sic/configurator/Configurator_Stepped.jsp</result>
+		</action>
+		<action name="displayChildren" class="com.comergent.reference.apps.configurator.controller.StepwiseController" method="displayChildren">
+			<interceptor-ref name="stepwiseStack" />
+			<result name="success" type="dispatcher">
+				<param name="location">${controlURL}</param>
+				<param name="parse">true</param>
+			</result>
+		</action>
+		<action name="getNextPrevious" class="com.comergent.reference.apps.configurator.controller.StepwiseController" method="getNextPrevious">
+			<interceptor-ref name="stepwiseStack" />
+			<result type="customJSON">/sic/configurator/Configurator_Stepped.jsp</result>
+		</action>
+		<action name="getMessages" class="com.comergent.reference.apps.configurator.controller.StepwiseController" method="getMessages">
+			<interceptor-ref name="stepwiseStack" />
+			<result type="customJSON">/sic/configurator/Configurator_Stepped.jsp</result>
+		</action>
+		<action name="processPick" class="com.comergent.reference.apps.configurator.controller.StepwiseController" method="processPick">
+			<interceptor-ref name="stepwiseStack" />
+			<result name="success" type="dispatcher">
+				<param name="location">${controlURL}</param>
+				<param name="parse">true</param>
+			</result>
+		</action>
+		<action name="clearPicks" class="com.comergent.reference.apps.configurator.controller.StepwiseController" method="clearPicks">
+			<interceptor-ref name="stepwiseStack" />
+			<result name="success" type="dispatcher">
+				<param name="location">${controlURL}</param>
+				<param name="parse">true</param>
+			</result>
+		</action>
+		<!--
+			<action name="getSummarySections"
+			class="com.comergent.reference.apps.configurator.controller.StepwiseController"
+			method="getSummarySections"> <interceptor-ref name="stepwiseStack" />
+			<result
+			type="customJSON">/sic/configurator/Configurator_Stepped.jsp</result>
+			</action>
+		-->
+		<action name="helpMeDecide" class="com.comergent.reference.apps.configurator.controller.HelpMeDecideAction">
+			<interceptor-ref name="stepwiseStack" />
+			<result name="success" type="dispatcher">
+				<param name="location">${controlURL}</param>
+				<param name="parse">true</param>
+			</result>
+		</action>
+		<action name="showMessagesWindow" class="com.comergent.reference.apps.configurator.controller.StepwiseController" method="showMessagesWindow">
+			<interceptor-ref name="stepwiseStack" />
+			<result name="success" type="dispatcher">
+				<param name="location">${controlURL}</param>
+				<param name="parse">true</param>
+			</result>
+		</action>
+		<action name="stepwiseResolveConflict" class="com.comergent.reference.apps.configurator.controller.StepwiseController" method="resolveConflict">
+			<interceptor-ref name="stepwiseStack" />
+			<result name="success">/sic/configurator/resolver.jsp
+            </result>
+		</action>
+		<action name="stepwisePerformResolve" class="com.comergent.reference.apps.configurator.controller.StepwiseController" method="performResolve">
+			<interceptor-ref name="stepwiseStack" />
+			<result name="success">${controlURL}</result>
+		</action>
+		<action name="stepwiseUndoResolve" class="com.comergent.reference.apps.configurator.controller.StepwiseController" method="undoResolve">
+			<interceptor-ref name="stepwiseStack" />
+			<result name="success">${controlURL}</result>
+		</action>
+		<action name="getPricingSummary" class="com.comergent.reference.apps.configurator.controller.StepwiseController" method="getPricingSummary">
+			<interceptor-ref name="stepwiseStack" />
+			<result type="customJSON">/sic/configurator/Configurator_Stepped.jsp</result>
+		</action>
+
+		<action name="testCart" class="com.comergent.reference.apps.configurator.controller.TestShoppingCart">
+			<result name="success">/sic/configurator/testcart.jsp</result>
+		</action>
+		<action name="launchModel" class="com.comergent.reference.apps.configurator.controller.LaunchModelController">
+			<result name="success">/sic/configurator/launchConfig.jsp</result>
+		</action>
+
+		<!-- Ajaxify tabbed UI -->
+
+		<action name="configureTabbedContent" class="com.comergent.reference.apps.configurator.controller.ConfiguratorController" >
+			<param name="DEBUG">false</param>
+			<result name="success" type="dispatcher">
+				<param name="location">/sic/configurator/configuratorTabbedContent.jsp</param>
+				<param name="parse">true</param>
+			</result>
+			<result name="compileError">/sic/configurator/compileError.jsp</result>
+		</action>
+		<action name="tabbedProcessPick" class="com.comergent.reference.apps.configurator.controller.StepwiseController" method="processPick">
+			<interceptor-ref name="stepwiseStack" />
+			<result name="success" type="dispatcher">
+				<param name="location">/sic/configurator/Configurator_Tabbed_Content.jsp</param>
+				<param name="parse">true</param>
+			</result>
+		</action>
+		<action name="getTabbedSummarySections"
+			class="com.comergent.reference.apps.configurator.controller.ConfiguratorController"
+			method="getConfigSummary">
+			<param name="DEBUG">false</param>
+			<result type="customJSON">/sic/configurator/configuratorTabbed.jsp
+			</result>
+		</action>
+		
+		<action name="getTabbedPricingSummary"
+			class="com.comergent.reference.apps.configurator.controller.ConfiguratorController"
+			method="getPricingSummary">
+			<param name="DEBUG">false</param>
+			<result type="customJSON">/sic/configurator/configuratorTabbed.jsp
+			</result>
+		</action>
+		<!-- End -->
+	</package>
+
+	<package name="imageBuilder" extends="struts-default" namespace="/images" >
+		<action name="arrow" class="com.sterlingcommerce.imagebuilder.actions.ArrowAction">
+			<result name="success" type="freemarker">
+				<param name="location">/templates/images/arrow.ftl</param>
+				<param name="contentType">image/xml+svg</param>
+			</result>
+			<result name="input" type="freemarker">
+				<param name="location">/templates/images/error.ftl</param>
+				<param name="contentType">image/xml+svg</param>
+			</result>
+		</action>
+		<action name="shape" class="com.sterlingcommerce.imagebuilder.actions.ShapeAction">
+			<result name="success" type="freemarker">
+				<param name="location">/templates/images/shape.ftl</param>
+				<param name="contentType">image/xml+svg</param>
+			</result>
+			<result name="input" type="freemarker">
+				<param name="location">/templates/images/error.ftl</param>
+				<param name="contentType">image/xml+svg</param>
+			</result>
+		</action>
+	</package>
+</struts>

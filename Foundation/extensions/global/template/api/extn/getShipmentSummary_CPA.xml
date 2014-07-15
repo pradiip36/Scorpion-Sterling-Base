@@ -1,0 +1,12 @@
+<ShipmentLines>
+	<ShipmentLine ItemID="" ShipmentLineKey ="" ShortageQty ="" OrderHeaderKey =""  ShipmentKey =""  PickLocation =""  ShipmentSubLineNo =""  Quantity =""  OrderLineKey =""  BackroomPickedQuantity =""  ShipmentLineNo =""  OrderNo ="" >
+		<OrderLine OriginalOrderedQty="" Status="" IsBundleParent ="" ItemGroupCode =""  GiftFlag ="" >
+			<ItemDetails DisplayUnitOfMeasure ="" UnitOfMeasure =""  ItemGroupCode =""  ItemID ="" >
+				<PrimaryInformation ShortDescription =""  ImageLocation =""  ExtendedDisplayDescription =""  ImageID =""  ImageLabel =""/>
+				<ItemAliasList>
+					<ItemAlias AliasValue="" />
+				</ItemAliasList>
+			</ItemDetails>
+		</OrderLine>
+	</ShipmentLine>
+</ShipmentLines>

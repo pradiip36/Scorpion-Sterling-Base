@@ -1,0 +1,169 @@
+ <InvoiceDetail>
+    <!-- InvoiceHeader is a template-driven element but some of its attributes are not. Attributes that are not template driven: TotalCharges, TotalDiscount, TotalHeaderCharges, HeaderCharges, HeaderDiscount, HeaderTax and LineSubTotal.   -->
+    <InvoiceHeader ActualFreightCharge="" AmountCollected=""
+        ChargedActualFreight="" CollectedExternally=""
+        CollectedThroughAR="" DateInvoiced=""
+        DerivedFromOrderHeaderKey="" HeaderCharges="" HeaderDiscount=""
+        HeaderTax="" InvoiceNo="" InvoiceType="" LineSubTotal=""
+        MasterInvoiceNo="" OrderInvoiceKey="" Reference1=""
+        TotalAmount="" TotalCharges="" TotalDiscount=""
+        TotalHeaderCharges="" TotalTax="">
+        <Extn ExtnShipNode="" ExtnOCF=""/>
+        <Order BuyerOrganizationCode="" DeliveryCode="" DocumentType=""
+            EnteredBy="" EnterpriseCode="" EntryType="" OrderDate=""
+            OrderHeaderKey="" OrderNo="" SellerOrganizationCode="" TermsCode="" BillToID="" CustomerEMailID="">
+			 <OrderLineRelationships>
+				<OrderLineRelationship RelationshipType="">
+				<ParentLine OrderLineKey="" PrimeLineNo="" SubLineNo="" /> 
+				<ChildLine OrderLineKey="" PrimeLineNo="" SubLineNo="" /> 
+				</OrderLineRelationship>
+			</OrderLineRelationships>
+            <PriceInfo Currency=""/>
+            <PersonInfoBillTo  FirstName="" LastName="" DayPhone="" AddressLine1="" AddressLine2="" AddressLine3="" City="" Country=""
+                               State="" ZipCode=""/>
+            <AdditionalAddresses NumberOfAdditionalAddresses="">
+                <AdditionalAddress AddressType="">
+                    <PersonInfo  ZipCode=""/>
+                </AdditionalAddress>
+            </AdditionalAddresses>
+            <References>
+                <Reference Name="" Value=""/>
+            </References>
+			<Promotions>
+                <Promotion PromotionGroup=" "
+                            PromotionId=" " PromotionType=" ">
+                    <Extn ExtnCouponAlgorithm=" "
+                                ExtnCouponAmount=" "
+                                ExtnCouponBalance=""
+                                ExtnCouponEventID="" ExtnCouponNo="" ExtnCouponPercentage="" />
+                </Promotion>
+            </Promotions>
+			<Extn ExtnCosaDay="" ExtnCosaMonth="" ExtnCosaWeek=""
+				ExtnCosaYear="" ExtnKioskID="" 
+				 ExtnKCECouponNo=""  ExtnKCECouponEventID="" ExtnKCECouponAlgorithm="" ExtnKCECouponBalance="" ExtnKCECouponAmount="">
+				<KOHLSCashTableList>
+					<KOHLSCashTable AjbRefNumber="" KohlsCashAmount=""
+						KohlsCashAuthTime="" KohlsCashEventID=""
+						KohlsCashID=""  TableKey=""/>
+				</KOHLSCashTableList>
+			</Extn>
+        </Order>
+        <!-- TotalLines is not a template driven attribute. -->
+        <LineDetails TotalLines="">
+            <LineDetail Charges="" ExtendedPrice="" LineTotal=""
+                OrderInvoiceDetailKey="" OrderLineKey=""
+                ShippedQty="" Tax="" UnitPrice="">
+                <OrderLine OrderLineKey="" PrimeLineNo="" SubLineNo="" GiftFlag="" LineType="">
+                    <Item ItemID="" ProductClass="" UnitOfMeasure="">
+                        <LanguageDescriptionList>
+                            <LanguageDescription Description=""
+                                ExtendedDescription="" LocaleCode="" ShortDescription=""/>
+                        </LanguageDescriptionList>
+                         
+                    </Item>
+                    <LinePriceInfo DiscountPercentage=""
+                        DiscountReference="" DiscountType=""
+                        ListPrice="" RetailPrice="" UnitPrice=""/>
+                    <References>
+                        <Reference Name="" Value=""/>
+                    </References>
+					<Extn ExtnBOGOProration=""
+                        ExtnBOGOReceiptMarkDown=""
+                        ExtnBOGOSeq="" ExtnCurrentItemStatus=""
+                        ExtnReturnPrice="" ExtnTaxableAmount="" ExtnBOGOReturnTax="" ExtnVirtualGCNumber="" ExtnGiftRegistryID=""/>
+					<Promotions>
+                        <Promotion PromotionGroup=""
+                            PromotionId="" PromotionType="">
+                            <Extn ExtnCouponAlgorithm=""
+                                ExtnCouponAmount=""
+                                ExtnCouponBalance=""
+                                ExtnCouponEventID="" ExtnCouponNo="" ExtnCouponPercentage=""/>
+                        </Promotion>
+                    </Promotions>
+                    <PersonInfoShipTo TaxGeoCode="" ZipCode="" />
+                </OrderLine>
+                <!-- LineCharges is not a template driven element.  If a line has line charges, LineCharges will appear in the output alongwith all its child elements.-->
+                <LineCharges>
+                    <LineCharge ChargeAmount="" ChargeCategory=""
+                        ChargeName="" ChargeNameKey="" ChargePerLine=""
+                        ChargePerUnit="" Reference=""/>
+                </LineCharges>
+                <!-- LineTaxes is not a template driven element.  If a line has line taxes, LineTaxes will appear in the output alongwith all its child elements.-->
+                <LineTaxes>
+                    <LineTax ChargeCategory="" ChargeName=""
+                        ChargeNameKey="" Reference_1="" Reference_2=""
+                        Reference_3="" Tax="" TaxName="" TaxPercentage=""/>
+                    <TaxSummary>
+                        <TaxSummaryDetail Tax="" TaxName=""/>
+                    </TaxSummary>
+                </LineTaxes>
+                <References>
+                    <Reference Name="" Value=""/>
+                </References>
+            </LineDetail>
+        </LineDetails>
+        <TotalSummary>
+            <ChargeSummary>
+                <!-- ChargeSummaryDetail is not a template-driven element. -->
+                <ChargeSummaryDetail ChargeAmount="" ChargeCategory=""
+                    ChargeName="" ChargeNameKey="" Reference=""/>
+            </ChargeSummary>
+            <TaxSummary>
+                <!-- ChargeSummaryDetail is not a template-driven element. -->
+                <TaxSummaryDetail Tax="" TaxName=""/>
+            </TaxSummary>
+        </TotalSummary>
+        <HeaderCharges>
+            <!-- HeaderCharge is not a template driven element. If the template contains HeaderCharges element, HeaderCharge will appear in the output, alongwith all its attributes. -->
+            <HeaderCharge ChargeAmount="" ChargeCategory=""
+                ChargeName="" ChargeNameKey="" Reference=""/>
+        </HeaderCharges>
+        <!-- HeaderTaxes is not a template driven element. If the template contains HeaderCharges element, HeaderTaxes will appear in the output, alongwith all its child elements -->
+        <HeaderTaxes>
+            <HeaderTax ChargeCategory="" ChargeName="" ChargeNameKey=""
+                Reference_1="" Reference_2="" Reference_3="" Tax=""
+                TaxName="" TaxPercentage=""/>
+            <TaxSummary>
+                <TaxSummaryDetail Tax="" TaxName=""/>
+            </TaxSummary>
+        </HeaderTaxes>
+        <CollectionDetails TotalLines="">
+            <CollectionDetail AmountCollected=""
+                AuditTransactionID="" AuthorizationExpirationDate=""
+                AuthorizationID="" BookAmount="" ChargeTransactionKey=""
+                ChargeType="" CollectionDate="" CreditAmount=""
+                DebitAmount="" DistributedAmount="" HoldAgainstBook=""
+                OpenAuthorizedAmount="" OrderHeaderKey=""
+                OrderInvoiceKey="" PaymentKey="" RequestAmount=""
+                SettledAmount="" Status="" StatusReason=""
+                TransactionDate="" UserExitStatus="">
+                <CreditCardTransactions>
+                    <CreditCardTransaction AuthAmount="" AuthAvs=""
+                        AuthCode="" AuthReturnCode="" AuthReturnFlag=""
+                        AuthReturnMessage="" AuthTime=""
+                        ChargeTransactionKey=""
+                        CreditCardTransactionKey=""
+                        InternalReturnCode="" InternalReturnFlag=""
+                        InternalReturnMessage="" ParentKey=""
+                        Reference1="" Reference2="" RequestId=""
+                        TranAmount="" TranRequestTime=""
+                        TranReturnCode="" TranReturnFlag=""
+                        TranReturnMessage="" TranType=""/>
+                </CreditCardTransactions>
+                <PaymentMethod AwaitingAuthInterfaceAmount="" SvcNo=""                	
+                    AwaitingChargeInterfaceAmount="" ChargeSequence=""
+                    CheckNo="" CheckReference="" CreditCardExpDate=""
+                    CreditCardName="" CreditCardNo="" CreditCardType=""
+                    CustomerAccountNo="" CustomerPONo=""
+                    DisplayCreditCardNo="" DisplayPaymentReference1="" 
+                    IncompletePaymentType=""
+                    MaxChargeLimit="" PaymentKey="" PaymentReference1=""
+                    PaymentReference2="" PaymentReference3=""
+                    PaymentType="" RequestedAuthAmount=""
+                    RequestedChargeAmount="" SuspendAnyMoreCharges=""
+                    TotalAuthorized="" TotalCharged=""
+                    TotalRefundedAmount="" UnlimitedCharges=""/>
+            </CollectionDetail>
+        </CollectionDetails>
+    </InvoiceHeader>
+</InvoiceDetail>

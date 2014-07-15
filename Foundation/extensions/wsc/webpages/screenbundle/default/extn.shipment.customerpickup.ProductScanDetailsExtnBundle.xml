@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.shipment.customerpickup.ProductScanDetailsExtnBundle" screenId="extn.shipment.customerpickup.ProductScanDetailsExtn">
+    <BundleEntries/>
+</ScreenBundle>

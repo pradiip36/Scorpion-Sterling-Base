@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="AbandonedBackroomPickDialogExtn"
+        extnPackage="extn.shipment.backroomPick"
+        originalScreen="wsc.shipment.backroomPick.AbandonedBackroomPickDialog"
+        originalScreenPackage="wsc.shipment.backroomPick" type="diffrential">
+        <Items>
+            <HiddenField _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="Popup_startOver"
+                type="hidden" uId="extn_hiddenfield"/>
+        </Items>
+        <Subscribers>
+            <Local>
+                <Subscriber eventId="onExtnMashupCompletion"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="handleExtnMashupCompletion"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+        <MashupRefs>
+            <Behavior>
+                <MashupRef extnType="ADD" mashupId="extn_getUsername" mashupRefId="extn_getUserName"/>
+            </Behavior>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

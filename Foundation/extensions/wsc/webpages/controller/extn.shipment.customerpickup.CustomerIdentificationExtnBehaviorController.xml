@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.shipment.customerpickup.CustomerIdentificationExtnBehaviorController"
+    requestMethodSupported="POST" screenId="extn.shipment.customerpickup.CustomerIdentificationExtn">
+    <MashupRefs>
+        <MashupRef extnType="ADD" mashupId="extn_EJRecord_mashup"
+            mashupRefId="extn_addEJforBeginPickup" permissionId=""/>
+        <MashupRef extnType="ADD"
+            mashupId="extn_changeShipmentPickUp_mashup"
+            mashupRefId="extn_changeShipmentPickUp" permissionId=""/>
+        <MashupRef extnType="ADD" mashupId="extn_chkMgrOverride_mashup"
+            mashupRefId="extn_chkMgrOverride_mashup" permissionId=""/>
+        <MashupRef extnType="ADD" mashupId="extn_saveMgrOverride_mashup"
+            mashupRefId="extn_saveMgrOverride_mashup" permissionId=""/>
+        <MashupRef extnType="ADD" mashupId="extn_getCommonCodes_mashup"
+            mashupRefId="extn_getReceiptCommonCodes_diamond" permissionId=""/>
+    </MashupRefs>
+</Controller>

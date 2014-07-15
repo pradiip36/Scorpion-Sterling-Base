@@ -1,0 +1,407 @@
+#!/usr/bin/ksh
+#######################################################################
+#
+#     Program Name:  OFK030
+#           Author:  Prakash Balakrishnan
+#Responsible Group:  Order Management Systems 
+#     Date Created:  2011-09-21
+#  Program Purpose:  This script is responsible for updating the records in
+#                    yfs_export table in Sterling. 
+#                    
+#
+#                    The script requires 2 parameters.  
+#                    Parm 1 is the DB login id
+#                    Parm 2 is the retention days for system name with InputToInvoice
+#                    
+#
+#			Example:  OFK030L ob 30
+#
+# Modification Log:
+#                    02/09/2014 - Todd Winter(TKMAZ37) - Linux Conversion
+#                          Removed ESP upload, added support for environments A-E,
+#                          fixed env variables, added echoing of the ESP log
+#
+#
+#
+########################################################################
+
+#PARAMETERS
+
+parms=$#
+
+USAGE="Usage: $0 <dblogin_env> <retention_Invoice>"
+
+if [ $parms -gt 0 ]
+then
+   script=$0
+   dblogin_env=$1
+   retention_Invoice=$2
+   
+   
+else
+   print "$USAGE"
+   return_status=2
+
+   ${K_SRC}/is/IS_ESP_upld.sh
+    
+    exit ${return_status}
+fi
+
+###########################################################
+#
+#       F   U   N   C   T   I   O   N   S 
+#
+###########################################################
+
+get_PO_Retention_Days()
+{
+
+retention_PO_Count=`sqlplus -s ${DBLOGIN} << !
+
+set head off
+set trims on
+set heading off
+
+SELECT LEAD_DAYS FROM YFS_PURGE_CRITERIA
+     WHERE PURGE_CODE = 'EXPORTTBLPRG';	
+!`
+
+}
+
+check_Records_Po_Chub()
+{
+
+record_count_po_chub=`sqlplus -s ${DBLOGIN} << !
+
+set head off
+set trims on
+set heading off
+
+
+select count(*) from yfs_export 
+where system_name='POToCHUB'
+and status='00'
+and modifyts<sysdate-${retention_PO};	
+!`
+
+}
+
+
+check_Records_Po_Flow()
+{
+
+record_count_po=`sqlplus -s ${DBLOGIN} << !
+
+set head off
+set trims on
+set heading off
+
+
+select count(*) from yfs_export 
+where flow_name='YantraWMSPODownloadService'
+and status='00'
+and modifyts<sysdate-${retention_PO};	
+!`
+
+}
+
+check_Records_Invoice()
+{
+
+record_count_invoice=`sqlplus -s ${DBLOGIN} << !
+
+set head off
+set trims on
+set heading off
+
+select count(*) from yfs_export 
+where system_name='InputToInvoice'
+and status='00'
+and modifyts<sysdate-${retention_Invoice};	
+!`
+
+}
+
+
+update_Record_Po_Chub()
+{
+sqlplus -s ${DBLOGIN} << !
+
+set head off
+set trims on
+set heading off
+
+UPDATE yfs_export 
+set status='10' 
+where system_name='POToCHUB'
+and status='00'
+and modifyts<sysdate-${retention_PO};
+
+
+COMMIT;
+
+!
+
+}
+
+
+
+update_Record_Po_Flow()
+{
+sqlplus -s ${DBLOGIN} << !
+
+set head off
+set trims on
+set heading off
+
+UPDATE yfs_export 
+set status='10' 
+where flow_name='YantraWMSPODownloadService'
+and status='00'
+and modifyts<sysdate-${retention_PO};
+
+
+COMMIT;
+
+!
+
+}
+
+update_Record_Invoice()
+{
+sqlplus -s ${DBLOGIN} << !
+
+set head off
+set trims on
+set heading off
+
+UPDATE yfs_export 
+set status='10' 
+where system_name='InputToInvoice'
+and status='00'
+and modifyts<sysdate-${retention_Invoice};
+
+COMMIT;
+
+!
+
+}
+
+
+
+###########################################################
+# 
+#               M    A    I    N
+#
+###########################################################
+########################################################################
+# RUN REQUIRED PROFILES
+#   Execute the user's profile
+print 'BEGIN LOADING PROFILE'
+  export PATH="/usr/local/bin:$PATH"
+  . /srv/apps/profile/admin
+print 'END LOADING PROFILE'
+print
+
+########################################################################
+
+readonly log="${K_LOG}/of/OFK030_$(date -u +%Y-%m-%dT%T)_${$}.txt"
+########################################################################
+
+{
+
+print ${USAGE}
+print
+print
+
+
+#   Execute the Kohl's database environment
+print 'BEGIN LOADING ksetdblogin'
+. ${K_SH}/ksetdblogin ${dblogin_env} 
+print 'END LOADING ksetdblogin'
+print
+########################################################################
+
+##### Get retention Days for PO######
+
+
+get_PO_Retention_Days
+
+# Check Query Result 
+  query_check_count=$?
+  
+  if [[ ${query_check_count} -eq 0 ]] then
+       
+    print "Query executed successfully to fetch Retention days"  
+        
+    retention_PO_Count=`echo ${retention_PO_Count}`
+    retention_PO=${retention_PO_Count}
+
+    print "The Retention days for the PO is ${retention_PO} "
+
+  fi
+
+
+
+######For FlowName YantraWMSPODownloadService##########  
+
+check_Records_Po_Flow
+
+  # Check Query Result 
+  query_check_po_flow=$?
+  
+  if [[ ${query_check_po_flow} -eq 0 ]] then
+  
+   
+    record_count_po=`echo ${record_count_po}`
+    record_po_initial=${record_count_po}
+
+    print "Found ${record_po_initial} records for flow name YantraWMSPODownloadService that need to be updated in the YFS_EXPORT table."
+    print
+
+    if [[ ${record_po_initial} -gt 0 ]] then
+    
+      print "Running Query to update the records for flow name with YantraWMSPODownloadService."
+      print
+
+      update_Record_Po_Flow
+     
+      print "Updates completed, now checking to ensure data is fixed."
+      print 
+
+      check_Records_Po_Flow
+
+      
+      record_count_po=`echo ${record_count_po}`
+      record_po_after=${record_count_po}
+ 
+         
+      print "Found ${record_po_after} records that need to be fixed still for flow name YantraWMSPODownloadService."
+      print
+
+    else
+
+    print "No records need to be fixed."
+    print "Exiting."
+    print
+
+    fi
+    
+fi
+
+######For Invoice ##########
+
+check_Records_Invoice
+
+  # Check Query Result 
+  query_check_inv=$?
+  
+  if [[ ${query_check_inv} -eq 0 ]] then
+  
+   
+    record_count_invoice=`echo ${record_count_invoice}`
+    record_invoice_initial=${record_count_invoice}
+
+    print "Found ${record_invoice_initial} records for INVOICE that need to be updated in the YFS_EXPORT table."
+    print
+
+    if [[ ${record_invoice_initial} -gt 0 ]] then
+    
+      print "Running Query to update the records for system name with InputToInvoice."
+      print
+
+      update_Record_Invoice
+     
+      print "Updates completed, now checking to ensure data is fixed."
+      print 
+
+      check_Records_Invoice
+      
+      record_count_invoice=`echo ${record_count_invoice}`
+      record_invoice_after=${record_count_invoice}
+ 
+         
+      print "Found ${record_invoice_after} records that need to be fixed still for INVOICE."
+      print
+
+    else
+
+    print "No records need to be fixed."
+    print "Exiting."
+    print
+
+    fi
+    
+fi
+
+######For POToCHUB ##########
+
+check_Records_Po_Chub
+
+# Check Query Result 
+  query_check_po_chub=$?
+  
+  if [[ ${query_check_po_chub} -eq 0 ]] then
+  
+   
+    record_count_po_chub=`echo ${record_count_po_chub}`
+    record_po_chub_initial=${record_count_po_chub}
+
+    print "Found ${record_po_chub_initial} records for POToCHUB that need to be updated in the YFS_EXPORT table."
+    print
+
+    if [[ ${record_po_chub_initial} -gt 0 ]] then
+    
+      print "Running Query to update the records for system name with POToCHUB."
+      print
+
+
+      update_Record_Po_Chub
+
+      print "Updates completed, now checking to ensure data is fixed."
+      print 
+
+      check_Records_Po_Chub
+
+      
+      record_count_po_chub=`echo ${record_count_po_chub}`
+      record_po_chub_after=${record_count_po_chub}
+ 
+         
+      print "Found ${record_po_chub_after} records that need to be fixed still for POToCHUB."
+      print
+
+    else
+
+    print "No records need to be fixed."
+    print "Exiting."
+    print
+
+    fi
+    
+fi
+
+
+return_status=$?
+echo "Return Status of OFK030L: ${return_status}"
+
+} > ${log} 2>&1
+
+########################################################################
+# Display log file for ESP
+fold -w 131 ${log}
+########################################################################
+
+  
+########################################################################
+# Call script to build FTP control cards for
+# transferring Log Files to the Mainframe
+${K_SRC}/is/IS_ESP_upld.sh
+
+########################################################################
+
+########################################################################
+# Exit the script with the return code from your batch program
+exit ${return_status}
+########################################################################
+

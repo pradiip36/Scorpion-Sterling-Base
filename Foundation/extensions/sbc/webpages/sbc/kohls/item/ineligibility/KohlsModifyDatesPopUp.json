@@ -1,0 +1,518 @@
+{
+ "model": {
+  "sciId": {
+   "id": "sciId",
+   "value": "screen5",
+   "type": "string"
+  },
+  "className": {
+   "id": "className",
+   "value": "sc.sbc.kohls.item.ineligibility.KohlsModifyDatesPopUp",
+   "type": "string"
+  },
+  "superclassName": {
+   "id": "superclassName",
+   "value": "sc.plat.ui.ExtensibleScreen",
+   "type": "string"
+  },
+  "regXtype": {
+   "id": "regXtype",
+   "value": "xtype_name",
+   "type": "string"
+  },
+  "header": {
+   "id": "header",
+   "value": "false",
+   "type": "boolean"
+  },
+  "layout": {
+   "id": "layout",
+   "value": "anchor",
+   "type": "string"
+  },
+  "autoScroll": {
+   "id": "autoScroll",
+   "value": "false",
+   "type": "boolean"
+  },
+  "items": {
+   "id": "items",
+   "value": [{
+    "id": "",
+    "value": {
+     "sciId": {
+      "id": "sciId",
+      "value": "pnlModifyItems",
+      "type": "string"
+     },
+     "title": {
+      "id": "title",
+      "value": "Modify Ineligible Items",
+      "type": "string"
+     },
+     "layout": {
+      "id": "layout",
+      "value": "table",
+      "type": "string"
+     },
+     "border": {
+      "id": "border",
+      "value": "false",
+      "type": "boolean"
+     },
+     "items": {
+      "id": "items",
+      "value": [{
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "lblSKU",
+         "type": "string"
+        },
+        "text": {
+         "id": "text",
+         "value": "SKU",
+         "type": "string"
+        },
+        "cls": {
+         "id": "cls",
+         "value": "sc-plat-label",
+         "type": "string"
+        },
+        "defid": "label"
+       },
+       "type": "label"
+      },
+      {
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "txtSKU",
+         "type": "string"
+        },
+        "cls": {
+         "id": "cls",
+         "value": "sc-plat-noneditable-text",
+         "type": "string"
+        },
+        "readOnly": {
+         "id": "readOnly",
+         "value": "true",
+         "type": "boolean"
+        },
+        "width": {
+         "id": "width",
+         "value": "200",
+         "type": "number"
+        },
+        "bindingData": {
+         "id": "bindingData",
+         "value": {
+          "targetBinding": {
+           "id": "targetBinding",
+           "value": [{
+            "id": "",
+            "value": "adjustDatesModelTarget:ExtnItemInEligibility.ItemID",
+            "type": "string"
+           }],
+           "type": "array"
+          },
+          "defid": "object"
+         },
+         "type": "object"
+        },
+        "defid": "textfield"
+       },
+       "type": "textfield"
+      },
+      {
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "lblClassID",
+         "type": "string"
+        },
+        "text": {
+         "id": "text",
+         "value": "ClassID",
+         "type": "string"
+        },
+        "cls": {
+         "id": "cls",
+         "value": "sc-plat-label",
+         "type": "string"
+        },
+        "defid": "label"
+       },
+       "type": "label"
+      },
+      {
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "txtClassID",
+         "type": "string"
+        },
+        "cls": {
+         "id": "cls",
+         "value": "sc-plat-noneditable-text",
+         "type": "string"
+        },
+        "readOnly": {
+         "id": "readOnly",
+         "value": "true",
+         "type": "boolean"
+        },
+        "width": {
+         "id": "width",
+         "value": "200",
+         "type": "number"
+        },
+        "bindingData": {
+         "id": "bindingData",
+         "value": {
+          "targetBinding": {
+           "id": "targetBinding",
+           "value": [{
+            "id": "",
+            "value": "adjustDatesModelTarget:ExtnItemInEligibility.ClassID",
+            "type": "string"
+           }],
+           "type": "array"
+          },
+          "defid": "object"
+         },
+         "type": "object"
+        },
+        "defid": "textfield"
+       },
+       "type": "textfield"
+      },
+      {
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "lblStyle",
+         "type": "string"
+        },
+        "text": {
+         "id": "text",
+         "value": "Style",
+         "type": "string"
+        },
+        "cls": {
+         "id": "cls",
+         "value": "sc-plat-label",
+         "type": "string"
+        },
+        "defid": "label"
+       },
+       "type": "label"
+      },
+      {
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "txtStyle",
+         "type": "string"
+        },
+        "cls": {
+         "id": "cls",
+         "value": "sc-plat-editable-text",
+         "type": "string"
+        },
+        "readOnly": {
+         "id": "readOnly",
+         "value": "true",
+         "type": "boolean"
+        },
+        "width": {
+         "id": "width",
+         "value": "200",
+         "type": "number"
+        },
+        "bindingData": {
+         "id": "bindingData",
+         "value": {
+          "targetBinding": {
+           "id": "targetBinding",
+           "value": [{
+            "id": "",
+            "value": "adjustDatesModelTarget:ExtnItemInEligibility.Style",
+            "type": "string"
+           }],
+           "type": "array"
+          },
+          "defid": "object"
+         },
+         "type": "object"
+        },
+        "defid": "textfield"
+       },
+       "type": "textfield"
+      },
+      {
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "lblStartDate",
+         "type": "string"
+        },
+        "text": {
+         "id": "text",
+         "value": "Effective Start Date",
+         "type": "string"
+        },
+        "cls": {
+         "id": "cls",
+         "value": "sc-plat-label",
+         "type": "string"
+        },
+        "defid": "label"
+       },
+       "type": "label"
+      },
+      {
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "fldStartDate",
+         "type": "string"
+        },
+        "width": {
+         "id": "width",
+         "value": "200",
+         "type": "number"
+        },
+        "bindingData": {
+         "id": "bindingData",
+         "value": {
+          "targetBinding": {
+           "id": "targetBinding",
+           "value": [{
+            "id": "",
+            "value": "adjustDatesModelTarget:ExtnItemInEligibility.FromDate",
+            "type": "string"
+           }],
+           "type": "array"
+          },
+          "defid": "object"
+         },
+         "type": "object"
+        },
+        "defid": "datefield"
+       },
+       "type": "datefield"
+      },
+      {
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "lblEndDate",
+         "type": "string"
+        },
+        "text": {
+         "id": "text",
+         "value": "Effective End Date",
+         "type": "string"
+        },
+        "cls": {
+         "id": "cls",
+         "value": "sc-plat-label",
+         "type": "string"
+        },
+        "defid": "label"
+       },
+       "type": "label"
+      },
+      {
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "fldEndDate",
+         "type": "string"
+        },
+        "width": {
+         "id": "width",
+         "value": "200",
+         "type": "number"
+        },
+        "bindingData": {
+         "id": "bindingData",
+         "value": {
+          "targetBinding": {
+           "id": "targetBinding",
+           "value": [{
+            "id": "",
+            "value": "adjustDatesModelTarget:ExtnItemInEligibility.ToDate",
+            "type": "string"
+           }],
+           "type": "array"
+          },
+          "defid": "object"
+         },
+         "type": "object"
+        },
+        "defid": "datefield"
+       },
+       "type": "datefield"
+      },
+      {
+       "id": "items",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "txtKey",
+         "type": "string"
+        },
+        "hidden": {
+         "id": "hidden",
+         "value": "true",
+         "type": "boolean"
+        },
+        "bindingData": {
+         "id": "bindingData",
+         "value": {
+          "targetBinding": {
+           "id": "targetBinding",
+           "value": [{
+            "id": "",
+            "value": "adjustDatesModelTarget:ExtnItemInEligibility.ExtnStoreInEligblKey",
+            "type": "string"
+           }],
+           "type": "array"
+          },
+          "defid": "object"
+         },
+         "type": "object"
+        },
+        "defid": "textfield"
+       },
+       "type": "textfield"
+      }],
+      "type": "array"
+     },
+     "height": {
+      "id": "height",
+      "value": "250",
+      "type": "number"
+     },
+     "sctype": {
+      "id": "sctype",
+      "value": "ScreenMainPanel",
+      "type": "string"
+     },
+     "autoWidth": {
+      "id": "autoWidth",
+      "value": "false",
+      "type": "boolean"
+     },
+     "width": {
+      "id": "width",
+      "value": "450",
+      "type": "number"
+     },
+     "layoutConfig": {
+      "id": "layoutConfig",
+      "value": {
+       "columns": {
+        "id": "columns",
+        "value": "2",
+        "type": "number"
+       },
+       "defid": "tableLayoutConfig"
+      },
+      "type": "object"
+     },
+     "defid": "panel"
+    },
+    "type": "panel"
+   }],
+   "type": "array"
+  },
+  "border": {
+   "id": "border",
+   "value": "false",
+   "type": "boolean"
+  },
+  "autoHeight": {
+   "id": "autoHeight",
+   "value": "true",
+   "type": "boolean"
+  },
+  "autoWidth": {
+   "id": "autoWidth",
+   "value": "false",
+   "type": "boolean"
+  },
+  "width": {
+   "id": "width",
+   "value": "450",
+   "type": "number"
+  },
+  "namespaces": {
+   "id": "namespaces",
+   "value": {
+    "target": {
+     "id": "target",
+     "value": [{
+      "id": "",
+      "value": {
+       "name": {
+        "id": "name",
+        "value": "",
+        "type": "string"
+       },
+       "description": {
+        "id": "description",
+        "value": "",
+        "type": "string"
+       },
+       "defid": "target"
+      },
+      "type": "target"
+     }],
+     "type": "array"
+    },
+    "source": {
+     "id": "source",
+     "value": [{
+      "id": "",
+      "value": {
+       "name": {
+        "id": "name",
+        "value": "",
+        "type": "string"
+       },
+       "description": {
+        "id": "description",
+        "value": "",
+        "type": "string"
+       },
+       "defid": "source"
+      },
+      "type": "source"
+     }],
+     "type": "array"
+    },
+    "defid": "namespaces"
+   },
+   "type": "object"
+  },
+  "defid": "screen"
+ },
+ "version": "0.3.0b",
+ "type": "SCREEN",
+ "_verificationText": "VerificationText",
+ "dataSources": {}
+}

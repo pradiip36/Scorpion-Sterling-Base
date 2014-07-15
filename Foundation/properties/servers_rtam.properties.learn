@@ -1,0 +1,332 @@
+## Licensed Materials - Property of IBM
+## IBM Sterling Selling and fulfillment Suite 
+## (C) Copyright IBM Corp. 2001, 2013 All Rights Reserved.
+## US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+
+## PROPERTY_FILE_NAME
+## servers.properties.in (for initialization)
+## servers.properties (for operations)
+## PROPERTY_FILE_DESCRIPTION
+##
+
+## DATABASE_SUPPORT: N
+
+## PROPERTY_START
+## PROPERTY_NAME: noapp
+## PROPERTY_TYPE: String
+## PROPERTY_DESCRIPTION
+##
+## (For property value, see PROPERTY_VALUE_ALL section at end of file)
+## PROPERTY_END
+
+## PROPERTY_START
+## PROPERTY_NAME: shell
+## PROPERTY_TYPE: String
+## PROPERTY_DESCRIPTION
+##
+## (For property value, see PROPERTY_VALUE_ALL section at end of file)
+## PROPERTY_END
+
+## PROPERTY_START
+## PROPERTY_NAME: weblogic
+## PROPERTY_TYPE: String
+## PROPERTY_DESCRIPTION
+##
+## (For property value, see PROPERTY_VALUE_ALL section at end of file)
+## PROPERTY_END
+
+## PROPERTY_START
+## PROPERTY_NAME: websphere
+## PROPERTY_TYPE: String
+## PROPERTY_DESCRIPTION
+##
+## (For property value, see PROPERTY_VALUE_ALL section at end of file)
+## PROPERTY_END
+
+## PROPERTY_START
+## PROPERTY_NAME: jboss
+## PROPERTY_TYPE: String
+## PROPERTY_DESCRIPTION
+##
+## (For property value, see PROPERTY_VALUE_ALL section at end of file)
+## PROPERTY_END
+
+## PROPERTY_START
+## PROPERTY_NAME: jdbcService
+## PROPERTY_TYPE: String
+## PROPERTY_DESCRIPTION
+##
+## (For property value, see PROPERTY_VALUE_ALL section at end of file)
+## PROPERTY_END
+
+## PROPERTY_START
+## PROPERTY_NAME: jdbcServiceCustomer
+## PROPERTY_TYPE: String
+## PROPERTY_DESCRIPTION
+##
+## (For property value, see PROPERTY_VALUE_ALL section at end of file)
+## PROPERTY_END
+
+## PROPERTY_START
+## PROPERTY_NAME: logService
+## PROPERTY_TYPE: String
+## PROPERTY_DESCRIPTION
+##
+## (For property value, see PROPERTY_VALUE_ALL section at end of file)
+## PROPERTY_END
+
+## PROPERTY_START
+## PROPERTY_NAME: logCodes
+## PROPERTY_TYPE: String
+## PROPERTY_DESCRIPTION
+##
+## (For property value, see PROPERTY_VALUE_ALL section at end of file)
+## PROPERTY_END
+
+## PROPERTY_START
+## PROPERTY_NAME: logMessageCodes
+## PROPERTY_TYPE: String
+## PROPERTY_DESCRIPTION
+##
+## (For property value, see PROPERTY_VALUE_ALL section at end of file)
+## PROPERTY_END
+
+## PROPERTY_START
+## PROPERTY_NAME: version
+## PROPERTY_TYPE: String
+## PROPERTY_DESCRIPTION
+##
+## (For property value, see PROPERTY_VALUE_ALL section at end of file)
+## PROPERTY_END
+
+## PROPERTY_START
+## PROPERTY_NAME: security
+## PROPERTY_TYPE: String
+## PROPERTY_DESCRIPTION
+##
+## (For property value, see PROPERTY_VALUE_ALL section at end of file)
+## PROPERTY_END
+
+## PROPERTY_START
+## PROPERTY_NAME: logCodes
+## PROPERTY_TYPE: String
+## PROPERTY_DESCRIPTION
+##
+## (For property value, see PROPERTY_VALUE_ALL section at end of file)
+## PROPERTY_END
+
+## PROPERTY_START
+## PROPERTY_NAME: logMessageCodes
+## PROPERTY_TYPE: String
+## PROPERTY_DESCRIPTION
+##
+## (For property value, see PROPERTY_VALUE_ALL section at end of file)
+## PROPERTY_END
+
+## PROPERTY_START
+## PROPERTY_NAME: yfs
+## PROPERTY_TYPE: String
+## PROPERTY_DESCRIPTION
+##
+## (For property value, see PROPERTY_VALUE_ALL section at end of file)
+## PROPERTY_END
+
+## PROPERTY_START
+## PROPERTY_NAME: si_config
+## PROPERTY_TYPE: String
+## PROPERTY_DESCRIPTION
+##
+## (For property value, see PROPERTY_VALUE_ALL section at end of file)
+## PROPERTY_END
+
+## PROPERTY_START
+## PROPERTY_NAME: tuning
+## PROPERTY_TYPE: String
+## PROPERTY_DESCRIPTION
+##
+## (For property value, see PROPERTY_VALUE_ALL section at end of file)
+## PROPERTY_END
+
+## PROPERTY_START
+## PROPERTY_NAME: tuning_formulas
+## PROPERTY_TYPE: String
+## PROPERTY_DESCRIPTION
+##
+## (For property value, see PROPERTY_VALUE_ALL section at end of file)
+## PROPERTY_END
+
+## PROPERTY_START
+## PROPERTY_NAME: customer_overrides
+## PROPERTY_TYPE: String
+## PROPERTY_DESCRIPTION
+##
+## (For property value, see PROPERTY_VALUE_ALL section at end of file)
+## PROPERTY_END
+
+## PROPERTY_START
+## PROPERTY_NAME: propertyEncryption
+## PROPERTY_TYPE: String
+## PROPERTY_DESCRIPTION
+##
+## (For property value, see PROPERTY_VALUE_ALL section at end of file)
+## PROPERTY_END
+
+## PROPERTY_START
+## PROPERTY_NAME: dbNoTransPool
+## PROPERTY_GROUP: JMX Agent
+## PROPERTY_TYPE: String
+## PROPERTY_DESCRIPTION
+##
+## (For property value, see PROPERTY_VALUE_ALL section at end of file)
+## PROPERTY_END
+
+## PROPERTY_START
+## PROPERTY_NAME: dbPool
+## PROPERTY_GROUP: JMX Agent
+## PROPERTY_TYPE: String
+## PROPERTY_DESCRIPTION
+##
+## (For property value, see PROPERTY_VALUE_ALL section at end of file)
+## PROPERTY_END
+
+## PROPERTY_START
+## PROPERTY_NAME: dbclassCache
+## PROPERTY_GROUP: JMX Agent
+## PROPERTY_TYPE: String
+## PROPERTY_DESCRIPTION
+##
+## (For property value, see PROPERTY_VALUE_ALL section at end of file)
+## PROPERTY_END
+
+## PROPERTY_START
+## PROPERTY_NAME: translator
+## PROPERTY_TYPE: String
+## PROPERTY_DESCRIPTION
+##
+## (For property value, see PROPERTY_VALUE_ALL section at end of file)
+## PROPERTY_END
+
+## PROPERTY_START
+## PROPERTY_NAME: cdsa-user-document-path
+## PROPERTY_GROUP: C:D Server Adapter Upload/Download directory support
+## PROPERTY_TYPE: String
+## PROPERTY_DESCRIPTION
+##
+## (For property value, see PROPERTY_VALUE_ALL section at end of file)
+## PROPERTY_END
+
+## PROPERTY_START
+## PROPERTY_NAME: cdsa-proxy-document-path
+## PROPERTY_GROUP: C:D Server Adapter Upload/Download directory support
+## PROPERTY_TYPE: String
+## PROPERTY_DESCRIPTION
+##
+## (For property value, see PROPERTY_VALUE_ALL section at end of file)
+## PROPERTY_END
+
+## PROPERTY_START
+## PROPERTY_NAME: spoe-policy
+## PROPERTY_GROUP: C:D Server Adapter SPOE support
+## PROPERTY_TYPE: String
+## PROPERTY_DESCRIPTION
+##
+## (For property value, see PROPERTY_VALUE_ALL section at end of file)
+## PROPERTY_END
+
+## PROPERTY_START
+## PROPERTY_NAME: spoe-auth
+## PROPERTY_GROUP: C:D Server Adapter SPOE support
+## PROPERTY_TYPE: String
+## PROPERTY_DESCRIPTION
+##
+## (For property value, see PROPERTY_VALUE_ALL section at end of file)
+## PROPERTY_END
+
+## PROPERTY_START
+## PROPERTY_NAME: logfilter
+## PROPERTY_TYPE: String
+## PROPERTY_DESCRIPTION
+##
+## (For property value, see PROPERTY_VALUE_ALL section at end of file)
+## PROPERTY_END
+
+## PROPERTY_START
+## PROPERTY_NAME: safestart
+## PROPERTY_TYPE: String
+## PROPERTY_DESCRIPTION
+##
+## (For property value, see PROPERTY_VALUE_ALL section at end of file)
+## PROPERTY_END
+
+## PROPERTY_START
+## PROPERTY_NAME: filesystem
+## PROPERTY_TYPE: String
+## PROPERTY_DESCRIPTION
+##
+## (For property value, see PROPERTY_VALUE_ALL section at end of file)
+## PROPERTY_END
+
+## PROPERTY_VALUE_ALL
+noapp=/kohls/prop/of/Foundation/properties/noapp.properties
+shell=/kohls/prop/of/Foundation/properties/noapp.properties
+weblogic=/kohls/prop/of/Foundation/properties/noapp.properties
+websphere=/kohls/prop/of/Foundation/properties/noapp.properties
+jboss=/kohls/prop/of/Foundation/properties/noapp.properties
+jdbcService=/kohls/prop/of/Foundation/properties/jdbc.properties
+jdbcServiceCustomer=/kohls/prop/of/Foundation/properties/jdbc_customer.properties
+logService=/kohls/prop/of/Foundation/properties/log.properties
+logCodes=/kohls/prop/of/Foundation/properties/logCodes.properties
+logMessageCodes=/kohls/prop/of/Foundation/properties/logMessageCodes.properties
+version=/kohls/prop/of/Foundation/properties/version.properties
+security=/kohls/prop/of/Foundation/properties/security.properties
+logCodes=/kohls/prop/of/Foundation/properties/logCodes.properties
+logMessageCodes=/kohls/prop/of/Foundation/properties/logMessageCodes.properties
+logfilter=/kohls/prop/of/Foundation/properties/logfilter.properties
+yfs=/kohls/prop/of/Foundation/properties/yfs.properties
+si_config=/kohls/prop/of/Foundation/properties/sandbox.cfg
+tuning=/kohls/prop/of/Foundation/properties/tuning.properties
+tuning_formulas=/kohls/prop/of/Foundation/properties/tuningFormulas.properties
+customer_overrides=/kohls/prop/of/Foundation/properties/customer_overrides_rtam.properties
+system_overrides=/kohls/prop/of/Foundation/properties/system_overrides.properties
+propertyEncryption=/kohls/prop/of/Foundation/properties/propertyEncryption.properties
+filesystem=/kohls/prop/of/Foundation/properties/filesystem.properties
+safestart=/kohls/prop/of/Foundation/properties/safestart.properties
+
+
+#Sterling Platform
+
+#JMX Agent
+dbNoTransPool=oraclePool_NoTrans
+dbPool=oraclePool
+dbclassCache=/kohls/prop/of/Foundation/properties/dbclassCache.properties
+
+
+# include additional entries (from clumps, etc.)
+# because wildcards are not possible each additional file should be included by includeifexists.However, all ext files following the convention <property_file_name>_*_ext are automatically read in by Manager.java. The following entries below do not follow this convention and are therefore being included explicitly.
+
+# Include all extension servers.properties files.
+## Licensed Materials - Property of IBM
+##(C)Copyright IBM Corp. 2007, 2012 All Rights Reserved.
+## US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+## PROPERTY_FILE_NAME
+## servers.properties_ysc_ext.in (for initialization)
+## servers.properties_ysc_ext (for operations)
+## PROPERTY_FILE_DESCRIPTION
+##
+
+elasticsearch=/kohls/prop/of/Foundation/properties/elasticsearch.properties
+
+translator=/kohls/prop/of/Foundation/properties/translator.properties
+
+# C:D Server Adapter Upload/Download directroy support
+cdsa-user-document-path=/kohls/prop/of/Foundation/properties/cdinterop-user-records.properties
+cdsa-proxy-document-path=/kohls/prop/of/Foundation/properties/cdinterop-proxy-records.properties
+
+# C:D Server Adapter SPOE support
+spoe-policy=/kohls/prop/of/Foundation/properties/cdinterop-spoe-policy.properties
+spoe-auth=/kohls/prop/of/Foundation/properties/cdinterop-spoe-auth.properties
+
+#C:D Server Adapter FAR support
+cdsa-far=/kohls/prop/of/Foundation/properties/cdinterop-far.properties
+
+cshelp=/kohls/prop/of/Foundation/properties/cshelp.properties

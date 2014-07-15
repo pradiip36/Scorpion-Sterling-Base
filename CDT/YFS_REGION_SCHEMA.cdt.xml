@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<YFS_REGION_SCHEMAList TableName="YFS_REGION_SCHEMA">
+<RegionSchema Country="US" Createprogid="YDKConfigDeploy"
+    Createts="2013-07-31T19:11:52-04:00" Createuserid="oms_config"
+    Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-07-31T19:11:52-04:00" Modifyuserid="oms_config"
+    OrganizationCode="DEFAULT" RegionSchemaDescription="KohlsStores"
+    RegionSchemaKey="2013061521330526288520" RegionSchemaName="KohlsStores"/>
+<RegionSchema Country="US" Createprogid="SYSTEM"
+    Createts="2010-10-21T20:06:15-04:00" Createuserid="SYSTEM"
+    Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-10-21T20:06:15-04:00" Modifyuserid="sterling"
+    OrganizationCode="DEFAULT"
+    RegionSchemaDescription="All of the United States"
+    RegionSchemaKey="ALL_US" RegionSchemaName="ALL_US"/>
+</YFS_REGION_SCHEMAList>

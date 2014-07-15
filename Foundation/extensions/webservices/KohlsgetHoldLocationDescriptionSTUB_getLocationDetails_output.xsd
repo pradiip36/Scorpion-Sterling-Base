@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema attributeFormDefault="unqualified"
+    elementFormDefault="qualified"
+    targetNamespace="http://www.sterlingcommerce.com/documentation"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:yfc="http://www.sterlingcommerce.com/documentation" xmlns:yfctype="http://www.sterlingcommerce.com/documentation/types">
+    <xsd:annotation
+        yfc:fileName="KohlsgetHoldLocationDescriptionSTUB_getLocationDetails_output" yfc:rootElement="GetLocationDetailsResponse">
+        <xsd:appinfo source="yfc:structure">
+            <GetLocationDetailsResponse>
+                <GetLocationDetailsResult>
+                    <Response>
+                        <Data>
+                            <StockroomLocations>
+                                <StockroomLocation>
+                                    <BarcodeNumber></BarcodeNumber>
+                                    <FullDescriptionCode></FullDescriptionCode>
+                                    <LocationSortCode></LocationSortCode>
+                                </StockroomLocation>
+                            </StockroomLocations>
+                        </Data>
+                    </Response>
+                </GetLocationDetailsResult>
+            </GetLocationDetailsResponse>
+        </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:import
+        namespace="http://www.sterlingcommerce.com/documentation/types" schemaLocation="datatypes.xsd"/>
+    <xsd:element name="GetLocationDetailsResponse" type="yfc:GetLocationDetailsResponseXSDType"/>
+    <xsd:complexType name="GetLocationDetailsResponseXSDType">
+        <xsd:all>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="yfc:GetLocationDetailsResult"/>
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:element name="GetLocationDetailsResult">
+        <xsd:complexType>
+            <xsd:all>
+                <xsd:element maxOccurs="1" minOccurs="0" ref="yfc:Response"/>
+            </xsd:all>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="Response">
+        <xsd:annotation yfc:tableName="YFS_RESPONSE">
+            <xsd:documentation>This table stores header level information of responses from initiator organization and negotiator organization for a negotiation. The new values for the negotiation terms are stored in its children tables, yfs_response_hdr and yfs_response_line.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+            <xsd:all>
+                <xsd:element maxOccurs="1" minOccurs="0" ref="yfc:Data"/>
+            </xsd:all>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="Data">
+        <xsd:complexType>
+            <xsd:all>
+                <xsd:element maxOccurs="1" minOccurs="0" ref="yfc:StockroomLocations"/>
+            </xsd:all>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="StockroomLocations">
+        <xsd:complexType>
+            <xsd:all>
+                <xsd:element maxOccurs="1" minOccurs="0" ref="yfc:StockroomLocation"/>
+            </xsd:all>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="StockroomLocation">
+        <xsd:complexType>
+            <xsd:all>
+                <xsd:element maxOccurs="1" minOccurs="0" ref="yfc:BarcodeNumber"/>
+                <xsd:element maxOccurs="1" minOccurs="0" ref="yfc:FullDescriptionCode"/>
+                <xsd:element maxOccurs="1" minOccurs="0" ref="yfc:LocationSortCode"/>
+            </xsd:all>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="BarcodeNumber" type="xsd:string"/>
+    <xsd:element name="FullDescriptionCode" type="xsd:string"/>
+      <xsd:element name="LocationSortCode" type="xsd:string"/>
+</xsd:schema>

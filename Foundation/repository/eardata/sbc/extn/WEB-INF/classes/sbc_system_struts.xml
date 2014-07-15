@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Licensed Materials - Property of IBM
+IBM Sterling Business Center
+(C) Copyright IBM Corp. 2009, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+ 
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="sbc-system" namespace="/sbc/systemadmin" extends="scuiimpl">
+		<default-class-ref class="com.sterlingcommerce.sbc.core.struts.SBCDefaultStrutsAction"></default-class-ref>
+		<global-results>
+	            <result name="MASHUPERROR">/sbc/jsps/apierror.jsp</result>
+				<result name="VALIDATIONERROR">/sbc/jsps/apierror.jsp</result>
+				<result name="AUTHORIZATIONERROR">/sbc/jsps/apierror.jsp</result>
+				<result name="error">/sbc/jsps/apierror.jsp</result>
+				<result name="APIERROR">/sbc/jsps/apierror.jsp</result>
+				<result name="DATAVALIDATIONERROR">/jsps/datavalidationerror.jsp</result>
+		</global-results>
+		<!--****************************-->
+		<!-- Start Index Management		-->
+		<!--****************************-->
+		<action name="manageitemcatalogindexes">
+			<param name="resourceId">SBCSAD00002</param>
+			<result name="success">/sbc/systemadmin/index/manageitemcatalogindexes.jsp</result>
+		</action>
+		<action name="indexmanagement-getindexlist" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction" >
+			<param name="mashupId">indexmanagement-getindexlist</param>
+			<param name="inputNs">getSearchIndexTriggerList_input</param>
+			<param name="outputNs">getSearchIndexTriggerList_output</param>
+			<param name="resourceId">SBCSAD00002</param> 
+			<result name="success">/sbc/systemadmin/index/getindexlist.jsp</result>
+		</action>
+		<action name="indexmanagement-createnewindex" class="com.sterlingcommerce.sbc.common.SBCMultiXAPI">
+			<param name="mashupId">indexmanagement-manageSearchIndexTrigger</param>
+			<param name="inputNs">manageSearchIndexTrigger_input</param>
+			<param name="outputNs">manageSearchIndexTrigger_output</param>
+			<param name="resourceId">SBCSAD00003</param> 
+			<result name="success">/sbc/core/donothingresulthandler.jsp</result> 
+		</action>
+		<action name="indexmanagement-deleteoldindexes" class="com.sterlingcommerce.sbc.common.SBCMultiXAPI">
+			<param name="mashupId">indexmanagement-manageSearchIndexTrigger</param>
+			<param name="inputNs">manageSearchIndexTrigger_input</param>
+			<param name="outputNs">manageSearchIndexTrigger_output</param>
+			<param name="resourceId">SBCSAD00004</param> 
+			<result name="success">/sbc/core/donothingresulthandler.jsp</result> 
+		</action>
+		<action name="indexmanagement-deleteindexes" class="com.sterlingcommerce.sbc.common.SBCMultiXAPI">
+			<param name="mashupId">indexmanagement-manageSearchIndexTrigger</param>
+			<param name="inputNs">manageSearchIndexTrigger_input</param>
+			<param name="outputNs">manageSearchIndexTrigger_output</param> 
+			<param name="resourceId">SBCSAD00004</param>
+			<result name="success">/sbc/core/donothingresulthandler.jsp</result> 
+		</action>
+		<action name="indexmanagement-activateindex" class="com.sterlingcommerce.sbc.common.SBCMultiXAPI">
+			<param name="mashupId">indexmanagement-manageSearchIndexTrigger</param>
+			<param name="inputNs">manageSearchIndexTrigger_input</param>
+			<param name="outputNs">manageSearchIndexTrigger_output</param>
+			<param name="resourceId">SBCSAD00003</param> 
+			<result name="success">/sbc/core/donothingresulthandler.jsp</result> 
+		</action>
+		<action name="indexmanagement-incrementalbuild" class="com.sterlingcommerce.sbc.common.SBCMultiXAPI">
+			<param name="mashupId">indexmanagement-manageSearchIndexTrigger</param>
+			<param name="inputNs">manageSearchIndexTrigger_input</param>
+			<param name="outputNs">manageSearchIndexTrigger_output</param>
+			<param name="resourceId">SBCSAD00003</param> 
+			<result name="success">/sbc/core/donothingresulthandler.jsp</result> 
+		</action>
+		<action name="openCatalogSelectionPopup" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">categorymanagement-getcataloglist</param>
+			<param name="inputNs">getCategoryDomainList_input</param>
+			<param name="outputNs">getCategoryDomainList_output</param>
+			<param name="resourceId">SBCSAD00002</param> 
+			<result name="success">/sbc/systemadmin/index/manage/catalogselection/getcataloglist.jsp</result>
+		</action>
+		<action name="openDeleteOldIndexPopup" >
+			<param name="resourceId">SBCSAD00002</param>
+			<result name="success">/sbc/systemadmin/index/manage/deleteoldindexes/opendeleteoldindexpopup.jsp</result>
+		</action>
+		<!--****************************-->
+		<!-- End Index Management -->
+		<!--****************************-->
+		
+		<!--******************************-->
+		<!-- Start DataBase Extensibility -->
+		<!--******************************-->
+		
+		<!-- Custom Aggregator chain. This series of API/custom mashups needs to be chained. -->
+		<!-- Aggregator mashup does NOT support custom mashup classes. -->
+		<action name="loadDBExtensibility" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getEntityAttributeDataTypeList</param>
+			<param name="inputNs">getAttributeDataTypeList_input</param>
+			<param name="outputNs">getAttributeDataTypeList_output</param>
+			<result name="success" type="chain">
+					<param name="actionName">loadDBExtensibility2</param>
+					<param name="namespace">/sbc/systemadmin</param> 
+			</result>
+		</action>
+		<action name="loadDBExtensibility2" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getCommonCodeExtnObjectList</param>
+			<param name="inputNs">getCommonCodeExtnObjectList_input</param>
+			<param name="outputNs">getCommonCodeExtnObjectList_output</param>
+			<result name="success" type="chain">
+					<param name="actionName">loadDBExtensibility3</param>
+					<param name="namespace">/sbc/systemadmin</param> 
+			</result>
+		</action>
+		<action name="loadDBExtensibility3" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getEntityAttrStatusList</param>
+			<param name="inputNs">getEntityAttrStatusList_input</param>
+			<param name="outputNs">getEntityAttrStatusList_output</param>
+			<result name="success">/sbc/systemadmin/extensibility/database/manage/dbextensibility.jsp</result>
+		</action>
+		<!-- ******************End Custom Aggregator chain.***************************-->
+		
+		
+		<!-- Custom Aggregator chain. This series of API/custom mashups needs to be chained. -->
+		<!-- Aggregator mashup does NOT support custom mashup classes. -->
+		<action name="getEntAttrManagementResults" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getEntityAttributeDataTypeList</param>
+			<param name="inputNs">getAttributeDataTypeList_input</param>
+			<param name="outputNs">getAttributeDataTypeList_output</param>
+			<result name="success" type="chain">
+					<param name="actionName">getEntAttrManagementResults2</param>
+					<param name="namespace">/sbc/systemadmin</param> 
+			</result>
+		</action>
+		<action name="getEntAttrManagementResults2" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getCommonCodeExtnObjectList</param>
+			<param name="inputNs">getCommonCodeExtnObjectList_input</param>
+			<param name="outputNs">getCommonCodeExtnObjectList_output</param>
+			<result name="success" type="chain">
+					<param name="actionName">getEntAttrManagementResults3</param>
+					<param name="namespace">/sbc/systemadmin</param> 
+			</result>
+		</action>
+		<action name="getEntAttrManagementResults3" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getEntityAttrStatusList</param>
+			<param name="inputNs">getEntityAttrStatusList_input</param>
+			<param name="outputNs">getEntityAttrStatusList_output</param>
+			<result name="success">/sbc/systemadmin/extensibility/database/manage/entattrmanagement.jsp</result>
+		</action>
+		<!-- ******************End Custom Aggregator chain.***************************-->
+
+
+		<!-- Get LEAF level objects -->
+		<action name="getExtensibleObjectLevelList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getExtensibleObjectLevelList</param>
+			<param name="inputNs">getCommonCodeList_input</param>
+			<param name="outputNs">getCommonCodeList_output</param>
+<!--        <param name="resourceId"></param> -->
+			<result name="success">/sbc/core/widget/settreedata.jsp</result> 
+		</action>
+		<action name="getEntityCustomAttributeList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getEntityCustomAttributeList</param>
+			<param name="inputNs">getEntityCustomAttributeList_input</param>
+			<param name="outputNs">getEntityCustomAttributeList_output</param>
+<!--			<param name="resourceId"></param> -->
+			<result name="success">/sbc/systemadmin/extensibility/database/manage/loadentityattributelist.jsp</result> 
+		</action>
+
+		<!-- Custom Aggregator chain. This series of API/custom mashups needs to be chained. -->
+		<!-- Aggregator mashup does NOT support custom mashup classes. -->
+		<action name="openAddEntAttrPopup" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getEntityAttributeDataTypeList</param>
+			<param name="inputNs">getAttributeDataTypeList_input</param>
+			<param name="outputNs">getAttributeDataTypeList_output</param>
+			<result name="success" type="chain">
+					<param name="actionName">openAddEntAttrPopup2</param>
+					<param name="namespace">/sbc/systemadmin</param> 
+			</result>
+		</action>
+		<action name="openAddEntAttrPopup2" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getCommonCodeExtnObjectList</param>
+			<param name="inputNs">getCommonCodeExtnObjectList_input</param>
+			<param name="outputNs">getCommonCodeExtnObjectList_output</param>
+			<result name="success" type="chain">
+					<param name="actionName">openAddEntAttrPopup3</param>
+					<param name="namespace">/sbc/systemadmin</param> 
+			</result>
+		</action>
+		<action name="openAddEntAttrPopup3" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getEntityAttrStatusList</param>
+			<param name="inputNs">getEntityAttrStatusList_input</param>
+			<param name="outputNs">getEntityAttrStatusList_output</param>
+			<result name="success">/sbc/systemadmin/extensibility/database/manage/openaddentattrpopup.jsp</result>
+		</action>
+		<!-- ******************End Custom Aggregator chain.***************************-->
+
+		<action name="manageEntityCustomAttribute" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">manageEntityCustomAttribute</param>
+			<param name="inputNs">manageEntityCustomAttribute_input</param>
+			<param name="outputNs">manageEntityCustomAttribute_output</param>
+			<result name="success" type="chain">
+				<param name="actionName">getEntityCustomAttributeList</param>
+				<param name="namespace">/sbc/systemadmin</param> 
+				</result>
+		</action>
+		<action name="createEntityAttribute"
+			class="com.sterlingcommerce.sbc.system.simulated.dbextensibility.SBCcreateEntityAttributeAction">
+			<param name="CreateDomainMashup">createEntityAttributeDomain</param>
+			<param name="GetDomainMashup">getEntityAttributeDomain</param>
+			<param name="GetAttributeDetailsMashup">getAttributeDetailsForCopy</param>
+			<param name="CreateAttributeAggregator">createEntityAttributeMashup</param>
+			<param name="inputNs">createEntityAttribute_input</param>
+			<param name="outputNs">createEntityAttribute_ouput</param>
+			<result name="APIERROR">/sbc/itemadmin/attribute/manage/manageattributeerror.jsp</result>
+	<!--	<param name="resourceId"></param>-->
+			<result name="success" type="chain">
+				<param name="actionName">getEntityCustomAttributeList</param>
+				<param name="namespace">/sbc/systemadmin</param> 
+			</result>
+		</action>
+		<action name="entityAttribute-gettextattribute" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">textattributedetails-getattributedetails</param>
+			<param name="inputNs">getAttributeDetails_input</param>
+			<param name="outputNs"> getAttributeDetails_output</param>
+		<!--	<param name="resourceId">SBCITM00008</param>-->
+			<result name="success" >/sbc/itemadmin/attribute/manage/attrdetails/gettextattribute.jsp</result>
+		</action>
+		<action name="entityAttribute-getnumberattribute" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">numberattrdetails-getattributedetails</param>
+			<param name="inputNs">getAttributeDetails_input</param>
+			<param name="outputNs"> getAttributeDetails_output</param>
+			<!--<param name="resourceId">SBCITM00008</param>-->
+			<result name="success">/sbc/itemadmin/attribute/manage/attrdetails/getnumberattribute.jsp</result>
+		</action>
+
+		<action name="attributedetails-loadentityattributedata"
+		class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getEntityAttributeDataTypeList</param>
+			<param name="inputNs">getAttributeDataTypeList_input</param>
+			<param name="outputNs">getAttributeDataTypeList_output</param>
+			<result name="success" type="chain">
+					<param name="actionName">loadattribute-getdatatypelist</param>
+					<param name="namespace">/sbc/item</param> 
+			</result>
+		</action>
+		<action name="textentityattributedetails-managetextattribute" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">attributedetails-managetextattribute</param>
+			<result name="APIERROR">/sbc/itemadmin/attribute/manage/manageattributeerror.jsp</result>
+			<param name="inputNs">manageAttribute_input</param>
+			<param name="outputNs">manageAttribute_output</param>
+		<!--	<param name="resourceId">SBCITM00099</param>-->
+			<result name="success" type="chain">
+					<param name="actionName">getEntityCustomAttributeList</param>
+				<param name="namespace">/sbc/systemadmin</param> 
+			</result>
+		</action>
+		<action name="numberentityattrdetails-managenumberattribute" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">attributedetails-manageattribute</param>
+			<result name="APIERROR">/sbc/itemadmin/attribute/manage/manageattributeerror.jsp</result>
+			<param name="inputNs">manageAttribute_input</param>
+			<param name="outputNs">manageAttribute_output</param>
+			<!--<param name="resourceId">SBCITM00099</param>-->
+			<result name="success" type="chain">
+					<param name="actionName">getEntityCustomAttributeList</param>
+				<param name="namespace">/sbc/systemadmin</param>  
+			</result>
+		</action>
+		<!--****************************-->
+		<!-- End DataBase Extensibility -->
+		<!--****************************-->
+	</package>
+</struts>

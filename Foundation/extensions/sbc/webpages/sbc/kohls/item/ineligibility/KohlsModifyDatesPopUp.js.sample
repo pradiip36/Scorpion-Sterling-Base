@@ -1,0 +1,18 @@
+Ext.namespace('sc.sbc.kohls.item.ineligibility');
+
+sc.sbc.kohls.item.ineligibility.KohlsModifyDatesPopUp = function(config) {
+    sc.sbc.kohls.item.ineligibility.KohlsModifyDatesPopUp.superclass.constructor.call(this, config);
+}
+Ext.extend(sc.sbc.kohls.item.ineligibility.KohlsModifyDatesPopUp, sc.plat.ui.ExtensibleScreen, {
+    className: 'sc.sbc.kohls.item.ineligibility.KohlsModifyDatesPopUp',
+    getUIConfig: sc.sbc.kohls.item.ineligibility.KohlsModifyDatesPopUpUIConfig,
+    namespaces: {
+        target: [''],
+        source: ['']
+    },
+    namespacesDesc: {
+        targetDesc: [''],
+        sourceDesc: ['']
+    }
+});
+Ext.reg('xtype_name', sc.sbc.kohls.item.ineligibility.KohlsModifyDatesPopUp);

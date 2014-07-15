@@ -1,0 +1,11 @@
+<!-- SCHEDULE.ON_BACKORDER event xml -->
+<Order OrderHeaderKey="" EnterpriseCode="" DocumentType="" OrderNo="" SellerOrganizationCode="" >
+   <OrderLines >
+      <OrderLine OrderLineKey="" OrderedQty="" PrimeLineNo=""  SubLineNo="" >
+	<Item ItemID="" ProductClass="" UnitOfMeasure=""/>
+	<StatusBreakupForBackOrderedQty >
+            <BackOrderedFrom BackOrderedQuantity="" />
+         </StatusBreakupForBackOrderedQty>
+     </OrderLine>
+   </OrderLines>
+</Order>

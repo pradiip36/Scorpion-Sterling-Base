@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Licensed Materials - Property of IBM
+IBM Sterling Business Center
+(C) Copyright IBM Corp. 2009, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+ 
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="sbc-common" namespace="/sbc/common" extends="scuiimpl">
+		<default-class-ref class="com.sterlingcommerce.sbc.core.struts.SBCDefaultStrutsAction"></default-class-ref>
+		<global-results>
+			<result name="MASHUPERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="VALIDATIONERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="AUTHORIZATIONERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="error">/sbc/jsps/apierror.jsp</result>
+			<result name="APIERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="DATAVALIDATIONERROR">/jsps/datavalidationerror.jsp</result>
+		</global-results>
+		<action name="getSavedSearch" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">pricing-getSavedSearch</param>
+			<param name="inputNs">getSavedSearch</param>
+			<param name="outputNs">getSavedSearchOutput</param>
+			<param name="resourceId">SBCSYS00001</param>
+			<result name="success">/sbc/common/savedsearch/getSavedSearchListResult.jsp</result>
+		</action>
+		<action name="getSavedSearchDetails" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">pricing-getSavedSearchDetails</param>
+			<param name="inputNs">getSavedSearchDetails</param>
+			<param name="outputNs">getSavedSearchDetailsOutput</param>
+			<param name="resourceId">SBCSYS00001</param>
+			<result name="success" type="chain">    
+					<param name="actionName">getAdvancedSearchParamsForSavedSearch</param>
+					<param name="namespace">/sbc/common</param> 
+			</result>
+		<!--	<result name="success">/sbc/common/savedsearch/createsavedsearch/getSavedSearchDetailsResult.jsp</result> -->
+		</action>
+		
+		<action name="getAdvancedSearchParamsForSavedSearch" class="com.sterlingcommerce.sbc.core.struts.SBCStrutsAction">
+			<param name="mashupId">pricing-getAdvancedSearchParams</param>
+			<param name="inputNs">getAdvancedSearchParams_input</param>
+			<param name="outputNs">getAdvancedSearchParams_output</param>
+			<param name="resourceId">SBCSYS00001</param>
+			<result name="success">/sbc/common/savedsearch/createsavedsearch/getSavedSearchDetailsResult.jsp</result>
+		</action>
+		<action name="createSavedSearch" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">pricing-createSavedSearch</param>
+			<param name="inputNs">createSavedSearch</param>
+			<param name="outputNs">createSavedSearchOutput</param>
+			<param name="resourceId">SBCSYS00001</param>
+			<result name="success">/sbc/common/savedsearch/createsavedsearch/createSavedSearchResult.jsp</result>
+		</action>
+		<action name="modifySavedSearch" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">pricing-modifySavedSearch</param>
+			<param name="inputNs">modifySavedSearchInput</param>
+			<param name="outputNs">modifySavedSearchOutput</param>
+			<param name="resourceId">SBCSYS00001</param>
+			<result name="success">/sbc/common/savedsearch/managesavedsearch/modifySavedSearchResult.jsp</result>
+		</action>
+		<action name="deleteSavedSearch" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">pricing-deleteSavedSearch</param>
+			<param name="inputNs">deleteSavedSearchInput</param>
+			<param name="outputNs">deleteSavedSearchOutput</param>
+			<param name="resourceId">SBCSYS00001</param>
+			<result name="success">/sbc/common/savedsearch/managesavedsearch/deleteSavedSearchResult.jsp</result>
+		</action>
+		<action name="organizationsearchpopup">
+			<param name="resourceId">SBCSYS00001</param>
+			<result name="success">/sbc/common/organization/organizationsearchpopup.jsp</result>
+		</action>
+		<action name="searchorganizations" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">subcatalog_getOrganizationList</param>
+			<param name="inputNs">getOrganizationList_input</param>
+			<param name="outputNs">getOrganizationList_output</param>
+			<param name="resourceId">SBCSYS00001</param>
+			<result name="success">/sbc/common/organization/organizationsearchresults.jsp</result>
+		</action>
+		<action name="templateOrgSearch" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">common-getTemplateOrgList</param>
+			<param name="inputNs">getOrganizationList_input</param>
+			<param name="outputNs">getOrganizationList_output</param>
+			<param name="resourceId">SBCSYS00001</param>
+			<result name="success">/sbc/common/organization/organizationsearchresults.jsp</result>
+		</action>
+		<action name="getOrgGroupOverrideList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">common-getOrgGroupOverrideList</param>
+			<param name="inputNs">getOrgGroupOverrideList_input</param>
+			<param name="outputNs">orgGroupOverride_output</param>
+			<param name="resourceId">SBCSYS00001</param>
+			<result name="success">/sbc/common/orgGroupOverrideResults.jsp</result>
+		</action>
+		<action name="manageOrgGroupOverride" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">common-manageOrgGroupOverride</param>
+			<param name="inputNs">manageOrgGroupOverride_input</param>
+			<param name="outputNs">orgGroupOverride_output</param>
+			<param name="resourceId">SBCSYS00001</param>
+			<result name="success">/sbc/common/orgGroupOverrideResults.jsp</result>
+		</action>
+		<action name="getSearchContextList">
+			<param name="resourceId">SBCSYS00001</param>
+			<result name="success">/sbc/common/savedsearch/searchContextList.jsp</result>
+		</action>
+		<action name="getBooleanValuesForAdvancedSearch">
+			<param name="resourceId">SBCSYS00001</param>
+			<result name="success">/sbc/common/search/getBooleanValues.jsp</result>
+		</action>
+		<action name="sellingregiontreelookup" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">common-getSellingRegion</param>
+			<param name="inputNs">getRegionUsageDetails_input</param>
+			<param name="outputNs">getRegionUsageDetails_output</param>
+			<result name="APIERROR">/sbc/common/region/getregionusageerror.jsp</result>
+			<param name="resourceId">SBCSYS00001</param>
+			<result name="success" type="chain">    
+					<param name="actionName">regiontreelookup</param>
+					<param name="namespace">/sbc/common</param> 
+			  </result>
+		</action>
+		<action name="regiontreelookup" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">common-getParentRegionListForTree</param>
+			<param name="inputNs">getRegionList_input</param>
+			<param name="outputNs">getRegionList_output</param>
+			<param name="resourceId">SBCSYS00001</param>
+			<result name="success">/sbc/common/region/tree/loadregiontreelookup.jsp</result>
+		</action>
+		<action name="regionlisttree" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">common-getRegionListForTree</param>
+			<param name="inputNs">getRegionList_input</param>
+			<param name="outputNs">getRegionList_output</param>
+			<param name="resourceId">SBCSYS00001</param>
+			<result name="success">/sbc/core/widget/settreedata.jsp</result>
+		</action>
+		<action name="validateCustomer" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getCustomerListForValidation</param>
+			<param name="inputNs">getCustomerListForValidation</param>
+			<param name="outputNs">getCustomerListForValidation_output</param>
+			<param name="resourceId">SBCSYS00001</param>
+			<result name="success">/sbc/common/validation/validateCustomer.jsp</result>
+		</action>
+		<action name="validatePricelist" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">validatePricelist</param>
+			<param name="inputNs">validatePricelist</param>
+			<param name="outputNs">validatePricelist_output</param>
+			<param name="resourceId">SBCSYS00001</param>
+			<result name="success">/sbc/common/validation/validatePricelist.jsp</result>
+		</action>
+		<!--ChangeRequest Details Screen -->
+		<action name="openChangeRequestPopup" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">changeRequest-getChangeRequestDetails</param>
+			<param name="inputNs">getChangeRequestDetails_Input</param>
+			<param name="outputNs">getChangeRequestDetails_Output</param>
+			<param name="resourceId">SBCSYS00006</param>
+			<result name="success">/sbc/common/projectmanagement/manage/changerequest/openchangerequestpopup.jsp</result>
+		</action>
+		<action name="createChangeRequest" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">changeRequest-getChangeProjectDetailsForNewRequest</param>
+			<param name="inputNs">getChangeProjectDetails_Input</param>
+			<param name="outputNs">getChangeProjectDetails_Output</param>
+			<param name="resourceId">SBCSYS00006</param>
+			<result name="success" type="chain">    
+				<param name="actionName">loadChangeRequestDetails_Status</param>
+				<param name="namespace">/sbc/common</param> 
+		  	</result>
+		</action>
+		
+		<action name="loadChangeRequestDetails" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">changeRequest-getChangeRequestDetails</param>
+			<param name="inputNs">getChangeRequestDetails_Input</param>
+			<param name="outputNs">getChangeRequestDetails_Output</param>
+			<param name="resourceId">SBCSYS00006</param>
+			<result name="success" type="chain">    
+				<param name="actionName">loadChangeRequestDetails_Status</param>
+				<param name="namespace">/sbc/common</param> 
+		  	</result>
+		</action>
+		<action name="loadChangeRequestDetails_Status" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getChangeRequestStatusList</param>
+			<param name="inputNs">getChangeRequestStatusList_Input</param>
+			<param name="outputNs">getChangeRequestStatusList_Output</param>
+			<param name="resourceId">SBCSYS00006</param>
+			<result name="success">/sbc/common/projectmanagement/manage/changerequest/loadchangerequestdetails.jsp</result>
+		</action>
+		<action name="saveChangeRequest" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">changeRequest-manageChangeRequest</param>
+			<param name="resourceId">SBCSYS00009</param>
+			<result name="success">/sbc/common/projectmanagement/manage/changerequest/savechangerequest.jsp</result>
+			<result name="APIERROR">/sbc/common/projectmanagement/manage/changerequest/changerequesterror.jsp</result>
+		</action>
+		<action name="saveChangeRequestUser" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">changeRequest-manageChangeRequestUser</param>
+			<param name="resourceId">SBCSYS00009</param>
+			<result name="success">/sbc/common/projectmanagement/manage/changerequest/savechangerequest.jsp</result>
+		</action>
+		<action name="deleteChangeRequest" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">changeRequest-manageChangeProjectChangeRequest</param>
+			<param name="inputNs">manageChangeRequest_Input</param>
+			<param name="outputNs">manageChangeProject_Output</param>
+			<param name="resourceId">SBCSYS00009</param>
+			<result name="success">/sbc/core/donothingresulthandler.jsp</result>
+		</action>
+		<action name="getChangeRequest4l10n" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">changeRequest-getChangeRequestDetails4l10n</param>
+			<param name="inputNs">getChangeRequestDetails_Input</param>
+			<param name="outputNs">getChangeRequestDetails_Output</param>
+			<param name="resourceId">SBCSYS00011</param>
+			<result name="success">/sbc/common/projectmanagement/manage/changerequest/loadrequestlocalelist.jsp</result>
+		</action>
+		<action name="localizeChangeRequest" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">changeRequest-manageChangeProjectChangeRequest</param>
+			<param name="inputNs">manageChangeRequest_Input</param>
+			<param name="outputNs">manageChangeProject_Output</param>
+			<param name="resourceId">SBCSYS00011</param>
+			<result name="success">/sbc/core/donothingresulthandler.jsp</result>
+		</action>
+		<!-- END CHANGE REQUEST -->
+		<action name="changeprojectsearchOrgList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">projectmanagement-search-getOrganizationList</param>
+			<param name="inputNs">changeprojectsearchOrgList_input</param>
+			<param name="outputNs">changeprojectsearchOrgList_output</param>
+			<param name="resourceId">SBCSYS00006</param>
+			<result name="success">/sbc/common/projectmanagement/search/changeprojectsearchorglistresults.jsp</result>
+		</action>
+
+
+		<action name="changeprojectsearchcriteria" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">projectmanagement-search-getOrganizationList</param>
+			<param name="inputNs">changeprojectsearchcriteria_input</param>
+			<param name="outputNs">changeprojectsearchcriteria_output</param>
+			<param name="resourceId">SBCSYS00006</param>
+			<result name="success" type="chain">    
+					<param name="actionName">changeprojectsearch_changeproject_statusList</param>
+					<param name="namespace">/sbc/common</param> 
+			 </result>
+		</action>
+		<action name="changeprojectsearch_changeproject_statusList"  class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			   <param name="mashupId">projectmanagement-getChangeProjectStatusList</param>
+			   <param name="inputNs">changeprojectsearch_changeproject_statusList_Input</param>
+			   <param name="outputNs">changeprojectsearch_changeproject_statusList_Output</param>
+			   <param name="resourceId">SBCSYS00006</param>
+			   <result name="success">/sbc/common/projectmanagement/search/changeprojectsearch.jsp</result>
+		</action>
+		<action name="changeproject_search"  class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			   <param name="mashupId">projectmanagement-search-getChangeProjectList</param>
+			   <param name="inputNs">changeprojectsearch_Input</param>
+			   <param name="outputNs">changeprojectsearch_Output</param>
+			   <param name="resourceId">SBCSYS00006</param>
+			   <result name="success">/sbc/common/projectmanagement/search/changeprojectsearchresults.jsp</result>
+		</action>
+		<action name="changeproject_search_advancedOrgList"  class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			   <param name="mashupId">CPSearch_getOrganization_Context</param>
+			   <param name="inputNs">changeproject_search_advancedOrgList_Input</param>
+			   <param name="outputNs">changeproject_search_advancedOrgList_Output</param>
+			   <param name="resourceId">SBCSYS00006</param>
+			   <result name="success">/sbc/common/projectmanagement/search/changeprojectadvsearchorglist.jsp</result>
+		</action>
+		<!--Change Project Advanced Search -->
+		<action name="projectmanagement_getUserGroupList"  class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			   <param name="mashupId">projectmanagement_getUserGroupList</param>
+			   <param name="inputNs">projectmanagement_getUserGroupList_Input</param>
+			   <param name="outputNs">projectmanagement_getUserGroupList_Output</param>
+			   <param name="resourceId">SBCSYS00006</param>
+			   <result name="success">/sbc/common/projectmanagement/search/advancedsearch/getusergrouplistforsearch.jsp</result>
+		</action>
+		<action name="projectmanagement_getTeamList"  class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			   <param name="mashupId">projectmanagement_getTeamList</param>
+			   <param name="inputNs">projectmanagement_getTeamList_Input</param>
+			   <param name="outputNs">projectmanagement_getTeamList_Output</param>
+			   <param name="resourceId">SBCSYS00006</param>
+			   <result name="success">/sbc/common/projectmanagement/search/advancedsearch/getteamlistforsearch.jsp</result>
+		</action>
+		<action name="user_search"  class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			   <param name="mashupId">initializeusersearch_multiAPI</param>
+			   <param name="resourceId">SBCSYS00005</param>
+			  <result name="success">/sbc/common/user/search/usersearch.jsp</result>
+		</action>
+		
+		<!--<action name="usersearch_getEnterpriseList"  class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			   <param name="mashupId">projectmanagement-search-getOrganizationList</param>
+			   <param name="inputNs">usersearch_getEnterpriseList_Input</param>
+			   <param name="outputNs">usersearch_getEnterpriseList_Output</param>
+			   <param name="resourceId">SBCSYS00005</param>
+			   <result name="success">/sbc/common/user/search/getenterpriselist.jsp</result>
+		</action>
+		-->
+		
+		<!--<action name="adv_user_search_getteam"  class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			   <param name="mashupId">usersearch_getTeamList</param>
+			   <param name="inputNs">adv_user_search_getteam_Input</param>
+			   <param name="outputNs">adv_user_search_getteam_Output</param>
+			   <param name="resourceId">SBCSYS00005</param>
+			  <result name="success"></result>
+		</action>
+		<action name="adv_user_search_getusergroup"  class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			   <param name="mashupId">usersearch_getUserGroupList</param>
+			   <param name="inputNs">adv_user_search_getusergroup_Input</param>
+			   <param name="outputNs">adv_user_search_getusergroup_Output</param>
+			   <param name="resourceId">SBCSYS00005</param>
+			  <result name="success"></result>
+		</action>-->
+		<action name="user_search_popup"  class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			   <param name="mashupId">initializeusersearch_multiAPI</param>
+			   <param name="resourceId">SBCSYS00005</param>
+			   <result name="success">/sbc/common/user/search/usersearchpopup.jsp</result>
+		</action>
+		<action name="user_perform_search"  class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			   <param name="mashupId">user-search-getUserList</param>
+			   <param name="inputNs">usersearch_Input</param>
+			   <param name="outputNs">usersearch_Output</param>
+			   <param name="resourceId">SBCSYS00005</param>
+			   <result name="success">/sbc/common/user/search/usersearchresults.jsp</result>
+		</action>
+		<action name="userSearchForProjectManagement"  class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			   <param name="mashupId">userSearchForProjectManagement</param>
+			   <param name="inputNs">usersearch_Input</param>
+			   <param name="outputNs">usersearch_Output</param>
+			   <param name="resourceId">SBCSYS00005</param>
+			   <result name="success">/sbc/common/user/search/usersearchresults.jsp</result>
+		</action>
+		<action name="user_departmentlist"  class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			   <param name="mashupId">user-search-getDepartmentList</param>
+			   <param name="inputNs">user_departmentlist_Input</param>
+			   <param name="outputNs">user_departmentlist_Output</param>
+			   <param name="resourceId">SBCSYS00005</param>
+			   <result name="success">/sbc/common/user/search/advancedsearch/getdepartmentlistforsearch.jsp</result>
+		</action>
+		<!-- Save the current project and return its details with key-->
+		<action name="manageChangeProject" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">manageChangeProject</param>
+			<param name="resourceId">SBCSYS00007</param>
+			<param name="inputNs">manageChangeProject_input</param>
+			<param name="outputNs">manageChangeProject_output</param>
+		<result name="success">/sbc/common/projectmanagement/manage/managechangeproject.jsp</result>
+		</action>
+		<action name="manageChangeProject_removeHangOffRecord" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">manageChangeProject</param>
+			<param name="resourceId">SBCSYS00007</param>
+			<param name="inputNs">manageChangeProject_input</param>
+			<param name="outputNs">manageChangeProject_output</param>
+			<result name="success">/sbc/common/projectmanagement/manage/managechangeproject.jsp</result>
+		</action>
+		<action name="deleteChangeProject" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">manageChangeProject</param>
+			<param name="inputNs">manageChangeProject_input</param>
+			<param name="outputNs">manageChangeProject_output</param>
+			<param name="resourceId">SBCSYS00007</param>
+			<result name="success">/sbc/core/donothingresulthandler.jsp</result>
+		</action>
+		<!-- Check if user is an approver to the CP -->
+		<action name="changeproject_checkapprover"  class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+		   <param name="mashupId">changeproject_checkapprover</param>
+		   <param name="inputNs">changeproject_checkapprover_input</param>
+		   <param name="outputNs">changeproject_checkapprover_output</param>
+		   <param name="resourceId">SBCSYS00007</param>
+		   <result name="success">/sbc/common/projectmanagement/manage/checkapproval.jsp</result>
+		</action>
+		<!-- Load the ChangeProject screen -->
+		<action name="loadChangeProject" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">	
+			<param name="mashupId">loadChangeProject</param>
+			<param name="resourceId">SBCSYS00007</param>
+			<result name="success" type="chain">
+				<param name="actionName">changeproject_statusList</param>
+				<param name="namespace">/sbc/common</param> 
+			</result>	
+		</action>	
+		<action name="changeproject_statusList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">projectmanagement-getChangeProjectStatusList</param>
+			<param name="inputNs">changeproject_statusList_Input</param>
+			<param name="outputNs">changeproject_statusList_Output</param>
+			<param name="resourceId">SBCSYS00006</param>
+			<result name="success" type="chain">
+				<param name="actionName">getChangeRequestStatusList</param>
+				<param name="namespace">/sbc/common</param> 
+			</result>
+		</action>
+		<action name="getChangeRequestStatusList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getChangeRequestStatusList</param>
+			<param name="inputNs">getChangeRequestStatusList_input</param>
+			<param name="outputNs">getChangeRequestStatusList_output</param>
+			<param name="resourceId">SBCSYS00007</param>
+			<result name="success">/sbc/common/projectmanagement/manage/loadchangeproject.jsp </result>
+		</action>
+		<action name="getChangeProject4l10n" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">changeProject-getChangeProjectDetails4l10n</param>
+			<param name="inputNs">getChangeProjectDetails_Input</param>
+			<param name="outputNs">getChangeProjectDetails_Output</param>
+			<param name="resourceId">SBCSYS00010</param>
+			<result name="success">/sbc/common/projectmanagement/manage/loadprojectlocalelist.jsp</result>
+		</action>
+		<action name="localizeChangeProject" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">manageChangeProject</param>
+			<param name="inputNs">manageChangeProject_Input</param>
+			<param name="outputNs">manageChangeProject_Output</param>
+			<param name="resourceId">SBCSYS00010</param>
+			<result name="success">/sbc/core/donothingresulthandler.jsp</result>
+		</action>
+		<!-- End strut chain to load Change Project screen. -->
+		<action name="launchenterprisepopup">
+	   		<result name="success">/sbc/common/organization/launchenterprisepopup.jsp</result>
+		</action>
+		
+		<action name="getChangeRequestStatusListForAdvSearch" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">projectmanagement-getChangeProjectStatusList</param>
+			<param name="inputNs">getChangeRequestStatusList_input</param>
+			<param name="outputNs">getChangeRequestStatusList_output</param>
+			<param name="resourceId">SBCSYS00007</param>
+			<result name="success">/sbc/common/projectmanagement/manage/loadstatus.jsp</result>
+		</action>
+	</package>
+</struts>

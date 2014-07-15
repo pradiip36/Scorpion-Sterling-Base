@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="BPUpdateHoldLocationExtn"
+        extnPackage="extn.shipment.backroomPick"
+        originalScreen="wsc.shipment.backroomPick.BPUpdateHoldLocation"
+        originalScreenPackage="wsc.shipment.backroomPick" type="diffrential">
+        <Items>
+            <Button _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="addHoldLocationButton"
+                label="$(_scSimpleBundle:extn_Assign_Later)" uId="extn_skipThisStepButton"/>
+            <Button _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_skipThisStepButton"
+                label="$(_scSimpleBundle:extn_Complete_Order)" uId="extn_Complete"/>
+        </Items>
+        <Namespaces>
+            <SourceNamespaces>
+                <Source description="extended hold location info"
+                    isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_3" value="extn_holdLocationList"/>
+            </SourceNamespaces>
+        </Namespaces>
+        <Subscribers>
+            <Local>
+                <Subscriber description="custom initialization method"
+                    eventId="afterScreenInit" isExtn="true" sequence="19">
+                    <Handler methodName="extInitialize"/>
+                </Subscriber>
+                <Subscriber eventId="afterScreenLoad" isExtn="true" sequence="51">
+                    <Handler methodName="hideWizardButtons"/>
+                </Subscriber>
+                <Subscriber eventId="extn_skipThisStepButton_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="displayAssignLaterConfirmation"/>
+                </Subscriber>
+                <Subscriber
+                    description="custom mashup completion handler"
+                    eventId="onExtnMashupCompletion" isExtn="true" sequence="51">
+                    <Handler methodName="handleExtnMashupCompletion"/>
+                </Subscriber>
+                <Subscriber eventId="extn_Complete_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="displayCompleteConfirmation"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+        <MashupRefs>
+            <Behavior>
+                <MashupRef extnType="ADD"
+                    mashupId="backroomPick_changeShipmentStatusToBackroomPicked" mashupRefId="extn_change_status_br_picked"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getLocationDetails_mashup" mashupRefId="extn_getLocationDetails_mashup"/>
+            </Behavior>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

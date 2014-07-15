@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<YFS_DEVICE_SUB_TYPEList TableName="YFS_DEVICE_SUB_TYPE">
+<DeviceSubType Createprogid=".YEntityServlet"
+    Createts="2012-07-11T10:51:07-04:00" Createuserid="tkmayy0"
+    Description="Printers for Pack and Pick Slips"
+    DeviceSubType="Laser Printer" DeviceSubTypeKey="2012071110510757049"
+    DeviceType="Printer" Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2012-07-11T10:51:07-04:00" Modifyuserid="sterling" OrganizationCode="865"/>
+<DeviceSubType Createprogid=".YEntityServlet"
+    Createts="2012-07-13T10:25:56-04:00" Createuserid="tkmayy0"
+    Description="Printer for Pick and Pack Slip"
+    DeviceSubType="Laser Printer" DeviceSubTypeKey="2012071310255762387"
+    DeviceType="Printer" Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2012-07-13T10:25:56-04:00" Modifyuserid="sterling" OrganizationCode="41"/>
+<DeviceSubType Createprogid=".YEntityServlet"
+    Createts="2012-07-18T10:06:51-04:00" Createuserid="admin"
+    Description="Printers for Pack and Pick Slips"
+    DeviceSubType="Laser Printers"
+    DeviceSubTypeKey="2012071810065186846" DeviceType="Printer"
+    Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2012-07-18T10:06:51-04:00" Modifyuserid="sterling" OrganizationCode="810"/>
+<DeviceSubType Createprogid=".YEntityServlet"
+    Createts="2012-07-18T10:10:13-04:00" Createuserid="admin"
+    Description="Printers for Pick and Pack Slips"
+    DeviceSubType="Laser Printers"
+    DeviceSubTypeKey="2012071810101386858" DeviceType="Printer"
+    Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2012-07-18T10:10:13-04:00" Modifyuserid="sterling" OrganizationCode="9989"/>
+<DeviceSubType Createprogid=".YEntityServlet"
+    Createts="2013-02-22T11:25:14-05:00" Createuserid="tkmayy0"
+    Description="Printers for Pack and Pick Slips"
+    DeviceSubType="Laser Printer"
+    DeviceSubTypeKey="20130222112514413798" DeviceType="Printer"
+    Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-02-22T11:25:14-05:00" Modifyuserid="sterling" OrganizationCode="860"/>
+<DeviceSubType Createprogid=".YEntityServlet"
+    Createts="2013-02-22T11:50:17-05:00" Createuserid="tkmayy0"
+    Description="Printers for Pack and Pick Slips"
+    DeviceSubType="Laser Printer"
+    DeviceSubTypeKey="20130222115018413832" DeviceType="Printer"
+    Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-02-22T11:50:17-05:00" Modifyuserid="sterling" OrganizationCode="875"/>
+<DeviceSubType Createprogid=".YEntityServlet"
+    Createts="2013-02-22T11:52:43-05:00" Createuserid="tkmayy0"
+    Description="Printers for Pack and Pick Slips"
+    DeviceSubType="Laser Printer"
+    DeviceSubTypeKey="20130222115243413856" DeviceType="Printer"
+    Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-02-22T11:52:43-05:00" Modifyuserid="sterling" OrganizationCode="855"/>
+<DeviceSubType Createprogid="XMLMigrator"
+    Createts="2010-11-30T16:33:22-05:00" Createuserid="SYSTEM"
+    Description="FeDx Printer" DeviceSubType="FeDx Printer"
+    DeviceSubTypeKey="FeDx Printer" DeviceType="Printer" Lockid="0"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2010-11-30T16:33:22-05:00"
+    Modifyuserid="sterling" OrganizationCode="DEFAULT"/>
+<DeviceSubType Createprogid="XMLMigrator"
+    Createts="2010-11-30T16:33:22-05:00" Createuserid="SYSTEM"
+    Description="Mettler Toldeo Scales" DeviceSubType="MettlerToldeo"
+    DeviceSubTypeKey="MettlerToldeo" DeviceType="WeighingScale"
+    Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-11-30T16:33:22-05:00" Modifyuserid="sterling" OrganizationCode="DEFAULT"/>
+</YFS_DEVICE_SUB_TYPEList>

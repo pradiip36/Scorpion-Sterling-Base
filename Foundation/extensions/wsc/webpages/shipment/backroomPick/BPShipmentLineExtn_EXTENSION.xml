@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="BPShipmentLineExtn"
+        extnPackage="extn.shipment.backroomPick"
+        originalScreen="wsc.shipment.backroomPick.BPShipmentLine"
+        originalScreenPackage="wsc.shipment.backroomPick" type="diffrential">
+        <Items>
+            <ContentPane _sc_extensibility_moveOrder="45"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="divProduct" uId="imagePanel"/>
+            <ContentPane _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_datalabelSKU"
+                class="lineDetailsPanel inline" uId="extn_contentpaneInfo"/>
+            <ContentPane _sc_extensibility_moveOrder="4"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="divLocation" uId="extn_contentpaneInfo"/>
+            <ContentPane _sc_extensibility_moveOrder="42"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="imagePanel" uId="extn_contentpaneInfo"/>
+            <ContentPane _sc_extensibility_moveOrder="43"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="divProduct" uId="extn_contentpaneInfo"/>
+            <ContentPane _sc_extensibility_moveOrder="10"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_datalabelSKU" uId="extn_contentpaneSKU"/>
+            <ContentPane _sc_extensibility_moveOrder="12"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneInfo" uId="extn_contentpaneDescription"/>
+            <ContentPane _sc_extensibility_moveOrder="21"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_contentpanePickedQuantityPane" uId="extn_contentpaneDescription"/>
+            <ContentPane _sc_extensibility_moveOrder="23"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="divLocation" uId="extn_contentpaneDescription"/>
+            <ContentPane _sc_extensibility_moveOrder="24"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpanePickedQuantityPane" uId="extn_contentpaneDescription"/>
+            <ContentPane _sc_extensibility_moveOrder="25"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_contentpanePickedQuantityPane" uId="extn_contentpaneDescription"/>
+            <ContentPane _sc_extensibility_moveOrder="16"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_datalabelKohlsUPC" uId="extn_contentpanePickedQuantityPane"/>
+            <ContentPane _sc_extensibility_moveOrder="19"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneInfo" uId="extn_contentpanePickedQuantityPane"/>
+            <ContentPane _sc_extensibility_moveOrder="20"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_contentpaneDescription" uId="extn_contentpanePickedQuantityPane"/>
+            <ContentPane _sc_extensibility_moveOrder="27"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="divShortage"
+                class="locationCell" uId="extn_contentpaneLocationQty"/>
+            <ContentPane _sc_extensibility_moveOrder="44"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="divLocation" uId="extn_contentpaneLocationQty"/>
+            <ContentPane _sc_extensibility_moveOrder="46"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="divShortage" uId="extn_contentpaneLocationQty"/>
+            <ContentPane _sc_extensibility_moveOrder="48"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="divShortage" uId="extn_contentpaneLocationQty"/>
+            <ContentPane _sc_extensibility_moveOrder="49"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="divLocation" uId="extn_contentpaneLocationQty"/>
+            <ContentPane _sc_extensibility_moveOrder="6"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="divLocation" uId="divQuantity"/>
+            <ContentPane _sc_extensibility_moveOrder="7"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneInfo" uId="divQuantity"/>
+            <ContentPane _sc_extensibility_moveOrder="8"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneInfo" uId="divQuantity"/>
+            <ContentPane _sc_extensibility_moveOrder="9"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="shipmentLineDetailsContainer" uId="divQuantity"/>
+            <ContentPane _sc_extensibility_moveOrder="74"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="shipmentLineDetailsContainer"
+                class="locationCell" uId="extn_diamondPane"/>
+            <Button _sc_extensibility_moveOrder="32"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="ofQtyLbl"
+                label="$(_scSimpleBundle:extn_Undo)" uId="extn_buttonUndoButton"/>
+            <Button _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="updateShortageResolutionImage"
+                class="updateShortageResolutionImage" renderHidden="false"/>
+            <Label _sc_extensibility_moveOrder="33"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneDescription" uId="extn_labelSizeColor">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getSizeColor"
+                        namespace="ShipmentLine" path="OrderLine.ItemDetails.Extn.ExtnSizeDesc"/>
+                </BindingData>
+            </Label>
+            <Label _sc_extensibility_moveOrder="41"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_labelQty"
+                uId="extn_labelOfText" value="$(_scSimpleBundle:extn_of_)"/>
+            <Label _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="ofQtyLbl" renderHidden="true"/>
+            <Label _sc_extensibility_moveOrder="18"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpanePickedQuantityPane" uId="ofQtyLbl"/>
+            <Label _sc_extensibility_moveOrder="53"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_labelOfText" uId="ofQtyLbl"/>
+            <Label _sc_extensibility_moveOrder="85"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_labelQty" uId="ofQtyLbl"/>
+            <Label _sc_extensibility_moveOrder="36"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="pickedQtylbl"
+                class="fieldLabel inline" renderHidden="true" uId="extn_labelQty">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="convertQtyToInt"
+                        namespace="ShipmentLine" path="ShipmentLine"/>
+                </BindingData>
+            </Label>
+            <NumberTextBox _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="txtScannedQuantity"
+                readOnly="true" renderHidden="true"/>
+            <NumberTextBox _sc_extensibility_moveOrder="50"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="pickedQtylbl" uId="txtScannedQuantity"/>
+            <NumberTextBox _sc_extensibility_moveOrder="52"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_labelOfText" uId="txtScannedQuantity"/>
+            <NumberTextBox _sc_extensibility_moveOrder="80"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="ofQtyLbl"
+                class="quantityTextBox fieldLabel"
+                label="$(_scBundle:Picked_Quantity)" readOnly="true" uId="extn_txtScannedQuantity">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="convertPickedQtyToInt"
+                        namespace="PickAll_Input" path="Quantity"/>
+                </BindingData>
+            </NumberTextBox>
+            <DataLabel _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="itemdescriptionLink"
+                label="$(_scBundle:extn_SKU_)" uId="extn_datalabelSKU">
+                <BindingData>
+                    <SourceBinding namespace="ShipmentLine" path="ShipmentLine.OrderLine.Item.ItemID"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="5"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneInfo" uId="extn_datalabelSKU"/>
+            <DataLabel _sc_extensibility_moveOrder="11"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpaneSKU" uId="extn_datalabelSKU"/>
+            <DataLabel _sc_extensibility_moveOrder="15"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="divLocation"
+                label="$(_scBundle:extn_UPC)" uId="extn_datalabelKohlsUPC">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getKohlsUPC"
+                        namespace="ShipmentLine" path="ShipmentLine.OrderLine.ItemDetails.ItemAliasList"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="22"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneInfo" uId="extn_datalabelKohlsUPC"/>
+            <DataLabel _sc_extensibility_moveOrder="26"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_contentpanePickedQuantityPane" uId="extn_datalabelKohlsUPC"/>
+            <DataLabel _sc_extensibility_moveOrder="82"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="pickedQtylbl"
+                class="autoLabelZeroWidth fieldLabel" uId="extn_pickedQtyLbl">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getQuantity"
+                        namespace="ShipmentLine" path="ShipmentLine.Quantity"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="83"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="pickedQtylbl" uId="extn_pickedQtyLbl"/>
+            <DataLabel _sc_extensibility_moveOrder="84"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_labelQty" uId="extn_pickedQtyLbl"/>
+            <DataLabel _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="pickedQtylbl" renderHidden="true"/>
+            <DataLabel _sc_extensibility_moveOrder="17"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpanePickedQuantityPane" uId="pickedQtylbl"/>
+            <DataLabel _sc_extensibility_moveOrder="37"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_contentpaneLocationQty" uId="pickedQtylbl"/>
+            <DataLabel _sc_extensibility_moveOrder="39"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_buttonUndoButton" uId="pickedQtylbl"/>
+            <DataLabel _sc_extensibility_moveOrder="51"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="ofQtyLbl" uId="pickedQtylbl"/>
+            <DataLabel _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="Locationlbl"
+                renderHidden="true" value="$(_scSimpleBundle:Location)"/>
+            <DataLabel _sc_extensibility_moveOrder="54"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="divLocation"
+                class="inline" label="$(_scBundle:Location)"
+                uId="extn_locationLabel" value="$(_scSimpleBundle:blank)">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="getStockRoomLocations"
+                        namespace="ShipmentLine" path="ShipmentLine"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="55"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_datalabelStockroomQuantity" uId="extn_locationLabel"/>
+            <DataLabel _sc_extensibility_moveOrder="29"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpaneLocationQty"
+                class="inline" label="$(_scBundle:extn_Stockroom_qty)" uId="extn_datalabelStockroomQuantity">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="convertStockroomQtyToInt"
+                        namespace="ShipmentLine" path="ShipmentLine"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="30"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneLocationQty"
+                label="$(_scBundle:extn_Sales_Floor_qty)" uId="extn_datalabelSalesFloorQuantity">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="convertSalesFloorQtyToInt"
+                        namespace="ShipmentLine" path="ShipmentLine"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="81"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="shortageReasonFilterSelect"
+                label="$(_scBundle:extn_Reason)" renderHidden="true" uId="extn_shortageReasonDataLbl">
+                <BindingData>
+                    <SourceBinding namespace="ShipmentLine" path="Extn.ExtnShortageReason"/>
+                </BindingData>
+            </DataLabel>
+            <Link _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="itemdescriptionLink"
+                colspan="1" renderHidden="true"/>
+            <Link _sc_extensibility_moveOrder="3"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpaneInfo" uId="itemdescriptionLink"/>
+            <Link _sc_extensibility_moveOrder="40"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_contentpaneSKU"
+                class="primaryInformation productTitle inline" uId="extn_linkShortDescription">
+                <BindingData>
+                    <SourceBinding namespace="ShipmentLine" path="ShipmentLine.OrderLine.ItemDetails.PrimaryInformation.ShortDescription"/>
+                </BindingData>
+            </Link>
+            <Image _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="itemImage" renderHidden="false"/>
+            <Image _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="productScanImagePanel" renderHidden="true"/>
+            <Image _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="productScanShortageImagePanel" renderHidden="true"/>
+            <Image _sc_extensibility_moveOrder="56"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="divProduct"
+                appendToContextRoot="true" class="portletImage inline"
+                imageSrc="extn/resources/imgs/JewelryIconRing.png" uId="extn_jewelryIcon"/>
+            <Image _sc_extensibility_moveOrder="57"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="itemImage" uId="extn_jewelryIcon"/>
+            <Image _sc_extensibility_moveOrder="58"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="divProduct" uId="extn_jewelryIcon"/>
+            <Image _sc_extensibility_moveOrder="59"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_contentpaneDescription" uId="extn_jewelryIcon"/>
+            <Image _sc_extensibility_moveOrder="60"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="divProduct" uId="extn_jewelryIcon"/>
+            <Image _sc_extensibility_moveOrder="61"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="itemImage" uId="extn_jewelryIcon"/>
+            <Image _sc_extensibility_moveOrder="62"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="divProduct" uId="extn_jewelryIcon"/>
+            <Image _sc_extensibility_moveOrder="63"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="imagePanel" uId="extn_jewelryIcon"/>
+            <Image _sc_extensibility_moveOrder="64"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="shipmentLineDetailsContainer" uId="extn_jewelryIcon"/>
+            <Image _sc_extensibility_moveOrder="65"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="itemImage" uId="extn_jewelryIcon"/>
+            <Image _sc_extensibility_moveOrder="66"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="productScanImagePanel" uId="extn_jewelryIcon"/>
+            <Image _sc_extensibility_moveOrder="67"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="shortageReasonFilterSelect" uId="extn_jewelryIcon"/>
+            <Image _sc_extensibility_moveOrder="68"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_buttonUndoButton" uId="extn_jewelryIcon"/>
+            <Image _sc_extensibility_moveOrder="69"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_labelSizeColor" uId="extn_jewelryIcon"/>
+            <Image _sc_extensibility_moveOrder="70"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_contentpaneSKU" uId="extn_jewelryIcon"/>
+            <Image _sc_extensibility_moveOrder="71"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="itemdescriptionLink" uId="extn_jewelryIcon"/>
+            <Image _sc_extensibility_moveOrder="72"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="itemImage" uId="extn_jewelryIcon"/>
+            <Image _sc_extensibility_moveOrder="73"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="divProduct" uId="extn_jewelryIcon"/>
+            <Image _sc_extensibility_moveOrder="75"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="txtScannedQuantity" uId="extn_jewelryIcon"/>
+            <Image _sc_extensibility_moveOrder="77"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_diamondPane" uId="extn_jewelryIcon"/>
+            <Image _sc_extensibility_moveOrder="79"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="updateShortageResolutionImage" uId="extn_jewelryIcon"/>
+        </Items>
+        <Subscribers>
+            <Global>
+                <Subscriber eventId="successfulScan" isExtn="true" sequence="51">
+                    <Handler methodName="showCorrectShortageButton"/>
+                </Subscriber>
+            </Global>
+            <Local>
+                <Subscriber eventId="afterScreenInit" isExtn="true" sequence="51">
+                    <Handler methodName="extnInitialize"/>
+                </Subscriber>
+                <Subscriber
+                    eventId="updateShortageResolutionImage_onClick"
+                    isExtn="true" sequence="19">
+                    <Handler methodName="onClickShortage"/>
+                </Subscriber>
+                <Subscriber description="Undo the scan"
+                    eventId="extn_buttonUndoButton_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="undoQuantity"/>
+                </Subscriber>
+                <Subscriber description="Opens item details"
+                    eventId="extn_linkShortDescription_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="openItemDetails"/>
+                </Subscriber>
+                <Subscriber
+                    description="this will update the item locations based on input"
+                    eventId="updateItemLocations" isExtn="true" sequence="51">
+                    <Handler methodName="updateLocations"/>
+                </Subscriber>
+                <Subscriber eventId="pickingContextChanged"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="checkContext"/>
+                </Subscriber>
+                <Subscriber eventId="checkForUndo" isExtn="true" sequence="51">
+                    <Handler methodName="checkForUndo"/>
+                </Subscriber>
+                <Subscriber
+                    description="This event is fired on click of the updaeShortageResolutionImage button"
+                    eventId="extn_updateShortageResolutionImage_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler
+                        description="This subscriber function does stuff (Insert description here)" methodName="onClickShortage"/>
+                </Subscriber>
+                <Subscriber
+                    eventId="extn_updateShortageResolutionImage_onClick"
+                    isExtn="true" sequence="52">
+                    <Handler
+                        description="OOB (Does stuff add descr here)" methodName="handleShortageResolutionIcon"/>
+                </Subscriber>
+                <Subscriber eventId="afterScreenLoad" isExtn="true" sequence="51">
+                    <Handler methodName="displayWidgets"/>
+                </Subscriber>
+                <Subscriber eventId="successfulScan" isExtn="true" sequence="51">
+                    <Handler methodName="showCorrectShortageButton"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+        <MashupRefs>
+            <Behavior>
+                <MashupRef extnType="ADD" mashupId="extn_undoScan" mashupRefId="extn_undoScan"/>
+                <MashupRef extnType="ADD" mashupId="extnShortageReason" mashupRefId="extn_setShortageReason"/>
+            </Behavior>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

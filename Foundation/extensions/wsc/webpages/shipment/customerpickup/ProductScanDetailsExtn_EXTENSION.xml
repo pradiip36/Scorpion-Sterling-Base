@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="ProductScanDetailsExtn"
+        extnPackage="extn.shipment.customerpickup"
+        originalScreen="wsc.shipment.customerpickup.ProductScanDetails"
+        originalScreenPackage="wsc.shipment.customerpickup" type="diffrential">
+        <Items>
+            <ContentPane _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lastScannedProductDetail" renderHidden="false"/>
+            <Label _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="itemdescriptionLabel"
+                class="fieldLabel blockComponent" renderHidden="true" uId="extn_itemDescriptionLabel">
+                <BindingData>
+                    <SourceBinding namespace="lastProductScanned_output" path="OrderLine.ItemDetails.PrimaryInformation.ShortDescription"/>
+                </BindingData>
+            </Label>
+            <DataLabel _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="uomLabel" renderHidden="true"/>
+        </Items>
+        <Subscribers>
+            <Local>
+                <Subscriber eventId="afterScreenInit" isExtn="true" sequence="51">
+                    <Handler methodName="extnInitialize"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+    </ScreenExtension>
+</ExtensionMetaData>

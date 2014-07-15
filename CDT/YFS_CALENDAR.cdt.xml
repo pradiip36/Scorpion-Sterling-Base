@@ -1,0 +1,2203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<YFS_CALENDARList TableName="YFS_CALENDAR">
+<Calendar CalendarDescription="1004ComShippingCalendar"
+    CalendarId="1004ComShippingCalendar"
+    CalendarKey="1004ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:38-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:38-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1004" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1006ComShippingCalendar"
+    CalendarId="1006ComShippingCalendar"
+    CalendarKey="1006ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:35-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:35-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1006" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1015ComShippingCalendar"
+    CalendarId="1015ComShippingCalendar"
+    CalendarKey="1015ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:39-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:39-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1015" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="101ComShippingCalendar"
+    CalendarId="101ComShippingCalendar"
+    CalendarKey="101ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:39-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:39-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="101" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1021ComShippingCalendar"
+    CalendarId="1021ComShippingCalendar"
+    CalendarKey="1021ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:37-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:37-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1021" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1022ComShippingCalendar"
+    CalendarId="1022ComShippingCalendar"
+    CalendarKey="1022ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:42-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:42-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1022" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1025ComShippingCalendar"
+    CalendarId="1025ComShippingCalendar"
+    CalendarKey="1025ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:40-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:40-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1025" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="103ComShippingCalendar"
+    CalendarId="103ComShippingCalendar"
+    CalendarKey="103ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:35-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:35-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="103" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1040ComShippingCalendar"
+    CalendarId="1040ComShippingCalendar"
+    CalendarKey="1040ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:43-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:43-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1040" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1044ComShippingCalendar"
+    CalendarId="1044ComShippingCalendar"
+    CalendarKey="1044ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:44-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:44-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1044" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1047ComShippingCalendar"
+    CalendarId="1047ComShippingCalendar"
+    CalendarKey="1047ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:47-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:47-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1047" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1048ComShippingCalendar"
+    CalendarId="1048ComShippingCalendar"
+    CalendarKey="1048ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:48-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:48-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1048" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1055ComShippingCalendar"
+    CalendarId="1055ComShippingCalendar"
+    CalendarKey="1055ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:36-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:36-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1055" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="105ComShippingCalendar"
+    CalendarId="105ComShippingCalendar"
+    CalendarKey="105ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:36-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:36-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="105" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1067ComShippingCalendar"
+    CalendarId="1067ComShippingCalendar"
+    CalendarKey="1067ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:46-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:46-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1067" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1068ComShippingCalendar"
+    CalendarId="1068ComShippingCalendar"
+    CalendarKey="1068ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:43-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:43-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1068" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="106ComShippingCalendar"
+    CalendarId="106ComShippingCalendar"
+    CalendarKey="106ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:48-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:48-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="106" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1079ComShippingCalendar"
+    CalendarId="1079ComShippingCalendar"
+    CalendarKey="1079ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:43-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:43-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1079" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="107ComShippingCalendar"
+    CalendarId="107ComShippingCalendar"
+    CalendarKey="107ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:37-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:37-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="107" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1084ComShippingCalendar"
+    CalendarId="1084ComShippingCalendar"
+    CalendarKey="1084ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:34-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:34-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1084" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1097ComShippingCalendar"
+    CalendarId="1097ComShippingCalendar"
+    CalendarKey="1097ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:40-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:40-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1097" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="10ComShippingCalendar"
+    CalendarId="10ComShippingCalendar"
+    CalendarKey="10ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:47-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:47-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="10" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1119ComShippingCalendar"
+    CalendarId="1119ComShippingCalendar"
+    CalendarKey="1119ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:46-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:46-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1119" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="112ComShippingCalendar"
+    CalendarId="112ComShippingCalendar"
+    CalendarKey="112ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:37-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:37-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="112" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1146ComShippingCalendar"
+    CalendarId="1146ComShippingCalendar"
+    CalendarKey="1146ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:48-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:48-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1146" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="114ComShippingCalendar"
+    CalendarId="114ComShippingCalendar"
+    CalendarKey="114ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:46-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:46-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="114" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1165ComShippingCalendar"
+    CalendarId="1165ComShippingCalendar"
+    CalendarKey="1165ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:42-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:42-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1165" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1168ComShippingCalendar"
+    CalendarId="1168ComShippingCalendar"
+    CalendarKey="1168ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:43-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:43-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1168" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1178ComShippingCalendar"
+    CalendarId="1178ComShippingCalendar"
+    CalendarKey="1178ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:44-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:44-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1178" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1181ComShippingCalendar"
+    CalendarId="1181ComShippingCalendar"
+    CalendarKey="1181ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:46-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:46-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1181" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1195ComShippingCalendar"
+    CalendarId="1195ComShippingCalendar"
+    CalendarKey="1195ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:44-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:44-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1195" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1201ComShippingCalendar"
+    CalendarId="1201ComShippingCalendar"
+    CalendarKey="1201ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:38-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:38-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1201" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1217ComShippingCalendar"
+    CalendarId="1217ComShippingCalendar"
+    CalendarKey="1217ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:34-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:34-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1217" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1223ComShippingCalendar"
+    CalendarId="1223ComShippingCalendar"
+    CalendarKey="1223ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:39-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:39-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1223" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1224ComShippingCalendar"
+    CalendarId="1224ComShippingCalendar"
+    CalendarKey="1224ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:41-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:41-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1224" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1225ComShippingCalendar"
+    CalendarId="1225ComShippingCalendar"
+    CalendarKey="1225ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:39-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:39-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1225" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1233ComShippingCalendar"
+    CalendarId="1233ComShippingCalendar"
+    CalendarKey="1233ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-10-30T16:06:17-04:00" Createuserid="admin" Lockid="0"
+    MeantForInternal="N" Modifyprogid="SterlingHttpTester"
+    Modifyts="2013-10-30T16:06:17-04:00" Modifyuserid="admin"
+    MonthFilter=" " OrganizationCode="1233" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="123ComShippingCalendar"
+    CalendarId="123ComShippingCalendar"
+    CalendarKey="123ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:40-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:40-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="123" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1257ComShippingCalendar"
+    CalendarId="1257ComShippingCalendar"
+    CalendarKey="1257ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:41-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:41-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1257" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1271ComShippingCalendar"
+    CalendarId="1271ComShippingCalendar"
+    CalendarKey="1271ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:43-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:43-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1271" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1285ComShippingCalendar"
+    CalendarId="1285ComShippingCalendar"
+    CalendarKey="1285ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:48-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:48-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1285" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1322ComShippingCalendar"
+    CalendarId="1322ComShippingCalendar"
+    CalendarKey="1322ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:37-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:37-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1322" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1334ComShippingCalendar"
+    CalendarId="1334ComShippingCalendar"
+    CalendarKey="1334ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:42-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:42-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1334" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1347ComShippingCalendar"
+    CalendarId="1347ComShippingCalendar"
+    CalendarKey="1347ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:42-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:42-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1347" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="134ComShippingCalendar"
+    CalendarId="134ComShippingCalendar"
+    CalendarKey="134ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:38-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:38-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="134" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1353ComShippingCalendar"
+    CalendarId="1353ComShippingCalendar"
+    CalendarKey="1353ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:44-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:44-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1353" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1401ComShippingCalendar"
+    CalendarId="1401ComShippingCalendar"
+    CalendarKey="1401ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:47-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:47-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1401" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1414ComShippingCalendar"
+    CalendarId="1414ComShippingCalendar"
+    CalendarKey="1414ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:48-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:48-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1414" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1420ComShippingCalendar"
+    CalendarId="1420ComShippingCalendar"
+    CalendarKey="1420ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:36-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:36-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1420" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1441ComShippingCalendar"
+    CalendarId="1441ComShippingCalendar"
+    CalendarKey="1441ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:35-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:35-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1441" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1497ComShippingCalendar"
+    CalendarId="1497ComShippingCalendar"
+    CalendarKey="1497ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:46-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:46-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1497" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="161ComShippingCalendar"
+    CalendarId="161ComShippingCalendar"
+    CalendarKey="161ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:36-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:36-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="161" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="170ComShippingCalendar"
+    CalendarId="170ComShippingCalendar"
+    CalendarKey="170ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:39-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:39-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="170" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="175ComShippingCalendar"
+    CalendarId="175ComShippingCalendar"
+    CalendarKey="175ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:40-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:40-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="175" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="176ComShippingCalendar"
+    CalendarId="176ComShippingCalendar"
+    CalendarKey="176ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:37-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:37-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="176" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="178ComShippingCalendar"
+    CalendarId="178ComShippingCalendar"
+    CalendarKey="178ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:42-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:42-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="178" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="179ComShippingCalendar"
+    CalendarId="179ComShippingCalendar"
+    CalendarKey="179ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:34-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:34-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="179" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="184ComShippingCalendar"
+    CalendarId="184ComShippingCalendar"
+    CalendarKey="184ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:36-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:36-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="184" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="190ComShippingCalendar"
+    CalendarId="190ComShippingCalendar"
+    CalendarKey="190ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:41-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:41-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="190" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="193ComShippingCalendar"
+    CalendarId="193ComShippingCalendar"
+    CalendarKey="193ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:35-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:35-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="193" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="ComShippingCalendar"
+    CalendarId="ComShippingCalendar" CalendarKey="20130322105314422517"
+    Createprogid=".YCPCalendarAPI" Createts="2013-03-22T10:53:13-04:00"
+    Createuserid="tkmayy0" Lockid="0" MeantForInternal="N"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2013-03-22T10:53:13-04:00"
+    Modifyuserid="sterling" MonthFilter=" " OrganizationCode="KOHLS.COM" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey=" "/>
+</Calendar>
+<Calendar CalendarDescription="328ComShippingCalendar"
+    CalendarId="328ComShippingCalendar"
+    CalendarKey="20130509144113514077" Createprogid=".YCPCalendarAPI"
+    Createts="2013-05-09T14:41:12-04:00" Createuserid="tkmayy0"
+    Lockid="0" MeantForInternal="N" Modifyprogid=".YCPCalendarAPI"
+    Modifyts="2013-05-09T14:41:12-04:00" Modifyuserid="tkmayy0"
+    MonthFilter=" " OrganizationCode="328" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="41ComShippingCalendar"
+    CalendarId="41ComShippingCalendar"
+    CalendarKey="20130509144217514098" Createprogid=".YCPCalendarAPI"
+    Createts="2013-05-09T14:42:16-04:00" Createuserid="tkmayy0"
+    Lockid="0" MeantForInternal="N" Modifyprogid=".YCPCalendarAPI"
+    Modifyts="2013-05-09T14:42:16-04:00" Modifyuserid="tkmayy0"
+    MonthFilter=" " OrganizationCode="41" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="445ComShippingCalendar"
+    CalendarId="445ComShippingCalendar"
+    CalendarKey="20130509144324514113" Createprogid=".YCPCalendarAPI"
+    Createts="2013-05-09T14:43:24-04:00" Createuserid="tkmayy0"
+    Lockid="0" MeantForInternal="N" Modifyprogid=".YCPCalendarAPI"
+    Modifyts="2013-05-09T14:43:24-04:00" Modifyuserid="tkmayy0"
+    MonthFilter=" " OrganizationCode="445" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="515ComShippingCalendar"
+    CalendarId="515ComShippingCalendar"
+    CalendarKey="20130509144616514128" Createprogid=".YCPCalendarAPI"
+    Createts="2013-05-09T14:46:15-04:00" Createuserid="tkmayy0"
+    Lockid="0" MeantForInternal="N" Modifyprogid=".YCPCalendarAPI"
+    Modifyts="2013-05-09T14:46:15-04:00" Modifyuserid="tkmayy0"
+    MonthFilter=" " OrganizationCode="515" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="683ComShippingCalendar"
+    CalendarId="683ComShippingCalendar"
+    CalendarKey="20130509144837514143" Createprogid=".YCPCalendarAPI"
+    Createts="2013-05-09T14:48:36-04:00" Createuserid="tkmayy0"
+    Lockid="0" MeantForInternal="N" Modifyprogid=".YCPCalendarAPI"
+    Modifyts="2013-05-09T14:48:36-04:00" Modifyuserid="tkmayy0"
+    MonthFilter=" " OrganizationCode="683" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="706ComShippingCalendar"
+    CalendarId="706ComShippingCalendar"
+    CalendarKey="20130509145026514166" Createprogid=".YCPCalendarAPI"
+    Createts="2013-05-09T14:50:26-04:00" Createuserid="tkmayy0"
+    Lockid="0" MeantForInternal="N" Modifyprogid=".YCPCalendarAPI"
+    Modifyts="2013-05-09T14:50:26-04:00" Modifyuserid="tkmayy0"
+    MonthFilter=" " OrganizationCode="706" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="272ComShippingCalendar"
+    CalendarId="272ComShippingCalendar"
+    CalendarKey="201305211638009254235073"
+    Createprogid=".YCPCalendarAPI" Createts="2013-05-21T16:38:00-04:00"
+    Createuserid="tkmaps0" Lockid="0" MeantForInternal="N"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2013-05-21T16:38:00-04:00"
+    Modifyuserid="sterling" MonthFilter=" " OrganizationCode="272" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1149ComShippingCalendar"
+    CalendarId="1149ComShippingCalendar"
+    CalendarKey="201305280939459367543969"
+    Createprogid=".YCPCalendarAPI" Createts="2013-05-28T09:39:44-04:00"
+    Createuserid="tkmaxzv" Lockid="0" MeantForInternal="N"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2013-05-28T09:39:44-04:00"
+    Modifyuserid="sterling" MonthFilter=" " OrganizationCode="1149" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1182ComShippingCalendar"
+    CalendarId="1182ComShippingCalendar"
+    CalendarKey="201306230816419772486477"
+    Createprogid=".YCPCalendarAPI" Createts="2013-06-23T09:16:40-04:00"
+    Createuserid="tkmaxzv" Lockid="0" MeantForInternal="N"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2013-06-23T09:16:40-04:00"
+    Modifyuserid="oms_config" MonthFilter=" " OrganizationCode="1182" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1136ComShippingCalendar"
+    CalendarId="1136ComShippingCalendar"
+    CalendarKey="201306230842229772617245"
+    Createprogid=".YCPCalendarAPI" Createts="2013-06-23T09:42:22-04:00"
+    Createuserid="tkmaxzv" Lockid="0" MeantForInternal="N"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2013-06-23T09:42:22-04:00"
+    Modifyuserid="oms_config" MonthFilter=" " OrganizationCode="1136" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="647ComShippingCalendar"
+    CalendarId="647ComShippingCalendar"
+    CalendarKey="201306250728439806713053"
+    Createprogid=".YCPCalendarAPI" Createts="2013-06-25T08:28:42-04:00"
+    Createuserid="tkmaxzv" Lockid="0" MeantForInternal="N"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2013-06-25T08:28:42-04:00"
+    Modifyuserid="oms_config" MonthFilter=" " OrganizationCode="647" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="654ComShippingCalendar"
+    CalendarId="654ComShippingCalendar"
+    CalendarKey="201306252020339815061154"
+    Createprogid=".YCPCalendarAPI" Createts="2013-06-25T21:20:32-04:00"
+    Createuserid="tkmaxzv" Lockid="0" MeantForInternal="N"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2013-06-25T21:20:32-04:00"
+    Modifyuserid="oms_config" MonthFilter=" " OrganizationCode="654" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="ComShippingCalendar_old"
+    CalendarId="ComShippingCalendar_old"
+    CalendarKey="201306271257499843146412"
+    Createprogid=".YCPCalendarAPI" Createts="2013-06-27T13:57:49-04:00"
+    Createuserid="tkmayy0" Lockid="0" MeantForInternal="N"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2013-06-27T13:57:49-04:00"
+    Modifyuserid="oms_config" MonthFilter=" "
+    OrganizationCode="KOHLS.COM" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey=" "/>
+</Calendar>
+<Calendar CalendarDescription="109ComShippingCalendar"
+    CalendarId="109ComShippingCalendar"
+    CalendarKey="201306281513429860730185"
+    Createprogid=".YCPCalendarAPI" Createts="2013-06-28T16:13:42-04:00"
+    Createuserid="tkmaxzv" Lockid="0" MeantForInternal="N"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2013-06-28T16:13:42-04:00"
+    Modifyuserid="oms_config" MonthFilter=" " OrganizationCode="109" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="471ComShippingCalendar"
+    CalendarId="471ComShippingCalendar"
+    CalendarKey="201306300912459887317325"
+    Createprogid=".YCPCalendarAPI" Createts="2013-06-30T10:12:44-04:00"
+    Createuserid="tkmaps0" Lockid="0" MeantForInternal="N"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2013-06-30T10:12:44-04:00"
+    Modifyuserid="oms_config" MonthFilter=" " OrganizationCode="471" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="1241ComShippingCalendar"
+    CalendarId="1241ComShippingCalendar"
+    CalendarKey="20130807101346440263134" Createprogid=".YCPCalendarAPI"
+    Createts="2013-08-07T10:13:45-04:00" Createuserid="tkmaxzv"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-08-07T10:13:45-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="1241" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="RetailShippingCalendar"
+    CalendarId="RetailShippingCalendar"
+    CalendarKey="20131014130112559273" Createprogid=".YCPCalendarAPI"
+    Createts="2013-10-14T13:01:12-04:00" Createuserid="tkmayy0"
+    Lockid="0" MeantForInternal="N" Modifyprogid=".YCPCalendarAPI"
+    Modifyts="2013-10-14T13:01:12-04:00" Modifyuserid="tkmayy0"
+    MonthFilter=" " OrganizationCode="KOHLS-RETAIL" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey=" "/>
+</Calendar>
+<Calendar CalendarDescription="202ComShippingCalendar"
+    CalendarId="202ComShippingCalendar"
+    CalendarKey="202ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:36-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:36-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="202" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="207ComShippingCalendar"
+    CalendarId="207ComShippingCalendar"
+    CalendarKey="207ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:40-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:40-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="207" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="232ComShippingCalendar"
+    CalendarId="232ComShippingCalendar"
+    CalendarKey="232ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:35-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:35-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="232" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="247ComShippingCalendar"
+    CalendarId="247ComShippingCalendar"
+    CalendarKey="247ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:34-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:34-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="247" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="25ComShippingCalendar"
+    CalendarId="25ComShippingCalendar"
+    CalendarKey="25ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:35-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:35-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="25" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="262ComShippingCalendar"
+    CalendarId="262ComShippingCalendar"
+    CalendarKey="262ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:45-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:45-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="262" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="279ComShippingCalendar"
+    CalendarId="279ComShippingCalendar"
+    CalendarKey="279ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:46-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:46-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="279" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="280ComShippingCalendar"
+    CalendarId="280ComShippingCalendar"
+    CalendarKey="280ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:37-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:37-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="280" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="282ComShippingCalendar"
+    CalendarId="282ComShippingCalendar"
+    CalendarKey="282ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:37-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:37-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="282" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="285ComShippingCalendar"
+    CalendarId="285ComShippingCalendar"
+    CalendarKey="285ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:46-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:46-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="285" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="286ComShippingCalendar"
+    CalendarId="286ComShippingCalendar"
+    CalendarKey="286ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:47-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:47-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="286" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="289ComShippingCalendar"
+    CalendarId="289ComShippingCalendar"
+    CalendarKey="289ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:35-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:35-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="289" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="297ComShippingCalendar"
+    CalendarId="297ComShippingCalendar"
+    CalendarKey="297ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:34-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:34-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="297" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="298ComShippingCalendar"
+    CalendarId="298ComShippingCalendar"
+    CalendarKey="298ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:47-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:47-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="298" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="304ComShippingCalendar"
+    CalendarId="304ComShippingCalendar"
+    CalendarKey="304ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:36-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:36-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="304" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="305ComShippingCalendar"
+    CalendarId="305ComShippingCalendar"
+    CalendarKey="305ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:35-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:35-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="305" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="306ComShippingCalendar"
+    CalendarId="306ComShippingCalendar"
+    CalendarKey="306ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:37-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:37-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="306" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="308ComShippingCalendar"
+    CalendarId="308ComShippingCalendar"
+    CalendarKey="308ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:43-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:43-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="308" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="310ComShippingCalendar"
+    CalendarId="310ComShippingCalendar"
+    CalendarKey="310ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:42-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:42-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="310" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="311ComShippingCalendar"
+    CalendarId="311ComShippingCalendar"
+    CalendarKey="311ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:48-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:48-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="311" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="317ComShippingCalendar"
+    CalendarId="317ComShippingCalendar"
+    CalendarKey="317ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:47-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:47-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="317" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="320ComShippingCalendar"
+    CalendarId="320ComShippingCalendar"
+    CalendarKey="320ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:39-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:39-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="320" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="321ComShippingCalendar"
+    CalendarId="321ComShippingCalendar"
+    CalendarKey="321ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:45-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:45-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="321" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="322ComShippingCalendar"
+    CalendarId="322ComShippingCalendar"
+    CalendarKey="322ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:48-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:48-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="322" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="329ComShippingCalendar"
+    CalendarId="329ComShippingCalendar"
+    CalendarKey="329ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:45-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:45-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="329" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="332ComShippingCalendar"
+    CalendarId="332ComShippingCalendar"
+    CalendarKey="332ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:41-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:41-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="332" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="333ComShippingCalendar"
+    CalendarId="333ComShippingCalendar"
+    CalendarKey="333ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:40-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:40-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="333" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="334ComShippingCalendar"
+    CalendarId="334ComShippingCalendar"
+    CalendarKey="334ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:35-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:35-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="334" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="335ComShippingCalendar"
+    CalendarId="335ComShippingCalendar"
+    CalendarKey="335ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:38-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:38-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="335" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="347ComShippingCalendar"
+    CalendarId="347ComShippingCalendar"
+    CalendarKey="347ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:39-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:39-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="347" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="349ComShippingCalendar"
+    CalendarId="349ComShippingCalendar"
+    CalendarKey="349ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:35-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:35-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="349" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="351ComShippingCalendar"
+    CalendarId="351ComShippingCalendar"
+    CalendarKey="351ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:38-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:38-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="351" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="352ComShippingCalendar"
+    CalendarId="352ComShippingCalendar"
+    CalendarKey="352ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:39-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:39-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="352" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="353ComShippingCalendar"
+    CalendarId="353ComShippingCalendar"
+    CalendarKey="353ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:48-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:48-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="353" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="354ComShippingCalendar"
+    CalendarId="354ComShippingCalendar"
+    CalendarKey="354ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:34-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:34-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="354" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="357ComShippingCalendar"
+    CalendarId="357ComShippingCalendar"
+    CalendarKey="357ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:40-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:40-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="357" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="358ComShippingCalendar"
+    CalendarId="358ComShippingCalendar"
+    CalendarKey="358ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:38-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:38-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="358" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="364ComShippingCalendar"
+    CalendarId="364ComShippingCalendar"
+    CalendarKey="364ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:42-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:42-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="364" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="366ComShippingCalendar"
+    CalendarId="366ComShippingCalendar"
+    CalendarKey="366ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:40-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:40-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="366" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="368ComShippingCalendar"
+    CalendarId="368ComShippingCalendar"
+    CalendarKey="368ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:41-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:41-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="368" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="371ComShippingCalendar"
+    CalendarId="371ComShippingCalendar"
+    CalendarKey="371ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:43-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:43-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="371" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="37ComShippingCalendar"
+    CalendarId="37ComShippingCalendar"
+    CalendarKey="37ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:40-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:40-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="37" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="387ComShippingCalendar"
+    CalendarId="387ComShippingCalendar"
+    CalendarKey="387ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:45-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:45-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="387" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="396ComShippingCalendar"
+    CalendarId="396ComShippingCalendar"
+    CalendarKey="396ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:47-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:47-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="396" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="39ComShippingCalendar"
+    CalendarId="39ComShippingCalendar"
+    CalendarKey="39ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:38-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:38-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="39" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="406ComShippingCalendar"
+    CalendarId="406ComShippingCalendar"
+    CalendarKey="406ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:44-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:44-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="406" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="407ComShippingCalendar"
+    CalendarId="407ComShippingCalendar"
+    CalendarKey="407ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:43-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:43-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="407" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="408ComShippingCalendar"
+    CalendarId="408ComShippingCalendar"
+    CalendarKey="408ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:39-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:39-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="408" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="411ComShippingCalendar"
+    CalendarId="411ComShippingCalendar"
+    CalendarKey="411ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:36-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:36-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="411" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="416ComShippingCalendar"
+    CalendarId="416ComShippingCalendar"
+    CalendarKey="416ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:36-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:36-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="416" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="420ComShippingCalendar"
+    CalendarId="420ComShippingCalendar"
+    CalendarKey="420ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:38-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:38-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="420" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="422ComShippingCalendar"
+    CalendarId="422ComShippingCalendar"
+    CalendarKey="422ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:44-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:44-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="422" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="423ComShippingCalendar"
+    CalendarId="423ComShippingCalendar"
+    CalendarKey="423ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:41-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:41-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="423" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="428ComShippingCalendar"
+    CalendarId="428ComShippingCalendar"
+    CalendarKey="428ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:40-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:40-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="428" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="430ComShippingCalendar"
+    CalendarId="430ComShippingCalendar"
+    CalendarKey="430ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:44-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:44-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="430" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="434ComShippingCalendar"
+    CalendarId="434ComShippingCalendar"
+    CalendarKey="434ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:41-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:41-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="434" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="436ComShippingCalendar"
+    CalendarId="436ComShippingCalendar"
+    CalendarKey="436ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:40-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:40-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="436" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="440ComShippingCalendar"
+    CalendarId="440ComShippingCalendar"
+    CalendarKey="440ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:43-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:43-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="440" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="442ComShippingCalendar"
+    CalendarId="442ComShippingCalendar"
+    CalendarKey="442ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:36-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:36-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="442" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="447ComShippingCalendar"
+    CalendarId="447ComShippingCalendar"
+    CalendarKey="447ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:36-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:36-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="447" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="450ComShippingCalendar"
+    CalendarId="450ComShippingCalendar"
+    CalendarKey="450ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:41-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:41-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="450" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="470ComShippingCalendar"
+    CalendarId="470ComShippingCalendar"
+    CalendarKey="470ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:43-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:43-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="470" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="476ComShippingCalendar"
+    CalendarId="476ComShippingCalendar"
+    CalendarKey="476ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:45-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:45-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="476" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="479ComShippingCalendar"
+    CalendarId="479ComShippingCalendar"
+    CalendarKey="479ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:38-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:38-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="479" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="485ComShippingCalendar"
+    CalendarId="485ComShippingCalendar"
+    CalendarKey="485ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:47-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:47-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="485" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="487ComShippingCalendar"
+    CalendarId="487ComShippingCalendar"
+    CalendarKey="487ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:36-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:36-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="487" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="495ComShippingCalendar"
+    CalendarId="495ComShippingCalendar"
+    CalendarKey="495ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:41-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:41-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="495" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="503ComShippingCalendar"
+    CalendarId="503ComShippingCalendar"
+    CalendarKey="503ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:42-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:42-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="503" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="504ComShippingCalendar"
+    CalendarId="504ComShippingCalendar"
+    CalendarKey="504ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:36-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:36-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="504" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="506ComShippingCalendar"
+    CalendarId="506ComShippingCalendar"
+    CalendarKey="506ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:44-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:44-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="506" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="518ComShippingCalendar"
+    CalendarId="518ComShippingCalendar"
+    CalendarKey="518ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:40-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:40-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="518" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="519ComShippingCalendar"
+    CalendarId="519ComShippingCalendar"
+    CalendarKey="519ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:41-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:41-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="519" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="525ComShippingCalendar"
+    CalendarId="525ComShippingCalendar"
+    CalendarKey="525ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:36-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:36-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="525" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="526ComShippingCalendar"
+    CalendarId="526ComShippingCalendar"
+    CalendarKey="526ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:38-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:38-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="526" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="529ComShippingCalendar"
+    CalendarId="529ComShippingCalendar"
+    CalendarKey="529ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:34-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:34-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="529" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="536ComShippingCalendar"
+    CalendarId="536ComShippingCalendar"
+    CalendarKey="536ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:38-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:38-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="536" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="558ComShippingCalendar"
+    CalendarId="558ComShippingCalendar"
+    CalendarKey="558ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:35-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:35-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="558" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="55ComShippingCalendar"
+    CalendarId="55ComShippingCalendar"
+    CalendarKey="55ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:43-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:43-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="55" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="562ComShippingCalendar"
+    CalendarId="562ComShippingCalendar"
+    CalendarKey="562ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:34-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:34-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="562" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="563ComShippingCalendar"
+    CalendarId="563ComShippingCalendar"
+    CalendarKey="563ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:44-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:44-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="563" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="569ComShippingCalendar"
+    CalendarId="569ComShippingCalendar"
+    CalendarKey="569ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:44-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:44-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="569" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="577ComShippingCalendar"
+    CalendarId="577ComShippingCalendar"
+    CalendarKey="577ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:39-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:39-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="577" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="585ComShippingCalendar"
+    CalendarId="585ComShippingCalendar"
+    CalendarKey="585ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:47-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:47-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="585" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="604ComShippingCalendar"
+    CalendarId="604ComShippingCalendar"
+    CalendarKey="604ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:37-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:37-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="604" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="606ComShippingCalendar"
+    CalendarId="606ComShippingCalendar"
+    CalendarKey="606ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:47-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:47-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="606" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="60ComShippingCalendar"
+    CalendarId="60ComShippingCalendar"
+    CalendarKey="60ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:40-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:40-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="60" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="610ComShippingCalendar"
+    CalendarId="610ComShippingCalendar"
+    CalendarKey="610ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:45-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:45-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="610" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="612ComShippingCalendar"
+    CalendarId="612ComShippingCalendar"
+    CalendarKey="612ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:36-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:36-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="612" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="615ComShippingCalendar"
+    CalendarId="615ComShippingCalendar"
+    CalendarKey="615ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:37-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:37-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="615" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="618ComShippingCalendar"
+    CalendarId="618ComShippingCalendar"
+    CalendarKey="618ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:40-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:40-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="618" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="620ComShippingCalendar"
+    CalendarId="620ComShippingCalendar"
+    CalendarKey="620ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:39-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:39-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="620" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="623ComShippingCalendar"
+    CalendarId="623ComShippingCalendar"
+    CalendarKey="623ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:44-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:44-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="623" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="641ComShippingCalendar"
+    CalendarId="641ComShippingCalendar"
+    CalendarKey="641ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:44-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:44-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="641" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="642ComShippingCalendar"
+    CalendarId="642ComShippingCalendar"
+    CalendarKey="642ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:45-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:45-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="642" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="643ComShippingCalendar"
+    CalendarId="643ComShippingCalendar"
+    CalendarKey="643ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:34-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:34-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="643" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="644ComShippingCalendar"
+    CalendarId="644ComShippingCalendar"
+    CalendarKey="644ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:46-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:46-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="644" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="658ComShippingCalendar"
+    CalendarId="658ComShippingCalendar"
+    CalendarKey="658ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:36-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:36-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="658" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="65ComShippingCalendar"
+    CalendarId="65ComShippingCalendar"
+    CalendarKey="65ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:41-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:41-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="65" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="660ComShippingCalendar"
+    CalendarId="660ComShippingCalendar"
+    CalendarKey="660ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:45-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:45-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="660" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="662ComShippingCalendar"
+    CalendarId="662ComShippingCalendar"
+    CalendarKey="662ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:46-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:46-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="662" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="663ComShippingCalendar"
+    CalendarId="663ComShippingCalendar"
+    CalendarKey="663ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:39-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:39-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="663" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="664ComShippingCalendar"
+    CalendarId="664ComShippingCalendar"
+    CalendarKey="664ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:40-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:40-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="664" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="66ComShippingCalendar"
+    CalendarId="66ComShippingCalendar"
+    CalendarKey="66ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:41-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:41-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="66" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="672ComShippingCalendar"
+    CalendarId="672ComShippingCalendar"
+    CalendarKey="672ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:41-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:41-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="672" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="674ComShippingCalendar"
+    CalendarId="674ComShippingCalendar"
+    CalendarKey="674ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:45-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:45-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="674" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="67ComShippingCalendar"
+    CalendarId="67ComShippingCalendar"
+    CalendarKey="67ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:46-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:46-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="67" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="680ComShippingCalendar"
+    CalendarId="680ComShippingCalendar"
+    CalendarKey="680ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:38-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:38-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="680" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="691ComShippingCalendar"
+    CalendarId="691ComShippingCalendar"
+    CalendarKey="691ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:48-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:48-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="691" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="692ComShippingCalendar"
+    CalendarId="692ComShippingCalendar"
+    CalendarKey="692ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:34-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:34-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="692" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="693ComShippingCalendar"
+    CalendarId="693ComShippingCalendar"
+    CalendarKey="693ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:45-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:45-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="693" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="695ComShippingCalendar"
+    CalendarId="695ComShippingCalendar"
+    CalendarKey="695ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:39-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:39-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="695" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="698ComShippingCalendar"
+    CalendarId="698ComShippingCalendar"
+    CalendarKey="698ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:35-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:35-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="698" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="699ComShippingCalendar"
+    CalendarId="699ComShippingCalendar"
+    CalendarKey="699ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:38-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:38-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="699" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="700ComShippingCalendar"
+    CalendarId="700ComShippingCalendar"
+    CalendarKey="700ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:35-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:35-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="700" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="704ComShippingCalendar"
+    CalendarId="704ComShippingCalendar"
+    CalendarKey="704ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:37-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:37-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="704" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="707ComShippingCalendar"
+    CalendarId="707ComShippingCalendar"
+    CalendarKey="707ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:37-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:37-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="707" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="710ComShippingCalendar"
+    CalendarId="710ComShippingCalendar"
+    CalendarKey="710ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:37-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:37-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="710" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="722ComShippingCalendar"
+    CalendarId="722ComShippingCalendar"
+    CalendarKey="722ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:47-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:47-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="722" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="723ComShippingCalendar"
+    CalendarId="723ComShippingCalendar"
+    CalendarKey="723ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:45-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:45-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="723" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="732ComShippingCalendar"
+    CalendarId="732ComShippingCalendar"
+    CalendarKey="732ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:41-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:41-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="732" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="733ComShippingCalendar"
+    CalendarId="733ComShippingCalendar"
+    CalendarKey="733ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:35-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:35-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="733" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="734ComShippingCalendar"
+    CalendarId="734ComShippingCalendar"
+    CalendarKey="734ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:42-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:42-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="734" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="755ComShippingCalendar"
+    CalendarId="755ComShippingCalendar"
+    CalendarKey="755ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:37-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:37-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="755" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="756ComShippingCalendar"
+    CalendarId="756ComShippingCalendar"
+    CalendarKey="756ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:37-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:37-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="756" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="760ComShippingCalendar"
+    CalendarId="760ComShippingCalendar"
+    CalendarKey="760ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:38-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:38-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="760" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="761ComShippingCalendar"
+    CalendarId="761ComShippingCalendar"
+    CalendarKey="761ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:39-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:39-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="761" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="776ComShippingCalendar"
+    CalendarId="776ComShippingCalendar"
+    CalendarKey="776ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:35-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:35-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="776" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="778ComShippingCalendar"
+    CalendarId="778ComShippingCalendar"
+    CalendarKey="778ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:46-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:46-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="778" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="785ComShippingCalendar"
+    CalendarId="785ComShippingCalendar"
+    CalendarKey="785ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:35-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:35-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="785" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="786ComShippingCalendar"
+    CalendarId="786ComShippingCalendar"
+    CalendarKey="786ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:36-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:36-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="786" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="787ComShippingCalendar"
+    CalendarId="787ComShippingCalendar"
+    CalendarKey="787ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:37-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:37-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="787" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="788ComShippingCalendar"
+    CalendarId="788ComShippingCalendar"
+    CalendarKey="788ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:34-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:34-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="788" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="79ComShippingCalendar"
+    CalendarId="79ComShippingCalendar"
+    CalendarKey="79ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:43-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:43-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="79" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="86ComShippingCalendar"
+    CalendarId="86ComShippingCalendar"
+    CalendarKey="86ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:38-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:38-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="86" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="8ComShippingCalendar"
+    CalendarId="8ComShippingCalendar" CalendarKey="8ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-10-30T15:36:04-04:00" Createuserid="admin" Lockid="0"
+    MeantForInternal="N" Modifyprogid="SterlingHttpTester"
+    Modifyts="2013-10-30T15:36:04-04:00" Modifyuserid="admin"
+    MonthFilter=" " OrganizationCode="8" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="91ComShippingCalendar"
+    CalendarId="91ComShippingCalendar"
+    CalendarKey="91ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:39-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:39-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="91" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="955ComShippingCalendar"
+    CalendarId="955ComShippingCalendar"
+    CalendarKey="955ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:38-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:38-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="955" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="958ComShippingCalendar"
+    CalendarId="958ComShippingCalendar"
+    CalendarKey="958ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:37-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:37-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="958" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="96ComShippingCalendar"
+    CalendarId="96ComShippingCalendar"
+    CalendarKey="96ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:40-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:40-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="96" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="978ComShippingCalendar"
+    CalendarId="978ComShippingCalendar"
+    CalendarKey="978ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:39-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:39-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="978" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="97ComShippingCalendar"
+    CalendarId="97ComShippingCalendar"
+    CalendarKey="97ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:42-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:42-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="97" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="982ComShippingCalendar"
+    CalendarId="982ComShippingCalendar"
+    CalendarKey="982ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:42-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:42-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="982" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="983ComShippingCalendar"
+    CalendarId="983ComShippingCalendar"
+    CalendarKey="983ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:35-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:35-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="983" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+<Calendar CalendarDescription="9ComShippingCalendar"
+    CalendarId="9ComShippingCalendar" CalendarKey="9ComShippingCalendar"
+    Createprogid="SterlingHttpTester"
+    Createts="2013-09-05T18:10:48-04:00" Createuserid="tkma945"
+    Lockid="0" MeantForInternal="N" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-09-05T18:10:48-04:00" Modifyuserid="oms_config"
+    MonthFilter=" " OrganizationCode="9" YearFilter=" ">
+    <InheritFromCalendar InheritCalendarKey="20130322105314422517"/>
+</Calendar>
+</YFS_CALENDARList>

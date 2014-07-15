@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="OrderRelease">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="PersonInfoShipTo"/>
+        <xs:element ref="Order"/>
+        <xs:element ref="OrderLines"/>
+        <xs:element ref="Extn"/>
+        <xs:element ref="PersonInfoBillTo"/>
+      </xs:sequence>
+      <xs:attribute name="CarrierServiceCode" use="required"/>
+      <xs:attribute name="ReleaseNo" use="required" type="xs:integer"/>
+      <xs:attribute name="ReqDeliveryDate" use="required" type="xs:dateTime"/>
+      <xs:attribute name="ReqShipDate" use="required" type="xs:dateTime"/>
+      <xs:attribute name="SCAC" use="required"/>
+      <xs:attribute name="ShipNode" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PersonInfoShipTo">
+    <xs:complexType>
+      <xs:attribute name="AddressLine1" use="required"/>
+      <xs:attribute name="AddressLine2" use="required"/>
+      <xs:attribute name="City" use="required" type="xs:NCName"/>
+      <xs:attribute name="Country" use="required" type="xs:NCName"/>
+      <xs:attribute name="DayPhone" use="required" type="xs:integer"/>
+      <xs:attribute name="EMailID" use="required"/>
+      <xs:attribute name="FirstName" use="required" type="xs:NCName"/>
+      <xs:attribute name="LastName" use="required" type="xs:NCName"/>
+      <xs:attribute name="State" use="required" type="xs:NCName"/>
+      <xs:attribute name="ZipCode" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Order">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="PaymentMethods"/>
+        <xs:element ref="Promotions"/>
+      </xs:sequence>
+      <xs:attribute name="Createts" use="required" type="xs:dateTime"/>
+      <xs:attribute name="EnterpriseCode" use="required" type="xs:NCName"/>
+      <xs:attribute name="OrderDate" use="required"/>
+      <xs:attribute name="OrderNo" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PaymentMethods">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="PaymentMethod"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PaymentMethod">
+    <xs:complexType>
+      <xs:attribute name="CreditCardType" use="required" type="xs:NCName"/>
+      <xs:attribute name="DisplayCreditCardNo" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Promotions">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="OrderLines">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="OrderLine"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OrderLine">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Extn"/>
+        <xs:element ref="Item"/>
+      </xs:sequence>
+      <xs:attribute name="BOGOInstruction" use="required"/>
+      <xs:attribute name="GiftFlag" use="required" type="xs:NCName"/>
+      <xs:attribute name="GiftWrap" use="required" type="xs:NCName"/>
+      <xs:attribute name="GiftWrapCharge" use="required"/>
+      <xs:attribute name="LineType" use="required"/>
+      <xs:attribute name="OrderedQty" use="required" type="xs:decimal"/>
+      <xs:attribute name="PackListType" use="required"/>
+      <xs:attribute name="PrimeLineNo" use="required" type="xs:integer"/>
+      <xs:attribute name="RetailPrice" use="required" type="xs:decimal"/>
+      <xs:attribute name="ShippingSurCharge" use="required"/>
+      <xs:attribute name="StatusQuantity" use="required" type="xs:decimal"/>
+      <xs:attribute name="SubLineNo" use="required" type="xs:integer"/>
+      <xs:attribute name="TaxPercentage" use="required" type="xs:decimal"/>
+      <xs:attribute name="UnitPrice" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Item">
+    <xs:complexType>
+      <xs:attribute name="ItemDesc" use="required"/>
+      <xs:attribute name="ItemID" use="required" type="xs:integer"/>
+      <xs:attribute name="UPCCode" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PersonInfoBillTo">
+    <xs:complexType>
+      <xs:attribute name="AddressLine1" use="required"/>
+      <xs:attribute name="AddressLine2" use="required"/>
+      <xs:attribute name="City" use="required" type="xs:NCName"/>
+      <xs:attribute name="Country" use="required" type="xs:NCName"/>
+      <xs:attribute name="FirstName" use="required" type="xs:NCName"/>
+      <xs:attribute name="LastName" use="required" type="xs:NCName"/>
+      <xs:attribute name="State" use="required" type="xs:NCName"/>
+      <xs:attribute name="ZipCode" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Extn">
+    <xs:complexType>
+      <xs:attribute name="ExtnBOGOSeq" type="xs:integer"/>
+      <xs:attribute name="ExtnBaggable" type="xs:NCName"/>
+      <xs:attribute name="ExtnCageItem" type="xs:NCName"/>
+      <xs:attribute name="ExtnCartonType" type="xs:NCName"/>
+      <xs:attribute name="ExtnColorDesc" type="xs:NCName"/>
+      <xs:attribute name="ExtnGiftFrom"/>
+      <xs:attribute name="ExtnGiftMessage"/>
+      <xs:attribute name="ExtnGiftTo"/>
+      <xs:attribute name="ExtnHdrGiftReceiptID"/>
+      <xs:attribute name="ExtnLineGiftReceiptID"/>
+      <xs:attribute name="ExtnPickTicketNo" type="xs:integer"/>
+      <xs:attribute name="ExtnPreEncReceiptID"/>
+      <xs:attribute name="ExtnRG" type="xs:NCName"/>
+      <xs:attribute name="ExtnReturnPrice" type="xs:decimal"/>
+      <xs:attribute name="ExtnShipAlone"/>
+      <xs:attribute name="ExtnShipVia"/>
+      <xs:attribute name="ExtnShippingServiceLevelSeq" type="xs:integer"/>
+      <xs:attribute name="ExtnSizeDesc"/>
+      <xs:attribute name="ExtnTotalReleaseUnits" type="xs:integer"/>
+      <xs:attribute name="ExtnUPC" type="xs:integer"/>
+      <xs:attribute name="ExtnWMSInstType" type="xs:NCName"/>
+      <xs:attribute name="ExtnWrapSingleTogether" type="xs:NCName"/>
+      <xs:attribute name="ExtnWrapTogetherGroupCode"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

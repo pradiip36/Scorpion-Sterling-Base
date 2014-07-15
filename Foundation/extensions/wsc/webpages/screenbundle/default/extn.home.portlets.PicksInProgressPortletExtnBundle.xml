@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.home.portlets.PicksInProgressPortletExtnBundle" screenId="extn.home.portlets.PicksInProgressPortletExtn">
+    <BundleEntries>
+        <BundleEntry bundleEntryId="portletName_Label_value"
+            bundleKey="My_Picks_In_Progress"
+            bundleValueFn="_scSimpleBundle" property="value"
+            type="WIDGET" uId="portletName"/>
+    </BundleEntries>
+</ScreenBundle>

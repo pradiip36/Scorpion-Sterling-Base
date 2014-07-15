@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="ManageAlertNotificationDetailsExtn"
+        extnPackage="extn.alert"
+        originalScreen="wsc.alert.ManageAlertNotificationDetails"
+        originalScreenPackage="wsc.alert" type="diffrential"/>
+</ExtensionMetaData>

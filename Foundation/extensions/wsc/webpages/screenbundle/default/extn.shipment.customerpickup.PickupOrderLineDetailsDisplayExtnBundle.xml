@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.shipment.customerpickup.PickupOrderLineDetailsDisplayExtnBundle" screenId="extn.shipment.customerpickup.PickupOrderLineDetailsDisplayExtn">
+    <BundleEntries>
+        <BundleEntry
+            bundleEntryId="extn_datalabel_KohlsUPC_DataLabel_label"
+            bundleKey="extn_Kohls_UPC" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_datalabel_KohlsUPC"/>
+        <BundleEntry bundleEntryId="extn_quantityLabel_DataLabel_label"
+            bundleKey="OrderedQuantity" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_quantityLabel"/>
+        <BundleEntry bundleEntryId="extn_quantityPicked_DataLabel_label"
+            bundleKey="extn_Quantity_Picked" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_quantityPicked"/>
+    </BundleEntries>
+</ScreenBundle>

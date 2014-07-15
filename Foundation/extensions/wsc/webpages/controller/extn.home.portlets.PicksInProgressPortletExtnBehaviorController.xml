@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.home.portlets.PicksInProgressPortletExtnBehaviorController"
+    requestMethodSupported="POST" screenId="extn.home.portlets.PicksInProgressPortletExtn">
+    <MashupRefs>
+        <MashupRef extnType="ADD" mashupId="extn_EJRecord_mashup"
+            mashupRefId="extn_addEJTransPickupResumed" permissionId=""/>
+    </MashupRefs>
+</Controller>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OrderList>
+<Order DocumentType="" EnterpriseCode="" OrderNo="">
+    <OrderLines>
+        <OrderLine CarrierServiceCode=""
+            OrderedQty="" PrimeLineNo=""
+            Quantity="" SCAC="" SubLineNo="" UnitOfMeasure="" OrderLineKey="" MaxLineStatus="" >
+			<ItemDetails ItemID=""/>
+            <OrderStatuses>
+                <OrderStatus ShipNode="" Status=""
+                    StatusDate=""
+                    StatusDescription="" StatusQty=""/>
+            </OrderStatuses>
+			<Notes>
+			    <Note ReasonCode="" NoteText="" />
+			</Notes>
+        </OrderLine>
+    </OrderLines>
+</Order>
+</OrderList>

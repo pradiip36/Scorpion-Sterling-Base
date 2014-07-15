@@ -1,0 +1,289 @@
+{
+ "model": {
+  "sciId": {
+   "id": "sciId",
+   "value": "seaVendorSearchResults",
+   "type": "string"
+  },
+  "className": {
+   "id": "className",
+   "value": "sc.sbc.kohls.item.ineligibility.VendorSearchResults",
+   "type": "string"
+  },
+  "superclassName": {
+   "id": "superclassName",
+   "value": "sc.plat.ui.ExtensibleScreen",
+   "type": "string"
+  },
+  "regXtype": {
+   "id": "regXtype",
+   "value": "seaVendorSearchResults",
+   "type": "string"
+  },
+  "header": {
+   "id": "header",
+   "value": "false",
+   "type": "boolean"
+  },
+  "layout": {
+   "id": "layout",
+   "value": "anchor",
+   "type": "string"
+  },
+  "autoScroll": {
+   "id": "autoScroll",
+   "value": "true",
+   "type": "boolean"
+  },
+  "items": {
+   "id": "items",
+   "value": [{
+    "id": "",
+    "value": {
+     "sciId": {
+      "id": "sciId",
+      "value": "tblSearchResults",
+      "type": "string"
+     },
+     "title": {
+      "id": "title",
+      "value": "Search Results",
+      "type": "string"
+     },
+     "columns": {
+      "id": "columns",
+      "value": [{
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "clmVendor",
+         "type": "string"
+        },
+        "header": {
+         "id": "header",
+         "value": "Vendor ID",
+         "type": "string"
+        },
+        "sortable": {
+         "id": "sortable",
+         "value": "true",
+         "type": "boolean"
+        },
+        "renderer": {
+         "id": "renderer",
+         "value": "this.showLinksWithImageInColumns",
+         "type": "expr"
+        },
+        "dataIndex": {
+         "id": "dataIndex",
+         "value": "OrganizationCode",
+         "type": "string"
+        },
+        "width": {
+         "id": "width",
+         "value": "350",
+         "type": "number"
+        },
+        "bindingData": {
+         "id": "bindingData",
+         "value": {
+          "sFieldConfig": {
+           "id": "sFieldConfig",
+           "value": {
+            "mapping": {
+             "id": "mapping",
+             "value": "OrganizationCode",
+             "type": "string"
+            },
+            "defid": "object"
+           },
+           "type": "object"
+          },
+          "defid": "object"
+         },
+         "type": "object"
+        },
+        "defid": "grid-column"
+       },
+       "type": "grid-column"
+      },
+      {
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "clmVendorName",
+         "type": "string"
+        },
+        "header": {
+         "id": "header",
+         "value": "Vendor Name",
+         "type": "string"
+        },
+        "sortable": {
+         "id": "sortable",
+         "value": "true",
+         "type": "boolean"
+        },
+        "dataIndex": {
+         "id": "dataIndex",
+         "value": "OrganizationName",
+         "type": "string"
+        },
+        "width": {
+         "id": "width",
+         "value": "400",
+         "type": "number"
+        },
+        "bindingData": {
+         "id": "bindingData",
+         "value": {
+          "sFieldConfig": {
+           "id": "sFieldConfig",
+           "value": {
+            "mapping": {
+             "id": "mapping",
+             "value": "OrganizationName",
+             "type": "string"
+            },
+            "defid": "object"
+           },
+           "type": "object"
+          },
+          "defid": "object"
+         },
+         "type": "object"
+        },
+        "defid": "grid-column"
+       },
+       "type": "grid-column"
+      }],
+      "type": "array"
+     },
+     "sctype": {
+      "id": "sctype",
+      "value": "GridPanel",
+      "type": "string"
+     },
+     "border": {
+      "id": "border",
+      "value": "true",
+      "type": "boolean"
+     },
+     "stripeRows": {
+      "id": "stripeRows",
+      "value": "true",
+      "type": "boolean"
+     },
+     "bindingData": {
+      "id": "bindingData",
+      "value": {
+       "sourceBinding": {
+        "id": "sourceBinding",
+        "value": "getVendorListOutput:OrganizationList.Organization",
+        "type": "string"
+       },
+       "defid": "object"
+      },
+      "type": "object"
+     },
+     "listeners": {
+      "id": "listeners",
+      "value": {
+       "scope": {
+        "id": "scope",
+        "value": "this",
+        "type": "expr"
+       },
+       "cellclick": {
+        "id": "cellclick",
+        "value": "this.handleCellClick",
+        "type": "expr"
+       },
+       "headerClick": {
+        "id": "headerClick",
+        "value": "this.handleCellClick",
+        "type": "expr"
+       },
+       "defid": "listeners"
+      },
+      "type": "object"
+     },
+     "height": {
+      "id": "height",
+      "value": "400",
+      "type": "number"
+     },
+     "defid": "grid"
+    },
+    "type": "grid"
+   }],
+   "type": "array"
+  },
+  "autoWidth": {
+   "id": "autoWidth",
+   "value": "true",
+   "type": "boolean"
+  },
+  "height": {
+   "id": "height",
+   "value": "400",
+   "type": "number"
+  },
+  "namespaces": {
+   "id": "namespaces",
+   "value": {
+    "target": {
+     "id": "target",
+     "value": [{
+      "id": "",
+      "value": {
+       "name": {
+        "id": "name",
+        "value": "",
+        "type": "string"
+       },
+       "description": {
+        "id": "description",
+        "value": "",
+        "type": "string"
+       },
+       "defid": "target"
+      },
+      "type": "target"
+     }],
+     "type": "array"
+    },
+    "source": {
+     "id": "source",
+     "value": [{
+      "id": "",
+      "value": {
+       "name": {
+        "id": "name",
+        "value": "getVendorListInput",
+        "type": "string"
+       },
+       "description": {
+        "id": "description",
+        "value": "getVendorListOutput",
+        "type": "string"
+       },
+       "defid": "source"
+      },
+      "type": "source"
+     }],
+     "type": "array"
+    },
+    "defid": "namespaces"
+   },
+   "type": "object"
+  },
+  "defid": "screen"
+ },
+ "version": "0.3.0b",
+ "type": "SCREEN",
+ "_verificationText": "VerificationText",
+ "dataSources": {}
+}

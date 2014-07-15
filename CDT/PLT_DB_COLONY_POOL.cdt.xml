@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PLT_DB_COLONY_POOLList TableName="PLT_DB_COLONY_POOL">
+<ColonyPool ColonyKey="20101018162514818"
+    Createprogid="YSCPreInstallMetadataCreator"
+    Createts="2010-10-18T16:25:14-05:00" Createuserid="SYSTEM"
+    DbColonyPoolKey="20101018162514819" Lockid="0"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2010-10-18T16:25:14-05:00"
+    Modifyuserid="sterling" PoolId="DEFAULT_MASTER_90" TableType="MASTER"/>
+<ColonyPool ColonyKey="20101018162514818"
+    Createprogid="YSCPreInstallMetadataCreator"
+    Createts="2010-10-18T16:25:14-05:00" Createuserid="SYSTEM"
+    DbColonyPoolKey="20101018162514821" Lockid="1"
+    Modifyprogid="YSCPreInstallMetadataCreator"
+    Modifyts="2010-10-18T16:25:14-05:00" Modifyuserid="SYSTEM"
+    PoolId="DEFAULT_CONFIGURATION_921" TableType="CONFIGURATION"/>
+<ColonyPool ColonyKey="20101018162514818"
+    Createprogid="YSCPreInstallMetadataCreator"
+    Createts="2010-10-18T16:25:14-05:00" Createuserid="SYSTEM"
+    DbColonyPoolKey="20101018162514823" Lockid="0"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2010-10-18T16:25:14-05:00"
+    Modifyuserid="sterling" PoolId="DEFAULT_TRANSACTION_90" TableType="TRANSACTION"/>
+<ColonyPool ColonyKey="20101018162514818"
+    Createprogid="YSCPreInstallMetadataCreator"
+    Createts="2010-10-18T16:25:14-05:00" Createuserid="SYSTEM"
+    DbColonyPoolKey="20101018162514825" Lockid="0"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2010-10-18T16:25:14-05:00"
+    Modifyuserid="sterling" PoolId="DEFAULT_METADATA" TableType="METADATA"/>
+<ColonyPool ColonyKey="20101018162514818"
+    Createprogid="YSCPreInstallMetadataCreator"
+    Createts="2010-10-18T16:25:14-05:00" Createuserid="SYSTEM"
+    DbColonyPoolKey="20101018162514827" Lockid="1"
+    Modifyprogid="YSCPreInstallMetadataCreator"
+    Modifyts="2010-10-18T16:25:14-05:00" Modifyuserid="SYSTEM"
+    PoolId="DEFAULT_STATISTICS_921" TableType="STATISTICS"/>
+</PLT_DB_COLONY_POOLList>

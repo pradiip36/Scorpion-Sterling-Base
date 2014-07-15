@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.shipment.customerpickup.PickupOrderDetailsExtnBundle" screenId="extn.shipment.customerpickup.PickupOrderDetailsExtn">
+    <BundleEntries>
+        <BundleEntry
+            bundleEntryId="pnlReady_for_Pickup_ContentPane_title"
+            bundleKey="extn_Items" bundleValueFn="_scSimpleBundle"
+            property="title" type="WIDGET" uId="pnlReady_for_Pickup"/>
+        <BundleEntry bundleEntryId="pnlIncluded_ContentPane_title"
+            bundleKey="extn_Items" bundleValueFn="_scSimpleBundle"
+            property="title" type="WIDGET" uId="pnlIncluded"/>
+        <BundleEntry
+            bundleEntryId="pnlRemaining_Products_ContentPane_title"
+            bundleKey="extn_Missing_Items"
+            bundleValueFn="_scSimpleBundle" property="title"
+            type="WIDGET" uId="pnlRemaining_Products"/>
+        <BundleEntry bundleEntryId="extn_labelAlertMessage_Label_value"
+            bundleKey="extn_Orders_With_Alerts"
+            bundleValueFn="_scSimpleBundle" property="value"
+            type="WIDGET" uId="extn_labelAlertMessage"/>
+        <BundleEntry
+            bundleEntryId="extn_datalabelAssignedTo_DataLabel_label"
+            bundleKey="Label_AssignedToUser" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_datalabelAssignedTo"/>
+        <BundleEntry
+            bundleEntryId="extn_datalabelShipmentNo_DataLabel_label"
+            bundleKey="ShipmentNo" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_datalabelShipmentNo"/>
+        <BundleEntry
+            bundleEntryId="extn_datalabel_HoldLocation_DataLabel_label"
+            bundleKey="extn_Hold_Locations" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_datalabel_HoldLocation"/>
+        <BundleEntry
+            bundleEntryId="extn_datalabelOrderDate_DataLabel_label"
+            bundleKey="extn_Order_Date" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_datalabelOrderDate"/>
+        <BundleEntry
+            bundleEntryId="extn_datalabelPickUpDate_DataLabel_label"
+            bundleKey="extn_Pick_Up_Date" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_datalabelPickUpDate"/>
+        <BundleEntry bundleEntryId="lblPickupDate_DataLabel_label"
+            bundleKey="Label_pickupDate" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="lblPickupDate"/>
+    </BundleEntries>
+</ScreenBundle>

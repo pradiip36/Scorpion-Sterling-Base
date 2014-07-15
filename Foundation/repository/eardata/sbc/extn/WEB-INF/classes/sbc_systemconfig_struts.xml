@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Licensed Materials - Property of IBM
+IBM Sterling Business Center
+(C) Copyright IBM Corp. 2011, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+ 
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="sbc-systemconfig" namespace="/sbc/systemadmin" extends="scuiimpl">
+		<default-class-ref class="com.sterlingcommerce.sbc.core.struts.SBCDefaultStrutsAction"></default-class-ref>
+		<global-results>
+	            <result name="MASHUPERROR">/sbc/jsps/apierror.jsp</result>
+				<result name="VALIDATIONERROR">/sbc/jsps/apierror.jsp</result>
+				<result name="AUTHORIZATIONERROR">/sbc/jsps/apierror.jsp</result>
+				<result name="error">/sbc/jsps/apierror.jsp</result>
+				<result name="APIERROR">/sbc/jsps/apierror.jsp</result>
+				<result name="DATAVALIDATIONERROR">/jsps/datavalidationerror.jsp</result>
+		</global-results>
+		<!--Struts action related to Manage Format Template -->
+		<action name="documentTemplateTree" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getDocumentTemplateCodeList</param>
+			<param name="inputNs">getDocumentTemplateCodeList_input</param>
+			<param name="outputNs">getDocumentTemplateCodeList_output</param>
+			<param name="resourceId">SBCSAD00014</param> 
+			<result name="success">/sbc/systemconfig/manageTemplate/manageTemplate.jsp</result>
+		</action>
+		<action name="getTransformationConfig_manageQuoteTemplate" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getTransformationConfig_manageQuoteTemplate</param>
+			<param name="inputNs">getTransformationConfig_manageQuoteTemplate_input</param>
+			<param name="outputNs">getTransformationConfig_manageQuoteTemplate_output</param>
+			<param name="resourceId">SBCSAD00014</param> 
+			<result name="success" type="chain">    
+				<param name="actionName">documentTemplateTree</param>
+				<param name="namespace">/sbc/systemadmin</param> 
+			</result>
+		</action>
+		<action name="getTransformationConfig_getDocumentTemplate" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getTransformationConfig_manageQuoteTemplate</param>
+			<param name="inputNs">getTransformationConfig_getDocumentTemplate_input</param>
+			<param name="outputNs">getTransformationConfig_getDocumentTemplate_output</param>
+			<param name="resourceId">SBCSAD00014</param>
+			<result name="success">/sbc/systemconfig/manageTemplate/getTransformationConfigSuccess.jsp</result>
+		</action>
+		<action name="manageTransformationConfig_saveTemplate" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">manageTransformationConfig_saveTemplate</param>
+			<param name="inputNs">manageTransformationConfig_saveTemplate_input</param>
+			<param name="outputNs">manageTransformationConfig_saveTemplate_output</param>
+			<param name="resourceId">SBCSAD00014</param>
+			<result name="success">/sbc/systemconfig/manageTemplate/manageTransformationConfigSuccess.jsp</result>
+		</action>
+		<action name="manageTransformationConfig_deleteTemplate" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">manageTransformationConfig_deleteTemplate</param>
+			<param name="inputNs">manageTransformationConfig_deleteTemplate_input</param>
+			<param name="outputNs">manageTransformationConfig_deleteTemplate_output</param>
+			<param name="resourceId">SBCSAD00014</param>
+			<result name="success">/sbc/systemconfig/manageTemplate/manageTransformationConfigSuccess.jsp</result>
+		</action>
+		<action name="getTemplateCodeTreeList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getTemplateCodeList</param>
+			<param name="inputNs">getTemplateCodeList_input</param>
+			<param name="outputNs">getTemplateCodeList_output</param>
+			<param name="resourceId">SBCSAD00014</param> 
+			<result name="success">/sbc/systemconfig/manageTemplate/treeTemplateCode.jsp</result>
+		</action>
+		<action name="getTemplateTreeList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getTemplateList</param>
+			<param name="inputNs">getTemplate_input</param>
+			<param name="outputNs">getTemplate_output</param>
+			<param name="resourceId">SBCSAD00014</param>
+			<result name="success">/sbc/systemconfig/manageTemplate/treeData.jsp</result>
+		</action>
+		<action name="getTemplateLocaleList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getTemplateLocaleList</param>
+			<param name="inputNs">getTemplateLocaleList_input</param>
+			<param name="outputNs">getTemplateLocaleList_output</param>
+			<param name="resourceId">SBCSAD00014</param>
+			<result name="success">/sbc/systemconfig/manageTemplate/treeLocale.jsp</result>
+		</action>
+		<action name="generatePrint">
+			<param name="resourceId">SBCSAD00014</param>
+			<result name="success">/sbc/systemconfig/manageTemplate/generatePrint.jsp</result>
+		</action>
+		<action name="createNewFormat">
+			<param name="resourceId">SBCSAD00014</param>
+			<result name="success">/sbc/systemconfig/manageTemplate/createFormat/createNewFormat.jsp</result>
+		</action>
+		<action name="createNewTemplate">
+			<param name="resourceId">SBCSAD00014</param>
+			<result name="success">/sbc/systemconfig/manageTemplate/createNewTemplate.jsp</result>
+		</action>
+			<action name="manageTransformationData" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">manageTransformation_Data</param>
+			<param name="inputNs">gettranformationTemplateInput</param>
+			<param name="outputNs">gettranformationTemplate_Output</param>
+			<result name="APIERROR">/sbc/systemconfig/manageTemplate/manageLocaleTemplate/manageStyleSheetError.jsp</result>
+			<result name="success">/sbc/systemconfig/manageTemplate/sucessPrint.jsp</result>
+		</action>
+		<action name="loadFormat" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getFormatDetail</param>
+			<param name="inputNs">getFormatDetail_Input</param>
+			<param name="outputNs">getFormatDetail_Output</param>
+			<result name="success">/sbc/systemconfig/manageTemplate/manageLocaleTemplate/manageLocaleTemplate.jsp</result>
+		</action>
+		<action name="loadDefaultFormat" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getFormatDetail</param>
+			<param name="inputNs">getFormatDetail_Input</param>
+			<param name="outputNs">getFormatDetail_Output</param>
+			<result name="success">/sbc/systemconfig/manageTemplate/defaultTemplate.jsp</result>
+		</action>
+		<action name="validateXml">
+			<result name="success">/sbc/systemconfig/manageTemplate/validatexml.jsp</result>
+		</action>
+		<!-- End Of manage template -->
+		<!-- Struts action related to master upload -->
+		<action name="masterUpload" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">uploadJob-getCommonCodeList</param>
+			<param name="resourceId">SBCSAD000012</param>
+			<param name="inputNs">uploadJob_input</param>
+			<param name="outputNs">uploadJob_output</param>
+			<result name="success">/sbc/systemconfig/masterupload/masterupload.jsp</result>
+		</action>
+		<action name="manageUploadJob"  class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">sbc-manageUploadJob</param>
+			<param name="resourceId">SBCSAD000012</param>
+			<param name="inputNs">manageUploadJob_input</param>
+			<param name="outputNs">manageUploadJob_output</param>
+			<result name="success">/sbc/systemconfig/masterupload/masterUploadJobResult.jsp</result>
+		</action>
+		<action name="manageUploadJob_ITEMLIST"  class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">sbcitem-manageUploadJob</param>
+			<param name="resourceId">SBCSAD000012</param>
+			<param name="inputNs">manageUploadJob_input</param>
+			<param name="outputNs">manageUploadJob_output</param>
+			<result name="success">/sbc/systemconfig/masterupload/masterUploadJobResult.jsp</result>
+		</action>
+		<action name="manageUploadJob_CUSTOMER"  class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">sbccustomer-manageUploadJob</param>
+			<param name="resourceId">SBCSAD000012</param>
+			<param name="inputNs">manageUploadJob_input</param>
+			<param name="outputNs">manageUploadJob_output</param>
+			<result name="success">/sbc/systemconfig/masterupload/masterUploadJobResult.jsp</result>
+		</action>
+		<action name="manageUploadJob_CUSTOMER_PRICELIST"  class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">sbcpricelist-manageUploadJob</param>
+			<param name="resourceId">SBCSAD000012</param>
+			<param name="inputNs">manageUploadJob_input</param>
+			<param name="outputNs">manageUploadJob_output</param>
+			<result name="success">/sbc/systemconfig/masterupload/masterUploadJobResult.jsp</result>
+		</action>
+		<action name="manageUploadJob_ITEM_CATEGORY"  class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">sbccategory-manageUploadJob</param>
+			<param name="resourceId">SBCSAD000012</param>
+			<param name="inputNs">manageUploadJob_input</param>
+			<param name="outputNs">manageUploadJob_output</param>
+			<result name="success">/sbc/systemconfig/masterupload/masterUploadJobResult.jsp</result>
+		</action>
+		<action name="manageUploadJob_ITEM_PRICELIST"  class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">sbcpricelist-manageUploadJob</param>
+			<param name="resourceId">SBCSAD000012</param>
+			<param name="inputNs">manageUploadJob_input</param>
+			<param name="outputNs">manageUploadJob_output</param>
+			<result name="success">/sbc/systemconfig/masterupload/masterUploadJobResult.jsp</result>
+		</action>
+		<action name="masterUploadStatus" >
+			<param name="resourceId">SBCSAD000012</param>
+			<!--<param name="mashupId">sbccommon-getUploadJobList</param>
+			<param name="inputNs">getUploadJobList_input</param>
+			<param name="outputNs">getUploadJobList_output</param>-->
+			<result name="success">/sbc/systemconfig/masterupload/masteruploadstatus.jsp</result>
+		</action>
+		<action name="masterUploadStatusReload" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">sbccommon-getUploadJobList</param>
+			<param name="resourceId">SBCSAD000012</param>
+			<param name="inputNs">getUploadJobList_input</param>
+			<param name="outputNs">getUploadJobList_output</param>
+			<result name="success">/sbc/systemconfig/masterupload/masteruploadstatusresult.jsp</result>
+		</action>
+		<!-- Struts action related to master upload end here -->
+		<!-- Struts action related to manage customer start here -->
+		<action name="manageCustomer" >
+			<param name="resourceId">SBCSAD000010</param>
+			<result name="success">/sbc/systemconfig/customer/create/createcustomer.jsp</result>
+		</action>
+		<action name="customersearchpopup" >
+			<param name="inputNs">customerRules</param>
+			<param name="outputNs">customerRulesOutput</param>
+			<param name="resourceId">SBCSAD000011</param>
+			<result name="success">/sbc/systemconfig/customer/search/launchcustomersearch.jsp</result>
+		</action>
+		<action name="getCustomerList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">getCustomerList</param>
+			<param name="inputNs">getCustomerListInput</param>
+			<param name="outputNs">getCustomerListOutput</param>
+			<result name="success">/sbc/systemconfig/customer/search/getCustomerListResult.jsp</result>
+		</action> 
+		<action name="manageBussinessCustomer" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">manageBusinessCustomer</param>
+			<param name="inputNs">manageCustomer_input</param>
+			<param name="outputNs">manageCustomer_output</param>
+			<result name="APIERROR">/sbc/systemconfig/customer/create/manageCustomerError.jsp</result>
+			<result name="success">/sbc/systemconfig/customer/create/manageCustomerResult.jsp</result>
+		</action>
+		<action name="manageConsumerCustomer" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">manageConsumerCustomer</param>
+			<param name="inputNs">manageCustomer_input</param>
+			<param name="outputNs">manageCustomer_output</param>
+			<result name="success">/sbc/systemconfig/customer/create/manageCustomerResult.jsp</result>
+		</action>
+		<action name="customersearchlist" >
+			<param name="resourceId">SBCSAD000011</param>
+			<result name="success">/sbc/systemconfig/customer/search/customersearchlist.jsp</result>
+		</action>
+		<action name="customerDetails" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="resourceId">SBCSAD000010</param> 
+			<param name="mashupId">getCustomerDetailMultiAPI</param>
+			<result name="success">/sbc/systemconfig/customer/manage/detail/customerDetail.jsp</result> 
+			</action>
+		<action name="manageCustomerAction" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">manageCustomerAction</param>
+			<param name="inputNs">manageCustomerAction_input</param>
+			<param name="outputNs">manageCustomerAction_output</param>
+			<result name="success">/sbc/systemconfig/customer/manage/basic/success.jsp</result>
+		</action>
+		<action name="deleteContact" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">deleteCustomerAction</param>
+			<param name="inputNs">deleteContact_input</param>
+			<param name="outputNs">deleteContact_output</param>
+			<result name="success">/sbc/systemconfig/customer/manage/basic/delete.jsp</result>
+		</action>
+		<action name="getCustomerStatus" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getCustomerStatus</param>
+			<param name="inputNs">manageCustomerAction_input</param>
+			<param name="outputNs">manageCustomerAction_output</param>
+			<result name="success">/sbc/systemconfig/customer/manage/basic/success.jsp</result>
+		</action>
+		<!-- Struts action related to manager customer end here -->
+		<!-- Struts action for Customer rule Start-->
+		<action name="manageCustomerLevel" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="resourceId">SBCSAD00006</param>			
+			<param name="mashupId">common-getCUSTOMER_LEVEL</param>
+			<param name="inputNs">getCommonCode_input</param>
+			<param name="outputNs">getCommonCode_output</param>
+			<param name="CodeType">CUSTOMER_LEVEL</param>
+			<result name="success">/sbc/systemconfig/customerRules/customerLevel.jsp</result>
+		</action>
+		<action name="manageRelationType" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="resourceId">SBCSAD00007</param>			
+			<param name="mashupId">common-getRELATIONSHIP_TYPE</param>
+			<param name="inputNs">getCommonCode_input</param>
+			<param name="outputNs">getCommonCode_output</param>
+			<param name="CodeType">RELATIONSHIP_TYPE</param>
+			<result name="success">/sbc/systemconfig/customerRules/relationshipType.jsp</result>
+		</action>
+		<action name="manageVertical" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="resourceId">SBCSAD00008</param>			
+			<param name="mashupId">common-getVERTICAL</param>
+			<param name="inputNs">getCommonCode_input</param>
+			<param name="outputNs">getCommonCode_output</param>
+			<param name="CodeType">VERTICAL</param>
+			<result name="success">/sbc/systemconfig/customerRules/vertical.jsp</result>
+		</action>
+		<action name="manageCustomerClass" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="resourceId">SBCSAD00009</param>			
+			<param name="mashupId">common-getCUSTOMER_CLASS</param>
+			<param name="inputNs">getCommonCode_input</param>
+			<param name="outputNs">getCommonCode_output</param>
+			<param name="CodeType">CUSTOMER_CLASS</param>
+			<result name="success">/sbc/systemconfig/customerRules/customerClassification.jsp</result>
+		</action>
+		<action name="manageCustomerContact" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="resourceId">SBCSAD000014</param>			
+			<param name="mashupId">common-getCONTACT_TYPE</param>
+			<param name="inputNs">getCommonCode_input</param>
+			<param name="outputNs">getCommonCode_output</param>
+			<param name="CodeType">CONTACT_TYPE</param>
+			<result name="success">/sbc/systemconfig/customerRules/customerContact.jsp</result>
+		</action>
+		<action name="getParentCustomerList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getParentCustomerList</param>
+			<param name="inputNs">getCustomerListInput</param>
+			<param name="outputNs">getCustomerListOutput</param>
+			<result name="success">/sbc/systemconfig/customer/search/getCustomerListResult.jsp</result>
+		</action> 
+		<action name="loadCurrencyList" >
+			<result name="success">/sbc/systemconfig/customer/manage/basic/loadCurrencyList.jsp</result>
+		</action>
+		<!-- Struts action related to customer rule end here -->
+			<!-- Struts action related to customer rule end here -->
+
+		<action name="createValidationRule" class="com.sterlingcommerce.sbc.system.managerOverrides.SBCProcessGreexDataForDetailsScreen">
+			 <result name="success" type="chain">
+			   <param name="actionName">newValidationRule</param>
+			   <param name="namespace">/sbc/systemadmin</param>
+             </result>
+		</action>
+
+		<action name="newValidationRule" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			   <param name="mashupId">ShowManagerOverrideDetail_multiAPI</param>
+			   <result name="success">/sbc/systemconfig/managerOverrides/validation/manage/managerOverridesRuleDetails.jsp</result>
+		</action>
+
+		<action name="getConditionalOperatorList">
+			   <result name="success">/sbc/systemconfig/managerOverrides/getConditionalOperator.jsp</result>
+		</action>
+
+		<action name="getModelTemplateMetadata"  class="com.sterlingcommerce.sbc.core.struts.SBCStrutsAction">
+			<param name="mashupId">getModelTemplateMetadata_Mashup</param>
+			<param name="inputNs">getModelTemplateMetadata_input</param>
+			<param name="outputNs">getModelTemplateMetadata_output</param>
+			<result name="success">/sbc/systemconfig/managerOverrides/getModelTemplateMetadata.jsp</result>
+			<result name="APIERROR">/sbc/systemconfig/managerOverrides/getModelTemplateMetadataError.jsp</result>
+			<result name="error">/sbc/systemconfig/managerOverrides/getModelTemplateMetadataError.jsp</result>
+		</action>
+
+		 <action name="saveManagerOverrideRuleDetails" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			  <param name="mashupId">saveManagerOverrideRuleDetailsMashup</param>
+			  <param name="inputNs">saveManagerOverrideRuleDetailsInput</param>
+			  <param name="outputNs">saveManagerOverrideRuleDetailsOutput</param>
+			  <result name="success">/sbc/systemconfig/managerOverrides/validation/manage/saveManagerOverrideRuleDetails.jsp</result>
+			  <result name="APIERROR">/sbc/systemconfig/managerOverrides/validation/manage/saveManagerOverrideRuleError.jsp</result>
+			  <result name="error">/sbc/systemconfig/managerOverrides/validation/manage/saveManagerOverrideRuleError.jsp</result>
+		</action>
+
+		<action name="saveValidationRuleDetails" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			  <param name="mashupId">manageValidationRule</param>
+			  <param name="inputNs">saveValidationRuleDetailsInput</param>
+			  <param name="outputNs">saveValidationRuleDetailsOutput</param>
+			  <result name="success">/sbc/systemconfig/managerOverrides/validation/manage/saveValidationRuleDetails.jsp</result>
+			  <result name="APIERROR">/sbc/systemconfig/managerOverrides/validation/manage/saveManagerOverrideRuleError.jsp</result>
+			  <result name="error">/sbc/systemconfig/managerOverrides/validation/manage/saveManagerOverrideRuleError.jsp</result>
+		</action>
+
+
+		<action name="openManagerOverrideRuleDetails" class="com.sterlingcommerce.sbc.system.managerOverrides.SBCProcessGreexDataForDetailsScreen">
+		    <result name="success" type="chain">
+			<param name="actionName">showManagerOverrideRuleDetails</param>
+			<param name="namespace">/sbc/systemadmin</param>
+		    </result>
+		</action>
+
+		<action name="showManagerOverrideRuleDetails" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+            <param name="mashupId">ShowManagerOverrideDetail_multiAPI</param>
+			<result name="success">/sbc/systemconfig/managerOverrides/validation/manage/managerOverridesRuleDetails.jsp</result>
+		</action>
+        
+		<action name="authenticateDomainAccess" class="com.sterlingcommerce.sbc.system.managerOverrides.AuthenticateDomainAccess">
+		   <result name="AUTHORIZATIONERROR">/sbc/jsps/apierror.jsp</result>
+		    <result name="success" type="chain">
+			   <param name="actionName">getValidationList</param>
+			   <param name="namespace">/sbc/systemadmin</param>
+             </result>
+		</action>
+         
+		<action name="getValidationList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+		    <param name="mashupId">getValidationListMashup</param>
+			<param name="inputNs">getValidationListInput</param>
+			<param name="outputNs">getValidationListOutput</param>
+			<result name="success">/sbc/systemconfig/managerOverrides/validation/getValidationList.jsp</result>
+		</action>  
+        
+		<action name="getValidationDetails" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+		    <param name="mashupId">getValidationDetailsMashup_multiAPI</param>
+			<result name="success">/sbc/systemconfig/managerOverrides/validation/getValidationDetails.jsp</result>
+		</action>
+        
+		<action name="getValidationDetailsData" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+		    <param name="mashupId">getValidationDetailsMashup_multiAPI</param>
+			<result name="success">/sbc/systemconfig/managerOverrides/validation/getValidationDetailsData.jsp</result>
+		</action>
+		
+		<action name="deleteOverriddenRule" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+		    <param name="mashupId">deleteOverriddenRule_multiAPI</param>
+			<result name="success">/sbc/systemconfig/managerOverrides/validation/deleteRules.jsp</result>
+		</action>
+		
+		<action name="deleteValidationRule" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+		    <param name="mashupId">deleteValidationRule_multiAPI</param>
+			<result name="success">/sbc/systemconfig/managerOverrides/validation/deleteRules.jsp</result>
+		</action>
+		
+		<action name="loadCommonCodesForValidations" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+		    <param name="mashupId">loadCommonCodesForValidations_multiAPI</param>
+			<result name="success">/sbc/systemconfig/managerOverrides/validation/handlecommoncodesforvalidation.jsp</result>
+		</action>
+
+		<!-- Start : Action definition for all the greex condition builder attributes -->
+
+		<action name="dummyApprovalConfigAction">
+			<result name="success">/sbc/systemconfig/managerOverrides/validation/common/tree/getDummyApprovalConfig.jsp</result>
+		</action>
+
+		<action name="getCustomerType">
+			<result name="success">/sbc/systemconfig/managerOverrides/getCustomerType.jsp</result>
+		</action>
+
+		<action name="getCustomerLevel" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">common-getCUSTOMER_LEVEL</param>
+			<param name="outputNs">getCustomerInfoOutput</param>
+			<result name="success">/sbc/systemconfig/managerOverrides/getCustomerInfoOutput.jsp</result>
+		</action>
+
+		<action name="getCustomerVertical" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">common-getVERTICAL</param>
+			<param name="outputNs">getCustomerInfoOutput</param>
+			<result name="success">/sbc/systemconfig/managerOverrides/getCustomerInfoOutput.jsp</result>
+		</action>
+
+		<action name="getCustomerRelationshipType" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">common-getRELATIONSHIP_TYPE</param>
+			<param name="outputNs">getCustomerInfoOutput</param>
+			<result name="success">/sbc/systemconfig/managerOverrides/getCustomerInfoOutput.jsp</result>
+		</action>
+	    
+		<action name="getUnitOfMeasure" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">createitem_getItemUomMasterList</param>
+			<param name="outputNs">getCustomerInfoOutput</param>
+			<result name="success">/sbc/systemconfig/managerOverrides/getCustomerInfoOutput.jsp</result>
+		</action>
+
+		<action name="getProductClass" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">item-manageinventorygetcommoncodelist</param>
+			<param name="outputNs">getCustomerInfoOutput</param>
+			<result name="success">/sbc/systemconfig/managerOverrides/getCustomerInfoOutput.jsp</result>
+		</action>
+		
+		 <action name="getReturnReason" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			  <param name="mashupId">getReturnReason_CommonCode</param>
+			  <param name="outputNs">getCustomerInfoOutput</param>
+			  <result name="success">/sbc/systemconfig/managerOverrides/getCustomerInfoOutput.jsp</result>
+		</action>
+
+		<action name="getReturnWindowAttributes" class="com.sterlingcommerce.sbc.system.managerOverrides.SBCGetItemAttributes">
+			<param name="outputNs">getCustomerInfoOutput</param>
+			<result name="success">/sbc/systemconfig/managerOverrides/getCustomerInfoOutput.jsp</result>
+		</action>
+
+		<action name="getChargeName" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getChargeNameListAll</param>
+			<param name="outputNs">getCustomerInfoOutput</param>
+			<result name="success">/sbc/systemconfig/managerOverrides/getCustomerInfoOutput.jsp</result>
+		</action>
+
+		<action name="getChargeCategory" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getChargeCategoryListBoth</param>
+			<param name="outputNs">getCustomerInfoOutput</param>
+			<result name="success">/sbc/systemconfig/managerOverrides/getCustomerInfoOutput.jsp</result>
+		</action>
+
+		<action name="getChargeTransactionStatus">
+			<result name="success">/sbc/systemconfig/managerOverrides/getChargeTransactionStatus.jsp</result>
+		</action>
+
+		<action name="getUserExitStatus">
+			<result name="success">/sbc/systemconfig/managerOverrides/getUserExitStatus.jsp</result>
+		</action>
+
+		<action name="getVoidTransactionStatus">
+			<result name="success">/sbc/systemconfig/managerOverrides/getVoidTransactionStatus.jsp</result>
+		</action>
+
+		<action name="getCallForAuthorizationStatus">
+			<result name="success">/sbc/systemconfig/managerOverrides/getCallForAuthorizationStatus.jsp</result>
+		</action>
+        
+		
+	
+		<!-- End : Action definition for all the greex condition builder attributes -->
+
+		<action name="loadapprovalplansearch">
+			<param name="resourceId">SBCSAD000214</param>
+			<result name="success">/sbc/systemsetup/approvals/approvalPlanSearch.jsp</result>
+		</action>
+		
+		<action name="manageValidationDomain" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction" >
+		    <param name="mashupId">getValidationDomainMashup__multiAPI</param>
+			<result name="success">/sbc/systemconfig/managerOverrides/domain/manageValidationDomain.jsp</result>
+		</action>
+
+		<action name="saveValidationDomain" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction" >
+		    <param name="mashupId">saveValidationDomainMashup</param>
+		    <param name="outputNs">saveValidationDomainOutput</param>
+		    <param name="inputNs">saveValidationDomainInput</param>
+			<result name="APIERROR">/sbc/systemconfig/managerOverrides/domain/validationDomainerror.jsp</result>
+			<result name="error">/sbc/systemconfig/managerOverrides/domain/validationDomainerror.jsp</result>
+			<result name="success">/sbc/systemconfig/managerOverrides/domain/saveValidationDomain.jsp</result>
+		</action>
+        
+		<action name="getHoldTypesForDomains" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction" >
+		    <param name="mashupId">getHoldTypeListMashpup</param>
+		    <param name="outputNs">getHoldTypeListMashpupOutput</param>
+		    <param name="inputNs">getHoldTypeListMashpupInput</param>
+			<result name="success">/sbc/systemconfig/managerOverrides/domain/getHoldTypeList.jsp</result>
+		</action>
+		
+		<action name="loaddefaultapprovalplansearch" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+				<param name="resourceId">SBCSAD000215</param>			
+			  <param name="mashupId">getDefaultApprovalPlan</param>
+			  <param name="inputNs">getRuleDetails_Input</param>
+			  <param name="outputNs">getRuleDetails_Output</param>
+			  <result name="success">/sbc/systemsetup/approvals/loaddefaultapprovalrule.jsp</result>
+		</action>
+		
+		<action name="managedefaultapprovalplansearch" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			  <param name="mashupId">manageDefaultApprovalPlan</param>
+			  <param name="inputNs">manageRule_Input</param>
+			  <param name="outputNs">manageRule_Output</param>
+			  <result name="success">/sbc/core/donothingresulthandler.jsp</result>
+		</action>
+		
+		
+		<action name="getdefaultapprovalruledetails" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			    <param name="mashupId">getdefaultapprovalruledetails</param>
+			    <param name="inputNs">getApprovalGroupListInput</param>
+				<param name="outputNs">getApprovalGroupListOutput</param> 
+			   <result name="success">/sbc/systemsetup/approvals/getapprovalgrouplist.jsp</result>
+		</action>
+		
+		<action name="deleteApprovers" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction" >
+		    <param name="mashupId">deleteApprovers</param>
+			 <param name="inputNs">deleteApproversInput</param>
+			 <param name="outputNs">getApprovalGroupListOutput</param> 
+			 <result name="APIERROR">/sbc/pricing/approvalplan/approvalPlanError.jsp</result>
+			<result name="success">/sbc/systemsetup/approvals/getapprovalgrouplist.jsp</result>
+		</action>
+		
+		<action name="manageApprovalGroupForRules" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction" >
+		    <param name="mashupId">manageApprovalGroupForRules_MultiAPI</param>
+			<result name="success">/sbc/systemsetup/approvals/getapprovalgrouplist.jsp</result>
+		</action>
+
+		<action name="getRulesForPricingOrganization" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction" >
+		     <param name="mashupId">getRuleListPricingOrganizationRule_MultiAPI</param>
+			 <result name="success">/sbc/systemsetup/pricing/getPricingOrganizationRules.jsp</result>
+		</action>
+		
+		<action name="getRulesForEnterpriseOrganization" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction" >
+		     <param name="mashupId">getRuleListPricingEnterpriseRule_MultiAPI</param>
+			 <result name="success">/sbc/systemsetup/pricing/getPricingEnterpriseRules.jsp</result>
+		</action>
+		
+		<action name="saveRules" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">saveRulesMashupId</param>
+			<param name="inputNs">manageRuleAPIInput</param>
+			<param name="outputNs">manageRuleAPIOutput</param>
+			<result name="success">/sbc/systemsetup/salesorder/updateFinancialRules.jsp</result>
+		</action>
+		
+		<action name="systemsetupapprovalplanlist" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+		    <param name="mashupId">getapprovalgrouplist</param>
+		    <param name="inputNs">getApprovalGroupListInput</param>
+			<param name="outputNs">getApprovalGroupListOutput</param> 
+			<param name="resourceId">SBCSAD000215</param>
+			<result name="success">/sbc/pricing/approvalplan/search/approvalPlanList.jsp</result>
+		</action>
+		
+		  
+
+	</package>
+			
+</struts>

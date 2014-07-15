@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.shipment.backroomPick.BPShipmentLineExtnBundle" screenId="extn.shipment.backroomPick.BPShipmentLineExtn">
+    <BundleEntries>
+        <BundleEntry bundleEntryId="extn_buttonUndoButton_Button_label"
+            bundleKey="extn_Undo" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_buttonUndoButton"/>
+        <BundleEntry
+            bundleEntryId="extn_updateShortageResolutionImage_Button_label"
+            bundleKey="Mark_As_Short" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_updateShortageResolutionImage"/>
+        <BundleEntry bundleEntryId="extn_labelOfText_Label_value"
+            bundleKey="extn_of_" bundleValueFn="_scSimpleBundle"
+            property="value" type="WIDGET" uId="extn_labelOfText"/>
+        <BundleEntry
+            bundleEntryId="extn_txtScannedQuantity_NumberTextBox_label"
+            bundleKey="Picked_Quantity" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_txtScannedQuantity"/>
+        <BundleEntry bundleEntryId="extn_datalabelSKU_DataLabel_label"
+            bundleKey="extn_SKU_" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_datalabelSKU"/>
+        <BundleEntry
+            bundleEntryId="extn_datalabelKohlsUPC_DataLabel_label"
+            bundleKey="extn_UPC" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_datalabelKohlsUPC"/>
+        <BundleEntry
+            bundleEntryId="extn_datalabelPickedQty_DataLabel_label"
+            bundleKey="extn_Quantity_Picked" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_datalabelPickedQty"/>
+        <BundleEntry
+            bundleEntryId="extn_datalabelPickedQty_DataLabel_value"
+            bundleKey="blank" bundleValueFn="_scSimpleBundle"
+            property="value" type="WIDGET" uId="extn_datalabelPickedQty"/>
+        <BundleEntry bundleEntryId="Locationlbl_DataLabel_value"
+            bundleKey="Location" bundleValueFn="_scSimpleBundle"
+            property="value" type="WIDGET" uId="Locationlbl"/>
+        <BundleEntry bundleEntryId="extn_locationLabel_DataLabel_label"
+            bundleKey="Location" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_locationLabel"/>
+        <BundleEntry bundleEntryId="extn_locationLabel_DataLabel_value"
+            bundleKey="blank" bundleValueFn="_scSimpleBundle"
+            property="value" type="WIDGET" uId="extn_locationLabel"/>
+        <BundleEntry
+            bundleEntryId="extn_datalabelStockroomQuantity_DataLabel_label"
+            bundleKey="extn_Stockroom_qty" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_datalabelStockroomQuantity"/>
+        <BundleEntry
+            bundleEntryId="extn_datalabelSalesFloorQuantity_DataLabel_label"
+            bundleKey="extn_Sales_Floor_qty" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_datalabelSalesFloorQuantity"/>
+        <BundleEntry
+            bundleEntryId="extn_shortageReasonDataLbl_DataLabel_label"
+            bundleKey="extn_Reason" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_shortageReasonDataLbl"/>
+    </BundleEntries>
+</ScreenBundle>

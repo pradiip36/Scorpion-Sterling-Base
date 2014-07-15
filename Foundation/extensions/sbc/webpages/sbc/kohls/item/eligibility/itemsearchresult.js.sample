@@ -1,0 +1,18 @@
+Ext.namespace('sc.sbc.kohls.item.eligibility');
+
+sc.sbc.kohls.item.eligibility.ItemSearchResults = function(config) {
+    sc.sbc.kohls.item.eligibility.ItemSearchResults.superclass.constructor.call(this, config);
+}
+Ext.extend(sc.sbc.kohls.item.eligibility.ItemSearchResults, sc.plat.ui.ExtensibleScreen, {
+    className: 'sc.sbc.kohls.item.eligibility.ItemSearchResults',
+    getUIConfig: sc.sbc.kohls.item.eligibility.ItemSearchResultsUIConfig,
+    namespaces: {
+        target: [''],
+        source: ['']
+    },
+    namespacesDesc: {
+        targetDesc: [''],
+        sourceDesc: ['']
+    }
+});
+Ext.reg('seaItemSearchResults', sc.sbc.kohls.item.eligibility.ItemSearchResults);

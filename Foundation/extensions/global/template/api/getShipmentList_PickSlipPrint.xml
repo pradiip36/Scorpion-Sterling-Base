@@ -1,0 +1,14 @@
+<Shipments>
+	<Shipment ShipNode="" EnterpriseCode="" Status="" ShipDate="" ShipmentType="" TotalQuantity="" ShipmentNo="" ShipmentKey="">
+		<ShipmentLines>
+			<ShipmentLine ShipmentLineKey="" ItemID="" UnitOfMeasure="" OrganizationCode="" ProductClass="" OrderNo="" OrderHeaderKey="" OrderLineKey="" PrimeLineNo="" ReleaseNo="" ShipmentLineNo="" ShipmentSubLineNo="" SubLineNo="">
+			<Extn/>
+				<OrderLine OrderLineKey="" PrimeLineNo="" SubLineNo="">
+					<ItemDetails ItemID="" UnitOfMeasure="" OrganizationCode="" ProductClass="">
+						<Extn ExtnClass=""  ExtnDept=""  ExtnSubClass=""/>
+					</ItemDetails>
+				</OrderLine>
+			</ShipmentLine>
+		</ShipmentLines>
+	</Shipment>
+</Shipments>

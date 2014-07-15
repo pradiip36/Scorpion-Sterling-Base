@@ -1,0 +1,4990 @@
+@-webkit-keyframes slideDown {
+  0% {
+    max-height: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    border-bottom-width: 0px;
+  }
+  10% {
+    max-height: 0px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom-width: 2px;
+  }
+  100% {
+    max-height: 500px;
+  }
+}
+@-webkit-keyframes slideUp {
+  0% {
+    max-height: 500px;
+  }
+  75% {
+    max-height: 0px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom-width: 2px;
+  }
+  100% {
+    max-height: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    border-bottom-width: 0px;
+  }
+}
+@keyframes slideDown {
+  0% {
+    max-height: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    border-bottom-width: 0px;
+  }
+  10% {
+    max-height: 0px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom-width: 2px;
+  }
+  100% {
+    max-height: 500px;
+  }
+}
+@keyframes slideUp {
+  0% {
+    max-height: 500px;
+  }
+  75% {
+    max-height: 0px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom-width: 2px;
+  }
+  100% {
+    max-height: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    border-bottom-width: 0px;
+  }
+}
+.isccs .screenTitleImage {
+  background-image: url('../icons/images/blank.gif');
+  width: 48px;
+  height: 48px;
+  background-repeat: no-repeat;
+  float: left;
+  overflow: hidden;
+}
+.isccs .portletImage {
+  background-image: url('../icons/images/blank.gif');
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  float: left;
+  overflow: hidden;
+}
+.isccs .buttonImage {
+  background-image: url('../icons/images/blank.gif');
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  float: left;
+  overflow: hidden;
+  vertical-align: middle;
+  margin-top: 2px;
+}
+.isccs .anchorImage {
+  background-image: url('../icons/images/blank.gif');
+  width: 0px;
+  height: 0px;
+  background-repeat: no-repeat;
+  float: left;
+  overflow: hidden;
+  display: inline-block;
+  float: none;
+}
+.isccs .indicatorImage {
+  background-image: url('../icons/images/blank.gif');
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  float: left;
+  overflow: hidden;
+  vertical-align: middle;
+  margin-top: 2px;
+}
+.isccs .orderlineIndicatorImage {
+  background-image: url('../icons/images/blank.gif');
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  float: left;
+  overflow: hidden;
+  float: none;
+  padding-right: 3px;
+}
+.isccs .mediumImage {
+  background-image: url('../icons/images/blank.gif');
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  float: left;
+  overflow: hidden;
+  display: inline-block;
+}
+.icon-add {
+  background-image: url('../icons/images/add.png');
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  float: left;
+  overflow: hidden;
+  vertical-align: middle;
+  margin-top: 2px;
+}
+.icon-browse {
+  background-image: url('../icons/images/browse.png');
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  float: left;
+  overflow: hidden;
+  vertical-align: middle;
+  margin-top: 2px;
+}
+.icon-approved {
+  background-image: url('../icons/images/approve.png');
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  float: left;
+  overflow: hidden;
+  vertical-align: middle;
+  margin-top: 2px;
+}
+.icon-rejected {
+  background-image: url('../icons/images/reject.png');
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  float: left;
+  overflow: hidden;
+  vertical-align: middle;
+  margin-top: 2px;
+}
+.isccs .lookupButton.dijitButton .dijitButtonNode {
+  padding: 0px;
+  min-width: 0px;
+}
+.isccs .lookupButton.dijitButton .dijitbuttontext {
+  padding: 0px;
+}
+.isccs .lookupButton .dijitIcon {
+  background-image: url("../icons/images/icon-lookup.png");
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  float: left;
+  overflow: hidden;
+  vertical-align: middle;
+  margin-top: 2px;
+  display: block;
+}
+.isccs .icon-notes {
+  float: none;
+  padding-right: 3px;
+}
+.icon-highPriority {
+  padding-left: 5px;
+  margin-top: 0px;
+  padding-right: 5px;
+  float: none;
+}
+.icon-internalOnly {
+  padding-left: 5px;
+  margin-top: 0px;
+  float: none;
+  padding-right: 5px;
+}
+.isccs .icon-openbox {
+  float: none;
+  padding-right: 3px;
+}
+.isccs .icon-bundle {
+  float: none;
+  padding-right: 3px;
+}
+.isccs .icon-bundleComponent {
+  float: none;
+  padding-right: 3px;
+}
+.isccs .icon-shippingallowed {
+  margin-top: 0px;
+  float: none;
+  padding-right: 3px;
+}
+.isccs .icon-shippingNotallowed {
+  margin-top: 0px;
+}
+.isccs .icon-pickupallowed {
+  margin-top: 0px;
+  float: none;
+  padding-right: 3px;
+}
+.icon-pickupNotallowed {
+  margin-top: 0px;
+}
+.isccs .icon-Return {
+  float: none;
+  padding-right: 3px;
+}
+.isccs .icon-NotReturnable {
+  float: none;
+  padding-right: 3px;
+  margin-top: 0px;
+}
+.isccs .icon-ReturnPolicyOverride {
+  float: none;
+  padding-right: 3px;
+  margin-top: 0px;
+}
+.isccs .icon-Reshipped {
+  float: none;
+  padding-right: 3px;
+}
+.isccs .icon-PriceMatch {
+  float: none;
+  padding-right: 3px;
+}
+.isccs .icon-PriceOverride {
+  float: none;
+  padding-right: 3px;
+}
+.isccs .icon-StopDelivery {
+  float: none;
+  padding-right: 3px;
+}
+.isccs .icon-giftItem {
+  padding-right: 2px;
+  float: none;
+  padding-right: 3px;
+}
+.isccs .icon-giftWrap {
+  padding-right: 2px;
+  float: none;
+  padding-right: 3px;
+}
+.isccs .icon-relatedItem {
+  float: none;
+  padding-right: 3px;
+}
+.icon-onHold {
+  float: none;
+}
+.isccs .icon-onHoldGrid {
+  float: none;
+  margin-top: -2px;
+  margin-left: 5px;
+}
+.isccs .icon-delete {
+  float: initial;
+}
+.isccs .icon-delete-noPermission {
+  float: initial;
+}
+.isccs .icon-updateNeeded {
+  margin-top: 0px;
+  float: none;
+}
+.isccs .icon-selected {
+  margin-top: -3px;
+}
+.paymentMethod-CreditCard {
+  margin-top: 5px;
+}
+.paymentMethod-StoredValue {
+  margin-top: 5px;
+}
+.paymentMethod-CustomerAccount {
+  margin-top: 5px;
+}
+.paymentMethod-Other {
+  margin-top: 5px;
+}
+.isccs .customer-message {
+  position: absolute;
+  left: 15px;
+  top: 12px;
+  width: 48px;
+}
+.icon-hor-expand a {
+  background-image: url('../icons/images/hidePreview.png');
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  float: left;
+  overflow: hidden;
+  display: inline-block;
+}
+.icon-hor-collapse a {
+  background-image: url('../icons/images/showPreview.png');
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  float: left;
+  overflow: hidden;
+  display: inline-block;
+}
+.isccs .idxOneuiHoverHelpTooltip {
+  position: absolute;
+  z-index: 2000;
+  display: block;
+  left: 0px;
+  top: -10000px;
+  overflow: visible;
+}
+.isccs .idxOneuiHoverHelpTooltipRight {
+  padding: 5px 5px 5px 9px;
+}
+.isccs .idxOneuiHoverHelpTooltipRight .idxOneuiHoverHelpTooltipCloseIcon {
+  right: -8px;
+  top: -8px;
+}
+.isccs .idxOneuiHoverHelpTooltip, .isccs .idxOneuiHoverHelpTooltipDialog {
+  background: transparent;
+}
+.isccs .idxOneuiHoverHelpTooltipContainer {
+  background-color: #ffffff;
+  background-repeat: repeat-x;
+  background-position: bottom;
+  border: 3px solid #999999;
+  padding: 7px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
+  font-size: 1em;
+  color: #222222;
+  max-width: 600px;
+}
+.isccs .idxOneuiHoverHelpTooltipRight .idxOneuiHoverHelpTooltipConnector {
+  left: -6px;
+  background-position: -54px 0;
+}
+.isccs .idxOneuiHoverHelpTooltipConnector {
+  position: absolute;
+  border: 0;
+  z-index: 2;
+  background-image: url("../../../../ibmjs/idx/themes/oneui/idx/widget/images/popupSharkfin.png");
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 18px;
+}
+.oneui .dijitContentPane, .oneui .dijitStackContainer .dijitContentPane {
+  padding: 0em;
+}
+.isccs .dijitLayoutContainer, .isccs .dijitContentPane {
+  overflow: inherit;
+}
+.isccs .advancedTableLayout-valueCell {
+  vertical-align: top;
+}
+.isccs .idxcomposite {
+  padding: 0px;
+}
+.isccs .td-vAlign-middle td {
+  vertical-align: middle;
+}
+.isccs .dijitTabContainer .dijitTabPaneWrapper > .dijitContentPane {
+  margin: 10px;
+}
+.isccs .dijitTabContainerTop-tabs {
+  padding-left: 30px;
+}
+.isccs .dijitTabContainerBottom-container,
+.dijitTabContainerTop-container,
+.dijitTabContainerLeft-container,
+.dijitTabContainerRight-container {
+  border: none;
+}
+.isccs .dijitTabListContainer-top .dijitTabListWrapper {
+  background-color: #ffffff;
+}
+.isccs .dijitTabListContainer-top .dijitTab .dijitTabInnerDiv {
+  background-color: #DBDBDB;
+}
+.isccs .dijitTabListContainer-top .dijitTabHover .dijitTabInnerDiv {
+  border-color: #999;
+}
+.isccs .dijitTabListContainer-top .dijitTabHover .dijitTabContent {
+  background-color: #999;
+  color: #000000;
+}
+.isccs .dijitTabListContainer-top .dijitTabCheckedHover .dijitTabContent {
+  color: #000000;
+}
+.isccs .dijitTabListContainer-top .dijitTabChecked .dijitTabInnerDiv {
+  background: #ffffff;
+  border-top-color: #0075a3;
+}
+.isccs .dijitTabInnerDiv {
+  color: #000000;
+  border: 1px solid #8D8D8D;
+}
+.isccs .dijitTabChecked .dijitTabInnerDiv {
+  color: #000000;
+}
+.isccs .dijitTabContainer .dijitTabPaneWrapper .dijitTabPane .tabcontentpadding {
+  padding: 9px;
+}
+.isccs .idxradiobuttonsetwrap .idxcompcontainer {
+  padding-left: 0px;
+}
+.isccs .idxradiobuttonsetwrap.noLabel .idxLabel {
+  display: none;
+}
+.isccs .dijitRadio {
+  margin-bottom: 4px;
+}
+.isccs .idxRadioButtonSetItem .dijitRadio {
+  margin-bottom: 0px;
+}
+.isccs .gridxRowTable .advancedTableLayout-table {
+  border-spacing: 0px 0px;
+}
+.isccs .dojoxGrid {
+  border: none;
+}
+.isccs .gridx {
+  width: 100%;
+  height: 400px;
+  border: none;
+}
+.isccs .gridxBodyEmpty {
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 1em;
+  font-weight: bold;
+}
+.isccs .gridxHeaderRow .gridxCell {
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+  font-size: 1em;
+}
+.isccs .gridxHeaderRow .gridxCell .gridxSortNode {
+  overflow: visible;
+}
+.isccs .gridxRow .gridxCell {
+  padding: 5px;
+}
+.isccs .gridxRow .gridxCell .advancedTableLayout-table {
+  border-spacing: 0px;
+}
+.isccs .gridxCell .dijitNumberTextBox {
+  width: 8em;
+}
+.isccs .gridx .gridxRowHeaderCell {
+  vertical-align: top;
+  padding-top: 5px;
+}
+.isccs.oneui .dijitRequired .idxLabel .idxRequiredIcon {
+  margin-left: -12px;
+}
+.isccs.oneui .dijitReadOnly .idxLabel .idxRequiredIcon, .isccs.oneui .dijitRequiredDisabled .idxLabel .idxRequiredIcon {
+  display: none;
+}
+.isccs .idxLabel {
+  padding-top: 2px;
+  min-width: 12em;
+  width: 14em;
+}
+.isccs .idxLabel label {
+  font-weight: bold;
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+  font-size: 1em;
+}
+.isccs .idxLabel .scLinkLabel {
+  font-weight: bold;
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+  font-size: 1em;
+}
+.isccs .dijitContentPane .idxLabel {
+  padding-right: 10px;
+}
+.isccs .scDataLabel {
+  padding-bottom: 4px;
+}
+.isccs .scLinkAlignment {
+  padding: 0px;
+}
+.isccs .dijitTitlePane {
+  background: transparent;
+  margin-bottom: 10px;
+}
+.isccs .dijitTitlePane .dijitClosed .dijitArrowNode {
+  background-position: -14 0;
+}
+.isccs .dijitTitlePane .dijitTitlePaneContentInner.dijitTitlePaneSingleChild {
+  padding: 9px;
+  overflow: visible;
+}
+.isccs .dijitTitlePane .dijitTitlePaneContentInner.dijitTitlePaneSingleChild .dijitTitlePane-child {
+  width: auto;
+  overflow: visible;
+}
+.isccs .dijitFixedOpen .dijitArrowNode {
+  background-image: none;
+  width: 0px;
+}
+.isccs .dijitTitlePaneTitle {
+  border: 0px;
+  border-bottom: 1px solid #999999;
+}
+.isccs .dijitTitlePaneTitle a {
+  float: right;
+}
+.isccs .dijitTitlePaneTextNode {
+  font-weight: bold;
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+  font-size: 1.2em;
+}
+.isccs .dijitTitlePaneTitleHover {
+  background: #EEE;
+}
+.isccs .dijitTitlePaneContentOuter {
+  border: 0px;
+  padding-top: 5px;
+}
+.isccs fieldset {
+  border: 1px solid #d7d9e8;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+.isccs fieldset legend {
+  font-weight: bold;
+}
+.isccs fieldset legend .dijitArrowNodeInner {
+  display: none;
+}
+.isccs .dijittextboxdisabled input {
+  color: #aaa;
+}
+.isccs .dijitInline .dijitTextArea {
+  width: 100%;
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+  font-size: 1em;
+}
+.isccs .idxFilteringSelectWrapIncompleteRequired .dijitComboBoxIncompleteRequired {
+  border: 1px solid #aaa;
+  background: none;
+}
+.oneui .dijitTextBoxReadOnly, .oneui .dijitComboBoxReadOnly {
+  border: none !important;
+}
+.oneui .dijitTextBoxReadOnly .dijitInputField, .oneui .dijitComboBoxReadOnly .dijitInputField {
+  color: #222222;
+}
+.oneui .dijitTextBox.dijitTextBoxReadOnly .dijitInputField {
+  padding: 3px 0px;
+}
+.oneui .dijitComboBox.dijitTextBoxReadOnly .dijitArrowButtonInner {
+  display: none;
+}
+.oneui .dijitExpandingTextAreaReadOnly {
+  padding: 0px;
+}
+.isccs .idxSpecialButton.dijitButtonDisabled .dijitButtonNode {
+  color: #818181;
+  padding: 4px 10px 4px;
+  background-color: #f4f4f4;
+  background-image: -moz-linear-gradient(top, #f4f4f4, #dbdbdb);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f4f4f4), to(#dbdbdb));
+  background-image: -webkit-linear-gradient(top, #f4f4f4 0%, #dbdbdb 100%);
+  background-image: -o-linear-gradient(top, #f4f4f4 0%, #dbdbdb 100%);
+  background-image: -ms-linear-gradient(top, #f4f4f4 0%, #dbdbdb 100%);
+  background-image: linear-gradient(top, #f4f4f4 0%, #dbdbdb 100%);
+  border: 1px solid #c3c3c3;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
+  text-shadow: 0px 1px 0px #ffffff;
+  font-weight: bold;
+}
+.isccs .dijitButtonNode .dijitIcon {
+  margin-top: 0px;
+}
+.isccs .idxSpecialButton .dijitButtonNode {
+  background: #1d90cd;
+  /* Old browsers*/
+
+  background: -moz-linear-gradient(top, #1d90cd 0%, #0075a3 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1d90cd), color-stop(100%, #0075a3));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, #1d90cd 0%, #0075a3 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, #1d90cd 0%, #0075a3 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, #1d90cd 0%, #0075a3 100%);
+  /* IE10+ */
+
+  background: linear-gradient(top, #1d90cd 0%, #0075a3 100%);
+  /* W3C */
+
+}
+.oneui .idxSpecialButtonHover .dijitButtonNode {
+  background: #1a80b7;
+  /* Old browsers*/
+
+  background: -moz-linear-gradient(top, #1a80b7 0%, #0075a3 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1a80b7), color-stop(100%, #0075a3));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, #1a80b7 0%, #0075a3 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, #1a80b7 0%, #0075a3 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, #1a80b7 0%, #0075a3 100%);
+  /* IE10+ */
+
+  background: linear-gradient(top, #1a80b7 0%, #0075a3 100%);
+  /* W3C */
+
+}
+.oneui .idxSpecialButtonActive .dijitButtonNode {
+  background: #0075a3;
+  /* Old browsers*/
+
+  background: -moz-linear-gradient(top, #0075a3 0%, #1d90cd 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0075a3), color-stop(100%, #1d90cd));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, #0075a3 0%, #1d90cd 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, #0075a3 0%, #1d90cd 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, #0075a3 0%, #1d90cd 100%);
+  /* IE10+ */
+
+  background: linear-gradient(top, #0075a3 0%, #1d90cd 100%);
+  /* W3C */
+
+}
+.oneui .idxCheckBoxListWrap .idxCompContainer {
+  padding-left: 0px;
+}
+@media (max-width: 1050px) {
+  .isccs .idxCheckBoxWrap {
+    width: 98%;
+  }
+}
+@media (min-width: 1050px) {
+  .isccs .idxCheckBoxWrap {
+    width: 50%;
+    padding-left: 14.8em;
+  }
+}
+.isccs .idxCheckBoxWrap .idxLabel {
+  width: 90%;
+  display: inline;
+}
+.isccs .idxSingleMessage {
+  width: auto;
+  margin: 12px 5px;
+}
+.isccs .idxConfirmDialog .messageWrapper {
+  padding: 10px 0px;
+}
+.dj_ie .oneui .idxHeaderContainer .idxHeaderPrimary .idxHeaderSearchContainer .dijitButton .dijitButtonNode {
+  top: -4px;
+}
+.oneui .idxHeaderContainer .idxHeaderBlueLip {
+  background: #1d90cd;
+  /* Old browsers*/
+
+  background: -moz-linear-gradient(top, #1d90cd 0%, #0075a3 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1d90cd), color-stop(100%, #0075a3));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, #1d90cd 0%, #0075a3 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, #1d90cd 0%, #0075a3 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, #1d90cd 0%, #0075a3 100%);
+  /* IE10+ */
+
+  background: linear-gradient(top, #1d90cd 0%, #0075a3 100%);
+  /* W3C */
+
+}
+.isccs.oneui .idxHeaderContainer .idxHeaderPrimary .idxHeaderLogo {
+  background: url('../icons/images/productlogo.png') no-repeat 35% 23%;
+}
+.isccs .scPadssInput {
+  width: 15.2em;
+}
+@media (max-width: 1050px) {
+  .isccs .dijitTextBox {
+    width: 11.3em;
+  }
+}
+.isccs .fixed_layer {
+  left: 0px;
+  right: 0px;
+  background-color: #111111;
+}
+.isccs .isccsMDIContainer > .dijitTabPaneWrapper {
+  border: 0px;
+  background: transparent;
+  background-color: #ffffff;
+}
+.isccs .isccsMDIContainer > .dijitTabListContainer-top {
+  left: 0px;
+  right: 0px;
+  background-color: #111111;
+}
+.isccs .isccsMDIContainer > .dijitTabListContainer-top .dijitTabListWrapper {
+  height: 48px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  background: #1d90cd;
+  /* Old browsers*/
+
+  background: -moz-linear-gradient(top, #1d90cd 0%, #0075a3 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1d90cd), color-stop(100%, #0075a3));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, #1d90cd 0%, #0075a3 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, #1d90cd 0%, #0075a3 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, #1d90cd 0%, #0075a3 100%);
+  /* IE10+ */
+
+  background: linear-gradient(top, #1d90cd 0%, #0075a3 100%);
+  /* W3C */
+
+}
+.isccs .isccsMDIContainer > .dijitTabListContainer-top .dijitTabListWrapper .dijitTabContainerTop-tabs {
+  margin-left: 15px;
+  border-bottom: none;
+}
+.isccs .isccsMDIContainer > .dijitTabListContainer-top .dijitTabListWrapper .dijitTabContainerTop-tabs .dijitTab {
+  color: #ffffff;
+  height: 31px;
+  top: 0px;
+  padding-left: 3px;
+  margin: 0px;
+  border-top: none;
+  border-radius: 0px;
+  background: #1d90cd;
+  /* Old browsers*/
+
+  background: -moz-linear-gradient(top, #1d90cd 0%, #0075a3 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1d90cd), color-stop(100%, #0075a3));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, #1d90cd 0%, #0075a3 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, #1d90cd 0%, #0075a3 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, #1d90cd 0%, #0075a3 100%);
+  /* IE10+ */
+
+  background: linear-gradient(top, #1d90cd 0%, #0075a3 100%);
+  /* W3C */
+
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+}
+.isccs .isccsMDIContainer > .dijitTabListContainer-top .dijitTabListWrapper .dijitTabContainerTop-tabs .dijitTab .tabLabel {
+  font-weight: 700;
+  font-size: 1em;
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+  color: #ffffff;
+  white-space: nowrap;
+  border-color: transparent;
+  position: relative;
+  height: 1em;
+  top: 50%;
+  margin-top: -0.5em;
+  line-height: 1em;
+  margin-left: 7px;
+  margin-right: 7px;
+}
+.isccs .isccsMDIContainer > .dijitTabListContainer-top .dijitTabListWrapper .dijitTabContainerTop-tabs .dijitTabHover {
+  background: #1a80b7;
+  /* Old browsers*/
+
+  background: -moz-linear-gradient(top, #1a80b7 0%, #0075a3 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1a80b7), color-stop(100%, #0075a3));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, #1a80b7 0%, #0075a3 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, #1a80b7 0%, #0075a3 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, #1a80b7 0%, #0075a3 100%);
+  /* IE10+ */
+
+  background: linear-gradient(top, #1a80b7 0%, #0075a3 100%);
+  /* W3C */
+
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+  padding-top: 9px;
+}
+.isccs .isccsMDIContainer > .dijitTabListContainer-top .dijitTabListWrapper .dijitTabContainerTop-tabs .dijitTabChecked {
+  background: #ffffff;
+  color: #000000;
+  border-radius: 0px;
+}
+.isccs .isccsMDIContainer > .dijitTabListContainer-top .dijitTabListWrapper .dijitTabContainerTop-tabs .dijitTabChecked .tabLabel {
+  font-weight: 700;
+  font-size: 1em;
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+  color: #000000;
+  cursor: default;
+  border-left: 1px solid transparent;
+}
+.isccs .isccsMDIContainer > .dijitTabListContainer-top .dijitTabListWrapper .dijitTabContainerTop-tabs .dijitTabCheckedHover {
+  border-radius: 0px;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+}
+html {
+  overflow-y: scroll;
+  height: 100%;
+  text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+}
+body {
+  height: 100%;
+}
+.isccs {
+  min-width: 980px;
+}
+.isccs .isccsContainer {
+  margin: 0em auto;
+  height: auto;
+}
+.isccs .editorContent {
+  margin: 9px 5px;
+  min-height: 90%;
+}
+.isccs .editorContent.dijitContentPane {
+  overflow: hidden;
+}
+.isccs .isccsScreen .idxContentPane {
+  overflow: visible;
+}
+.isccs .footer {
+  height: 1.5em;
+  background: #393939;
+  /* Old browsers*/
+
+  background: -moz-linear-gradient(top, #393939 0%, #3e3e3e 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #393939), color-stop(100%, #3e3e3e));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, #393939 0%, #3e3e3e 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, #393939 0%, #3e3e3e 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, #393939 0%, #3e3e3e 100%);
+  /* IE10+ */
+
+  background: linear-gradient(top, #393939 0%, #3e3e3e 100%);
+  /* W3C */
+
+}
+.isccs .footer .idxLink {
+  text-align: center;
+  display: block;
+}
+.isccs .footer .idxLink a {
+  color: #ffffff;
+}
+.isccs .screenTitleContainer {
+  overflow: hidden;
+}
+.scExtensibility.isccs .fixed_layer {
+  position: relative;
+}
+.scExtensibility.isccs .isccsMDIContainer > .dijitTabListContainer-top {
+  position: relative;
+}
+.scExtensibility.isccs .isccsMDIContainer > .dijitTabPaneWrapper {
+  padding-top: 0px;
+}
+.scExtensibility.isccs .screenTitleContainer {
+  position: relative;
+}
+.scExtensibility.isccs .isccsCenter {
+  padding-top: 0px;
+}
+.scExtensibility.isccs .right-bar-tools {
+  display: none !important;
+}
+.scExtensibility.isccs .dijitTabPane .csrMessagePanel {
+  padding-top: 10px;
+}
+@media (min-width: 1024px) {
+  .isccs .fixed_layer {
+    position: fixed;
+    z-index: 1000;
+  }
+  .isccs .isccsMDIContainer > .dijitTabListContainer-top {
+    position: fixed;
+    z-index: 300;
+  }
+  .isccs .isccsMDIContainer > .dijitTabPaneWrapper {
+    padding-top: 48px;
+  }
+  .isccs .screenTitleContainer {
+    position: fixed;
+    z-index: 300;
+    left: 0px;
+    right: 0px;
+  }
+  .isccs .isccsCenter {
+    padding-top: 40px;
+  }
+  .isccs .dijitTabPane .csrMessagePanel {
+    padding-top: 84px;
+  }
+}
+.isccs .csrMessagePanel {
+  padding: 10px 5px 0px 5px;
+}
+.isccs .customerMessageBox {
+  padding-right: 25px;
+  padding-bottom: 2px;
+  position: relative;
+  background-position: left top;
+  background-repeat: repeat-x;
+  min-height: 70px;
+  overflow: hidden;
+  background-color: #f0faff;
+  border: 2px solid #0080b8;
+  border-radius: 2px;
+}
+.isccs .customerMessageBox .customerMessageText {
+  margin: 13px 20px 20px 60px;
+  min-height: 25px;
+  max-height: 200px;
+  overflow: auto;
+}
+.isccs .customerMessageBox .customerMessageText .script:first-child {
+  margin-top: 0px;
+}
+.isccs .customerMessageBox .idxLink .scLinkImage {
+  position: relative;
+}
+.isccs .customerMessageBox .idxLink .scLinkText {
+  display: none;
+}
+.isccs .script {
+  margin-top: 15px;
+}
+.isccs .script .context {
+  font-size: 1.2em;
+  font-style: italic;
+  font-weight: bold;
+}
+.isccs .script .persona {
+  font-weight: bold;
+}
+.isccs .script .customer {
+  font-size: .9em;
+}
+.isccs .script .customer .persona {
+  color: #555;
+}
+.isccs .script .data {
+  font-style: italic;
+}
+.isccs .gridErrorRow .gridxCell {
+  background: #fff3f3;
+}
+.isccs .dijitContentPane .informationPanel {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  border: 2px solid #0075a3;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+  background-color: #f0faff;
+  border: 2px solid #0080b8;
+  padding: 5px;
+}
+.isccs .dijitContentPane .exceptionPanel {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  border: 2px solid #0075a3;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+  background: #fff3f3;
+  border: 2px solid #cd312a;
+  padding: 5px;
+}
+.isccs .dijitContentPane .warningPanel {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  border: 2px solid #0075a3;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+  background: #ffffec;
+  border: 2px solid #dd731c;
+  padding: 5px;
+}
+.isccs .accentPanel {
+  background-color: #f2f2f2;
+}
+.isccs .accentPanel .actionBar {
+  background-color: #d6d6d6;
+  padding: 4px 4px 4px 14px;
+}
+.isccs .accentPanel .innerTitlePane {
+  background-color: #f2f2f2;
+}
+.isccs .accentPanel .searchField {
+  padding: 0px 9px 0px 9px;
+}
+.isccs .accentPanel .searchField .dijitContentPane > div > table td {
+  width: 50%;
+}
+.isccs .accentPanel .searchField .dijitTitlePaneContentOuter {
+  padding: 0px;
+}
+.isccs .accentPanel .searchField .dijitTitlePaneContentInner > div > table {
+  border-spacing: 0px 5px;
+}
+.isccs .accentPanel .searchField .innerTitlePane > .dijitTitlePaneTitle {
+  width: 85%;
+}
+.isccs .accentPanel .searchField .innerTitlePane .dijitTitlePaneContentOuter {
+  padding: 0px;
+}
+.isccs .accentPanel .searchField .idxTitlePane .dijitTitlePaneContentInner.dijitTitlePaneSingleChild {
+  padding: 9px 0px 0px 0px;
+}
+.isccs .accentPanel .searchCriteria .searchCriteriaContentPane > div {
+  padding-bottom: 5px;
+  display: block;
+}
+.isccs .accentPanel .dijitTitlePane {
+  background: transparent;
+}
+.isccs .accentPanel .dijitTitlePaneContentOuter {
+  background-color: #f2f2f2;
+}
+.isccs .accentPanel .dijitTitlePaneContentInner {
+  background-color: #f2f2f2;
+  padding: 0px;
+}
+.isccs .accentPanel.orderTotalContainer {
+  padding: 10px;
+}
+.isccs .accentPanel.orderTotalContainer > div {
+  margin-top: 1px;
+}
+.isccs .accentPanel.orderTotalContainer .saveButtonAlign {
+  vertical-align: top;
+}
+.isccs .accentPanel.orderTotalContainer .ordertotalpanel {
+  display: inline;
+}
+.isccs .accentPanel.orderTotalContainer .ordertotalpanel .dijitContentPane {
+  display: inline-block;
+}
+.isccs .accentPanel.orderTotalContainer .ordertotalpanel .idxLink .scLinkAlignment {
+  padding: 0px 0px 0px 5px;
+}
+.isccs .accentPanel.orderTotalContainer .ordertotalpanel .idxLink .scLinkAlignment .idxLink {
+  font-size: 1.2em;
+}
+.isccs .accentPanel .addressFilter .dijitContentPane > div > table td {
+  width: initial;
+}
+.isccs .tabContainingGrid {
+  overflow: hidden;
+}
+.isccs .threeSideBorder {
+  border-bottom: 1px solid #D7D9E8;
+  border-left: 1px solid #d7d9e8;
+  border-right: 1px solid #d7d9e8;
+}
+.isccs .dijitContentPane .buttonGrid {
+  border: 1px solid #cccccc;
+  border-bottom: none;
+  padding: 5px;
+  margin-top: 10px;
+  background: #ffffff;
+  /* Old browsers*/
+
+  background: -moz-linear-gradient(top, #ffffff 0%, #ededed 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #ededed));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, #ffffff 0%, #ededed 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, #ffffff 0%, #ededed 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, #ffffff 0%, #ededed 100%);
+  /* IE10+ */
+
+  background: linear-gradient(top, #ffffff 0%, #ededed 100%);
+  /* W3C */
+
+}
+.isccs .manageAddressesContainer .addressdisplay {
+  min-width: 350px;
+  height: 130px;
+  display: inline-block;
+  margin: 5px;
+  vertical-align: top;
+}
+.isccs .contentPaneWithTitle .title {
+  display: block;
+  border-bottom: 1px solid #777777;
+  margin-bottom: 5px;
+  padding: 5px 6px 6px 7px;
+  font-weight: bold;
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+  font-size: 1.2em;
+}
+.isccs .tableLayout-cols-2-fixedfirstColWidth-table .tableLayout-cols-2-fixedfirstColWidth-valueCell-0 {
+  width: 1px;
+}
+.isccs .twoColumnTableLayout-valueCell {
+  width: 50%;
+}
+.isccs .tableLayout-cols-2-equalWidth-table .tableLayout-cols-2-equalWidth-valueCell {
+  width: 50%;
+}
+.isccs .tableLayout-cols-3-equalWidth-table .tableLayout-cols-3-equalWidth-valueCell {
+  width: 33%;
+}
+.isccs .tableLayout-cols-3-diffWidth-table .tableLayout-cols-3-diffWidth-valueCell-0 {
+  width: 1%;
+}
+.isccs .tableLayout-cols-3-diffWidth-table .tableLayout-cols-3-diffWidth-valueCell-1 {
+  width: 5%;
+}
+.isccs .singlecolumntable, .oneui .dijitContentPane.singlecolumntable, .oneui .dijitStackContainer .dijitContentPane.singlecolumntable {
+  padding-left: 5px;
+}
+.isccs .singlecolumntable.innerTableLayout, .oneui .dijitContentPane.singlecolumntable.innerTableLayout, .oneui .dijitStackContainer .dijitContentPane.singlecolumntable.innerTableLayout {
+  padding-left: 0px;
+}
+.isccs .singlecolumntable > div:first-child, .isccs .singlecolumntable > .dijitTitlePaneContentOuter .dijitTitlePaneContentInner > div:first-child {
+  padding-top: 5px;
+}
+.isccs .singlecolumntable > div,
+.isccs .singlecolumntable > span,
+.isccs .singlecolumntable > .dijitTitlePaneContentOuter .dijitTitlePaneContentInner > div,
+.isccs .singlecolumntable > .dijitTitlePaneContentOuter .dijitTitlePaneContentInner > span,
+.isccs .dijitContentPane.singlecolumntable > div,
+.isccs .dijitContentPane.singlecolumntable > span {
+  padding-bottom: 5px;
+  display: block;
+}
+.isccs .singlecolumntable > .dijitTitlePaneContentOuter .dijitTitlePaneContentInner .scDataLabel {
+  padding-bottom: 9px;
+}
+.isccs .isccsPopup.singlecolumntable {
+  padding-left: 12px;
+}
+.isccs .sixtyFortyColumnLayout-valueCell-0 {
+  width: 60%;
+}
+.isccs .sixtyFortyColumnLayout-valueCell-1 {
+  width: 40%;
+}
+.isccs .repeatingPanelSeparation .tableLayout-valueCell {
+  border-top: 1px solid grey;
+}
+.isccs .repeatingPanelSeparation .tableLayout-valueCell-0 {
+  border-top: 0px;
+}
+.isccs .innerTableLayout .advancedTableLayout-table {
+  border-spacing: 0px 0px;
+}
+.isccs .groupHeader {
+  font-weight: bold;
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+  font-size: 1.2em;
+}
+.isccs .errorText {
+  color: #ff0000;
+  font-weight: normal;
+  font-size: 1em;
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+}
+.isccs .boldText {
+  font-weight: bold;
+}
+.isccs .highLightRed {
+  color: #00649d;
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #ff0000;
+  font-size: 1em;
+}
+.isccs .highLightGreen {
+  color: #00649d;
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #16a82e;
+  font-size: 12px;
+}
+.isccs .highLightText {
+  color: #00649d;
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.isccs .highLightBrown {
+  color: #00649d;
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: Brown;
+  font-size: 1em;
+}
+.isccs .icon-image-label {
+  padding-bottom: 5px;
+  padding-left: 5px;
+  height: 16px;
+}
+.isccs .centerAlignbold {
+  font-weight: bold;
+  text-align: center;
+}
+.isccs.mobile .primaryInformation {
+  font-size: 1.4em;
+}
+.isccs .primaryInformation {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.isccs .secondaryInformation {
+  font-size: 1.2em;
+}
+.isccs .primaryInformation .idxLabel label {
+  font-weight: bold;
+  font-size: 1.5em;
+  font-size: 1em;
+}
+.isccs .primaryInformation .scDataValue div {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.isccs .primaryErrorInformation {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #ab0000;
+}
+.isccs .repeatingPanel .primaryInformation {
+  font-weight: bold;
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+  font-size: 1.2em;
+}
+.isccs .strikeLabelPrice .scDataLabelValue > div {
+  text-decoration: line-through;
+  color: #ff0000;
+  vertical-align: bottom;
+  min-height: 17px;
+}
+.isccs .strikeLabelPrice .scDataLabelValue span {
+  color: #000000;
+  padding-top: 2px;
+  display: block;
+}
+.isccs .strikeLabel {
+  text-decoration: line-through;
+  color: #ff0000;
+  vertical-align: bottom;
+  min-height: 17px;
+}
+.isccs .fieldLabel {
+  font-weight: bold;
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+  font-size: 1em;
+}
+.isccs .labelMessage {
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1em;
+  text-align: left;
+  padding: 10px 0px 10px 0px;
+  display: block;
+}
+.isccs .screenMessage {
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1em;
+  text-align: center;
+  padding-top: 50px;
+  display: block;
+}
+.isccs .autoLabelZeroWidth .idxLabel {
+  min-width: 0em;
+  width: auto;
+}
+.isccs .numericLabel .scDataLabelValue {
+  text-align: right;
+}
+.isccs .amountLabel .scDataLabelValue {
+  text-align: right;
+  min-width: 8em;
+  width: 8em;
+}
+.isccs .emphasizedLink {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+.isccs .guidedAction {
+  margin: 0px 10px;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+.isccs .guidedAction .idxLabel {
+  margin: 0px;
+  padding: 0px;
+  width: auto;
+  margin-right: 10px;
+}
+.isccs .highLightTextInLink .scLinkAlignment .idxLink {
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+  font-weight: normal;
+  font-size: 1.5em;
+}
+.isccs .linkFormAlign .scLinkAlignment {
+  min-width: 12em;
+  width: 14em;
+  margin: 3px 0px 2px 0px;
+  padding-right: 10px;
+}
+.isccs .wizardStackContainer, .isccs .wizardMainContainer {
+  height: auto;
+}
+.isccs .wizardNavigationPanel {
+  padding: 7px;
+  background: #f2f2f2;
+  border: 1px solid #d7d9e8;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+.isccs .wizardNavigationPanelTop {
+  margin-bottom: 15px;
+}
+.isccs .wizardNavigationPanelBottom {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.isccs .wizardMainContainer .wizardStackContainer > .dijitStackContainer-child {
+  padding-left: 12px;
+  margin-right: 12px;
+  overflow: hidden;
+}
+.isccs .ellipsisText .dijitInputfield {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 190px;
+}
+.isccs .quantityTextBox .dijitNumberTextBox {
+  width: 8em;
+}
+.isccs .screenTitlePanel {
+  width: 40%;
+  float: left;
+}
+.isccs .screenTitlePanel .screenTitleTableContainer-valueCell-0 {
+  width: 48px;
+  height: 48px;
+}
+.isccs .screenTitlePanel .advancedTableLayout-valueCell {
+  vertical-align: middle;
+}
+.isccs .businesscard .businesscard {
+  float: left;
+  padding-top: 5px;
+}
+.isccs .businesscard .businesscard .groupHeader {
+  border-bottom: 1px solid #777777;
+  width: 80%;
+}
+.isccs .businesscard .businesscard .groupHeader > div {
+  min-width: 12em;
+  width: 14em;
+}
+.isccs .businesscard .businesscard .field {
+  padding-left: 36px;
+  padding-top: 4px;
+}
+.isccs .enterpriseHolder {
+  width: 20%;
+  float: right;
+  padding-top: 5px;
+  padding-right: 15px;
+}
+.isccs .screenTitleContainer, .isccs .wizardMainContainer .screenTitleContainer {
+  padding: 0px 9px 9px 9px;
+  background: #ffffff;
+  /* Old browsers*/
+
+  background: -moz-linear-gradient(top, #ffffff 70%, #d9d9d9 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, #ffffff), color-stop(100%, #d9d9d9));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, #ffffff 70%, #d9d9d9 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, #ffffff 70%, #d9d9d9 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, #ffffff 70%, #d9d9d9 100%);
+  /* IE10+ */
+
+  background: linear-gradient(top, #ffffff 70%, #d9d9d9 100%);
+  /* W3C */
+
+}
+.dj_ie .isccs .screenTitleContainer {
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#d9d9d9)";
+}
+.isccs .screenTitleContainer .screenTitle {
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+  font-size: 1.5em;
+  color: #000000;
+  display: block;
+}
+.isccs .screenTitleContainer .screenSubTitle {
+  font-weight: normal;
+  font-size: 1em;
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+  color: #000000;
+}
+.isccs .screenTitleContainer .screenTitleImage {
+  float: left;
+}
+.isccs .screenWithRelatedTaskPanel {
+  width: 80%;
+}
+.isccs .leftRelatedTask .screenWithRelatedTaskPanel > div {
+  margin-left: 5px;
+}
+.isccs .rightRelatedTask .screenWithRelatedTaskPanel > div {
+  margin-right: 5px;
+}
+.isccs .leftRelatedTask .relatedTaskHolder {
+  float: left;
+}
+.isccs .rightRelatedTask .relatedTaskHolder {
+  float: right;
+}
+.isccs .relatedTaskHolder .dijitTitlePane {
+  background-color: #ffffff;
+}
+.isccs .leftRelatedTask .relatedTaskHolder .dijitTitlePane {
+  margin-right: 5px;
+}
+.isccs .rightRelatedTask .relatedTaskHolder .dijitTitlePane {
+  margin-left: 5px;
+}
+.isccs .relatedTaskHolder {
+  width: 20%;
+  overflow: hidden;
+}
+.isccs .relatedTaskHolder > .idxTitlePane .dijitTitlePaneContentOuter .dijitTitlePaneContentInner {
+  padding: 0px 9px 0px 9px;
+}
+.isccs .relatedTaskHolder .dijitTitlePane .dijitTitlePaneContentOuter {
+  padding: 0px;
+}
+.isccs .relatedTaskHolder .dijitTitlePane .dijitTitlePaneContentInner {
+  padding-top: 0px;
+}
+.isccs .relatedTaskHolder .relatedTaskGroup.dijitTitlePane .dijitTitlePaneContentOuter {
+  padding-top: 5px;
+}
+.isccs .relatedTaskHolder .relatedTaskGroup.innerTitlePane {
+  padding: 0px;
+}
+.isccs .relatedTaskHolder .relatedTaskGroup .dijitTitlePaneContentInner {
+  padding: 3px 0px 3px 9px;
+}
+.isccs .relatedTaskLink {
+  display: block;
+  padding-bottom: 3px;
+}
+.isccs .detailsPrimaryInfoPanel {
+  border: 2px solid #0075a3;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  box-shadow: 4px 4px 4px -3px rgba(0, 0, 0, 0.5);
+  margin-right: 3px;
+  margin-bottom: 9px;
+}
+.isccs .detailsPrimaryInfoPanel .primaryInformation {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.isccs .detailsPrimaryInfoPanel .primaryTitlePane {
+  border: none;
+  margin: 0px;
+}
+.isccs .detailsPrimaryInfoPanel .primaryInformationDesc {
+  font-size: 1.2em;
+}
+.isccs .detailsPrimaryInfoPanel > .dijitContentPane {
+  padding-left: 10px;
+  overflow: visible;
+}
+.isccs .isccsScreen .detailsSecondaryInfoPanel {
+  padding-bottom: 9px;
+}
+.isccs .isccsScreen .detailsSecondaryInfoPanel .advancedTableLayout-table .advancedTableLayout-valueCell {
+  padding-right: 5px;
+}
+.isccs .genericSearchContainer {
+  margin-left: 5px;
+}
+.isccs .isccsScreen .searchResultPanel {
+  margin-top: 25px;
+  margin-bottom: 0px;
+}
+.isccs .isccsScreen .searchResultPanel .dijitTitlePaneContentInner.dijitTitlePaneSingleChild {
+  padding: 9px;
+}
+.isccs .isccsScreen .searchResultPanel > .dijitTitlePaneContentOuter .dijitTitlePaneContentInner {
+  padding: 9px 0px 9px 0px;
+}
+.isccs .searchResultPanel .listPreviewScreen .listPreviewScreenTableLayout-valueCell-0 {
+  width: 25%;
+  padding-right: 10px;
+}
+.isccs .searchResultPanel .listPreviewScreen .listPreviewScreenTableLayout-valueCell-1 {
+  width: 75%;
+  border-left: 1px solid #777777;
+}
+.isccs .listGrid {
+  height: 300px;
+}
+.isccs .listScreen .listScreenPreviewContainer {
+  padding: 0px 9px 9px 15px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+.isccs .listScreen .listScreenPreviewContainer .primaryInformation {
+  font-weight: bold;
+  font-size: 1.5em;
+  padding: 3px 0px 3px 0px;
+}
+.isccs .listScreen .listScreenPreviewContainer .inline {
+  display: inline-block;
+}
+/*************************  Breadcrumbs ******************************/
+.isccs .breadCrumbs.dijitContentPane {
+  padding-bottom: 15px;
+}
+.isccs .idxBreadcrumb .idxBreadcrumbItem {
+  font-weight: bold;
+  padding: 0px 0.3em;
+}
+.isccs .idxBreadcrumb .idxBreadcrumbItem.idxBreadcrumbItemClickable {
+  color: #00649d;
+  font-weight: normal;
+}
+/*************************  Breadcrumbs ******************************/
+.isccs .primaryTitlePane {
+  border: 1px solid #d7d9e8;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+.isccs .primaryTitlePane > .dijitTitlePaneTitle {
+  border: 0px;
+  background: #005475;
+}
+.isccs .primaryTitlePane > .dijitTitlePaneTitle .dijitClosed .dijitArrowNode {
+  background-position: -14px 0px;
+}
+.isccs .primaryTitlePane > .dijitTitlePaneTitle .dijitTitlePaneTextNode {
+  color: #ffffff;
+}
+.isccs .primaryTitlePane > .dijitTitlePaneTitleHover {
+  background: #0075a3;
+}
+.isccs .primaryTitlePane > .dijitTitlePaneContentOuter .dijitTitlePaneContentInner {
+  border: 0px;
+  padding: 0px;
+}
+.isccs .secondaryTitlePane {
+  border: 1px solid #d7d9e8;
+  padding: 10px;
+  margin: 5px;
+}
+.isccs .innerTitlePane {
+  padding-top: 5px;
+}
+.isccs .innerTitlePane > .dijitTitlePaneTitle {
+  border-bottom: 1px solid #777777;
+  padding-left: 0px;
+}
+.isccs .innerTitlePane > .dijitTitlePaneTitle .dijitTitlePaneTextNode {
+  font-size: 1em;
+  margin-left: 0px;
+}
+.isccs .titlePaneWithoutPadding {
+  padding: 0px;
+}
+.isccs .titlePaneWithoutPadding .dijittitlepanecontentinner {
+  padding: 0px;
+}
+.isccs .paginationPanel.dijitContentPane {
+  border: 1px solid #d7d9e8;
+  padding: 5px 15px 5px 15px;
+  margin-bottom: 3px;
+  text-align: center;
+}
+.isccs .paginationPanel .resultsTotal {
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 1em;
+  float: left;
+}
+.isccs .paginationPanel .PageSizePanel {
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 1em;
+  float: right;
+}
+.isccs .paginationPanel .pageNumbers {
+  text-align: center;
+  display: inline-block;
+}
+.isccs .paginationPanel .pageNumbers > div > div,
+.isccs .paginationPanel .pageNumbers > div > label,
+.isccs .paginationPanel .perPageNumbers > div,
+.isccs .paginationPanel .perPageNumbers label,
+.isccs .sortByPanel .sortPanelAttr > div > div {
+  display: inline-block;
+  border-left: 1px solid #777777;
+  font-style: normal;
+}
+.isccs .paginationPanel .pageNumbers .noSeperator, .isccs .paginationPanel .perPageNumbers .noSeperator, .isccs .sortByPanel .sortPanelAttr .noSeperator {
+  border-left: none;
+}
+.isccs .paginationPanel .pageNumbers .noSeperator img {
+  margin-bottom: -4px;
+}
+.isccs .sortByPanel .sortPanelAttr .noSeperator .icon-arrowUp {
+  margin-bottom: -2px;
+}
+.isccs .paginationPadding {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.isccs .sortedPadding {
+  padding-left: 6px;
+}
+.isccs .labelHighlight, .isccs .sortByPanel .sortPanelAttr label {
+  font-weight: bold;
+}
+.isccs .sortByPanel .scLabel {
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 1em;
+}
+.isccs .sortByPanel .sortOrderPadding {
+  padding-right: 2px;
+}
+.isccs .dontGrabExcess {
+  display: inline-block;
+}
+.isccs .grabExcess .scDataLabelValue {
+  width: auto;
+}
+.isccs .fiftyPercentWidth {
+  width: 50%;
+}
+.isccs .spanLabel {
+  font-weight: bold;
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+  font-size: 1em;
+  min-width: 12em;
+  width: 14em;
+  padding-top: 3px;
+  padding-right: 10px;
+}
+.isccs .dijitContentPane.spanLabel {
+  padding-right: 10px;
+}
+.isccs .fieldAlignNoLabel .dijitHidden {
+  display: inline-block !important;
+}
+.isccs .imageAlignedText {
+  vertical-align: middle;
+}
+.isccs .topAlign {
+  vertical-align: top;
+}
+.isccs .inline {
+  display: inline-block;
+}
+.isccs .inlineImageBeforeText {
+  padding-right: 5px;
+  background-position: left;
+}
+.isccs .inlineImageAfterText {
+  padding-left: 5px;
+  background-position: right;
+}
+.isccs .indent {
+  text-indent: 10px;
+}
+.isccs .panelSpacer {
+  margin-bottom: 5px;
+}
+.isccs .floatRight {
+  float: right;
+}
+.isccs .rightAlign {
+  text-align: right;
+}
+.isccs .floatLeft {
+  float: left;
+}
+.isccs .leftAlign {
+  text-align: left;
+}
+.isccs .blockComponent {
+  display: block;
+}
+.isccs .inlineLabel div {
+  display: inline-block;
+}
+.isccs .DataLabelSpacing {
+  font-weight: bold;
+  padding-right: 10px;
+}
+.isccs .DataLblSpacing {
+  padding-left: 10px;
+}
+.isccs .noVerticalSpacing .idxComposite {
+  margin: 0px 1px 0px 1px;
+  padding: 0px 1px 0px 1px;
+}
+.isccs .centerAlign {
+  text-align: center;
+}
+.isccs .verticalSeparatorRight {
+  border-color: #efefef;
+  border-right-width: 2px;
+  border-right-style: solid;
+}
+.isccs .verticalSeparatorLeft {
+  border-color: #efefef;
+  border-left-width: 2px;
+  border-left-style: solid;
+}
+.isccs .fieldSeperator {
+  padding-left: 9px;
+  border-left: 1px solid #777777;
+  margin-left: 9px;
+}
+.isccs .contentSeparator {
+  border-bottom: 1px solid #777777;
+}
+.isccs .shortCheckBox {
+  width: 12em;
+}
+.isccs .shortCheckBox .idxLabel {
+  min-width: 8em;
+  width: 8em;
+}
+.isccs .doubleCheckBox {
+  width: 24em;
+}
+.isccs .doubleCheckBox .idxLabel {
+  min-width: 20em;
+  width: 20em;
+}
+.isccs .doubleCheckBox .idxCheckBoxWrap {
+  padding-left: initial;
+  width: initial;
+}
+.isccs .padssHolder .idxLabel {
+  float: left;
+}
+.isccs .padssHolder .idxLabel .idxRequiredIcon {
+  float: left;
+}
+.isccs .pointerCursor {
+  cursor: pointer;
+}
+.isccs .dijitDialog .aboutpopup {
+  padding: 50px;
+}
+.isccs .dijitDialog .aboutpopup .dijitDialogTitleBar {
+  display: none;
+}
+.isccs .dijitDialog .aboutpopup .loginProdNme {
+  font-size: 1.33em;
+}
+.isccs .dijitDialog .aboutpopup .isccsScreen > div, .isccs .dijitDialog .aboutpopup .isccsScreen > span {
+  margin-bottom: 20px;
+}
+.isccs .dijitDialog .aboutpopup .gridxRow table tr td:first-child {
+  font-weight: bold;
+  color: #00649d;
+}
+.isccs .dijitDialog .aboutpopup .popupNavigation .idxSecondaryButton {
+  display: none;
+}
+.isccs .right-bar-tools {
+  position: fixed;
+  top: 100px;
+  width: 25px;
+  z-index: 500;
+  right: 0px;
+}
+.isccs .right-bar-tools ul {
+  background: #e6e6e6;
+  /* Old browsers*/
+
+  background: -moz-linear-gradient(top, #e6e6e6 0%, #ffffff 20%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e6e6e6), color-stop(20%, #ffffff));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, #e6e6e6 0%, #ffffff 20%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, #e6e6e6 0%, #ffffff 20%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, #e6e6e6 0%, #ffffff 20%);
+  /* IE10+ */
+
+  background: linear-gradient(top, #e6e6e6 0%, #ffffff 20%);
+  /* W3C */
+
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  -moz-transition-duration: 0.5s;
+  -moz-transition-property: opacity;
+  border-color: #ffffff -moz-use-text-color #ffffff #ffffff;
+  border-style: solid none solid solid;
+  border-width: 1px 0px 1px 1px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  float: right;
+  margin: 0px;
+  opacity: 0.8;
+  padding: 3px 6px 3px 3px;
+  width: 15px;
+  list-style: none outside none;
+}
+.isccs .right-bar-tools li {
+  float: left;
+  padding: 2px 0px 2px 0px;
+}
+.isccs .right-bar-tools a {
+  display: block;
+  float: left;
+  height: 16px;
+  overflow: hidden;
+  padding: 0px;
+  text-indent: -9999px;
+  width: 16px;
+}
+.isccs .itemImageDetailsDiv {
+  width: 350px;
+  height: 350px;
+  position: relative;
+  border: 1px solid #f2f2f2;
+}
+.isccs .itemImageDetailsDiv img {
+  width: 350px;
+  position: absolute;
+  margin: auto;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+.isccs .noItemImageRule .itemImageSmallDiv {
+  display: none !important;
+}
+.isccs .itemImageSmallDiv, .isccs .relateditemcontainer .relatedProducts .itemImageSmallDiv {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  border: 1px solid #f2f2f2;
+}
+.isccs .itemImageSmallDiv img, .relateditemcontainer .relatedProducts .itemImageSmallDiv img {
+  width: 120px;
+  position: absolute;
+  margin: auto;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+.isccs .noItemImageRule .itemImagePrimaryDiv {
+  display: none !important;
+}
+.isccs .itemImagePrimaryDiv {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  border: 1px solid #f2f2f2;
+  overflow: hidden;
+}
+.isccs .itemImagePrimaryDiv img {
+  width: 200px;
+  position: absolute;
+  margin: auto;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+.isccs .moreImageLargeDiv {
+  width: 435px;
+  height: 435px;
+  position: relative;
+  border: 1px solid #f2f2f2;
+}
+.isccs .moreImageLargeDiv img {
+  width: 435px;
+  position: absolute;
+  margin: auto;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+.isccs .moreImageThumbnailDiv {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  margin: 4px;
+  border: 1px solid #f2f2f2;
+}
+.isccs .moreImageThumbnailDiv img {
+  width: 80px;
+  position: absolute;
+  margin: auto;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+.isccs .standardProductImageDisplay {
+  width: 120px;
+  height: 120px;
+}
+.isccs .mediumItemImage {
+  width: 120px;
+  height: 80px;
+}
+.isccs .mediumItemImage img {
+  width: 120px;
+  height: 80px;
+}
+.isccs .noItemImage {
+  background-image: url('../icons/images/noProductThumbnail.png');
+  background-repeat: no-repeat;
+}
+.isccs .paymentTotalTableLayout-valueCell-0 {
+  width: 60%;
+}
+.isccs .paymentTotalTableLayout-valueCell-1 > .idxContentPane {
+  max-width: 385px;
+  min-width: 385px;
+  float: right;
+}
+.isccs .paymentTotalTableLayout-valueCell-1 > .idxContentPane > div {
+  overflow: auto;
+}
+.isccs .ordertotal,
+.isccs .invoicetotal,
+.isccs .orderlinepricesummary,
+.isccs .orderpricingsummary .priceSummaryPreview {
+  width: 375px;
+  float: right;
+}
+.isccs .ordertotal .scDataLabelValue,
+.isccs .invoicetotal .scDataLabelValue,
+.isccs .orderlinepricesummary .scDataLabelValue,
+.isccs .orderpricingsummary .priceSummaryPreview .scDataLabelValue {
+  width: 144px;
+}
+.isccs .ordertotal .accentPanel,
+.isccs .invoicetotal .accentPanel,
+.isccs .orderlinepricesummary .accentPanel,
+.isccs .orderpricingsummary .priceSummaryPreview .accentPanel {
+  padding: 5px;
+}
+.isccs .orderTotalLine {
+  border-top: 1px solid #d7d9e8;
+  font-weight: bold;
+}
+.isccs .a11yHiddenLabel.scDataLabel .idxLabel:first-child {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  min-width: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+.isccs .a11yHiddenLabel.scDataLabel .scDataLabelValue {
+  min-width: inherit;
+  width: inherit;
+  padding: 0px;
+  margin: 0px;
+}
+.isccs span.a11yHiddenLabel {
+  position: absolute;
+  width: 0px;
+  overflow: hidden;
+}
+.isccs .a11yHiddenBtnLabel .dijitButtonText {
+  display: none;
+}
+.isccs.dj_a11y .screenTitleContainer {
+  background-color: #111111;
+}
+.isccs.dj_a11y .customerMessageBox .idxLink .scLinkImage {
+  position: absolute;
+}
+.isccs.dj_a11y .customerMessageBox .idxLink .scLinkText {
+  margin: 8px 15px;
+  display: block;
+}
+.isccs.dj_a11y .a11yHiddenBtnLabel .dijitButtonText {
+  display: inline;
+}
+.isccs.dj_a11y .a11yHiddenBtnLabel .dijitIcon {
+  display: none;
+}
+.isccs.dj_a11y .dijitTitlePane .dijitArrowNodeInner {
+  margin-left: 0px !important;
+}
+.isccs.dj_a11y .dijitInline .dijitTextArea {
+  border: none;
+}
+.isccs.dj_a11y .idxTextareaWrap .dijitInputField {
+  border: 1px solid #aaa;
+}
+.isccs.dj_a11y .dijitTextBoxReadOnly .dijitInputField, .isccs.dj_a11y .dijitTextBoxReadOnly .dijitButtonNode {
+  border-style: none !important;
+}
+.isccs .screenActionBar, .isccs .isccsScreen .idxContentPane.screenActionBar {
+  border-bottom: 1px solid #999999;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.isccs .scDisabled {
+  opacity: .5;
+}
+.isccs .valueOnlyField {
+  display: block;
+  width: 18em;
+  padding-left: 15em;
+}
+.isccs .relateditemcontainer .relateditemdetails {
+  display: inline-table;
+  width: 20em;
+  margin: 0px 10px 30px 10px;
+  vertical-align: top;
+}
+.isccs .relateditemcontainer .relatedProducts {
+  text-align: center;
+}
+.isccs .relateditemcontainer .relatedProducts > div {
+  margin: 5px 0px;
+  text-align: center;
+  width: 100%;
+}
+.isccs .relateditemcontainer .relatedProducts .extendedDesc .scLinkAlignment {
+  padding: 0px;
+}
+.isccs .relateditemcontainer .relatedProducts .addToOrder {
+  text-align: center;
+  width: 100%;
+}
+.isccs .relateditemcontainer .relatedProducts .addToOrder .dijitButtonText {
+  white-space: normal;
+  width: 8em;
+}
+.isccs .itemdetails .relatedProducts .dijitTabContainerBottom-container,
+.isccs .itemdetails .relatedProducts .dijitTabContainerTop-container,
+.isccs .itemdetails .relatedProducts .dijitTabContainerLeft-container,
+.isccs .itemdetails .relatedProducts .dijitTabContainerRight-container {
+  border-style: solid;
+  border-width: 1px;
+  border-top: 0px;
+}
+.isccs .itemdetails .relateditemcontainer .relateditemdetails {
+  width: 25em;
+  padding-bottom: 0px;
+  margin: 0px 0px 30px 0px;
+}
+.isccs .itemdetails .relateditemcontainer .relateditemdetails.noItemImageRule .relatedProducts .relatedProductDetails {
+  width: 21em;
+}
+.isccs .itemdetails .relateditemcontainer .relateditemdetails.noItemImageRule .relatedProducts .relatedProductDetails .extendedDesc .scLinkAlignment .dijitInputContainer {
+  width: 20em;
+}
+.isccs .itemdetails .relateditemcontainer .relateditemdetails .relatedProducts > div {
+  text-align: left;
+}
+.isccs .itemdetails .relateditemcontainer .relateditemdetails .relatedProducts .dijitTabContainer .dijitTabPaneWrapper {
+  height: 500px;
+  overflow: auto;
+}
+.isccs .itemdetails .relateditemcontainer .relateditemdetails .relatedProducts .relatedProductDetails {
+  display: inline-block;
+  vertical-align: top;
+  width: 14em;
+}
+.isccs .itemdetails .relateditemcontainer .relateditemdetails .relatedProducts .relatedProductDetails .extendedDesc .scLinkAlignment .dijitInputContainer {
+  width: 13em;
+}
+.isccs .itemdetails .relateditemcontainer .relateditemdetails .relatedProducts .addToOrder {
+  text-align: left;
+}
+.isccs .blankeditor .homeeditorrt .relatedTaskGroup {
+  display: inline-block;
+  min-width: 200px;
+  margin-right: 30px;
+  margin-left: 5px;
+  vertical-align: top;
+}
+.isccs .blankeditor .homeeditorrt .primaryTitlePane {
+  border: none;
+}
+.isccs .blankeditor .homeeditorrt .primaryTitlePane > .dijitTitlePaneTitle {
+  display: none;
+}
+.isccs .blankeditor .homeeditorrt .footer {
+  display: none;
+}
+.isccs .loadingText {
+  font-size: 1.5em;
+  color: #888888;
+  margin-top: 20px;
+}
+.isccs .userPrefPanel {
+  margin-left: 10px;
+}
+.isccs .createpricematch .dijitStackContainer .dijitContentPane .createScreenDescription {
+  padding-left: 17px;
+}
+.isccs .priceMatchWorksheetLayout-table {
+  border-spacing: 0px;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+.isccs .priceMatchWorksheetLayout-valuecell {
+  padding: 2px 0px;
+}
+.isccs .priceMatchWorksheetLayout-valuecell-1 {
+  padding-top: 5px;
+  border-bottom: 1px solid #777777;
+  padding-left: 17px;
+}
+.isccs .priceMatchWorksheetLayout-valuecell-2 {
+  padding-top: 5px;
+  border-bottom: 1px solid #777777;
+  padding-left: 12px;
+}
+.isccs .priceMatchWorksheetLayout-valuecell-3 {
+  padding-left: 5px;
+  padding-top: 10px;
+}
+.isccs .priceMatchWorksheetLayout-valuecell-4 {
+  background-color: #ffffff;
+  padding-top: 10px;
+  padding-left: 17px;
+}
+.isccs .priceMatchWorksheetLayout-valuecell-5 {
+  background-color: #ffffff;
+}
+.isccs .priceMatchWorksheetLayout-valuecell-6 {
+  padding-left: 5px;
+  padding-top: 10px;
+}
+.isccs .priceMatchWorksheetLayout-valuecell-7 {
+  background-color: #ebebeb;
+  padding-top: 5px;
+  padding-left: 5px;
+}
+.isccs .priceMatchWorksheetLayout-valuecell-8 {
+  background-color: #ebebeb;
+  padding-top: 5px;
+}
+.isccs .priceMatchWorksheetLayout-valuecell-10 {
+  background-color: #ebebeb;
+  padding-left: 5px;
+}
+.isccs .priceMatchWorksheetLayout-valuecell-11 {
+  padding-left: 5px;
+  padding-top: 10px;
+}
+.isccs .priceMatchWorksheetLayout-valuecell-12 {
+  border-bottom: 2px solid #0075a3;
+  background-color: #ffffff;
+  padding-left: 5px;
+}
+.isccs .priceMatchWorksheetLayout-valuecell-13 {
+  border-bottom: 2px solid #0075a3;
+  background-color: #ffffff;
+}
+.isccs .priceMatchWorksheetLayout-valuecell-14 {
+  padding-left: 5px;
+}
+.isccs .priceMatchWorksheetLayout-valuecell-15 {
+  padding-left: 17px;
+}
+.isccs .priceMatchWorksheetLayout-valuecell-16 {
+  padding-left: 12px;
+}
+.isccs .pricematchworksheet .dijitContentPane.singlecolumntable, .isccs .pricematchworksheet .dijitStackContainer .dijitContentPane.singlecolumntable {
+  padding-left: 15px;
+}
+.isccs .pricematchworksheet .grabExcess .scDataLabelValue {
+  width: 70%;
+}
+.isccs .pricematchworksheet .competitorDescription {
+  width: 100%;
+}
+.isccs .pricematchworksheet .competitorDescription .scDataLabelValue {
+  width: 55%;
+}
+.isccs .pricematchworksheet .previousGridContent {
+  height: 250px !important;
+  overflow: auto;
+}
+.isccs .priceMatchSummary {
+  max-width: 400px;
+  float: right;
+  margin-top: 16px;
+  margin-right: -10px;
+}
+.isccs .priceMatchSummary .orderTotalLine {
+  font-size: 1.5em;
+  display: inline;
+}
+.isccs .priceMatchSummary .orderTotalLine .idxLabel {
+  width: 60%;
+}
+.isccs .priceMatchSummary .orderTotalLine .scDataLabelValue {
+  display: inline;
+  float: right;
+  width: 32%;
+  min-width: 0px;
+}
+.isccs .myalertsportlet .idxContentPane {
+  overflow: hidden;
+}
+.isccs .myUnresolvedAlertsLink {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+.isccs .myalertsportlet .customQueries > .dijitTitlePaneTitle .dijitArrowNodeInner, .isccs .myalertsportlet .customQueries > .dijitClosed .dijitArrowNodeInner {
+  display: inline-block;
+  background-image: url('../icons/images/alertSmall.png');
+  background-repeat: no-repeat;
+  height: 16px;
+  width: 66px;
+  margin-left: -45px;
+  padding-left: 0px;
+  background-position: 50px 0px;
+}
+.isccs .myalertsportlet .queues > .dijitTitlePaneTitle .dijitArrowNodeInner, .isccs .myalertsportlet .queues > .dijitClosed .dijitArrowNodeInner {
+  display: inline-block;
+  background-image: url('../icons/images/queue.png');
+  background-repeat: no-repeat;
+  height: 16px;
+  width: 66px;
+  margin-left: -45px;
+  padding-left: 0px;
+  background-position: 50px 0px;
+}
+.isccs .myalertsportlet .exceptionTypes > .dijitTitlePaneTitle .dijitArrowNodeInner, .isccs .myalertsportlet .exceptionTypes > .dijitClosed .dijitArrowNodeInner {
+  display: inline-block;
+  background-image: url('../icons/images/alertSmall.png');
+  background-repeat: no-repeat;
+  height: 16px;
+  width: 66px;
+  margin-left: -45px;
+  padding-left: 0px;
+  background-position: 50px 0px;
+}
+@media (max-width: 1050px) {
+  .isccs .customerportlet .idxRadioButtonSetWrap .idxRadioButtonSetItem {
+    display: block;
+  }
+}
+.isccs .customerportlet .portletHeader .createLink {
+  display: block;
+  float: none;
+  padding: 0px;
+}
+.isccs .importantEventContainer-valueCell-0 {
+  width: 16px;
+}
+.isccs .importantEventsElement {
+  float: left;
+  min-width: 30em;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.isccs .importantEventsPane {
+  margin: 0px 10px 5px 10px;
+}
+.isccs .characteristicsIcon {
+  padding: 5px;
+}
+.isccs .orderLineListGrid {
+  min-height: 100px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+.isccs .dojoxGrid .itemImage {
+  width: 32px;
+  height: 32px;
+}
+.isccs .gridx .itemImage {
+  width: 32px;
+  height: 32px;
+  float: left;
+  padding-right: 10px;
+}
+.isccs .gridx .iconImageWithText {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.isccs .productImageDesc {
+  display: inline-block;
+  width: 80%;
+}
+.isccs .productIndicatorIcons {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 7px;
+  width: 14%;
+  float: right;
+}
+.isccs .productIndicatorIcons img {
+  float: right;
+  margin-top: 3px;
+}
+.isccs .productViolationIcons {
+  margin-left: 42px;
+  margin-top: 5px;
+}
+.isccs .gridx .fulfillmentAddress {
+  overflow: hidden;
+}
+.isccs .scratch-pad {
+  display: none ;
+}
+.scExtensibility.isccs .scratch-pad, .scExtensibility.isccs .scratch-pad-area, .scExtensibility.isccs .scratch-pad-open {
+  display: none !important;
+}
+.isccs .scratch-pad-area {
+  height: 200px;
+  background-color: #FFFFB0;
+  border: none;
+}
+.isccs .scratch-pad-open {
+  display: block ;
+  top: 100px;
+  z-index: 500;
+  position: fixed;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  right: 0px;
+  border: 1px solid #aaa;
+}
+.isccs .itembrowsingresults .repeatingPanel .searchProductLayout {
+  padding: 20px 0px 15px 0px;
+  border-top: 1px solid #777777;
+  min-height: 130px;
+}
+.isccs .itembrowsingresults .repeatingPanel .searchProductLayout:first-child {
+  border-top: none;
+}
+.isccs .itembrowsingresults .repeatingPanel .searchProductLayout .imagePanel {
+  float: left;
+}
+.isccs .itembrowsingresults .repeatingPanel .searchProductLayout .detailsPanel {
+  padding-left: 130px;
+}
+.isccs .itembrowsingresults .repeatingPanel .searchProductLayout.noItemImageRule {
+  min-height: 0px;
+}
+.isccs .itembrowsingresults .repeatingPanel .searchProductLayout.noItemImageRule .detailsPanel {
+  padding-left: 5px;
+}
+.isccs .itembrowsingresults .repeatingPanel .priceButtonPanel > div, .isccs .itembrowsingresults .repeatingPanel .priceButtonPanel > span, .isccs .itembrowsingresults .repeatingPanel .deliveryMethod > div {
+  margin-top: 5px;
+}
+.isccs .itembrowsingresults .repeatingPanel .priceButtonPanel {
+  display: inline-block;
+  vertical-align: top;
+  width: 40%;
+}
+.isccs .itembrowsingresults .repeatingPanel .priceButtonPanel .accentPanel {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.isccs .itembrowsingresults .repeatingPanel .priceButtonPanel .strikeLabel {
+  min-height: 0px;
+}
+.isccs .itembrowsingresults .repeatingPanel .deliveryMethod .seperatorAlign {
+  min-width: 8.5em;
+}
+.isccs .searchbar.dijitContentPane {
+  padding: 10px 0px;
+  margin: 15px 0px;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+.isccs .searchbar .searchLabel {
+  min-width: 7em;
+  width: 7em;
+  margin-top: 8px;
+  text-align: right;
+}
+.isccs .searchbar .idxTextBoxWrap .dijitTextBox {
+  width: 44em;
+}
+.isccs .goIconButton.dijitButton .dijitButtonNode {
+  padding: 4px 2px;
+  min-width: 0px;
+}
+.isccs .itemBrowsing .productList {
+  margin-left: 7px;
+  width: 78%;
+  display: inline-block;
+  vertical-align: top;
+}
+.isccs .itemBrowsing .menuSection {
+  width: 20%;
+  display: inline-block;
+  vertical-align: top;
+  float: left;
+}
+.isccs .itemBrowsing .menuSection .narrowPanel {
+  margin-top: 10px;
+}
+.isccs .addIconButton .dijitButtonNode {
+  min-width: 50px;
+}
+.isccs .additems .productAddPanel {
+  margin-top: 6px;
+}
+.isccs .additems.dijitStackContainer-child {
+  overflow: visible;
+}
+.isccs .additems .listScreen .previewIcon {
+  display: block;
+  height: 24px;
+}
+.isccs .additems .listScreen .previewIcon .scLinkAlignment {
+  float: right;
+}
+.isccs .additems .listScreen .listScreenTableLayout-valueCell-0 {
+  width: 36%;
+  padding-right: 3px;
+  padding-left: 2px;
+}
+.isccs .additems .listScreen .listScreenTableLayout-valueCell-1 {
+  width: 64%;
+  border-left: 1px solid #777777;
+  padding-left: 5px;
+}
+.isccs .additems .noPreview .listScreenTableLayout-valueCell-0 {
+  width: 100%;
+}
+.isccs .additems .noPreview .listScreenTableLayout-valueCell-1 {
+  width: 0%;
+  display: none;
+}
+.isccs .additems .addItemPanelMainContainer .itemDetails {
+  vertical-align: top;
+  margin-right: 5px;
+}
+.isccs .additems .addItemPanelMainContainer .itemDetails .overridePrice {
+  padding-left: 20px;
+  margin: 0px;
+}
+.isccs .additems .addItemPanelMainContainer .itemDetails .buttonPanel {
+  padding: 5px 0px 10px 0px;
+}
+.isccs .additems .addItemPanelMainContainer .deliveryMethod {
+  margin-top: 10px;
+}
+.isccs .additems .addItemPanelMainContainer .deliveryMethod .spanLabel {
+  vertical-align: top;
+}
+.isccs .additems .addItemPanelMainContainer .deliveryMethod .fulfillmentMtdContainer {
+  vertical-align: top;
+}
+.isccs .additems .addItemPanelMainContainer .deliveryMethod .fulfillmentValueContainer {
+  padding-top: 7px;
+}
+.isccs .additems .addItemPanelMainContainer .deliveryMethod .fulfillmentValueContainer .pickupValNode {
+  margin-top: 8px;
+}
+.isccs .additems .addItemPanelMainContainer .deliveryMethod .storeDetails {
+  padding: 5px 0px 0px 20px;
+  padding-left: 15em;
+  margin-left: 17px;
+}
+.isccs .additems .addItemPanelMainContainer .actionLabel {
+  font-size: 0.8em;
+  width: 100%;
+}
+.isccs .additems .addItemPanelMainContainer .actionLabel .idxLink {
+  vertical-align: top;
+  padding-left: 14px;
+}
+.isccs .additems .addItemPanelMainContainer .productTitle {
+  margin-bottom: 5px;
+}
+.isccs .deliveryMethod .seperatorAlign {
+  min-width: 8em;
+}
+@media (max-width: 1125px) {
+  .isccs .additems .addItemPanelMainContainer .vDeliveryMethod .fulfillmentMtdContainer .idxRadioButtonSetWrap .idxLabel {
+    display: block;
+  }
+  .isccs .additems .addItemPanelMainContainer .vDeliveryMethod .fulfillmentValueContainer {
+    margin-top: 25px;
+    margin-left: -80px;
+  }
+}
+.isccs .giftoptionslines .listScreen .listScreenTableLayout-valueCell-0 {
+  width: 60%;
+  padding-right: 5px;
+  border-right: 1px solid #777777;
+}
+.isccs .giftoptionslines .listScreen .listScreenTableLayout-valueCell-1 {
+  width: 40%;
+}
+.isccs .giftoptionslines .giftLineDetails .noSelection {
+  padding-top: 15px;
+  text-align: center;
+}
+.isccs .giftoptionslines .giftLineDetails .giftItem {
+  padding-left: 5px;
+}
+.isccs .giftoptionslines .giftLineDetails .properties {
+  padding-top: 10px;
+  margin-left: 10px;
+}
+.isccs .giftoptionslines .giftLineDetails .properties .giftWrapProp {
+  padding-top: 5px;
+}
+.isccs .giftoptionslines .giftLineDetails .properties .recipientHeaderPanel {
+  padding-top: 10px;
+  border-bottom: 1px solid #777777;
+  margin-bottom: 5px;
+  padding-bottom: 2px;
+}
+.isccs .ordernote .idxTitlePane .dijitTitlePaneContentInner.dijitTitlePaneSingleChild {
+  padding-top: 0px;
+}
+.isccs .ordernote .shortCheckBox {
+  width: 12em;
+  padding-left: initial;
+}
+.isccs .noteCapture-table {
+  padding: 10px 10px 0px 10px;
+}
+.isccs .noteCapture-valueCell-0 {
+  width: 55%;
+}
+.isccs .noteCapture-valueCell-1 {
+  width: 45%;
+}
+.isccs .noteTypeSelection > .dijitInline {
+  width: 255px;
+}
+.isccs .noteTypeSelection > .dijitInline.idxLabel {
+  width: 14em;
+}
+.isccs .noteOptionsPanel {
+  width: 295px;
+}
+.isccs .noteText .dijitInline .dijitTextArea {
+  background-color: #FFD;
+}
+.isccs .notedisplay .createNotes > div > table, .isccs .customernotedisplay .createNotes > div > table {
+  border-spacing: 0px;
+}
+.isccs .notedisplay .createNotes > div > table .noteAddProperties, .isccs .customernotedisplay .createNotes > div > table .noteAddProperties {
+  padding: 10px 0px 0px 20px;
+}
+.isccs .notedisplay .idxCheckBoxWrap, .isccs .customernotedisplay .idxCheckBoxWrap {
+  padding: initial;
+  width: initial;
+}
+.isccs .notedisplay > .dijitTitlePaneTitle .dijitArrowNodeInner,
+.isccs .customernotedisplay > .dijitTitlePaneTitle .dijitArrowNodeInner,
+.isccs .notedisplay > .dijitClosed .dijitArrowNodeInner,
+.isccs .customernotedisplay > .dijitClosed .dijitArrowNodeInner {
+  display: inline-block;
+  background-image: url("../icons/images/filter.gif");
+  background-repeat: no-repeat;
+  height: 32;
+  width: 82;
+  margin-left: -45px;
+  padding-left: 0px;
+  background-position: 50px 0px;
+}
+.isccs .notedisplay .dijitTitlePaneTitle, .isccs .customernotedisplay .dijitTitlePaneTitle {
+  background: #f2f2f2;
+}
+.isccs .notedisplay .dijitTitlePaneTitle .dijitTitlePaneTextNode, .isccs .customernotedisplay .dijitTitlePaneTitle .dijitTitlePaneTextNode {
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 1em;
+  color: #7f7f7f;
+}
+.isccs .notedisplay .filter-border, .isccs .customernotedisplay .filter-border {
+  border: 1px solid #cccccc;
+  margin-top: 10px;
+}
+.isccs .notedisplay .filter-border .dijitTitlePaneTitle, .isccs .customernotedisplay .filter-border .dijitTitlePaneTitle {
+  border-bottom: 1px solid #cccccc;
+}
+.isccs .notedisplay .notesList, .isccs .customernotedisplay .notesList {
+  padding-top: 15px;
+}
+.isccs .notedisplay .notesList .notes, .isccs .customernotedisplay .notesList .notes {
+  padding-top: 10px;
+}
+.isccs .notedisplay-valueCell-0, .isccs .customernotedisplay-valueCell-0 {
+  width: 24px;
+}
+.isccs .notedisplay-valueCell-1, .isccs .customernotedisplay-valueCell-1 {
+  width: 100%;
+}
+.isccs .alertnotedisplay .buttonBar {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #d7d9e8;
+}
+.isccs .alertnotedisplay .idxCheckBoxWrap {
+  padding: initial;
+  width: initial;
+}
+.isccs .alertnote .idxCheckBoxWrap {
+  padding: initial;
+  width: initial;
+}
+.isccs .notes .noteContainer {
+  border-bottom: 1px solid #d7d9e8;
+  padding: 0px 5px 20px 15px;
+}
+.isccs .noteContainer .noteCreator {
+  font-size: 0.8em;
+  font-weight: bold;
+  padding-right: 5px;
+  display: inline-block;
+  margin-right: 5px;
+}
+.isccs .noteContainer .noteCreator div {
+  margin-top: 2px;
+  margin-right: 5px;
+}
+.isccs .noteContainer .noteCreatorLabel {
+  font-size: 0.8em;
+  padding-right: 5px;
+  display: inline-block;
+}
+.isccs .noteContainer .dateseperator {
+  font-size: 0.8em;
+}
+.isccs .noteContainer .noteText {
+  padding-top: 5px;
+  display: block;
+}
+.isccs .noteContainer .noteDate {
+  font-size: 0.8em;
+  padding-right: 5px;
+}
+.isccs .noteContainer .noteDate div {
+  margin-top: 2px;
+}
+.isccs .noteContainer .noteDetails {
+  font-style: italic;
+  display: inline;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.isccs .noteContainer .noteReason {
+  font-weight: bold;
+  padding-right: 5px;
+}
+.isccs .noteContainer .noteSatisfaction {
+  font-weight: bold;
+  border-right: 1px solid #777777;
+  padding-right: 5px;
+  padding-left: 5px;
+  font-style: italic;
+  display: inline;
+}
+.isccs .noteContainer .noteSatisfaction div {
+  margin-top: 2px;
+}
+.isccs .noteContainer .icon-inPerson,
+.isccs .noteContainer .icon-email,
+.isccs .noteContainer .icon-phone,
+.isccs .noteContainer .icon-phone-addn {
+  float: none;
+  display: inline;
+  margin-top: -4px;
+  margin-left: 5px;
+}
+.isccs .returnsummaryheader .detailsPrimaryInfoPanel {
+  border: 1px solid #777777;
+  border-left: 0px;
+  border-right: 0px;
+  box-shadow: none;
+}
+.isccs .exchangesummary .detailsPrimaryInfoPanel {
+  border: 1px solid #777777;
+  border-left: 0px;
+  border-right: 0px;
+  box-shadow: none;
+}
+.isccs .paymentmethod .tableLayout-cols-3-valueCell-0 {
+  width: 24px;
+}
+.isccs .paymentMethodPanel.idxContentPane {
+  padding: 10px 20px;
+  border-top: 1px solid #777777;
+}
+.isccs .paymentMethodPanel.idxContentPane.exceptionPanel {
+  border: 2px solid #cd312a;
+}
+.isccs .promoTextField.dijitValidationTextBoxError .dijitTextBox {
+  width: 13em;
+}
+.isccs .validCouponTitlePanel .promotion {
+  margin: 0px 10px 15px 5px;
+}
+.isccs .validCouponTitlePanel .idxtitlepanenocollapse .dijitArrowNode {
+  background-image: url("../icons/images/valid.png");
+  visibility: initial;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+.isccs .invalidCouponTitlePanel .promotion {
+  margin: 0px 5px 10px 0px;
+  padding: 5px;
+  background: #fff3f3;
+  border: 2px solid #cd312a;
+}
+.isccs .invalidCouponTitlePanel .idxtitlepanenocollapse .dijitArrowNode {
+  background-image: url("../icons/images/invalid.png");
+  visibility: initial;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+.isccs .promotion .idxLabel {
+  width: auto;
+  min-width: auto;
+}
+.isccs .paymentconfirmation .orderTotalLine {
+  font-size: 1.5em;
+}
+.isccs .paymentconfirmation .orderTotalLine .idxLabel {
+  width: 155px;
+  min-width: 100px;
+}
+.isccs .paymentconfirmation .numericLabel .scLinkAlignment {
+  text-align: right;
+  width: 155px;
+  min-width: 100px;
+  padding-left: 12px;
+  padding-right: 10px;
+}
+.isccs .paymentconfirmation .paymentTotalTableLayout-valueCell-0 .singlecolumntable .primaryInformation {
+  padding-left: 5px;
+}
+.isccs .paymentconfirmation .paymentTotalTableLayout-valueCell-0 .singlecolumntable .primaryInformation .scDataLabelValue {
+  padding-left: 0px;
+}
+.isccs .paymentconfirmation .paymentTotalTableLayout-valueCell-0 .singlecolumntable .scDataLabelValue {
+  padding-left: 85px;
+  width: auto;
+  min-width: 0px;
+}
+.isccs .couponContainer-table {
+  border-spacing: 0px;
+}
+.isccs .couponContainer-valueCell-0 {
+  width: 75%;
+}
+.isccs .couponContainer-valueCell-1 {
+  width: 25%;
+}
+.isccs .couponContainer-valueCell-2 {
+  font-weight: bold;
+}
+.isccs .paymentcapture .singlecolumntable, .isccs .customerpaymentcapture .singlecolumntable {
+  padding: 0px;
+}
+.isccs .paymentcapture .gridXCell span, .isccs .customerpaymentcapture .gridXCell span {
+  padding-left: 5px;
+}
+.isccs .paymentcapture .addressPanel, .isccs .customerpaymentcapture .addressPanel {
+  margin: 0px;
+}
+.isccs .paymentcapture .dijitTextBox, .isccs .customerpaymentcapture .dijitTextBox {
+  width: 15em;
+}
+.isccs .addreturnlines .exchangePanel {
+  text-align: center;
+  float: left;
+  width: 45%;
+}
+.isccs .addreturnlines .exchangePanel .idxLabel {
+  width: auto;
+  min-width: initial;
+}
+.isccs .listScreen .listScreenPreviewContainer .existingorderline {
+  min-width: 380px;
+}
+.isccs .existingorderline .secondaryTitlePane {
+  display: inline-block;
+  width: 90%;
+}
+.isccs .returnReviewLines-valueCell-0 {
+  width: 60%;
+}
+.isccs .returnReviewLines-valueCell-1 {
+  width: 40%;
+}
+.isccs .orderpricingsummary .gridPreviewTableLayout-valueCell-0 {
+  padding-right: 3px;
+  padding-left: 2px;
+}
+.isccs .orderpricingsummary .gridPreviewTableLayout-valueCell-1 {
+  width: 375px;
+  border-left: 1px solid #777777;
+  padding-left: 10px;
+}
+.isccs .orderpricingsummary .orderLineListGrid {
+  max-height: 200px;
+}
+.isccs .orderpricingsummary .summaryHeaderPanel {
+  border-bottom: 1px solid #777777;
+  margin-bottom: 5px;
+  padding-bottom: 2px;
+}
+.isccs .orderpricingsummary .priceAlignment > div, .isccs .orderpricingsummary .priceAlignment > span {
+  padding-left: 5px;
+}
+.isccs .orderpricingsummary .priceAlignment .summaryHeaderPanel {
+  padding-left: 0px;
+}
+.isccs .orderpricingsummary .priceSummaryPanel > div {
+  margin-bottom: 20px;
+}
+.isccs .orderpricingsummary .orderTotalLine {
+  margin-top: 10px;
+}
+.isccs .orderpricingsummary .pnlOrderPricingHeaderSummary {
+  overflow: auto;
+}
+.isccs .addmodifychargespopup .chargesRepeatingPane {
+  margin-top: 15px;
+}
+.isccs .addmodifychargespopup .chargeFields {
+  border-top: 1px solid #777777;
+  padding-top: 5px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  margin-right: 15px;
+  vertical-align: top;
+}
+.isccs .addmodifychargespopup .chargeFields .actionLink {
+  text-align: right;
+}
+.isccs .addressdisplay {
+  padding: 7px;
+  overflow: auto;
+}
+.isccs .addressdisplay .addressHeader {
+  padding-bottom: 2px;
+  margin-bottom: 3px;
+  border-bottom: 1px solid #d7d9e8;
+  overflow: inherit;
+}
+.isccs .addressdisplay .addressHolder {
+  float: left;
+  margin-bottom: 5px;
+}
+.isccs .addressdisplay .addressHolder span {
+  display: block;
+}
+.isccs .addressdisplay .addressDefaults {
+  float: right;
+  padding-left: 5px;
+  margin-left: 5px;
+  border-left: 1px solid #d7d9e8;
+}
+.isccs .addressdisplay .addressAdditionalInfo {
+  float: left;
+  width: 100%;
+}
+.isccs .addressdisplay .addressAdditionalInfo .addDisplayemail {
+  margin-top: 3px;
+}
+.isccs .addresscapturepage .isccsScreen {
+  padding-right: 10px;
+}
+.isccs .addresscapturepage .addressType {
+  border-bottom: 2px solid #0075a3;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+.isccs .addresscapturepage .addressSelection .cmbCountry {
+  margin-left: 15px;
+}
+.isccs .addresscapture .addresscapture {
+  border-top: 1px solid #cccccc;
+  margin-top: 10px;
+  padding-top: 5px;
+}
+.isccs .shipTrackStatusPanel {
+  margin: 12px 0px;
+}
+.isccs .shipTrackStatusPanel .tableLayout-cols-2-valueCell-0 {
+  width: 24px;
+}
+.isccs .shipTrackStatusPanel.exceptionPanel {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  border: 2px solid #0075a3;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+  background: #fff3f3;
+  border: 2px solid #cd312a;
+}
+.isccs .shipTrackStatusPanel.informationPanel {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  border: 2px solid #0075a3;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+  background-color: none;
+}
+.isccs .shipTrackStatusPanel .primaryInformation {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.isccs .shipTrackStatusPanel .additionalInfo {
+  border-top: 1px solid #d7d9e8;
+}
+.isccs .shipmenttracking .listScreenPreviewContainer {
+  padding-top: 10px;
+  padding-bottom: 0px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.isccs .shipmenttracking .listScreenPreviewContainer .onHoldPanel {
+  margin-bottom: 10px;
+}
+.isccs .shipmenttracking .listScreenPreviewContainer .orderLineListGrid {
+  min-height: 300px;
+}
+.isccs .onTrackPanel {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  border: 2px solid #0075a3;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+}
+.isccs .confirmFields > div, .isccs .confirmFields > span {
+  margin-bottom: 10px;
+}
+.isccs .confirmFields .indent {
+  margin-left: 20px;
+  margin-top: 5px;
+}
+.isccs .onpreviousdialog .cancelButton {
+  float: right;
+}
+.isccs .homeeditor {
+  background-color: #f2f2f2;
+}
+.isccs .homeeditor .relatedTaskHolder .dijitTitlePane {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  padding: 0px;
+}
+.isccs .homeeditor .relatedTaskHolder .primaryTitlePane > .dijitTitlePaneTitle {
+  background: transparent;
+}
+.isccs .homeeditor .relatedTaskHolder .primaryTitlePane > .dijitTitlePaneTitle .dijitTitlePaneTextNode {
+  color: #000000;
+}
+.isccs .homeeditor .relatedTaskHolder .relatedTaskGroup.innerTitlePane {
+  margin-left: 0px;
+}
+.isccs .homeeditor .relatedTaskHolder .relatedTaskGroup .dijitTitlePane .dijitTitlePaneContentOuter {
+  padding-left: 10px;
+}
+.isccs .homeeditor .relatedTaskHolder .innerTitlePane > .dijitTitlePaneTitle {
+  background: #F7F7F7;
+  border: none;
+  padding-left: 5px;
+}
+.isccs .homeeditor .relatedTaskHolder .relatedTaskGroup.dijitTitlePane .dijitTitlePaneContentOuter {
+  padding-left: 10px;
+}
+.isccs .home .tableLayout-cols-2-table {
+  border-spacing: 0px;
+}
+.isccs .home .tableLayout-cols-2-table td {
+  width: 50%;
+}
+.isccs .portlet.isccsScreen {
+  border: 1px solid #d7d9e8;
+  padding: 10px;
+  margin: 0px 5px 13px 5px;
+}
+.isccs .portlet {
+  background-color: #ffffff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px -3px rgba(0, 0, 0, 0.5);
+}
+.isccs .portlet .portletHeader {
+  border-bottom: 3px solid #005475;
+  padding: 5px;
+  padding-top: 0px;
+}
+.isccs .portlet .portletHeader .primaryInformation {
+  font-weight: bold;
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+  font-size: 1.2em;
+  color: #000000;
+  display: inline-block;
+  padding: 5px;
+}
+.isccs .portlet .PortletContent {
+  padding: 5px 10px 0px 10px;
+}
+.isccs .portlet .createLink {
+  float: right;
+  padding-top: 5px;
+  font-size: 1em;
+  font-weight: bold;
+}
+@media (min-width: 900px) {
+  .isccs .portletSearchBar {
+    padding-left: 14.4em;
+  }
+}
+@media (max-width: 900px) {
+  .isccs .portletSearchBar > .dijitButton {
+    margin-left: 0px;
+  }
+}
+.isccs .fulfillmentsummarydetailsscreen .gridx {
+  width: 100%;
+  height: 200px;
+  border: none;
+}
+.isccs .fulfillmentsummarydetailsscreen .pickupPanel > .dijitTitlePaneTitle .dijitArrowNodeInner, .isccs .fulfillmentsummarydetailsscreen .pickupPanel > .dijitClosed .dijitArrowNodeInner {
+  display: inline-block;
+  background-image: url('../icons/images/pickupAllowed.png');
+  background-repeat: no-repeat;
+  height: 16px;
+  width: 66px;
+  margin-left: -45px;
+  padding-left: 0px;
+  background-position: 50px 0px;
+}
+.isccs .fulfillmentsummarydetailsscreen .shippingPanel .shippingPanelContainer .dijitTitlePane .dijitTitlePaneContentInner, .isccs .fulfillmentsummarydetailsscreen .pickupPanel .pickupPanelContainer .dijitTitlePane .dijitTitlePaneContentInner, .isccs .fulfillmentsummarydetailsscreen .unavailableLines .dijitTitlePane .dijitTitlePaneContentInner {
+  margin-left: 15px;
+  margin-right: 10px;
+}
+.isccs .fulfillmentsummarydetailsscreen .shippingPanel > .dijitTitlePaneTitle .dijitArrowNodeInner, .isccs .fulfillmentsummarydetailsscreen .shippingPanel > .dijitClosed .dijitArrowNodeInner {
+  display: inline-block;
+  background-image: url('../icons/images/shippingAllowed.png');
+  background-repeat: no-repeat;
+  height: 16px;
+  width: 66px;
+  margin-left: -45px;
+  padding-left: 0px;
+  background-position: 50px 0px;
+}
+.isccs .fulfillmentsummarydetailsscreen .shippingPanel > .dijitTitlePaneContentOuter {
+  padding-top: 0px;
+}
+.isccs .fulfillmentsummarydetailsscreen .shippingPanel > .dijitTitlePaneContentOuter .dijitTitlePaneContentInner {
+  padding: 0px;
+}
+.isccs .fulfillmentsummarydetailsscreen .shippingPanel .shippingOptions {
+  padding: 5px;
+}
+.isccs .fulfillmentsummarydetailsscreen .shippingPanel .shippingOptions .scDataLabelValue {
+  width: inherit;
+}
+.isccs .fulfillmentsummarydetailsscreen .shippingPanel .shippingPanelContainer {
+  padding: 9px;
+}
+.isccs .fulfillmentsummarydetailsscreen .shippingPanel .shippingPanelContainer .levelOfService {
+  width: 50%;
+}
+.isccs .fulfillmentsummarydetailsscreen .unavailableLines {
+  border: 2px solid #cd312a;
+  background: #fff3f3;
+}
+.isccs .fulfillmentsummarydetailsscreen .unavailableLines > .dijitTitlePaneTitle .dijitArrowNodeInner, .isccs .fulfillmentsummarydetailsscreen .unavailableLines > .dijitClosed .dijitArrowNodeInner {
+  display: inline-block;
+  background-image: url('../icons/images/reject.png');
+  background-repeat: no-repeat;
+  height: 16px;
+  width: 66px;
+  margin-left: -45px;
+  padding-left: 0px;
+  background-position: 50px 0px;
+}
+.isccs .fulfillmentsummarydetailsscreen .buttonPanel {
+  margin-bottom: 25px;
+}
+.isccs .fulfillmentsummarydetailsscreen .orderLineListBasicScreen {
+  margin-top: 5px;
+}
+.isccs .fulfillmentsummarydetailsscreen .fieldSpacing {
+  margin: 10px 0px;
+}
+.isccs .fulfillmentsummarydetailsscreen .fieldSpacing > div > table {
+  border-spacing: 0px 5px;
+}
+.isccs .changepickupoptions .idxCheckBoxWrap {
+  padding: initial;
+  width: initial;
+}
+.isccs .carrierservicepopup .levelOfService {
+  margin-top: 10px;
+}
+.isccs .changePickupOptions .pickRecipient {
+  padding-left: 10px;
+}
+.isccs .storeselection .isccsScreen > .accentPanel {
+  padding-top: 10px;
+}
+.isccs .storeselection .accentPanel .searchField > .dijitInline {
+  margin-left: 11px;
+}
+.isccs .addressFilter .addressFilter {
+  padding-left: 5px;
+  overflow: hidden;
+}
+.isccs .addressFilter .addressFilter .idxLink {
+  margin-top: 10px;
+}
+.isccs .storeDisplay {
+  margin-top: 10px;
+}
+.isccs .storeDisplay .storeSelectionGrid {
+  height: 250px;
+  overflow: auto;
+}
+.isccs .storeDisplay .gridx {
+  width: 55%;
+  display: inline-block;
+}
+.isccs .storeDisplay .storeDisplayPreview {
+  width: 40%;
+  padding-left: 10px;
+  display: inline-block;
+  vertical-align: top;
+}
+.isccs .storeDisplay .storeDisplayPreview .accentPanel {
+  margin-top: 10px;
+  padding: 10px;
+}
+.isccs .storeDisplay.storeDisplaynoresults .gridx {
+  width: 100%;
+}
+.isccs .storeDisplay.storeDisplaynoresults .storeDisplayPreview {
+  width: 0%;
+}
+.isccs .changevariationpage .attributeHolder > div {
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+.isccs .variationAttrList {
+  padding-left: 0px;
+}
+.isccs .skuSelector {
+  list-style-type: none;
+  height: 65px;
+  margin-top: 10px;
+}
+.isccs .skuSelector.variationImageGroup {
+  margin-bottom: 30px;
+}
+.isccs .skuSelector .headingLabel {
+  padding-right: 10px;
+}
+.isccs .skuSelector .valueLabel {
+  font-size: 1.2em;
+}
+.isccs .skuSelector ul li .div-style {
+  padding: 1px;
+}
+.isccs .skuSelector ul li.li-style {
+  cursor: pointer;
+  min-width: 36px;
+  height: 27px;
+  line-height: 27px;
+  margin: 0px 0px 9px 9px;
+  float: left;
+  text-align: center;
+  border: 2px solid #cccccc;
+  padding: 1px;
+  position: relative;
+}
+.isccs .skuSelector ul li.button {
+  color: #821616;
+  display: block;
+  cursor: pointer;
+  margin: 0px 0px 9px 9px;
+  float: left;
+  text-align: center;
+  border: 1px solid #cccccc;
+  padding: 1px;
+}
+.isccs .skuSelector ul.ul-style {
+  position: relative;
+  padding: 0px;
+  margin-top: 5px;
+  margin-left: -5px;
+  list-style-type: none;
+}
+.isccs .skuSelector li img {
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+.isccs .skuSelector li.button.selected, .isccs .skuSelector li.li-style.selected {
+  border: 2px solid #e47911;
+}
+.isccs .skuSelector li.li-style, .isccs .skuSelector li.li-style {
+  padding-bottom: 3px;
+}
+.isccs .skuSelector li.button.unavailable, .isccs .skuSelector li.li-style.unavailable {
+  border: 2px dotted #cccccc;
+}
+.isccs .skuSelector li.button.available {
+  border: 2px solid #cccccc;
+  padding: 1px;
+}
+.isccs .skuSelector li.li-style.available {
+  border: 2px solid #cccccc;
+}
+.isccs .skuSelector li.button.available.selected, .isccs .skuSelector li.li-style.available.selected {
+  border: 2px solid #e47911;
+}
+.isccs .skuSelector li.button.unavailable.selected, .isccs .skuSelector li.li-style.unavailable.selected {
+  border: 2px dotted #e47911;
+}
+.isccs .skuSelector ul li.li-style .crossOverlay {
+  height: 27px;
+  width: 100%;
+  position: absolute;
+  left: 0px;
+}
+.isccs .skuSelector li .crossOverlay, .isccs .skuSelector li.button.available .crossOverlay, .isccs .skuSelector li.li-style.available .crossOverlay {
+  opacity: 0;
+  position: absolute;
+  /*IE8*/
+
+  filter: alpha(opacity=0);
+}
+.isccs .skuSelector li.button.unavailable .crossOverlay, .isccs .skuSelector li.li-style.unavailable .crossOverlay {
+  opacity: 1;
+  /*IE8*/
+
+  filter: alpha(opacity=70);
+}
+.isccs .skuSelector li.button.unavailable .chngVarLabel, .isccs .skuSelector li.li-style.unavailable .chngVarLabel {
+  opacity: 0.5;
+  /*IE8*/
+
+  filter: alpha(opacity=100);
+}
+.isccs .moreImages {
+  text-align: center;
+  display: block;
+}
+.isccs .imagePanel .variationInvalid {
+  border: 1px solid #cccccc;
+  background: #ffffff;
+  top: 185px;
+  width: 200px;
+  position: absolute;
+}
+.isccs .imagePanel .variationInvalid > span {
+  margin: 15px;
+  display: block;
+  text-align: center;
+}
+.isccs.mobile .itemdetails .detailsPanel {
+  margin: 0px;
+}
+.isccs.mobile .itemdetails .itemImageDetailsDiv {
+  width: 120px;
+  height: 120px;
+}
+.isccs.mobile .itemdetails .itemImageDetailsDiv img {
+  width: 120px;
+}
+.isccs.mobile .itemdetails .detailsSecondaryInfoPanel {
+  padding-bottom: 0px;
+}
+.isccs.mobile .itemdetails .availabilityPanel {
+  display: none !important;
+}
+.isccs.mobile .itemdetails .moreImages {
+  display: none !important;
+}
+.isccs.mobile .itemdetails .variationPanel {
+  display: none !important;
+}
+.isccs.mobile .itemdetails .vHeader {
+  display: none !important;
+}
+.isccs.mobile .itemdetails .variationSubTitle {
+  display: none !important;
+}
+.isccs.mobile .itemdetails .strikeLabelPrice {
+  display: block;
+}
+.isccs .itemdetails .detailsPrimaryInfoPanel {
+  border: none;
+  box-shadow: none;
+}
+.isccs .itemdetails.noItemImageRule .imagePanel {
+  display: none;
+}
+.isccs .itemdetails.noItemImageRule .detailsPanel {
+  margin-left: initial;
+}
+.isccs .itemdetails .imagePanel {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  float: left;
+}
+.isccs .itemdetails .imagePanel .variationInvalid {
+  width: 350px;
+  top: 140px;
+}
+.isccs .itemdetails .detailsPanel {
+  vertical-align: top;
+  margin-left: 370px;
+}
+.isccs .itemdetails .detailsPanel .webAddress {
+  float: right;
+  padding-top: 4px;
+}
+.isccs .itemdetails .detailsPanel .pricePanel {
+  border-bottom: 1px solid #777777;
+  margin-bottom: 5px;
+  padding-bottom: 2px;
+}
+.isccs .itemdetails .detailsPanel .deliveryMethod > div, .isccs .itemdetails .detailsPanel .deliverymethod .addToOrder {
+  padding-top: 15px;
+}
+.isccs .itemdetails .itemMoreDetails {
+  min-height: 435px;
+  height: auto;
+  vertical-align: top;
+  float: left;
+  width: 100%;
+  display: block;
+}
+.isccs .itemdetails .itemMoreDetails.refreshVariation {
+  margin-top: 25px;
+}
+.isccs .itemdetails .itemMoreDetails .refreshLink > div {
+  margin-left: 5px;
+  margin-top: 5px;
+}
+.isccs .itemdetails .itemMoreDetails .repeatingPanel > div {
+  margin-bottom: 20px;
+}
+.isccs .itemdetails .itemMoreDetails .repeatingPanel .itemspecifications .attributeList > div > table {
+  border-spacing: 0px 5px;
+  border: 1px solid #d7d9e8;
+  border-collapse: collapse;
+}
+.isccs .itemdetails .itemMoreDetails .repeatingPanel .itemspecifications .attributeList > div > table tr td:first-child {
+  width: 20em;
+  text-align: left;
+  padding: 5px 10px;
+  background-color: #f2f2f2;
+  border-style: none;
+  border-width: 0px;
+  border-bottom: 1px solid #d7d9e8;
+}
+.isccs .itemdetails .itemMoreDetails .repeatingPanel .itemspecifications .attributeList > div > table tr td:first-child + td {
+  text-align: left;
+  padding: 5px 10px;
+  border-style: none;
+  border-width: 0px;
+  border-bottom: 1px solid #d7d9e8;
+}
+.isccs .itemdetails .refreshVariationLnk {
+  width: 330px;
+  display: block;
+  float: right;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.isccs .itemdetails .refreshVariationLnk.noRelatedItems {
+  border: 1px solid #dddddd;
+  margin-top: 30px;
+}
+.isccs .itemdetails .refreshVariationLnk.noRelatedItems .scLinkAlignment {
+  padding: 10px;
+}
+.isccs .itemdetails .relatedProductsVisible .itemMoreDetails {
+  margin-left: -360px;
+}
+.isccs .itemdetails .relatedProductsVisible .itemMoreDetails > div {
+  margin-left: 360px;
+}
+.isccs .itemdetails .detailsMainInfoPanel {
+  margin-top: 20px;
+}
+.isccs .itemdetails .detailsMainInfoPanel > .relatedProducts {
+  width: 330px;
+  display: block;
+  float: right;
+}
+.isccs .variationItem .productModalTitle {
+  padding-bottom: 5px;
+}
+.isccs .variationItem .variationSubTitle {
+  border-bottom: 1px solid #dddddd;
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 1em;
+  display: block;
+}
+.isccs .variationItem .productTitle {
+  font-weight: bold;
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+  font-size: 1.1em;
+}
+.isccs .variationItem .vheader {
+  border-bottom: 1px solid #dddddd;
+  min-height: 47px;
+}
+.isccs .variationItem .vheader.noValue {
+  height: 0px;
+  min-height: 0px;
+  border-bottom: none;
+}
+.isccs .variationItem .vheader .pricePanel {
+  border-bottom: none;
+  margin-bottom: 0px;
+}
+.isccs .variationItem .vheader .errorText {
+  padding-top: 15px;
+  display: block;
+}
+.isccs .variationItem .vheader .productTitle {
+  margin-top: 5px;
+}
+.isccs .variationItem .variationPanel {
+  border-bottom: 1px solid #dddddd;
+}
+.isccs .variationItem .variationPanel .vspecifications {
+  padding-right: 20px;
+  vertical-align: top;
+  display: table-cell;
+}
+.isccs .variationItem .variationPanel .availabilityPanel {
+  border-left: 1px solid #dddddd;
+  margin-left: 5px;
+  padding-left: 10px;
+  vertical-align: top;
+  display: table-cell;
+}
+.isccs .variationItem .variationPanel .rightPanel {
+  display: table-cell;
+  padding-top: 15px;
+}
+.isccs .variationItem .variationPanel .rightPanel .dijitButton {
+  margin: 20px 0px 10px 0px;
+}
+.isccs .variationItem .variationPanel .rightPanel .cancelLink {
+  margin: 10px 0px 0px 10px;
+}
+.isccs .orderselectionpopup .createButton {
+  padding-bottom: 5px;
+}
+.isccs .itemmoreimages .thumbNailPanel {
+  vertical-align: top;
+  float: right;
+  border: 1px solid #d7d9e8;
+  margin-left: 5px;
+  padding: 0px 9px 0px 9px;
+  width: 200px;
+  height: 435px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+/* On mobile the more images display in a tab. So the styles need to change acordingly*/
+.isccs.mobile .itemmoreimages .thumbnailPanel {
+  width: auto;
+  border: none;
+  float: none;
+}
+.isccs.mobile .itemmoreimages .moreImageLargeDiv {
+  display: none !important;
+}
+.isccs .cancelorderbasescreen .cancelAllRadioHolder {
+  margin: 10px 0px 4px 0px;
+}
+.isccs .customerpreview {
+  padding-left: 5px;
+}
+.isccs .customerpreview .singlecolumntable .inline {
+  display: inline-block;
+  float: inherit;
+}
+.isccs .customerpreview .singlecolumntable .inline .scLinkAlignment .dijitInputContainer {
+  overflow: inherit;
+}
+.isccs .customerHighLightText {
+  color: #00649d;
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
+  font-size: 1.8em;
+}
+.isccs .customerHighLightTextGrid {
+  color: #00649d;
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
+  font-size: 1em;
+}
+.isccs .customeridentification .genericSearchContainer {
+  margin-left: 0px;
+}
+.isccs .customeridentification .genericSearchContainer > .idxContentPane .advancedTableLayout-table {
+  -webkit-border-vertical-spacing: 0px;
+}
+.isccs .customeridentification .genericSearchContainer .accentPanel .actionBar {
+  padding-left: 10px;
+}
+.isccs .alertDetailMessage {
+  min-height: 15px;
+  min-width: 300px;
+  padding: 7px;
+  border: 1px solid #d7d9e8;
+  background-color: #FFD;
+  display: inline-block;
+}
+.isccs .dijitStackContainer .dijitContentPane .createScreenDescription {
+  padding-left: 17px;
+}
+.isccs .customerPaymentMethodsContainer .customerpaymentmethod {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  border: 1px solid #d7d9e8;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+  min-width: 350px;
+  height: 100px;
+  padding: 5px;
+  margin: 5px;
+  display: inline-block;
+}
+.isccs .customerPaymentMethodsContainer .customerpaymentmethod .paymentMethodPanel {
+  border: 0px;
+  padding: 0px;
+}
+.isccs .customerPaymentMethodsContainer .customerpaymentmethod .paymentMethodPanel .scDataLabelValue {
+  min-width: 7em;
+  width: 7em;
+}
+.isccs .customerPaymentMethodsContainer .customerpaymentmethod .paymentMethodPanel .tableLayout-cols-2-valueCell-0 {
+  max-width: 130px;
+}
+.isccs .customerPaymentMethodsContainer .customerpaymentmethod .paymentMethodPanel .defaultPaymentMethod {
+  display: block;
+  padding-top: 5px;
+}
+.isccs .customersearch .genericSearchContainer {
+  margin-left: 0px;
+}
+.isccs .customersearch .genericSearchContainer > .idxContentPane .advancedTableLayout-table {
+  -webkit-border-vertical-spacing: 0px;
+}
+.isccs .customersearch .genericSearchContainer .accentPanel .actionBar {
+  padding-left: 10px;
+}
+.isccs .alertsearch .accentPanel .actionBar {
+  padding-left: 24px;
+}
+.isccs .ordersearch .accentPanel .actionBar {
+  padding-left: 19px;
+}
+.isccs .usersearchscreen .genericSearchContainer {
+  margin-left: 0px;
+}
+.isccs .usersearchscreen .genericSearchContainer > .idxContentPane .advancedTableLayout-table {
+  -webkit-border-vertical-spacing: 0px;
+}
+.isccs .pricematchsearch .genericSearchContainer > .idxContentPane .advancedTableLayout-table {
+  -webkit-border-vertical-spacing: 0px;
+}
+.isccs .competitorsearch .genericSearchContainer {
+  margin-left: 10px;
+}
+.isccs .competitorsearch .genericSearchContainer > .idxContentPane .advancedTableLayout-table {
+  -webkit-border-vertical-spacing: 0px;
+}
+.isccs .invoiceheadercharges {
+  margin-left: 17px;
+}
+.isccs .invoiceheadercharges .numericLabel .scDataLabelValue {
+  margin: 3px 0px 2px 3px;
+  padding-right: 10px;
+}
+.isccs .invoiceheadercharges .numericLabel .scLabel.spanLabel {
+  width: 12.5em;
+}
+.isccs .invoicetotal .numericLabel {
+  margin-left: 22px;
+}
+.isccs .invoicetotal .adjustmentHeader {
+  margin-left: 0px;
+}
+.isccs .invoicedetailstaxes .scDataLabelValue, .isccs .invoicedetailsadjustments .scDataLabelValue {
+  width: 140px;
+}
+.isccs .invoicedetails .paymentTotalTableLayout-valueCell-1 > .idxContentPane {
+  max-width: 370px;
+  min-width: 370px;
+}
+.isccs .invoicedetails .paymentTotalTableLayout-valueCell-1 > .idxContentPane > .dijitTitlePaneContentOuter {
+  margin-left: 20px;
+}
+.isccs .invoicedetails .paymentTotalTableLayout-valueCell-1 .adjustmentsTotal {
+  margin-left: 10px;
+}
+.isccs .invoicedetails .paymentTotalTableLayout-valueCell-0 .gridx {
+  max-height: 400px;
+  min-height: 210px;
+  overflow: auto;
+}
+.isccs .createuser .singlecolumntable > div.addressDisplay, .isccs .createuser .dijitContentPane.singlecolumntable > div.addressDisplay {
+  padding: 0px;
+  width: 360px;
+}
+.isccs .createuser .singlecolumntable > div.addressDisplay .addressDisplay, .isccs .createuser .dijitContentPane.singlecolumntable > div.addressDisplay .addressDisplay {
+  padding: 7px;
+  width: 346px;
+}
+@media (max-width: 1050px) {
+  .isccs .createuser .singlecolumntable > div.addressDisplay, .isccs .createuser .dijitContentPane.singlecolumntable > div.addressDisplay {
+    padding: 0px;
+    width: 317px;
+  }
+  .isccs .createuser .singlecolumntable > div.addressDisplay .addressDisplay, .isccs .createuser .dijitContentPane.singlecolumntable > div.addressDisplay .addressDisplay {
+    padding: 7px;
+    width: 303px;
+  }
+}
+.isccs .createcompetitor .dijitContentPane .createScreenDescription {
+  padding-left: 17px;
+}
+.isccs .competitordetails .dijitContentPane .createScreenDescription {
+  padding-left: 17px;
+}
+.isccs .ordersummary .tableLayout-cols-2-equalWidth-table {
+  border-spacing: 0px;
+}
+.isccs .ordersummary .tableLayout-cols-2-equalWidth-valueCell-0 {
+  padding-left: 4px;
+}
+.isccs .ordersummary .tableLayout-cols-2-equalWidth-valueCell-1 .addressdisplay {
+  padding-left: 3px;
+}
+.isccs .aboutpopup .ibmlogo {
+  display: inline;
+  margin-top: 30px;
+}
+.isccs .aboutpopup .javalogo {
+  display: inline;
+  float: right;
+}
+.isccs .dijitDialog {
+  min-height: 50px;
+  max-height: 90%;
+  min-width: 300px;
+  max-width: 900px;
+  overflow: auto;
+}
+@media (max-width: 340px) {
+  .isccs.mobile .dijitDialog {
+    min-width: 90% !important;
+    max-width: 90% !important;
+    max-height: 85% !important;
+  }
+}
+.isccs .isccsPopup {
+  max-width: 900px;
+  max-height: 440px;
+  overflow: auto;
+  padding-left: 5px;
+}
+@media (max-width: 340px) {
+  .isccs .isccsPopup {
+    max-height: 380px;
+  }
+}
+.isccs .dijitDialogPaneContent {
+  height: auto !important;
+  width: auto !important;
+}
+.isccs .dijitDialog .dijitDialogPaneContent {
+  padding-bottom: 10px;
+}
+.isccs .onclosedialog .idxCheckBoxWrap {
+  padding: initial;
+  width: initial;
+}
+.isccs .optionalPopupField {
+  padding-left: 0px;
+  text-align: left;
+  padding-bottom: 5px;
+}
+.isccs .optionalPopupField.idxcheckboxWrap {
+  padding-left: 0px;
+  width: 100%;
+}
+.isccs .optionalPopupField.dijitButton {
+  padding-bottom: 0px;
+}
+.isccs .popupNavigation {
+  margin-top: 10px;
+  min-height: 40px;
+  padding: 20px 0px 4px 0px;
+  border-top: 1px solid #cccccc;
+  text-align: right;
+}
+.isccs .popupNavigation .dijitButton {
+  margin: 0px 0px 0px 5px;
+}
+.isccs.mobile .popupNavigation {
+  min-height: 0px;
+  padding: 5px 0px 0px 0px;
+}
+.isccs .aboutpopup_popup .dijitDialogPaneContent {
+  max-width: 600px;
+}
+.isccs .aboutpopup_popup .dijitDialogTitleBar {
+  max-width: 600px;
+}
+.isccs .aboutpopup_popup .dijitDialogTitleBar {
+  display: none;
+}
+.isccs .userpreferencepopup_popup .dijitDialogPaneContent {
+  max-width: 400px;
+}
+.isccs .userpreferencepopup_popup .dijitDialogTitleBar {
+  max-width: 400px;
+}
+.isccs .ordersearch_popup .dijitDialogPaneContent {
+  max-width: 840px;
+}
+.isccs .ordersearch_popup .dijitDialogTitleBar {
+  max-width: 840px;
+}
+.isccs .customersearch_popup .dijitDialogPaneContent {
+  max-width: 840px;
+}
+.isccs .customersearch_popup .dijitDialogTitleBar {
+  max-width: 840px;
+}
+.isccs .competitorsearch_popup .dijitDialogPaneContent {
+  max-width: 740px;
+}
+.isccs .competitorsearch_popup .dijitDialogTitleBar {
+  max-width: 740px;
+}
+.isccs .returnsearch_popup .dijitDialogPaneContent {
+  max-width: 840px;
+}
+.isccs .returnsearch_popup .dijitDialogTitleBar {
+  max-width: 840px;
+}
+.isccs .overridepricepopup_popup .dijitDialogPaneContent {
+  max-width: 600px;
+}
+.isccs .overridepricepopup_popup .dijitDialogTitleBar {
+  max-width: 600px;
+}
+.isccs .returnlinespreview_popup .dijitDialogPaneContent {
+  max-width: 400px;
+}
+.isccs .returnlinespreview_popup .dijitDialogTitleBar {
+  max-width: 400px;
+}
+.isccs .usersearchscreen_popup .dijitDialogPaneContent {
+  max-width: 600px;
+}
+.isccs .usersearchscreen_popup .dijitDialogTitleBar {
+  max-width: 600px;
+}
+.isccs .alertnotedisplay_popup .dijitDialogPaneContent {
+  max-width: 680px;
+}
+.isccs .alertnotedisplay_popup .dijitDialogTitleBar {
+  max-width: 680px;
+}
+.isccs .notedisplay_popup .dijitDialogPaneContent {
+  max-width: 680px;
+}
+.isccs .notedisplay_popup .dijitDialogTitleBar {
+  max-width: 680px;
+}
+.isccs .alertnote_popup .dijitDialogPaneContent {
+  max-width: 680px;
+}
+.isccs .alertnote_popup .dijitDialogTitleBar {
+  max-width: 680px;
+}
+.isccs .ordernote_popup .dijitDialogPaneContent {
+  max-width: 680px;
+}
+.isccs .ordernote_popup .dijitDialogTitleBar {
+  max-width: 680px;
+}
+.isccs .storeselection_popup .dijitDialogPaneContent {
+  max-width: 650px;
+}
+.isccs .storeselection_popup .dijitDialogTitleBar {
+  max-width: 650px;
+}
+.isccs .viewbundlecomponentspopup_popup .dijitDialogPaneContent {
+  max-width: 750px;
+}
+.isccs .viewbundlecomponentspopup_popup .dijitDialogTitleBar {
+  max-width: 750px;
+}
+.isccs .bundlepopup_popup .dijitDialogPaneContent {
+  max-width: 750px;
+}
+.isccs .bundlepopup_popup .dijitDialogTitleBar {
+  max-width: 750px;
+}
+.isccs .carrierservicepopup_popup .dijitDialogPaneContent {
+  max-width: 500px;
+}
+.isccs .carrierservicepopup_popup .dijitDialogTitleBar {
+  max-width: 500px;
+}
+.isccs .createcompetitor_popup .dijitDialogPaneContent {
+  min-width: 840px;
+}
+.isccs .orderselectionpopup_popup .dijitDialogPaneContent {
+  max-width: 500px;
+}
+.isccs .orderselectionpopup_popup .dijitDialogTitleBar {
+  max-width: 500px;
+}
+.isccs .orderaddresscapturepage_popup {
+  min-height: 500px;
+  min-width: 500px;
+}
+.isccs .orderaddresscapturepage_popup .dijitDialogPaneContent {
+  max-width: 550px;
+}
+.isccs .orderaddresscapturepage_popup .dijitDialogTitleBar {
+  max-width: 550px;
+}
+.isccs .orderaddresscapturepage_popup .dijitDialogPaneContent {
+  min-width: 550px;
+}
+.isccs .orderaddresscapturepage_popup .addresscapturepage > .isccsScreen {
+  min-height: 450px;
+}
+.isccs .addresscapturepage_popup {
+  min-height: 500px;
+  min-width: 500px;
+}
+.isccs .addresscapturepage_popup .dijitDialogPaneContent {
+  max-width: 475px;
+}
+.isccs .addresscapturepage_popup .dijitDialogTitleBar {
+  max-width: 475px;
+}
+.isccs .addresscapturepage_popup .addresscapturepage > .isccsScreen {
+  min-height: 450px;
+}
+.isccs .createcontact_popup .dijitDialogPaneContent {
+  max-width: 525px;
+}
+.isccs .createcontact_popup .dijitDialogTitleBar {
+  max-width: 525px;
+}
+.isccs .itemmoreimages_popup .dijitDialogPaneContent {
+  max-width: 827px;
+}
+.isccs .itemmoreimages_popup .dijitDialogTitleBar {
+  max-width: 827px;
+}
+.isccs .itemmoreimages_popup .itemmoreimages {
+  width: 700px;
+}
+.isccs .orderpricingsummary_popup .dijitDialogPaneContent {
+  max-width: 850px;
+}
+.isccs .orderpricingsummary_popup .dijitDialogTitleBar {
+  max-width: 850px;
+}
+.isccs .paymentcapture_popup .dijitDialogPaneContent {
+  max-width: 400px;
+}
+.isccs .paymentcapture_popup .dijitDialogTitleBar {
+  max-width: 400px;
+}
+.isccs .addmodifychargespopup_popup .dijitDialogPaneContent {
+  max-width: 850px;
+}
+.isccs .addmodifychargespopup_popup .dijitDialogTitleBar {
+  max-width: 850px;
+}
+.isccs .getorganizationlist_popup .dijitDialogPaneContent {
+  max-width: 310px;
+}
+.isccs .getorganizationlist_popup .dijitDialogTitleBar {
+  max-width: 310px;
+}
+.isccs .getorganizationlist_popup .isccsPopup {
+  overflow: visible;
+  min-width: 300px;
+}
+@-webkit-keyframes AlertPulse {
+  0% {
+    font-size: 1.3em;
+  }
+  11% {
+    font-size: 1.7em;
+    color: #ff0000;
+  }
+  22% {
+    font-size: 1.7em;
+    color: #ff0000;
+  }
+  33% {
+    font-size: 1.3em;
+  }
+  44% {
+    font-size: 1.7em;
+    color: #ff0000;
+  }
+  55% {
+    font-size: 1.7em;
+    color: #ff0000;
+  }
+  66% {
+    font-size: 1.3em;
+  }
+  77% {
+    font-size: 1.7em;
+    color: #ff0000;
+  }
+  88% {
+    font-size: 1.7em;
+    color: #ff0000;
+  }
+  100% {
+    font-size: 1.3em;
+  }
+}
+@keyframes AlertPulse {
+  0% {
+    font-size: 1.3em;
+  }
+  11% {
+    font-size: 1.7em;
+    color: #ff0000;
+  }
+  22% {
+    font-size: 1.7em;
+    color: #ff0000;
+  }
+  33% {
+    font-size: 1.3em;
+  }
+  44% {
+    font-size: 1.7em;
+    color: #ff0000;
+  }
+  55% {
+    font-size: 1.7em;
+    color: #ff0000;
+  }
+  66% {
+    font-size: 1.3em;
+  }
+  77% {
+    font-size: 1.7em;
+    color: #ff0000;
+  }
+  88% {
+    font-size: 1.7em;
+    color: #ff0000;
+  }
+  100% {
+    font-size: 1.3em;
+  }
+}
+.isccs.mobile {
+  min-width: 0px;
+}
+.isccs.mobile .fixed_layer {
+  padding-top: 5px;
+  background: #393939;
+  /* Old browsers*/
+
+  background: -moz-linear-gradient(top, #393939 0%, #3e3e3e 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #393939), color-stop(100%, #3e3e3e));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, #393939 0%, #3e3e3e 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, #393939 0%, #3e3e3e 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, #393939 0%, #3e3e3e 100%);
+  /* IE10+ */
+
+  background: linear-gradient(top, #393939 0%, #3e3e3e 100%);
+  /* W3C */
+
+}
+.isccs.mobile .navigationContainer {
+  display: inline-block;
+  width: 32%;
+}
+.isccs.mobile .navigationContainer .backButton .dijitButtonNode {
+  min-width: initial;
+  background-image: none;
+  background-color: transparent;
+  border: 2px solid black;
+  visibility: hidden;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.isccs.mobile .navigationContainer .backButton .dijitButtonNode .dijitButtonText {
+  color: #ffffff;
+  font-weight: normal;
+  text-shadow: none;
+  font-size: 1em;
+}
+.isccs.mobile .navigationContainer .backButton.showButton .dijitButtonNode {
+  visibility: visible;
+}
+.isccs.mobile .notificationCenter {
+  display: inline-block;
+  width: 32%;
+  text-align: center;
+}
+.isccs.mobile .notificationCenter .openAlerts .idxLink {
+  animation: AlertPulse 4s;
+  -webkit-animation: AlertPulse 4s;
+  -o-animation: AlertPulse 4s;
+  -moz-animation: AlertPulse 4s;
+}
+.isccs.mobile .notificationCenter .idxLink .scLinkAlignment a {
+  text-align: center;
+  color: white;
+  font-size: 1.3em;
+}
+.isccs.mobile .notificationCenter .idxLink .scLinkAlignment a div {
+  display: inline-block;
+  vertical-align: middle;
+}
+.isccs.mobile .notificationCenter .idxLink .scLinkAlignment a .scLinkText {
+  padding-left: 5px;
+}
+.isccs.mobile .headerContainer {
+  display: inline-block;
+  background: transparent;
+  width: 32%;
+  float: right;
+}
+.isccs.mobile .headerContainer .userMenu {
+  float: right;
+  max-width: 100%;
+}
+.isccs.mobile .headerContainer .userMenu .dijitButtonNode {
+  background-image: none;
+  background-color: transparent;
+  border: none;
+  float: right;
+  width: 100%;
+}
+.isccs.mobile .headerContainer .userMenu .dijitButtonNode .dijitButtonContents {
+  width: 100%;
+  float: right;
+}
+.isccs.mobile .headerContainer .userMenu .dijitButtonNode .dijitButtonText {
+  padding-right: 3px;
+  text-shadow: none;
+  color: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 80%;
+}
+.isccs.mobile .screenTitleContainer {
+  display: none !important;
+}
+.isccs.mobile .csrMessagePanel {
+  display: none !important;
+}
+.isccs.mobile .isccsScreen.singlecolumntable {
+  padding: 0px;
+}
+.isccs.mobile .wizardNavigationPanel {
+  background: transparent;
+  border-width: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+.isccs.mobile .wizardNavigationPanel .navPrevious,
+.isccs.mobile .wizardNavigationPanel .navClose,
+.isccs.mobile .wizardNavigationPanel .navNote,
+.isccs.mobile .wizardNavigationPanel > div {
+  display: none !important;
+}
+.isccs.mobile .wizardNavigationPanel .navNext, .isccs.mobile .wizardNavigationPanel .navConfirm {
+  display: block;
+  text-align: right;
+}
+.isccs.mobile .wizardNavigationPanelTop {
+  border-bottom-width: 2px;
+}
+.isccs.mobile .wizardNavigationPanelBottom {
+  border-top-width: 2px;
+}
+.isccs .infoPanel {
+  background-color: #ffffec;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  border: 2px solid #dd731c;
+  margin: 0px 3px 10px 0px;
+  overflow: hidden;
+  position: relative;
+  height: 12%;
+}
+.isccs .infoPanel .informationIcon {
+  vertical-align: top;
+}
+.isccs .infoPanel .infoMessage {
+  vertical-align: top;
+  margin-top: 10px;
+}
+.isccs .clearfloat {
+  clear: both;
+}
+.isccs .enterpriseHolder {
+  display: none;
+}
+.repeatingPanel > div {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-top: 1px solid #777777;
+}
+.repeatingPanel > div:first-child {
+  border-top: none;
+}
+.isccs .customeridentification .custVerfMethodPanel {
+  padding-bottom: 10px;
+}
+.isccs .customeridentification .custVerfMethodPanel > div > div {
+  width: auto;
+  padding-left: 10px;
+}
+.isccs .productverification .productScanPanel {
+  width: 100%;
+  margin-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-top: 1px solid #777777;
+  border-bottom: 1px solid #777777;
+  border-width: 3px;
+}
+.isccs .productverification .productScanPanel .productScanForm {
+  padding-left: 10px;
+  width: 45%;
+  float: left;
+}
+.isccs .productverification .productScanPanel .productScanForm .itemInput {
+  float: left;
+}
+.isccs .productverification .productScanPanel .productScanForm .add {
+  float: left;
+}
+.isccs .productverification .productScanPanel .productScanForm .pickall {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.isccs .productverification .productScanPanel .lastScannedProductDetailPanel {
+  float: left;
+  width: 53%;
+  display: inline-block;
+}
+.isccs .productScanSuccessImage, .productScanShortageImage {
+  width: 48px;
+  height: 48px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+}
+.isccs .highlightRepeatingPanel {
+  background-color: #f2f2f2;
+}
+.isccs .resolution .resolutionPanel {
+  padding-left: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #777777;
+  border-width: 3px;
+}
+.isccs .displayEmail {
+  margin-top: 5px;
+}
+.isccs .displayPhone {
+  margin-top: 5px;
+}
+.isccs .pickuporderdetails .pickUpOrderContainer {
+  padding-left: 10px;
+  background-color: #f2f2f2;
+  min-height: 550px;
+  overflow-y: auto;
+}
+.isccs .pickuporderdetails .pickUpOrderContainer .checkBoxContainer {
+  border-bottom: 1px solid #777777;
+}
+.isccs .pickuporderdetails .pickUpOrderContainer .checkBoxContainer > div {
+  padding-left: 0px;
+}
+.isccs .pickuporderdetails .pickUpOrderContainer .primaryInfoPanel {
+  float: left;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 98%;
+}
+.isccs .pickuporderdetails .pickUpOrderContainer .primaryInfoPanel .personInfoPanel {
+  min-width: 250px;
+  max-width: 400px;
+  float: left;
+  width: 30%;
+  padding-top: 5px;
+}
+.isccs .pickuporderdetails .pickUpOrderContainer .primaryInfoPanel .personInfoPanel .groupHeader {
+  width: 80%;
+}
+.isccs .pickuporderdetails .pickUpOrderContainer .primaryInfoPanel .personInfoPanel .groupHeader > div {
+  min-width: 12em;
+  width: 14em;
+}
+.isccs .pickuporderdetails .pickUpOrderContainer .primaryInfoPanel .personInfoPanel .field {
+  padding-top: 3px;
+}
+.isccs .pickuporderdetails .pickUpOrderContainer .primaryInfoPanel .shipmentInfoPanel {
+  float: left;
+  min-width: 250px;
+  max-width: 400px;
+}
+.isccs .pickuporderdetails .pickUpOrderContainer .primaryInfoPanel .pickUpOrderPrintPanel {
+  float: right;
+  width: 100px;
+  padding: 10px;
+}
+.isccs .pickuporderdetails .pickUpOrderContainer .secondaryInfoPanel {
+  width: 100%;
+}
+.isccs .pickuporderdetails .pickUpOrderContainer .secondaryInfoPanel .orderInfoPanel {
+  float: left;
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  min-width: 250px;
+  min-height: 360px;
+  width: 40%;
+}
+.isccs .pickuporderdetails .pickUpOrderContainer .secondaryInfoPanel .orderInfoPanel .billingAddressContainer {
+  background-color: #f2f2f2;
+}
+.isccs .pickuporderdetails .pickUpOrderContainer .secondaryInfoPanel .lineDetailsPanel {
+  float: right;
+  margin: 5px;
+  min-width: 450px;
+  min-height: 360px;
+  width: 52%;
+}
+.isccs .pickuporderdetails .pickUpOrderContainer .secondaryInfoPanel .lineDetailsPanel .shipmentLinePanel {
+  height: 300px;
+  overflow-y: auto;
+}
+.isccs .pickuporderdetails .shipmentLineRepeatingPanel .pickuporderlinedetails .detailsPanel {
+  max-width: 79%;
+}
+.isccs .shipmentLineRepeatingPanel .pickuporderlinedetails {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-top: 1px solid #777777;
+  min-height: 90px;
+}
+.isccs .shipmentLineRepeatingPanel .pickuporderlinedetails .imagePanel {
+  float: left;
+}
+.isccs .shipmentLineRepeatingPanel .pickuporderlinedetails .detailsPanel {
+  float: left;
+  padding-left: 5px;
+  min-width: 300px;
+  max-width: 40%;
+}
+.isccs .shipmentLineRepeatingPanel .pickuporderlinedetails .detailsPanel .quantityUoMPanel {
+  float: left;
+}
+.isccs .shipmentLineRepeatingPanel .pickuporderlinedetails .detailsPanel .orderInfoPanel {
+  float: left;
+}
+.isccs .shipmentLineRepeatingPanel .pickuporderlinedetails .detailsPanel .resolutionPanel {
+  float: left;
+}
+.isccs .shipmentLineRepeatingPanel .pickuporderlinedetails .quantityPanel {
+  float: right;
+  max-width: 40%;
+}
+.isccs .shipmentLineRepeatingPanel .pickuporderlinedetails .quantityPanel .shortageQuantity {
+  color: red;
+}
+.isccs .shipmentLineRepeatingPanel .pickuporderlinedetails .linestatus {
+  float: right;
+  width: 90px;
+  height: 90px;
+  vertical-align: top;
+  padding-top: 4px;
+}
+.isccs .shipmentLineRepeatingPanel .pickuporderlinedetails:first-child {
+  border-top: none;
+}
+.isccs .productscandetails .lastScannedProductPanel {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  min-height: 90px;
+  width: auto;
+  margin-bottom: 0px;
+}
+.isccs .productscandetails .lastScannedProductPanel .lastscanlabel {
+  vertical-align: top;
+  padding-top: 5px;
+  font-weight: bold;
+}
+.isccs .productscandetails .lastScannedProductPanel .detailsPanel {
+  padding-left: 10px;
+  padding-top: 5px;
+  min-width: 225px;
+  max-width: 375px;
+}
+.isccs .productscandetails .lastScannedProductPanel .detailsPanel .productTitle {
+  font-size: 1.2em;
+}
+.isccs .productscandetails .displayImagePanel {
+  float: right;
+  display: inline-block;
+}
+.isccs .print .printScreenHolder {
+  width: 800px;
+}
+.isccs .print .printScreenHolder .printIframe {
+  width: 100%;
+  height: 400px;
+  border: 0px;
+}
+.isccs .aboutpopup .ibmlogo {
+  display: inline;
+  margin-top: 30px;
+}
+.isccs .aboutpopup .javalogo {
+  display: inline;
+  float: right;
+}
+.isccs .backroompickportlet .backroomPickContentPane .recordPickPanel {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-top: 1px solid #777777;
+}
+.isccs .portlet .backroomPickContentPane .printTicketPane .ordersReadyForPickTextBox .dijitNumberTextBox {
+  width: 4em;
+}
+.isccs .portlet .backroomPickContentPane .printTicketPane .refreshOrderReadyForPickLink {
+  font-size: 1em;
+  padding-right: 10px;
+}
+.isccs .portlet .backroomPickContentPane .printTicketPane .printAll {
+  display: block;
+}
+.isccs .bpitemscan .productScanPanel {
+  padding-bottom: 5px;
+}
+.isccs .bpitemscan .productScanPanel .shipmentDetails {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.isccs .bpitemscan .productScanPanel .shipmentDetails .shipmentNo, .isccs .bpitemscan .productScanPanel .shipmentDetails .dueIn {
+  display: inline-block;
+  vertical-align: top;
+}
+.isccs .bpitemscan .productScanPanel .shipmentDetails .duein .idxLabel {
+  text-align: right;
+}
+.isccs .bpitemscan .productScanPanel .shipmentDetails .orderno {
+  display: block;
+}
+.isccs .bpitemscan .productScanPanel .productScanForm {
+  border-top: 1px solid #777777;
+  border-bottom: 1px solid #777777;
+  border-width: 3px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+}
+.isccs .bpitemscan .productScanPanel .productScanForm .itemInput {
+  vertical-align: top;
+}
+.isccs .bpitemscan .productScanPanel .productScanForm .itemInput .idxLabel {
+  display: none;
+}
+.isccs .bpitemscan .productScanPanel .productScanForm .addItem {
+  vertical-align: top;
+}
+.isccs .bpitemscan .productScanPanel .productScanForm .lastScannedProductDetailPanel {
+  min-width: 72%;
+  display: inline-block;
+}
+@media (max-width : 480px) {
+  .isccs .bpitemscan .productScanPanel .shipmentDetails .shipmentNo, .isccs .bpitemscan .productScanPanel .shipmentDetails .dueIn {
+    width: 48%;
+  }
+  .isccs .bpitemscan .productScanPanel .shipmentDetails .shipmentNo .idxLabel, .isccs .bpitemscan .productScanPanel .shipmentDetails .dueIn .idxLabel {
+    width: auto;
+    min-width: 0px;
+    display: block;
+  }
+}
+.isccs .bpupdateholdlocation .holdLocationForm {
+  display: inline-block;
+  border-bottom: 1px solid #777777;
+  border-width: 3px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+}
+.isccs .bpupdateholdlocation .holdLocationForm .addItem {
+  display: inline-block;
+}
+.isccs .bpupdateholdlocation .holdlocationlist {
+  margin-bottom: 10px;
+}
+.isccs .bpupdateholdlocation .holdLocationListContainer {
+  padding-top: 5px;
+  display: inline-block;
+  padding-left: 5px;
+}
+@media (max-width : 480px) {
+  .isccs .holdLocation .idxLabel {
+    min-width: 0px;
+    width: auto;
+  }
+}
+.isccs .holdlocation .holdLocationRemoveImage a {
+  background-image: url('../icons/images/reject.png');
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+}
+.isccs .bpshipmentline .productCell,
+.isccs .bpshipmentline .quantityCell,
+.isccs .bpshipmentline .locationCell,
+.isccs .bpshipmentline .shortageCell {
+  display: inline-block;
+}
+.isccs .bpshipmentline .productCell .idxLabel,
+.isccs .bpshipmentline .quantityCell .idxLabel,
+.isccs .bpshipmentline .locationCell .idxLabel,
+.isccs .bpshipmentline .shortageCell .idxLabel {
+  width: auto;
+  min-width: 0px;
+}
+.isccs .bpshipmentline .productCell {
+  width: 35%;
+}
+.isccs .bpshipmentline .productCell > .productTitle {
+  max-width: 65%;
+  padding-top: 5px;
+  vertical-align: top;
+}
+.isccs .bpshipmentline .quantityCell {
+  vertical-align: top;
+  padding-top: 4px;
+  width: 35%;
+  /*.dijitTextBox{
+			width: 6.3em;
+		}	
+		input {
+			width: 30%;
+		}	*/
+
+}
+.isccs .bpshipmentline .locationCell {
+  vertical-align: top;
+  padding-top: 4px;
+  width: 20%;
+}
+.isccs .bpshipmentline .shortageCell {
+  vertical-align: top;
+  padding-top: 4px;
+}
+.isccs .bpshipmentline .shortageCell .updateShortageResolutionImage a {
+  background-image: url('../icons/images/shortLine_mark.png');
+  width: 48px;
+  height: 48px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+}
+/*Tablet Portrait Mode*/
+@media (max-width : 800px) and (min-width : 481px) {
+  .isccs .bpshipmentline .locationCell, .isccs .bpshipmentline .quantityCell {
+    width: 32%;
+  }
+  .isccs .bpshipmentline .locationCell, .isccs .bpshipmentline .shortageCell {
+    width: 32%;
+    float: right;
+  }
+}
+/*Smartphone*/
+@media (max-width : 480px) {
+  .isccs .bpshipmentline .productCell {
+    width: 68%;
+  }
+  .isccs .bpshipmentline .productCell .moreImageThumbnailDiv {
+    height: 50px;
+    width: 50px;
+  }
+  .isccs .bpshipmentline .productCell .moreImageThumbnailDiv img {
+    width: 50px;
+  }
+  .isccs .bpshipmentline .productCell > .fieldLabel {
+    padding-top: 0px;
+  }
+  .isccs .bpshipmentline .quantityCell {
+    padding-top: 10px;
+    width: 73%;
+  }
+  .isccs .bpshipmentline .locationCell {
+    padding-top: 0px;
+    width: 30%;
+    font-size: .9em;
+    text-align: right;
+  }
+  .isccs .bpshipmentline .locationCell > div {
+    width: 100%;
+  }
+  .isccs .bpshipmentline .locationCell .idxLabel {
+    margin-top: 0px;
+    pading-top: 0px;
+    padding-right: 0px;
+  }
+  .isccs .bpshipmentline .shortageCell {
+    width: 25%;
+  }
+}
+.wsc.mobile .mobilehome > .isccsScreen > .idxContentPane {
+  padding: 0px;
+}
+.isccs.mobile .portlet.isccsScreen {
+  padding: 0px;
+  margin: 0px 3px 3px 0px;
+}
+.isccs.mobile .portlet.isccsScreen .portletHeader {
+  padding: 0px;
+}
+.isccs.mobile .portlet.isccsScreen .portletHeader .portletImage {
+  display: none !important;
+}
+.isccs.mobile .portlet.isccsScreen .portletContent {
+  padding: 5px;
+}
+.wsc.mobile .openpicksportlet .portlet .filterBy, .wsc.mobile .openpicksportlet .portlet .orderBy {
+  display: inline-block;
+  border-bottom: 1px solid #999999;
+  background-color: #ffffff;
+  padding: 0px;
+}
+.wsc.mobile .openpicksportlet .portlet .filterBy.selected, .wsc.mobile .openpicksportlet .portlet .orderBy.selected {
+  background-color: #e5edf2;
+}
+.wsc.mobile .openpicksportlet .portlet .filterBy .portletImage, .wsc.mobile .openpicksportlet .portlet .orderBy .portletImage {
+  padding: 2px;
+  padding-right: 5px;
+}
+.wsc.mobile .openpicksportlet .portlet .filterBy {
+  width: 49%;
+  margin-left: 2px;
+}
+.wsc.mobile .openpicksportlet .portlet .orderBy {
+  width: 50%;
+  margin-left: -4px;
+}
+.wsc.mobile .openpicksportlet .portlet .slidingOptions {
+  margin: 0px 10px 10px 10px;
+  padding: 0px 5px 5px 5px;
+  background-color: #f2f2f2;
+  border: 2px solid #0075a3;
+  border-top-width: 0px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow-y: hidden;
+  animation: slideDown .5s;
+  -webkit-animation: slideDown .5s;
+  -o-animation: slideDown .5s;
+  -moz-animation: slideDown .5s;
+}
+.wsc.mobile .openpicksportlet .portlet .slidingOptions .actions {
+  border-bottom: 1px solid #777777;
+  margin-bottom: 5px;
+  min-height: 25px;
+}
+.wsc.mobile .openpicksportlet .portlet .slidingOptions .actions .dijitButton {
+  float: right;
+}
+.wsc.mobile .openpicksportlet .portlet .slidingOptions .actions .dijitButton .dijitButtonNode {
+  min-width: 0px;
+}
+.wsc.mobile .openpicksportlet .portlet .slidingOptions .actions .resetFilter {
+  margin: 5px 0px;
+}
+.wsc.mobile .openpicksportlet .portlet .slidingOptions > .applyButton {
+  border-top: 1px solid #777777;
+  padding-top: 5px;
+}
+.wsc.mobile .openpicksportlet .portlet .slidingOptions.scHidden {
+  animation: slideUp .5s;
+  -webkit-animation: slideUp .5s;
+  -o-animation: slideUp .5s;
+  -moz-animation: slideUp .5s;
+  display: block !important;
+  max-height: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  border-bottom-width: 0px;
+}
+.wsc.mobile .pickdetails {
+  min-height: 75px;
+  border-top: 1px solid #777777;
+}
+.wsc.mobile .pickdetails:first-child {
+  border-top: none;
+}
+.wsc.mobile .pickdetails .pickImage {
+  vertical-align: top;
+}
+.wsc.mobile .pickdetails .pickInfo {
+  width: 45%;
+  display: inline-block;
+}
+.wsc.mobile .pickdetails .pickInfo .customerName {
+  font-size: 1em;
+}
+.wsc.mobile .pickdetails .pickInfo .scDataLabel {
+  font-size: .9em;
+}
+.wsc.mobile .pickdetails .pickInfo .scDataLabel .idxLabel {
+  width: auto;
+  min-width: 0px;
+}
+.wsc.mobile .pickdetails .pickActions {
+  vertical-align: top;
+  display: inline-block;
+  float: right;
+  min-height: 65px;
+  width: 37%;
+  overflow: hidden;
+  text-align: right;
+}
+.wsc.mobile .pickdetails .pickActions .dijitButtonNode {
+  min-width: 0px;
+}
+.wsc.mobile .pickdetails .pickActions .assignedTo {
+  min-height: 40px;
+}
+.wsc.mobile .pickdetails .pickActions .assignedTo .indicatorImage {
+  padding-right: 5px;
+  float: none;
+}
+.isccs .duein.pastDue .scDataLabelValue {
+  color: #00649d;
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #ff0000;
+  font-size: 1em;
+}
+.wsc .alertnotificationdetails {
+  border-top: 1px solid #777777;
+  padding-top: 2px;
+}
+.wsc .alertnotificationdetails:first-child {
+  border-top: none;
+}
+.wsc .alertnotificationdetails .details {
+  display: inline-block;
+}
+.wsc .alertnotificationdetails .alertType {
+  font-weight: bold;
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+  font-size: 1.2em;
+  display: block;
+}
+.wsc .alertnotificationdetails .scDataLabel {
+  font-size: .9em;
+  display: block;
+}
+.wsc .alertnotificationdetails .scDataLabel .idxLabel {
+  width: auto;
+  min-width: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+.wsc .alertnotificationdetails .scDataLabel .idxLabel:first-child {
+  padding-left: 10px;
+}
+.wsc .alertnotificationdetails .dijitButton {
+  vertical-align: top;
+  float: right;
+}
+.wsc .alertnotificationdetails .dijitButton .dijitButtonNode {
+  min-width: 0px;
+  float: right;
+}
+.isccs .shipmentsummary .detailsAdditionalInfoPanel .infoPanel .storeAddress {
+  float: right;
+  width: 50%;
+}
+.isccs .shipmentsummary .detailsAdditionalInfoPanel .infoPanel .storeAddress .addressdisplay .addressHeader {
+  display: none;
+}
+.isccs .shipmentsummary .shipmentLineDetailsContainer .lineDetailsPanel {
+  position: absolute;
+  padding-top: 25px;
+  padding-left: 20px;
+}
+.isccs .detailsPrimaryInfoPanel .shipNodeDiffMsg {
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+.isccs .aboutpopup_popup .dijitDialogPaneContent {
+  max-width: 600px;
+}
+.isccs .aboutpopup_popup .dijitDialogTitleBar {
+  max-width: 600px;
+}
+.isccs .aboutpopup_popup .dijitDialogTitleBar {
+  display: none;
+}
+.isccs .userpreferencepopup_popup .dijitDialogPaneContent {
+  max-width: 400px;
+}
+.isccs .userpreferencepopup_popup .dijitDialogTitleBar {
+  max-width: 400px;
+}
+.isccs .print_popup .dijitDialogPaneContent {
+  max-width: 840px;
+}
+.isccs .print_popup .dijitDialogTitleBar {
+  max-width: 840px;
+}
+.isccs .cancellationreasoncodepopup_popup .dijitDialogPaneContent {
+  max-width: 400px;
+}
+.isccs .cancellationreasoncodepopup_popup .dijitDialogTitleBar {
+  max-width: 400px;
+}
+.isccs .shortagereasonpopup_popup .dijitDialogPaneContent {
+  max-width: 400px;
+}
+.isccs .shortagereasonpopup_popup .dijitDialogTitleBar {
+  max-width: 400px;
+}
+@media (max-width: 500px) {
+  .isccs .managealertnotificationdetails_popup {
+    left: initial !important;
+  }
+}
+.isccs .managealertnotificationdetails_popup {
+  margin: 0px 10px 10px 10px;
+  padding: 0px 5px 5px 5px;
+  background-color: #f2f2f2;
+  border: 2px solid #0075a3;
+  border-top-width: 0px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow-y: hidden;
+  animation: slideDown .5s;
+  -webkit-animation: slideDown .5s;
+  -o-animation: slideDown .5s;
+  -moz-animation: slideDown .5s;
+  background-color: #fff3f3;
+  border: 2px solid #cd312a;
+  border-width: 5px;
+  border-top: none;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  top: 35px !important;
+}
+.isccs .managealertnotificationdetails_popup.scHidden {
+  animation: slideUp .5s;
+  -webkit-animation: slideUp .5s;
+  -o-animation: slideUp .5s;
+  -moz-animation: slideUp .5s;
+  display: block !important;
+  max-height: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  border-bottom-width: 0px;
+}
+.isccs .managealertnotificationdetails_popup .dijitDialogPaneContent {
+  padding: 0px;
+}
+.isccs .managealertnotificationdetails_popup .dijitDialogTitleBar {
+  padding: 0px;
+  border: none;
+}
+

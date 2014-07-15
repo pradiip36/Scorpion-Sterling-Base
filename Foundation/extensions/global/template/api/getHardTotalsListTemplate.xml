@@ -1,0 +1,7 @@
+<KLHardTotalsList TotalNumberOfRecords="">
+<KLHardTotals ReceiptID="" Amex3PLAmexTenderedCount="" AmexSaleRead=""  AmntChargedToGiftCard="" AmntChargedToKMRC="" 
+	AmntChargedToKohlsChrgCard=""  BankCardTenderedCount=""  Createuserid="" GiftCardsIssuedCount="" GiftCardsTenderedCount="" HardTotalsKey="" 
+	InvoiceNo="" KMRCTenderedCount="" KohlsChrgTenderedCount=""  MasterVisaSaleRead="" 	MerchandiseTotal="" Modifyts=""
+	Novus3PLNovusTenderedCount="" NovusSaleRead=""  OrderDate="" OrderInvoiceKey="" 
+	OrderNo=""  SalesTransactionsCount=""  StoreNumber="" TotalTaxOnInvoice="" TotalValueOfGiftCards="" TransactionDate="" TransactionsWithTaxes="" />
+</KLHardTotalsList>

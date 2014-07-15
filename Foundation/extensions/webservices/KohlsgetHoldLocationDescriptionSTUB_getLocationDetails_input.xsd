@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema attributeFormDefault="unqualified"
+    elementFormDefault="qualified"
+    targetNamespace="http://www.sterlingcommerce.com/documentation"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:yfc="http://www.sterlingcommerce.com/documentation" xmlns:yfctype="http://www.sterlingcommerce.com/documentation/types">
+	<xsd:annotation
+        yfc:fileName="KohlsgetHoldLocationDescriptionSTUB_getLocationDetails_input.xsd" yfc:rootElement="Locations">
+		<xsd:appinfo source="yfc:structure">
+			<Locations>
+				<LocationFilter/>
+				<LocationIds>
+					<string/>
+				</LocationIds>
+			</Locations>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:import
+        namespace="http://www.sterlingcommerce.com/documentation/types" schemaLocation="datatypes.xsd"/>
+	<xsd:element name="Locations" type="yfc:LocationsXSDType"/>
+	<xsd:complexType name="LocationsXSDType">
+		<xsd:all>
+			<xsd:element maxOccurs="1" minOccurs="0" ref="yfc:LocationFilter"/>
+			<xsd:element maxOccurs="1" minOccurs="0" ref="yfc:LocationIds"/>
+		</xsd:all>
+	</xsd:complexType>
+	<xsd:element name="LocationFilter">
+		<xsd:complexType/>
+	</xsd:element>
+	<xsd:element name="LocationIds">
+		<xsd:complexType>
+			<xsd:all>
+				<xsd:element maxOccurs="1" minOccurs="0" ref="yfc:string"/>
+			</xsd:all>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="string" type="xsd:string"/>
+</xsd:schema>

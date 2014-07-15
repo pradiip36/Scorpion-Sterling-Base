@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<YFS_PRINT_DOCUMENT_TRAN_ATTRList TableName="YFS_PRINT_DOCUMENT_TRAN_ATTR">
+<PrintDocumentTranAttribute Createprogid="XMLMigrator"
+    Createts="2012-07-31T12:14:46-04:00" Createuserid="SYSTEM"
+    Lockid="0" Modifyprogid="XMLMigrator"
+    Modifyts="2012-07-31T12:14:46-04:00" Modifyuserid="SYSTEM"
+    PrintDocumentKey="SOP_041811385820616"
+    PrintDocumentTranAttrKey="SOP_041811385820617" SaveDirectory=" "/>
+</YFS_PRINT_DOCUMENT_TRAN_ATTRList>

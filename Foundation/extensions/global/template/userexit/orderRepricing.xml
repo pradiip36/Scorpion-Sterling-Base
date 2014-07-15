@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- 
+Licensed Materials - Property of IBM
+IBM Sterling Selling And Fulfillment Suite
+(C) Copyright IBM Corp. 2005, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+ -->
+<Order DocumentType="" EnterpriseCode="" OrderHeaderKey="" OrderNo="">
+    <OrderReleases>
+        <OrderRelease OrderReleaseKey="" ReleaseNo=""/>
+    </OrderReleases>
+    <OrderLines>
+        <OrderLine OrderLineKey="" PrimeLineNo="" SubLineNo="" OrderedQty="">
+            <Item CostCurrency="" CountryOfOrigin="" CreditWOReceipt=""
+                CustomerItem="" CustomerItemDesc="" ECCNNo=""
+                HarmonizedCode="" ISBN="" IsReturnable="" ItemDesc=""
+                ItemID="" ItemShortDesc="" ItemWeight=""
+                ItemWeightUOM="" ManufacturerItem=""
+                ManufacturerItemDesc="" ManufacturerName="" NMFCClass=""
+                NMFCCode="" NMFCDescription="" ProductClass=""
+                ProductLine="" ReturnWindow="" ScheduleBCode=""
+                SupplierItem="" SupplierItemDesc="" TaxProductCode=""
+                UPCCode="" UnitCost="" UnitOfMeasure=""/>
+				<LinePriceInfo IsPriceLocked="" ListPrice=""
+                RetailPrice="" TaxableFlag="" UnitPrice=""/>
+        </OrderLine>
+    </OrderLines>
+    <Promotions>
+        <Promotion DenialReason="" PromotionApplied="" PromotionId="" PromotionType=""/>
+    </Promotions>
+    <OverallTotals GrandCharges="" GrandDiscount="" GrandTax=""
+        GrandTotal="" HdrCharges="" HdrDiscount="" HdrTax="" HdrTotal="" LineSubTotal=""/>
+</Order>

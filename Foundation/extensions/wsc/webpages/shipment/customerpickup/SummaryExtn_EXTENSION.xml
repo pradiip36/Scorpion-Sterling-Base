@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="SummaryExtn"
+        extnPackage="extn.shipment.customerpickup"
+        originalScreen="wsc.shipment.customerpickup.Summary"
+        originalScreenPackage="wsc.shipment.customerpickup" type="diffrential">
+        <Items>
+            <ContentPane _sc_extensibility_moveOrder="8"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_GiftReceiptContentPane" uId="extn_secont_row_pane_confirm"/>
+            <ContentPane _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="pickupOrderSummaryContainer" uId="extn_GiftReceiptContentPane"/>
+            <ContentPane _sc_extensibility_moveOrder="3"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_GiftReceiptPrompt" uId="extn_NoofGRContentPane"/>
+            <Button _sc_extensibility_moveOrder="10"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_secont_row_pane_confirm"
+                label="$(_scSimpleBundle:extn_Previous)" uId="extn_btn_previous"/>
+            <Button _sc_extensibility_moveOrder="11"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_btn_void" uId="extn_btn_previous"/>
+            <Button _sc_extensibility_moveOrder="7"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_GiftReceiptFilterSelect"
+                label="$(_scSimpleBundle:extn_Void2)" uId="extn_btn_void"/>
+            <Button _sc_extensibility_moveOrder="9"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_secont_row_pane_confirm" uId="extn_btn_void"/>
+            <Label _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_GiftReceiptContentPane"
+                class="primaryInformation" uId="extn_GiftReceiptPrompt" value="$(_scSimpleBundle:extn_GiftReceiptPromptLabel)"/>
+            <Label _sc_extensibility_moveOrder="4"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_NoofGRContentPane"
+                uId="extn_NoofGRLabel" value="$(_scBundle:extn_Number_of_gift_receipts_to_print)"/>
+            <FilteringSelect _sc_extensibility_moveOrder="6"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_NoofGRLabel" uId="extn_GiftReceiptFilterSelect"/>
+        </Items>
+        <Namespaces>
+            <SourceNamespaces>
+                <Source description="the store information"
+                    isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_1" value="extn_shipNode_info"/>
+                <Source description="suspend receipt messages"
+                    isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_2" value="extn_receiptSuspendMessage_info"/>
+                <Source description="void receipt messages"
+                    isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_3" value="extn_receiptVoidMessage_info"/>
+                <Source description="gift receipt messages"
+                    isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_4" value="extn_receiptGiftMessage_info"/>
+                <Source description="return receipt messages"
+                    isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_5" value="extn_receiptReturnMessage_info"/>
+                <Source
+                    description="Namespace to store number of gift receipts"
+                    isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_6" value="extn_GiftReceiptOptions"/>
+                <Source isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_7" value="extn_getShipmentDetailsForReceipt_output"/>
+                <Source
+                    description="common codes for diamond departments"
+                    isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_8" value="extn_commCode4Receipt_diamond"/>
+                <Source description="common codes for receipt messages"
+                    isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_9" value="extn_commCode4Receipt_output"/>
+            </SourceNamespaces>
+            <TargetNamespaces>
+                <Target isExtn="true"
+                    scExtensibilityArrayItemId="extn_TargetNamespaces_0" value="extn_getShipmentLisrForReceiptID_output"/>
+                <Target isExtn="true"
+                    scExtensibilityArrayItemId="extn_TargetNamespaces_1" value="extn_receiptUserInfo_output"/>
+                <Target isExtn="true"
+                    scExtensibilityArrayItemId="extn_TargetNamespaces_2" value="extn_commCode4Receipt_output"/>
+                <Target isExtn="true"
+                    scExtensibilityArrayItemId="extn_TargetNamespaces_3" value="extn_commCode4Receipt_diamond"/>
+            </TargetNamespaces>
+        </Namespaces>
+        <Subscribers>
+            <Local>
+                <Subscriber eventId="afterScreenLoad" isExtn="true" sequence="51">
+                    <Handler methodName="extInitialize"/>
+                </Subscriber>
+                <Subscriber description="tests printertes"
+                    eventId="extn_testPrintBtn_onClick" isExtn="true" sequence="51">
+                    <Handler methodName="testPrinter"/>
+                </Subscriber>
+                <Subscriber description="test print"
+                    eventId="extn_print_btn_onClick" isExtn="true" sequence="51">
+                    <Handler methodName="runPrintJob"/>
+                </Subscriber>
+                <Subscriber description="voids the current order"
+                    eventId="extn_button_void_onClick" isExtn="true" sequence="51">
+                    <Handler methodName="voidOrder"/>
+                </Subscriber>
+                <Subscriber description="voids order"
+                    eventId="extn_btn_void_onClick" isExtn="true" sequence="51">
+                    <Handler methodName="voidOrder"/>
+                </Subscriber>
+                <Subscriber eventId="extn_btn_previous_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="handlePrevious"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+        <MashupRefs>
+            <Init>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getShipNode_mashup"
+                    mashupRefId="extn_getShipNode_mashup" sourceNamespace="extn_shipNode_info"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getCommonCodes_mashup"
+                    mashupRefId="extn_getReceiptCommonCodes_diamond" sourceNamespace="extn_commCode4Receipt_diamond"/>
+                <MashupRef extnType="ADD"
+                    mashupId="getReceiptCommonCodes"
+                    mashupRefId="extn_getReceiptCommonCodes"
+                    restoredToOOB="true" sourceNamespace="extn_commCode4Receipt_output"/>
+            </Init>
+            <Behavior>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getSuspVoidReceipt_mashup" mashupRefId="extn_getReceiptInfo_mashup"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getOrderDetail4Receipt_mashup" mashupRefId="extn_getOrderDetail4Receipt"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getUserFoReceipt_mashup" mashupRefId="extn_getUserFoReceipt"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getShipNode_mashup" mashupRefId="extn_getShipNode_mashup"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getShipmentDetails_receipt_mashup" mashupRefId="extn_getShipmentDetails_receipt"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getShipmentListFor_receipt_maship" mashupRefId="extn_getShipmentListForReceiptID"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_EJRecord_mashup" mashupRefId="extn_addEJTransOrderPicked"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getCommonCodes_mashup" mashupRefId="extn_getReceiptCommonCodes_diamond"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getReceiptCommonCodes_mashup" mashupRefId="extn_getReceiptCommonCodes"/>
+            </Behavior>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

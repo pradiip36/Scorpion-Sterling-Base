@@ -1,0 +1,13 @@
+<Shipments TotalNumberOfRecords="">
+<Shipment ActualDeliveryDate="" ActualFreightCharge="" ActualShipmentDate="" AllowOverage="" AppointmentNo="" AssociationAction="" BBNMinVolume="" BBNMinWeight="" BackroomPickRequired="" BillToAddressKey="" BillToCustomerId="" BolNo="" BreakBulkLoadKey="" BreakBulkNode="" BuyerMarkForNodeId="" BuyerOrganizationCode="" BuyerReceivingNodeId="" CODPayMethod="" CarrierAccountNo="" CarrierServiceCode="" CarrierType="" Code="" CommercialValue="" Currency="" DeliveryCode="" DeliveryMethod="" DeliveryPlanKey="" DeliveryTS="" DestinationZone="" DoNotVerifyCaseContent="" DoNotVerifyPalletContent="" DocumentType="" DownLoadCount="" EmailReturnLabel="" EnterpriseCode="" EspCheckRequired="" ExpectedDeliveryDate="" ExpectedShipmentDate="" ExportTaxpayerID="" FreightTerms="" FromAddressKey="" FromAppointment="" HasOtherShipments="" HazardousMaterialFlag="" ITDate="" ITNNo="" ITNo="" InvoiceComplete="" IsPackingRequired="" IsPackingRequiredWithContents="" IsProductPlacingComplete="" IsShipmentLevelIntegration="" IsSingleOrder="" LevelOfService="" LinesEntered="" Lockid="" ManifestKey="" ManifestNo="" ManuallyEntered="" MergeNode="" NextAlertTs="" NumOfCartons="" NumOfPallets="" OrderAvailableOnSystem="" OrderHeaderKey="" OrderNo="" OrderReleaseKey="" OriginZone="" OverrideManualShipmentEntry="" PackAndHold="" PackListType="" ParentShipmentKey="" PickListNo="" PickTicketPrinted="" PickticketNo="" PipelineKey="" PodNo="" ProNo="" ProfileID="" ReceivingNode="" ReleaseNo="" RequestedCarrierServiceCode="" RequestedDeliveryDate="" RequestedShipmentDate="" ReturnAuthorizationNumber="" ReturnBillingAccount="" ReturnByDate="" ReturnCarrierService="" ReturnFreightTerms="" SCAC="" ScacAndService="" ScacAndServiceKey="" ScacIntegrationRequired="" SealNo="" SellerOrganizationCode="" ShipDate="" ShipMode="" ShipNode="" ShipToCustomerId="" ShipVia="" ShipmentClosedFlag="" ShipmentConfirmUpdatesDone="" ShipmentConsolidationGroupId="" ShipmentContainerizedFlag="" ShipmentDeliverUpdatesDone="" ShipmentKey="" ShipmentNo="" ShipmentPlannedFlag="" ShipmentSortLocationId="" ShipmentType="" Status="" StatusDate="" ToAddressKey="" ToAppointment="" TotalActualCharge="" TotalEstimatedCharge="" TotalVolume="" TotalVolumeUOM="" TotalWeight="" TotalWeightUOM="" TrackingNo="" TrailerNo="" WorkOrderApptKey="" WorkOrderKey="">
+
+
+<Containers TotalNumberOfRecords="">
+<Container>
+<ContainerDetails>       
+<ContainerDetail/>
+</ContainerDetails> 
+</Container>
+</Containers>
+</Shipment>
+</Shipments>

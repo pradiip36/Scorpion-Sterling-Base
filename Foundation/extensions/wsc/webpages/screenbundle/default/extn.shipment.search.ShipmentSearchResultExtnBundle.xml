@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.shipment.search.ShipmentSearchResultExtnBundle" screenId="extn.shipment.search.ShipmentSearchResultExtn">
+    <BundleEntries>
+        <BundleEntry bundleEntryId="noShipmentMsg_Label_value"
+            bundleKey="extn_No_orders_found_for_search_criteria_"
+            bundleValueFn="_scSimpleBundle" property="value"
+            type="WIDGET" uId="noShipmentMsg"/>
+    </BundleEntries>
+</ScreenBundle>

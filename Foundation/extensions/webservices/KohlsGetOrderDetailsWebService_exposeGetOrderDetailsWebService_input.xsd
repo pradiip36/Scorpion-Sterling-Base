@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema attributeFormDefault="unqualified"
+    elementFormDefault="qualified"
+    targetNamespace="http://www.sterlingcommerce.com/documentation/YFS/getOrderDetails/input"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:yfc="http://www.sterlingcommerce.com/documentation/YFS/getOrderDetails/input" xmlns:yfctype="http://www.sterlingcommerce.com/documentation/types">
+    <xsd:annotation yfc:fileName="YFS_getOrderDetails_input.xsd" yfc:rootElement="Order">
+        <xsd:appinfo source="yfc:structure">
+            <Order hasAttributes="Y"/>
+        </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:import
+        namespace="http://www.sterlingcommerce.com/documentation/types" schemaLocation="datatypes.xsd"/>
+    <xsd:element name="Order" type="yfc:OrderXSDType">
+        <xsd:annotation yfc:tableName="YFS_ORDER_HEADER">
+            <xsd:documentation>
+                <div>
+			The <code>OrderHeaderKey</code>, or  the <code>EnterpriseCode</code>, <code>DocumentType</code> and the <code>OrderNo</code> must be passed to identify the <code>Order</code>.
+			</div>
+            </xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:complexType name="OrderXSDType">
+        <xsd:attribute name="ApproverUserID" type="yfctype:LoginId-50" use="optional">
+            <xsd:annotation yfc:columnName="APPROVER_USER_ID" yfc:tableName="YFS_ORDER_APPROVAL">
+                <xsd:documentation>
+                    <div> This attribute is used to show the user's order approval details and order approval details
+	                    <br/> that the user can approve, in the output. If it is not passed, it takes the value of 
+	                    <br/> the environment user's LoginID.
+						</div>
+                </xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="DocumentType" type="yfctype:Text-40" use="optional">
+            <xsd:annotation yfc:columnName="DOCUMENT_TYPE"
+                yfc:isConditional="Y" yfc:tableName="YFS_ORDER_HEADER">
+                <xsd:documentation>The document type that is associated with this order. For example, Sales Order document (0001), Planned Order document (0002), Return Order document (0003) , and Purchase Order document (0005). This field determines the order's fulfillment cycle and controls the inventory and payment updates performed on the order.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="EnterpriseCode" type="yfctype:OrgCode" use="optional">
+            <xsd:annotation yfc:columnName="ENTERPRISE_KEY"
+                yfc:isConditional="Y" yfc:tableName="YFS_ORDER_HEADER">
+                <xsd:documentation>The enterprise that is associated with this order.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="GetFundsAvailable" type="yfctype:Flag" use="optional">
+            <xsd:annotation>
+                <xsd:documentation>
+                    <div>
+					Default: <b>
+                            <code>Y</code>
+                        </b>
+                        <br/>Valid Values:
+					<br/>
+                        <b>
+                            <code>N</code>
+                        </b> - Do not invoke the <code>getFundsAvailable</code> user exit for any payment method on this order.
+					<br/>
+                        <b>
+                            <code>Y</code>
+                        </b> - If the output template contains the <code>FundsAvailable</code> attribute at the <code>PaymentMethod</code> element, this will cause the <code>getFundsAvailable</code> user exit to be invoked for each payment method whose payment types has <code>ChargeUpToAvailable</code> set to <code>Y</code>.
+					</div>
+                </xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="IgnorePendingChanges" type="yfctype:Flag" use="optional">
+            <xsd:annotation>
+                <xsd:documentation>
+                    <div>
+					Default: <b>
+                            <code>N</code>
+                        </b>
+                        <br/>Valid Values:
+					<br/>
+                        <b>
+                            <code>N</code>
+                        </b> - The order details will reflect pending changes on the order.
+					<br/>
+                        <b>
+                            <code>Y</code>
+                        </b> - The order details will ignore pending changes.  This option will not evaluate pending changes that are present on the order.
+					</div>
+                </xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="OrderHeaderKey" type="yfctype:Key" use="optional">
+            <xsd:annotation yfc:columnName="ORDER_HEADER_KEY"
+                yfc:isConditional="Y" yfc:tableName="YFS_ORDER_HEADER">
+                <xsd:documentation>The primary key for the YFS_ORDER_HEADER table.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="OrderNo" type="yfctype:VarcharDocumentNo" use="optional">
+            <xsd:annotation yfc:columnName="ORDER_NO"
+                yfc:isConditional="Y" yfc:tableName="YFS_ORDER_HEADER">
+                <xsd:documentation>The number of the order, which can be passed during order creation or generated based on a system rule setting.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+    </xsd:complexType>
+</xsd:schema>

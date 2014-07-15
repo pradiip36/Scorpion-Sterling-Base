@@ -1,0 +1,11 @@
+<ResourcePool CapacityOrganizationCode="" CapacityUnitOfMeasure="" ItemGroupCode="" Node="" ProviderOrganizationCode=""  ResourcePoolId="" Purpose="">
+	<EffectiveDateRanges TotalNumberOfRecords="">
+		<EffectiveDateRange EffectiveEndDate="" EffectiveStartDate="" >
+		<CapacitiesPerSlot TotalNumberOfRecords="">
+			<CapacityPerSlot FridayCapacity="" MondayCapacity="" SaturdayCapacity="" SundayCapacity="" ThursdayCapacity="" TuesdayCapacity=""  WednesdayCapacity="" /> 
+		</CapacitiesPerSlot>
+		
+	</EffectiveDateRange>
+
+	</EffectiveDateRanges>
+</ResourcePool>

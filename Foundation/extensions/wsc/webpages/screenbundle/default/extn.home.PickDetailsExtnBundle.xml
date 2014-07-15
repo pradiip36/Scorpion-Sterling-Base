@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle screenBundleId="extn.home.PickDetailsExtnBundle" screenId="extn.home.PickDetailsExtn">
+    <BundleEntries>
+        <BundleEntry bundleEntryId="extn_assignUser_Button_label"
+            bundleKey="extn_Assign" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_assignUser"/>
+        <BundleEntry bundleEntryId="extn_update_hold_Button_label"
+            bundleKey="extn_UpdateHold" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_update_hold"/>
+        <BundleEntry bundleEntryId="extn_continue_Button_label"
+            bundleKey="Action_Continue" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_continue"/>
+        <BundleEntry bundleEntryId="extn_Resume_Button_label"
+            bundleKey="extn_Resume" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_Resume"/>
+    </BundleEntries>
+</ScreenBundle>

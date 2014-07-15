@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Licensed Materials - Property of IBM
+IBM Sterling Business Center
+(C) Copyright IBM Corp. 2012, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="sbc-financial" namespace="/sbc/financial" extends="scuiimpl">
+	<default-class-ref class="com.sterlingcommerce.sbc.core.struts.SBCDefaultStrutsAction"></default-class-ref>
+	<global-results>
+            <result name="MASHUPERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="VALIDATIONERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="AUTHORIZATIONERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="error">/sbc/jsps/apierror.jsp</result>
+			<result name="APIERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="DATAVALIDATIONERROR">/jsps/datavalidationerror.jsp</result>
+	</global-results>
+	<action name="openFinancialRules" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+		<param name="mashupId">loadHoldTypesAndChargeNames_multiAPI</param>
+		<param name="resourceId">SBCSAD000209</param> 
+		<result name="success">/sbc/systemsetup/salesorder/openDocSpecificFinRules.jsp</result>
+	</action>
+	<action name="openQuotesFinancialRules" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+		<param name="mashupId">loadQuotesFinancialRules_multiAPI</param>
+		<param name="resourceId">SBCSAD000213</param> 
+		<result name="success">/sbc/systemsetup/quotes/financialrules/openQuotesFinancialRules.jsp</result>
+	</action>
+	<action name="openReturnOrderFinancialRules" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+		<param name="mashupId">loadReturnOrderFinancialRules_multiAPI</param>
+		<param name="resourceId">SBCSAD000210</param> 
+		<result name="success">/sbc/systemsetup/returnorder/openReturnOrderFinancialRules.jsp</result>
+	</action>
+	<action name="saveFinancialRules" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+		<param name="mashupId">saveRulesMashupId</param>
+		<param name="inputNs">manageRuleAPIInput</param>
+		<param name="outputNs">manageRuleAPIOutput</param>
+		<result name="success">/sbc/systemsetup/salesorder/updateFinancialRules.jsp</result>
+	</action>
+	</package>
+</struts>

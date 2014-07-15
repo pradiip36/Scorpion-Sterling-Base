@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="Shipment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="PickTicketCancellation"/>
+        <xs:element ref="ShipmentLines"/>
+        <xs:element ref="Extn"/>
+        <xs:element ref="ToAddress"/>
+        <xs:element ref="Containers"/>
+      </xs:sequence>
+      <xs:attribute name="Action" use="required" type="xs:NCName"/>
+      <xs:attribute name="ActualShipmentDate" use="required" type="xs:dateTime"/>
+      <xs:attribute name="BolNo" use="required"/>
+      <xs:attribute name="CarrierServiceCode" use="required" type="xs:NCName"/>
+      <xs:attribute name="DocumentType" use="required" type="xs:integer"/>
+      <xs:attribute name="EnterpriseCode" use="required" type="xs:NCName"/>
+      <xs:attribute name="ReleaseNo" use="required" type="xs:integer"/>
+      <xs:attribute name="SCAC" use="required" type="xs:NCName"/>
+      <xs:attribute name="ShipNode" use="required" type="xs:integer"/>
+      <xs:attribute name="ShipmentNo" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PickTicketCancellation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ShipmentLine"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ShipmentLines">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ShipmentLine"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Extn">
+    <xs:complexType>
+      <xs:attribute name="ExtnIsShipAlone" use="required" type="xs:NCName"/>
+      <xs:attribute name="ExtnPickTicketNo" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ToAddress">
+    <xs:complexType>
+      <xs:attribute name="AddressLine1" use="required"/>
+      <xs:attribute name="AddressLine2" use="required"/>
+      <xs:attribute name="AddressLine3" use="required"/>
+      <xs:attribute name="City" use="required"/>
+      <xs:attribute name="Country" use="required"/>
+      <xs:attribute name="DayPhone" use="required"/>
+      <xs:attribute name="EMailID" use="required"/>
+      <xs:attribute name="FirstName" use="required"/>
+      <xs:attribute name="LastName" use="required"/>
+      <xs:attribute name="State" use="required"/>
+      <xs:attribute name="ZipCode" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Containers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Container"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Container">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ContainerDetails"/>
+      </xs:sequence>
+      <xs:attribute name="BasicFreightCharge" use="required" type="xs:decimal"/>
+      <xs:attribute name="ContainerGrossWeight" use="required" type="xs:decimal"/>
+      <xs:attribute name="ContainerGrossWeightUOM" use="required" type="xs:NCName"/>
+      <xs:attribute name="ContainerScm" use="required" type="xs:integer"/>
+      <xs:attribute name="TrackingNo" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContainerDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ContainerDetail"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContainerDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ShipmentLine"/>
+      </xs:sequence>
+      <xs:attribute name="Quantity" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ShipmentLine">
+    <xs:complexType>
+      <xs:attribute name="ItemID" use="required" type="xs:integer"/>
+      <xs:attribute name="OrderNo" type="xs:integer"/>
+      <xs:attribute name="PrimeLineNo" type="xs:integer"/>
+      <xs:attribute name="ProductClass" type="xs:NCName"/>
+      <xs:attribute name="Quantity" use="required" type="xs:integer"/>
+      <xs:attribute name="ReleaseNo" type="xs:integer"/>
+      <xs:attribute name="ShipmentLineNo" use="required" type="xs:integer"/>
+      <xs:attribute name="SubLineNo" type="xs:integer"/>
+      <xs:attribute name="UnitOfMeasure" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,689 @@
+{
+ "model": {
+  "sciId": {
+   "id": "sciId",
+   "value": "seaItemSearchResults",
+   "type": "string"
+  },
+  "className": {
+   "id": "className",
+   "value": "sc.sbc.kohls.item.ineligibility.ItemSearchResults",
+   "type": "string"
+  },
+  "superclassName": {
+   "id": "superclassName",
+   "value": "sc.plat.ui.ExtensibleScreen",
+   "type": "string"
+  },
+  "regXtype": {
+   "id": "regXtype",
+   "value": "seaItemSearchResults",
+   "type": "string"
+  },
+  "header": {
+   "id": "header",
+   "value": "false",
+   "type": "boolean"
+  },
+  "layout": {
+   "id": "layout",
+   "value": "anchor",
+   "type": "string"
+  },
+  "autoScroll": {
+   "id": "autoScroll",
+   "value": "true",
+   "type": "boolean"
+  },
+  "items": {
+   "id": "items",
+   "value": [{
+    "id": "",
+    "value": {
+     "sciId": {
+      "id": "sciId",
+      "value": "seaItemSearchResultsGrid",
+      "type": "string"
+     },
+     "title": {
+      "id": "title",
+      "value": "Select / Set Items",
+      "type": "string"
+     },
+     "columns": {
+      "id": "columns",
+      "value": [{
+       "id": "",
+       "value": "this.checkboxSelectionModel",
+       "type": "expr"
+      },
+      {
+       "id": "",
+       "value": "this.checkboxSelectionModel",
+       "type": "expr"
+      },
+      {
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "seaItemSearchItemId",
+         "type": "string"
+        },
+        "header": {
+         "id": "header",
+         "value": "ItemID",
+         "type": "string"
+        },
+        "sortable": {
+         "id": "sortable",
+         "value": "true",
+         "type": "boolean"
+        },
+        "dataIndex": {
+         "id": "dataIndex",
+         "value": "ItemID",
+         "type": "string"
+        },
+        "width": {
+         "id": "width",
+         "value": "200",
+         "type": "number"
+        },
+        "align": {
+         "id": "align",
+         "value": "center",
+         "type": "string"
+        },
+        "bindingData": {
+         "id": "bindingData",
+         "value": {
+          "sFieldConfig": {
+           "id": "sFieldConfig",
+           "value": {
+            "mapping": {
+             "id": "mapping",
+             "value": "ItemID",
+             "type": "string"
+            },
+            "defid": "object"
+           },
+           "type": "object"
+          },
+          "defid": "object"
+         },
+         "type": "object"
+        },
+        "defid": "grid-column"
+       },
+       "type": "grid-column"
+      },
+      {
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "seaItemSearchDescription",
+         "type": "string"
+        },
+        "header": {
+         "id": "header",
+         "value": "ShortDescription",
+         "type": "string"
+        },
+        "sortable": {
+         "id": "sortable",
+         "value": "true",
+         "type": "boolean"
+        },
+        "dataIndex": {
+         "id": "dataIndex",
+         "value": "ShortDescription",
+         "type": "string"
+        },
+        "width": {
+         "id": "width",
+         "value": "200",
+         "type": "number"
+        },
+        "align": {
+         "id": "align",
+         "value": "center",
+         "type": "string"
+        },
+        "bindingData": {
+         "id": "bindingData",
+         "value": {
+          "sFieldConfig": {
+           "id": "sFieldConfig",
+           "value": {
+            "mapping": {
+             "id": "mapping",
+             "value": "PrimaryInformation.ShortDescription",
+             "type": "string"
+            },
+            "defid": "object"
+           },
+           "type": "object"
+          },
+          "defid": "object"
+         },
+         "type": "object"
+        },
+        "defid": "grid-column"
+       },
+       "type": "grid-column"
+      },
+      {
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "seaItemSearchUOM",
+         "type": "string"
+        },
+        "header": {
+         "id": "header",
+         "value": "UOM",
+         "type": "string"
+        },
+        "sortable": {
+         "id": "sortable",
+         "value": "true",
+         "type": "boolean"
+        },
+        "dataIndex": {
+         "id": "dataIndex",
+         "value": "UnitOfMeasure",
+         "type": "string"
+        },
+        "id": {
+         "id": "id",
+         "value": "seaItemSearchUOM",
+         "type": "string"
+        },
+        "width": {
+         "id": "width",
+         "value": "80",
+         "type": "number"
+        },
+        "align": {
+         "id": "align",
+         "value": "center",
+         "type": "string"
+        },
+        "bindingData": {
+         "id": "bindingData",
+         "value": {
+          "sFieldConfig": {
+           "id": "sFieldConfig",
+           "value": {
+            "mapping": {
+             "id": "mapping",
+             "value": "UnitOfMeasure",
+             "type": "string"
+            },
+            "defid": "object"
+           },
+           "type": "object"
+          },
+          "defid": "object"
+         },
+         "type": "object"
+        },
+        "defid": "grid-column"
+       },
+       "type": "grid-column"
+      },
+      {
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "seaItemSearchDept",
+         "type": "string"
+        },
+        "header": {
+         "id": "header",
+         "value": "Department",
+         "type": "string"
+        },
+        "sortable": {
+         "id": "sortable",
+         "value": "true",
+         "type": "boolean"
+        },
+        "dataIndex": {
+         "id": "dataIndex",
+         "value": "ExtnDept",
+         "type": "string"
+        },
+        "width": {
+         "id": "width",
+         "value": "180",
+         "type": "number"
+        },
+        "align": {
+         "id": "align",
+         "value": "center",
+         "type": "string"
+        },
+        "bindingData": {
+         "id": "bindingData",
+         "value": {
+          "sFieldConfig": {
+           "id": "sFieldConfig",
+           "value": {
+            "mapping": {
+             "id": "mapping",
+             "value": "Extn.ExtnDept",
+             "type": "string"
+            },
+            "defid": "object"
+           },
+           "type": "object"
+          },
+          "defid": "object"
+         },
+         "type": "object"
+        },
+        "defid": "grid-column"
+       },
+       "type": "grid-column"
+      },
+      {
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "seaItemSearchClass",
+         "type": "string"
+        },
+        "header": {
+         "id": "header",
+         "value": "Class",
+         "type": "string"
+        },
+        "sortable": {
+         "id": "sortable",
+         "value": "true",
+         "type": "boolean"
+        },
+        "dataIndex": {
+         "id": "dataIndex",
+         "value": "ExtnClass",
+         "type": "string"
+        },
+        "width": {
+         "id": "width",
+         "value": "150",
+         "type": "number"
+        },
+        "align": {
+         "id": "align",
+         "value": "center",
+         "type": "string"
+        },
+        "bindingData": {
+         "id": "bindingData",
+         "value": {
+          "sFieldConfig": {
+           "id": "sFieldConfig",
+           "value": {
+            "mapping": {
+             "id": "mapping",
+             "value": "Extn.ExtnClass",
+             "type": "string"
+            },
+            "defid": "object"
+           },
+           "type": "object"
+          },
+          "defid": "object"
+         },
+         "type": "object"
+        },
+        "defid": "grid-column"
+       },
+       "type": "grid-column"
+      },
+      {
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "seaItemSearchSubclass",
+         "type": "string"
+        },
+        "header": {
+         "id": "header",
+         "value": "Subclass",
+         "type": "string"
+        },
+        "sortable": {
+         "id": "sortable",
+         "value": "true",
+         "type": "boolean"
+        },
+        "dataIndex": {
+         "id": "dataIndex",
+         "value": "ExtnSubClass",
+         "type": "string"
+        },
+        "width": {
+         "id": "width",
+         "value": "200",
+         "type": "number"
+        },
+        "align": {
+         "id": "align",
+         "value": "center",
+         "type": "string"
+        },
+        "bindingData": {
+         "id": "bindingData",
+         "value": {
+          "sFieldConfig": {
+           "id": "sFieldConfig",
+           "value": {
+            "mapping": {
+             "id": "mapping",
+             "value": "Extn.ExtnSubClass",
+             "type": "string"
+            },
+            "defid": "object"
+           },
+           "type": "object"
+          },
+          "defid": "object"
+         },
+         "type": "object"
+        },
+        "defid": "grid-column"
+       },
+       "type": "grid-column"
+      },
+      {
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "seaItemSearchStyle",
+         "type": "string"
+        },
+        "header": {
+         "id": "header",
+         "value": "Style",
+         "type": "string"
+        },
+        "sortable": {
+         "id": "sortable",
+         "value": "true",
+         "type": "boolean"
+        },
+        "dataIndex": {
+         "id": "dataIndex",
+         "value": "ExtnStyle",
+         "type": "string"
+        },
+        "width": {
+         "id": "width",
+         "value": "200",
+         "type": "number"
+        },
+        "align": {
+         "id": "align",
+         "value": "center",
+         "type": "string"
+        },
+        "bindingData": {
+         "id": "bindingData",
+         "value": {
+          "sFieldConfig": {
+           "id": "sFieldConfig",
+           "value": {
+            "mapping": {
+             "id": "mapping",
+             "value": "Extn.ExtnStyle",
+             "type": "string"
+            },
+            "defid": "object"
+           },
+           "type": "object"
+          },
+          "defid": "object"
+         },
+         "type": "object"
+        },
+        "defid": "grid-column"
+       },
+       "type": "grid-column"
+      }],
+      "type": "array"
+     },
+     "header": {
+      "id": "header",
+      "value": "true",
+      "type": "boolean"
+     },
+     "border": {
+      "id": "border",
+      "value": "true",
+      "type": "boolean"
+     },
+     "selModel": {
+      "id": "selModel",
+      "value": "this.checkboxSelectionModel",
+      "type": "expr"
+     },
+     "autoHeight": {
+      "id": "autoHeight",
+      "value": "true",
+      "type": "boolean"
+     },
+     "stripeRows": {
+      "id": "stripeRows",
+      "value": "true",
+      "type": "boolean"
+     },
+     "sctype": {
+      "id": "sctype",
+      "value": "GridPanel",
+      "type": "string"
+     },
+     "tbar": {
+      "id": "tbar",
+      "value": [{
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "btnBulkUpdate",
+         "type": "string"
+        },
+        "text": {
+         "id": "text",
+         "value": "Bulk Update",
+         "type": "string"
+        },
+        "handler": {
+         "id": "handler",
+         "value": "this.bukUpdateHandler",
+         "type": "expr"
+        },
+        "scope": {
+         "id": "scope",
+         "value": "this",
+         "type": "expr"
+        },
+        "defid": "button"
+       },
+       "type": "button"
+      },
+      {
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "btnSetInelg",
+         "type": "string"
+        },
+        "text": {
+         "id": "text",
+         "value": "Set as Ineligible",
+         "type": "string"
+        },
+        "handler": {
+         "id": "handler",
+         "value": "this.setInelgHandler",
+         "type": "expr"
+        },
+        "scope": {
+         "id": "scope",
+         "value": "this",
+         "type": "expr"
+        },
+        "defid": "button"
+       },
+       "type": "button"
+      }],
+      "type": "array"
+     },
+     "bbar": {
+      "id": "bbar",
+      "value": "this.pagingToolbar",
+      "type": "expr"
+     },
+     "bindingData": {
+      "id": "bindingData",
+      "value": {
+       "sourceBinding": {
+        "id": "sourceBinding",
+        "value": "itemSearch_output:ItemList.Item",
+        "type": "string"
+       },
+       "pagination": {
+        "id": "pagination",
+        "value": {
+         "strategy": {
+          "id": "strategy",
+          "value": "NEXTPAGE",
+          "type": "string"
+         },
+         "root": {
+          "id": "root",
+          "value": "ItemList.Item",
+          "type": "string"
+         },
+         "pageSize": {
+          "id": "pageSize",
+          "value": "15",
+          "type": "number"
+         },
+         "url": {
+          "id": "url",
+          "value": "this.getUrl()",
+          "type": "expr"
+         },
+         "defid": "pagination"
+        },
+        "type": "object"
+       },
+       "defid": "object"
+      },
+      "type": "object"
+     },
+     "viewConfig": {
+      "id": "viewConfig",
+      "value": {
+       "scope": {
+        "id": "scope",
+        "value": "this",
+        "type": "expr"
+       },
+       "getRowClass": {
+        "id": "getRowClass",
+        "value": "this.getRowClass",
+        "type": "expr"
+       },
+       "emptyText": {
+        "id": "emptyText",
+        "value": "sc.plat.bundle[\"b_NoRecordsToDisplay\"]",
+        "type": "expr"
+       },
+       "deferEmptyText": {
+        "id": "deferEmptyText",
+        "value": "false",
+        "type": "boolean"
+       },
+       "defid": "viewConfig"
+      },
+      "type": "object"
+     },
+     "defid": "grid"
+    },
+    "type": "grid"
+   }],
+   "type": "array"
+  },
+  "border": {
+   "id": "border",
+   "value": "false",
+   "type": "boolean"
+  },
+  "namespaces": {
+   "id": "namespaces",
+   "value": {
+    "target": {
+     "id": "target",
+     "value": [{
+      "id": "",
+      "value": {
+       "name": {
+        "id": "name",
+        "value": "",
+        "type": "string"
+       },
+       "description": {
+        "id": "description",
+        "value": "",
+        "type": "string"
+       },
+       "defid": "target"
+      },
+      "type": "target"
+     }],
+     "type": "array"
+    },
+    "source": {
+     "id": "source",
+     "value": [{
+      "id": "",
+      "value": {
+       "name": {
+        "id": "name",
+        "value": "",
+        "type": "string"
+       },
+       "description": {
+        "id": "description",
+        "value": "",
+        "type": "string"
+       },
+       "defid": "source"
+      },
+      "type": "source"
+     }],
+     "type": "array"
+    },
+    "defid": "namespaces"
+   },
+   "type": "object"
+  },
+  "defid": "screen"
+ },
+ "version": "0.3.0b",
+ "type": "SCREEN",
+ "_verificationText": "VerificationText",
+ "dataSources": {}
+}

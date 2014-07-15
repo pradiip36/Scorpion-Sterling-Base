@@ -1,0 +1,452 @@
+<%@ page import="com.yantra.yfc.dom.*" %>
+<%@ page import="com.yantra.yfc.util.*" %>
+<%! 
+    public void massageAuditListForShipment(YFCElement auditListElem, YFCElement lineAuditListElem){		
+		if(isVoid(auditListElem)){
+			return;
+		}
+		for(Iterator i = auditListElem.getChildren();i.hasNext();){
+			boolean bRetain = false;
+            YFCElement auditElem=(YFCElement)i.next();
+			if(!"YFS_SHIPMENT".equals(auditElem.getAttribute("TableName")) && !"Console".equals(auditElem.getAttribute("Createprogid"))){
+				bRetain = false;
+			}else if("YFS_SHIPMENT".equals(auditElem.getAttribute("TableName"))){
+				 bRetain = massageShipmentAudit(auditElem);				
+			}else if("YFS_LOAD_SHIPMENT".equals(auditElem.getAttribute("TableName"))){
+				 bRetain = massageLoadShipmentAudit(auditElem);				
+			}else if("YFS_SPECIAL_SERVICE_REF".equals(auditElem.getAttribute("TableName"))){
+				 bRetain = massageSpecialServiceAudit(auditElem);				
+			}else if("YFS_ADDITIONAL_DATE".equals(auditElem.getAttribute("TableName"))){
+				 bRetain = massageAdditionalDatetAudit(auditElem);				
+			}else if("YFS_INSTRUCTION_DETAIL".equals(auditElem.getAttribute("TableName"))){
+				 bRetain = massageInstructionAudit(auditElem);				
+			}else if("YFS_SHIPMENT_LINE".equals(auditElem.getAttribute("TableName"))){
+				 bRetain = massageShipmentLineAudit(auditElem);
+			}
+			if(!bRetain){
+				i.remove();		
+				auditListElem.removeChild(auditElem);
+			}
+		}
+		if(!isVoid(lineAuditListElem)){
+			List waveAudits = massageforWave(lineAuditListElem);
+			for(Iterator i = waveAudits.iterator();i.hasNext();){
+				YFCElement auditForWave = (YFCElement)i.next();				
+				YFCNode aNode = auditListElem.importNode(auditForWave);
+				auditListElem.appendChild(aNode);				
+			}
+		}
+		String[] sortingAttrs = {"Modifyts"};
+		auditListElem.sortChildren(sortingAttrs, false, false);
+    }
+%>
+
+<%!
+	private boolean massageShipmentAudit(YFCElement auditElem){
+		List invalidAttrList = new ArrayList();
+		invalidAttrList.add("Lockid");
+		invalidAttrList.add("Action");
+        invalidAttrList.add("LinesEntered");
+		invalidAttrList.add("Modifyts");
+		invalidAttrList.add("PipelineKey");
+		invalidAttrList.add("HazardousMaterialFlag");
+		invalidAttrList.add("TotalQuantity");
+                invalidAttrList.add("TotalVolume");
+		invalidAttrList.add("TotalWeight");
+        invalidAttrList.add("NumOfCartons");
+        invalidAttrList.add("CarrierType");
+		invalidAttrList.add("ShipMode");
+		invalidAttrList.add("RoutingSource");
+        invalidAttrList.add("ShipmentPlannedFlag");
+        invalidAttrList.add("StatusDate");
+		invalidAttrList.add("Modifyprogid");
+		invalidAttrList.add("Modifyuserid");
+        invalidAttrList.add("ShipmentContainerizedFlag");
+        invalidAttrList.add("ShipDate");
+		invalidAttrList.add("ShipmentConfirmUpdatesDone");
+        invalidAttrList.add("NextAlertTs");
+        List DatesList = new ArrayList();
+		DatesList.add("ActualDeliveryDate");
+        DatesList.add("RequestedDeliveryDate");
+		DatesList.add("ExpectedDeliveryDate");
+		DatesList.add("ExpectedShipmentDate");
+		DatesList.add("RequestedShipmentDate");
+		DatesList.add("ActualShipmentDate");
+		List AgentAttributesList = new ArrayList();
+        AgentAttributesList.add("CarrierServiceCode");
+		AgentAttributesList.add("SCAC");
+		AgentAttributesList.add("BolNo");
+		AgentAttributesList.add("ProNo");
+		AgentAttributesList.add("Trailer");
+		AgentAttributesList.add("Seal");
+		AgentAttributesList.add("WaveNo");
+		Map statusMap = getStatusMap((YFCElement)request.getAttribute("StatusList"));
+		boolean bRetainAudit = false;
+		boolean bRemoveAllExceptStatus = false;
+		YFCElement auditdetailElem=auditElem.getChildElement("AuditDetail");
+        YFCElement attributesElem=auditdetailElem.getChildElement("Attributes");
+        if( attributesElem == null ){
+    		return false ;
+    	}
+		for(Iterator i=attributesElem.getChildren();i.hasNext();){
+			YFCElement attributeElem=(YFCElement)i.next();
+			String sName=attributeElem.getAttribute("Name");
+		    String sOldValue=attributeElem.getAttribute("OldValue");
+            String sNewValue=attributeElem.getAttribute("NewValue");
+			String sHighDate = YFCDate.HIGH_DATE.toString();
+			if("Insert".equals(auditElem.getAttribute("Operation"))){
+				bRetainAudit = false;
+		    }
+         	if("Status".equals(sName)){
+				bRetainAudit = true;
+				if(isVoid(sOldValue)){
+					bRemoveAllExceptStatus = true;
+					auditdetailElem.setAttribute("AuditType",getI18N("Shipment_Created"));
+				}else if(!isVoid(sNewValue) && sNewValue.startsWith("9000")){
+                    auditdetailElem.setAttribute("AuditType",getI18N("Shipment_Canceled"));
+				}else{
+					auditdetailElem.setAttribute("AuditType",getI18N("Shipment_Modified"));
+				}
+				if(statusMap.containsKey(sOldValue)){
+					sOldValue = (String)statusMap.get(sOldValue);
+				}
+				if(statusMap.containsKey(sNewValue)){
+					sNewValue = (String)statusMap.get(sNewValue);
+				}
+				attributeElem.setAttribute("OldValue",YFCI18NDBUtils.getString(sOldValue,getLocale()));
+		                attributeElem.setAttribute("NewValue",YFCI18NDBUtils.getString(sNewValue,getLocale()));
+			}else if(!invalidAttrList.contains(sName)&&"Console".equals(auditElem.getAttribute("Createprogid"))
+				||AgentAttributesList.contains(sName)){            
+				bRetainAudit = true;				
+				if(DatesList.contains(sName)){
+					if(!"Shipment Modified".equals(auditdetailElem.getAttribute("AuditType"))){
+					auditdetailElem.setAttribute("AuditType",getI18N("Shipment_Date_Modified"));
+					}
+					if(sHighDate.equals(sOldValue)){
+						sOldValue="";
+					}
+					if(sHighDate.equals(sNewValue)){
+						sNewValue="";
+					}
+					if(!isVoid(sOldValue)){
+					sOldValue = getXMLDateValue(sOldValue);
+				}
+				    if(!isVoid(sNewValue)){
+					sNewValue = getXMLDateValue(sNewValue);
+				}
+				attributeElem.setAttribute("OldValue",sOldValue);
+                attributeElem.setAttribute("NewValue",sNewValue);
+				}else if("WaveNo".equals(sName)){
+					if(isVoid(sOldValue)){
+					auditdetailElem.setAttribute("AuditType",getI18N("Added_to_Wave"));
+					}
+					if(isVoid(sNewValue)){
+					auditdetailElem.setAttribute("AuditType",getI18N("Removed_from_Wave"));
+					}
+				}else if("ToAddressKey".equals(sName)){
+					auditdetailElem.setAttribute("AuditType",getI18N("Shipment_Address_Modified"));
+					auditdetailElem.setAttribute("ToAddressKey",sOldValue);
+                    auditdetailElem.setAttribute("ToAddressKey1",sNewValue);
+				}else if("FromAddressKey".equals(sName)){
+					auditdetailElem.setAttribute("AuditType",getI18N("Shipment_Address_Modified"));
+					auditdetailElem.setAttribute("FromAddressKey",sOldValue);
+                    auditdetailElem.setAttribute("FromAddressKey1",sNewValue);
+				}else{
+					auditdetailElem.setAttribute("AuditType",getI18N("Shipment_Modified"));
+				}
+			    if("Delete".equals(auditElem.getAttribute("Operation"))){
+					attributeElem.setAttribute("OldValue",attributeElem.getAttribute("NewValue"));
+					attributeElem.setAttribute("NewValue","");
+				}
+		    }else{
+				bRetainAudit = bRetainAudit || false;
+				i.remove();
+				attributesElem.removeChild(attributeElem);
+		    }
+			if(bRemoveAllExceptStatus){
+				break;
+			}
+		}
+		if(bRemoveAllExceptStatus){
+			massageAttributeListForSplitShipment(attributesElem);
+		}
+		return bRetainAudit ;
+	}
+%>
+<%! 
+    private boolean massageLoadShipmentAudit(YFCElement auditElem){
+		boolean bRetainAudit = false;
+		YFCElement auditdetailElem=auditElem.getChildElement("AuditDetail");
+        YFCElement attributesElem=auditdetailElem.getChildElement("Attributes");
+		for(Iterator i=attributesElem.getChildren();i.hasNext();){
+			YFCElement attributeElem=(YFCElement)i.next();
+			String sName=attributeElem.getAttribute("Name");
+		    if("LoadKey".equals(sName)){
+				String sNewValue = attributeElem.getAttribute("NewValue");
+				String sOldValue = attributeElem.getAttribute("OldValue");
+				bRetainAudit = true;
+				if("Delete".equals(auditElem.getAttribute("Operation"))){
+					attributeElem.setAttribute("OldValue",sNewValue);
+					attributeElem.setAttribute("NewValue","");
+					auditdetailElem.setAttribute("AuditType",getI18N("Removed_from_Load"));
+				}
+				if("Insert".equals(auditElem.getAttribute("Operation"))){
+						auditdetailElem.setAttribute("AuditType",getI18N("Included_in_Load"));
+				}
+				auditdetailElem.setAttribute("LoadKey",isVoid(sNewValue)?sOldValue:sNewValue);
+			}else{
+				bRetainAudit = bRetainAudit || false;
+				i.remove();
+				attributesElem.removeChild(attributeElem);
+			}
+		}
+		return bRetainAudit ;
+	}
+%>
+<%! 
+    private boolean massageSpecialServiceAudit(YFCElement auditElem){
+		boolean bRetainAudit = false;
+		YFCElement auditdetailElem=auditElem.getChildElement("AuditDetail");
+        YFCElement attributesElem=auditdetailElem.getChildElement("Attributes");
+		Map specialservicesMap = getSpecialServicesMap((YFCElement)request.getAttribute("SpecialServicesList"));
+		for(Iterator i=attributesElem.getChildren();i.hasNext();){
+			YFCElement attributeElem=(YFCElement)i.next();
+			String sName=attributeElem.getAttribute("Name");
+            String sOldValue=attributeElem.getAttribute("OldValue");
+			String sNewValue=attributeElem.getAttribute("NewValue");
+		    if("SpecialServicesCode".equals(sName)){
+				bRetainAudit = true;
+				if(specialservicesMap.containsKey(sOldValue)){
+					sOldValue = (String)specialservicesMap.get(sOldValue);
+				}
+				if(specialservicesMap.containsKey(sNewValue)){
+					sNewValue = (String)specialservicesMap.get(sNewValue);
+				}
+				attributeElem.setAttribute("OldValue",sOldValue);
+                attributeElem.setAttribute("NewValue",sNewValue);
+
+				if("Insert".equals(auditElem.getAttribute("Operation"))){
+					auditdetailElem.setAttribute("AuditType",getI18N("Special_Service_Added"));
+				}
+				if("Delete".equals(auditElem.getAttribute("Operation"))){
+					attributeElem.setAttribute("OldValue",attributeElem.getAttribute("NewValue"));
+					attributeElem.setAttribute("NewValue","");
+					auditdetailElem.setAttribute("AuditType",getI18N("Special_Service_Removed"));
+				}
+			}else{
+				bRetainAudit = bRetainAudit || false;
+				i.remove();
+				attributesElem.removeChild(attributeElem);
+			}
+		}
+		return bRetainAudit ;
+	}
+%>
+<%! 
+    private boolean massageAdditionalDatetAudit(YFCElement auditElem){
+		List validDatesList = new ArrayList();
+		validDatesList.add("RequestedDate");
+        validDatesList.add("ExpectedDate");
+		validDatesList.add("ActualDate");
+		boolean bRetainAudit = false;
+		String sDateTypeValue=null;
+		YFCElement auditdetailElem=auditElem.getChildElement("AuditDetail");
+        YFCElement attributesElem=auditdetailElem.getChildElement("Attributes");
+        YFCElement idsElem=auditdetailElem.getChildElement("IDs");
+        for(Iterator i=idsElem.getChildren();i.hasNext();){
+			YFCElement idElem=(YFCElement)i.next();
+			String sDateType=idElem.getAttribute("Name");
+			if("DateTypeId".equals(sDateType)){
+				sDateTypeValue=idElem.getAttribute("Value");
+			}else{
+				i.remove();
+				idsElem.removeChild(idElem);
+			}
+		}
+		for(Iterator i=attributesElem.getChildren();i.hasNext();){
+			YFCElement attributeElem=(YFCElement)i.next();
+			String sName=attributeElem.getAttribute("Name");
+			String sOldValue = attributeElem.getAttribute("OldValue");
+			String sNewValue = attributeElem.getAttribute("NewValue");
+			String sLowDate = YFCDate.LOW_DATE.toString();
+            if(validDatesList.contains(sName)&&!(sLowDate.equals(sNewValue)&&isVoid(sOldValue))){
+				auditdetailElem.setAttribute("AuditType",getI18N("Additional_Date_Modified"));           attributeElem.setAttribute("Name",sDateTypeValue+" "+sName);    
+				if(sLowDate.equals(sNewValue)){
+					auditElem.setAttribute("Operation","Delete");
+					sNewValue=sOldValue;
+					sOldValue="";
+				}
+                if(!isVoid(sOldValue)){
+					sOldValue = getXMLDateValue(sOldValue);
+				}
+				if(!isVoid(sNewValue)){
+					sNewValue = getXMLDateValue(sNewValue);
+				}				
+               	attributeElem.setAttribute("OldValue",sOldValue);
+				attributeElem.setAttribute("NewValue",sNewValue);
+				bRetainAudit = true;
+				if("Delete".equals(auditElem.getAttribute("Operation"))){
+					attributeElem.setAttribute("OldValue",sNewValue);
+					attributeElem.setAttribute("NewValue","");
+				}
+			}else{
+				bRetainAudit = bRetainAudit || false;
+				i.remove();
+				attributesElem.removeChild(attributeElem);
+			}
+		}
+		return bRetainAudit ;		
+	}
+%>
+<%! 
+    private boolean massageInstructionAudit(YFCElement auditElem){
+		boolean bRetainAudit = false;
+		YFCElement auditdetailElem=auditElem.getChildElement("AuditDetail");
+        YFCElement attributesElem=auditdetailElem.getChildElement("Attributes");
+		for(Iterator i=attributesElem.getChildren();i.hasNext();){
+			YFCElement attributeElem=(YFCElement)i.next();
+			String sName=attributeElem.getAttribute("Name");
+		    if("InstructionType".equals(sName)||"InstructionText".equals(sName)){
+				bRetainAudit = true;
+				if("Insert".equals(auditElem.getAttribute("Operation"))){
+					auditdetailElem.setAttribute("AuditType",getI18N("Instruction_Added"));
+				}
+				if("Update".equals(auditElem.getAttribute("Operation"))){
+					auditdetailElem.setAttribute("AuditType",getI18N("Instruction_Modified"));
+				}
+				if("Delete".equals(auditElem.getAttribute("Operation"))){
+					attributeElem.setAttribute("OldValue",attributeElem.getAttribute("NewValue"));
+					attributeElem.setAttribute("NewValue","");
+					auditdetailElem.setAttribute("AuditType",getI18N("Instruction_Removed"));
+				}
+			}else{
+				bRetainAudit = bRetainAudit || false;
+				i.remove();
+				attributesElem.removeChild(attributeElem);
+			}
+		}
+		return bRetainAudit ;
+	}
+%>
+<%! 
+    private boolean massageShipmentLineAudit(YFCElement auditElem){
+		List validLineList = new ArrayList();
+		validLineList.add("ItemID");
+        validLineList.add("UnitOfMeasure");
+		validLineList.add("ProductClass");
+		validLineList.add("Quantity");
+		boolean bRetainAudit = false;
+		YFCElement auditdetailElem=auditElem.getChildElement("AuditDetail");
+        YFCElement attributesElem=auditdetailElem.getChildElement("Attributes");
+		for(Iterator i=attributesElem.getChildren();i.hasNext();){
+			YFCElement attributeElem=(YFCElement)i.next();
+			String sName=attributeElem.getAttribute("Name");
+			String sOldValue=attributeElem.getAttribute("OldValue");
+			String sNewValue=attributeElem.getAttribute("NewValue");
+			if("Insert".equals(auditElem.getAttribute("Operation"))){
+				bRetainAudit = false;
+		    }
+		    if(validLineList.contains(sName)){
+				if("Update".equals(auditElem.getAttribute("Operation"))){
+					auditdetailElem.setAttribute("AuditType",getI18N("Shipment_Line_Modified"));
+					bRetainAudit = true;
+				}
+				if("Delete".equals(auditElem.getAttribute("Operation"))){
+					auditdetailElem.setAttribute("AuditType",getI18N("Shipment_Line_Removed"));
+					attributeElem.setAttribute("OldValue",sNewValue);
+					attributeElem.setAttribute("NewValue","");
+					bRetainAudit = true;
+				}
+			}else{
+				bRetainAudit = bRetainAudit || false;
+				i.remove();
+				attributesElem.removeChild(attributeElem);
+			}
+		}
+		return bRetainAudit ;
+	}
+%>
+
+<%!
+	String getXMLDateValue(String sCurrentVal){		
+		String sRetVal = "";
+		if(!YFCCommon.isVoid(sCurrentVal))
+		{
+		    YFCDate oDate = new YFCDate(sCurrentVal);
+		    if(oDate != null)
+		    {
+		        //sRetVal = oDate.getString("yyyyMMdd'T'HH:mm:ss");
+				//sRetVal = getLocalizedValue("ExpectedShipmentDate", sRetVal);
+				//sRetVal = oDate.toLocaleString();
+				sRetVal = oDate.getDateTimeString(getLocale());
+		    }
+		}
+		return sRetVal;
+	}
+%>
+
+<%!
+	public Map getStatusMap(YFCElement statusListElem){
+		Map outMap = new HashMap();
+		for(Iterator i = statusListElem.getChildren();i.hasNext();){
+			YFCElement statusElem=(YFCElement)i.next();
+			outMap.put(statusElem.getAttribute("Status"),statusElem.getAttribute("Description"));
+		}
+		return outMap;
+	}
+%>
+
+<%!
+	public Map getSpecialServicesMap(YFCElement specialservicesListElem){
+		Map outMap = new HashMap();
+		for(Iterator i = specialservicesListElem.getChildren();i.hasNext();){
+			YFCElement specialservicesElem=(YFCElement)i.next();
+			outMap.put(specialservicesElem.getAttribute("SpecialServicesCode"),specialservicesElem.getAttribute("SpecialServicesDescription"));
+		}
+		return outMap;
+	}
+%>
+
+<%!
+private void massageAttributeListForSplitShipment(YFCElement attributesElem){
+	for(Iterator i=attributesElem.getChildren();i.hasNext();){
+			YFCElement attributeElem=(YFCElement)i.next();
+			String sName=attributeElem.getAttribute("Name");
+			if(!"Status".equals(sName)){
+				i.remove();
+				attributesElem.removeChild(attributeElem);
+			}
+	}
+}
+
+%>
+<%!
+private List massageforWave(YFCElement lineAuditListElem){
+	List outList = new ArrayList();	
+	String sLineKey = null;
+	for(Iterator i = lineAuditListElem.getChildren();i.hasNext();){
+		YFCElement auditElem=(YFCElement)i.next();
+		YFCElement auditdetailElem=auditElem.getChildElement("AuditDetail");
+		YFCElement attributesElem=auditdetailElem.getChildElement("Attributes");
+		for(Iterator j=attributesElem.getChildren();j.hasNext();){
+			YFCElement attributeElem=(YFCElement)j.next();
+			String sName=attributeElem.getAttribute("Name");
+			String sOpe=auditElem.getAttribute("Operation");
+			if("WaveNo".equals(sName)&&!"Delete".equals(sOpe)){				
+				YFCElement outAuditElem = (YFCElement)auditElem.cloneNode(true);
+				outAuditElem.setAttribute("TableName","YFS_SHIPMENT");
+				boolean bRetain = massageShipmentAudit(outAuditElem);
+				if(bRetain){
+					if(isVoid(sLineKey)){
+						sLineKey = outAuditElem.getAttribute("TableKey");
+						outList.add(outAuditElem);
+					}else if(sLineKey.equals(outAuditElem.getAttribute("TableKey"))){
+						outList.add(outAuditElem);
+					}					
+				}
+			}
+		}
+	}
+	return outList;
+}
+%>

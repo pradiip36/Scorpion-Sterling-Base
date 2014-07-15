@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<YFS_ORG_RELATIONSHIP_TYPEList TableName="YFS_ORG_RELATIONSHIP_TYPE">
+<OrgRelationshipType Createprogid="XMLMigrator"
+    Createts="2010-10-18T16:25:54-04:00" Createuserid="SYSTEM"
+    Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-10-18T16:25:54-04:00" Modifyuserid="sterling"
+    OrgRelationshipTypeKey="201010181625543603"
+    RelationshipTypeDescription="Transfer"
+    RelationshipTypeFromName="From Node" RelationshipTypeID="TRANSFER" RelationshipTypeToName="To Node"/>
+</YFS_ORG_RELATIONSHIP_TYPEList>

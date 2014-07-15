@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OrganizationList>
+    <Organization AssignedColonyId="" CapacityOrganizationCode="" CatalogOrganizationCode=""
+        CreatorOrganizationKey="" CustomerMasterOrganizationCode="" InventoryKeptExternally=""
+        InventoryOrganizationCode="" InventoryPublished="" IsHubOrganization="" IsLegalEntity=""
+        IsSourcingKept="" LocaleCode="" OrganizationCode="" OrganizationKey="" OrganizationName=""
+        ParentOrganizationCode="" PaymentProcessingReqd="" PricingOrganizationCode=""
+        PrimaryEnterpriseKey="" SupplyKeptExternally="">
+        <CorporatePersonInfo AddressLine1="" AddressLine2="" AddressLine3="" City="" Country=""
+            DayFaxNo="" DayPhone="" Department="" EMailID="" FirstName="" LastName="" State=""
+            ZipCode=""/>
+        <Node AcceptanceRequired="" CanShipToAllNodes="" CanShipToOtherAddresses="" Description=""
+            IdentifiedByParentAs="" InterfaceSubType="" InterfaceType="" InventoryTracked=""
+            Inventorytype="" IsFulfillmentNode="" IsItemBasedAllocationAllowed="" Localecode=""
+            MaintainInventoryCost="" NodeOrgCode="" NodeType="" PicklistType=""
+            ProcureToShipAllowed="" ReceiptProcessingTime="" ReceiptProcessingTimeForForwarding=""
+            ReceivingNode="" RequireTransferAcceptance="" ReturnCenterFlag="" ReturnsNode=""
+            ShipNode="" ShippingNode="" SubstitutionAllowed="" UseEndOfShiftTime=""
+            WorkOrderCreationAllowed="" IsModelStore="" ModelStoreNo=""/>
+        <EnterpriseOrgList>
+            <OrgEnterprise EnterpriseOrganizationKey="" OrganizationKey=""/>
+        </EnterpriseOrgList>
+        <OrgRoleList>
+            <OrgRole OrganizationKey="" RoleKey=""/>
+        </OrgRoleList>
+    </Organization>
+</OrganizationList>

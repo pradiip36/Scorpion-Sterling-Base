@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.home.portlets.PickupOrderPortletExtnBundle" screenId="extn.home.portlets.PickupOrderPortletExtn">
+    <BundleEntries>
+        <BundleEntry bundleEntryId="bFindPickUpOrder_Button_label"
+            bundleKey="extn_Find_Order" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="bFindPickUpOrder"/>
+        <BundleEntry
+            bundleEntryId="extn_buttonAdvanceSearch_Button_label"
+            bundleKey="advancedSearch" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_buttonAdvanceSearch"/>
+        <BundleEntry bundleEntryId="extn_labelInstructions_Label_value"
+            bundleKey="extn_Scan_or_enter_order_receipt_ID_or_enter_at_least_one_search_criteria_to_find_an_order_"
+            bundleValueFn="_scSimpleBundle" property="value"
+            type="WIDGET" uId="extn_labelInstructions"/>
+        <BundleEntry bundleEntryId="portletName_Label_value"
+            bundleKey="extn_Customer_Pick_Up"
+            bundleValueFn="_scSimpleBundle" property="value"
+            type="WIDGET" uId="portletName"/>
+        <BundleEntry bundleEntryId="txtOrderNo_TextField_label"
+            bundleKey="extn_Order_Receipt_Number"
+            bundleValueFn="_scBundle" property="label" type="WIDGET" uId="txtOrderNo"/>
+        <BundleEntry bundleEntryId="txtPhoneNo_TextField_label"
+            bundleKey="extn_Phone_Number" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="txtPhoneNo"/>
+        <BundleEntry bundleEntryId="txtCustLastName_TextField_label"
+            bundleKey="extn_Name_Last_First_" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="txtCustLastName"/>
+        <BundleEntry bundleEntryId="txtCustFirstName_TextField_label"
+            bundleKey="blank" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="txtCustFirstName"/>
+    </BundleEntries>
+</ScreenBundle>

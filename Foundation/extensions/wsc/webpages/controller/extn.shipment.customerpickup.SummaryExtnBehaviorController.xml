@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.shipment.customerpickup.SummaryExtnBehaviorController"
+    requestMethodSupported="POST" screenId="extn.shipment.customerpickup.SummaryExtn">
+    <MashupRefs>
+        <MashupRef extnType="ADD"
+            mashupId="extn_getSuspVoidReceipt_mashup"
+            mashupRefId="extn_getReceiptInfo_mashup" permissionId=""/>
+        <MashupRef extnType="ADD"
+            mashupId="extn_getOrderDetail4Receipt_mashup"
+            mashupRefId="extn_getOrderDetail4Receipt" permissionId=""/>
+        <MashupRef extnType="ADD"
+            mashupId="extn_getUserFoReceipt_mashup"
+            mashupRefId="extn_getUserFoReceipt" permissionId=""/>
+        <MashupRef extnType="ADD" mashupId="extn_getCommonCodes_mashup"
+            mashupRefId="extn_getReceiptCommonCodes" permissionId=""/>
+        <MashupRef extnType="ADD" mashupId="extn_getShipNode_mashup"
+            mashupRefId="extn_getShipNode_mashup" permissionId=""/>
+        <MashupRef extnType="ADD"
+            mashupId="extn_getShipmentDetails_receipt_mashup"
+            mashupRefId="extn_getShipmentDetails_receipt" permissionId=""/>
+        <MashupRef extnType="ADD"
+            mashupId="extn_getShipmentListFor_receipt_maship"
+            mashupRefId="extn_getShipmentListForReceiptID" permissionId=""/>
+        <MashupRef extnType="ADD" mashupId="extn_EJRecord_mashup"
+            mashupRefId="extn_addEJTransOrderPicked" permissionId=""/>
+        <MashupRef extnType="ADD" mashupId="extn_getCommonCodes_mashup"
+            mashupRefId="extn_getReceiptCommonCodes_diamond" permissionId=""/>
+    </MashupRefs>
+</Controller>

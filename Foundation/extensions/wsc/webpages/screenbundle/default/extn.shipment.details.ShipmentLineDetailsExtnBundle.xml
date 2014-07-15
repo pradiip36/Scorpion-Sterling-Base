@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.shipment.details.ShipmentLineDetailsExtnBundle" screenId="extn.shipment.details.ShipmentLineDetailsExtn">
+    <BundleEntries>
+        <BundleEntry bundleEntryId="extn_label_pickedUp_Label_value"
+            bundleKey="ShipmentComplete" bundleValueFn="_scSimpleBundle"
+            property="value" type="WIDGET" uId="extn_label_pickedUp"/>
+        <BundleEntry bundleEntryId="extn_kohls_upc_DataLabel_label"
+            bundleKey="extn_Kohls_UPC" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_kohls_upc"/>
+        <BundleEntry
+            bundleEntryId="extn_datalabelQuantityPicked_DataLabel_label"
+            bundleKey="extn_Quantity_Picked" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_datalabelQuantityPicked"/>
+        <BundleEntry
+            bundleEntryId="extn_datalabelOrderedQty_DataLabel_label"
+            bundleKey="extn_Ordered_Quantity" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_datalabelOrderedQty"/>
+    </BundleEntries>
+</ScreenBundle>

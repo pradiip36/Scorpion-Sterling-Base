@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="KohlsPackShip_subreport2_subreport1"
+
+		 language="groovy"		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="612"
+		 pageHeight="1008"
+		 columnWidth="612"
+		 columnSpacing="0"
+		 leftMargin="0"
+		 rightMargin="0"
+		 topMargin="0"
+		 bottomMargin="0"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<queryString language="xPath"><![CDATA[/Shipment/ShipmentCharges/ShipmentCharge]]></queryString>
+
+	<field name="ActualCharge" class="java.lang.Double">
+		<fieldDescription><![CDATA[@ActualCharge]]></fieldDescription>
+	</field>
+	<field name="ChargeCategory" class="java.lang.String">
+		<fieldDescription><![CDATA[@ChargeCategory]]></fieldDescription>
+	</field>
+
+	<variable name="shippingCharge" class="java.lang.Double" resetType="Report" calculation="Sum">
+		<variableExpression><![CDATA[($F{ChargeCategory}.equalsIgnoreCase("Shipping"))?$F{ActualCharge}:$V{ZeroVariable}]]></variableExpression>
+	</variable>
+	<variable name="ZeroVariable" class="java.lang.Double" resetType="None" calculation="Nothing">
+		<variableExpression><![CDATA[$V{ZeroVariable}]]></variableExpression>
+		<initialValueExpression><![CDATA[0.0]]></initialValueExpression>
+	</variable>
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

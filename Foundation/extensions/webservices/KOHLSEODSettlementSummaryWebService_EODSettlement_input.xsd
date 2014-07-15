@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema attributeFormDefault="unqualified"
+    elementFormDefault="qualified"
+    targetNamespace="http://www.sterlingcommerce.com/documentation/KOHLSEODSettlementSummaryWebService/EODSettlement/input"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:yfc="http://www.sterlingcommerce.com/documentation/KOHLSEODSettlementSummaryWebService/EODSettlement/input" xmlns:yfctype="http://www.sterlingcommerce.com/documentation/types">
+    <xsd:annotation
+        yfc:fileName="KOHLSEODSettlementSummaryWebService_EODSettlement_input.xsd" yfc:rootElement="KLHardTotals">
+        <xsd:appinfo source="yfc:structure">
+            <KLHardTotals hasAttributes="Y"/>
+        </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:import
+        namespace="http://www.sterlingcommerce.com/documentation/types" schemaLocation="datatypes.xsd"/>
+    <xsd:element name="KLHardTotals" type="yfc:KLHardTotalsXSDType"/>
+    <xsd:complexType name="KLHardTotalsXSDType">
+        <xsd:attribute name="TransactionEndDate" type="xsd:string" use="required"/>
+        <xsd:attribute name="TransactionStartDate" type="xsd:string" use="required"/>
+    </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE weblogic-web-app PUBLIC "-//BEA Systems, Inc.//DTD Web Application 8.1//EN" "http://www.bea.com/servers/wls810/dtd/weblogic810-web-jar.dtd">
+<weblogic-web-app>
+	<jsp-descriptor>
+        <jsp-param>
+            <param-name>keepgenerated</param-name>
+            <param-value>true</param-value>
+        </jsp-param>
+	</jsp-descriptor>
+    <session-descriptor>
+        <cookie-http-only>false</cookie-http-only>
+    </session-descriptor>
+	<charset-params>
+		<input-charset>
+			<resource-path>/*</resource-path>
+			<java-charset-name>UTF-8</java-charset-name>
+		</input-charset>
+	</charset-params>
+	<context-root>smcfs</context-root>
+</weblogic-web-app>

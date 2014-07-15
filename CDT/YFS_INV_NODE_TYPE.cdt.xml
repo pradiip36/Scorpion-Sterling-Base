@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<YFS_INV_NODE_TYPEList TableName="YFS_INV_NODE_TYPE">
+<InventoryNodeType ApplyFutureSafetyFactor="N"
+    ApplyOnhandSafetyFactor="Y" Createprogid=".YEntityServlet"
+    Createts="2012-06-26T14:43:43-04:00" Createuserid="tkmayy0"
+    InventoryNodeTypeKey="2012062614434351229" Lockid="0"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2012-06-26T14:43:43-04:00"
+    Modifyuserid="sterling" NodeTypeID="Store" OrganizationCode="DEFAULT"/>
+<InventoryNodeType ApplyFutureSafetyFactor="N"
+    ApplyOnhandSafetyFactor="Y" Createprogid=".YEntityServlet"
+    Createts="2012-07-18T16:29:12-04:00" Createuserid="admin"
+    InventoryNodeTypeKey="2012071816291287658" Lockid="0"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2012-07-18T16:29:12-04:00"
+    Modifyuserid="sterling" NodeTypeID="STORE" OrganizationCode="DEFAULT"/>
+</YFS_INV_NODE_TYPEList>

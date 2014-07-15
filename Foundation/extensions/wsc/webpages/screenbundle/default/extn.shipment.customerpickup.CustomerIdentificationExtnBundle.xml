@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.shipment.customerpickup.CustomerIdentificationExtnBundle" screenId="extn.shipment.customerpickup.CustomerIdentificationExtn">
+    <BundleEntries>
+        <BundleEntry bundleEntryId="extn_button_void_Button_label"
+            bundleKey="extn_Void" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_button_void"/>
+        <BundleEntry
+            bundleEntryId="extn_labelCustomerValidationMessage_Label_value"
+            bundleKey="extn_Validate_customer_using_a_government_issued_photo_ID_"
+            bundleValueFn="_scSimpleBundle" property="value"
+            type="WIDGET" uId="extn_labelCustomerValidationMessage"/>
+        <BundleEntry
+            bundleEntryId="extn_filteringselect_verificationReason_FilteringSelect_label"
+            bundleKey="extn_verification_reason"
+            bundleValueFn="_scBundle" property="label" type="WIDGET" uId="extn_filteringselect_verificationReason"/>
+        <BundleEntry
+            bundleEntryId="extn_textfield_firstName_TextField_label"
+            bundleKey="Customer_first_name" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_textfield_firstName"/>
+        <BundleEntry
+            bundleEntryId="extn_textfield_lastName_TextField_label"
+            bundleKey="Label_Customer_last_name"
+            bundleValueFn="_scBundle" property="label" type="WIDGET" uId="extn_textfield_lastName"/>
+    </BundleEntries>
+</ScreenBundle>

@@ -1,0 +1,116 @@
+		<div>
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_itemDescription_label' , 
+		_sc_extensibility_operation : 'insert' , 
+		'class' : 'fieldLabel blockComponent' , 
+		_sc_extensibility_moveOrder : '4' , 
+		_sc_extensibility_referenceUId : 'itemdescriptionLink' , 
+		_sc_extensibility_position : 'before'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'ShipmentLine.OrderLine.ItemDetails.PrimaryInformation.ShortDescription'
+,
+		 dynamicBindingFunc : 			'getItemDescriptionWithSKU'
+,
+		 namespace : 			'ShipmentLine'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'itemdescriptionLink'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_datalabel_KohlsUPC' , 
+		_sc_extensibility_operation : 'insert' , 
+		'class' : 'fieldLabel blockComponent' , 
+		_sc_extensibility_moveOrder : '1' , 
+		_sc_extensibility_referenceUId : 'itemdescriptionLink' , 
+		_sc_extensibility_position : 'after'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_Kohls_UPC')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'ShipmentLine.OrderLine.ItemDetails.ItemAliasList'
+,
+		 dynamicBindingFunc : 			'getKohlsUPC'
+,
+		 namespace : 			'ShipmentLine'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_quantityLabel' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '5' , 
+		_sc_extensibility_referenceUId : 'quantityLabelDetails' , 
+		_sc_extensibility_position : 'before'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('OrderedQuantity')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'ShipmentLine.OrderLine.OriginalOrderedQty'
+,
+		 dynamicBindingFunc : 			'getOriginalOrderedQty'
+,
+		 namespace : 			'ShipmentLine'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_quantityPicked' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '6' , 
+		_sc_extensibility_referenceUId : 'quantityLabelDetails' , 
+		_sc_extensibility_position : 'before'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_Quantity_Picked')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'ShipmentLine.BackroomPickedQuantity'
+,
+		 dynamicBindingFunc : 			'getBackroomPickedQty'
+,
+		 namespace : 			'ShipmentLine'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'quantityLabelDetails'  
+	 					}">
+		 	</div>  
+		</div>

@@ -1,0 +1,1246 @@
+{
+ "model": {
+  "sciId": {
+   "id": "sciId",
+   "value": "sbcKohlsSafetyFactorDetailScreen",
+   "type": "string"
+  },
+  "className": {
+   "id": "className",
+   "value": "sc.sbc.kohls.item.safetyfactor.sbcKohlsSafetyFactorDetailScreen",
+   "type": "string"
+  },
+  "superclassName": {
+   "id": "superclassName",
+   "value": "sc.plat.ui.ExtensibleScreen",
+   "type": "string"
+  },
+  "regXtype": {
+   "id": "regXtype",
+   "value": "sbcKohlsSafetyFactorDetailScreen",
+   "type": "string"
+  },
+  "header": {
+   "id": "header",
+   "value": "false",
+   "type": "boolean"
+  },
+  "layout": {
+   "id": "layout",
+   "value": "anchor",
+   "type": "string"
+  },
+  "autoScroll": {
+   "id": "autoScroll",
+   "value": "true",
+   "type": "boolean"
+  },
+  "items": {
+   "id": "items",
+   "value": [{
+    "id": "",
+    "value": {
+     "sciId": {
+      "id": "sciId",
+      "value": "sbcKohlsSafetyFactorDetailPnl",
+      "type": "string"
+     },
+     "title": {
+      "id": "title",
+      "value": "Manage Safety Factor",
+      "type": "string"
+     },
+     "items": {
+      "id": "items",
+      "value": [{
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "sbcCategoryTreeScreen",
+         "type": "string"
+        },
+        "title": {
+         "id": "title",
+         "value": "Catagory tree",
+         "type": "string"
+        },
+        "region": {
+         "id": "region",
+         "value": "center",
+         "type": "string"
+        },
+        "disableNodeForSubCatalog": {
+         "id": "disableNodeForSubCatalog",
+         "value": "true",
+         "type": "string"
+        },
+        "disableNodeForNonCatalog": {
+         "id": "disableNodeForNonCatalog",
+         "value": "true",
+         "type": "string"
+        },
+        "xtype": {
+         "id": "xtype",
+         "value": "sbcCategoryTreeScreen",
+         "type": "string"
+        },
+        "width": {
+         "id": "width",
+         "value": "200",
+         "type": "number"
+        },
+        "rowspan": {
+         "id": "rowspan",
+         "value": "2",
+         "type": "number"
+        },
+        "defid": "panel"
+       },
+       "type": "panel"
+      },
+      {
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "kohlsCategoryDetailHolderPnl",
+         "type": "string"
+        },
+        "title": {
+         "id": "title",
+         "value": "Category Details",
+         "type": "string"
+        },
+        "layout": {
+         "id": "layout",
+         "value": "anchor",
+         "type": "string"
+        },
+        "header": {
+         "id": "header",
+         "value": "false",
+         "type": "boolean"
+        },
+        "items": {
+         "id": "items",
+         "value": [{
+          "id": "",
+          "value": {
+           "sciId": {
+            "id": "sciId",
+            "value": "pnlKohlsAdjustSafetyFactor",
+            "type": "string"
+           },
+           "title": {
+            "id": "title",
+            "value": "Adjust Safety Factor",
+            "type": "string"
+           },
+           "layout": {
+            "id": "layout",
+            "value": "table",
+            "type": "string"
+           },
+           "height": {
+            "id": "height",
+            "value": "200",
+            "type": "number"
+           },
+           "items": {
+            "id": "items",
+            "value": [{
+             "id": "",
+             "value": {
+              "sciId": {
+               "id": "sciId",
+               "value": "lblCategoryBeingAdjusted",
+               "type": "string"
+              },
+              "text": {
+               "id": "text",
+               "value": "",
+               "type": "string"
+              },
+              "colspan": {
+               "id": "colspan",
+               "value": "6",
+               "type": "number"
+              },
+              "autoWidth": {
+               "id": "autoWidth",
+               "value": "true",
+               "type": "boolean"
+              },
+              "cls": {
+               "id": "cls",
+               "value": "sc-plat-label-left",
+               "type": "string"
+              },
+              "bindingData": {
+               "id": "bindingData",
+               "value": {
+                "sourceBinding": {
+                 "id": "sourceBinding",
+                 "value": "sourcemodel_test.CategoryPath",
+                 "type": "string"
+                },
+                "defid": "object"
+               },
+               "type": "object"
+              },
+              "defid": "label"
+             },
+             "type": "label"
+            },
+            {
+             "id": "",
+             "value": {
+              "sciId": {
+               "id": "sciId",
+               "value": "lblKohlsSafetyFactor",
+               "type": "string"
+              },
+              "text": {
+               "id": "text",
+               "value": "Modify By",
+               "type": "string"
+              },
+              "colspan": {
+               "id": "colspan",
+               "value": "2",
+               "type": "number"
+              },
+              "cls": {
+               "id": "cls",
+               "value": "sc-plat-importantNonedit-text",
+               "type": "string"
+              },
+              "defid": "label"
+             },
+             "type": "label"
+            },
+            {
+             "id": "",
+             "value": {
+              "sciId": {
+               "id": "sciId",
+               "value": "radManageSafetyFactorByPercentage",
+               "type": "string"
+              },
+              "boxLabel": {
+               "id": "boxLabel",
+               "value": "By Percentage",
+               "type": "string"
+              },
+              "handler": {
+               "id": "handler",
+               "value": "this.handlePercentageRadioButtons",
+               "type": "expr"
+              },
+              "scope": {
+               "id": "scope",
+               "value": "this",
+               "type": "expr"
+              },
+              "ctCls": {
+               "id": "ctCls",
+               "value": "sc-plat-importantRadioLabel",
+               "type": "string"
+              },
+              "bindingData": {
+               "id": "bindingData",
+               "value": {
+                "targetBinding": {
+                 "id": "targetBinding",
+                 "value": [{
+                  "id": "",
+                  "value": "kohlsItemSafetyFactorUpdate_input:ExtnItemSafetyFactor.SafetyOperation",
+                  "type": "string"
+                 }],
+                 "type": "array"
+                },
+                "selectedValue": {
+                 "id": "selectedValue",
+                 "value": "P",
+                 "type": "string"
+                },
+                "defid": "object"
+               },
+               "type": "object"
+              },
+              "checked": {
+               "id": "checked",
+               "value": "true",
+               "type": "boolean"
+              },
+              "defid": "radio"
+             },
+             "type": "radio"
+            },
+            {
+             "id": "",
+             "value": {
+              "sciId": {
+               "id": "sciId",
+               "value": "cmbKohlsSafetyfactorOptions",
+               "type": "string"
+              },
+              "ctCls": {
+               "id": "ctCls",
+               "value": "sc-plat-combo-selection",
+               "type": "string"
+              },
+              "cls": {
+               "id": "cls",
+               "value": "sbc-standard-combo",
+               "type": "string"
+              },
+              "listClass": {
+               "id": "listClass",
+               "value": "sc-plat-combo-list-item",
+               "type": "string"
+              },
+              "readOnly": {
+               "id": "readOnly",
+               "value": "true",
+               "type": "boolean"
+              },
+              "triggerAction": {
+               "id": "triggerAction",
+               "value": "all",
+               "type": "string"
+              },
+              "displayField": {
+               "id": "displayField",
+               "value": "Option",
+               "type": "string"
+              },
+              "valueField": {
+               "id": "valueField",
+               "value": "Option",
+               "type": "string"
+              },
+              "mode": {
+               "id": "mode",
+               "value": "local",
+               "type": "string"
+              },
+              "blankText": {
+               "id": "blankText",
+               "value": "Increase/Decrease",
+               "type": "string"
+              },
+              "bindingData": {
+               "id": "bindingData",
+               "value": {
+                "sourceBinding": {
+                 "id": "sourceBinding",
+                 "value": "manageSafetyFactor_namespace:ItemSafetyFactor.Operation",
+                 "type": "string"
+                },
+                "targetBinding": {
+                 "id": "targetBinding",
+                 "value": [{
+                  "id": "",
+                  "value": "kohlsItemSafetyFactorUpdate_input:ExtnItemSafetyFactor.SafetyOperationPercentage",
+                  "type": "string"
+                 }],
+                 "type": "array"
+                },
+                "optionsBinding": {
+                 "id": "optionsBinding",
+                 "value": "SafetyFactorOperations:Options",
+                 "type": "string"
+                },
+                "defid": "object"
+               },
+               "type": "object"
+              },
+              "store": {
+               "id": "store",
+               "value": {
+                "fields": {
+                 "id": "fields",
+                 "value": [{
+                  "id": "",
+                  "value": "\"Option\"",
+                  "type": "expr"
+                 }],
+                 "type": "array"
+                },
+                "sortInfo": {
+                 "id": "sortInfo",
+                 "value": {
+                  "field": {
+                   "id": "field",
+                   "value": "Option",
+                   "type": "string"
+                  },
+                  "direction": {
+                   "id": "direction",
+                   "value": "ASC",
+                   "type": "string"
+                  },
+                  "defid": "object"
+                 },
+                 "type": "object"
+                },
+                "defid": "jsonstore"
+               },
+               "type": "jsonstore"
+              },
+              "defid": "combo"
+             },
+             "type": "combo"
+            },
+            {
+             "id": "",
+             "value": {
+              "sciId": {
+               "id": "sciId",
+               "value": "txtKohlsSafetyFactorAdjustmentByPercentage",
+               "type": "string"
+              },
+              "bindingData": {
+               "id": "bindingData",
+               "value": {
+                "targetBinding": {
+                 "id": "targetBinding",
+                 "value": [{
+                  "id": "",
+                  "value": "kohlsItemSafetyFactorUpdate_input:ExtnItemSafetyFactor.SafetyFactorPercentage",
+                  "type": "string"
+                 }],
+                 "type": "array"
+                },
+                "defid": "object"
+               },
+               "type": "object"
+              },
+              "defid": "bignumberfield"
+             },
+             "type": "bignumberfield"
+            },
+            {
+             "id": "",
+             "value": {
+              "sciId": {
+               "id": "sciId",
+               "value": "lblPercentage",
+               "type": "string"
+              },
+              "text": {
+               "id": "text",
+               "value": "%",
+               "type": "string"
+              },
+              "defid": "label"
+             },
+             "type": "label"
+            },
+            {
+             "id": "",
+             "value": {
+              "sciId": {
+               "id": "sciId",
+               "value": "lblKohlsFiller",
+               "type": "string"
+              },
+              "text": {
+               "id": "text",
+               "value": "",
+               "type": "string"
+              },
+              "defid": "label"
+             },
+             "type": "label"
+            },
+            {
+             "id": "",
+             "value": {
+              "sciId": {
+               "id": "sciId",
+               "value": "radManageSafetyFactorByQty",
+               "type": "string"
+              },
+              "colspan": {
+               "id": "colspan",
+               "value": "2",
+               "type": "number"
+              },
+              "boxLabel": {
+               "id": "boxLabel",
+               "value": "By Quantity",
+               "type": "string"
+              },
+              "handler": {
+               "id": "handler",
+               "value": "this.handleQtyRadioButtons",
+               "type": "expr"
+              },
+              "scope": {
+               "id": "scope",
+               "value": "this",
+               "type": "expr"
+              },
+              "ctCls": {
+               "id": "ctCls",
+               "value": "sc-plat-importantRadioLabel",
+               "type": "string"
+              },
+              "bindingData": {
+               "id": "bindingData",
+               "value": {
+                "selectedValue": {
+                 "id": "selectedValue",
+                 "value": "Q",
+                 "type": "string"
+                },
+                "targetBinding": {
+                 "id": "targetBinding",
+                 "value": [{
+                  "id": "",
+                  "value": "kohlsItemSafetyFactorUpdate_input:ExtnItemSafetyFactor.SafetyOperation",
+                  "type": "string"
+                 }],
+                 "type": "array"
+                },
+                "defid": "object"
+               },
+               "type": "object"
+              },
+              "defid": "radio"
+             },
+             "type": "radio"
+            },
+            {
+             "id": "",
+             "value": {
+              "sciId": {
+               "id": "sciId",
+               "value": "cmbKohlsSafetyfactorOptionsForQty",
+               "type": "string"
+              },
+              "ctCls": {
+               "id": "ctCls",
+               "value": "sc-plat-combo-selection",
+               "type": "string"
+              },
+              "cls": {
+               "id": "cls",
+               "value": "sbc-standard-combo",
+               "type": "string"
+              },
+              "listClass": {
+               "id": "listClass",
+               "value": "sc-plat-combo-list-item",
+               "type": "string"
+              },
+              "readOnly": {
+               "id": "readOnly",
+               "value": "true",
+               "type": "boolean"
+              },
+              "triggerAction": {
+               "id": "triggerAction",
+               "value": "all",
+               "type": "string"
+              },
+              "displayField": {
+               "id": "displayField",
+               "value": "Option",
+               "type": "string"
+              },
+              "valueField": {
+               "id": "valueField",
+               "value": "Option",
+               "type": "string"
+              },
+              "mode": {
+               "id": "mode",
+               "value": "local",
+               "type": "string"
+              },
+              "store": {
+               "id": "store",
+               "value": {
+                "fields": {
+                 "id": "fields",
+                 "value": [{
+                  "id": "",
+                  "value": "\"Option\"",
+                  "type": "expr"
+                 }],
+                 "type": "array"
+                },
+                "sortInfo": {
+                 "id": "sortInfo",
+                 "value": {
+                  "direction": {
+                   "id": "direction",
+                   "value": "ASC",
+                   "type": "string"
+                  },
+                  "field": {
+                   "id": "field",
+                   "value": "Option",
+                   "type": "string"
+                  },
+                  "defid": "object"
+                 },
+                 "type": "object"
+                },
+                "defid": "jsonstore"
+               },
+               "type": "jsonstore"
+              },
+              "bindingData": {
+               "id": "bindingData",
+               "value": {
+                "sourceBinding": {
+                 "id": "sourceBinding",
+                 "value": "manageSafetyFactor_namespace:ItemSafetyFactor.Operation",
+                 "type": "string"
+                },
+                "targetBinding": {
+                 "id": "targetBinding",
+                 "value": [{
+                  "id": "",
+                  "value": "kohlsItemSafetyFactorUpdate_input:ExtnItemSafetyFactor.SafetyOperationQuantity",
+                  "type": "string"
+                 }],
+                 "type": "array"
+                },
+                "optionsBinding": {
+                 "id": "optionsBinding",
+                 "value": "SafetyFactorOperations:Options",
+                 "type": "string"
+                },
+                "defid": "object"
+               },
+               "type": "object"
+              },
+              "defid": "combo"
+             },
+             "type": "combo"
+            },
+            {
+             "id": "items",
+             "value": {
+              "sciId": {
+               "id": "sciId",
+               "value": "txtKohlsSafetyFactorAdjustmentQty",
+               "type": "string"
+              },
+              "colspan": {
+               "id": "colspan",
+               "value": "2",
+               "type": "number"
+              },
+              "bindingData": {
+               "id": "bindingData",
+               "value": {
+                "targetBinding": {
+                 "id": "targetBinding",
+                 "value": [{
+                  "id": "targetBinding",
+                  "value": "kohlsItemSafetyFactorUpdate_input:ExtnItemSafetyFactor.SafetyFactorQty",
+                  "type": "string"
+                 }],
+                 "type": "array"
+                },
+                "defid": "object"
+               },
+               "type": "object"
+              },
+              "allowDecimals": {
+               "id": "allowDecimals",
+               "value": "false",
+               "type": "boolean"
+              },
+              "allowNegative": {
+               "id": "allowNegative",
+               "value": "false",
+               "type": "boolean"
+              },
+              "defid": "bignumberfield"
+             },
+             "type": "bignumberfield"
+            },
+            {
+             "id": "",
+             "value": {
+              "sciId": {
+               "id": "sciId",
+               "value": "lblDefaultSafetyFactor",
+               "type": "string"
+              },
+              "text": {
+               "id": "text",
+               "value": "Default Safety Factor",
+               "type": "string"
+              },
+              "cls": {
+               "id": "cls",
+               "value": "sc-plat-importantNonedit-text",
+               "type": "string"
+              },
+              "colspan": {
+               "id": "colspan",
+               "value": "2",
+               "type": "number"
+              },
+              "defid": "label"
+             },
+             "type": "label"
+            },
+            {
+             "id": "items",
+             "value": {
+              "sciId": {
+               "id": "sciId",
+               "value": "txtDefaultSafetyFactor",
+               "type": "string"
+              },
+              "bindingData": {
+               "id": "bindingData",
+               "value": {
+                "targetBinding": {
+                 "id": "targetBinding",
+                 "value": [{
+                  "id": "targetBinding",
+                  "value": "kohlsItemSafetyFactorUpdate_input:ExtnItemSafetyFactor.DefaultSafetyFactor",
+                  "type": "string"
+                 }],
+                 "type": "array"
+                },
+                "defid": "object"
+               },
+               "type": "object"
+              },
+              "allowDecimals": {
+               "id": "allowDecimals",
+               "value": "false",
+               "type": "boolean"
+              },
+              "allowNegative": {
+               "id": "allowNegative",
+               "value": "false",
+               "type": "boolean"
+              },
+              "defid": "bignumberfield"
+             },
+             "type": "bignumberfield"
+            }],
+            "type": "array"
+           },
+           "rowspan": {
+            "id": "rowspan",
+            "value": "1",
+            "type": "number"
+           },
+           "colspan": {
+            "id": "colspan",
+            "value": "4",
+            "type": "number"
+           },
+           "region": {
+            "id": "region",
+            "value": "center",
+            "type": "string"
+           },
+           "width": {
+            "id": "width",
+            "value": "980",
+            "type": "number"
+           },
+           "sctype": {
+            "id": "sctype",
+            "value": "ScreenMainPanel",
+            "type": "string"
+           },
+           "bbar": {
+            "id": "bbar",
+            "value": [{
+             "id": "",
+             "value": {
+              "sciId": {
+               "id": "sciId",
+               "value": "tbfill1",
+               "type": "string"
+              },
+              "defid": "tbfill"
+             },
+             "type": "tbfill"
+            },
+            {
+             "id": "",
+             "value": {
+              "sciId": {
+               "id": "sciId",
+               "value": "btnAdjustSafetyFactor",
+               "type": "string"
+              },
+              "text": {
+               "id": "text",
+               "value": "Adjust Safety Factor",
+               "type": "string"
+              },
+              "handler": {
+               "id": "handler",
+               "value": "this.manageSafetyFactor",
+               "type": "expr"
+              },
+              "scope": {
+               "id": "scope",
+               "value": "this",
+               "type": "expr"
+              },
+              "iconCls": {
+               "id": "iconCls",
+               "value": "",
+               "type": "string"
+              },
+              "defid": "button"
+             },
+             "type": "button"
+            }],
+            "type": "array"
+           },
+           "layoutConfig": {
+            "id": "layoutConfig",
+            "value": {
+             "columns": {
+              "id": "columns",
+              "value": "6",
+              "type": "number"
+             },
+             "defid": "tableLayoutConfig"
+            },
+            "type": "object"
+           },
+           "defid": "panel"
+          },
+          "type": "panel"
+         },
+         {
+          "id": "",
+          "value": {
+           "sciId": {
+            "id": "sciId",
+            "value": "kohlsSafetyFactorItemsGrid",
+            "type": "string"
+           },
+           "title": {
+            "id": "title",
+            "value": "Category Item Details",
+            "type": "string"
+           },
+           "columns": {
+            "id": "columns",
+            "value": [{
+             "id": "",
+             "value": {
+              "sciId": {
+               "id": "sciId",
+               "value": "kohlsItemId",
+               "type": "string"
+              },
+              "header": {
+               "id": "header",
+               "value": "Item Id",
+               "type": "string"
+              },
+              "sortable": {
+               "id": "sortable",
+               "value": "true",
+               "type": "boolean"
+              },
+              "dataIndex": {
+               "id": "dataIndex",
+               "value": "ItemID",
+               "type": "string"
+              },
+              "width": {
+               "id": "width",
+               "value": "200",
+               "type": "number"
+              },
+              "align": {
+               "id": "align",
+               "value": "left",
+               "type": "string"
+              },
+              "bindingData": {
+               "id": "bindingData",
+               "value": {
+                "sFieldConfig": {
+                 "id": "sFieldConfig",
+                 "value": {
+                  "mapping": {
+                   "id": "mapping",
+                   "value": "ItemID",
+                   "type": "string"
+                  },
+                  "defid": "object"
+                 },
+                 "type": "object"
+                },
+                "defid": "object"
+               },
+               "type": "object"
+              },
+              "defid": "grid-column"
+             },
+             "type": "grid-column"
+            },
+            {
+             "id": "columns",
+             "value": {
+              "sciId": {
+               "id": "sciId",
+               "value": "kohlsItemUOM",
+               "type": "string"
+              },
+              "header": {
+               "id": "header",
+               "value": "Unit Of Measure",
+               "type": "string"
+              },
+              "sortable": {
+               "id": "sortable",
+               "value": "true",
+               "type": "boolean"
+              },
+              "bindingData": {
+               "id": "bindingData",
+               "value": {
+                "sFieldConfig": {
+                 "id": "sFieldConfig",
+                 "value": {
+                  "mapping": {
+                   "id": "mapping",
+                   "value": "UnitOfMeasure",
+                   "type": "string"
+                  },
+                  "defid": "object"
+                 },
+                 "type": "object"
+                },
+                "defid": "object"
+               },
+               "type": "object"
+              },
+              "dataIndex": {
+               "id": "dataIndex",
+               "value": "UnitOfMeasure",
+               "type": "string"
+              },
+              "width": {
+               "id": "width",
+               "value": "100",
+               "type": "number"
+              },
+              "defid": "grid-column"
+             },
+             "type": "grid-column"
+            },
+            {
+             "id": "",
+             "value": {
+              "sciId": {
+               "id": "sciId",
+               "value": "kohlsItemDescription",
+               "type": "string"
+              },
+              "header": {
+               "id": "header",
+               "value": "Item Description",
+               "type": "string"
+              },
+              "sortable": {
+               "id": "sortable",
+               "value": "true",
+               "type": "boolean"
+              },
+              "dataIndex": {
+               "id": "dataIndex",
+               "value": "PrimaryInformation.ShortDescription",
+               "type": "string"
+              },
+              "width": {
+               "id": "width",
+               "value": "430",
+               "type": "number"
+              },
+              "align": {
+               "id": "align",
+               "value": "left",
+               "type": "string"
+              },
+              "bindingData": {
+               "id": "bindingData",
+               "value": {
+                "sFieldConfig": {
+                 "id": "sFieldConfig",
+                 "value": {
+                  "mapping": {
+                   "id": "mapping",
+                   "value": "PrimaryInformation.ShortDescription",
+                   "type": "string"
+                  },
+                  "defid": "object"
+                 },
+                 "type": "object"
+                },
+                "defid": "object"
+               },
+               "type": "object"
+              },
+              "defid": "grid-column"
+             },
+             "type": "grid-column"
+            },
+            {
+             "id": "",
+             "value": {
+              "sciId": {
+               "id": "sciId",
+               "value": "kohlsItemSafetyFactor",
+               "type": "string"
+              },
+              "header": {
+               "id": "header",
+               "value": "Onhand Safety Factor  (Qty)",
+               "type": "string"
+              },
+              "sortable": {
+               "id": "sortable",
+               "value": "true",
+               "type": "boolean"
+              },
+              "width": {
+               "id": "width",
+               "value": "200",
+               "type": "number"
+              },
+              "align": {
+               "id": "align",
+               "value": "left",
+               "type": "string"
+              },
+              "bindingData": {
+               "id": "bindingData",
+               "value": {
+                "sFieldConfig": {
+                 "id": "sFieldConfig",
+                 "value": {
+                  "mapping": {
+                   "id": "mapping",
+                   "value": "InventoryParameters.OnhandSafetyFactorQuantity",
+                   "type": "string"
+                  },
+                  "defid": "object"
+                 },
+                 "type": "object"
+                },
+                "defid": "object"
+               },
+               "type": "object"
+              },
+              "defid": "grid-column"
+             },
+             "type": "grid-column"
+            }],
+            "type": "array"
+           },
+           "height": {
+            "id": "height",
+            "value": "300",
+            "type": "number"
+           },
+           "border": {
+            "id": "border",
+            "value": "false",
+            "type": "boolean"
+           },
+           "autoScroll": {
+            "id": "autoScroll",
+            "value": "true",
+            "type": "boolean"
+           },
+           "region": {
+            "id": "region",
+            "value": "south",
+            "type": "string"
+           },
+           "sctype": {
+            "id": "sctype",
+            "value": "ScreenMainPanel",
+            "type": "string"
+           },
+           "autoWidth": {
+            "id": "autoWidth",
+            "value": "true",
+            "type": "boolean"
+           },
+           "bindingData": {
+            "id": "bindingData",
+            "value": {
+             "sourceBinding": {
+              "id": "sourceBinding",
+              "value": "categoryItemDetails_output:ItemList.Item",
+              "type": "string"
+             },
+             "defid": "object"
+            },
+            "type": "object"
+           },
+           "defid": "grid"
+          },
+          "type": "grid"
+         }],
+         "type": "array"
+        },
+        "autoHeight": {
+         "id": "autoHeight",
+         "value": "true",
+         "type": "boolean"
+        },
+        "autoScroll": {
+         "id": "autoScroll",
+         "value": "true",
+         "type": "boolean"
+        },
+        "columns": {
+         "id": "columns",
+         "value": "1",
+         "type": "number"
+        },
+        "height": {
+         "id": "height",
+         "value": "1500",
+         "type": "number"
+        },
+        "border": {
+         "id": "border",
+         "value": "false",
+         "type": "boolean"
+        },
+        "autoWidth": {
+         "id": "autoWidth",
+         "value": "true",
+         "type": "boolean"
+        },
+        "layoutConfig": {
+         "id": "layoutConfig",
+         "value": {
+          "columns": {
+           "id": "columns",
+           "value": "4",
+           "type": "number"
+          },
+          "defid": "layoutConfig"
+         },
+         "type": "object"
+        },
+        "defid": "panel"
+       },
+       "type": "panel"
+      }],
+      "type": "array"
+     },
+     "layout": {
+      "id": "layout",
+      "value": "table",
+      "type": "string"
+     },
+     "sctype": {
+      "id": "sctype",
+      "value": "ScreenMainPanel",
+      "type": "string"
+     },
+     "layoutConfig": {
+      "id": "layoutConfig",
+      "value": {
+       "columns": {
+        "id": "columns",
+        "value": "4",
+        "type": "number"
+       },
+       "defid": "tableLayoutConfig"
+      },
+      "type": "object"
+     },
+     "defid": "panel"
+    },
+    "type": "panel"
+   }],
+   "type": "array"
+  },
+  "sctype": {
+   "id": "sctype",
+   "value": "ScreenMainPanel",
+   "type": "string"
+  },
+  "namespaces": {
+   "id": "namespaces",
+   "value": {
+    "target": {
+     "id": "target",
+     "value": [{
+      "id": "",
+      "value": {
+       "name": {
+        "id": "name",
+        "value": "",
+        "type": "string"
+       },
+       "description": {
+        "id": "description",
+        "value": "",
+        "type": "string"
+       },
+       "defid": "target"
+      },
+      "type": "target"
+     }],
+     "type": "array"
+    },
+    "source": {
+     "id": "source",
+     "value": [{
+      "id": "",
+      "value": {
+       "name": {
+        "id": "name",
+        "value": "",
+        "type": "string"
+       },
+       "description": {
+        "id": "description",
+        "value": "",
+        "type": "string"
+       },
+       "defid": "source"
+      },
+      "type": "source"
+     }],
+     "type": "array"
+    },
+    "defid": "namespaces"
+   },
+   "type": "object"
+  },
+  "defid": "screen"
+ },
+ "version": "0.3.0b",
+ "type": "SCREEN",
+ "_verificationText": "VerificationText",
+ "dataSources": {},
+ "templateVariables": {
+  "config_js": "sbcKohlsSafetyFactorDetailScreen",
+  "js": "sbcKohlsSafetyFactorDetailScreen"
+ }
+}

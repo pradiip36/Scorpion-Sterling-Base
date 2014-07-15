@@ -1,0 +1,17 @@
+
+<Order DocumentType="" EnterpriseCode="" OrderHeaderKey="" OrderNo=""  MinOrderStatus="">
+
+<OrderLines TotalNumberOfRecords="">
+
+<OrderLine  InvoicedQuantity="" OrderHeaderKey="" OrderLineKey="" OrderedQty="" OrderingUOM="" OriginalOrderedQty="" PipelineKey="" 
+PricingDate="" PrimeLineNo="" ReceivedQty="" ShipToKey=""  ShippedQuantity=""  SubLineNo="" >
+<OrderStatuses>
+ <OrderStatus OrderHeaderKey="" OrderLineKey="" ReceivingNode="" ShipNode="" Status=""  StatusQty=""  TotalQuantity="" />
+</OrderStatuses>
+<LineCharges TotalNumberOfRecords="">
+  <LineCharge ChargeAmount="" RemainingChargeAmount=""  /> 
+  </LineCharges>
+<Item />
+</OrderLine>
+</OrderLines>
+</Order>

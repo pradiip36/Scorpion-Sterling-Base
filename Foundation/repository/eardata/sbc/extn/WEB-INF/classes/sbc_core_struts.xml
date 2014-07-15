@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Licensed Materials - Property of IBM
+IBM Sterling Business Center
+(C) Copyright IBM Corp. 2009, 2012 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+ 
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>	
+	<package name="sbc" namespace="/sbc" extends="scuiimpl">
+		<default-class-ref class="com.sterlingcommerce.sbc.core.struts.SBCDefaultStrutsAction"></default-class-ref>
+		<global-results>
+           <result name="MASHUPERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="VALIDATIONERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="AUTHORIZATIONERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="error">/sbc/jsps/apierror.jsp</result>
+			<result name="APIERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="DATAVALIDATIONERROR">/jsps/datavalidationerror.jsp</result>
+	   </global-results>
+	   <action name="login">
+	   	<param name="requestMethodSupported">ALL</param>
+	   		<result name="success">/sbc/login/login.jsp</result>
+		</action>
+		<action name="logout">
+			<param name="resourceId">SBCSYS00001</param>
+			<param name="requestMethodSupported">ALL</param>
+			<result name="success">/sbc/logout/logout.jsp</result>
+		</action>
+		<action name="aboutsbc">
+			<param name="resourceId">SBCSYS00001</param>
+			<param name="requestMethodSupported">ALL</param>
+			<result name="success">/sbc/container/aboutbox/about.jsp</result>
+		</action>
+		<action name="sbcHome" class="com.sterlingcommerce.sbc.core.struts.SBCStrutsAction">
+			<param name="mashupId">sbc-registerDashboard</param>
+			<param name="outputNs">userdataOutput</param>
+			<param name="requestMethodSupported">ALL</param>
+			<param name="resourceId">SBCSYS00001</param>
+			<result name="success">/sbc/home/dashboard.jsp</result>
+		</action>
+
+		<!-- Adding an SFS-style dashboard to SBC -->
+		<action name="ApplicationHome">
+			<param name="resourceId">SBCSYS00001</param>
+			<result name="success">/sbc/home/home.jsp</result>
+		</action>
+
+		<!-- System Setup starts -->
+
+		<action name="SystemSetup" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction"> 
+			   <param name="mashupId">getBaseConfigTaskListInitial-mashup</param>
+			   <param name="inputNs">getBaseConfigTaskListInitial_input</param>
+			   <param name="outputNs">getBaseConfigTaskListInitial_Output</param>
+			<result name="success">/sbc/systemsetup/systemSetup.jsp</result>
+		</action>
+
+		<action name="getBaseConfigTaskList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction"> 
+			   <param name="mashupId">getBaseConfigTaskList-mashup</param>
+			   <param name="inputNs">getBaseConfigTaskList_input</param>
+			   <param name="outputNs">getBaseConfigTaskList_Output</param>
+			   <result name="success">/sbc/systemsetup/baseconfigtasklist.jsp</result>
+		</action>
+
+		<!-- System Setup ends-->
+
+		<action  name="container/**" class="com.sterlingcommerce.sbc.core.struts.SBCContainerAction">
+			<param name="orgDetailsMashupId">sbccore_getOrganizationList</param>
+			<param name="inputNs">orgDetailsInputNs</param>
+			<param name="orgDetailsOutputNs">orgDetailsOutputNs</param>
+			<param name="requestMethodSupported">ALL</param>
+			<result name="success">/sbc/container/container.jsp</result>			
+		</action>
+		<action name="processajax">
+			<result name="success">/sbc/jsps/processajax.jsp</result>
+		</action>
+		
+		<action name="relatedtask" class="com.sterlingcommerce.sbc.core.struts.SBCStrutsAction">
+			<param name="mashupId">common-getRelatedTasksMetaData</param>
+			<param name="inputNs">relatedTaskInput</param>
+			<param name="outputNs">relatedTasks_output</param>
+			<param name="requestMethodSupported">ALL</param>
+			<param name="resourceId">SBCSYS00001</param>
+			<result name="success">/sbc/common/relatedtask/jsp/loadrelatedtasks.jsp</result>
+		</action>
+		<action name="customerAssignments_getCustomerList"  class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			   <param name="mashupId">getCustomerListForAssignment</param>
+			   <param name="inputNs">customerListInput</param>
+			   <param name="outputNs">customerListOutput</param>
+			   <param name="resourceId">SBCSYS00001</param>
+			   <result name="success">/sbc/common/customerListResults.jsp</result>
+		</action>
+		<action name="pricelistSummary_addItems">
+			   <param name="resourceId">SBCPRC00050</param>	
+			   <result name="success">/sbc/pricing/pricelist/manage/addItems.jsp</result>
+		</action>
+		<action name="pricelistSummary_adjustPrices">
+			   <param name="resourceId">SBCPRC00050</param>
+			   <result name="success">/sbc/pricing/pricelist/manage/adjustPrices.jsp</result>
+		</action>
+		<action name="getCurrencyList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			   <param name="mashupId">getCurrencyList</param>
+			   <param name="inputNs">currencyList_Input</param>
+			   <param name="outputNs">currencylist_Output</param>
+			   <param name="resourceId">SBCSYS00001</param>
+			   <result name="success">/sbc/common/cache/currency/currencylist.jsp</result>
+		</action>
+		<action name="getItemUOMMasterList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			   <param name="mashupId">getItemUOMMasterList-mashup</param>
+			   <param name="inputNs">getItemUOMMasterList</param>
+			   <param name="outputNs">getItemUOMMasterList_Output</param>
+			   <param name="resourceId">SBCSYS00001</param>
+			   <result name="success">/sbc/common/cache/uom/uomlist.jsp</result>
+		</action>
+			<action name="getcacheableResults" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			   <param name="mashupId">getcacheableResults_multiAPI</param>
+			   <param name="resourceId">SBCSYS00001</param>
+			   <result name="success">/sbc/common/cache/cacheableresults.jsp</result>
+			   
+		</action>
+		<action name="customerListSearchPopup">
+				<param name="resourceId">SBCSYS00001</param>
+				<result name="success">/sbc/common/customerSearchPopup.jsp</result>
+		</action>
+		<action name="launchBusinessIntelligence">
+			<param name="resourceId">SBCSYS00001</param>
+			<result name="success">/sbc/common/businessintelligence/launchbusinessintelligence.jsp</result>
+		</action>
+	</package>
+</struts>

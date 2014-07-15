@@ -1,0 +1,435 @@
+#!/usr/bin/ksh
+#######################################################################
+#
+#     Program Name:  OFK016
+#           Author:  Mark Yearling
+#Responsible Group:  Order Management Systems
+#     Date Created:  2011-01-24
+#  Program Purpose:  This script is responsible for pulling the Inventory Sync Summary
+#                    Report data and emailing it to the desired group to see the results.
+#                    The script is invoked automatically from sterling. Framework upon
+#                    a successful completion of Inventory Sync, however it can be run
+#                    manually from ESP.  The job will check to make sure a sync has run
+#                    in the past two days before it continues.
+#
+#                    The script requires 2 parameters.  
+#                    Parm 1 is Warehouse Number tied to OMS Ship Node
+#                    Parm 2 is Email Address to send report to
+#
+#          Example:  OFK016 873 mark.yearling@kohls.com
+#
+# Modification Log:
+#                    03/26/2014 - Todd Winter(TKMAZ37) - Linux Conversion
+#                          Reset the e-mail addresses.  They got changed during testing.
+#                    03/18/2014 - Todd Winter(TKMAZ37) - Linux Conversion
+#                          Updated the mail commands, removed IS_ESP_upld.sh and
+#                          moved sourcing the .profile out of the main processing block.
+#                    02/09/2014 - Todd Winter(TKMAZ37) - Linux Conversion
+#                          Removed ESP upload, added support for environments A-E,
+#                          fixed env variables, added echoing of the ESP log
+#
+#
+#                    09/27/2012 - Srijith Kartha
+#					 Changes: Modified to handle Store Sync
+#
+#                    02/07/2012 - Mark Yearling
+#					 Changes: Added Reply To for Email Functions.  Gmail conversion requires
+#							  this change to be implemented, otherwise emails go missing.
+#
+#                    05/02/2011 - Greg Markham
+#                    Changes: Added routine to update the YFS_EXPORT table records to have
+#                             status of 10 for the purge process
+#                    03/14/2011 - Mark Yearling
+#                    Changes: Revised dump query to manually add commas used for dump file.
+#                             Removed logic to clean up dump file.  Added additional where
+#                             clause to sync report to pull only mismatches.  Improved DSV
+#                             Query used in PL/SQL Block.  
+#
+########################################################################
+
+#PARAMETERS
+
+parms=$#
+
+USAGE="Usage: $0 <whse> <email> <release_env>"
+
+if [ $parms -gt 1 ]
+then
+   script=$0
+   whse=$1
+   email_success_grp=$2
+else
+   print "$USAGE"
+   return_status=2
+
+   exit ${return_status}
+fi
+
+if [ -n "$3" ]
+then
+   release_env=$3
+   dblogin_env="o${release_env}"
+else 
+   release_env="f"
+   dblogin_env="o${release_env}"
+fi
+
+# Wait time in minutes
+#sync_wait_time=30
+
+sync_chk_count=0
+sync_chk_max_count=3
+sync_count=0
+
+###########################################################
+#
+#       F   U   N   C   T   I   O   N   S 
+#
+###########################################################
+
+run_sql_inv_smry()
+{
+
+sqlplus -s ${DBLOGIN} << EOF
+
+set serveroutput on
+set head off
+set trims on
+set heading off
+set termout off
+set feedback off
+set verify off
+set markup html off
+
+@$K_SRC/of/OF_inv_smry_rpt.sql $whse
+/
+
+EXIT;
+EOF
+}
+
+check_sync_success()
+{
+echo "The DBLOGIN is: ${DBLOGIN}"
+sync_count=`sqlplus -s ${DBLOGIN} << !
+
+set head off
+set trims on
+set heading off
+
+select count(*) from
+sterling.KOHLS_INV_SYNC_TIME_STAMP
+where ship_node = '${whse}'
+and modifyts > (trunc(sysdate) - 2);
+
+!`
+
+}
+
+exec_sync_dump()
+{
+
+sqlplus -s ${DBLOGIN} << EOF
+
+spool ${K_SRC}/of/${whse}_inv_sync_smry.csv;
+
+@$K_SRC/of/OF_inv_sync_dump.sql $sync_id 
+
+spool off;
+
+EXIT;
+
+EOF
+
+}
+
+# REVISED BY: GREG MARKHAM
+# DATE:       04/27/2011
+# New function to update the YFS_EXPORT table for deletion
+update_export_status()
+{
+echo "The DBLOGIN is: ${DBLOGIN}"
+sync_count=`sqlplus -s ${DBLOGIN} << !
+
+set head off
+set trims on
+set heading off
+
+UPDATE sterling.YFS_EXPORT
+   SET STATUS = '10'
+ WHERE STATUS = '00'
+   AND FLOW_NAME     = 'MismatchInvExportSyncService'
+   AND SUB_FLOW_NAME = 'YIFMismatchInvExportSyncService'
+   and Trim(Extract(Xmltype(message),'/Item/@YantraMessageGroupID').Getstringval())='${sync_id}';
+  
+COMMIT;   
+
+!`
+
+}
+
+exec_mail_error()
+{
+
+hn=$(hostname)
+mail -vs "${whse}: Inventory Sync Summary Report Failed on $hn" mark.yearling@kohls.com -- -f IT-OMSAlerts@kohls.com << EMAIL
+Summary Report Failed
+
+Please check logs of OFK016 for any details.
+EMAIL
+
+}
+
+exec_mail_smry()
+{
+
+echo "Inventory Sync ID: ${sync_id}
+
+Total Number of OMS SKUs w/inv @ ${whse}: ${total_oms_items}
+Total Number of WMS SKUs sent: ${total_wms_items}
+Total Number of Mismatch SKUs: ${total_mismatch}
+Total Number of Mismatch DSV SKUs: ${total_dsv}
+Total Number of Zero Out SKUs: ${total_zero_items}
+
+---------------------------------------
+
+Positive Adjustments
+---------------------
+Adjustment  +1: ${pos_adj1}
+Adjustment  +2: ${pos_adj2} 
+Adjustment  +3: ${pos_adj3}
+Adjustment  +4: ${pos_adj4}
+Adjustment >+5: ${pos_adj5}
+
+Total Positive Adjustments: ${total_pos_adj}
+
+Negative Adjustments
+---------------------
+Adjustment  -1: ${neg_adj1}
+Adjustment  -2: ${neg_adj2}
+Adjustment  -3: ${neg_adj3}
+Adjustment  -4: ${neg_adj4}
+Adjustment <-5: ${neg_adj5}
+
+Total Negative Adjustments: ${total_neg_adj}
+
+Total Variance: ${total_variance}
+" > ${whse}_tmp_file
+#EMAIL
+
+uuencode ${K_SRC}/of/${whse}_inv_sync_smry.csv ${K_SRC}/of/${whse}_inv_sync_smry.csv >> ${whse}_tmp_file
+echo "\n" >> ${whse}_tmp_file
+
+# SEND the email using the temporary file 
+mail -vs "${whse}: Inventory Sync Summary Report" ${email_success_grp} -- -f IT-OMSAlerts@kohls.com < "${whse}_tmp_file"
+
+rm ${whse}_tmp_file
+
+}
+
+
+###########################################################
+# 
+#               M    A    I    N
+#
+###########################################################
+
+########################################################################
+# SET LOGGING INFO CONSTANTS
+
+
+if [[ ${release_env} == [A-E] ]] then
+  release_log="of_${release_env}"
+else
+  release_log="of"
+fi
+
+
+########################################################################
+# RUN REQUIRED PROFILES
+#   Execute the user's profile
+print 'BEGIN LOADING PROFILE'
+  export PATH="/usr/local/bin:$PATH"
+  . /srv/apps/profile/admin
+print 'END LOADING PROFILE'
+print
+
+readonly log="${K_LOG}/${release_log}/OFK016_$(date -u +%Y-%m-%dT%T)_${$}.txt"
+########################################################################
+
+{
+
+print ${USAGE}
+print "WHSE: ${whse}"
+print "EMAIL: ${email_success_grp}"
+print "RELEASE_ENV: ${release_env}"
+print
+print "Running Inventory Sync for ${whse}."
+print
+
+#   Execute the Kohl's database environment
+print 'BEGIN LOADING ksetdblogin'
+. ${K_SH}/ksetdblogin ${dblogin_env} 
+print 'END LOADING ksetdblogin'
+print
+########################################################################
+#DBLOGIN="readonly/readonly@OT0097"
+
+while [[ ${sync_count} -eq 0 && ${sync_chk_count} -lt ${sync_chk_max_count} ]]
+do
+
+  check_sync_success
+
+  print "Checking if Sync ran in last two days."
+  print
+
+  # Check Query Result 
+  query_check=$?
+
+  # Clean up Sync Count
+  sync_count=`echo ${sync_count}`
+
+  let sync_chk_count=${sync_chk_count}+1
+
+  if [[ ${sync_chk_count} -lt ${sync_chk_max_count} ]] then
+
+    if [[ ${query_check} -gt 0 ]] then
+      print "Oracle Error has occured running the inventory sync check query."
+      print "Waiting 5 seconds and trying 3 times max."
+      print
+      sleep 5
+      result=0 
+      return_status=1
+    else
+
+      if [[ ${sync_count} -eq 0 ]] then
+
+        # RESULT: 1 if found record, 0 if not found and retrying or closing
+        result=0
+        return_status=0
+
+        # SLEEP 5 Minutes
+        print "No sync found in last 2 days, waiting 1 minutes and checking again, 3 times max."
+        print
+        sleep 3 
+
+      else
+
+        result=1
+        return_status=0
+        print "Sync Record Found"
+        print
+      fi
+
+    fi
+  else
+    result=0
+    print "Hit maximum attempts without finding a completed sync in the last day."
+    print "Exiting without creating report"
+    print
+    #exec_mail_error
+  fi 
+
+done
+
+if [[ ${result} -eq 1 ]] then
+
+print "Kicking off PLSQL Block to run report @ `date -u +%Y-%m-%dT%T`"
+sync_result=$(run_sql_inv_smry)
+set -A SYNC_ARRAY ${sync_result}
+
+print "PLSQL Block completed @ `date -u +%Y-%m-%dT%T`"
+print
+
+SYNC_ARRAY_CNT=${#SYNC_ARRAY[*]}
+SYNC_ARRAY_IDX=0
+
+#MAPPING FROM ARRAY STORED VALUES
+print "Mapping Returned from PLSQL block"
+print
+
+sync_id=${SYNC_ARRAY[0]}
+echo sync_id=${SYNC_ARRAY[0]}
+total_mismatch=${SYNC_ARRAY[1]}
+echo total_mismatch=${SYNC_ARRAY[1]}
+pos_adj1=${SYNC_ARRAY[2]}
+echo pos_adj1=${SYNC_ARRAY[2]}
+pos_adj2=${SYNC_ARRAY[3]}
+echo pos_adj2=${SYNC_ARRAY[3]}
+pos_adj3=${SYNC_ARRAY[4]}
+echo pos_adj3=${SYNC_ARRAY[4]}
+pos_adj4=${SYNC_ARRAY[5]}
+echo pos_adj4=${SYNC_ARRAY[5]}
+pos_adj5=${SYNC_ARRAY[6]}
+echo pos_adj5=${SYNC_ARRAY[6]}
+neg_adj1=${SYNC_ARRAY[7]}
+echo neg_adj1=${SYNC_ARRAY[7]}
+neg_adj2=${SYNC_ARRAY[8]}
+echo neg_adj2=${SYNC_ARRAY[8]}
+neg_adj3=${SYNC_ARRAY[9]}
+echo neg_adj3=${SYNC_ARRAY[9]}
+neg_adj4=${SYNC_ARRAY[10]}
+echo neg_adj4=${SYNC_ARRAY[10]}
+neg_adj5=${SYNC_ARRAY[11]}
+echo neg_adj5=${SYNC_ARRAY[11]}
+total_pos_adj=${SYNC_ARRAY[12]}
+echo total_pos_adj=${SYNC_ARRAY[12]}
+total_neg_adj=${SYNC_ARRAY[13]}
+echo total_neg_adj=${SYNC_ARRAY[13]}
+total_variance=${SYNC_ARRAY[14]}
+echo total_variance=${SYNC_ARRAY[14]}
+total_oms_items=${SYNC_ARRAY[15]}
+echo total_oms_items=${SYNC_ARRAY[15]}
+total_dsv=${SYNC_ARRAY[16]}
+echo total_dsv=${SYNC_ARRAY[16]}
+total_zero_items=${SYNC_ARRAY[17]}
+echo total_zero_items=${SYNC_ARRAY[17]}
+total_wms_items=${SYNC_ARRAY[18]}
+echo total_wms_items=${SYNC_ARRAY[18]}
+
+#while (( $SYNC_ARRAY_IDX < $SYNC_ARRAY_CNT ))
+#do
+#  echo "SYNC_ARRAY[$SYNC_ARRAY_IDX] = (${SYNC_ARRAY[SYNC_ARRAY_IDX]})"
+#  SYNC_ARRAY_IDX=$(($SYNC_ARRAY_IDX+1))
+#done
+
+echo "Creating Dump File of Mismatches @ `date -u +%Y-%m-%dT%T`"
+exec_sync_dump
+
+# REVISED BY: MARK YEARLING
+# NOT NEEDED 3/14/2011 DUE TO CHANGE OF QUERY
+# Clean up dump file
+#cat ${K_SRC}/of/${whse}_inv_sync_smry.csv | sed 's/ //g' > ${K_SRC}/of/${whse}_inv_sync_smry.csv
+
+echo "Finished Creating Dump File of Mismatches @ `date -u +%Y-%m-%dT%T`"
+
+echo "Creating and sending off Inventory Sync Summary Report Email"
+exec_mail_smry
+
+return_status=$?
+echo "Return Status of Email: ${return_status}"
+
+# REVISED BY: GREG MARKHAM
+# DATE:       04/27/2011
+# New function to update the YFS_EXPORT table for deletion
+echo "Updating Inventory Sync records for deletion"
+update_export_status
+
+return_status=$?
+echo "Return Status of Sync record update: ${return_status}"
+
+fi
+
+} > ${log} 2>&1
+
+########################################################################
+# Display log file for ESP
+fold -w 131 ${log}
+########################################################################
+
+  
+
+########################################################################
+# Exit the script with the return code from your batch program
+exit ${return_status}
+########################################################################

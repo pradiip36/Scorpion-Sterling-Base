@@ -1,0 +1,594 @@
+{
+ "model": {
+  "sciId": {
+   "id": "sciId",
+   "value": "seaBasicItemSearch3",
+   "type": "string"
+  },
+  "className": {
+   "id": "className",
+   "value": "sc.sbc.kohls.item.eligibility.BasicItemSearch",
+   "type": "string"
+  },
+  "superclassName": {
+   "id": "superclassName",
+   "value": "sc.plat.ui.ExtensibleScreen",
+   "type": "string"
+  },
+  "regXtype": {
+   "id": "regXtype",
+   "value": "seaBasicItemSearch3",
+   "type": "string"
+  },
+  "header": {
+   "id": "header",
+   "value": "false",
+   "type": "boolean"
+  },
+  "layout": {
+   "id": "layout",
+   "value": "anchor",
+   "type": "string"
+  },
+  "autoScroll": {
+   "id": "autoScroll",
+   "value": "true",
+   "type": "boolean"
+  },
+  "items": {
+   "id": "items",
+   "value": [{
+    "id": "",
+    "value": {
+     "sciId": {
+      "id": "sciId",
+      "value": "sbcItemIDQryType",
+      "type": "string"
+     },
+     "value": {
+      "id": "value",
+      "value": "LIKE",
+      "type": "string"
+     },
+     "bindingData": {
+      "id": "bindingData",
+      "value": {
+       "targetBinding": {
+        "id": "targetBinding",
+        "value": [{
+         "id": "",
+         "value": "itemSearch_input:Item.ItemIDQryType",
+         "type": "string"
+        }],
+        "type": "array"
+       },
+       "sourceBinding": {
+        "id": "sourceBinding",
+        "value": "SavedSearch:SearchWrapper.Item.ItemIDQryType",
+        "type": "string"
+       },
+       "defid": "object"
+      },
+      "type": "object"
+     },
+     "defid": "hidden"
+    },
+    "type": "hidden"
+   },
+   {
+    "id": "",
+    "value": {
+     "sciId": {
+      "id": "sciId",
+      "value": "sbcCategoryPath",
+      "type": "string"
+     },
+     "bindingData": {
+      "id": "bindingData",
+      "value": {
+       "sourceBinding": {
+        "id": "sourceBinding",
+        "value": "SavedSearch:SearchWrapper.Item.CategoryFilter.CategoryPath",
+        "type": "string"
+       },
+       "targetBinding": {
+        "id": "targetBinding",
+        "value": [{
+         "id": "",
+         "value": "itemSearch_input:Item.CategoryFilter.CategoryPath",
+         "type": "string"
+        }],
+        "type": "array"
+       },
+       "defid": "object"
+      },
+      "type": "object"
+     },
+     "defid": "hidden"
+    },
+    "type": "hidden"
+   },
+   {
+    "id": "",
+    "value": {
+     "sciId": {
+      "id": "sciId",
+      "value": "pnlBasicItemSearchMain",
+      "type": "string"
+     },
+     "layout": {
+      "id": "layout",
+      "value": "table",
+      "type": "string"
+     },
+     "items": {
+      "id": "items",
+      "value": [{
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "pnlBasicSearch",
+         "type": "string"
+        },
+        "layout": {
+         "id": "layout",
+         "value": "table",
+         "type": "string"
+        },
+        "items": {
+         "id": "items",
+         "value": [{
+          "id": "",
+          "value": {
+           "sciId": {
+            "id": "sciId",
+            "value": "lblItemSearchCategory",
+            "type": "string"
+           },
+           "text": {
+            "id": "text",
+            "value": "Associated to Category",
+            "type": "string"
+           },
+           "cls": {
+            "id": "cls",
+            "value": "sc-plat-label",
+            "type": "string"
+           },
+           "defid": "label"
+          },
+          "type": "label"
+         },
+         {
+          "id": "",
+          "value": {
+           "sciId": {
+            "id": "sciId",
+            "value": "triggerItemSearchCategory",
+            "type": "string"
+           },
+           "triggerClass": {
+            "id": "triggerClass",
+            "value": "x-form-search-trigger",
+            "type": "string"
+           },
+           "onTriggerClick": {
+            "id": "onTriggerClick",
+            "value": "this.selectCategory",
+            "type": "expr"
+           },
+           "scope": {
+            "id": "scope",
+            "value": "this",
+            "type": "expr"
+           },
+           "ctCls": {
+            "id": "ctCls",
+            "value": "sc-plat-triggerfield-text",
+            "type": "string"
+           },
+           "cls": {
+            "id": "cls",
+            "value": "sbc-standard-combo",
+            "type": "string"
+           },
+           "readOnly": {
+            "id": "readOnly",
+            "value": "true",
+            "type": "boolean"
+           },
+           "editable": {
+            "id": "editable",
+            "value": "false",
+            "type": "boolean"
+           },
+           "hiddenFieldSciId": {
+            "id": "hiddenFieldSciId",
+            "value": [{
+             "id": "",
+             "value": "sbcCategoryPath",
+             "type": "string"
+            }],
+            "type": "array"
+           },
+           "colspan": {
+            "id": "colspan",
+            "value": "2",
+            "type": "number"
+           },
+           "bindingData": {
+            "id": "bindingData",
+            "value": {
+             "sourceBinding": {
+              "id": "sourceBinding",
+              "value": "SavedSearch:SearchWrapper.Item.CategoryFilter.CategoryShortDescription",
+              "type": "string"
+             },
+             "targetBinding": {
+              "id": "targetBinding",
+              "value": [{
+               "id": "",
+               "value": "itemSearch_input:Item.CategoryFilter.CategoryShortDescription",
+               "type": "string"
+              }],
+              "type": "array"
+             },
+             "defid": "object"
+            },
+            "type": "object"
+           },
+           "defid": "trigger"
+          },
+          "type": "trigger"
+         },
+         {
+          "id": "",
+          "value": {
+           "sciId": {
+            "id": "sciId",
+            "value": "lblItemSearchVendor",
+            "type": "string"
+           },
+           "text": {
+            "id": "text",
+            "value": "Vendor or Brand name",
+            "type": "string"
+           },
+           "cls": {
+            "id": "cls",
+            "value": "sc-plat-label",
+            "type": "string"
+           },
+           "defid": "label"
+          },
+          "type": "label"
+         },
+         {
+          "id": "",
+          "value": {
+           "sciId": {
+            "id": "sciId",
+            "value": "triggerItemSearchVendor",
+            "type": "string"
+           },
+           "triggerClass": {
+            "id": "triggerClass",
+            "value": "x-form-search-trigger",
+            "type": "string"
+           },
+           "onTriggerClick": {
+            "id": "onTriggerClick",
+            "value": "this.selectVendor",
+            "type": "expr"
+           },
+           "ctCls": {
+            "id": "ctCls",
+            "value": "sc-plat-triggerfield-text",
+            "type": "string"
+           },
+           "cls": {
+            "id": "cls",
+            "value": "sbc-standard-combo",
+            "type": "string"
+           },
+           "readOnly": {
+            "id": "readOnly",
+            "value": "true",
+            "type": "boolean"
+           },
+           "editable": {
+            "id": "editable",
+            "value": "false",
+            "type": "boolean"
+           },
+           "hiddenFieldSciId": {
+            "id": "hiddenFieldSciId",
+            "value": [{
+             "id": "",
+             "value": "sbcVendor",
+             "type": "string"
+            }],
+            "type": "array"
+           },
+           "colspan": {
+            "id": "colspan",
+            "value": "2",
+            "type": "number"
+           },
+           "scope": {
+            "id": "scope",
+            "value": "this",
+            "type": "expr"
+           },
+           "bindingData": {
+            "id": "bindingData",
+            "value": {
+             "sourceBinding": {
+              "id": "sourceBinding",
+              "value": "SavedSearch:SearchWrapper.Item.PrimaryInformation.PrimarySupplier",
+              "type": "string"
+             },
+             "targetBinding": {
+              "id": "targetBinding",
+              "value": [{
+               "id": "",
+               "value": "itemSearch_input:Item.PrimaryInformation.PrimarySupplier",
+               "type": "string"
+              }],
+              "type": "array"
+             },
+             "defid": "object"
+            },
+            "type": "object"
+           },
+           "defid": "trigger"
+          },
+          "type": "trigger"
+         },
+         {
+          "id": "",
+          "value": {
+           "sciId": {
+            "id": "sciId",
+            "value": "lblItemSearchItemId",
+            "type": "string"
+           },
+           "text": {
+            "id": "text",
+            "value": "SKU Contains",
+            "type": "string"
+           },
+           "cls": {
+            "id": "cls",
+            "value": "sc-plat-label",
+            "type": "string"
+           },
+           "defid": "label"
+          },
+          "type": "label"
+         },
+         {
+          "id": "",
+          "value": {
+           "sciId": {
+            "id": "sciId",
+            "value": "txtItemSearchItemId",
+            "type": "string"
+           },
+           "cls": {
+            "id": "cls",
+            "value": "sc-plat-editable-text sbc-search-textfield",
+            "type": "string"
+           },
+           "colspan": {
+            "id": "colspan",
+            "value": "2",
+            "type": "number"
+           },
+           "bindingData": {
+            "id": "bindingData",
+            "value": {
+             "sourceBinding": {
+              "id": "sourceBinding",
+              "value": "SavedSearch:SearchWrapper.Item.ItemID",
+              "type": "string"
+             },
+             "targetBinding": {
+              "id": "targetBinding",
+              "value": [{
+               "id": "",
+               "value": "itemSearch_input:Item.ItemID",
+               "type": "string"
+              }],
+              "type": "array"
+             },
+             "defid": "object"
+            },
+            "type": "object"
+           },
+           "defid": "textfield"
+          },
+          "type": "textfield"
+         },
+         {
+          "id": "",
+          "value": {
+           "sciId": {
+            "id": "sciId",
+            "value": "lblItemShortDescription",
+            "type": "string"
+           },
+           "text": {
+            "id": "text",
+            "value": "Style Contains",
+            "type": "string"
+           },
+           "cls": {
+            "id": "cls",
+            "value": "sc-plat-label",
+            "type": "string"
+           },
+           "defid": "label"
+          },
+          "type": "label"
+         },
+         {
+          "id": "",
+          "value": {
+           "sciId": {
+            "id": "sciId",
+            "value": "txtItemSearchStyle",
+            "type": "string"
+           },
+           "cls": {
+            "id": "cls",
+            "value": "sc-plat-editable-text sbc-search-textfield",
+            "type": "string"
+           },
+           "bindingData": {
+            "id": "bindingData",
+            "value": {
+             "sourceBinding": {
+              "id": "sourceBinding",
+              "value": "SavedSearch:SearchWrapper.Item.Extn.ExtnStyle",
+              "type": "string"
+             },
+             "targetBinding": {
+              "id": "targetBinding",
+              "value": [{
+               "id": "",
+               "value": "itemSearch_input:Item.Extn.ExtnStyle",
+               "type": "string"
+              }],
+              "type": "array"
+             },
+             "defid": "object"
+            },
+            "type": "object"
+           },
+           "defid": "textfield"
+          },
+          "type": "textfield"
+         }],
+         "type": "array"
+        },
+        "border": {
+         "id": "border",
+         "value": "false",
+         "type": "boolean"
+        },
+        "layoutConfig": {
+         "id": "layoutConfig",
+         "value": {
+          "columns": {
+           "id": "columns",
+           "value": "2",
+           "type": "number"
+          },
+          "defid": "tableLayoutConfig"
+         },
+         "type": "object"
+        },
+        "defid": "panel"
+       },
+       "type": "panel"
+      },
+      {
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "panel3",
+         "type": "string"
+        },
+        "layout": {
+         "id": "layout",
+         "value": "table",
+         "type": "string"
+        },
+        "border": {
+         "id": "border",
+         "value": "false",
+         "type": "boolean"
+        },
+        "width": {
+         "id": "width",
+         "value": "50",
+         "type": "number"
+        },
+        "layoutConfig": {
+         "id": "layoutConfig",
+         "value": {
+          "columns": {
+           "id": "columns",
+           "value": "4",
+           "type": "number"
+          },
+          "defid": "tableLayoutConfig"
+         },
+         "type": "object"
+        },
+        "defid": "panel"
+       },
+       "type": "panel"
+      }],
+      "type": "array"
+     },
+     "border": {
+      "id": "border",
+      "value": "false",
+      "type": "boolean"
+     },
+     "layoutConfig": {
+      "id": "layoutConfig",
+      "value": {
+       "columns": {
+        "id": "columns",
+        "value": "2",
+        "type": "number"
+       },
+       "defid": "tableLayoutConfig"
+      },
+      "type": "object"
+     },
+     "defid": "panel"
+    },
+    "type": "panel"
+   }],
+   "type": "array"
+  },
+  "autoWidth": {
+   "id": "autoWidth",
+   "value": "false",
+   "type": "boolean"
+  },
+  "border": {
+   "id": "border",
+   "value": "false",
+   "type": "boolean"
+  },
+  "namespaces": {
+   "id": "namespaces",
+   "value": {
+    "target": {
+     "id": "target",
+     "value": [],
+     "type": "array"
+    },
+    "source": {
+     "id": "source",
+     "value": [],
+     "type": "array"
+    },
+    "defid": "namespaces"
+   },
+   "type": "object"
+  },
+  "defid": "screen"
+ },
+ "version": "0.3.0b",
+ "type": "SCREEN",
+ "dataSources": {},
+ "_verificationText": "VerificationText"
+}

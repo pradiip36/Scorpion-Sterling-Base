@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="BackroomPickPortletExtn"
+        extnPackage="extn.home.portlets"
+        originalScreen="wsc.home.portlets.BackroomPickPortlet"
+        originalScreenPackage="wsc.home.portlets" type="diffrential">
+        <Items>
+            <Label _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="portletName" renderHidden="false"/>
+        </Items>
+    </ScreenExtension>
+</ExtensionMetaData>

@@ -1,0 +1,235 @@
+<%!
+void setHoldFuncFlags(YFCElement shipmentElem, boolean bOldHoldRule)	{ 
+
+        shipmentElem.setAttribute("UseNewHoldFunctionality", !bOldHoldRule && !shipmentElem.getBooleanAttribute("isHistory") );
+    }
+
+     // This method will iterate eListElement for sXMLName node.
+    YFCElement formMasterHoldXML(String sXMLName, YFCElement eListElement, YFCElement eMasterHoldList, YFCElement eHoldCommonCode)	{
+	if(eListElement == null || eMasterHoldList == null)	{
+		return eListElement;
+	}
+
+	YFCNodeList nlMasterHold = eMasterHoldList.getElementsByTagName("HoldType");
+	int nlMasterSize = nlMasterHold.getLength();
+
+	YFCNodeList nlHold = eListElement.getElementsByTagName(sXMLName);
+	int nlSize = nlHold.getLength();
+	// This method will iterate eListElement for sXMLName node.
+	for(int i = 0; i < nlSize; i++)	{
+		YFCElement eOrderHold = (YFCElement)nlHold.item(i);
+		for(int j = 0; j < nlMasterSize; j++)	{
+			YFCElement eMasterHold = (YFCElement)nlMasterHold.item(j);
+
+			if(YFCCommon.equals(eOrderHold.getAttribute("HoldType"), eMasterHold.getAttribute("HoldType") ) )	{
+				setPermissionElement(eOrderHold, eMasterHold, eHoldCommonCode);
+			}
+		}
+	}
+	return null;
+    }
+
+
+     void setPermissionElement(YFCElement eOrderHold, YFCElement eMasterHold, YFCElement eHoldCommonCodeList)	{
+	YFCElement ePermissions = eOrderHold.getChildElement("Permissions", true);
+
+	Set sUserGroup = getUserGroups();
+	if(eMasterHold.getBooleanAttribute("CanAllUsersCreateHoldType") )	{
+		if(!YFCCommon.equals("1100", eOrderHold.getAttribute("Status") ) )	{
+			YFCElement ePermission = ePermissions.createChild("Permission");
+			setHoldStautsDesc("1100", ePermission, eHoldCommonCodeList);
+		}
+	}	else	{
+		setAllowPermissionForStatus("1100", eOrderHold, eMasterHold, eHoldCommonCodeList, sUserGroup);
+	}
+
+	if(eMasterHold.getBooleanAttribute("CanAllUsersResolveHoldType") )	{
+		if(!YFCCommon.equals("1200", eOrderHold.getAttribute("Status") ) )	{
+			YFCElement ePermission = ePermissions.createChild("Permission");
+			setHoldStautsDesc("1200", ePermission, eHoldCommonCodeList);
+		}
+
+		if(!YFCCommon.equals("1300", eOrderHold.getAttribute("Status") ) )	{
+			YFCElement ePermission = ePermissions.createChild("Permission");
+			setHoldStautsDesc("1300", ePermission, eHoldCommonCodeList);
+		}
+	}	else	{
+		setAllowPermissionForStatus("1200", eOrderHold, eMasterHold, eHoldCommonCodeList, sUserGroup);
+		setAllowPermissionForStatus("1300", eOrderHold, eMasterHold, eHoldCommonCodeList, sUserGroup);
+	}
+    }
+
+    void setAllowPermissionForStatus(String sHoldStatus, YFCElement eOrderHold, YFCElement eMasterHold, YFCElement eHoldCommonCodeList, Set sUserGroup)	{
+	if(YFCCommon.equals("1300", eOrderHold.getAttribute("Status")) )	{
+		return;
+	}
+	YFCElement ePermissions = eOrderHold.getChildElement("Permissions", true);
+	if(!YFCCommon.equals(sHoldStatus, eOrderHold.getAttribute("Status") )  )	{
+		if(YFCCommon.equals(eOrderHold.getAttribute("HoldType"),  eMasterHold.getAttribute("HoldType") ) )	{
+			YFCNodeList nlHoldTypeUserGroup = eMasterHold.getElementsByTagName("HoldTypeUserGroup");	//	list of usergroups for the hold type
+			int iHoldTypeUserGroup = nlHoldTypeUserGroup.getLength();
+			for(int i = 0; i < iHoldTypeUserGroup; i++)	{
+				YFCElement eHoldTypeUserGroup = (YFCElement)nlHoldTypeUserGroup.item(i);
+				
+				if(sUserGroup.contains(eHoldTypeUserGroup.getAttribute("UsergroupId"))  )	{
+					if(YFCCommon.equals("APPLY", eHoldTypeUserGroup.getAttribute("Permission") ) )	{
+						if(YFCCommon.equals("1100", sHoldStatus) )	{
+							YFCElement ePermission = ePermissions.createChild("Permission");
+							setHoldStautsDesc(sHoldStatus, ePermission, eHoldCommonCodeList);
+						}
+					}
+					if(YFCCommon.equals("RESOLVE", eHoldTypeUserGroup.getAttribute("Permission") ) )	{
+						if(YFCCommon.equals("1300", sHoldStatus)  || YFCCommon.equals("1200", sHoldStatus) )	{
+							YFCElement ePermission = ePermissions.createChild("Permission");
+							setHoldStautsDesc(sHoldStatus, ePermission, eHoldCommonCodeList);
+						}
+					}
+				}
+			}
+		}
+	}
+    }
+
+    Set getUserGroups()	{
+	YFCElement eCurrentUser = (YFCElement)request.getSession().getAttribute("CurrentUser");
+	Set cUserGroup = new HashSet();
+	YFCNodeList nlUserGroup = eCurrentUser.getElementsByTagName("UserGroup");
+	int iUserGroup = nlUserGroup.getLength();
+	for(int i = 0; i < iUserGroup; i++)	{
+		YFCElement eUserGroup = (YFCElement)nlUserGroup.item(i);
+		cUserGroup.add(eUserGroup.getAttribute("UsergroupId") );
+	}
+	return cUserGroup;
+    }
+
+     void setHoldStautsDesc(String sStatusCode, YFCElement ePermission, YFCElement eHoldCommonCodeList)	{
+    	YFCNodeList nlHold = eHoldCommonCodeList.getElementsByTagName("CommonCode");
+	int nlSize = nlHold.getLength();
+	for(int i = 0; i < nlSize; i++)	{
+		YFCElement eCommonCode = (YFCElement)nlHold.item(i);
+		if(YFCCommon.equals(sStatusCode, eCommonCode.getAttribute("CodeValue") ) )	{
+			ePermission.setAttribute("Allow", sStatusCode );
+			ePermission.setAttribute("StatusDesc", eCommonCode.getAttribute("CodeShortDescription") );
+			ePermission.setAttribute("AllowDesc", getActionDescription(sStatusCode) );
+		}
+	}
+    }
+
+    String getActionDescription(String sStatusCode)	{
+	if(YFCCommon.equals("1100", sStatusCode))	{
+		return getI18N("Resubmit");
+	}
+	if(YFCCommon.equals("1200", sStatusCode))	{
+		return getI18N("Reject");
+	}
+	if(YFCCommon.equals("1300", sStatusCode))	{
+		return getI18N("Resolve");
+	}
+	return sStatusCode;
+    }
+
+	YFCElement formAdditionalHoldsXML(YFCElement eCurrentHolds, YFCElement eAllHolds, YFCElement eHoldCommonCodeList)	{
+	// first form a new element element
+	YFCDocument outDoc = eAllHolds.getOwnerDocument();
+	YFCElement eOut = outDoc.createElement("AvailableHolds");
+	if(eAllHolds == null)	{
+		return eOut;
+	}
+	
+	String sHoldTypeNodeName = "ShipmentHoldType";
+	
+	YFCNodeList nlAllHolds = eAllHolds.getElementsByTagName("HoldType");
+	int iAllHoldsSize = nlAllHolds.getLength();
+	Set sUserGroup = getUserGroups();
+	for(int i = 0; i < iAllHoldsSize; i++)	{
+		YFCElement eMasterHold = (YFCElement)nlAllHolds.item(i);
+
+		boolean bMatchFound = false;
+		YFCNodeList nlCurrentHolds = eCurrentHolds.getElementsByTagName(sHoldTypeNodeName);
+		int iCurrentHoldsSize = nlCurrentHolds.getLength();
+		for(int j = 0; j < iCurrentHoldsSize; j++)	{
+			YFCElement eOrderHold = (YFCElement)nlCurrentHolds.item(j);
+			if(YFCCommon.equals(eMasterHold.getAttribute("HoldType"), eOrderHold.getAttribute("HoldType") )
+			    && !YFCCommon.equals("1300", eOrderHold.getAttribute("Status") ) )	{
+				bMatchFound = true;
+				break;
+			}
+		}
+		if(!bMatchFound)	{	//	not an existing order hold
+			if(canUserGroupApplyHold(eMasterHold, sUserGroup))	{	//	check for user permissions
+				eOut.appendChild(eMasterHold.cloneNode(true) );
+			}
+		}
+
+	}
+
+	return eOut;
+    }
+
+    boolean canUserGroupApplyHold(YFCElement eMasterHold, Set sUserGroups)	{
+	boolean bCanApplyHold = false;
+	if(eMasterHold.getBooleanAttribute("CanAllUsersCreateHoldType"))	{
+		return true;	//	all users can apply this hold.. no further validations required
+	}
+
+	YFCNodeList nlHoldTypeUserGroup = eMasterHold.getElementsByTagName("HoldTypeUserGroup");
+	int iHoldTypeUserGroup = nlHoldTypeUserGroup.getLength();
+	for(int i = 0; i < iHoldTypeUserGroup; i++)	{
+		YFCElement eHoldTypeUserGroup = (YFCElement)nlHoldTypeUserGroup.item(i);
+		if(sUserGroups.contains(eHoldTypeUserGroup.getAttribute("UsergroupId"))  )	{
+			if(YFCCommon.equals("APPLY", eHoldTypeUserGroup.getAttribute("Permission") ) )	{
+				bCanApplyHold = true;
+				break;
+			}
+		}
+	}
+
+	return bCanApplyHold;
+    }
+
+
+%>
+<%
+/* This file is used for displaying actions in Shipment Detail and Shipment Summary Detail Screens. */
+    YFCElement rootElement = (YFCElement)request.getAttribute("Shipment");
+    if(rootElement != null){
+        String actionFlag = rootElement.getAttribute("ScacIntegrationRequired");
+		if(equals(actionFlag, "Y")){ 
+			rootElement.setAttribute("ShowConfirmShipmentFlag" , "N");			
+			rootElement.setAttribute("EnableShipmentLines" , "N");
+		}else{
+			String manifestKey= rootElement.getAttribute("ManifestKey");
+			if(isVoid(manifestKey)){
+				rootElement.setAttribute("ShowConfirmShipmentFlag" , "Y");
+			} else{
+	            rootElement.setAttribute("ShowConfirmShipmentFlag" , "N");
+			}
+			rootElement.setAttribute("EnableShipmentLines" , "Y");
+		}
+
+		YFCNodeList  containersNodeList = rootElement.getElementsByTagName("Containers");
+        if(containersNodeList.getLength() > 0){
+            YFCElement containersElement= (YFCElement)containersNodeList.item(0);
+			YFCNodeList  containerNodeList = containersElement.getElementsByTagName("Container");
+	        if(containerNodeList.getLength() > 0)
+				rootElement.setAttribute("ShowContainerListFlag" ,"Y");
+			
+		}
+
+	    if (isModificationAllowed("ShipmentPack", "xml:/Shipment/AllowedModifications")) 
+			rootElement.setAttribute("ShowPackContainerFlag" ,"Y");
+		else
+			rootElement.setAttribute("ShowPackContainerFlag" ,"N");
+
+		if (isModificationAllowedWithModType("SHIPMENT_ADD_LINE", "xml:/Shipment/AllowedModifications") ) {
+			if (YFCCommon.equals(rootElement.getAttribute("OrderAvailableOnSystem"),"Y")) 
+				rootElement.setAttribute("ShowAddReleaseFlag" ,"Y");
+		}
+		else
+			rootElement.setAttribute("ShowAddReleaseFlag" ,"N");
+
+	}
+
+
+	
+%>

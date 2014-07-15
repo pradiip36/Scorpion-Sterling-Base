@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Licensed Materials - Property of IBM
+IBM Sterling Business Center
+(C) Copyright IBM Corp. 2009, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+ 
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="sbc-commoncode" namespace="/sbc/commoncode" extends="scuiimpl">
+		<default-class-ref class="com.sterlingcommerce.sbc.core.struts.SBCDefaultStrutsAction"></default-class-ref>
+		<global-results>
+			<result name="MASHUPERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="VALIDATIONERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="AUTHORIZATIONERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="error">/sbc/jsps/apierror.jsp</result>
+			<result name="APIERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="DATAVALIDATIONERROR">/jsps/datavalidationerror.jsp</result>
+		</global-results>
+		
+		<!-- Common Code Screen struts -->
+
+		<action name="commoncode_getCUSTOMER_LEVEL" class="com.sterlingcommerce.sbc.common.commoncode.SBCCommonCodeMashupAction">
+			<param name="mashupId">common-getCUSTOMER_LEVEL</param>
+			<param name="inputNs">getCommonCode_input</param>
+			<param name="outputNs">getCommonCode_output</param>
+			<param name="CodeType">CUSTOMER_LEVEL</param>
+			<param name="DataType">Text-40</param>
+			<param name="HelpCode">SBCSAD00006</param>
+			<result name="success">/sbc/common/commoncode/commoncodemanagement.jsp</result>
+		</action>
+		<action name="commoncode_manageCUSTOMER_LEVEL" class="com.sterlingcommerce.sbc.common.SBCMultiXAPI">
+			<param name="mashupId">common-manageCUSTOMER_LEVEL</param>
+			<param name="inputNs">manageCommonCode_input</param>
+			<param name="outputNs">manageCommonCode_output</param>
+			<param name="CodeType">CUSTOMER_LEVEL</param>
+			<param name="DataType">Text-40</param>
+			<param name="HelpCode">SBCSAD00006</param>
+			<result name="success">/sbc/common/commoncode/managecommoncode.jsp</result>
+			<result name="APIERROR">/sbc/common/commoncode/manageCommonCodeError.jsp</result>
+		</action>
+		<action name="commoncode_getCONTACT_TYPE" class="com.sterlingcommerce.sbc.common.commoncode.SBCCommonCodeMashupAction">
+			<param name="mashupId">common-getCONTACT_TYPE</param>
+			<param name="inputNs">getCommonCode_input</param>
+			<param name="outputNs">getCommonCode_output</param>
+			<param name="CodeType">CONTACT_TYPE</param>
+			<param name="DataType">Text-40</param>
+			<param name="HelpCode">SBCSAD000014</param>
+			<result name="success">/sbc/common/commoncode/commoncodemanagement.jsp</result>
+		</action>
+		<action name="commoncode_manageCONTACT_TYPE" class="com.sterlingcommerce.sbc.common.SBCMultiXAPI">
+			<param name="mashupId">common-manageCONTACT_TYPE</param>
+			<param name="inputNs">manageCommonCode_input</param>
+			<param name="outputNs">manageCommonCode_output</param>
+			<param name="CodeType">CONTACT_TYPE</param>
+			<param name="DataType">Text-40</param>
+			<param name="HelpCode">SBCSAD000014</param>
+			<result name="success">/sbc/common/commoncode/managecommoncode.jsp</result>
+			<result name="APIERROR">/sbc/common/commoncode/manageCommonCodeError.jsp</result>
+		</action>
+		<action name="commoncode_getRELATIONSHIP_TYPE" class="com.sterlingcommerce.sbc.common.commoncode.SBCCommonCodeMashupAction">
+			<param name="mashupId">common-getRELATIONSHIP_TYPE</param>
+			<param name="inputNs">getCommonCode_input</param>
+			<param name="outputNs">getCommonCode_output</param>
+			<param name="CodeType">RELATIONSHIP_TYPE</param>
+			<param name="DataType">Text-40</param>
+			<param name="HelpCode">SBCSAD00007</param>
+			<result name="success">/sbc/common/commoncode/commoncodemanagement.jsp</result>
+		</action>
+		<action name="commoncode_manageRELATIONSHIP_TYPE" class="com.sterlingcommerce.sbc.common.SBCMultiXAPI">
+			<param name="mashupId">common-manageRELATIONSHIP_TYPE</param>
+			<param name="inputNs">manageCommonCode_input</param>
+			<param name="outputNs">manageCommonCode_output</param>
+			<param name="CodeType">RELATIONSHIP_TYPE</param>
+			<param name="DataType">Text-40</param>
+			<param name="HelpCode">SBCSAD00007</param>
+			<result name="success">/sbc/common/commoncode/managecommoncode.jsp</result>
+			<result name="APIERROR">/sbc/common/commoncode/manageCommonCodeError.jsp</result>
+		</action>
+		<action name="commoncode_getVERTICAL" class="com.sterlingcommerce.sbc.common.commoncode.SBCCommonCodeMashupAction">
+			<param name="mashupId">common-getVERTICAL</param>
+			<param name="inputNs">getCommonCode_input</param>
+			<param name="outputNs">getCommonCode_output</param>
+			<param name="CodeType">VERTICAL</param>
+			<param name="DataType">Text-40</param>
+			<param name="HelpCode">SBCSAD00008</param>
+			<result name="success">/sbc/common/commoncode/commoncodemanagement.jsp</result>
+		</action>
+		<action name="commoncode_manageVERTICAL" class="com.sterlingcommerce.sbc.common.SBCMultiXAPI">
+			<param name="mashupId">common-manageVERTICAL</param>
+			<param name="inputNs">manageCommonCode_input</param>
+			<param name="outputNs">manageCommonCode_output</param>
+			<param name="CodeType">VERTICAL</param>
+			<param name="DataType">Text-40</param>
+			<param name="HelpCode">SBCSAD00008</param>
+			<result name="success">/sbc/common/commoncode/managecommoncode.jsp</result>
+			<result name="APIERROR">/sbc/common/commoncode/manageCommonCodeError.jsp</result>
+		</action>
+		<action name="commoncode_getCUSTOMER_CLASS" class="com.sterlingcommerce.sbc.common.commoncode.SBCCommonCodeMashupAction">
+			<param name="mashupId">common-getCUSTOMER_CLASS</param>
+			<param name="inputNs">getCommonCode_input</param>
+			<param name="outputNs">getCommonCode_output</param>
+			<param name="CodeType">CUSTOMER_CLASS</param>
+			<param name="DataType">Text-40</param>
+			<param name="HelpCode">SBCSAD00009</param>
+			<result name="success">/sbc/common/commoncode/commoncodemanagement.jsp</result>
+		</action>
+		<action name="commoncode_manageCUSTOMER_CLASS" class="com.sterlingcommerce.sbc.common.SBCMultiXAPI">
+			<param name="mashupId">common-manageCUSTOMER_CLASS</param>
+			<param name="inputNs">manageCommonCode_input</param>
+			<param name="outputNs">manageCommonCode_output</param>
+			<param name="CodeType">CUSTOMER_CLASS</param>
+			<param name="DataType">Text-40</param>
+			<param name="HelpCode">SBCSAD00009</param>
+			<result name="success">/sbc/common/commoncode/managecommoncode.jsp</result>
+			<result name="APIERROR">/sbc/common/commoncode/manageCommonCodeError.jsp</result>
+		</action>
+		<action name="commoncode_getATTRIBUTE_POST_FIX" class="com.sterlingcommerce.sbc.common.commoncode.SBCCommonCodeMashupAction">
+			<param name="mashupId">common-getATTRIBUTE_POST_FIX</param>
+			<param name="inputNs">getCommonCode_input</param>
+			<param name="outputNs">getCommonCode_output</param>
+			<param name="resourceId">SBCITM00106</param>
+			<param name="CodeType">ATTRIBUTE_POST_FIX</param>
+			<param name="DataType">Text-40</param>
+			<param name="HelpCode">SBCITM00106</param>
+			<result name="success">/sbc/common/commoncode/commoncodemanagement.jsp</result>
+		</action>
+		<action name="commoncode_manageATTRIBUTE_POST_FIX" class="com.sterlingcommerce.sbc.common.SBCMultiXAPI">
+			<param name="mashupId">common-manageATTRIBUTE_POST_FIX</param>
+			<param name="inputNs">manageCommonCode_input</param>
+			<param name="outputNs">manageCommonCode_output</param>
+			<param name="resourceId">SBCITM00106</param>
+			<param name="CodeType">ATTRIBUTE_POST_FIX</param>
+			<param name="DataType">Text-40</param>
+			<param name="HelpCode">SBCITM00106</param>
+			<result name="success">/sbc/common/commoncode/managecommoncode.jsp</result>
+		</action>
+		<action name="commoncode_getLEAD_ORIGIN" class="com.sterlingcommerce.sbc.common.commoncode.SBCCommonCodeMashupAction">
+			<param name="mashupId">common-getLEAD_ORIGIN</param>
+			<param name="inputNs">getCommonCode_input</param>
+			<param name="outputNs">getCommonCode_output</param>
+			<param name="CodeType">LEAD_ORIGIN</param>
+			<param name="DataType">Text-40</param>
+			<param name="HelpCode">SBCQTE00007</param>
+			<param name="DocumentType">0020</param>
+			<result name="success">/sbc/common/commoncode/commoncodemanagement.jsp</result>
+		</action>
+		<action name="commoncode_manageLEAD_ORIGIN" class="com.sterlingcommerce.sbc.common.SBCMultiXAPI">
+			<param name="mashupId">common-manageLEAD_ORIGIN</param>
+			<param name="inputNs">manageCommonCode_input</param>
+			<param name="outputNs">manageCommonCode_output</param>
+			<param name="CodeType">LEAD_ORIGIN</param>
+			<param name="DataType">Text-40</param>
+			<param name="HelpCode">SBCQTE00007</param>
+			<param name="DocumentType">0020</param>
+			<result name="success">/sbc/common/commoncode/managecommoncode.jsp</result>
+		</action>
+		<action name="commoncode_getOPPNOTES_REASON" class="com.sterlingcommerce.sbc.common.commoncode.SBCCommonCodeMashupAction">
+			<param name="mashupId">common-getOPPNOTES_REASON</param>
+			<param name="inputNs">getCommonCode_input</param>
+			<param name="outputNs">getCommonCode_output</param>
+			<param name="CodeType">OPPNOTES_REASON</param>
+			<param name="DataType">Text-40</param>
+			<param name="HelpCode">SBCQTE00008</param>
+			<param name="DocumentType">0020</param>
+			<result name="success">/sbc/common/commoncode/commoncodemanagement.jsp</result>
+		</action>
+		<action name="commoncode_manageOPPNOTES_REASON" class="com.sterlingcommerce.sbc.common.SBCMultiXAPI">
+			<param name="mashupId">common-manageOPPNOTES_REASON</param>
+			<param name="inputNs">manageCommonCode_input</param>
+			<param name="outputNs">manageCommonCode_output</param>
+			<param name="CodeType">OPPNOTES_REASON</param>
+			<param name="DataType">Text-40</param>
+			<param name="HelpCode">SBCQTE00008</param>
+			<param name="DocumentType">0020</param>
+			<result name="success">/sbc/common/commoncode/managecommoncode.jsp</result>
+		</action>
+		<action name="commoncode_getLOST_REASON_CODE" class="com.sterlingcommerce.sbc.common.commoncode.SBCCommonCodeMashupAction">
+			<param name="mashupId">common-getLOST_REASON_CODE</param>
+			<param name="inputNs">getCommonCode_input</param>
+			<param name="outputNs">getCommonCode_output</param>
+			<param name="CodeType">LOST_REASON_CODE</param>
+			<param name="DataType">Text-40</param>
+			<param name="HelpCode">SBCQTE00009</param>
+			<param name="DocumentType">0020</param>
+			<result name="success">/sbc/common/commoncode/commoncodemanagement.jsp</result>
+		</action>
+		<action name="commoncode_manageLOST_REASON_CODE" class="com.sterlingcommerce.sbc.common.SBCMultiXAPI">
+			<param name="mashupId">common-manageLOST_REASON_CODE</param>
+			<param name="inputNs">manageCommonCode_input</param>
+			<param name="outputNs">manageCommonCode_output</param>
+			<param name="CodeType">LOST_REASON_CODE</param>
+			<param name="DataType">Text-40</param>
+			<param name="HelpCode">SBCQTE00009</param>
+			<param name="DocumentType">0020</param>
+			<result name="success">/sbc/common/commoncode/managecommoncode.jsp</result>
+		</action>
+		<action name="commoncode_getQTENOTES_REASON" class="com.sterlingcommerce.sbc.common.commoncode.SBCCommonCodeMashupAction">
+			<param name="mashupId">common-getQTENOTES_REASON</param>
+			<param name="inputNs">getCommonCode_input</param>
+			<param name="outputNs">getCommonCode_output</param>
+			<param name="CodeType">QTENOTES_REASON</param>
+			<param name="DataType">Text-40</param>
+			<param name="HelpCode">SBCQTE00010</param>
+			<param name="DocumentType">0015</param>
+			<result name="success">/sbc/common/commoncode/commoncodemanagement.jsp</result>
+		</action>
+		<action name="commoncode_manageQTENOTES_REASON" class="com.sterlingcommerce.sbc.common.SBCMultiXAPI">
+			<param name="mashupId">common-manageQTENOTES_REASON</param>
+			<param name="inputNs">manageCommonCode_input</param>
+			<param name="outputNs">manageCommonCode_output</param>
+			<param name="CodeType">QTENOTES_REASON</param>
+			<param name="DataType">Text-40</param>
+			<param name="HelpCode">SBCQTE00010</param>
+			<param name="DocumentType">0015</param>
+			<result name="success">/sbc/common/commoncode/managecommoncode.jsp</result>
+		</action>
+		<action name="commoncode_getMODIFICATION_REASON" class="com.sterlingcommerce.sbc.common.commoncode.SBCCommonCodeMashupAction">
+			<param name="mashupId">common-getMODIFICATION_REASON</param>
+			<param name="inputNs">getCommonCode_input</param>
+			<param name="outputNs">getCommonCode_output</param>
+			<param name="CodeType">MODIFICATION_REASON</param>
+			<param name="DataType">Text-40</param>
+			<param name="HelpCode">SBCQTE00011</param>
+			<param name="DocumentType">0015</param>
+			<result name="success">/sbc/common/commoncode/commoncodemanagement.jsp</result>
+		</action>
+		<action name="commoncode_manageMODIFICATION_REASON" class="com.sterlingcommerce.sbc.common.SBCMultiXAPI">
+			<param name="mashupId">common-manageMODIFICATION_REASON</param>
+			<param name="inputNs">manageCommonCode_input</param>
+			<param name="outputNs">manageCommonCode_output</param>
+			<param name="CodeType">MODIFICATION_REASON</param>
+			<param name="DataType">Text-40</param>
+			<param name="HelpCode">SBCQTE00011</param>
+			<param name="DocumentType">0015</param>
+			<result name="success">/sbc/common/commoncode/managecommoncode.jsp</result>
+		</action>
+		<action name="commoncode_getYCD_CANCEL_REASON" class="com.sterlingcommerce.sbc.common.commoncode.SBCCommonCodeMashupAction">
+			<param name="mashupId">common-getYCD_CANCEL_REASON</param>
+			<param name="inputNs">getCommonCode_input</param>
+			<param name="outputNs">getCommonCode_output</param>
+			<param name="CodeType">YCD_CANCEL_REASON</param>
+			<param name="DataType">Text-40</param>
+			<param name="HelpCode">SBCQTE00012</param>
+			<param name="DocumentType">0015</param>
+			<result name="success">/sbc/common/commoncode/commoncodemanagement.jsp</result>
+		</action>
+		<action name="commoncode_manageYCD_CANCEL_REASON" class="com.sterlingcommerce.sbc.common.SBCMultiXAPI">
+			<param name="mashupId">common-manageYCD_CANCEL_REASON</param>
+			<param name="inputNs">manageCommonCode_input</param>
+			<param name="outputNs">manageCommonCode_output</param>
+			<param name="CodeType">YCD_CANCEL_REASON</param>
+			<param name="DataType">Text-40</param>
+			<param name="HelpCode">SBCQTE00012</param>
+			<param name="DocumentType">0015</param>
+			<result name="success">/sbc/common/commoncode/managecommoncode.jsp</result>
+		</action>
+		<action name="commoncode_getAPPROVAL_VIOLATION" class="com.sterlingcommerce.sbc.common.commoncode.SBCCommonCodeMashupAction">
+			<param name="mashupId">common-getAPPROVAL_VIOLATION</param>
+			<param name="inputNs">getCommonCode_input</param>
+			<param name="outputNs">getCommonCode_output</param>
+			<param name="CodeType">APPROVAL_VIOLATION</param>
+			<param name="DataType">Text-40</param>
+			<param name="HelpCode">SBCQTE00013</param>
+			<param name="DocumentType">0015</param>
+			<result name="success">/sbc/common/commoncode/commoncodemanagement.jsp</result>
+		</action>
+		<action name="commoncode_manageAPPROVAL_VIOLATION" class="com.sterlingcommerce.sbc.common.SBCMultiXAPI">
+			<param name="mashupId">common-manageAPPROVAL_VIOLATION</param>
+			<param name="inputNs">manageCommonCode_input</param>
+			<param name="outputNs">manageCommonCode_output</param>
+			<param name="CodeType">APPROVAL_VIOLATION</param>
+			<param name="DataType">Text-40</param>
+			<param name="HelpCode">SBCQTE00013</param>
+			<result name="APIERROR">/sbc/common/commoncode/manageCommonCodeError.jsp</result>
+			<result name="success">/sbc/common/commoncode/managecommoncode.jsp</result>
+		</action>
+		<action name="commoncode_getPRC_EXCLUS_ID" class="com.sterlingcommerce.sbc.common.commoncode.SBCCommonCodeMashupAction">
+			<param name="mashupId">commoncode-getPRC_EXCLUS_ID</param>
+			<param name="inputNs">getCommonCode_input</param>
+			<param name="outputNs">getCommonCode_output</param>
+			<param name="CodeType">PRC_EXCLUS_ID</param>
+			<param name="DataType">Text-100</param>
+			<param name="HelpCode">SBCSAD000102</param>
+			<result name="success">/sbc/common/commoncode/commoncodemanagement.jsp</result>
+		</action>
+		<action name="commoncode_managePRC_EXCLUS_ID" class="com.sterlingcommerce.sbc.common.SBCMultiXAPI">
+			<param name="mashupId">commoncode-managePRC_EXCLUS_ID</param>
+			<param name="inputNs">manageCommonCode_input</param>
+			<param name="outputNs">manageCommonCode_output</param>
+			<param name="CodeType">PRC_EXCLUS_ID</param>
+			<param name="DataType">Text-100</param>
+			<param name="HelpCode">SBCSAD000102</param>
+			<result name="success">/sbc/common/commoncode/managecommoncode.jsp</result>
+			<result name="APIERROR">/sbc/common/commoncode/manageCommonCodeError.jsp</result>
+		</action>
+		<!-- End Common Code Screen struts -->
+	</package>
+</struts>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="KohlsPackShip_subreport2" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<queryString language="xPath">
+		<![CDATA[/Shipment]]>
+	</queryString>
+	<field name="ShipmentNo" class="java.lang.String">
+		<fieldDescription><![CDATA[@ShipmentNo]]></fieldDescription>
+	</field>
+	<field name="CarrierServiceCode" class="java.lang.String">
+		<fieldDescription><![CDATA[@RequestedCarrierServiceCode]]></fieldDescription>
+	</field>
+	<field name="CreditCardType1" class="java.lang.String">
+		<fieldDescription><![CDATA[Containers/Container/ContainerDetails/ContainerDetail/ShipmentLine/Order/PaymentMethods/PaymentMethod[1]/@CreditCardType]]></fieldDescription>
+	</field>
+	<field name="DisplayCreditCardNo1" class="java.lang.String">
+		<fieldDescription><![CDATA[Containers/Container/ContainerDetails/ContainerDetail/ShipmentLine/Order/PaymentMethods/PaymentMethod[1]/@DisplayCreditCardNo]]></fieldDescription>
+	</field>
+	<field name="CreditCardType2" class="java.lang.String">
+		<fieldDescription><![CDATA[Containers/Container/ContainerDetails/ContainerDetail/ShipmentLine/Order/PaymentMethods/PaymentMethod[2]/@CreditCardType]]></fieldDescription>
+	</field>
+	<field name="DisplayCreditCardNo2" class="java.lang.String">
+		<fieldDescription><![CDATA[Containers/Container/ContainerDetails/ContainerDetail/ShipmentLine/Order/PaymentMethods/PaymentMethod[2]/@DisplayCreditCardNo]]></fieldDescription>
+	</field>
+	<field name="OrderDate" class="java.lang.String">
+		<fieldDescription><![CDATA[Containers/Container/ContainerDetails/ContainerDetail/ShipmentLine/Order/@OrderDate]]></fieldDescription>
+	</field>
+	<field name="IsGiftOrder" class="java.lang.String">
+		<fieldDescription><![CDATA[@IsGiftOrder]]></fieldDescription>
+	</field>
+	<variable name="TotalShippingCharge" class="java.lang.Double">
+		<variableExpression><![CDATA[$V{TotalShippingCharge}]]></variableExpression>
+		<initialValueExpression><![CDATA[0.0]]></initialValueExpression>
+	</variable>
+	<variable name="LastPage" class="java.lang.Boolean">
+		<variableExpression><![CDATA[true]]></variableExpression>
+		<initialValueExpression><![CDATA[true]]></initialValueExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="102" splitType="Stretch">
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="1" y="0" width="1" height="102"/>
+			</line>
+			<componentElement>
+				<reportElement x="10" y="45" width="70" height="20"/>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128" drawText="false" checksumRequired="false" barHeight="50">
+					<jr:codeExpression><![CDATA[$F{ShipmentNo}]]></jr:codeExpression>
+				</jr:barbecue>
+			</componentElement>
+			<staticText>
+				<reportElement x="26" y="33" width="35" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<text><![CDATA[Shipping]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="74" height="9"/>
+				<textElement>
+					<font fontName="Arial" size="7" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[SHIPPING METHOD]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="15" width="89" height="21"/>
+				<textElement>
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CarrierServiceCode}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="100" y="11" width="68" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="100" y="41" width="74" height="9">
+					<printWhenExpression><![CDATA[($F{IsGiftOrder}==null)
+|| $F{IsGiftOrder}.equalsIgnoreCase("")
+|| ($F{IsGiftOrder}.equalsIgnoreCase("N"))]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="7" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[PAYMENT METHOD]]></text>
+			</staticText>
+			<line>
+				<reportElement x="100" y="52" width="68" height="1">
+					<printWhenExpression><![CDATA[($F{IsGiftOrder}==null)
+|| $F{IsGiftOrder}.equalsIgnoreCase("")
+|| ($F{IsGiftOrder}.equalsIgnoreCase("N"))]]></printWhenExpression>
+				</reportElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="100" y="55" width="145" height="15">
+					<printWhenExpression><![CDATA[($F{IsGiftOrder}==null)
+|| $F{IsGiftOrder}.equalsIgnoreCase("")
+|| ($F{IsGiftOrder}.equalsIgnoreCase("N"))]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Helvetica-Narrow" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[($F{CreditCardType1}!= null )
+?
+    ($F{CreditCardType1}.equalsIgnoreCase("VISA"))
+    ?"VISA1 "+$F{DisplayCreditCardNo1}
+    :($F{CreditCardType1}.equalsIgnoreCase("DISC"))
+      ?"DISCOVER "+$F{DisplayCreditCardNo1}
+      :($F{CreditCardType1}.equalsIgnoreCase("AMEX"))
+      ?"AMERICAN EXPRESS "+$F{DisplayCreditCardNo1}
+      :($F{CreditCardType1}.equalsIgnoreCase("MSTR_CARD"))
+      ?"MASTER CARD "+$F{DisplayCreditCardNo1}
+      :($F{CreditCardType1}.equalsIgnoreCase("KL_GIFT_CARD") || $F{CreditCardType1}.equalsIgnoreCase("KL_CHRG_CARD"))
+      ?"KOHLS GC/KMRC "+$F{DisplayCreditCardNo1}
+      :""
+    
+:""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="100" y="70" width="145" height="15">
+					<printWhenExpression><![CDATA[($F{IsGiftOrder}==null)
+|| $F{IsGiftOrder}.equalsIgnoreCase("")
+|| ($F{IsGiftOrder}.equalsIgnoreCase("N"))]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Helvetica-Narrow" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[($F{CreditCardType2}!= null )
+?($F{CreditCardType2}.equalsIgnoreCase("VISA"))
+    ?"VISA1 "+$F{DisplayCreditCardNo2}
+    :($F{CreditCardType2}.equalsIgnoreCase("DISC"))
+      ?"DISCOVER "+$F{DisplayCreditCardNo2}
+      :($F{CreditCardType2}.equalsIgnoreCase("AMEX"))
+      ?"AMERICAN EXPRESS "+$F{DisplayCreditCardNo2}
+      :($F{CreditCardType2}.equalsIgnoreCase("MSTR_CARD"))
+      ?"MASTER CARD "+$F{DisplayCreditCardNo2}
+      :($F{CreditCardType2}.equalsIgnoreCase("KL_GIFT_CARD") || $F{CreditCardType2}.equalsIgnoreCase("KL_CHRG_CARD"))
+      ?"KOHLS GC/KMRC "+$F{DisplayCreditCardNo2}
+      :""
+    
+:""]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="450" y="0" width="1" height="100"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="500" y="0" width="1" height="100"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="554" y="0" width="1" height="102"/>
+			</line>
+			<subreport>
+				<reportElement x="323" y="41" width="116" height="0"/>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/Shipment/ShipmentCharges/ShipmentCharge")]]></dataSourceExpression>
+				<returnValue subreportVariable="shippingCharge" toVariable="TotalShippingCharge"/>
+				<subreportExpression class="java.lang.String"><![CDATA["KohlsPackShip_subreport2_subreport1.jasper"]]></subreportExpression>
+			</subreport>
+			<textField evaluationTime="Report">
+				<reportElement x="231" y="0" width="198" height="9"/>
+				<textElement>
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[($V{TotalShippingCharge} >0.0)?"SHIPPING SURCHARGE: \$"+$V{TotalShippingCharge}.toString():""]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement positionType="Float" x="330" y="12" width="65" height="15" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true">
+					<printWhenExpression><![CDATA[($F{IsGiftOrder}==null)
+|| $F{IsGiftOrder}.equalsIgnoreCase("")
+|| ($F{IsGiftOrder}.equalsIgnoreCase("N"))]]></printWhenExpression>
+				</reportElement>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/Shipment/PopulateTaxes/PopulateTax")]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["KohlsPackShip_subreport2_subreport2.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement positionType="Float" x="330" y="28" width="120" height="60"/>
+				<textElement>
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<text><![CDATA[Returns will reduce the value of Kohl’s Cash and/or the refund amount. See details printed on Kohl’s Cash coupon.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="10" y="65" width="70" height="35"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Narrow" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ShipmentNo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.shipment.backroomPick.BPItemScanExtnBundle" screenId="extn.shipment.backroomPick.BPItemScanExtn">
+    <BundleEntries>
+        <BundleEntry bundleEntryId="extn_buttonSuspend_Button_label"
+            bundleKey="extn_Suspend" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_buttonSuspend"/>
+        <BundleEntry bundleEntryId="extn_buttonRefresh_Button_label"
+            bundleKey="Action_Refresh" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_buttonRefresh"/>
+        <BundleEntry bundleEntryId="extn_buttonComplete_Button_label"
+            bundleKey="extn_Complete" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_buttonComplete"/>
+        <BundleEntry bundleEntryId="extn_buttonStartPick_Button_label"
+            bundleKey="extn_Start_Pick" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_buttonStartPick"/>
+        <BundleEntry bundleEntryId="addProductButton_Button_label"
+            bundleKey="extn_Enter" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="addProductButton"/>
+        <BundleEntry
+            bundleEntryId="extn_btnItemPickingLocation_Button_label"
+            bundleKey="extn_Go_to_Sales_Floor"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_btnItemPickingLocation"/>
+        <BundleEntry bundleEntryId="extn_labelOrderDetails_Label_value"
+            bundleKey="extn_Order_Details"
+            bundleValueFn="_scSimpleBundle" property="value"
+            type="WIDGET" uId="extn_labelOrderDetails"/>
+        <BundleEntry bundleEntryId="extn_name_DataLabel_label"
+            bundleKey="extn_Name" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_name"/>
+        <BundleEntry bundleEntryId="DueInTime_DataLabel_label"
+            bundleKey="extn_Pick_Up_Time_In" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="DueInTime"/>
+        <BundleEntry
+            bundleEntryId="extn_lastLocationScanned_DataLabel_label"
+            bundleKey="extn_SKU_UPC_Scanned" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_lastLocationScanned"/>
+        <BundleEntry
+            bundleEntryId="extn_labelItemPickingLocation_DataLabel_label"
+            bundleKey="extn_Current_Location" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_labelItemPickingLocation"/>
+        <BundleEntry bundleEntryId="scanProductIdTxt_TextField_label"
+            bundleKey="extn_Scan_Location_Product1"
+            bundleValueFn="_scBundle" property="label" type="WIDGET" uId="scanProductIdTxt"/>
+    </BundleEntries>
+</ScreenBundle>

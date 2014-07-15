@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle screenBundleId="extn.item.details.ItemOverviewExtnBundle" screenId="extn.item.details.ItemOverviewExtn">
+    <BundleEntries>
+        <BundleEntry bundleEntryId="extn_ItemDetailsLabel_Label_value"
+            bundleKey="extn_Item_Details"
+            bundleValueFn="_scSimpleBundle" property="value"
+            type="WIDGET" uId="extn_ItemDetailsLabel"/>
+        <BundleEntry
+            bundleEntryId="extn_stockRoomQtyLabel_DataLabel_label"
+            bundleKey="extn_Stockroom_Quantity"
+            bundleValueFn="_scBundle" property="label" type="WIDGET" uId="extn_stockRoomQtyLabel"/>
+        <BundleEntry
+            bundleEntryId="extn_salesFloorQtyLabel_DataLabel_label"
+            bundleKey="extn_Salesfloor_Quantity"
+            bundleValueFn="_scBundle" property="label" type="WIDGET" uId="extn_salesFloorQtyLabel"/>
+        <BundleEntry
+            bundleEntryId="extn_SKUDescriptionLabel_DataLabel_label"
+            bundleKey="extn_SKU_Description" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_SKUDescriptionLabel"/>
+        <BundleEntry bundleEntryId="extn_brandLabel_DataLabel_label"
+            bundleKey="extn_Brand" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_brandLabel"/>
+        <BundleEntry bundleEntryId="extn_colorLabel_DataLabel_label"
+            bundleKey="extn_Color" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_colorLabel"/>
+        <BundleEntry bundleEntryId="extn_sizeLabel_DataLabel_label"
+            bundleKey="extn_Size" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_sizeLabel"/>
+        <BundleEntry
+            bundleEntryId="extn_styleNumberLabel_DataLabel_label"
+            bundleKey="extn_Style_Number" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_styleNumberLabel"/>
+        <BundleEntry
+            bundleEntryId="extn_styleDescriptionLabel_DataLabel_label"
+            bundleKey="extn_Style_Description" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_styleDescriptionLabel"/>
+        <BundleEntry bundleEntryId="extn_boxIDLabel_DataLabel_label"
+            bundleKey="extn_Box_ID" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_boxIDLabel"/>
+        <BundleEntry
+            bundleEntryId="extn_departmentLabel_DataLabel_label"
+            bundleKey="Label_Department" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_departmentLabel"/>
+        <BundleEntry
+            bundleEntryId="extn_majorClassLabel_DataLabel_label"
+            bundleKey="extn_Major_Class" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_majorClassLabel"/>
+        <BundleEntry bundleEntryId="extn_subClassLabel_DataLabel_label"
+            bundleKey="extn_Sub_Class" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_subClassLabel"/>
+        <BundleEntry bundleEntryId="extn_floorPadLabel_DataLabel_label"
+            bundleKey="extn_Floorpad" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_floorPadLabel"/>
+        <BundleEntry bundleEntryId="extn_upcsLabel_DataLabel_label"
+            bundleKey="extn_UPCs" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_upcsLabel"/>
+    </BundleEntries>
+</ScreenBundle>

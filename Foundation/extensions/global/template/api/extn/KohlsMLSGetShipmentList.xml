@@ -1,0 +1,49 @@
+<Shipment IsPackProcessComplete="" ShipmentType="" OrderNo="" EnterpriseCode="" PickListNo="" PickTicketPrinted=""
+    PickticketNo="" SCAC="" RequestedCarrierServiceCode=""
+    ShipNode="" 
+    ShipmentContainerizedFlag=""
+    ShipmentKey="" ShipmentNo="" 
+    Status="" CarrierServiceCode="" DocumentType="">
+    <ShipmentStatusAudit ReasonCode="" ReasonText=""/>
+    <ToAddress AddressLine1="" AddressLine2="" City="" Country=""
+            DayPhone="" EMailID="" FirstName="" IsCommercialAddress=""
+            LastName="" State="" ZipCode=""/>
+	<ShipNode DcmIntegrationRealTime="" ShipNode="" ShipnodeType="" NodeType="" ShipnodeKey=""/>
+    <Containers TotalNumberOfRecords="">
+        <Container ActualWeight="" ContainerScm="" FormID="" CommitmentCode="" ContainerNetWeight="" ContainerNetWeightUOM="" ContainerLength=""
+            ContainerNo="" ContainerType="" ContainerWidth="" ContainerHeight="" ContainerGrossWeight="" TrackingNo=""
+            IsPackProcessComplete="" 
+            ShipmentContainerKey="" ShipmentKey="">
+			<Extn ExtnLblPrintFormat=""/>
+            <ContainerDetails TotalNumberOfRecords="">
+                <ContainerDetail ContainerDetailsKey="" ItemID=""
+                    ProductClass="" Quantity="" 
+                    ShipmentKey="" ShipmentLineKey="" UnitOfMeasure="" >             
+                    <ShipmentLine 
+                        ItemDesc="" >
+                    </ShipmentLine>
+                </ContainerDetail>
+            </ContainerDetails>   
+        </Container>
+    </Containers>
+    <ShipmentLines TotalNumberOfRecords="">
+        <ShipmentLine ItemDesc="" ItemID=""
+    OrderNo="" PlacedQuantity="" ProductClass="" Quantity="" ShipmentLineKey="" OrderHeaderKey="" OrderLineKey="" PrimeLineNo="" ShipmentNo="" ShipmentLineNo="" UnitOfMeasure="" >
+	   <OrderLine OrderLineKey="">
+	   <ItemDetails ItemID="" >
+	   <PrimaryInformation  UnitWeight="" UnitWeightUOM="" />
+	   <ItemAliasList>
+	   <ItemAlias AliasName="" AliasValue="" />
+	    </ItemAliasList>
+	   <Extn/>
+       </ItemDetails>
+	   <Extn ExtnGiftMessage="" ExtnGiftTo="" ExtnGiftFrom=""/>
+	   <Notes NumberOfNotes="">
+		<Note NoteText="">						
+			<Extn ExtnOrderLineNo="" />
+		</Note>
+	   </Notes>
+       </OrderLine>
+	     </ShipmentLine>
+     </ShipmentLines>
+</Shipment>

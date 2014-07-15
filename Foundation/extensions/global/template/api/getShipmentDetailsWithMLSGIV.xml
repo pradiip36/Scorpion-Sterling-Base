@@ -1,0 +1,26 @@
+	<Shipment ExpectedShipmentDate =""  ShipmentKey =""  TotalNumOfPickableSKUs =""  EnterpriseCode =""  AssignedToUserId =""  OrderNo =""  RequestedDeliveryDate =""  Currency =""  Status =""  RequestedShipmentDate =""  TransactionId =""  ShipmentNo =""  GiftFlag =""  ShipNode =""  SellerOrganizationCode ="" >
+		<ShipmentLines>
+			<ShipmentLine ShipmentLineKey =""  ShortageQty =""  OrderHeaderKey =""  ShipmentKey =""  PickLocation =""  ShipmentSubLineNo =""  Quantity =""  OrderLineKey =""  BackroomPickedQuantity =""  ShipmentLineNo =""  OrderNo ="" ItemID="" ProductClass="" UnitOfMeasure="">
+				<OrderLine IsBundleParent =""  ItemGroupCode =""  GiftFlag ="" >
+					<Item ProductClass ="" >
+					</Item>
+					<LinePriceInfo UnitPrice ="" ></LinePriceInfo>
+						<OrderDates>
+							<OrderDate DateTypeId =""  OrderHeaderKey =""  OrderReleaseKey =""  ExpectedDate =""  CommittedDate =""  RequestedDate =""  ActualDate =""  OrderLineKey ="" >
+							</OrderDate>
+						</OrderDates>
+						<ItemDetails UnitOfMeasure =""  ItemGroupCode =""  ItemID ="" >
+							<PrimaryInformation ShortDescription =""  ImageLocation =""  ExtendedDisplayDescription =""  ImageID =""  ImageLabel ="" ItemType="">
+							</PrimaryInformation>
+							<ItemAliasList>
+								<Itemalias AliasValue =""  AliasName ="" >
+								</Itemalias>
+							</ItemAliasList>
+							<Extn ExtnColorDesc =""  ExtnSizeDesc ="" ExtnDept=""></Extn>
+						</ItemDetails>
+				</OrderLine>
+				<Extn ExtnShortageReason="" />
+			</ShipmentLine>
+		</ShipmentLines>
+		<BillToAddress AddressLine1 =""  AddressLine2 =""  City =""  AddressLine3 =""  AddressLine4 =""  MobilePhone =""  VerificationStatus =""  AddressLine5 =""  ZipCode =""  AddressLine6 =""  PersonID =""  DayPhone =""  TaxGeoCode =""  PersonInfoKey =""  Company =""  OtherPhone =""  IsCommercialAddress =""  MiddleName =""  LastName =""  DayFaxNo =""  EveningPhone =""  HttpUrl =""  UseCount =""  ErrorTxt =""  Suffix =""  State =""  Department =""  Country =""  EveningFaxNo =""  PreferredShipAddress =""  EMailID =""  Title =""  Beeper =""  FirstName =""  JobTitle =""  AlternateEmailID ="" ></BillToAddress>
+	</Shipment>

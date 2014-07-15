@@ -1,0 +1,231 @@
+#!/usr/bin/ksh
+#######################################################################
+#
+#     Program Name:  OFK020
+#           Author:  Mark Yearling
+#Responsible Group:  Order Management Systems 
+#     Date Created:  2011-05-12
+#  Program Purpose:  This script is responsible for doing any SQL Checks needed and will
+#                    properly update the data as needed.  It is a tool only intended for daily 
+#                    updates on issues we are waiting for fixes on. 
+#
+#                    The script requires 2 parameters.  
+#                    Parm 1 is Email Address to send report to
+#                    Parm 2 is the DB login id
+#
+#          Example:  OFK020 mark.yearling@kohls.com
+#
+# Modification Log:
+#                    02/09/2014 - Todd Winter(TKMAZ37) - Linux Conversion
+#                          Removed ESP upload, added support for environments A-E,
+#                          fixed env variables, added echoing of the ESP log
+#
+#
+#
+########################################################################
+
+#PARAMETERS
+
+parms=$#
+
+USAGE="Usage: $0 <email> <dblogin_env>"
+
+if [ $parms -gt 0 ]
+then
+   script=$0
+   email_grp=$1
+   dblogin_env=$2
+else
+   print "$USAGE"
+   return_status=2
+
+   ${K_SRC}/is/IS_ESP_upld.sh
+   exit ${return_status}
+fi
+
+thedate=`date`
+
+###########################################################
+#
+#       F   U   N   C   T   I   O   N   S 
+#
+###########################################################
+
+exec_mail_smry()
+{
+
+mail -s "OFK020 COMPLETED" ${email_grp} << EMAIL
+OFK020 Completed at ${thedate}
+
+OFK020L found ${cage_initial} records that needed to be updated.
+OFK020L updated ${cage_updated} records.
+
+EMAIL
+
+print "Mail Process Completed." 
+print 
+
+}
+
+exec_mail_ora()
+{
+
+mail -s "OFK020 FAILED" ${email_grp} << EMAIL
+OFK020 failed at ${thedate}
+
+OFK020L had Oracle Errors!
+
+EMAIL
+
+}
+
+check_cage()
+{
+echo "The DBLOGIN is: ${DBLOGIN}"
+cage_count=`sqlplus -s ${DBLOGIN} << !
+
+set head off
+set trims on
+set heading off
+
+select count(*) from
+STERLING.YFS_ITEM 
+WHERE EXTN_BREAKABLE ='N' 
+AND EXTN_CAGE_ITEM ='Y' 
+AND PRODUCT_LINE = ' ';	
+!`
+
+}
+
+update_cage()
+{
+sqlplus -s ${DBLOGIN} << !
+
+set head off
+set trims on
+set heading off
+
+UPDATE STERLING.YFS_ITEM
+   SET PRODUCT_LINE = 'CG'
+ WHERE EXTN_BREAKABLE ='N'
+   AND EXTN_CAGE_ITEM ='Y'
+   AND EXTN_SHIP_ALONE = 'N' 
+   AND PRODUCT_LINE = ' ';
+
+COMMIT;
+
+UPDATE STERLING.YFS_ITEM
+   SET PRODUCT_LINE = 'SA'
+ WHERE EXTN_BREAKABLE ='N'
+   AND EXTN_CAGE_ITEM ='Y'
+   AND EXTN_SHIP_ALONE = 'Y'
+   AND PRODUCT_LINE = ' ';
+
+COMMIT;   
+
+!
+
+}
+
+###########################################################
+# 
+#               M    A    I    N
+#
+###########################################################
+
+########################################################################
+
+readonly log="${K_LOG}/of/OFK020_$(date -u +%Y-%m-%dT%T)_${$}.txt"
+########################################################################
+
+{
+
+print ${USAGE}
+print "EMAIL: ${email_grp}"
+print
+print
+
+########################################################################
+# RUN REQUIRED PROFILES
+#   Execute the user's profile
+print 'BEGIN LOADING PROFILE'
+  export PATH="/usr/local/bin:$PATH"
+  . /srv/apps/profile/admin
+print 'END LOADING PROFILE'
+print
+
+#   Execute the Kohl's database environment
+print 'BEGIN LOADING ksetdblogin'
+. ${K_SH}/ksetdblogin ${dblogin_env} 
+print 'END LOADING ksetdblogin'
+print
+########################################################################
+
+  check_cage
+
+  # Check Query Result 
+  query_check=$?
+  
+  if [[ ${query_check} -eq 0 ]] then
+  
+    # Clean up Sync Count
+    cage_count=`echo ${cage_count}`
+    cage_initial=${cage_count}
+
+    print "Found ${cage_initial} records that need to be fixed in the YFS_ITEM table."
+    print
+
+    if [[ ${cage_initial} -gt 0 ]] then
+    
+      print "Running Update to fix Cage records not properly updated with Product_Line."
+      print
+
+      update_cage
+     
+      print "Updates completed, now checking to ensure data is fixed."
+      print 
+
+      check_cage
+
+      # Clean up Sync Count
+      cage_count=`echo ${cage_count}`
+      cage_after=${cage_count}
+ 
+      let cage_updated=${cage_initial}-${cage_after}
+     
+      print "Found ${cage_after} records that need to be fixed still."
+      print
+
+    else
+
+    print "No records need to be fixed."
+    print "Exiting."
+    print
+
+    fi
+    
+    print "Executing Mail Process."
+    print
+    exec_mail_smry
+
+  else
+    
+    exec_mail_ora
+fi
+
+return_status=$?
+echo "Return Status of OFK020L: ${return_status}"
+
+} > ${log} 2>&1
+
+########################################################################
+# Display log file for ESP
+fold -w 131 ${log}
+########################################################################
+
+  
+
+########################################################################
+# Exit the script with the return code from your batch program
+exit ${return_status}
+########################################################################

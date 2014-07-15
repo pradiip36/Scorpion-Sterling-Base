@@ -1,0 +1,372 @@
+# Property to handle logging.
+# This property points to the location of the log4j configuration xml file.
+yfs.log4j.configuration=/resources/kohls.log4jconfig.custom.xml
+
+# This property sets the time to wait on receiving eof
+yfs.yfs.eof.wait.time=300
+
+# Set local code to en_US_CST
+yfs.yfs.install.localecode=en_US_CST
+
+# This property constant sets the path to generate mismatch report
+yfs.MismatchReport=/logs/apps/of_c/sterling/MismatchReport
+yfs.InvSnapshot=/logs/apps/of_c/sterling/InvSnapshot
+
+# Properties requried for RCP and SIM
+yfs.yfs.rcp.devmode=Y
+
+######### Agent Server JMS Configs ########
+#yfs.GENERIC_CONTEXT_FACTORY=com.sun.jndi.fscontext.RefFSContextFactory
+yfs.KOHLS_AGENT_PROVIDER_URL=file:/srv/apps/control/JNDI-Directory/of_c
+yfs.KOHLS_AGENT_QCF=MQXAClientConnectionFactory
+
+######### Integration Server JMS Configs ########
+yfs.KOHLS_INT_PROVIDER_URL=file:/srv/apps/control/JNDI-Directory/of_c
+yfs.KOHLS_INT_AGENT_QCF=MQXAClientConnectionFactory
+
+yfs.yfs.flow.override.icf=com.sun.jndi.fscontext.RefFSContextFactory
+yfs.yfs.agent.override.icf=com.sun.jndi.fscontext.RefFSContextFactory
+
+yfs.interopservlet.security.enabled=false
+yfs.api.security.token.enabled=false
+yfs.api.security.mode=DEBUG
+yfs.api.security.enabled=N
+
+# Temporary setting for deadlock DB logging
+yfs.yfs.app.identifyconnection=Y
+#yfs.app.identifyconnection=Y
+
+#####Adding HOT SKU Parameters#########
+#- Average requested quantity multiplier (This number can represent number of threads or JVMs which will be running simultaneously)
+yfs.hotsku.qtyMultiplier=30.
+yfs.yfs.hotsku.qtyMultiplier=30.
+
+#- Lock threshold limit in second
+yfs.hotsku.secondsToClassifyAsAbnormalTime=0.25
+yfs.yfs.hotsku.secondsToClassifyAsAbnormalTime=0.25
+
+#- Tracking window interval in minute
+yfs.hotsku.windowTimeInMinutes=10
+yfs.yfs.hotsku.windowTimeInMinutes=10
+
+#- Number of requests in tracking window to keep item hot
+yfs.hotsku.numRequestsInTrackingWindowToKeepAsHotSku=1
+yfs.yfs.hotsku.numRequestsInTrackingWindowToKeepAsHotSku=1
+
+#- Number of times lock exceeds the lock ! threshold limit to promote item to be hot
+yfs.hotsku.numberOfAbnormalLocksForSwitchToHotSKU=1
+yfs.yfs.hotsku.numberOfAbnormalLocksForSwitchToHotSKU=1
+
+#- High request quantity multiplier
+yfs.hotsku.highRequestQuantityMultiplier=2
+yfs.yfs.hotsku.highRequestQuantityMultiplier=2
+
+#- Max distinct ItemID of hot item map size in memory.
+yfs.hotsku.maxItemMapSizeInMemory=5000
+yfs.yfs.hotsku.maxItemMapSizeInMemory=5000
+
+#- Show extra messages as info.
+yfs.hotsku.showExtraMessagesAsInfo=N
+yfs.yfs.hotsku.showExtraMessagesAsInfo=N
+
+yfs.hotsku.useHotSKUFeature=Y
+yfs.yfs.hotsku.useHotSKUFeature=Y
+
+#-Timeout Locking
+yfs.hotsku.useTimeOutLocking=Y
+yfs.yfs.hotsku.useTimeOutLocking=Y
+
+# Sterling Support Case Recommendation for dead locks
+yfs.yfs.inventory.sortandlock=Y
+
+############ Queue Name Aliases from .bindings #########
+
+yfs.KOHLS_ATP_AGENT_Q=OfAtp_Inv_MonitorQ
+yfs.KOHLS_INT_CLOSE_ORD_Q=OfClose_OrderQ
+yfs.KOHLS_INT_CLOSE_SHPMNT_Q=OfClose_ShipmentQ
+yfs.KOHLS_INT_EXCEP_MON_Q=OfException_MonitorQ
+yfs.KOHLS_INT_EXPORT_PRG_Q=OfExport_PrgQ
+yfs.KOHLS_IN_OMS_CREATE_ORDER_Q=OfInbCrt_OrderQ
+yfs.KOHLS_IN_OMS_CHUB_FA_Q=OfInbDsv_Func_AckQ
+yfs.KOHLS_IN_OMS_DSV_INV_Q=OfInbDsv_Inv_SyncQ
+yfs.KOHLS_IN_OMS_PO_SHIPCONF_Q=OfInbDsv_Ship_CnfrmQ
+yfs.KOHLS_IN_OMS_809INVADJ_Q=OfInbInv_Adj_809Q
+yfs.KOHLS_IN_OMS_819INVADJ_Q=OfInbInv_Adj_819Q
+yfs.KOHLS_IN_OMS_873INVADJ_Q=OfInbInv_Adj_873Q
+yfs.KOHLS_IN_OMS_829INVADJ_Q=OfInbInv_Adj_829Q
+yfs.KOHLS_IN_OMS_INVSYNC_Q=OfInbInv_SyncQ
+yfs.KOHLS_IN_OMS_REPRICE_INFO_Q=OfInbShip_Chrg_RespQ
+yfs.KOHLS_IN_OMS_SHIPMENT_CONFIRMATION_Q=OfInbShip_CnfrmQ
+yfs.KOHLS_IN_OMS_TO_SHIPCONF_Q=OfInbTo_Ship_Cnfrm_UpdateQ
+yfs.KOHLS_INT_OMS_ORDER_PRG=OfInt_Oms_Order_PrgQ
+yfs.KOHLS_INT_SUPPLY_TEMP_PRG_Q=OfInv_Supply_Temp_PrgQ
+yfs.KOHLS_IN_OMS_ITEM_Q=OfItemQ
+yfs.KOHLS_INT_OMS_REL_AGT_Q=OfNon_Sa_RelQ
+yfs.KOHLS_INT_REPROC_ERR_PRG_Q=OfInt_Reprocess_PrgQ
+#yfs.KOHLS_=OfOrder_HistprgQ
+yfs.KOHLS_OUT_OMS_SEND_INV_SNAP_SHOT_Q=OfOutbInventoryQr
+yfs.KOHLS_LOAD_INVENTORY_MISMATCH_Q=OfOutbLoad_Inventory_MismatchQ
+yfs.KOHLS_OUT_ATP_MONITOR_Q=OfOutbOms_Sync_MonitorQr
+yfs.KOHLS_OUT_OMS_SHIP_ALONE_MSG_TO_WMoS_Q=OfOutbOrd_RelQ
+yfs.KOHLS_OUT_OMS_CANCEL_MSG_TO_ECOMM_Q=OfOutbOrd_StatusQ
+yfs.KOHLS_OUT_OMS_RELEASE_TO_WMoS_Q=OfOutbOrd_RelQ
+yfs.KOHLS_OUT_OMS_SEND_SOURCING_RULE_DETAILS_Q=OfOutbReg_SrcQr
+yfs.KOHLS_OUT_OMS_SEND_STATUS_MSG_TO_ECOMM_Q=OfOutbOrd_StatusQ
+yfs.KOHLS_OUT_OMS_SEND_SHIP_ALONE_STATUS_MSG_TO_ECOMM_Q=OfOutbOrd_StatusQ
+yfs.KOHLS_OUT_SEND_SHIP_CONFIRMATION_MSG_TO_ECOMM_Q=OfOutbShip_CnfrmQ
+yfs.KOHLS_OUT_INVOICE_Q=OfOutbSo_InvoiceQ
+yfs.SYS_INT_PAYMENT_COLLECTION_Q=OfPayment_CollectionQ
+yfs.SYS_INT_PAYMENT_EXECUTION_Q=OfPayment_ExecutionQ
+yfs.SYS_INT_CLOSE_ORDER_Q=OfPo_Close_OrderQ
+yfs.SYS_INT_CLOSE_SHIPMENT_Q=OfPo_Close_ShipmentQ
+yfs.KOHLS_INT_OMS_POCREATE_Q=OfPo_CreateQ
+#yfs.KOHLS_INT_OMS_ORDER_PRG=OfPo_HistprgQ
+yfs.KOHLS_INT_OMS_ORDER_PRG=OfPo_PrgQ
+yfs.SYS_INT_PO_RELEASE_ORDER_Q=OfPo_ReleaseQ
+yfs.SYS_INT_PO_SCHEDULE_ORDER_Q=OfPo_ScheduleQ
+yfs.KOHLS_INT_OMS_SHIPMENT_PRG_Q=OfPo_Shipment_PrgQ
+yfs.SYS_INT_RELEASE_ORDER_Q=OfRel_OrderQ
+yfs.KOHLS_INT_OMS_SA_REL_AGT_Q=OfSa_RelQ
+yfs.SYS_INT_SCHEDULE_ORDER_Q=OfSched_OrderQ
+yfs.SYS_INVOICE_AGENT_Q=OfSend_InvoiceQ
+#yfs.KOHLS_INT_OMS_SHIPMENT_PRG_Q=OfShipment_HistprgQ
+yfs.SYS_INT_SHIPMENT_INVOICE_Q=OfShipment_InvoiceQ
+yfs.KOHLS_INT_SHIP_PRG_Q=OfShipment_PrgQ
+yfs.KOHLS_INT_STATS_PRG_Q=OfStats_Dtl_PrgQ
+yfs.KOHLS_IN_OMS_VENDOR_Q=OfVendorQ
+yfs.KOHLS_INT_INV_PURGE_AGT_Q=OfInt_Inv_Purge_AgtQ
+yfs.KOHLS_INT_EDW_FEED_AGT_Q=OfInt_Edw_Feed_AgtQ
+
+####Queues for COSA HARD TOTAL####
+yfs.KOHLS_OUT_COSA_HARD_TOTAL_Q=OfOutbCosa_Hard_TotalsQ
+yfs.KOHLS_IN_OMS_CASH_ACTIVATION_Q=OfInbKohls_Cash_EarnedQ
+yfs.KOHLS_INT_HARD_TOTALS_AGT_Q=OfInt_HardtotalsQ
+yfs.KOHLS_INTERNAL_HARDTOTALS_Q=OfInteg_HardtotalsQ
+yfs.KOHLS_OUT_DSV_PO_Q=OfOutbDsv_Cust_PoQ
+
+#yfs.KOHLS_UNKNOWN_WHICH_TX_USES_THIS=OfOutbDsv_Cust_PoErrorQ
+# End of  Queue Alias Names from .bindings
+
+# Plastic gift card activation
+##yfs.KOHLS_OUT_OMS_PLASTIC_GIFT_CARD_ACTVN_Q=KOHLS_OUT_OMS_PLASTIC_GIFT_CARD_ACTVN_Q
+
+##yfs.KOHLS_IN_OMS_ALTRNTSHIPCONFIRM_Q=KOHLS_IN_OMS_ALTRNTSHIPCONFIRM_Q
+
+dbclassCache.YFS_ITEM_OPTION.enabled=false
+dbclassCache.YFS_ITEM_PRICE_SET.enabled=false
+dbclassCache.YFS_ITEM_PRICE_SET_DTL.enabled=false
+dbclassCache.YFS_ITEM_SERVICE_ASSC_SKILL.enabled=false
+dbclassCache.YFS_ITEM_SERVICE_ASSOC.enabled=false
+dbclassCache.YFS_ITEM_SERVICE_SKILL.enabled=false
+dbclassCache.YFS_ITEM_SHIP_NODE.enabled=false
+dbclassCache.YFS_ITEM_STATUS_RULES.enabled=false
+dbclassCache.YFS_ITEM_TAG.enabled=false
+dbclassCache.YFS_ITEM_UOM.enabled=false
+dbclassCache.YFS_ITEM_UOM_MASTER.enabled=false
+dbclassCache.YFS_ITEM.enabled=false
+dbclassCache.YFS_ITEM_ALIAS.enabled=false
+dbclassCache.YFS_ITEM_ATTR.enabled=false
+dbclassCache.YFS_ITEM_ATTR_GROUP.enabled=false
+dbclassCache.YFS_ITEM_ATTR_GROUP_LOCALE.enabled=false
+dbclassCache.YFS_ITEM_ATTR_GROUP_TYPE.enabled=false
+dbclassCache.YFS_ITEM_ATTR_GRP_TYPE_LOCALE.enabled=false
+dbclassCache.YFS_ITEM_CNSPTN_PTTN_DTL.enabled=false
+dbclassCache.YFS_ITEM_CNSPTN_PTTN_HDR.enabled=false
+dbclassCache.YFS_ITEM_COUNT_STATE.enabled=false
+dbclassCache.YFS_ITEM_EXCLUSION.enabled=false
+dbclassCache.YFS_ITEM_INSTRUCTION.enabled=false
+dbclassCache.YFS_ITEM_INSTRUCTION_CODE.enabled=false
+dbclassCache.YFS_ITEM_LOCALE.enabled=false
+dbclassCache.YFS_ITEM_NODE_DEFN.enabled=false
+dbclassCache.YFS_ITEM_ATTR_GRP_TYPE_LOCALE.enabled=false
+dbclassCache.YFS_ITEM_CNSPTN_PTTN_DTL.enabled=false
+
+####### SSO properties ######
+sso.header.username=iv-user
+#PROD
+#sso.webseal.link=http://intra.kohls.com/oms/smcfs/console/home.detail
+#sso.webseal.link=http://intra-qa.tst.kohls.com/omstest/smcfs/console/home.detail
+yfs.yfs.security.singlesignon.enabled=N
+#yfs.yfs.login.singlesignon.class=com.kohls.common.util.KohlsSSOManager
+#yfs.yfs.login.singlesignon.checkuser=Y
+
+######### LDAP Properties ###########
+yfs.yfs.security.ldap.factory=com.sun.jndi.ldap.LdapCtxFactory
+yfs.yfs.security.ldap.url=ldap://eldapprodvip.kohls.com:389/
+yfs.yfs.security.authenticator=com.kohls.security.ldap.KohlsLdapAuthenticator
+yfs.yfs.security.ldap.o=KOHLS
+yfs.yfs.security.ldap.ou=people,internal
+yfs.yfs.security.ldap.defaultuserdn=cn=SterlingReadOnly, cn=ReadOnlyUsers, O=KOHLS,C=US
+yfs.yfs.security.ldap.defaultuserpwd=sdsa4321
+yfs.yfs.security.ldap.auth=simple
+#yfs.yfs.security.ldap.protocol=ssl
+
+
+####### JMS Queue parameter #####
+yfs.yantra.jms.receive.timeout=10000
+
+####### Kohls Job Path #######
+yfs.kohls_job_path=/kohls/apps/job/
+
+
+######Purge Queues in Release C ###########
+
+yfs.KOHLS_INT_OMS_INV_AUDIT_PRG=OfInv_Audit_PrgQ
+yfs.KOHLS_INT_ITEM_AUDIT_PRG=OfItem_Audit_PrgQ
+yfs.KOHLS_INT_ORG_AUDIT_PRG=OfOrg_Audit_PrgQ
+yfs.KOHLS_INT_PER_INFO_PRG=OfPer_Info_PrgQ
+yfs.KOHLS_INT_PER_INFO_HIS_PRG=OfPer_Info_PrgQ
+yfs.KOHLS_INT_USER_ACT_PRG=OfUser_Act_PrgQ
+yfs.KOHLS_INT_USER_ACT_AUDIT_PRG=OfUser_Act_Audit_PrgQ
+yfs.KOHLS_INT_AUDIT_PRG=OfInt_Audit_PrgQ
+yfs.KOHLS_INT_INBOX_PRG=OfInt_Inbox_PrgQ
+yfs.KOHLS_INT_OMS_HIST_ORDER_PRG=OfPo_HistprgQ
+yfs.KOHLS_INT_OMS_SHIPMENT_HIST_PRG_Q=OfShipment_HistprgQ
+
+######RDC and Store Inventory Adjustment Queues #########
+yfs.KOHLS_STORE_ADJ_Q=OfInbInv_Adj_StoresQ
+yfs.KOHLS_RDC_ADJ_Q=OfInbInv_Adj_RdcQ
+yfs.KOHLS_STORE_RDC_INV_XFER=OfOutbInv_XferQ
+
+###### Store Inventory Agent Queues#########
+yfs.KOHLS_INT_810_SINGLE_PRINT_Q=OfInt_810_Single_PrintQ
+yfs.KOHLS_INT_810_MULTI_PRINT_Q=OfInt_810_Multi_PrintQ
+yfs.KOHLS_INT_830_SINGLE_PRINT_Q=OfInt_830_Single_PrintQ
+yfs.KOHLS_INT_830_MULTI_PRINT_Q=OfInt_830_Multi_PrintQ
+yfs.KOHLS_INT_840_SINGLE_PRINT_Q=OfInt_840_Single_PrintQ
+yfs.KOHLS_INT_840_MULTI_PRINT_Q=OfInt_840_Multi_PrintQ
+yfs.KOHLS_INT_860_SINGLE_PRINT_Q=OfInt_860_Single_PrintQ
+yfs.KOHLS_INT_860_MULTI_PRINT_Q=OfInt_860_Multi_PrintQ
+yfs.KOHLS_INT_865_SINGLE_PRINT_Q=OfInt_865_Single_PrintQ
+yfs.KOHLS_INT_865_MULTI_PRINT_Q=OfInt_865_Multi_PrintQ
+yfs.KOHLS_INT_875_SINGLE_PRINT_Q=OfInt_875_Single_PrintQ
+yfs.KOHLS_INT_875_MULTI_PRINT_Q=OfInt_875_Multi_PrintQ
+yfs.KOHLS_INT_890_SINGLE_PRINT_Q=OfInt_890_Single_PrintQ
+yfs.KOHLS_INT_890_MULTI_PRINT_Q=OfInt_890_Multi_PrintQ
+yfs.KOHLS_INT_9989_SINGLE_PRINT_Q=OfInt_9989_Single_PrintQ
+yfs.KOHLS_INT_9989_MULTI_PRINT_Q=OfInt_9989_Multi_PrintQ
+yfs.KOHLS_INT_9992_SINGLE_PRINT_Q=OfInt_9992_Single_PrintQ
+yfs.KOHLS_INT_9992_MULTI_PRINT_Q=OfInt_9992_Multi_PrintQ
+yfs.KOHLS_INT_41_SINGLE_PRINT_Q=OfInt_41_Single_PrintQ
+yfs.KOHLS_INT_41_MULTI_PRINT_Q=OfInt_41_Multi_PrintQ
+yfs.KOHLS_INT_855_SINGLE_PRINT_Q=OfInt_855_Single_PrintQ
+yfs.KOHLS_INT_855_MULTI_PRINT_Q=OfInt_855_Multi_PrintQ
+yfs.KOHLS_INT_885_SINGLE_PRINT_Q=OfInt_885_Single_PrintQ
+yfs.KOHLS_INT_885_MULTI_PRINT_Q=OfInt_885_Multi_PrintQ
+
+
+yfs.KOHLS_IN_SIM_SHIPCONFIRM_Q=OfInb_Sim_Ship_CnfrmQ
+yfs.KOHLS_OUT_SHIPMENT_MONITOR_Q=OfOut_Shipment_MonitorQ
+yfs.KOHLS_INT_CONTAINERUPDATE_Q=OfInt_Container_UpdateQ
+yfs.KOHLS_INT_MULTI_MASS_PRINT_Q=OfInb_Sim_Multi_Print_RqstQ
+yfs.KOHLS_JMS_SHIPMENT_MONITOR_Q=OfOut_Jms_Shipment_MonitorQ
+
+# For Item Eligibility
+yfs.KOHLS_ITEM_ELIGIBILITY_QUEUE=OfItem_EligibilityQ
+# For Safety Factor
+yfs.KOHLS_SAFETY_FACTOR_QUEUE=OfItem_safety_FactorQ
+
+########RDC and Store Inventory Sync directory paths######
+yfs.KOHLS_STORE_SYNC_FILE_IN=/kohls/file/of_c/StoreInventory/Incoming
+yfs.KOHLS_STORE_SYNC_FILE_WORK=/kohls/file/of_c/StoreInventory/Working
+yfs.KOHLS_STORE_SYNC_FILE_ERR=/kohls/file/of_c/StoreInventory/Error
+yfs.KOHLS_STORE_SYNC_FILE_COMP=/kohls/file/of_c/StoreInventory/Completion
+
+########Cognos BI Server URL and namespace for setting up access from SBI######
+yfs.analytics.reportnet.url=http://ag000033.tst.kohls.com:17080/cgi-bin/cognos.cgi
+yfs.analytics.namespace=smcfs
+
+########RCP Updates related properties########
+yfs.yfs.rcp.pca.updates.dir=/kohls/prop/of_c/Foundation/rcpupdates
+yfs.yfs.rcp.pca.updates.cache.dir=/kohls/prop/of_c/Foundation/rcpupdates/cache
+
+###### Order Sourcing Audit Queues #########
+yfs.KOHLS_OUT_SOURCING_AUDIT_Q=OfOutb_Sourcing_AuditQ
+
+###### SBC MENU Config ########
+yfs.enable.resource.addition=true
+
+# WebService Implementation Classes - WebSphere
+#yfs.KOLHS_SOAPFactory=org.apache.axis2.saaj.SOAPFactoryImpl
+#yfs.KOHLS_SOAPConnectionFactory=org.apache.axis2.saaj.SOAPConnectionFactoryImpl
+#yfs.KOHLS_MessageFactory=org.apache.axis2.saaj.MessageFactoryImpl
+
+# WebService Implementation Classes - Weblogic
+yfs.KOHLS_SOAPFactory=org.apache.axis2.saaj.SOAPFactoryImpl
+yfs.KOHLS_SOAPConnectionFactory=org.apache.axis2.saaj.SOAPConnectionFactoryImpl
+yfs.KOHLS_MessageFactory=org.apache.axis2.saaj.MessageFactoryImpl
+yfs.KOHLS_TransformerFactory=org.apache.xalan.processor.TransformerFactoryImpl
+yfs.KOHLS_PROXY_HOST=proxy.kohls.com
+yfs.KOHLS_PROXY_PORT=3128
+yfs.KOHLS_PROXY_USER=tkmaln3
+yfs.KOHLS_PROXY_PASSWORD=red10130
+
+#ProShip Void WebService - [Begin]
+yfs.END_POINT_URL_VOID_STORE=http://tsms1005.cp.ad.kohls.com:3278/pws-http
+yfs.END_POINT_URL_VOID_RDC=http://tsms1005.cp.ad.kohls.com:3278/pws-http
+yfs.END_POINT_USER_VOID=
+yfs.END_POINT_PWD_VOID=
+yfs.SOAP_ACTION_URI_VOID=http://psws.proshipservices.com
+yfs.SOAP_ACTION_URL_VOID=http://psws.proshipservices.com/IProShipWebService/
+yfs.SOAP_ACTION_OPERATION_VOID=Void
+yfs.SOAP_ACTION_URI_PREFIX_VOID=psws
+yfs.PROSHIP_DATA_CONTRACT_URI_VOID=
+yfs.PROSHIP_DATA_CONTRACT_PREFIX_VOID=
+#ProShip Void WebService - [End]
+
+#ProShip Print WebService - [Begin]
+yfs.END_POINT_URL_PRINT_STORE=http://tsms1005.cp.ad.kohls.com:3278/pws-http
+yfs.END_POINT_URL_PRINT_RDC=http://tsms1005.cp.ad.kohls.com:3278/pws-http
+yfs.END_POINT_USER_PRINT=
+yfs.END_POINT_PWD_PRINT=
+yfs.SOAP_ACTION_URI_PRINT=http://psws.proshipservices.com
+yfs.SOAP_ACTION_URL_PRINT=http://psws.proshipservices.com/IProShipWebService/
+yfs.SOAP_ACTION_OPERATION_PRINT=Print
+yfs.SOAP_ACTION_URI_PREFIX_PRINT=psws
+yfs.PROSHIP_DATA_CONTRACT_URI_PRINT=
+yfs.PROSHIP_DATA_CONTRACT_PREFIX_PRINT=
+#ProShip Print WebService - [End]
+
+#ProShip Ship WebService - [Begin]
+yfs.END_POINT_URL_SHIP_STORE=http://tsms1005.cp.ad.kohls.com:3278/pws-http
+yfs.END_POINT_URL_SHIP_RDC=http://tsms1005.cp.ad.kohls.com:3278/pws-http
+yfs.END_POINT_USER_SHIP=
+yfs.END_POINT_PWD_SHIP=
+yfs.SOAP_ACTION_URI_SHIP=http://psws.proshipservices.com
+yfs.SOAP_ACTION_URL_SHIP=http://psws.proshipservices.com/IProShipWebService/
+yfs.SOAP_ACTION_OPERATION_SHIP=Ship
+yfs.SOAP_ACTION_URI_PREFIX_SHIP=psws
+yfs.PROSHIP_DATA_CONTRACT_URI_SHIP=http://schemas.datacontract.org/2004/07/ProShipWebServices
+yfs.PROSHIP_DATA_CONTRACT_PREFIX_SHIP=pros
+#ProShip Ship WebService - [End]
+
+#GIV Location Inventory WebService - [Begin]
+yfs.END_POINT_URL_GIV_LOC_INV_SUPPLY=http://nlg00528:17010/SIXBeanXapiJaxWS/locationInventorySupplyService
+yfs.END_POINT_USER_GIV_LOC_INV_SUPPLY=simUser
+yfs.END_POINT_PWD_GIV_LOC_INV_SUPPLY=password
+yfs.SOAP_ACTION_URI_GIV_LOC_INV_SUPPLY=http://webservices.inventory.giv.kohls.com/
+yfs.SOAP_ACTION_URL_GIV_LOC_INV_SUPPLY=http://webservices.inventory.giv.kohls.com/locationInventorySupply/
+yfs.SOAP_ACTION_OPERATION_GIV_LOC_INV_SUPPLY=getLocationInventorySupply
+yfs.SOAP_ACTION_URI_PREFIX_GIV_LOC_INV_SUPPLY=web
+yfs.PROSHIP_DATA_CONTRACT_PREFIX_GIV_LOC_INV_SUPPLY=inp
+yfs.PROSHIP_DATA_CONTRACT_URI_GIV_LOC_INV_SUPPLY=http://webservices.inventory.giv.kohls.com/documentation/GetLocationInventorySupply/getLocationInventorySupply/input
+#GIV Location Inventory WebService - [End]
+
+#GIV Specific Properties - [Begin]
+yfs.kohls.giv.shipment.adj.outbound.q=GvShipConfirmationQ
+yfs.kohls.giv.demand.outbound.q=GvDmnd_SyncQ
+yfs.kohls.giv.supply.ws.endpoint.url=http://nlg00528:17010/SIXBeanXapiJaxWS/inventorySupplyService
+yfs.kohls.giv.interop.url=http://nlg00528:17010/smcfs/interop/InteropHttpServlet
+yfs.kohls.oms.inventory.activity.inbound.q=OfInvActivityQ
+yfs.kohls.oms.agt.clearance.q=OfAgtClearanceItemQ
+yfs.kohls.oms.clearance.internal.q=OfProcessClearanceItemQ
+yfs.kohls.oms.clearance.inbound.q=OfClearanceItemQ
+dbclassCache.YFS_INVENTORY_NODE_CONTROL.enabled=false
+#GIV Specific Properties - [End]
+
+#Shard Property
+yfs.api.colony.indexer=nonindexed
+yfs.KOHLS_INT_COLONY_SYNC_Q=OfInt_Colony_SyncQ
+
+#Queue For RTAM
+yfs.KOHLS_INV_ACT_QUEUE=OfInv_ActivityQ

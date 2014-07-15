@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BarCode BarCodeData="" BarCodeType="">
+<Translations BarCodeTranslationSource="" TotalNumberOfRecords="">
+<Translation>
+<ItemContextualInfo AlternateUOM="" ContainerQuantity="" InventoryUOM="" ItemID="" KitCode="" ProductClass="" Quantity="">
+</ItemContextualInfo>
+<ContextualInfo BuyerOrganizationCode="" EnterpriseCode="" OrganizationCode="" SellerOrganizationCode=""/>
+</Translation>
+</Translations>
+</BarCode>

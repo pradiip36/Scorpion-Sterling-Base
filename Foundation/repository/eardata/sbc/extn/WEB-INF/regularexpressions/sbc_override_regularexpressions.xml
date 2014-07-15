@@ -1,0 +1,7 @@
+<RegularExpressions>
+<RegularExpression id="sc-parameter-value-pattern"
+javaPattern="^[A-Za-z0-9[-_\s.!,/+=()'\&quot;@\\:;&amp;\$\|\[\]\u007F-\uFFFF]]*"
+jsPattern="^[a-zA-Z0-9-_\s.!,/+=()'\&quot;@\\:;&amp;\$\|\[\]\u007F-\uFFFF]*" />
+<RegularExpression id="open-text-param-value-pattern" jsPattern="^(.*[\s]*)*$|"/>
+<RegularExpression id="google-analytics-cookie-pattern" javaPattern="^[a-zA-Z0-9.!\-\/+=_ :\^()|]*$|"/>
+</RegularExpressions> 

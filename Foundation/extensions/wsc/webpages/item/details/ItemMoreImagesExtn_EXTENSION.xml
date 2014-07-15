@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="ItemMoreImagesExtn"
+        extnPackage="extn.item.details"
+        originalScreen="isccs.item.details.ItemMoreImages"
+        originalScreenPackage="isccs.item.details" type="diffrential">
+        <Items>
+            <ContentPane _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="itemImgLargeDiv" uId="extn_itemImagesRepeatingScreen">
+                <BindingData
+                    repeatingscreenGeneratorFunction="getImagesRepeatingScreenData" repeatingscreenID="extn.item.details.ItemImages">
+                    <RepeatingScreenData
+                        path="OrderLine.ItemDetails.ItemURLs.ItemURL"
+                        repeatingnamespace="Image"
+                        repeatingscreenpath="ItemURL" sourcenamespace="extn_ShipmentLine"/>
+                </BindingData>
+            </ContentPane>
+            <ContentPane _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="remove"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="_extensibilityHiddenWidgetsHolder" uId="repeatingScreenContainer"/>
+        </Items>
+        <Namespaces>
+            <SourceNamespaces>
+                <Source isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_0" value="extn_ShipmentLine"/>
+            </SourceNamespaces>
+        </Namespaces>
+        <Subscribers>
+            <Local>
+                <Subscriber eventId="afterScreenInit" isExtn="true" sequence="51">
+                    <Handler methodName="getShipmentLineModel"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+    </ScreenExtension>
+</ExtensionMetaData>

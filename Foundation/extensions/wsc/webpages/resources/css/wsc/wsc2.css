@@ -1,0 +1,13 @@
+.isccs .bpshipmentline .shortageCell .updateShortageResolutionImage.dijitButton .dijitIcon {
+  background-image: url('../css/icons/images/Shortage-Icon.png');
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  float: left;
+  overflow: hidden;
+  vertical-align: middle;
+  margin-top: 2px;
+  width: 48px;
+  height: 48px;
+  display: block;
+}

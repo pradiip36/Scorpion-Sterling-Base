@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<YFS_WORK_ORDER_ALLOC_CONSList TableName="YFS_WORK_ORDER_ALLOC_CONS">
+<WorkOrderAllocCons ActualSupplyTypeConsumed="ONHAND"
+    ActualSupplyTypeCreated="ONHAND"
+    AllocationDemandTypeForConsumed="ALLOCATED"
+    AllocationSupplyTypeForCreated="WIP" Createprogid="XMLMigrator"
+    Createts="2010-11-30T16:33:53-05:00" Createuserid="SYSTEM"
+    DemandTypeForConsumed="OPEN_ORDER" DocumentType="7001" Lockid="0"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2010-11-30T16:33:53-05:00"
+    Modifyuserid="sterling" ServiceItemGroupCode="COMPL"
+    SupplyTypeForCreated="WO_PLACED" WorkOrderAllocConsKey="COMPL"/>
+<WorkOrderAllocCons ActualSupplyTypeConsumed="ONHAND"
+    ActualSupplyTypeCreated="ONHAND"
+    AllocationDemandTypeForConsumed="ALLOCATED"
+    AllocationSupplyTypeForCreated="WIP" Createprogid="XMLMigrator"
+    Createts="2010-11-30T16:33:53-05:00" Createuserid="SYSTEM"
+    DemandTypeForConsumed="OPEN_ORDER" DocumentType="7001" Lockid="0"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2010-11-30T16:33:53-05:00"
+    Modifyuserid="sterling" ServiceItemGroupCode="DKIT"
+    SupplyTypeForCreated="WO_PLACED" WorkOrderAllocConsKey="DKIT"/>
+<WorkOrderAllocCons ActualSupplyTypeConsumed="ONHAND"
+    ActualSupplyTypeCreated="ONHAND"
+    AllocationDemandTypeForConsumed="ALLOCATED"
+    AllocationSupplyTypeForCreated="WIP" Createprogid="XMLMigrator"
+    Createts="2010-11-30T16:33:53-05:00" Createuserid="SYSTEM"
+    DemandTypeForConsumed="OPEN_ORDER" DocumentType="7001" Lockid="0"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2010-11-30T16:33:53-05:00"
+    Modifyuserid="sterling" ServiceItemGroupCode="INVC"
+    SupplyTypeForCreated="WO_PLACED" WorkOrderAllocConsKey="INVC"/>
+<WorkOrderAllocCons ActualSupplyTypeConsumed="ONHAND"
+    ActualSupplyTypeCreated="ONHAND"
+    AllocationDemandTypeForConsumed="ALLOCATED"
+    AllocationSupplyTypeForCreated="WIP" Createprogid="XMLMigrator"
+    Createts="2010-11-30T16:33:53-05:00" Createuserid="SYSTEM"
+    DemandTypeForConsumed="OPEN_ORDER" DocumentType="7001" Lockid="0"
+    Modifyprogid="YDKConfigDeploy" Modifyts="2010-11-30T16:33:53-05:00"
+    Modifyuserid="sterling" ServiceItemGroupCode="KIT"
+    SupplyTypeForCreated="WO_PLACED" WorkOrderAllocConsKey="KIT"/>
+</YFS_WORK_ORDER_ALLOC_CONSList>

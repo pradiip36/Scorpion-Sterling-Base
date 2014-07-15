@@ -1,0 +1,365 @@
+		<div>
+		 	<div data-dojo-type="idx/form/CheckBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		checked : true , 
+		_sc_extensibility_referenceUId : 'chk_BackroomPickup'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('Option_ReadyForBackroomPickup')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/CheckBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'chk_PicksInProgress'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('Option_PicksInProgress')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/CheckBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'chk_CustomerPickup'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('Option_ReadyForCustomerPickup')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/CheckBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'chk_ShipmentComplete'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('Option_ShipmentComplete')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/CheckBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_Unassigned' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '1' , 
+		checked : false , 
+		_sc_extensibility_referenceUId : 'chk_OwnedByMe' , 
+		_sc_extensibility_position : 'before'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Unassigned')
+,	
+			 	bindingData : 	{
+		 uncheckedValue : 	{
+		 value : 			'N'
+	}
+,
+		 targetBinding : 	[
+	 		{
+		 path : 			'Filter.Unassigned'
+,
+		 namespace : 			'filterParams_input'
+,
+		 scExtensibilityArrayItemId : 			'extn_TargetBindings_0'
+	}
+	]
+,
+		 sourceBinding : 	{
+		 path : 			'Filter.Unassigned'
+,
+		 namespace : 			'filterParams_output'
+	}
+,
+		 checkedValue : 	{
+		 value : 			'Y'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/CheckBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_Assigned' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '2' , 
+		checked : false , 
+		_sc_extensibility_referenceUId : 'chk_OwnedByMe' , 
+		_sc_extensibility_position : 'before'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Assigned')
+,	
+			 	bindingData : 	{
+		 uncheckedValue : 	{
+		 value : 			'N'
+	}
+,
+		 targetBinding : 	[
+	 		{
+		 path : 			'Filter.Assigned'
+,
+		 namespace : 			'filterParams_input'
+,
+		 scExtensibilityArrayItemId : 			'extn_TargetBindings_0'
+	}
+	]
+,
+		 sourceBinding : 	{
+		 path : 			'Filter.Assigned'
+,
+		 namespace : 			'filterParams_output'
+	}
+,
+		 checkedValue : 	{
+		 value : 			'Y'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/CheckBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_Jewelry' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '3' , 
+		checked : true , 
+		_sc_extensibility_referenceUId : 'extn_Assigned' , 
+		_sc_extensibility_position : 'after'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Jewelry')
+,	
+			 	bindingData : 	{
+		 uncheckedValue : 	{
+		 value : 			'N'
+	}
+,
+		 targetBinding : 	[
+	 		{
+		 path : 			'Filter.Jewelry'
+,
+		 namespace : 			'filterParams_input'
+,
+		 scExtensibilityArrayItemId : 			'extn_TargetBindings_0'
+	}
+	]
+,
+		 sourceBinding : 	{
+		 path : 			'Filter.Jewelry'
+,
+		 namespace : 			'filterParams_output'
+	}
+,
+		 checkedValue : 	{
+		 value : 			'Y'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/CheckBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'chk_OwnedByMe'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('Option_Picks_owned_by_me')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/CheckBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_sales' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '4' , 
+		_sc_extensibility_referenceUId : 'txt_FilterOrderNo' , 
+		_sc_extensibility_position : 'before'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Salesfloor')
+,	
+			 	bindingData : 	{
+		 uncheckedValue : 	{
+		 value : 			'N'
+	}
+,
+		 targetBinding : 	[
+	 		{
+		 path : 			'Filter.Sales'
+,
+		 namespace : 			'filterParams_input'
+,
+		 scExtensibilityArrayItemId : 			'extn_TargetBindings_0'
+	}
+	]
+,
+		 sourceBinding : 	{
+		 path : 			'Filter.Sales'
+,
+		 namespace : 			'filterParams_output'
+	}
+,
+		 checkedValue : 	{
+		 value : 			'Y'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/CheckBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_stock' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '5' , 
+		_sc_extensibility_referenceUId : 'txt_FilterOrderNo' , 
+		_sc_extensibility_position : 'before'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Stockroom')
+,	
+			 	bindingData : 	{
+		 uncheckedValue : 	{
+		 value : 			'N'
+	}
+,
+		 targetBinding : 	[
+	 		{
+		 path : 			'Filter.Stock'
+,
+		 namespace : 			'filterParams_input'
+,
+		 scExtensibilityArrayItemId : 			'extn_TargetBindings_0'
+	}
+	]
+,
+		 sourceBinding : 	{
+		 path : 			'Filter.Stock'
+,
+		 namespace : 			'filterParams_output'
+	}
+,
+		 checkedValue : 	{
+		 value : 			'Y'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/CheckBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_mixed' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '6' , 
+		_sc_extensibility_referenceUId : 'txt_FilterOrderNo' , 
+		_sc_extensibility_position : 'before'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_mixed')
+,	
+			 	bindingData : 	{
+		 uncheckedValue : 	{
+		 value : 			'N'
+	}
+,
+		 targetBinding : 	[
+	 		{
+		 path : 			'Filter.Mixed'
+,
+		 namespace : 			'filterParams_input'
+,
+		 scExtensibilityArrayItemId : 			'extn_TargetBindings_0'
+	}
+	]
+,
+		 sourceBinding : 	{
+		 path : 			'Filter.Mixed'
+,
+		 namespace : 			'filterParams_output'
+	}
+,
+		 checkedValue : 	{
+		 value : 			'Y'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/CheckBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_Orders With Alerts' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '7' , 
+		_sc_extensibility_referenceUId : 'extn_mixed' , 
+		_sc_extensibility_position : 'after'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Orders_With_Alerts')
+,	
+			 	bindingData : 	{
+		 uncheckedValue : 	{
+		 value : 			'N'
+	}
+,
+		 targetBinding : 	[
+	 		{
+		 path : 			'Filter.Alert'
+,
+		 namespace : 			'filterParams_input'
+,
+		 scExtensibilityArrayItemId : 			'extn_TargetBindings_0'
+	}
+	]
+,
+		 sourceBinding : 	{
+		 path : 			'Filter.Alert'
+,
+		 namespace : 			'filterParams_output'
+	}
+,
+		 checkedValue : 	{
+		 value : 			'Y'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'portletName'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('extn_Open_Orders')
+			}
+		}
+	 					}">
+		 	</div>  
+		</div>

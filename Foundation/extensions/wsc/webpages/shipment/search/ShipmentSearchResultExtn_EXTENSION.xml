@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="ShipmentSearchResultExtn"
+        extnPackage="extn.shipment.search"
+        originalScreen="wsc.shipment.search.ShipmentSearchResult"
+        originalScreenPackage="wsc.shipment.search" type="diffrential">
+        <Items>
+            <Label _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="noShipmentMsg"
+                renderHidden="true" value="$(_scSimpleBundle:extn_No_orders_found_for_search_criteria_)"/>
+        </Items>
+        <Subscribers>
+            <Local>
+                <Subscriber description="apply custom filters"
+                    eventId="callListApi" isExtn="true" sequence="18">
+                    <Handler methodName="applyCustomFilters"/>
+                </Subscriber>
+                <Subscriber description="clear the enterprise code"
+                    eventId="callListApi" isExtn="true" sequence="19">
+                    <Handler methodName="clearEnterpriseCode"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+    </ScreenExtension>
+</ExtensionMetaData>

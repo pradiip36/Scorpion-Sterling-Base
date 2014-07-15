@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<YFS_SPECIAL_SERVICESList TableName="YFS_SPECIAL_SERVICES">
+<SpecialServices Createprogid="XMLMigrator"
+    Createts="2010-10-18T16:25:52-04:00" Createuserid="SYSTEM"
+    Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-10-18T16:25:52-04:00" Modifyuserid="sterling"
+    SpecialServicesCode="DECLVAL"
+    SpecialServicesDescription="Declared Value Insurance" SpecialServicesKey="201010181625533589"/>
+<SpecialServices Createprogid="XMLMigrator"
+    Createts="2010-10-18T16:25:52-04:00" Createuserid="SYSTEM"
+    Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-10-18T16:25:52-04:00" Modifyuserid="sterling"
+    SpecialServicesCode="SHPNTFY"
+    SpecialServicesDescription="Ship Notification" SpecialServicesKey="201010181625533590"/>
+<SpecialServices Createprogid="XMLMigrator"
+    Createts="2010-10-18T16:25:52-04:00" Createuserid="SYSTEM"
+    Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-10-18T16:25:52-04:00" Modifyuserid="sterling"
+    SpecialServicesCode="ADULTSIGN"
+    SpecialServicesDescription="Adult Signature Required" SpecialServicesKey="201010181625533591"/>
+<SpecialServices Createprogid="XMLMigrator"
+    Createts="2010-10-18T16:25:52-04:00" Createuserid="SYSTEM"
+    Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-10-18T16:25:52-04:00" Modifyuserid="sterling"
+    SpecialServicesCode="DELCONF"
+    SpecialServicesDescription="Delivery Confirmation" SpecialServicesKey="201010181625533592"/>
+<SpecialServices Createprogid="XMLMigrator"
+    Createts="2010-10-18T16:25:52-04:00" Createuserid="SYSTEM"
+    Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-10-18T16:25:52-04:00" Modifyuserid="sterling"
+    SpecialServicesCode="SATDELI"
+    SpecialServicesDescription="Saturday Delivery" SpecialServicesKey="201010181625533593"/>
+<SpecialServices Createprogid="XMLMigrator"
+    Createts="2010-10-18T16:25:52-04:00" Createuserid="SYSTEM"
+    Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-10-18T16:25:52-04:00" Modifyuserid="sterling"
+    SpecialServicesCode="SIGNREQD"
+    SpecialServicesDescription="Signature Required" SpecialServicesKey="201010181625533594"/>
+<SpecialServices Createprogid="XMLMigrator"
+    Createts="2010-10-18T16:25:52-04:00" Createuserid="SYSTEM"
+    Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-10-18T16:25:52-04:00" Modifyuserid="sterling"
+    SpecialServicesCode="TAGLESSCOD"
+    SpecialServicesDescription="Tagless COD" SpecialServicesKey="201010181625533595"/>
+<SpecialServices Createprogid="XMLMigrator"
+    Createts="2010-10-18T16:25:52-04:00" Createuserid="SYSTEM"
+    Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-10-18T16:25:52-04:00" Modifyuserid="sterling"
+    SpecialServicesCode="SATPICKUP"
+    SpecialServicesDescription="Saturday Pickup" SpecialServicesKey="201010181625533596"/>
+<SpecialServices Createprogid="XMLMigrator"
+    Createts="2010-10-18T16:25:52-04:00" Createuserid="SYSTEM"
+    Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-10-18T16:25:52-04:00" Modifyuserid="sterling"
+    SpecialServicesCode="RETSHIPLABEL"
+    SpecialServicesDescription="Return Shipping Label Required" SpecialServicesKey="201010181625533597"/>
+<SpecialServices Createprogid="XMLMigrator"
+    Createts="2010-10-18T16:25:52-04:00" Createuserid="SYSTEM"
+    Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-10-18T16:25:52-04:00" Modifyuserid="sterling"
+    SpecialServicesCode="INDSIGN"
+    SpecialServicesDescription="Indirect Signature Required" SpecialServicesKey="201010181625533598"/>
+<SpecialServices Createprogid="XMLMigrator"
+    Createts="2010-10-18T16:25:52-04:00" Createuserid="SYSTEM"
+    Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-10-18T16:25:52-04:00" Modifyuserid="sterling"
+    SpecialServicesCode="SHIPALERT"
+    SpecialServicesDescription="Ship Alert Notification for Shipper" SpecialServicesKey="201010181625533599"/>
+<SpecialServices Createprogid="XMLMigrator"
+    Createts="2010-10-18T16:25:52-04:00" Createuserid="SYSTEM"
+    Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-10-18T16:25:52-04:00" Modifyuserid="sterling"
+    SpecialServicesCode="COD"
+    SpecialServicesDescription="Collect On Delivery" SpecialServicesKey="201010181625533600"/>
+</YFS_SPECIAL_SERVICESList>

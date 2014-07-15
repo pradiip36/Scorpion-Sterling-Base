@@ -1,0 +1,20 @@
+<Container ActualWeight="" ActualWeightUOM="" ContainerGrossWeight=""
+    ContainerGrossWeightUOM="" ContainerHeight="" ContainerHeightUOM="" ContainerLength=""
+    ContainerLengthUOM="" ContainerNo="" ContainerType="" ContainerWidth=""
+    ContainerWidthUOM="" ExtnB64Label="" ShipmentContainerKey=""
+    ShipmentKey="" TrackingNo="">
+    <Extn ExtnLblPrintFormat="" ExtnVoidLabelId=""/>
+    <ContainerDetails>
+        <ContainerDetail>
+            <ShipmentLine OrderNo="" PrimeLineNo=""/>
+        </ContainerDetail>
+    </ContainerDetails>
+    <Shipment CarrierServiceCode="" DocumentType="" EnterpriseCode=""
+        RequestedCarrierServiceCode="" SCAC="" ShipmentKey=""
+        ShipmentNo="">
+        <ToAddress AddressLine1="" AddressLine2="" City="" Country=""
+            DayPhone="" EMailID="" FirstName="" IsCommercialAddress=""
+            LastName="" State="" ZipCode=""/>
+        <ShipNode ShipnodeKey="" ShipnodeType="" NodeType=""/>
+    </Shipment>
+</Container>

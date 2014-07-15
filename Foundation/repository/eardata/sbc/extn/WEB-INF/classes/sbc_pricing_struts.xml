@@ -1,0 +1,1116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Licensed Materials - Property of IBM
+IBM Sterling Business Center
+(C) Copyright IBM Corp. 2009, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="sea-pricing" namespace="/sbc/pricing" extends="scuiimpl">
+		<default-class-ref class="com.sterlingcommerce.sbc.core.struts.SBCDefaultStrutsAction"></default-class-ref>
+		<global-results>
+			<result name="MASHUPERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="VALIDATIONERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="AUTHORIZATIONERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="error">/sbc/jsps/apierror.jsp</result>
+			<result name="APIERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="DATAVALIDATIONERROR">/jsps/datavalidationerror.jsp</result>
+		</global-results>
+		<action name="createcoupon">
+			<param name="resourceId">SBCPRC00004</param>
+			<result name="success">/sbc/pricing/coupon/createCoupon.jsp</result>
+		</action>
+		<action name="createpricingrule">
+			<param name="resourceId">SBCPRC00006</param>
+			<result name="success">/sbc/pricing/pricingrule/createPricingRule.jsp</result>
+		</action>
+		<action name="createManualPricingRule">
+			<param name="resourceId">SBCPRC00210</param>
+			<result name="success">/sbc/pricing/manualpricingrule/createManualPricingRule.jsp</result>
+		</action>
+		<action name="manageApprovalRuleDetails" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">approval-manageApprovalRuleDetails</param>
+			<param name="inputNs">manageApprovalRuleDetailsInput</param>
+			<param name="outputNs">manageApprovalRuleDetailsOutput</param>
+			<param name="resourceId">SBCPRC00310</param>
+			<result name="success">/sbc/pricing/approvalrule/manage/manageApprovalRule.jsp</result>
+		</action>
+		<action name="getMessageCodeCommonCodes" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">approval-getCommonCodeListMessageCode</param>
+			<param name="inputNs">getCommonCodeList</param>
+			<param name="outputNs">getCommonCodeList_output</param>
+			<param name="resourceId">SBCPRC00311</param>
+			<result name="success">/sbc/common/advancedsearch/getCommonCodeList.jsp</result>
+		</action>
+		<action name="validatePricingRule" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">validatePricingRule</param>
+			<param name="inputNs">validatePricingRule</param>
+			<param name="outputNs">validatePricingRule_output</param>
+			<param name="resourceId">SBCSYS00001</param>
+			<result name="success">/sbc/common/validation/validatePricingRule.jsp</result>
+		</action>
+		<action name="getApprovalUserGroupList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">approval-getUserGroupList</param>
+			<param name="inputNs">getUserGroupList</param>
+			<param name="outputNs">getUserGroupList_output</param>
+			<param name="resourceId">SBCPRC00310</param>
+			<result name="success">/sbc/pricing/approvalrule/getApprovalUserGroupList.jsp</result>
+		</action>
+		<action name="getApprovalCustomerGrade" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">approval-getCustomerGradeList</param>
+			<param name="inputNs">getCustomerGradeList_input</param>
+			<param name="outputNs">getCustomerGradeList_output</param>
+			<param name="resourceId">SBCPRC00310</param>
+			<result name="success">/sbc/pricing/approvalrule/getApprovalCustomerGradeList.jsp</result>
+		</action>
+		<action name="approvalRuleSearch">
+			<param name="resourceId">SBCPRC00311</param>
+			<result name="success">/sbc/pricing/approvalrule/approvalRuleSearch.jsp</result>
+		</action>
+		<action name="openApprovalRuleDetails" class="com.sterlingcommerce.sbc.pricing.approvalrule.SBCApprovalRuleDetailsAction">
+			<result name="success" type="chain">
+				<param name="actionName">showApprovalRuleDetails</param>
+				<param name="namespace">/sbc/pricing</param>
+			</result>
+			<param name="resourceId">SBCPRC00311</param>
+		</action>
+		<action name="showApprovalRuleDetails" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">seaShowApprovalRuleDetail_multiAPI</param>
+			<param name="resourceId">SBCPRC00311</param>
+			<result name="success">/sbc/pricing/approvalrule/manage/approvalRuleDetails.jsp</result>
+		</action>
+		<action name="createApprovalRule">
+			<param name="resourceId">SBCPRC00313</param>
+			<result name="success">/sbc/pricing/approvalrule/createApprovalRule.jsp</result>
+		</action>
+		<action name="verifyPricingRuleCreate" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">pricingApprovalCreate-getApprovalRuleList</param>
+			<param name="inputNs">getApprovalRuleListCreate</param>
+			<param name="outputNs">getApprovalRuleListCreateOutput</param>
+			<param name="resourceId">SBCPRC00310</param>
+			<result name="success">/sbc/pricing/approvalrule/create/getApprovalRuleListForCreate.jsp</result>
+		</action>
+		<action name="deleteApprovalRule" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">approval-deleteApprovalRule</param>
+			<param name="inputNs">deleteApprovalRuleInput</param>
+			<param name="outputNs">deleteApprovalRuleOutput</param>
+			<param name="resourceId">SBCPRC00310</param>
+			<result name="success">/sbc/pricing/approvalrule/deleteApprovalRule.jsp</result>
+		</action>
+		<action name="getYesNoBooleanValues">
+			<!-- <param name="mashupId">approval-getCommonCodeList</param> -->
+			<param name="resourceId">SBCPRC00310</param>
+			<result name="success">/sbc/pricing/approvalrule/getBooleanValues.jsp</result>
+		</action>
+		<action name="getIsManualBooleanValues">
+			<result name="success">/sbc/pricing/approvalrule/getIsManualBooleanValues.jsp</result>
+		</action>
+		<action name="createApprovalRuleDetail" class="com.sterlingcommerce.sbc.pricing.approvalrule.SBCApprovalRuleDetailsAction">
+			<result name="success" type="chain">
+				<param name="actionName">newApprovalRuleDetail</param>
+				<param name="namespace">/sbc/pricing</param>
+			</result>
+			<param name="resourceId">SBCPRC00310</param>
+		</action>
+		<action name="newApprovalRuleDetail" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">seaCreateApprovalRuleDetail_multiAPI</param>
+			<param name="resourceId">SBCPRC00310</param>
+			<result name="success">/sbc/pricing/approvalrule/manage/approvalRuleDetails.jsp</result>
+		</action>
+		<action name="getApprovalRulesList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">approval-getApprovalRuleList</param>
+			<param name="inputNs">getApprovalRulesListInput</param>
+			<param name="outputNs">getApprovalRulesListOutput</param>
+			<param name="resourceId">SBCPRC00311</param>
+			<result name="success">/sbc/pricing/approvalrule/search/getApprovalRuleList.jsp</result>
+		</action>
+		<action name="copyApprovalRule" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">approval-copyApprovalRule</param>
+			<param name="inputNs">copyApprovalRuleInput</param>
+			<param name="outputNs">copyApprovalRuleOutput</param>
+			<param name="resourceId">SBCPRC00312</param>
+			<result name="APIERROR">/sbc/pricing/approvalrule/manage/copyapprovalrule/copyApprovalError.jsp</result>
+			<result name="success">/sbc/pricing/approvalrule/manage/copyapprovalrule/copyApprovalRuleResult.jsp</result>
+		</action>
+
+		<action name="createpriceruledetail" class="com.sterlingcommerce.sbc.pricing.pricingrule.SBCPricingRuleDetailsAction">
+			<result name="success" type="chain">
+				<param name="actionName">newpriceruledetail</param>
+				<param name="namespace">/sbc/pricing</param>
+			</result>
+			<result name="ShipOrder" type="chain">
+				<param name="actionName">newpriceruledetailShipOrder</param>
+				<param name="namespace">/sbc/pricing</param>
+			</result>
+			<param name="resourceId">SBCPRC00140</param>
+		</action>
+		<action name="newpriceruledetail" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">seaCreatePricingRule_multiAPI</param>
+			<param name="resourceId">SBCPRC00140</param>
+			<result name="success">/sbc/pricing/pricingrule/manage/pricingruleDetails.jsp</result>
+		</action>
+		<action name="newpriceruledetailShipOrder" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">seaCreatePricingRule_multiAPI_ShipOrder</param>
+			<param name="resourceId">SBCPRC00140</param>
+			<result name="success">/sbc/pricing/pricingrule/manage/pricingruleDetails.jsp</result>
+		</action>
+
+		<action name="createmanualpriceruledetail" class="com.sterlingcommerce.sbc.pricing.pricingrule.SBCPricingRuleDetailsAction">
+			<result name="success" type="chain">
+				<param name="actionName">newmanualpriceruledetail</param>
+				<param name="namespace">/sbc/pricing</param>
+			</result>
+			<param name="resourceId">SBCPRC00213</param>
+		</action>
+		<action name="newmanualpriceruledetail" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">seaCreateManualPricingRule_multiAPI</param>
+			<param name="resourceId">SBCPRC00213</param>
+			<result name="success">/sbc/pricing/manualpricingrule/manage/manualPricingruleDetails.jsp</result>
+		</action>
+		<action name="createcoupondetail" class="com.sterlingcommerce.sbc.pricing.coupon.SBCCouponDetailsAction">
+			<result name="success" type="chain">
+				<param name="actionName">newcoupondetail</param>
+				<param name="namespace">/sbc/pricing</param>
+			</result>
+			<result name="ShipOrder" type="chain">
+				<param name="actionName">newcoupondetailShipOrder</param>
+				<param name="namespace">/sbc/pricing</param>
+			</result>
+			<param name="resourceId">SBCPRC00130</param>
+		</action>
+		<action name="newcoupondetail" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">seaCreateCoupon_multiAPI</param>
+			<param name="resourceId">SBCPRC00130</param>
+			<result name="success">/sbc/pricing/coupon/manage/couponDetails.jsp</result>
+		</action>
+		<action name="newcoupondetailShipOrder" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">seaCreateCoupon_multiAPIShipOrder</param>
+			<param name="resourceId">SBCPRC00130</param>
+			<result name="success">/sbc/pricing/coupon/manage/couponDetails.jsp</result>
+		</action>
+		<action name="opencoupondetails" class="com.sterlingcommerce.sbc.pricing.coupon.SBCCouponDetailsAction">
+			<result name="success" type="chain">
+				<param name="actionName">coupondetail</param>
+				<param name="namespace">/sbc/pricing</param>
+			</result>
+			<result name="ShipOrder" type="chain">
+				<param name="actionName">coupondetailShipOrder</param>
+				<param name="namespace">/sbc/pricing</param>
+			</result>
+			<param name="resourceId">SBCPRC00005</param>
+		</action>
+		<action name="openpricingruledetails" class="com.sterlingcommerce.sbc.pricing.pricingrule.SBCPricingRuleDetailsAction">
+			<result name="success" type="chain">
+				<param name="actionName">priceruledetail</param>
+				<param name="namespace">/sbc/pricing</param>
+			</result>
+			<result name="ShipOrder" type="chain">
+				<param name="actionName">priceruledetailShipOrder</param>
+				<param name="namespace">/sbc/pricing</param>
+			</result>
+			<param name="resourceId">SBCPRC00007</param>
+		</action>
+		<action name="priceruledetailShipOrder" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">seaPricingRule_multiAPIShipOrder</param>
+			<param name="resourceId">SBCPRC00140</param>
+			<result name="success" type="chain">
+				<param name="actionName">callgetPricingRuleSpecificAssignmentWithPagination</param>
+				<param name="namespace">/sbc/pricing</param>
+			</result>
+			<!-- <result name="success">/sbc/pricing/pricingrule/manage/pricingruleDetails.jsp</result> -->
+		</action>
+		<action name="openmaualpricingruledetails" class="com.sterlingcommerce.sbc.pricing.pricingrule.SBCPricingRuleDetailsAction">
+			<result name="success" type="chain">
+				<param name="actionName">manualpriceruledetail</param>
+				<param name="namespace">/sbc/pricing</param>
+			</result>
+			<param name="resourceId">SBCPRC00211</param>
+		</action>
+		<action name="coupondetail" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">seaCoupon_multiAPI</param>
+			<param name="resourceId">SBCPRC00005</param>
+			<result name="success" type="chain">
+				<param name="actionName">callgetCouponSpecificAssignmentWithPagination</param>
+				<param name="namespace">/sbc/pricing</param>
+			</result>
+			<!--<result name="success">/sbc/pricing/coupon/manage/couponDetails.jsp</result> -->
+		</action>
+		<action name="coupondetailShipOrder" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">seaCoupon_multiAPIShipOrder</param>
+			<param name="resourceId">SBCPRC00005</param>
+			<result name="success" type="chain">
+				<param name="actionName">callgetCouponSpecificAssignmentWithPagination</param>
+				<param name="namespace">/sbc/pricing</param>
+			</result>
+			<!--<result name="success">/sbc/pricing/coupon/manage/couponDetails.jsp</result> -->
+		</action>
+		<action name="priceruledetail" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">seaPricingRule_multiAPI</param>
+			<param name="resourceId">SBCPRC00007</param>
+			<result name="success" type="chain">
+				<param name="actionName">callgetPricingRuleSpecificAssignmentWithPagination</param>
+				<param name="namespace">/sbc/pricing</param>
+			</result>
+			<!-- <result name="success">/sbc/pricing/pricingrule/manage/pricingruleDetails.jsp</result> -->
+		</action>
+		<action name="manualpriceruledetail" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">seaManualPricingRule_multiAPI</param>
+			<param name="resourceId">SBCPRC00211</param>
+			<result name="success" type="chain">
+				<param name="actionName">callgetManualPricingRuleSpecificAssignmentWithPagination</param>
+				<param name="namespace">/sbc/pricing</param>
+			</result>
+			<!--<result name="success">/sbc/pricing/manualpricingrule/manage/manualPricingruleDetails.jsp</result> -->
+		</action>
+		<action name="managePricingRuleDetails" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">pricing-managePricingRuleDetails</param>
+			<param name="inputNs">managePricingRuleDetailsInput</param>
+			<param name="outputNs">managePricingRuleDetailsOutput</param>
+			<param name="resourceId">SBCPRC00140</param>
+			<result name="success">/sbc/pricing/pricingrule/manage/pricingruleManageDetails.jsp</result>
+			<result name="APIERROR">/sbc/pricing/pricelist/manage/copyPricelistError.jsp</result>
+		</action>
+		<action name="manageManualPricingRuleDetails" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">manualPricing-managePricingRuleDetails</param>
+			<param name="inputNs">manageManualPricingRuleDetailsInput</param>
+			<param name="outputNs">manageManualPricingRuleDetailsOutput</param>
+			<param name="resourceId">SBCPRC00213</param>
+			<result name="APIERROR">/sbc/pricing/pricelist/manage/copyPricelistError.jsp</result>
+			<result name="success">/sbc/pricing/manualpricingrule/manage/manualPricingruleManageDetails.jsp</result>
+		</action>
+		<action name="deletePricingRule" class="com.sterlingcommerce.sbc.pricing.pricingrule.SBCDeletePricingRuleAction">
+			<param name="mashupId">pricing-deletePricingRule</param>
+			<param name="inputNs">deletePricingRuleInput</param>
+			<param name="outputNs">deletePricingRuleOutput</param>
+			<param name="resourceId">SBCPRC00140</param>
+			<result name="success">/sbc/pricing/pricingrule/manage/deletePricingRule.jsp</result>
+		</action>
+		<action name="deleteCoupon" class="com.sterlingcommerce.sbc.pricing.pricingrule.SBCDeletePricingRuleAction">
+			<param name="mashupId">pricing-deleteCoupon</param>
+			<param name="inputNs">deleteCouponInput</param>
+			<param name="outputNs">deleteCouponOutput</param>
+			<param name="resourceId">SBCPRC00130</param>
+			<result name="success">/sbc/pricing/coupon/manage/deleteCoupon.jsp</result>
+			<result name="APIERROR">/sbc/pricing/coupon/manage/couponcustomerassignerror.jsp</result>
+		</action>
+		<action name="manageCouponDetails" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">pricing-manageCouponDetails</param>
+			<param name="inputNs">manageCouponDetailsInput</param>
+			<param name="outputNs">manageCouponDetailsOutput</param>
+			<param name="resourceId">SBCPRC00130</param>
+			<result name="success">/sbc/pricing/coupon/manage/couponManageDetails.jsp</result>
+			<result name="APIERROR">/sbc/pricing/pricelist/manage/copyPricelistError.jsp</result>
+		</action>
+		<action name="getCurrencyListForSearch" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getCurrencyList</param>
+			<param name="inputNs">getCurrencyListForSearch</param>
+			<param name="outputNs">getCurrencyListForSearchOutput</param>
+			<param name="resourceId">SBCPRC00005</param>
+			<result name="success">/sbc/pricing/common/getCurrencyListForSearch.jsp</result>
+
+		</action>
+		<action name="createpricelist" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getCurrencyList</param>
+			<param name="inputNs">getCurrencyListInput</param>
+			<param name="outputNs">getCurrencyListOutput</param>
+			<param name="resourceId">SBCPRC00002</param>
+			<result name="success">/sbc/pricing/pricelist/create/createpricelist.jsp</result>
+		</action>
+		<action name="managePricelist_create" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">seaCreatePricelist_managePricelistHeader</param>
+			<param name="inputNs">createPricelistInput</param>
+			<param name="outputNs">pricelistDetailsInput</param>
+			<param name="resourceId">SBCPRC00002</param>
+			<result name="success">/sbc/pricing/pricelist/create/createpricelistoutput.jsp</result>
+
+		</action>
+		<action name="pricelistsearch" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">seaPricelistSearch_getCommonCodeList</param>
+			<param name="inputNs">getCommonCodeListInput</param>
+			<param name="outputNs">getCommonCodeListOutput</param>
+			<param name="resourceId">SBCPRC00003</param>
+			<result name="success">/sbc/pricing/pricelist/manage/pricelistsearch.jsp</result>
+		</action>
+
+
+		<action name="managePricelist_search" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">seaPricelistSearch_getPricelistHeaderList</param>
+			<param name="inputNs">pricelistSearchInput</param>
+			<param name="outputNs">pricelistSearchOutput</param>
+			<param name="resourceId">SBCPRC00003</param>
+			<result name="success">/sbc/pricing/pricelist/manage/pricelistSearchResults.jsp</result>
+
+		</action>
+		<action name="copyPricelist" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">seaCreatePricelist_copyPriceList</param>
+			<param name="inputNs">copyPricelistInput</param>
+			<param name="outputNs">copyPricelistOutput</param>
+			<param name="resourceId">SBCPRC00180</param>
+			<result name="success">/sbc/pricing/pricelist/manage/copyPricelist.jsp</result>
+			<result name="APIERROR">/sbc/pricing/pricelist/manage/copyPricelistError.jsp</result>
+		</action>
+
+		<action name="managePricelistLine" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">seaPricelistSummary_managePricelistLine</param>
+			<param name="inputNs">managePricelistLineInput</param>
+			<param name="outputNs">managePricelistLineOutput</param>
+			<param name="resourceId">SBCPRC00070</param>
+			<result name="success">/sbc/pricing/pricelist/manage/managePricelistLine.jsp</result>
+		</action>
+
+		<action name="deletePricelistLine" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">seaPricelistSummary_managePricelistLine</param>
+			<param name="inputNs">managePricelistLineInput</param>
+			<param name="outputNs">managePricelistLineOutput</param>
+			<param name="resourceId">SBCPRC00070</param>
+			<result name="success" type="chain">
+				<param name="actionName">refreshpricelistgrid</param>
+				<param name="namespace">/sbc/pricing</param>
+			</result>
+		</action>
+
+		<action name="refreshpricelistgrid" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">seaPricelistSummary_getPricelistLineWithPagination</param>
+			<param name="inputNs">getPricelistLineListInput</param>
+			<param name="outputNs">getPricelistLineListOutput</param>
+			<param name="resourceId">SBCPRC00003</param>
+			<result name="success">/sbc/pricing/pricelist/manage/pricelistLineList.jsp</result>
+		</action>
+
+
+		<action name="managePricelistLineWithPagination" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">seaPricelistSummary_managePricelistLineWithPagination</param>
+			<param name="inputNs">managePricelistLineInput</param>
+			<param name="outputNs">managePricelistLineOutput</param>
+			<param name="resourceId">SBCPRC00003</param>
+			<result name="success">/sbc/pricing/pricelist/manage/managePricelistLineWithPagination.jsp</result>
+		</action>
+
+		<action name="pricelistSummary_getItemList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">seaPricelistSummary_getItemList</param>
+			<param name="inputNs">getItemListInput</param>
+			<param name="outputNs">getItemListOutput</param>
+			<param name="resourceId">SBCPRC00090</param>
+			<result name="success">/sbc/pricing/pricelist/manage/getItemList.jsp</result>
+		</action>
+		<action name="couponSearch">
+			<param name="resourceId">SBCPRC00005</param>
+			<result name="success">/sbc/pricing/coupon/couponSearch.jsp</result>
+		</action>
+		<action name="pricingRuleSearch">
+			<param name="resourceId">SBCPRC00007</param>
+			<result name="success">/sbc/pricing/pricingrule/pricingRuleSearch.jsp</result>
+		</action>
+		<action name="manualPricingRuleSearch">
+			<param name="resourceId">SBCPRC00211</param>
+			<result name="success">/sbc/pricing/manualpricingrule/manualPricingRuleSearch.jsp</result>
+		</action>
+		<action name="testpricingsetup" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">pricing-testPricingData</param>
+			<param name="requestMethodSupported">ALL</param>
+			<param name="resourceId">SBCPRC00008</param>
+			<result name="success">/sbc/pricing/common/testPricing.jsp</result>
+		</action>
+		<action name="getPricingRulesList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">pricing-getPricingRulesList</param>
+			<param name="inputNs">getPricingRulesList</param>
+			<param name="outputNs">getPricingRulesListOutput</param>
+			<param name="resourceId">SBCPRC00005</param>
+			<result name="success">/sbc/pricing/common/getPricingRuleListResult.jsp</result>
+		</action>
+
+		<action name="getManualPricingRulesList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">manualpricing-getPricingRulesList</param>
+			<param name="inputNs">getManualPricingRulesList</param>
+			<param name="outputNs">getManualPricingRulesListOutput</param>
+			<param name="resourceId">SBCPRC00211</param>
+			<result name="success">/sbc/pricing/common/getManualPricingRuleListResult.jsp</result>
+		</action>
+
+		<action name="getpricingruleslistcreate" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">pricingCreate-getPricingRuleList</param>
+			<param name="inputNs">getPricingRuleList</param>
+			<param name="outputNs">getPricingRuleListOutput</param>
+			<param name="resourceId">SBCPRC00004</param>
+			<result name="success">/sbc/pricing/common/getPricingRuleListCreateResult.jsp</result>
+		</action>
+
+		<action name="getmanualpricingruleslistcreate" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">pricingCreate-getPricingRuleList</param>
+			<param name="inputNs">getManualPricingRuleList</param>
+			<param name="outputNs">getManualPricingRuleListOutput</param>
+			<param name="resourceId">SBCPRC00210</param>
+			<result name="success">/sbc/pricing/common/getManualPricingRuleListCreateResult.jsp</result>
+		</action>
+
+		<action name="copyPricingRule" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">pricing-copyPricingRule</param>
+			<param name="inputNs">copyPricingRule</param>
+			<param name="outputNs">copyPricingRuleOutput</param>
+			<param name="resourceId">SBCPRC00120</param>
+			<result name="APIERROR">/sbc/pricing/common/copyPricingRuleError.jsp</result>
+			<result name="success">/sbc/pricing/common/copyPricingRuleResult.jsp</result>
+		</action>
+		<action name="copyCoupon" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">pricing-copyPricingRule</param>
+			<param name="inputNs">copyPricingRule</param>
+			<param name="outputNs">copyPricingRuleOutput</param>
+			<param name="resourceId">SBCPRC00120</param>
+			<result name="APIERROR">/sbc/pricing/common/copyCouponError.jsp</result>
+			<result name="success">/sbc/pricing/common/copyPricingRuleResult.jsp</result>
+		</action>
+		<action name="copyManualPricingRule" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">pricing-copyPricingRule</param>
+			<param name="inputNs">copyPricingRule</param>
+			<param name="outputNs">copyPricingRuleOutput</param>
+			<param name="resourceId">SBCPRC00120</param>
+			<result name="APIERROR">/sbc/pricing/common/copyManualPricingRuleError.jsp</result>
+			<result name="success">/sbc/pricing/common/copyPricingRuleResult.jsp</result>
+		</action>
+		<action name="managePricelist_Delete" class="com.sterlingcommerce.sbc.pricing.pricelist.SBCDeletePriceListAction">
+			<param name="mashupId">seaManagePricelist_Delete</param>
+			<param name="inputNs">manageePricelist_Input</param>
+			<param name="outputNs">manageePricelist_Output</param>
+			<param name="resourceId">SBCPRC00050</param>
+			<result name="success">/sbc/pricing/pricelist/manage/managePricelistForDelete.jsp</result>
+		</action>
+
+		<action name="callPricelistAssignment" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">seaPriceListSummary_getPricelistAssignmentList</param>
+			<param name="inputNs">getPricelistAssignmentListInput</param>
+			<param name="outputNs">getPricelistAssignmentListOutut</param>
+			<param name="resourceId">SBCPRC00003</param>
+			<result name="success">/sbc/pricing/pricelist/manage/getPricelistAssignmentList.jsp</result>
+		</action>
+		<!-- This action is used to fetch all the indirect and specific assignments -->
+		<action name="callAllPricelistAssignment" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">seaPriceListSummary_getPricelistAssignmentList</param>
+			<param name="inputNs">getPricelistAssignmentListInput</param>
+			<param name="outputNs">getPricelistAssignmentListOutut</param>
+			<param name="resourceId">SBCPRC00003</param>
+			<result name="success" type="chain">
+				<param name="actionName">callPricelistSpecificAssignmentWithPaginationForRefresh</param>
+				<param name="namespace">/sbc/pricing</param>
+			</result>
+		</action>
+		<!-- This action is used to fetch all the specific assignments in paginated format -->
+		<action name="callPricelistSpecificAssignmentWithPaginationForRefresh" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">seaPriceListSummary_getPricelistSpecificAssignmentList</param>
+			<param name="inputNs">getPricelistSpecificAssignmentListInput</param>
+			<param name="outputNs">getPricelistSpecificAssignmentListOutput</param>
+			<param name="resourceId">SBCPRC00003</param>
+			<result name="success">/sbc/pricing/pricelist/manage/getPricelistAllAssignmentList.jsp</result>
+		</action>
+		<!-- This action is called to get the paginated specific assignments -->
+		<action name="callPricelistSpecificAssignmentWithPagination" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">seaPriceListSummary_getPricelistSpecificAssignmentList</param>
+			<param name="inputNs">getPricelistSpecificAssignmentListInput</param>
+			<param name="outputNs">getPricelistSpecificAssignmentListOutput</param>
+			<param name="resourceId">SBCPRC00003</param>
+			<result name="success">/sbc/pricing/pricelist/details/pricelistsummary.jsp</result>
+		</action>
+		<!-- This action is called to get the paginated specific assignments after manage API is called for delete the entity -->
+		<action name="callPricelistSpecificAssignmentWithPaginationAfterDelete" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">seaPriceListSummary_getPricelistSpecificAssignmentList</param>
+			<param name="inputNs">getPricelistSpecificAssignmentListInput</param>
+			<param name="outputNs">getPricelistSpecificAssignmentListOutput</param>
+			<param name="resourceId">SBCPRC00003</param>
+			<result name="success">/sbc/pricing/pricelist/manage/getPricelistDirectAssignmentList.jsp</result>
+		</action>
+		<!-- This action is called to get the paginated specific assignments after manage API is called for update of the entity -->
+		<action name="callPricelistSpecificAssignmentWithPaginationAfterManage" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">seaPriceListSummary_getPricelistSpecificAssignmentList</param>
+			<param name="inputNs">getPricelistSpecificAssignmentListInput</param>
+			<param name="outputNs">getPricelistSpecificAssignmentListOutput</param>
+			<param name="resourceId">SBCPRC00003</param>
+			<result name="success">/sbc/pricing/pricelist/manage/getPricelistDirectAssignmentList.jsp</result>
+		</action>
+
+		<action name="getAdvancedSearchParams" class="com.sterlingcommerce.sbc.core.struts.SBCStrutsAction">
+			<param name="mashupId">pricing-getAdvancedSearchParams</param>
+			<param name="inputNs">getAdvancedSearchParams_input</param>
+			<param name="outputNs">getAdvancedSearchParams_output</param>
+			<param name="resourceId">SBCSYS00001</param>
+			<result name="success">/sbc/common/advancedsearch/getAdvancedSearchParams.jsp</result>
+		</action>
+		<action name="getApprovalRuleMetadata" class="com.sterlingcommerce.sbc.core.struts.SBCStrutsAction">
+			<param name="mashupId">approval-getApprovalRuleMetadata</param>
+			<param name="inputNs">getApprovalMeta_input</param>
+			<param name="outputNs">getApprovalMeta_output</param>
+			<param name="resourceId">SBCPRC00310</param>
+			<result name="success">/sbc/pricing/approvalrule/getApprovalMetadata.jsp</result>
+		</action>
+		<action name="dummyApprovalConfigAction">
+			<param name="resourceId">SBCPRC00310</param>
+			<result name="success">/sbc/pricing/approvalrule/common/tree/getDummyApprovalConfig.jsp</result>
+		</action>
+		<action name="getApprovalRuleTypes">
+			<param name="resourceId">SBCPRC00311</param>
+			<result name="success">/sbc/pricing/approvalrule/search/getApprovalRuleTypes.jsp</result>
+		</action>
+		<action name="getApprovalStatusTypes">
+			<param name="resourceId">SBCPRC00311</param>
+			<result name="success">/sbc/pricing/approvalrule/search/getApprovalStatusTypes.jsp</result>
+		</action>
+		<action name="getPricingRuleTypes">
+			<param name="resourceId">SBCPRC00005</param>
+			<result name="success">/sbc/pricing/pricingrule/search/getPricingRuleTypes.jsp</result>
+		</action>
+		<action name="getManualPricingRuleTypes">
+			<param name="resourceId">SBCPRC00211</param>
+			<result name="success">/sbc/pricing/manualpricingrule/search/getManualPricingRuleTypes.jsp</result>
+		</action>
+		<action name="getPricingRuleTypesForCoupons">
+			<param name="resourceId">SBCPRC00007</param>
+			<result name="success">/sbc/pricing/coupon/search/getPricingRuleTypesForCoupons.jsp</result>
+		</action>
+		<action name="getCommonCodeList_PricingStatus" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">pricing-getCommonCodeListPricingStatus</param>
+			<param name="inputNs">getCommonCodeList</param>
+			<param name="outputNs">getCommonCodeList_output</param>
+			<param name="resourceId">SBCPRC00005</param>
+			<result name="success">/sbc/common/advancedsearch/getCommonCodeList.jsp</result>
+		</action>
+		<action name="getSortingOrder" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">pricing-getSortingOrder</param>
+			<param name="inputNs">getSortingOrder</param>
+			<param name="outputNs">getSortingOrderOutput</param>
+			<param name="resourceId">SBCSYS00001</param>
+			<result name="success">/sbc/common/getSortingOrderResult.jsp</result>
+		</action>
+		<action name="testOrderPricing" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">pricing-testOrderPricing</param>
+			<param name="inputNs">testOrderPricing</param>
+			<param name="outputNs">testOrderPricingOutput</param>
+			<param name="resourceId">SBCPRC00008</param>
+			<result name="success">/sbc/pricing/common/testpricing/testOrderPricingResult.jsp</result>
+		</action>
+
+		<action name="pricelistSummary_getPricelistHeaderDetails" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">seaPriceListSummary_getPricelistHeaderDetails</param>
+			<param name="inputNs">getPricelistHeaderDetailsInput</param>
+			<param name="outputNs">getPricelistHeaderDetailsOutput</param>
+			<param name="resourceId">SBCPRC00003</param>
+			<result name="success">/sbc/pricing/pricelist/manage/getPricelistHeaderDetails.jsp</result>
+		</action>
+		<action name="couponSearchPopup">
+			<param name="resourceId">SBCPRC00007</param>
+			<result name="success">/sbc/common/popup/couponSearchPopup.jsp</result>
+		</action>
+		<action name="priceListSearchPopup" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">seaPricelistSearch_getCommonCodeList</param>
+			<param name="requestMethodSupported">ALL</param>
+			<param name="inputNs">getCommonCodeListInput</param>
+			<param name="outputNs">getCommonCodeListOutput</param>
+			<param name="resourceId">SBCPRC00003</param>
+			<result name="success">/sbc/pricing/pricelist/manage/priceListSearchPopup.jsp</result>
+		</action>
+		<action name="managePricelistAssignment" class="com.sterlingcommerce.sbc.common.customerassignment.SBCCustomerAssignmentMashupAction">
+			<param name="mashupId">managePricelistAssignment</param>
+			<param name="inputNs">managePricelistAssignment_input</param>
+			<param name="outputNs">managePricelistAssignment_output</param>
+			<param name="resourceId">SBCPRC00003</param>
+			<result name="success">/sbc/pricing/common/customerassignments/managePricelistAssignment.jsp</result>
+		</action>
+		<action name="pricelistdetail" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">seaPriceListSummary_multiAPI</param>
+			<param name="resourceId">SBCPRC00003</param>
+			<result name="success" type="chain">
+				<param name="actionName">loadpricelistgrid</param>
+				<param name="namespace">/sbc/pricing</param>
+			</result>
+
+			<!-- <result name="success" type="chain"> <param name="actionName">getCustomerListForAssignment</param> <param name="namespace">/sbc/pricing</param> </result> -->
+		</action>
+
+		<action name="loadpricelistgrid" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">seaPricelistSummary_managePricelistLineWithPagination</param>
+			<param name="inputNs">managePricelistLineInput</param>
+			<param name="outputNs">managePricelistLineOutput</param>
+			<param name="resourceId">SBCPRC00003</param>
+			<!-- <result name="success">/sbc/pricing/pricelist/manage/pricelistSearchResults.jsp</result> -->
+
+			<result name="success" type="chain">
+				<param name="actionName">callPricelistSpecificAssignmentWithPagination</param>
+				<param name="namespace">/sbc/pricing</param>
+			</result>
+			<!-- <result name="success">/sbc/pricing/pricelist/details/pricelistsummary.jsp</result> -->
+		</action>
+
+		<action name="childpricelistdetail" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">seaPriceListSummary_multiAPI</param>
+			<param name="resourceId">SBCPRC00003</param>
+			<result name="success">/sbc/pricing/pricelist/details/childpricelistsummary.jsp</result>
+			<!-- <result name="success" type="chain"> <param name="actionName">getCustomerListForAssignmentForChildPricelist</param> <param name="namespace">/sbc/pricing</param> </result> -->
+		</action>
+		<action name="pricelistSummary_getPricelistLineList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">seaPriceListSummary_getPricelistLineList</param>
+			<param name="inputNs">getPricelistLineListInput</param>
+			<param name="outputNs">getPricelistLineListOutput</param>
+			<param name="resourceId">SBCPRC00070</param>
+			<result name="success">/sbc/pricing/pricelist/manage/pricelistLineList.jsp</result>
+		</action>
+		<action name="managePricelistAssignment" class="com.sterlingcommerce.sbc.common.customerassignment.SBCCustomerAssignmentMashupAction">
+			<param name="mashupId">managePricelistAssignment</param>
+			<param name="requestMethodSupported">ALL</param>
+			<param name="inputNs">managePricelistAssignment_input</param>
+			<param name="outputNs">managePricelistAssignment_output</param>
+			<param name="resourceId">SBCPRC00003</param>
+			<result name="success">/sbc/pricing/common/customerassignments/managePricelistAssignment.jsp</result>
+		</action>
+		<action name="massAdjustPrices" class="com.sterlingcommerce.sbc.pricing.pricelist.SBCMassAdjustPricesAction">
+			<param name="mashupId">pricing-massAdjustPrices</param>
+			<param name="inputNs">massAdjustPricesInput</param>
+			<param name="outputNs">massAdjustPricesOutput</param>
+			<param name="resourceId">SBCPRC00050</param>
+			<result name="success" type="chain">
+				<param name="actionName">refreshpricelistgrid</param>
+				<param name="namespace">/sbc/pricing</param>
+			</result>
+			<result name="OnlyMassAdjust">/sbc/pricing/pricelist/manage/massadjustpricesresult.jsp</result>
+		</action>
+
+		<action name="adjustDateRanges" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">seaPricelistSummary_managePricelistLine</param>
+			<param name="inputNs">managePricelistLineInput</param>
+			<param name="outputNs">managePricelistLineOutput</param>
+			<param name="resourceId">SBCPRC00070</param>
+			<result name="success" type="chain">
+				<param name="actionName">refreshpricelistgrid</param>
+				<param name="namespace">/sbc/pricing</param>
+			</result>
+		</action>
+		<action name="adjustPrices" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">seaPricelistSummary_managePricelistLine</param>
+			<param name="inputNs">managePricelistLineInput</param>
+			<param name="outputNs">managePricelistLineOutput</param>
+			<param name="resourceId">SBCPRC00070</param>
+			<result name="success" type="chain">
+				<param name="actionName">refreshpricelistgrid</param>
+				<param name="namespace">/sbc/pricing</param>
+			</result>
+		</action>
+		<action name="adjustIndividualPrice" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">seaPricelistSummary_managePricelistLine</param>
+			<param name="inputNs">managePricelistLineInput</param>
+			<param name="outputNs">managePricelistLineOutput</param>
+			<param name="resourceId">SBCPRC00070</param>
+			<result name="success" type="chain">
+				<param name="actionName">refreshpricelistgrid</param>
+				<param name="namespace">/sbc/pricing</param>
+			</result>
+		</action>
+		<action name="addItemToPriceList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">seaPricelistSummary_managePricelistLine</param>
+			<param name="inputNs">addItemToPriceListInput</param>
+			<param name="outputNs">addItemToPriceListOutput</param>
+			<param name="resourceId">SBCPRC00070</param>
+			<result name="success" type="chain">
+				<param name="actionName">pricelistdetail</param>
+				<param name="namespace">/sbc/pricing</param>
+			</result>
+		</action>
+		<action name="managePricelistAssignmentForDeletion" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">managePricelistAssignmentForDelete</param>
+			<param name="inputNs">managePricelistAssignmentForDelete_input</param>
+			<param name="outputNs">managePricelistAssignment_output</param>
+			<param name="resourceId">SBCPRC00003</param>
+			<result name="success">/sbc/pricing/common/customerassignments/managePricelistAssignment.jsp</result>
+		</action>
+		<action name="managePricingRuleAssignment" class="com.sterlingcommerce.sbc.common.customerassignment.SBCCustomerAssignmentMashupAction">
+			<param name="mashupId">managePricingRuleAssignment</param>
+			<param name="requestMethodSupported">ALL</param>
+			<param name="inputNs">managePricingRuleAssignment_input</param>
+			<param name="outputNs">managePricingRuleAssignment_output</param>
+			<param name="resourceId">SBCPRC00007</param>
+			<result name="success">/sbc/pricing/common/customerassignments/managePricingRuleAssignment.jsp</result>
+
+		</action>
+		<action name="managePricingRuleAssignmentForDeletion" class="com.sterlingcommerce.sbc.common.customerassignment.SBCCustomerAssignmentMashupAction">
+			<param name="mashupId">managePricingRuleAssignmentForDeletion</param>
+			<param name="requestMethodSupported">ALL</param>
+			<param name="inputNs">managePricingRuleAssignmentForDelete_input</param>
+			<param name="outputNs">managePricingRuleAssignment_output</param>
+			<param name="resourceId">SBCPRC00003</param>
+			<result name="success">/sbc/pricing/common/customerassignments/managePricingRuleAssignment.jsp</result>
+		</action>
+		<action name="openMasterPricelist" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">seaPriceListSummary_multiAPI</param>
+			<param name="resourceId">SBCPRC00050</param>
+			<result name="success">/sbc/pricing/pricelist/details/pricelistsummary_master.jsp</result>
+		</action>
+		<action name="pricelistSummary_manageAndGetPricelistLineMultiAPI" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">pricelistSummary_manageAndGetPricelistLineMultiAPI</param>
+			<param name="resourceId">SBCPRC00050</param>
+			<result name="success">/sbc/pricing/pricelist/manage/manageLineMultiOutput.jsp</result>
+		</action>
+		<action name="managePricelistHeader" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">seaCreatePricelist_managePricelistHeader</param>
+			<param name="inputNs">managePricelistHeaderInput</param>
+			<param name="outputNs">managePricelistHeaderOutput</param>
+			<param name="resourceId">SBCPRC00050</param>
+			<result name="success">/sbc/pricing/pricelist/manage/managePricelistHeader.jsp</result>
+		</action>
+		<action name="pricelistSummary_managePricelistHeaderLineMultiAPI" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">pricelistSummary_managePricelistHeaderLineMultiAPI</param>
+			<param name="resourceId">SBCPRC00050</param>
+			<result name="success" type="chain">
+				<param name="actionName">refreshpricelistgrid</param>
+				<param name="namespace">/sbc/pricing</param>
+			</result>
+		</action>
+
+		<action name="deletePricelistAssignmentList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">deletePricelistAssignmentList</param>
+			<param name="inputNs">deletePricelistAssignmentList_Input</param>
+			<param name="outputNs">deletePricelistAssignmentList_Output</param>
+			<param name="resourceId">SBCPRC00003</param>
+			<result name="success">/sbc/pricing/pricelist/manage/deletePricelistAssignmentList.jsp</result>
+		</action>
+		<action name="deletePricingRuleAssignmentList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">managePricingRuleAssignmentForDeletion</param>
+			<param name="inputNs">deletePricingRuleAssignmentList_Input</param>
+			<param name="outputNs">deletePricingRuleAssignmentList_Output</param>
+			<param name="resourceId">SBCPRC00007</param>
+			<result name="success">/sbc/pricing/pricingrule/manage/deletePricingRuleAssignmentList.jsp</result>
+		</action>
+		<action name="callgetPricingRuleAssignment" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">pricing_getPricingRuleAssignmentList</param>
+			<param name="inputNs">getPricingRuleAssignmentList</param>
+			<param name="outputNs">getPricingRuleAssignmentListOutput</param>
+			<param name="resourceId">SBCPRC00007</param>
+			<result name="success">/sbc/pricing/pricingrule/manage/getPricingRuleAssignmentList.jsp</result>
+		</action>
+		<!-- This action is called to get the all the indirect and paginated specificc assignments -->
+		<action name="callgetPricingRuleAllAssignment" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">pricing_getPricingRuleAssignmentList</param>
+			<param name="inputNs">getPricingRuleAssignmentList</param>
+			<param name="outputNs">getPricingRuleAssignmentListOutput</param>
+			<param name="resourceId">SBCPRC00007</param>
+			<result name="success" type="chain">
+				<param name="actionName">callgetPricingRuleSpecificAssignmentForRefresh</param>
+				<param name="namespace">/sbc/pricing</param>
+			</result>
+		</action>
+		<!-- This action is called to get the paginated specific assignments -->
+		<action name="callgetPricingRuleSpecificAssignmentForRefresh" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">pricing_getPricingRuleSpecificAssignmentList</param>
+			<param name="inputNs">getPricingRuleSpecificAssignmentList</param>
+			<param name="outputNs">getPricingRuleSpecificAssignmentListOutput</param>
+			<param name="resourceId">SBCPRC00007</param>
+			<result name="success">/sbc/pricing/pricingrule/manage/getPricingRuleAllAssignment.jsp</result>
+		</action>
+		<!-- This action is called to get the paginated specific assignments -->
+		<action name="callgetPricingRuleSpecificAssignmentWithPagination" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">pricing_getPricingRuleSpecificAssignmentList</param>
+			<param name="inputNs">getPricingRuleSpecificAssignmentList</param>
+			<param name="outputNs">getPricingRuleSpecificAssignmentListOutput</param>
+			<param name="resourceId">SBCPRC00007</param>
+			<result name="success">/sbc/pricing/pricingrule/manage/pricingruleDetails.jsp</result>
+		</action>
+		<!-- This action is called to get the paginated specific assignments after manage API is called for delete or update of the entity -->
+		<action name="callgetPricingRuleSpecificAssignmentWithPaginationAfterManage" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">pricing_getPricingRuleSpecificAssignmentList</param>
+			<param name="inputNs">getPricingRuleSpecificAssignmentList</param>
+			<param name="outputNs">getPricingRuleSpecificAssignmentListOutput</param>
+			<param name="resourceId">SBCPRC00007</param>
+			<result name="success">/sbc/pricing/pricingrule/manage/getPricingRuleSpecificAssignmentList.jsp</result>
+		</action>
+		<!-- This action is called to get the paginated specific assignments -->
+		<action name="callgetCouponSpecificAssignmentWithPagination" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">pricing_getPricingRuleSpecificAssignmentList</param>
+			<param name="inputNs">getPricingRuleSpecificAssignmentList</param>
+			<param name="outputNs">getPricingRuleSpecificAssignmentListOutput</param>
+			<param name="resourceId">SBCPRC00007</param>
+			<result name="success">/sbc/pricing/coupon/manage/couponDetails.jsp</result>
+		</action>
+		<!-- This action is called to get the paginated specific assignments after manage API is called for delete or update of the entity -->
+		<action name="callgetManualPricingRuleSpecificAssignmentWithPagination" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">pricing_getPricingRuleSpecificAssignmentList</param>
+			<param name="inputNs">getPricingRuleSpecificAssignmentList</param>
+			<param name="outputNs">getPricingRuleSpecificAssignmentListOutput</param>
+			<param name="resourceId">SBCPRC00007</param>
+			<result name="success">/sbc/pricing/manualpricingrule/manage/manualPricingruleDetails.jsp</result>
+		</action>
+
+		<action name="openChildPriceList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getPricelistHeaderDetails_ForChildPriceLists</param>
+			<param name="inputNs">openChildPriceList_Input</param>
+			<param name="outputNs">openChildPriceList_Output</param>
+			<param name="resourceId">SBCPRC00050</param>
+			<result name="success">/sbc/pricing/pricelist/manage/openChildPriceLists.jsp</result>
+		</action>
+		<action name="getCarrierServiceCodes" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">pricing-getCarrierServiceList</param>
+			<param name="inputNs">getCarrierServiceCodes_Input</param>
+			<param name="outputNs">getCarrierServiceCodes_Output</param>
+			<param name="resourceId">SBCPRC00005</param>
+			<result name="success">/sbc/pricing/common/getCarrierServiceCodeResult.jsp</result>
+		</action>
+		<action name="getAdjustmentTypeList">
+			<param name="resourceId">SBCPRC00007</param>
+			<result name="success">/sbc/pricing/pricingrule/adjustmentTypes.jsp</result>
+		</action>
+		<action name="getManualAdjustmentTypeList">
+			<param name="resourceId">SBCPRC00007</param>
+			<result name="success">/sbc/pricing/manualpricingrule/adjustmentTypes.jsp</result>
+		</action>
+		<action name="getApprovalConditionalOperatorList">
+			<param name="resourceId">SBCPRC00310</param>
+			<result name="success">/sbc/pricing/approvalrule/getApprovalConditionalOperator.jsp</result>
+		</action>
+		<action name="pricingsellingcatalog" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">catalogManagement-getClassificationPurposeListSelling</param>
+			<param name="inputNs">getClassificationPurposeList_input</param>
+			<param name="outputNs">getClassificationPurposeList_output</param>
+			<param name="resourceId">SBCPRC00050</param>
+			<result name="success" type="chain">
+				<param name="actionName">pricingcatalogdetailtreelookup</param>
+				<param name="namespace">/sbc/pricing</param>
+			</result>
+		</action>
+		<action name="pricingcatalogdetailtreelookup" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">catalogmanagement-getCategoryDomainDetailTree</param>
+			<param name="inputNs">getCategoryDomainDetails_input</param>
+			<param name="outputNs">getCategoryDomainDetails_output</param>
+			<param name="resourceId">SBCPRC00050</param>
+			<result name="success">/sbc/pricing/pricelist/manage/loadpricingcategorytreelookup.jsp</result>
+		</action>
+		<action name="pricelistSummary_addItems">
+			<result name="success">/sbc/pricing/pricelist/manage/addItems.jsp</result>
+		</action>
+		<action name="pricelistSummary_adjustPrices">
+			<result name="success">/sbc/pricing/pricelist/manage/adjustPrices.jsp</result>
+		</action>
+		<action name="pricingruleinfo4l10n" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">pricingrule_l10n</param>
+			<param name="inputNs">getPricingRuleDetails_Input</param>
+			<param name="outputNs">getPricingRuleDetails_Output</param>
+			<param name="resourceId">SBCPRC00007</param>
+			<result name="success">/sbc/pricing/pricingrule/manage/pricingrule_l10n.jsp</result>
+		</action>
+		<action name="approvalplansearch">
+			<param name="resourceId">SBCQTE00006</param>
+			<result name="success">/sbc/pricing/approvalplan/approvalPlanSearch.jsp</result>
+		</action>
+		<action name="approvalplanlist" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">getapprovalgrouplist</param>
+			<param name="inputNs">getApprovalGroupListInput</param>
+			<param name="outputNs">getApprovalGroupListOutput</param>
+			<result name="success">/sbc/pricing/approvalplan/search/approvalPlanList.jsp</result>
+		</action>
+		<action name="newapprovalplan">
+			<param name="resourceId">SBCQTE00005</param>
+			<result name="success">/sbc/pricing/approvalplan/createApprovalPlan.jsp</result>
+		</action>
+
+		<action name="approvalgroupcreate" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">approvalgroup_create</param>
+			<param name="inputNs">createapprovalgroupInput</param>
+			<param name="outputNs">approvalgroupOutput</param>
+			<param name="resourceId">SBCQTE00005</param>
+			<result name="success">/sbc/pricing/approvalplan/approvalGroupCreated.jsp</result>
+			<result name="APIERROR">/sbc/pricing/approvalplan/approvalPlanError.jsp</result>
+		</action>
+
+		<action name="approvalgroupdetails" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">approvalplandetails_multiAPI</param>
+			<param name="resourceId">SBCQTE00006</param>
+			<result name="success">/sbc/pricing/approvalplan/openApprovalPlanDetails.jsp</result>
+		</action>
+		<action name="manageapprovalplan" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="resourceId">SBCQTE00005</param>
+			<param name="mashupId">manageapprovalplan</param>
+			<param name="inputNs">manageApprovalPlan_input</param>
+			<param name="outputNs">manageApprovalPlan_output</param>
+			<result name="APIERROR">/sbc/pricing/approvalplan/approvalPlanError.jsp</result>
+			<result name="success">/sbc/pricing/approvalplan/manageApprovalPlan.jsp</result>
+		</action>
+		<action name="getapprovalgroupdetailsForManagerOverrides" class="com.sterlingcommerce.sbc.pricing.approvalrule.SBCGetApprovalGroupListAction">
+			<param name="mashupId">getapprovalgroupdetail</param>
+			<param name="inputNs">getApprovalGroupList</param>
+			<param name="outputNs">getApprovalGroupDetailsOutput</param>
+			<param name="resourceId">SBCSAD000215</param>
+			<result name="success">/sbc/pricing/approvalplan/getApprovalPlanDetails.jsp</result>
+		</action>
+
+		<action name="getapprovalgroupdetails" class="com.sterlingcommerce.sbc.pricing.approvalrule.SBCGetApprovalGroupListAction">
+			<param name="mashupId">getapprovalgroupdetail</param>
+			<param name="inputNs">getApprovalGroupList</param>
+			<param name="outputNs">getApprovalGroupDetailsOutput</param>
+			<param name="resourceId">SBCQTE00006</param>
+			<result name="success">/sbc/pricing/approvalplan/getApprovalPlanDetails.jsp</result>
+		</action>
+
+
+		<action name="deleteApprovalGroup" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">deleteApprovalGroupMashup</param>
+			<param name="inputNs">deleteApprovalGroupInput</param>
+			<param name="resourceId">SBCQTE00005</param>
+			<result name="success">/sbc/pricing/approvalplan/deleteApprovalPlan.jsp</result>
+			<result name="APIERROR">/sbc/pricing/pricelist/manage/copyPricelistError.jsp</result>
+		</action>
+
+		<action name="deleteApprovalGroupInSystemMenu" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">deleteApprovalGroupMashup</param>
+			<param name="inputNs">deleteApprovalGroupInput</param>
+			<param name="resourceId">SBCSAD000214</param>
+			<result name="success">/sbc/pricing/approvalplan/deleteApprovalPlanInSystemMenu.jsp</result>
+		</action>
+
+		<action name="orglistforsellerassignments" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">sellerassignments_getOrganizationList</param>
+			<param name="inputNs">getOrganizationList_input</param>
+			<param name="outputNs">getOrganizationList_output</param>
+			<param name="resourceId">SBCSYS00001</param>
+			<result name="success">/sbc/common/organization/organizationsearchresults.jsp</result>
+		</action>
+
+		<action name="managePricelistSellerAssignment" class="com.sterlingcommerce.sbc.common.customerassignment.SBCCustomerAssignmentMashupAction">
+			<param name="mashupId">managePricelistSellerAssignment</param>
+			<param name="inputNs">managePricelistSellerAssignment_input</param>
+			<param name="outputNs">managePricelistAssignment_output</param>
+			<param name="resourceId">SBCPRC00003</param>
+			<result name="success">/sbc/pricing/common/customerassignments/managePricelistAssignment.jsp</result>
+		</action>
+
+		<action name="callPricelistStoreSpecificAssignmentWithPagination" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">getPricelistSpecificAssignmentListWithPagination</param>
+			<param name="inputNs">getPricelistSpecificAssignmentListInput</param>
+			<param name="outputNs">getPricelistSpecificAssignmentListOutput</param>
+			<param name="resourceId">SBCPRC00003</param>
+			<result name="success">/sbc/pricing/pricelist/manage/getPricelistDirectAssignmentList.jsp</result>
+		</action>
+
+		<action name="deleteSpecificPricelistSellerAssignment" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">deletePricelistSellerAssignment_Mashup</param>
+			<param name="inputNs">deleteSellerAssignments_Input</param>
+			<param name="outputNs">managePricelistAssignment_output</param>
+			<param name="resourceId">SBCPRC00003</param>
+			<result name="success">/sbc/pricing/common/customerassignments/managePricelistAssignment.jsp</result>
+		</action>
+
+		<action name="getPricelistSellerAssgnForRegion" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getPricelistSellerAssignmentsForRegions</param>
+			<param name="inputNs">getPricelistSpecificAssignmentListInput</param>
+			<param name="outputNs">managePricelistAssignment_output</param>
+			<param name="resourceId">SBCPRC00003</param>
+			<result name="success">/sbc/pricing/common/customerassignments/managePricelistAssignment.jsp</result>
+		</action>
+
+		<action name="manageAndGetPricelistSellerAssgns" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">manageAndGetPricelistSellerAssgn_mashup</param>
+			<param name="resourceId">SBCPRC00003</param>
+			<result name="success">/sbc/pricing/common/customerassignments/managePricelistAssignment.jsp</result>
+		</action>
+
+		<action name="deleteAndManagePricelistSellerAssgn" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">deleteAndManagePricelistSellerAssgn_mashup</param>
+			<param name="resourceId">SBCPRC00003</param>
+			<result name="success">/sbc/pricing/common/customerassignments/managePricelistAssignment.jsp</result>
+		</action>
+
+		<action name="getExclusivityType" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getExclusivityTypes</param>
+			<param name="inputNs">getCommonCodeList</param>
+			<param name="outputNs">getCommonCodeList_output</param>
+			<result name="success">/sbc/common/advancedsearch/getCommonCodeList.jsp</result>
+		</action>
+
+		<action name="getExclusivityGroup" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getExclusivityGroups</param>
+			<param name="inputNs">getCommonCodeList</param>
+			<param name="outputNs">getCommonCodeList_output</param>
+			<result name="success">/sbc/common/advancedsearch/getCommonCodeList.jsp</result>
+		</action>
+
+		<action name="getGlobalPricingExclusion" class="com.sterlingcommerce.sbc.pricing.common.VerifyGlobalPricingExclusion">
+			<param name="resourceId">SBCPRC00001</param>
+			<result name="success">/sbc/pricing/common/globalExclusion/getGlobalPricingExclusion.jsp</result>
+		</action>
+
+		<action name="getPricingRuleItemList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getPricingRuleItemListInputMashupID</param>
+			<param name="inputNs">getPricingRuleItemListInput</param>
+			<param name="outputNs">saveGlobalPricingExclusionOutput</param>
+			<param name="resourceId">SBCPRC00001</param>
+			<result name="success">/sbc/pricing/common/globalExclusion/saveGlobalPricingExclusion.jsp</result>
+		</action>
+
+		<action name="savePricingRuleItemList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">savePricingRuleItemListInputMashupID</param>
+			<param name="inputNs">savePricingRuleItemListInput</param>
+			<param name="outputNs">saveGlobalPricingExclusionOutput</param>
+			<param name="resourceId">SBCPRC00001</param>
+			<result name="success">/sbc/pricing/common/globalExclusion/saveGlobalPricingExclusion.jsp</result>
+		</action>
+
+		<action name="viewmorepricingitemspopup">
+			<result name="success">/sbc/pricing/common/openviewmoreitemspopup.jsp</result>
+		</action>
+
+		<action name="pricingrule-itemlist-pagination" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">pricingrule-itemlist-pagination</param>
+			<param name="inputNs">getPrcingRuleDetailItemList_input</param>
+			<param name="outputNs">getPrcingRuleDetailItemList_output</param>
+			<result name="success">/sbc/pricing/common/pricingitemlistsearch.jsp</result>
+		</action>
+
+		<action name="getPaymentTypeListForAdvancedSearch" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getPaymentTypeListAPIForAdvancedSearch</param>
+			<param name="inputNs">getPaymentTypeListInput</param>
+			<param name="outputNs">getPaymentTypeListOutput</param>
+			<result name="success">/sbc/common/advancedsearch/getPaymentTypeListForAdvancedSearch.jsp</result>
+		</action>
+
+
+		<action name="managePricingRuleSellerAssignment" class="com.sterlingcommerce.sbc.common.customerassignment.SBCCustomerAssignmentMashupAction">
+			<param name="mashupId">managePricingRuleSellerAssignment</param>
+			<param name="inputNs">managePricingRuleSellerAssignment_input</param>
+			<param name="outputNs">managePricingRuleSellerAssignment_output</param>
+			<param name="resourceId">SBCPRC00007</param>
+			<result name="success">/sbc/pricing/common/managePricingRuleAssignment.jsp</result>
+		</action>
+		<action name="callPricingRuleStoreSpecificAssignmentWithPagination" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+			<param name="mashupId">getPricingRuleSellerAssignmentListWithPagination</param>
+			<param name="inputNs">getPricingRuleSpecificAssignmentList_input</param>
+			<param name="outputNs">getPricingRuleSpecificAssignmentList_output</param>
+			<param name="resourceId">SBCPRC00007</param>
+			<result name="success">/sbc/pricing/common/managePricingRuleAssignment.jsp</result>
+		</action>
+		<action name="manageAndGetPricingRuleSellerAssignment" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">manageAndGetPricingRuleSellerAssignment_mashup</param>
+			<param name="resourceId">SBCPRC00007</param>
+			<result name="success">/sbc/pricing/common/managePricingRuleAssignment.jsp</result>
+		</action>
+		<action name="getPricingRuleSellerAssgnForRegion" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">getPricingRuleSellerAssignmentsForRegions</param>
+			<param name="inputNs">getPricingRuleRegionAssignmentList_input</param>
+			<param name="outputNs">getPricingRuleRegionAssignmentList_output</param>
+			<param name="resourceId">SBCPRC00007</param>
+			<result name="success">/sbc/pricing/common/managePricingRuleAssignment.jsp</result>
+		</action>
+		<action name="deleteAndManagePricingRuleSellerAssignment" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+			<param name="mashupId">deleteAndManagePricingRuleSellerAssignment_mashup</param>
+			<param name="resourceId">SBCPRC00007</param>
+			<result name="success">/sbc/pricing/common/customerassignments/managePricingRuleAssignment.jsp</result>
+		</action>
+		<action name="deleteSpecificPricingRuleSellerAssignment" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">deletePricingRuleSellerAssignment_Mashup</param>
+			<param name="inputNs">deleteSellerAssignments_Input</param>
+			<param name="outputNs">deleteSellerAssignments_Output</param>
+			<param name="resourceId">SBCPRC00007</param>
+			<result name="success">/sbc/pricing/common/managePricingRuleAssignment.jsp</result>
+		</action>
+
+		<action name="getSubruleTypeList">
+			<result name="success">/sbc/common/advancedsearch/getSubruleTypeListForAdvancedSearch.jsp</result>
+		</action>
+
+
+	</package>
+</struts>

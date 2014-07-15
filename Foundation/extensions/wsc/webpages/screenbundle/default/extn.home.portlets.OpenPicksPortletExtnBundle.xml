@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.home.portlets.OpenPicksPortletExtnBundle" screenId="extn.home.portlets.OpenPicksPortletExtn">
+    <BundleEntries>
+        <BundleEntry bundleEntryId="chk_BackroomPickup_CheckBox_label"
+            bundleKey="Option_ReadyForBackroomPickup"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="chk_BackroomPickup"/>
+        <BundleEntry bundleEntryId="chk_PicksInProgress_CheckBox_label"
+            bundleKey="Option_PicksInProgress"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="chk_PicksInProgress"/>
+        <BundleEntry bundleEntryId="chk_CustomerPickup_CheckBox_label"
+            bundleKey="Option_ReadyForCustomerPickup"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="chk_CustomerPickup"/>
+        <BundleEntry bundleEntryId="chk_ShipmentComplete_CheckBox_label"
+            bundleKey="Option_ShipmentComplete"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="chk_ShipmentComplete"/>
+        <BundleEntry bundleEntryId="extn_Unassigned_CheckBox_label"
+            bundleKey="extn_Unassigned" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_Unassigned"/>
+        <BundleEntry bundleEntryId="extn_Assigned_CheckBox_label"
+            bundleKey="extn_Assigned" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_Assigned"/>
+        <BundleEntry bundleEntryId="extn_Jewelry_CheckBox_label"
+            bundleKey="extn_Jewelry" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_Jewelry"/>
+        <BundleEntry bundleEntryId="chk_OwnedByMe_CheckBox_label"
+            bundleKey="Option_Picks_owned_by_me"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="chk_OwnedByMe"/>
+        <BundleEntry bundleEntryId="extn_sales_CheckBox_label"
+            bundleKey="extn_Salesfloor" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_sales"/>
+        <BundleEntry bundleEntryId="extn_stock_CheckBox_label"
+            bundleKey="extn_Stockroom" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_stock"/>
+        <BundleEntry bundleEntryId="extn_mixed_CheckBox_label"
+            bundleKey="extn_mixed" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_mixed"/>
+        <BundleEntry
+            bundleEntryId="extn_Orders With Alerts_CheckBox_label"
+            bundleKey="extn_Orders_With_Alerts"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_Orders With Alerts"/>
+        <BundleEntry bundleEntryId="portletName_Label_value"
+            bundleKey="extn_Open_Orders" bundleValueFn="_scSimpleBundle"
+            property="value" type="WIDGET" uId="portletName"/>
+    </BundleEntries>
+</ScreenBundle>

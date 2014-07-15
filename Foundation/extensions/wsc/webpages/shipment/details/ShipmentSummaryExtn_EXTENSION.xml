@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="ShipmentSummaryExtn"
+        extnPackage="extn.shipment.details"
+        originalScreen="wsc.shipment.details.ShipmentSummary"
+        originalScreenPackage="wsc.shipment.details" type="diffrential">
+        <Items>
+            <TitlePane _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="pnlShipmentLines" title="$(_scSimpleBundle:extn_Items)"/>
+            <ContentPane _sc_extensibility_moveOrder="15"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_contentpaneStartCustPick"
+                class="infoPanel " renderHidden="true" uId="extn_contentpaneDifferentLocation"/>
+            <ContentPane _sc_extensibility_moveOrder="32"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneDifferentLocation"
+                class="lineDetailsPanel inline" uId="extn_contentpaneDescription"/>
+            <ContentPane _sc_extensibility_moveOrder="33"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_contentpaneStoreInfo" uId="extn_contentpaneDescription"/>
+            <ContentPane _sc_extensibility_moveOrder="19"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneDifferentLocation"
+                class="lineDetailsPanel inline" uId="extn_contentpaneStoreInfo"/>
+            <ContentPane _sc_extensibility_moveOrder="35"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneDescription" uId="extn_contentpaneStoreInfo"/>
+            <ContentPane _sc_extensibility_moveOrder="36"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneDifferentLocation" uId="extn_contentpaneStoreInfo"/>
+            <ContentPane _sc_extensibility_moveOrder="24"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneStoreInfo" uId="extn_contentpaneStoreName"/>
+            <ContentPane _sc_extensibility_moveOrder="26"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneStoreInfo" uId="extn_contentpaneStorePhoneNum"/>
+            <ContentPane _sc_extensibility_moveOrder="28"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneStoreInfo" uId="extn_contentpaneStoreAddr"/>
+            <ContentPane _sc_extensibility_moveOrder="30"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneStoreInfo" uId="extn_contentpaneCityStateZip"/>
+            <ContentPane _sc_extensibility_moveOrder="3"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="DST_AdditionalPanel"
+                class="infoPanel" renderHidden="true" uId="extn_contentpanePickedUpBy"/>
+            <ContentPane _sc_extensibility_moveOrder="64"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="DST_PrimaryInfoPanel" uId="extn_contentpaneAlertMessagePane"/>
+            <ContentPane _sc_extensibility_moveOrder="65"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="basicContentPane" uId="extn_contentpaneAlertMessagePane"/>
+            <ContentPane _sc_extensibility_operation="change" _sc_extensibility_referenceUId="basicContentPane">
+                <TableLayout cols="3" customClass="tableLayout-cols-3-equalWidth-table tableLayout-cols-3-equalWidth-valueCell"/>
+            </ContentPane>
+            <ContentPane _sc_extensibility_operation="change" _sc_extensibility_referenceUId="basicContentPane"/>
+            <ContentPane _sc_extensibility_operation="change" _sc_extensibility_referenceUId="basicContentPane"/>
+            <ContentPane _sc_extensibility_operation="change" _sc_extensibility_referenceUId="basicContentPane"/>
+            <ContentPane _sc_extensibility_moveOrder="11"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="lblOrderNo" uId="extn_contentpaneOrderNo"/>
+            <ContentPane _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="pnlright" class="inline"/>
+            <ContentPane _sc_extensibility_moveOrder="50"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lblExpectedShipDate" uId="extn_contentpaneShipNo"/>
+            <ContentPane _sc_extensibility_moveOrder="55"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lblAssignedToUsr" uId="extn_contentpaneShipNo"/>
+            <ContentPane _sc_extensibility_moveOrder="57"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_datalabelPickedUpOn" uId="extn_contentpaneCancelDate"/>
+            <ContentPane _sc_extensibility_moveOrder="59"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="basicContentPane"
+                class="inline" uId="extn_contentpaneActions"/>
+            <ContentPane _sc_extensibility_moveOrder="7"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="DST_DetailScreenPanel"
+                title="$(_scSimpleBundle:extn_Start_Customer_Pick_Up)" uId="extn_contentpaneStartCustPick"/>
+            <ContentPane _sc_extensibility_moveOrder="60"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpaneActions" uId="extn_contentpaneStartCustPick"/>
+            <ContentPane _sc_extensibility_moveOrder="72"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_contentpaneJewelryPane" uId="extn_contentpaneSpace3"/>
+            <ContentPane _sc_extensibility_moveOrder="62"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneActions" uId="extn_contentpaneJewelryPane"/>
+            <Button _sc_extensibility_moveOrder="8"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpaneStartCustPick"
+                label="$(_scSimpleBundle:extn_Start_Customer_Pick_Up)"
+                renderHidden="true" uId="extn_buttonStartCustPickUp"/>
+            <Button _sc_extensibility_moveOrder="61"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneStartCustPick"
+                label="$(_scSimpleBundle:extn_Mark_as_Returned)"
+                renderHidden="true" uId="extn_buttonMarkReturn"/>
+            <Button _sc_extensibility_moveOrder="76"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneStartCustPick"
+                label="$(_scSimpleBundle:extn_Resume_Picking)"
+                renderHidden="true" uId="extn_buttonResumePicking"/>
+            <Label _sc_extensibility_moveOrder="17"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpaneDifferentLocation"
+                class="primaryInformation"
+                uId="extn_labelPickUpLocation" value="$(_scSimpleBundle:extn_The_pick_up_location_for_this_order_is_)"/>
+            <Label _sc_extensibility_moveOrder="34"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpaneDescription" uId="extn_labelPickUpLocation"/>
+            <Label _sc_extensibility_moveOrder="37"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_contentpaneDifferentLocation" uId="extn_labelPickUpLocation"/>
+            <Label _sc_extensibility_moveOrder="38"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_contentpaneDescription" uId="extn_labelPickUpLocation"/>
+            <Label _sc_extensibility_moveOrder="39"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpaneDescription" uId="extn_labelPickUpLocation"/>
+            <Label _sc_extensibility_moveOrder="47"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpaneDescription" uId="extn_labelPickUpLocation"/>
+            <Label _sc_extensibility_moveOrder="48"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpaneDescription" uId="extn_labelPickUpLocation"/>
+            <Label _sc_extensibility_moveOrder="20"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpaneStoreInfo"
+                class="lineDetailsPanel inline"
+                uId="extn_labelStoreName" value="$(_scSimpleBundle:Name)">
+                <BindingData>
+                    <SourceBinding namespace="getShipmentDetails_output" path="Shipment.ShipNode.ShipNode"/>
+                </BindingData>
+            </Label>
+            <Label _sc_extensibility_moveOrder="25"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpaneStoreName" uId="extn_labelStoreName"/>
+            <Label _sc_extensibility_moveOrder="22"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneStoreInfo"
+                uId="extn_labelStorePhone" value="$(_scSimpleBundle:extn_Phone_Number)">
+                <BindingData>
+                    <SourceBinding namespace="getShipmentDetails_output" path="Shipment.ShipNode.ShipNodePersonInfo.DayPhone"/>
+                </BindingData>
+            </Label>
+            <Label _sc_extensibility_moveOrder="27"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpaneStorePhoneNum" uId="extn_labelStorePhone"/>
+            <Label _sc_extensibility_moveOrder="21"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneStoreInfo"
+                class="lineDetailsPanel inline"
+                uId="extn_labelStoreAddr" value="$(_scSimpleBundle:Addresses)">
+                <BindingData>
+                    <SourceBinding namespace="getShipmentDetails_output" path="Shipment.ShipNode.ShipNodePersonInfo.AddressLine1"/>
+                </BindingData>
+            </Label>
+            <Label _sc_extensibility_moveOrder="29"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_contentpaneStoreAddr" uId="extn_labelStoreAddr"/>
+            <Label _sc_extensibility_moveOrder="23"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneStoreInfo"
+                uId="extn_labelCityStateZip" value="$(_scSimpleBundle:CityStateZip)">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getLocationInfo"
+                        namespace="getShipmentDetails_output" path="Shipment.ShipNode.ShipNodePersonInfo.City"/>
+                </BindingData>
+            </Label>
+            <Label _sc_extensibility_moveOrder="31"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpaneCityStateZip" uId="extn_labelCityStateZip"/>
+            <Label _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lblOrderNotFulfilled" value="$(_scSimpleBundle:extn_The_pick_up_location_for_this_order_is_)"/>
+            <Label _sc_extensibility_moveOrder="66"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpaneAlertMessagePane"
+                uId="extn_labelAlertMessage" value="$(_scSimpleBundle:extn_Orders_With_Alerts)">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getAlertMessage"
+                        namespace="getShipmentDetails_output" path="Shipment"/>
+                </BindingData>
+            </Label>
+            <Label _sc_extensibility_moveOrder="13"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneOrderNo"
+                class="primaryInformation" uId="extn_labelOrderNo">
+                <BindingData>
+                    <SourceBinding namespace="getShipmentDetails_output" path="Shipment.OrderNo"/>
+                </BindingData>
+            </Label>
+            <Label _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lblShipmentNo" renderHidden="true"/>
+            <Label _sc_extensibility_operation="change" _sc_extensibility_referenceUId="lblName"/>
+            <Label _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lblShipmentDesc" renderHidden="true"/>
+            <Label _sc_extensibility_moveOrder="5"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="lblExpectedShipDate"
+                class="primaryInformation" uId="extn_labelShipmentDescription">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="getShipmentDescription"
+                        namespace="getShipmentDetails_output" path="Shipment.Description"/>
+                </BindingData>
+            </Label>
+            <DataLabel _sc_extensibility_moveOrder="49"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneDescription" uId="extn_datalabelSpacer"/>
+            <DataLabel _sc_extensibility_moveOrder="4"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpanePickedUpBy"
+                class="primaryInformation"
+                label="$(_scBundle:extn_Picked_Up_By)" uId="extn_datalabelPickedUpBy">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="conCatPickedUpByName"
+                        namespace="getShipmentDetails_output" path="Shipment.Extn.ExtnPickupFirstName"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lblOrderNo"
+                class="primaryInformation"
+                label="$(_scSimpleBundle:Label_OrderNo)" renderHidden="true"/>
+            <DataLabel _sc_extensibility_moveOrder="9"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="lblShipmentNo" uId="lblOrderNo"/>
+            <DataLabel _sc_extensibility_moveOrder="12"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpaneOrderNo" uId="lblOrderNo"/>
+            <DataLabel _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lblExpectedShipDate"
+                label="$(_scSimpleBundle:Label_ExpectedShipDate)" renderHidden="true"/>
+            <DataLabel _sc_extensibility_moveOrder="6"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lblOrderNo" uId="lblExpectedShipDate"/>
+            <DataLabel _sc_extensibility_moveOrder="74"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="lblAssignedToUsr"
+                class="blockComponent field"
+                label="$(_scBundle:Label_AssignedToUser)" uId="extn_lblAssignedToUserId">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getAssignedUser"
+                        namespace="getShipmentDetails_output" path="Shipment.AssignedToUserId"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lblAssignedToUsr" renderHidden="true"/>
+            <DataLabel _sc_extensibility_moveOrder="52"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lblExpectedShipDate" uId="lblAssignedToUsr"/>
+            <DataLabel _sc_extensibility_moveOrder="51"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpaneShipNo"
+                label="$(_scBundle:ShipmentNo)" uId="extn_datalabelShipNo">
+                <BindingData>
+                    <SourceBinding namespace="getShipmentDetails_output" path="Shipment.ShipmentNo"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="53"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_datalabelShipNo"
+                label="$(_scBundle:extn_Hold_Locations)" uId="extn_datalabelHolLoc">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getHoldLocations"
+                        namespace="getShipmentDetails_output" path="Shipment.Extn.ExtnHoldLocationDesc"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="54"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lblAssignedToUsr" uId="extn_datalabelHolLoc"/>
+            <DataLabel _sc_extensibility_moveOrder="10"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lblExpectedShipDate"
+                class="blockComponent field"
+                label="$(_scBundle:extn_Order_Date)" uId="extn_datalabelOrderDate">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getOrderDate"
+                        namespace="getShipmentDetails_output" path="Shipment"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="14"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_datalabelPickedUpOn"
+                label="$(_scBundle:extn_Pick_Up_Date)" uId="extn_datalabelExpectedPickUpDate">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="getExpectedPickUpDate"
+                        namespace="getShipmentDetails_output" path="Shipment"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="lblOrderNo"
+                class="blockComponent field"
+                label="$(_scSimpleBundle:extn_Picked_Up_On)"
+                renderHidden="true" uId="extn_datalabelPickedUpOn">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getPickTime"
+                        namespace="getShipmentDetails_output" path="Shipment"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="56"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_datalabelExpectedPickUpDate"
+                label="$(_scSimpleBundle:extn_Cancelled_Date)"
+                renderHidden="true" uId="extn_datalabelCancellationDate">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getCancelDate"
+                        namespace="getShipmentDetails_output" path="Shipment"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="58"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpaneCancelDate" uId="extn_datalabelCancellationDate"/>
+            <DataLabel _sc_extensibility_moveOrder="75"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneCancelDate"
+                label="$(_scBundle:extn_Cleared_Date)"
+                renderHidden="true" uId="extn_datalabelClearDate">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="getExpirationDate"
+                        namespace="getShipmentDetails_output" path="Shipment"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="71"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_imageJewelryImg" uId="extn_datalabelSpace3"/>
+            <DataLabel _sc_extensibility_moveOrder="73"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpaneSpace3" uId="extn_datalabelSpace3"/>
+            <Image _sc_extensibility_moveOrder="67"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneAlertMessagePane"
+                appendToContextRoot="true"
+                class="indicatorImage floatLeft"
+                imageSrc="wsc/resources/css/icons/images/alertType.png" uId="extn_imageAlertImg"/>
+            <Image _sc_extensibility_moveOrder="68"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_contentpaneAlertMessagePane" uId="extn_imageAlertImg"/>
+            <Image _sc_extensibility_moveOrder="69"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneAlertMessagePane" uId="extn_imageAlertImg"/>
+            <Image _sc_extensibility_moveOrder="70"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_labelAlertMessage" uId="extn_imageAlertImg"/>
+            <Image _sc_extensibility_moveOrder="63"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpaneJewelryPane"
+                appendToContextRoot="true" class="portletImage inline"
+                imageSrc="extn/resources/imgs/JewelryIconRing.png"
+                renderHidden="true" uId="extn_imageJewelryImg"/>
+        </Items>
+        <Namespaces>
+            <SourceNamespaces>
+                <Source isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_1" value="extn_commCode4Receipt_output"/>
+                <Source isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_2" value="extn_shipNode_info"/>
+                <Source isExtn="true"
+                    scExtensibilityArrayItemId="extn_SourceNamespaces_3" value="extn_commCode4Receipt_diamond"/>
+            </SourceNamespaces>
+        </Namespaces>
+        <Subscribers>
+            <Local>
+                <Subscriber eventId="afterScreenInit" isExtn="true" sequence="51">
+                    <Handler methodName="extnInitialize"/>
+                </Subscriber>
+                <Subscriber eventId="afterScreenInit" isExtn="true" sequence="52">
+                    <Handler methodName="closeSearchResults"/>
+                </Subscriber>
+                <Subscriber
+                    description="button to start customer pickup"
+                    eventId="extn_buttonStartCustPickUp_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="Ink_RT_CustomerPick_onClick"/>
+                </Subscriber>
+                <Subscriber
+                    description="The function changes status from pending expired return to expired order."
+                    eventId="extn_buttonMarkReturn_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="markAsReturned"/>
+                </Subscriber>
+                <Subscriber
+                    description="The function resumes customer pickup for suspended orders."
+                    eventId="extn_buttonResumePicking_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="resumePickUp"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+        <MashupRefs>
+            <Init>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getShipNode_mashup"
+                    mashupRefId="extn_getShipNode_mashup" sourceNamespace="extn_shipNode_info"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getCommonCodes_mashup"
+                    mashupRefId="extn_getReceiptCommonCodes" sourceNamespace="extn_commCode4Receipt_output"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getCommonCodes_mashup"
+                    mashupRefId="extn_getReceiptCommonCodes_diamond" sourceNamespace="extn_commCode4Receipt_diamond"/>
+            </Init>
+            <Behavior>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_MarkAsReturned_mashup" mashupRefId="extn_MarkAsReturned"/>
+            </Behavior>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

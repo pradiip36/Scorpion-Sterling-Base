@@ -1,0 +1,41 @@
+<div class="sc-platform-screen-default itemdetails">
+    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'isccsScreen singlecolumntable' , 
+		colspan : 1 , 
+		uId : 'SalesFloorPanel' , 
+		layoutAlign : 'top'  
+ ">
+<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		'class' : 'autoLabelZeroWidth specProd' , 
+		uId : 'eSignLocation'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'SalesFloorLocation.ESignLocation'
+,		dynamicBindingFunc : 			'getESignLocation',
+		 namespace : 			'SalesFloorLocation'
+	}
+	}
+,	
+			 	label : 			this.getBundleString('extn_ESign_Location')
+			}
+		}
+"></div>
+<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" data-dojo-props="		'class' : 'autoLabelZeroWidth specProd' , 
+		uId : 'eSignID'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'SalesFloorLocation.ESignId'
+,		dynamicBindingFunc : 			'getESignID',
+		 namespace : 			'SalesFloorLocation'
+	}
+	}
+,	
+			 	label : 			this.getBundleString('extn_ESign_ID')
+			}
+		}
+"></div></div></div>

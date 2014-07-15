@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified"
+targetNamespace="http://www.sterlingcommerce.com/documentation"
+    xmlns:yfc="http://www.sterlingcommerce.com/documentation" xmlns:yfctype="http://www.sterlingcommerce.com/documentation/types">
+	<xsd:annotation
+        yfc:fileName="KohlsInventoryDemandService_getItemLocations_input" yfc:rootElement="Items">
+		<xsd:appinfo source="yfc:structure">
+			<Items>
+				<ItemId/>
+				<ItemType/>
+				<Quantity/>
+			</Items>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:import namespace="http://www.sterlingcommerce.com/documentation/types" schemaLocation="datatypes.xsd"/>
+	<xsd:element name="Items" type="yfc:ItemsXSDType"/>
+	<xsd:complexType name="ItemsXSDType">
+		<xsd:sequence>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" ref="yfc:RequestItem"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="RequestItem">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element type="xsd:string" name="ItemId"/>
+				<xsd:element type="xsd:string" name="ItemType"/>
+				<xsd:element type="xsd:string" name="Quantity"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

@@ -1,0 +1,18 @@
+Ext.namespace('sc.sbc.kohls.item.eligibility');
+
+sc.sbc.kohls.item.eligibility.VendorSearchResults = function(config) {
+    sc.sbc.kohls.item.eligibility.VendorSearchResults.superclass.constructor.call(this, config);
+}
+Ext.extend(sc.sbc.kohls.item.eligibility.VendorSearchResults, sc.plat.ui.ExtensibleScreen, {
+    className: 'sc.sbc.kohls.item.eligibility.VendorSearchResults',
+    getUIConfig: sc.sbc.kohls.item.eligibility.VendorSearchResultsUIConfig,
+    namespaces: {
+        target: [''],
+        source: ['getVendorListInput']
+    },
+    namespacesDesc: {
+        targetDesc: [''],
+        sourceDesc: ['getVendorListOutput']
+    }
+});
+Ext.reg('seaVendorSearchResults', sc.sbc.kohls.item.eligibility.VendorSearchResults);

@@ -1,0 +1,97 @@
+<div class="sc-platform-screen-default abandonedbackroompickdialog">
+    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		uId : 'systemMessagePanelPopup' , 
+		renderHidden : true  
+ "></div>
+    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'isccsScreen messageSummary' , 
+		uId : 'dialogTitle'  
+ ">
+        <div data-dojo-type="sc/plat/dojo/widgets/Image" data-dojo-props="		'class' : 'messageWarningIcon' , 
+		uId : 'warningIcon'  
+ "></div>
+        <div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="		spanLabel : true , 
+		uId : 'confirmationMessageLabel'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			this.getSimpleBundleString('Label_dialog_confirmation_message')
+			}
+		}
+"></div>
+    </div>
+    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		spanLabel : true , 
+		'class' : 'messageWrapper confirmFields' , 
+		uId : 'outerDetailsContainer'  
+ ">
+ 	<div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="		spanLabel : true , 
+		uId : 'messageLabel'  , class : 'centerAlign'
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	value : 			'Are you sure you want to cancel this unit?'
+			}
+		}
+"></div>
+
+ 	<div data-dojo-type="idx/form/FilteringSelect" data-dojo-props="		uId : 'cmbCustVerfMethod' , 
+		required : true  , class : 'blockComponent centerAlign  characteristicsIcon'
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 targetBinding : 	[
+	 		{
+		 path : 			'Shipment.ShipmentLines.ShipmentLine.Extn.ExtnShortageReason'
+,
+		 namespace : 			'extn_getShortageResolutions_output'
+	}
+	]
+,
+		 optionsBinding : 	{
+		 descriptionField : 			'CodeShortDescription'
+,
+		 valueField : 			'CodeShortDescription'
+,
+		 path : 			'CommonCodeList.CommonCode'
+,
+		 namespace : 			'extn_getShortageResolutions_input'
+	}
+	}
+			}
+		}
+"></div>
+        <div data-dojo-type="sc/plat/dojo/widgets/Label" data-dojo-props="		spanLabel : true , 
+		uId : 'confirmationMessage'  
+ "></div>
+    </div>
+    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		'class' : 'popupNavigation messageDialogFooter' , 
+		uId : 'abandondedBPNavigationPanel'  
+ ">
+    </div>
+    <div data-dojo-type="idx/layout/ContentPane" data-dojo-props="		'class' : 'popupNavigation messageDialogFooter' , 
+		uId : 'Popup_navigationPanel'  
+ ">
+        <div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true , 
+		showLabel : true , 
+		uId : 'Popup_btnNext' , class : 'floatLeft' 
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('Ok')
+			}
+		}
+"></div>
+        <div data-dojo-type="dijit/form/Button" data-dojo-props="		spanLabel : true , 
+		'class' : 'idxSecondaryButton' , 
+		showLabel : true , 
+		uId : 'Popup_btnCancel'  
+ 		,scParamDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('Cancel')
+			}
+		}
+"></div>
+    </div>
+</div>

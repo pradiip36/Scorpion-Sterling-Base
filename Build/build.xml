@@ -1,0 +1,507 @@
+<project name="Build Script For kohls  9.2.1" default="all" basedir=".">
+    <property file="build.properties"/>
+	<import file="build-ws.xml"/>
+	
+	<path id="kohls.class.path">
+		<fileset dir="${devhome}/Foundation/jar/entities/">
+			<include name="**/*.jar" /> 
+		</fileset>
+		<fileset dir="${devhome}/Foundation/jar/prerelease/smcfs">
+			<include name="**/*.jar" /> 
+		</fileset>
+		<fileset dir="${INSTALL_DIR}/jar">
+			<include name="install_foundation.jar"/>
+		</fileset>
+		<fileset dir="${INSTALL_DIR}/jar/smcfs">
+			<include name="**/*.jar"/>
+		</fileset>
+		<fileset dir="${INSTALL_DIR}/jar/platform_afc">
+			<include name="**/*.jar"/>
+		</fileset>
+		<fileset dir="${INSTALL_DIR}/jar/platform">
+			<include name="**/*.jar"/>
+		</fileset>
+		<fileset dir="${INSTALL_DIR}/jar/log4j">
+			<include name="**/*.jar"/>
+		</fileset>
+		<fileset dir="${INSTALL_DIR}/repository/eardata/platform/war/yfscommon">
+			<include name="**/*.jar"/>
+		</fileset>
+		<fileset dir="${INSTALL_DIR}/jar/platform_afc_ui_impl">
+			<include name="**/*.jar"/>
+		</fileset>
+		<fileset dir="${INSTALL_DIR}/jar/scecore">
+			<include name="**/*.jar"/>
+		</fileset>
+		<fileset dir="${INSTALL_DIR}/jar/soap">
+			<include name="**/*.jar"/>
+		</fileset>
+		<fileset dir="${INSTALL_DIR}/jar/sbi">
+			<include name="**/*.jar"/>
+		</fileset>
+		<fileset dir="${INSTALL_DIR}/jar/log4j">
+			<include name="**/*.jar"/>
+		</fileset>
+	    <fileset dir="${INSTALL_DIR}/jar/COM_Add-in">
+            <include name="**/*.jar"/>
+        </fileset>
+        <fileset dir="${INSTALL_DIR}/jar/SOP_Add-in">
+            <include name="**/*.jar"/>
+        </fileset>
+        <fileset dir="${INSTALL_DIR}/jar">
+    		<include name="**/platform_baseutils.jar"/>
+    	</fileset>
+    	<fileset dir="${devhome}/Foundation/jar/thirdparty">
+			<include name="**/*.jar"/>
+		</fileset>
+		<fileset dir="${devhome}/Foundation/jar/thirdparty/axis2">
+		    <include name="jaxb-impl-2.1.7.jar"/>
+		</fileset>
+		<fileset dir="${devhome}/Foundation/jar/thirdparty/jasper">
+		    <include name="**/*.jar"/>
+		</fileset>		
+		<fileset dir="${devhome}/Foundation/jar">
+		    <include name="**/*.jar"/>
+		</fileset>
+		<fileset dir="${INSTALL_DIR}/jar/sbc">
+		    <include name="**/*.jar"/>
+		</fileset>
+		<fileset dir="${INSTALL_DIR}/jar/platform_uifwk">
+		    <include name="**/*.jar"/>
+		</fileset>
+		<fileset dir="${INSTALL_DIR}/jar/commons_lang">
+			<include name="**/*.jar"/>
+		</fileset>
+		<!-- added erroronmissingdir to run the deploy-client target as clients will not have weblogic install -->
+	</path>
+	<target name="cdt-export" description="Exports the CDT zip to build folder">
+	<echo message="${env.SOURCE_DB_1}"/>
+	<echo message="${env.TARGET_DB_1}"/>
+	<echo message="${env.TARGET_PASSWORD_1}"/>		 
+		<exec executable="${INSTALL_DIR}/bin/cdtshell.sh" failonerror="true">	
+			<arg   value="-Source"/>				 	
+			<arg   value="${env.SOURCE_DB_1}"/>		
+			<arg   value="-SourcePassword"/>				 
+			<arg   value="${env.SOURCE_PASSWORD_1}"/> 	
+			<arg   value="-Target"/>				 
+			<arg   value="${env.TARGET_DB_1}"/> 	
+			<arg   value="-TargetPassword"/>			
+			<arg   value="-TargetHTTPPassword"/>			
+			<arg   value="${env.TARGET_HTTP_PASSWORD_1}"/> 		
+		</exec>
+	</target>
+	<target name="cdt-import" description="Imports the CDT zip from build folder">
+	<echo message="${env.SOURCE_DB_2}"/>
+	<echo message="${env.TARGET_DB_2}"/>
+	<echo message="${env.TARGET_PASSWORD_2}"/>
+		 
+		<exec executable="${INSTALL_DIR}/bin/cdtshell.sh" failonerror="true">
+			<arg line="-DoNotSynchronize N"/>
+			<arg   value="-Source"/>				 	
+			<arg   value="${env.SOURCE_DB_2}"/>		
+			<arg   value="-SourcePassword"/>				 
+			<arg   value="${env.SOURCE_PASSWORD_2}"/> 	
+			<arg   value="-Target"/>				 
+			<arg   value="${env.TARGET_DB_2}"/> 	
+			<arg   value="-TargetPassword"/>			
+			<arg   value="${env.TARGET_PASSWORD_2}"/> 	
+			<arg   value="-TargetHTTPPassword"/>			
+			<arg   value="${env.TARGET_HTTP_PASSWORD_2}"/> 	
+		</exec>
+	</target>
+	<target name="all" depends="clean, build-jars, copy-files, deploy-extensions, build-ear " description="Executes all the targets"/>
+	<target name="deploy-client" depends="clean, build-jars, copy-files, deploy-extensions " description="prepares sterling integration and agent server"/>
+	<!-- Cleans the custom code in INSTALL_DIR -->
+	<target name="clean" description="Deletes directories">
+		<echo>Delete all extension folders</echo>
+		<delete dir="${INSTALL_DIR}/extensions/global"/>
+		<delete dir="${INSTALL_DIR}/extensions/smcfs"/>
+		<delete dir="${devhome}/dist"/>
+		<mkdir dir="${devhome}/dist"/>
+	</target>
+	<!-- Fetches the modules from CVS respository -->
+	<target name="cvs-fetch" description="Fetches from CVS">
+		<!-- First create the CVS fetch directory -->
+		<echo>Creating CVS fetch directory</echo>
+		<mkdir dir="${cvs.fetch.dir}"/>
+		 <cvs cvsRoot=":pserver:${cvs.user}:${cvs.pass}@${cvs.server}:${cvs.root}" package="${cvs.module.name}" dest="${cvs.fetch.dir}"/> 
+		<!-- temporary change done to delete global/webpages -->
+		<delete dir="${devhome}/Foundation/extensions/global/webpages"/>
+	</target>
+	<target name="clean-up-for-build">				 
+		<echo>make classes dir</echo>
+		<mkdir dir="${devhome}/dist/Foundation/classes"/>
+		<mkdir dir="${devhome}/dist/Foundation/sbc/classes"/>
+	</target>
+	<target name="build-jars" description="Make Jar">
+		<!-- Compile the java source files -->
+		 <antcall target="clean-up-for-build"/>  
+		<javac classpathref="kohls.class.path" destdir="${devhome}/dist/Foundation/classes" executable="${JAVA_HOME}/bin/javac" debug="on" debuglevel="lines,vars,source" includeantruntime="false">
+			<src path="${devhome}/Foundation/src">
+		 </src>
+		</javac>
+		
+		<antcall target="compile-sbc" />
+		
+		<!-- Makes the project jar file -->
+		<!--Create version file -->
+		<tstamp>
+			<format property="NOW" pattern="EEE, MMMM dd yyyy hh:mm aa z"/>
+		</tstamp>
+		<echo file="${devhome}/dist/version.txt">Release Version: ${project.name} V ${release.version} Release Date: ${NOW}</echo>
+		<!--Copy the version.txt -->
+		<copy file="${devhome}/dist/version.txt" todir="${devhome}/dist/Foundation/classes"/>
+		<!-- Copy all the customized xsl's also to form single custom jar -->
+		<echo>Copying all the custom xsl's to be part of custom jar along with classes</echo>
+		<!-- Copy selis folder also to custom jar -->
+		<echo>Copy selis folder also to custom jar</echo>
+		<mkdir dir="${devhome}/dist/Foundation/classes"/>
+
+		<jar destfile="${devhome}/Foundation/jar/thirdparty/kohls/${releaseJar}.jar" basedir="${devhome}/dist/Foundation/classes">
+			<manifest>
+				<attribute name="Built-By" value="${user.name}"/>
+				<section name="version-information">
+					<attribute name="Version" value="${release.version}"/>
+					<attribute name="Date" value="${NOW}"/>
+				</section>
+			</manifest>
+		</jar>
+		
+		<!--Add sbc Specific changes-->
+		<copy file="${devhome}/dist/version.txt" todir="${devhome}/dist/Foundation/src/sbc/classes"/>
+	    
+		<jar destfile="${devhome}/dist/Foundation/${project.name}_sbc.jar" basedir="${devhome}/dist/Foundation/sbc/classes">
+         <manifest>
+            <attribute name="Built-By" value="${user.name}"/>
+            <section name="version-information">
+               <attribute name="Version" value="${release.version}"/>
+               <attribute name="Date" value="${NOW}"/>
+            </section>
+         </manifest>
+      </jar>
+	  <copy file="${devhome}/dist/Foundation/${project.name}_sbc.jar" todir="${INSTALL_DIR}/repository/eardata/sbc/extn/WEB-INF/lib/" overwrite="true"/>
+	  
+	  <!--Add sbc Specific changes-->
+	  
+		<!--Added buildjar code for build jasperreports jar -->
+
+        <delete dir="${devhome}/dist/JasperReports"/>
+  		<mkdir dir="${devhome}/dist/JasperReports"/>
+  		
+  		<antcall target="compile-server-jasper"/>
+  		
+  		<copy todir="${devhome}/dist/JasperReports">
+            <fileset dir="${devhome}/Foundation/JasperReports">
+                <exclude name="**/CVS"/>
+            	<exclude name="*.jrxml"/>
+            </fileset>
+        </copy>
+  		
+  		<copy file="${devhome}/dist/version.txt" todir="${devhome}/dist/JasperReports"/>
+  		
+  		<jar destfile="${devhome}/dist/Foundation/kohlsjasper.jar" basedir="${devhome}/dist/JasperReports">
+            <manifest>
+                <attribute name="Built-By" value="${user.name}"/>
+
+                <section name="version-information">
+                    <attribute name="Version" value="${release.version}"/>
+                    <attribute name="Date" value="${NOW}"/>
+                </section>
+			</manifest>
+        </jar>
+
+		<!--Added buildjar code for build jasperreports jar end -->
+		
+	</target>
+	<target name="checksbc">
+		<condition property="sbcavailable">
+			<available file="${devhome}/Foundation/src/sbc" type="dir" />
+		</condition>
+	</target>
+	<target name="compile-sbc" depends="checksbc" if="sbcavailable" >
+		<javac classpathref="kohls.class.path" destdir="${devhome}/dist/Foundation/sbc/classes" executable="${JAVA_HOME}/bin/javac" debug="on" debuglevel="lines,vars,source">
+      	<src path="${devhome}/Foundation/src/sbc">
+         </src>
+      </javac>
+	</target>
+	<target name="copy-files" description="Deploys the project files in the relevant folders of MCF Installation">		   
+		<condition property="mode.overwrite">
+			<not>
+				<isset property="mode.local"/>
+			</not>
+		</condition>
+		<condition property="env" value="dev">
+			 <equals arg1="${env.dev}" arg2="true"/>
+		</condition>
+		<condition property="env" value="qa">
+			 <equals arg1="${env.qa}" arg2="true"/>
+		</condition>
+		<condition property="env" value="test">
+			 <equals arg1="${env.test}" arg2="true"/>
+		</condition>
+	   <condition property="env" value="prod">
+				<equals arg1="${env.prod}" arg2="true"/>
+		</condition>
+	   <condition property="env" value="stress">
+				<equals arg1="${env.stress}" arg2="true"/>
+		</condition>
+		<!--Copy properties -->
+	<!-- 	<echo>Copy the project specific properties to properties folder of APP</echo>
+      	<copy todir="${INSTALL_DIR}/properties/" overwrite="${mode.overwrite}">
+			<fileset dir="${devhome}/Foundation/properties"/>				
+ 			<mapper type="glob" from="*.${env}" to=""/>		
+   	</copy>
+-->
+		<copy todir="${INSTALL_DIR}/properties/" overwrite="${mode.overwrite}">
+			<fileset dir="${devhome}/Foundation/properties">
+				<include name="*.properties"/>
+			</fileset>
+		</copy>
+		<!--Copy resources -->
+		<echo>Copy the project specific resources to resources folder of APP</echo>
+		<copy todir="${INSTALL_DIR}/resources/" overwrite="${mode.overwrite}">
+			<fileset dir="${devhome}/Foundation/resources">
+				<exclude name="**/CVS"/>
+			</fileset>
+		</copy>
+		<!--Copy extensions -->
+		<echo>Copy the project specific extensions to extensions folder of APP</echo>
+		<copy todir="${INSTALL_DIR}/extensions/" overwrite="${mode.overwrite}">
+				<fileset dir="${devhome}/Foundation/extensions">
+						<exclude name="**/CVS"/>
+				</fileset>
+		</copy>
+		<!--Copy repository -->
+		<echo>Copy the project specific extensions to repository folder of APP</echo>
+		<copy todir="${INSTALL_DIR}/repository/" overwrite="${mode.overwrite}">
+				<fileset dir="${devhome}/Foundation/repository">
+						<exclude name="**/CVS"/>
+				</fileset>
+		</copy>
+<!-- Copy SBC relatedtasks -->
+		<copy todir="${INSTALL_DIR}/repository/eardata/sbc/war/sbc/metadata/relatedtasks" overwrite="${mode.overwrite}">
+			<fileset dir="${devhome}/Foundation/extensions/sbc/webpages/sbc/metadata/relatedtasks">
+			</fileset>
+		</copy>
+		<copy todir="${INSTALL_DIR}/extensions/sbc/webpages/extn/sbc/kohls/item" overwrite="${mode.overwrite}">
+			<fileset dir="${devhome}/Foundation/extensions/sbc/webpages/sbc/kohls/item">
+			</fileset>
+		</copy>
+		<copy todir="${INSTALL_DIR}/extensions/sbc/webpages/extn/sbc/common" overwrite="${mode.overwrite}">
+			<fileset dir="${devhome}/Foundation/extensions/sbc/webpages/sbc/common">
+			</fileset>
+		</copy>
+		
+		<echo>Copy the pre release jar yompbe.jar </echo>		               
+		<copy file="${devhome}/Foundation/jar/prerelease/smcfs/9.2.1/yompbe.jar" todir="${INSTALL_DIR}/jar/smcfs/9.2.1" overwrite="true" />
+		
+		<echo>Copy the patched jar ycdbe.jar </echo>		               
+		<copy file="${devhome}/Foundation/jar/prerelease/smcfs/9.2.1/ycdbe.jar" todir="${INSTALL_DIR}/jar/COM_Add-in/9.2.1_9.2.1" overwrite="true" />		
+		
+		<!-- move 2.0 jars back into workspace REMOVE when fully upgraded to 9.3 -->
+		<echo>Copy the patched jar platform_afc_ui_impl_ui.jar </echo>		               
+		<copy file="${devhome}/Foundation/jar/prerelease/sbc/platform_afc_ui_impl_ui.jar" todir="${INSTALL_DIR}/jar/platform_afc_ui_impl/9_2_1" overwrite="true" />		
+		<copy file="${devhome}/Foundation/jar/prerelease/sbc/platform_afc_ui_impl_ui.jar" todir="${INSTALL_DIR}/repository/eardata/platform_afc_ui_impl/war/WEB-INF/lib" overwrite="true" />		
+
+		<echo>Copy the patched jar platform_afc_ui.jar </echo>		               
+		<copy file="${devhome}/Foundation/jar/prerelease/sbc/platform_afc_ui.jar" todir="${INSTALL_DIR}/repository/eardata/platform/war/WEB-INF/lib" overwrite="true" />	
+
+		<echo>Copy the patched jar platform_uifwk_ui.jar </echo>		               
+		<copy file="${devhome}/Foundation/jar/prerelease/sbc/platform_uifwk_ui.jar" todir="${INSTALL_DIR}/jar/platform_uifwk/9_2_1" overwrite="true" />		
+		<copy file="${devhome}/Foundation/jar/prerelease/sbc/platform_uifwk_ui.jar" todir="${INSTALL_DIR}/repository/eardata/platform_uifwk/war/WEB-INF/lib" overwrite="true" />		
+
+		<echo>Copy the patched jar sbc_ui.jar </echo>		               
+		<copy file="${devhome}/Foundation/jar/prerelease/sbc/sbc_ui.jar" todir="${INSTALL_DIR}/jar/sbc/9.2.1" overwrite="true" />
+		<copy file="${devhome}/Foundation/jar/prerelease/sbc/sbc_ui.jar" todir="${INSTALL_DIR}/repository/eardata/sbc/war/WEB-INF/lib" overwrite="true" />
+		
+		<echo>Copy the sbc container.jsp</echo>		               
+		<copy file="${devhome}/Foundation/jar/prerelease/sbc/container.jsp" todir="${INSTALL_DIR}/repository/eardata/sbc/war/sbc/container" overwrite="true" />
+
+	</target>
+	<!-- install ALL files under thirdparty -->
+	<target name="deploy-extensions" description="Deploys extensions on MCF app">
+		<echo>Running install3rdParty for project jar</echo>
+		<exec executable="${INSTALL_DIR}/bin/install3rdParty.sh" failonerror="true">
+			<arg value="kohls"/>
+			<arg value="1_0"/>
+			<arg value="-j"/>
+			<arg value="${devhome}/Foundation/jar/thirdparty/kohls/*.jar"/>
+			<arg value="-targetJVM"/>
+			<arg value="EVERY"/>
+		</exec>
+
+		<exec executable="${INSTALL_DIR}/bin/install3rdParty.sh" failonerror="false">
+			<arg value="mq"/>
+			<arg value="6_0"/>
+			<arg value="-j"/>
+			<arg value="${devhome}/Foundation/jar/thirdparty/mq/*.jar"/>
+			<arg value="-targetJVM"/>
+			<arg value="EVERY"/>
+		</exec>	
+		
+		<!-- install jasper reports jar under thirdparty -->
+
+		<exec executable="${INSTALL_DIR}/bin/install3rdParty.sh" failonerror="true">
+			<arg value="kohls"/>
+			<arg value="1_0"/>
+			<arg value="-j"/>
+			<arg value="${devhome}/dist/Foundation/kohlsjasper.jar"/>
+			<arg value="-targetJVM"/>
+			<arg value="EVERY"/>
+		</exec>	
+
+		<!-- install jasper reports jar under thirdparty ends-->
+		
+		<exec executable="${INSTALL_DIR}/bin/install3rdParty.sh" failonerror="false">
+			<arg value="weblogic"/>
+			<arg value="10_0"/>
+			<arg value="-j"/>
+			<arg value="${devhome}/Foundation/jar/thirdparty/weblogic/*.jar"/>
+			<arg value="-targetJVM"/>
+			<arg value="AGENT"/>
+		</exec>
+
+		<exec executable="${INSTALL_DIR}/bin/install3rdParty.sh" failonerror="true">
+            <arg value="jasper"/>
+            <arg value="3_6_0"/>
+            <arg value="-j"/>
+            <arg value="${devhome}/Foundation/jar/thirdparty/jasper/*.jar"/>
+            <arg value="-targetJVM"/>
+            <arg value="EVERY"/>
+        </exec>
+		
+		<exec executable="${INSTALL_DIR}/bin/install3rdParty.sh" failonerror="true">
+            <arg value="axis"/>
+            <arg value="2.0"/>
+            <arg value="-j"/>
+            <arg value="${devhome}/Foundation/jar/thirdparty/axis2/*.jar"/>
+            <arg value="-targetJVM"/>
+            <arg value="EVERY"/>
+		</exec>
+		
+		<!-- uninstall the jaxb-impl-2.1.7.jar -->
+		<!-- this needs to run only once -->
+		<exec executable="${INSTALL_DIR}/bin/install3rdParty.sh" failonerror="true">
+            <arg value="axis"/>
+            <arg value="2.0"/>
+            <arg value="-j"/>
+            <arg value="${devhome}/Foundation/jar/thirdparty/axis2/jaxb-impl-2.1.7.jar"/>
+            <arg value="-targetJVM"/>
+            <arg value="EVERY"/>
+			<arg value="-uninstall"/>
+		</exec>
+		
+		<!-- <exec executable="${INSTALL_DIR}/bin/setupfiles.sh" failonerror="true">
+		</exec> -->
+		
+		<!-- deploying resources  -->
+		<echo>deploying resources</echo>
+		<echo>Building resources jar</echo>
+		<exec executable="${INSTALL_DIR}/bin/deployer.sh" failonerror="true">
+			<arg value="-t"/>
+			<arg value="resourcejar"/>
+		</exec>
+		<!-- entity deployer -->
+		<echo>Running entity deployer</echo>
+		<exec executable="${INSTALL_DIR}/bin/deployer.sh" failonerror="true">
+			<arg value="-t"/>
+			<arg value="entitydeployer"/>
+		</exec>
+	</target>
+	<!-- sbc specific changes-->
+	<target name="build-min" description="Builds minification file for sbc deployment">
+      <echo>Building minified for sbc </echo>
+      <exec executable="${INSTALL_DIR}/bin/sci_ant.sh">
+         <arg value="-f"/>
+         <arg value="${INSTALL_DIR}/bin/jsUtil.xml"/>
+         <arg value="minify-js"/>
+		 <arg value="-DsrcDir"/>
+         <arg value="${INSTALL_DIR}/extensions/sbc/webpages"/>
+         <arg value="-DjsbDir"/>
+		 <arg value="${INSTALL_DIR}/extensions/sbc/webpages/builder"/>
+		 <arg value="-DdestDir"/>
+		 <arg value="${INSTALL_DIR}/extensions/sbc/webpages"/>
+      </exec>
+      <delete dir="${devhome}/dist/tmpear"/>
+   </target>
+   <!-- sbc specific changes-->
+	<target name="build-ear" description="Builds EAR file for deployment">
+		<echo>Building ear for weblogic appserver without documents , sma and webservices</echo>
+		<exec executable="${INSTALL_DIR}/bin/buildear.sh">
+			<arg value="-Dappserver=weblogic"/>
+			<arg value="-Dwarfiles=smcfs,sbc,sma"/>
+			<arg value="-Dearfile=smcfs.ear"/>
+			<arg value="-Dnodocear=true"/>
+			<arg value="-Ddevmode=true"/>
+			<arg value="-Dnowebservice=false"/>
+			<arg value="-Dwebservice.types=SIXBeanXapiJaxWS"/>
+			<arg value="-Dnodocear=true"/>
+			<arg value="-Dsupportmultiwar=true"/>
+			<arg value="-Dnoejb=true"/>
+			<arg value="-Dnoejb2=true"/>
+			<arg value="-Dweblogic.wsee.skip.async.response=true"/>
+			<arg value="create-ear"/>
+		</exec>
+		<delete dir="${devhome}/dist/tmpear"/>
+		<unzip src="${INSTALL_DIR}/external_deployments/smcfs.ear" dest="${devhome}/dist/tmpear">
+			<patternset>
+				<include name="smcfs.war"/>
+			</patternset>
+		</unzip>
+		<copy todir="${devhome}/dist/tmpear/WEB-INF/lib">
+			<fileset dir="${devhome}/Foundation/jar/thirdparty">
+				<include name="**/Standard.jar"/>
+				<include name="**/Jstl.jar"/>
+			</fileset>
+		</copy>
+		<jar update="true" destfile="${devhome}/dist/tmpear/smcfs.war" basedir="${devhome}/dist/tmpear" excludes="smcfs.war">
+      </jar>
+		<delete dir="${devhome}/dist/tmpear/WEB-INF"/>
+		<jar update="true" destfile="${INSTALL_DIR}/external_deployments/smcfs.ear" basedir="${devhome}/dist/tmpear/" includes="smcfs.war">
+      </jar>
+	</target>
+	<target name="pre-compile">
+		<echo>Do precompilation of smcfs.ear file</echo>
+		<java classname="weblogic.appc">
+			<arg line=" -forceGeneration -O -k -verbose ${INSTALL_DIR}/external_deployments/smcfs.ear "/>
+			<classpath>
+				<pathelement location="${WL_HOME}/server/lib/api.jar"/>
+				<pathelement location="${WL_HOME}/server/lib/weblogic.jar"/>
+				<pathelement location="${WL_HOME}/server/lib/weblogic_sp.jar"/>
+				<pathelement location="${WL_HOME}/server/lib/ojdbc6.jar"/>
+				<pathelement location="${WL_HOME}/server/lib/weblogic_sp.jar"/>
+				<pathelement location="${JAVA_HOME}/jre/lib/rt.jar"/>
+				<pathelement location="${JAVA_HOME}/lib/tools.jar"/>
+				<pathelement location="${INSTALL_DIR}/jar/entities/entities.jar" /> 
+				<pathelement location="${INSTALL_DIR}/jar/prerelease/smcfs/9.2.1/yompbe.jar" /> 
+				<pathelement location="${INSTALL_DIR}/jar/prerelease/smcfs/9.2.1/yscpbe.jar" /> 
+				<pathelement location="${INSTALL_DIR}/jar/smcfs/9.2.1/jloox20.jar"/>
+				<pathelement location="${INSTALL_DIR}/jar/smcfs/9.2.1/lxgis20.jar"/>
+				<pathelement path="${java.class.path}"/>
+			</classpath>
+		</java>
+	</target>
+
+	<target name="create-release-client" description="Build COM Client for KOHLS">
+		<antcall target="build-ws.create-release-client"  inheritAll="true"/>
+   	</target>
+
+	<!--This will compile the server jasper files-->
+	<target name="compile-server-jasper">
+		<echo Message="Compiling server jasper Sources"/>
+			
+		<!-- Define the custom Ant task that compiles report definitions -->
+		<taskdef name="jrc" classname="net.sf.jasperreports.ant.JRAntCompileTask">
+	        <classpath refid="kohls.class.path"/>
+	    </taskdef>
+		<jrc srcdir="${devhome}/Foundation/JasperReports" destdir="${devhome}/dist/JasperReports">
+            <classpath refid="kohls.class.path"/>
+            <include name="*.jrxml"/>
+		</jrc>
+	</target>
+
+	<!--This will compile the server jasper files ends -->
+	
+</project>
+
+

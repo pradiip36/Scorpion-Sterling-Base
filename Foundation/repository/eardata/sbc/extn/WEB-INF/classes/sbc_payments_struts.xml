@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Licensed Materials - Property of IBM
+IBM Sterling Business Center
+(C) Copyright IBM Corp. 2012, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="sbc-payment" namespace="/sbc/payments" extends="scuiimpl">
+	<default-class-ref class="com.sterlingcommerce.sbc.core.struts.SBCDefaultStrutsAction"></default-class-ref>
+	<global-results>
+            <result name="MASHUPERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="VALIDATIONERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="AUTHORIZATIONERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="error">/sbc/jsps/apierror.jsp</result>
+			<result name="APIERROR">/sbc/jsps/apierror.jsp</result>
+			<result name="DATAVALIDATIONERROR">/jsps/datavalidationerror.jsp</result>
+	</global-results>
+	<action name="paymentTypeList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+		    <param name="mashupId">getPaymentTypeListAPI</param>
+		    <param name="inputNs">getPaymentTypeListInput</param>
+			<param name="outputNs">getPaymentTypeListOutput</param>
+			<param name="resourceId">SBCSAD000200</param>  
+		    <result name="success">/sbc/payments/search/managePaymentTypes.jsp</result>
+	</action>
+	<action name="getPaymentTypeGroupList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+		<param name="mashupId">getPaymentTypeGroupList</param>
+		<param name="inputNs">getPaymentTypeGroupList_input</param>
+		<param name="outputNs">getPaymentTypeGroupList_output</param>
+		<param name="resourceId">SBCSAD000200</param>
+		<result name="success">/sbc/payments/search/getPaymentTypeList.jsp</result>
+	</action>
+	<action name="createPaymentType" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+		<param name="mashupId">getPaymentTypeGroupList</param>
+		<param name="inputNs">getPaymentTypeGroupList_input</param>
+		<param name="outputNs">getPaymentTypeGroupList_output</param>
+		<param name="resourceId">SBCSAD000201</param> 
+		<result name="success">/sbc/payments/create/loadCreatePaymentType.jsp</result>
+	</action>
+	<action name="showPaymentTypeDetails" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+		<param name="mashupId">showPaymentTypeDetails_multiAPI</param>
+		<param name="resourceId">SBCSAD000202</param> 
+		<result name="success">/sbc/payments/create/PaymentTypeCreated.jsp</result>
+		<result name="APIERROR">/sbc/payments/create/createPaymentTypeError.jsp</result>
+	</action>
+	<action name="openPaymentTypeDetailsFromSearch" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+		<param name="mashupId">openPaymentTypeDetailsFromSearch_multiAPI</param>
+		<param name="resourceId">SBCSAD000202</param> 
+		<result name="success">/sbc/payments/create/PaymentTypeCreated.jsp</result>
+	</action>
+	<action name="deletePaymentType" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+		<param name="mashupId">manageOrgHierarchy_Delete</param>
+		<param name="inputNs">deletePaymentTypeInput</param>
+		<param name="outputNs">deletePaymentTypeOutput</param>
+		<param name="resourceId">SBCSAD000202</param> 
+		<result name="success">/sbc/payments/details/deletePaymentType.jsp</result>
+	</action>
+	<action name="managePaymentType" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+		<param name="mashupId">manageOrgHierarchy</param>
+		<param name="inputNs">managePaymentTypeInput</param>
+		<param name="outputNs">managePaymentTypeOutput</param>
+		<param name="resourceId">SBCSAD000202</param> 
+		<result name="success">/sbc/payments/details/managePaymentTypeDetails.jsp</result>
+		<result name="APIERROR">/sbc/payments/details/modifyPaymentTypeError.jsp</result>
+	</action>
+	<action name="getAuthStrategy">
+		<result name="success">/sbc/payments/details/loadAuthStrategyList.jsp</result>
+	</action>
+	<action name="openPaymentCardTypeSearch" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+		<param name="mashupId">getAllPaymentTypes</param>
+		<param name="resourceId">SBCSAD000203</param> 
+		<param name="inputNs">getPaymentTypeList_input</param>
+		<param name="outputNs">getPaymentTypeList_output</param>
+		<result name="success">/sbc/payments/search/openPaymentCardTypesSearch.jsp</result>
+	</action>
+	<action name="getPaymentCardList" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+		    <param name="mashupId">getPaymentCardListAPI</param>
+		    <param name="inputNs">getPaymentCardListInput</param>
+			<param name="outputNs">getPaymentCardListOutput</param>
+			<param name="resourceId">SBCSAD000203</param>  
+		    <result name="success">/sbc/payments/search/getPaymentCardTypes.jsp</result>
+	</action>
+	<action name="openCreatePaymentCardType" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+		<param name="mashupId">getAllPaymentTypes</param>
+		<param name="resourceId">SBCSAD000204</param> 
+		<param name="inputNs">getPaymentTypeList_input</param>
+		<param name="outputNs">getPaymentTypeList_output</param>
+		<result name="success">/sbc/payments/create/openCreatePaymentCardType.jsp</result>
+	</action>
+	<action name="showPaymentCardTypeDetails" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+		<param name="mashupId">managePaymentCardTypeAPI</param>
+		<param name="resourceId">SBCSAD000204</param> 
+		<param name="inputNs">managePaymentCardTypeInput</param>
+		<param name="outputNs">managePaymentCardTypeOutput</param>
+		<result name="success">/sbc/payments/create/PaymentCardTypeCreated.jsp</result>
+		<result name="APIERROR">/sbc/payments/create/createPaymentCardTypeError.jsp</result>
+	</action>
+	<action name="openPaymentCardTypeDetailsFromSearch" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+		<param name="mashupId">getPaymentCardTypeDetailsAPI</param>
+		<param name="resourceId">SBCSAD000204</param> 
+		<param name="inputNs">managePaymentCardTypeInput</param>
+		<param name="outputNs">managePaymentCardTypeOutput</param>
+		<result name="success">/sbc/payments/create/PaymentCardTypeCreated.jsp</result>
+	</action>
+	<action name="savePaymentCardTypeDetails" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+		<param name="mashupId">managePaymentCardTypeAPI</param>
+		<param name="resourceId">SBCSAD000205</param> 
+		<param name="inputNs">managePaymentCardTypeInput</param>
+		<param name="outputNs">managePaymentCardTypeOutput</param>
+		<result name="success">/sbc/payments/create/savePaymentCardTypeDetails.jsp</result>
+	</action>
+	<action name="deletePaymentCardType" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+		<param name="mashupId">managePaymentCardTypeAPI</param>
+		<param name="inputNs">deletePaymentCardTypeInput</param>
+		<param name="outputNs">deletePaymentCardTypeOutput</param>
+		<param name="resourceId">SBCSAD000205</param> 
+		<result name="success">/sbc/payments/details/deletePaymentType.jsp</result>
+	</action>
+	<action name="getPaymentRuleList">
+		<param name="resourceId">SBCSAD000206</param> 
+		<result name="success">/sbc/payments/search/openpaymentrulesearch.jsp</result>
+	</action>
+	
+	<action name="searchpaymentrules" class="com.sterlingcommerce.ui.web.platform.struts.SCUIPaginatedXAPIMashupAction">
+		<param name="mashupId">getPaymentRuleList_search</param>
+		<param name="inputNs">getPaymentRuleList_Input</param>
+		<param name="outputNs">getPaymentRuleList_Output</param>
+		<param name="resourceId">SBCSAD000206</param> 
+		<result name="success">/sbc/payments/search/managePaymentRules.jsp</result>
+	</action>
+	<action name="openCreatePaymentRule">
+		<param name="resourceId">SBCSAD000207</param>
+		<result name="success">/sbc/payments/create/opencreatepaymentrulescreen.jsp</result>
+	</action>
+	
+	<action name="createAndOpenPaymentDetails" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+		<param name="mashupId">openPaymentRuleDetailsFromCreate_multiAPI</param>
+		<param name="resourceId">SBCSAD000207</param>
+		<result name="success">/sbc/payments/create/loadCreatedPaymentRule.jsp</result>
+		<result name="APIERROR">/sbc/payments/create/createPaymentRuleError.jsp</result>
+	</action>
+	
+	<action name="openPaymentRuleDetailsFromSearch" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+		<param name="mashupId">getPaymentRuleList_Details</param>
+		 <param name="resourceId">SBCSAD000208</param> 
+		<param name="inputNs">getPaymentRuleListDetails_input</param>
+		<param name="outputNs">getPaymentRuleListDetails_output</param>
+		<result name="success">/sbc/payments/create/loadCreatedPaymentRule.jsp</result>
+	</action>
+	
+	<action name="modifyPaymentDetails" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIAggregatorMashupAction">
+		<param name="mashupId">openPaymentRuleDetailsFromCreate_multiAPI</param>
+		<param name="resourceId">SBCSAD000208</param> 
+		<result name="success">/sbc/payments/details/loadpaymentruledetails.jsp</result>
+	</action>
+	
+		<action name="deletePaymentRule" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+			<param name="mashupId">deletePaymentRule_API</param>
+			<param name="inputNs">deletePaymentRuleInput</param>
+			<param name="outputNs">deletePaymentRuleOutput</param>
+			<param name="resourceId">SBCSAD000208</param> 
+			<result name="success">/sbc/payments/details/deletePaymentType.jsp</result>
+		</action>
+		<action name="launchpaymenttypesearchpopup" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+		<param name="mashupId">getPaymentTypeGroupList</param>
+		<param name="inputNs">getPaymentTypeGroupList_input</param>
+		<param name="outputNs">getPaymentTypeGroupList_output</param>
+		<param name="resourceId">SBCSAD000200</param>
+		<result name="success">/sbc/payments/search/getPaymentTypeListPopup.jsp</result>
+	</action>
+	<action name="launchpymtcardtypesearchpopup" class="com.sterlingcommerce.ui.web.platform.struts.SCUIXAPIMashupAction">
+		<param name="mashupId">getAllPaymentTypes</param>
+		<param name="resourceId">SBCSAD000203</param>
+		<param name="inputNs">getPaymentTypeList_input</param>
+		<param name="outputNs">getPaymentTypeList_output</param>
+		<result name="success">/sbc/payments/search/paymentCardTypesSearchPopup.jsp</result>
+	</action>
+		
+	</package>
+</struts>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Licensed Materials - Property of IBM
+IBM Sterling Business Center
+(C) Copyright IBM Corp. 2009, 2011 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+ 
+<mashups>
+    <mashup description="Item Status mashup" endpoint="SBC_CONFIG_END_POINT" 
+    		mashuptype="XAPI" id="kohls-open-searchpage" transactional="true">
+        <classInformation name="com.sterlingcommerce.ui.web.platform.mashup.SCUIXAPIMashup"/>
+       <API Name="getCommonCodeList">
+            <Input>
+                <CommonCode CodeType="ITEM_STATUS" CallingOrganizationCode="xml:CurrentContextOrg:/Organization/@OrganizationCode" />
+            </Input>
+            <Template>
+                <CommonCodeList>
+                    <CommonCode CodeShortDescription="" CodeValue=""/>
+                </CommonCodeList>
+            </Template>
+        </API>    
+   </mashup>
+       <mashup description="Item List mashup" endpoint="SBC_CONFIG_END_POINT" 
+    		mashuptype="XAPI" id="kohls-item-list" transactional="true">
+        <classInformation name="com.sterlingcommerce.ui.web.platform.mashup.SCUIPaginatedXAPIMashup"/>
+		<API FlowName="KohlsGetItemIneligibilityList">
+           <Input>
+                  <ExtnItemInEligibility/>
+            </Input>
+            <Template>
+                <ExtnItemInEligibilityList>
+					<ExtnItemInEligibility ClassID="" ExtnStoreInEligblKey="" FromDate="" ItemID="" ShipNode="" ToDate="" UnitOfMeasure="" /> 
+				</ExtnItemInEligibilityList>
+            </Template>
+        </API>
+</mashup>
+
+   <mashup description="This mashup is used to save the changes made to the  Price List Lines in the summary screen"
+        endpoint="SBC_CONFIG_END_POINT"
+        id="kohls-update-inelg-items" mashuptype="XAPI" transactional="true">
+        <classInformation name="com.sterlingcommerce.ui.web.platform.mashup.SCUIXAPIMashup"/>
+        <API FlowName="KohlsUpdateItemIneligibility">
+            <Input>
+			  <ExtnItemInEligibility ExtnStoreInEligblKey="" FromDate="" ToDate="" />
+            </Input>
+            <Template/>
+        </API>
+    </mashup>
+	   <mashup description="This mashup is used to save the changes made to the  Price List Lines in the summary screen"
+        endpoint="SBC_CONFIG_END_POINT"
+        id="kohls-delete-inelg-items" mashuptype="XAPI" transactional="true">
+        <classInformation name="com.sterlingcommerce.ui.web.platform.mashup.SCUIXAPIMashup"/>
+        <API FlowName="KohlsDeleteInElgWrapperService">
+            <Input>
+			  <ExtnItemInEligibilityList><ExtnItemInEligibility ExtnStoreInEligblKey=""  /></ExtnItemInEligibilityList>
+            </Input>
+            <Template/>
+        </API>
+         </mashup>
+        <mashup description="Search Item mashup" endpoint="SBC_CATALOG_END_POINT" 
+    		mashuptype="XAPI" id="kohls-item-searchItem" transactional="true">
+        <classInformation name="com.sterlingcommerce.ui.web.platform.mashup.SCUIPaginatedXAPIMashup"/>
+        <API Name="getItemList">
+            <Input>
+                <Item GetUnpublishedItems="Y" IgnoreIsSoldSeparately="Y" IgnoreOrdering="N"/>
+            </Input>
+            <Template>
+                <ItemList>
+                    <Item ItemGroupCode="" ItemID="" ItemKey="" IsShippingCntr="" 
+                        OrganizationCode="" UnitOfMeasure="" SubCatalogOrganizationCode="">
+                        <PrimaryInformation EffectiveEndDate="" KitCode="" IsModelItem="" 
+                            EffectiveStartDate="" ItemType="" ProductLine="" ShortDescription="" Status="" IsReturnService="" PrimarySupplier=""/>
+                        <Extn ExtnStyle="" ExtnDept="" ExtnClass="" ExtnSubClass="" />
+                        <ClassificationCodes/>
+                    </Item>
+                </ItemList>
+            </Template>
+        </API>
+    </mashup>
+    <mashup description="This mashup is used to save the changes made to the  Price List Lines in the summary screen"
+        endpoint="SBC_CONFIG_END_POINT"
+        id="kohls-add-inelg-items" mashuptype="XAPI" transactional="true">
+        <classInformation name="com.sterlingcommerce.ui.web.platform.mashup.SCUIXAPIMashup"/>
+        <API FlowName="KohlsAddInElgWrapperService">
+            <Input>
+            <ExtnItemInEligibilityList>
+			  <ExtnItemInEligibility  />
+			</ExtnItemInEligibilityList>
+            </Input>
+            <Template/>
+        </API>
+    </mashup>
+      <mashup description="This mashup is used to fetch the approval search results"
+       endpoint="SBC_PRICING_END_POINT"
+       id="vendor-getVendorList" mashuptype="XAPI" transactional="true">
+		<classInformation name="com.sterlingcommerce.ui.web.platform.mashup.SCUIXAPIMashup"/>
+      <API Name="getOrganizationList">
+        <Input>
+          <Organization  OrganizationCode="" OrganizationCodeQryType="" OrganizationName="" OrganizationNameQryType="" OrganizationRole = "Supplier"/>
+        </Input>
+        <Template>
+          <OrganizationList TotalNumberOfRecords="">
+                        	<Organization OrganizationCode="" OrganizationName=""/>
+                        </OrganizationList>
+        </Template>
+      </API>
+	  </mashup>
+	
+</mashups>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="KohlsRePackShip_subreport2_subreport2" language="groovy" pageWidth="216" pageHeight="802" columnWidth="216" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<queryString language="xPath">
+		<![CDATA[/Shipment/PopulateTaxes/PopulateTax]]>
+	</queryString>
+	<field name="TaxPercentage" class="java.lang.String">
+		<fieldDescription><![CDATA[@TaxPercentage]]></fieldDescription>
+	</field>
+	<field name="TaxSymbol" class="java.lang.String">
+		<fieldDescription><![CDATA[@TaxSymbol]]></fieldDescription>
+	</field>
+	<field name="IsGiftLine" class="java.lang.String">
+		<fieldDescription><![CDATA[/Shipment/@IsGiftLine]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="216" height="15">
+					<printWhenExpression><![CDATA[($F{IsGiftLine}==null)||($F{IsGiftLine}.equalsIgnoreCase(""))]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{TaxSymbol} + " = " + $F{TaxPercentage} + " % "]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

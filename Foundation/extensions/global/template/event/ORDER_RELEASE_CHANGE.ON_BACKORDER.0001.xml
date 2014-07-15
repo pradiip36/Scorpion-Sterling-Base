@@ -1,0 +1,13 @@
+<!-- ORDER_RELEASE_CHANGE.ON_BACKORDER event xml -->
+<Order OrderHeaderKey="" EnterpriseCode="" OrderNo="" DocumentType="" SellerOrganizationCode="" >
+   <OrderLines >
+      <OrderLine OrderLineKey="" OrderedQty="" OriginalOrderedQty="" PrimeLineNo=""  SubLineNo="" >
+	 <Item ItemID="" ProductClass="" UnitOfMeasure=""/>
+	<StatusBreakupForBackOrderedQty >
+            <BackOrderedFrom OrderReleaseStatusKey="" OrderReleaseKey="" Status="" StatusDescription="" StatusDate="" OrderLineScheduleKey="" BackOrderedQuantity="" >
+               <Details ExpectedDeliveryDate="" ExpectedShipmentDate="" TagNumber="" ShipNode=""/>
+            </BackOrderedFrom>
+         </StatusBreakupForBackOrderedQty>
+      </OrderLine>
+   </OrderLines>
+</Order>

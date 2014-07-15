@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="PickupOrderPortletExtn"
+        extnPackage="extn.home.portlets"
+        originalScreen="wsc.home.portlets.PickupOrderPortlet"
+        originalScreenPackage="wsc.home.portlets" type="diffrential">
+        <Items>
+            <ContentPane _sc_extensibility_moveOrder="8"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="portletHeaderPanel"
+                class="customerMessageBox" uId="extn_contentpaneInstructions"/>
+            <ContentPane _sc_extensibility_moveOrder="4"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="txtCustFirstName" uId="extn_contentpaneCustName"/>
+            <ContentPane _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="portletPanel" renderHidden="false"/>
+            <Button _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="bFindPickUpOrder"
+                class="idxSpecialButton idxButtonIcon" label="$(_scSimpleBundle:extn_Find_Order)"/>
+            <Button _sc_extensibility_moveOrder="7"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="pnlSearchBar"
+                class="idxSpecialButton idxButtonIcon"
+                label="$(_scSimpleBundle:advancedSearch)" uId="extn_buttonAdvanceSearch"/>
+            <Label _sc_extensibility_moveOrder="9"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpaneInstructions"
+                class="primaryInformation" uId="extn_labelInstructions" value="$(_scSimpleBundle:extn_Scan_or_enter_order_receipt_ID_or_enter_at_least_one_search_criteria_to_find_an_order_)"/>
+            <Label _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="portletName" value="$(_scSimpleBundle:extn_Customer_Pick_Up)"/>
+            <Link _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="advanceSearch" renderHidden="true"/>
+            <TextField _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="txtOrderNo" label="$(_scBundle:extn_Order_Receipt_Number)"/>
+            <TextField _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="txtPhoneNo" uId="txtOrderNo"/>
+            <TextField _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="txtPhoneNo" label="$(_scBundle:extn_Phone_Number)"/>
+            <TextField _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="txtCustLastName" label="$(_scBundle:extn_Name_Last_First_)"/>
+            <TextField _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="txtCustFirstName" uId="txtCustLastName"/>
+            <TextField _sc_extensibility_moveOrder="5"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpaneCustName" uId="txtCustLastName"/>
+            <TextField _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="txtCustFirstName" label="$(_scSimpleBundle:blank)"/>
+            <TextField _sc_extensibility_moveOrder="3"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="txtCustLastName" uId="txtCustFirstName"/>
+            <TextField _sc_extensibility_moveOrder="6"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneCustName" uId="txtCustFirstName"/>
+        </Items>
+        <Subscribers>
+            <Local>
+                <Subscriber description="test" eventId="afterScreenInit"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="extInitialize"/>
+                </Subscriber>
+                <Subscriber description="extended mashup handler"
+                    eventId="onExtnMashupCompletion" isExtn="true" sequence="51">
+                    <Handler methodName="extnHandleMashupCompletion"/>
+                </Subscriber>
+                <Subscriber eventId="extn_buttonAdvanceSearch_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="advanceSearchAction"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+        <MashupRefs>
+            <Behavior>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getSessionInfo_mashup" mashupRefId="extn_getSessionInfo_mashup"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getShipmentsByReceiptId" mashupRefId="extn_searchReceiptId"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_getShipmentListForPickup" mashupRefId="extn_searchPickupOrders"/>
+            </Behavior>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

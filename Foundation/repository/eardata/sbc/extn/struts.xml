@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+                        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <include file="sic_struts.xml"/>
+    <include file="scuiimpl_struts.xml"/>
+    <include file="sbc_core_struts.xml"/>
+    <include file="sbc_pricing_struts.xml"/>
+    <include file="sbc_item_struts.xml"/>
+    <include file="sbc_system_struts.xml"/>
+    <include file="sbc_common_struts.xml"/>
+    <include file="sbc_systemconfig_struts.xml"/>
+    <include file="sbc_inventory_struts.xml"/>
+    <include file="sbc_common_code_struts.xml"/>
+    <include file="sbc_datasync_struts.xml"/>
+    <include file="sbc_payments_struts.xml"/>
+    <include file="sbc_financial_struts.xml"/>
+	<include file="sbc_kohls_extn_struts.xml"/>
+</struts>

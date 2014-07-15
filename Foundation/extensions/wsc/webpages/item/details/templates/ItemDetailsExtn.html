@@ -1,0 +1,398 @@
+		<div>
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_otherPrimaryPane' , 
+		_sc_extensibility_operation : 'insert' , 
+		'class' : 'isccsScreen singlecolumntable' , 
+		_sc_extensibility_moveOrder : '16' , 
+		_sc_extensibility_referenceUId : 'extn_SKUNumber' , 
+		_sc_extensibility_position : 'before'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_locationPanel' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '21' , 
+		_sc_extensibility_referenceUId : 'ItemMoreImages' , 
+		_sc_extensibility_position : 'after'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	title : 			this.getSimpleBundleString('extn_Locations')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_locationPanel' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '22' , 
+		_sc_extensibility_referenceUId : 'refreshRelatedItem' , 
+		_sc_extensibility_position : 'before'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_locationPanel' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '23' , 
+		_sc_extensibility_referenceUId : 'tab1' , 
+		_sc_extensibility_position : 'last'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_locationPanel' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '24' , 
+		_sc_extensibility_referenceUId : 'ItemOverview' , 
+		_sc_extensibility_position : 'after'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_locationPanel' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '25' , 
+		_sc_extensibility_referenceUId : 'tab1' , 
+		_sc_extensibility_position : 'last'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'pnlImages' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '26' , 
+		_sc_extensibility_referenceUId : 'tab1' , 
+		_sc_extensibility_position : 'after'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'pnlImages' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '27' , 
+		_sc_extensibility_referenceUId : 'tab1' , 
+		_sc_extensibility_position : 'last'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'pnlRelated_Items'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_lblItemDesc' , 
+		_sc_extensibility_operation : 'insert' , 
+		'class' : 'primaryInformation blockComponent productModalTitle' , 
+		_sc_extensibility_moveOrder : '1' , 
+		_sc_extensibility_referenceUId : 'fieldset_primaryPanel' , 
+		_sc_extensibility_position : 'before'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'OrderLine.ItemDetails.PrimaryInformation.DisplayItemDescription'
+,
+		 dynamicBindingFunc : 			'getItemDescription'
+,
+		 namespace : 			'extn_ShipmentLine'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_lblItemDesc' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '2' , 
+		_sc_extensibility_referenceUId : 'fieldset_primaryPanel' , 
+		_sc_extensibility_position : 'after'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_lblItemDesc' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '3' , 
+		_sc_extensibility_referenceUId : 'DST_SecondaryInfoPanel' , 
+		_sc_extensibility_position : 'before'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_lblItemDesc' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '4' , 
+		_sc_extensibility_referenceUId : 'selVariation' , 
+		_sc_extensibility_position : 'last'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_lblItemDesc' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '5' , 
+		_sc_extensibility_referenceUId : 'variationItemPnl' , 
+		_sc_extensibility_position : 'before'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_lblItemDesc' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '6' , 
+		_sc_extensibility_referenceUId : 'pnlOverview' , 
+		_sc_extensibility_position : 'last'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_lblItemDesc' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '7' , 
+		_sc_extensibility_referenceUId : 'DST_SecondaryInfoPanel' , 
+		_sc_extensibility_position : 'before'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_lblItemDesc' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '8' , 
+		_sc_extensibility_referenceUId : 'DST_SecondaryInfoPanel' , 
+		_sc_extensibility_position : 'before'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_lblItemDesc' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '9' , 
+		_sc_extensibility_referenceUId : 'variationPanel' , 
+		_sc_extensibility_position : 'before'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_lblItemDesc' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '10' , 
+		_sc_extensibility_referenceUId : 'variationItemPnl' , 
+		_sc_extensibility_position : 'before'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_lblItemDesc' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '11' , 
+		_sc_extensibility_referenceUId : 'pricePanel' , 
+		_sc_extensibility_position : 'before'  
+	 					}">
+		 	</div>  
+			<div data-dojo-type="sc/plat/dojo/widgets/ControllerWidget" data-dojo-props="data_dojo_props_diff: {
+				uId: 'extn_itemLocations',
+				packageName: 'extn.item.details',
+				className: 'ItemLocations',
+				handleInit: true,
+			_sc_extensibility_operation: 'insert',
+			_sc_extensibility_referenceUId: 'extn_locationPanel',
+			_sc_extensibility_position: 'first',
+			_sc_extensibility_moveOrder: '28',
+			scExtensionDataFn: function() {
+				return {
+				}
+			}}">
+	</div>
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_SKUNumber' , 
+		_sc_extensibility_operation : 'insert' , 
+		'class' : 'autoLabelZeroWidth' , 
+		_sc_extensibility_moveOrder : '12' , 
+		_sc_extensibility_referenceUId : 'extn_lblItemDesc' , 
+		_sc_extensibility_position : 'after'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_SKU_')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'ItemID'
+,
+		 dynamicBindingFunc : 			'getSKU'
+,
+		 namespace : 			'extn_ShipmentLine'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_SKUNumber' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '17' , 
+		_sc_extensibility_referenceUId : 'extn_otherPrimaryPane' , 
+		_sc_extensibility_position : 'first'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_SKUStatus' , 
+		_sc_extensibility_operation : 'insert' , 
+		'class' : 'autoLabelZeroWidth' , 
+		_sc_extensibility_moveOrder : '13' , 
+		_sc_extensibility_referenceUId : 'extn_SKUNumber' , 
+		_sc_extensibility_position : 'after'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_SKU_Status')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'SkuStatus'
+,
+		 dynamicBindingFunc : 			'getSKUStatus'
+,
+		 namespace : 			'extn_ShipmentLine'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_SKUStatus' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '18' , 
+		_sc_extensibility_referenceUId : 'extn_otherPrimaryPane' , 
+		_sc_extensibility_position : 'last'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_UPC' , 
+		_sc_extensibility_operation : 'insert' , 
+		'class' : 'autoLabelZeroWidth' , 
+		_sc_extensibility_moveOrder : '14' , 
+		_sc_extensibility_referenceUId : 'pricePanel' , 
+		_sc_extensibility_position : 'before'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_UPC')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'OrderLine.ItemDetails.ItemAliasList.ItemAlias'
+,
+		 dynamicBindingFunc : 			'getUPC'
+,
+		 namespace : 			'extn_ShipmentLine'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_UPC' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '19' , 
+		_sc_extensibility_referenceUId : 'extn_otherPrimaryPane' , 
+		_sc_extensibility_position : 'last'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'lblUnitPrice'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_retailPrice' , 
+		_sc_extensibility_operation : 'insert' , 
+		'class' : 'autoLabelZeroWidth' , 
+		_sc_extensibility_moveOrder : '15' , 
+		_sc_extensibility_referenceUId : 'lblUnitPrice' , 
+		_sc_extensibility_position : 'after'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Retail_price')
+,	
+			 	bindingData : 	{
+		 currencyBinding : 	{
+		 path : 			'OrderLine.ItemDetails.PrimaryInformation.CostCurrency'
+,
+		 namespace : 			'extn_ShipmentLine'
+	}
+,
+		 sourceBinding : 	{
+		 path : 			'OrderLine.LinePriceInfo.RetailPrice'
+,
+		 dynamicBindingFunc : 			'getRetailPrice'
+,
+		 namespace : 			'extn_ShipmentLine'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Image" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'itemImage'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Image" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_OpenAPIImage' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '20' , 
+		_sc_extensibility_referenceUId : 'itemImage' , 
+		_sc_extensibility_position : 'after'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 imageBindings : 	{
+		 imageUrl : 	{
+		 path : 			'ImageLocation'
+	}
+,
+		 imageIcon : 	{
+		 path : 			'ImageID'
+	}
+	}
+,
+		 sourceBinding : 	{
+		 path : 			'OrderLine.ItemDetails.PrimaryInformation'
+,
+		 namespace : 			'extn_ShipmentLine'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		</div>

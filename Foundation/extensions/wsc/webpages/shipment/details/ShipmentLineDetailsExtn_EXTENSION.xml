@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="ShipmentLineDetailsExtn"
+        extnPackage="extn.shipment.details"
+        originalScreen="wsc.shipment.details.ShipmentLineDetails"
+        originalScreenPackage="wsc.shipment.details" type="diffrential">
+        <Items>
+            <ContentPane _sc_extensibility_moveOrder="18"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="itemdescriptionLink"
+                class="inline" uId="extn_itemID_contentPane"/>
+            <ContentPane _sc_extensibility_moveOrder="8"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="itemdescriptionLink"
+                class="inline" uId="extn_contentpanePickedQty"/>
+            <ContentPane _sc_extensibility_moveOrder="23"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="quantityLabelDetails" uId="extn_contentpanePickedQty"/>
+            <ContentPane _sc_extensibility_moveOrder="24"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="Popup_navigationPanel" uId="extn_contentpanePickedQty"/>
+            <ContentPane _sc_extensibility_moveOrder="25"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_contentpaneOrderedQty" uId="extn_contentpanePickedQty"/>
+            <ContentPane _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="itemdescriptionLink" uId="extn_contentpaneOrderedQty"/>
+            <ContentPane _sc_extensibility_moveOrder="9"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="itemdescriptionLink" uId="extn_contentpaneOrderedQty"/>
+            <ContentPane _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="QtyUomPanel" renderHidden="true"/>
+            <Label _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="itemdescriptionLink" renderHidden="true"/>
+            <Label _sc_extensibility_moveOrder="19"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_itemID_contentPane" uId="itemdescriptionLink"/>
+            <Label _sc_extensibility_moveOrder="14"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="itemdescriptionLink"
+                class="fieldLabel blockComponent" uId="extn_item_description">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="getItemDescriptionWithUPC"
+                        namespace="ShipmentLine" path="ShipmentLine.OrderLine.ItemDetails.PrimaryInformation.ShortDescription"/>
+                </BindingData>
+            </Label>
+            <Label _sc_extensibility_moveOrder="20"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_itemID_contentPane" uId="extn_item_description"/>
+            <Label _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="QtyUomPanel"
+                renderHidden="true" uId="extn_label_pickedUp" value="$(_scSimpleBundle:ShipmentComplete)"/>
+            <Label _sc_extensibility_moveOrder="3"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpaneOrderedQty" uId="extn_label_pickedUp"/>
+            <Label _sc_extensibility_moveOrder="7"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneOrderedQty" uId="extn_label_pickedUp"/>
+            <Label _sc_extensibility_moveOrder="13"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneOrderedQty" uId="extn_labelPickedStatus">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getLineStatus"
+                        namespace="ShipmentLine" path="OrderLine.Status"/>
+                </BindingData>
+            </Label>
+            <DataLabel _sc_extensibility_moveOrder="15"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_contentpaneOrderedQty"
+                class="fieldLabel blockComponent"
+                label="$(_scBundle:extn_Kohls_UPC)" uId="extn_kohls_upc">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getKohlsUPC"
+                        namespace="ShipmentLine" path="ShipmentLine.OrderLine.ItemDetails.ItemAliasList"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="21"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_itemID_contentPane" uId="extn_kohls_upc"/>
+            <DataLabel _sc_extensibility_moveOrder="10"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_contentpanePickedQty"
+                class="fieldLabel blockComponent"
+                label="$(_scBundle:extn_Quantity_Picked)" uId="extn_datalabelQuantityPicked">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="getBackroomPickQty"
+                        namespace="ShipmentLine" path="BackroomPickedQuantity"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="4"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneOrderedQty"
+                class="fieldLabel blockComponent"
+                label="$(_scBundle:extn_Ordered_Quantity)" uId="extn_datalabelOrderedQty">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="getOriginalOrderedQty"
+                        namespace="ShipmentLine" path="ShipmentLine.OrderLine.OriginalOrderedQty"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="5"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_contentpaneOrderedQty" uId="extn_datalabelOrderedQty"/>
+            <DataLabel _sc_extensibility_moveOrder="6"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpaneOrderedQty" uId="extn_datalabelOrderedQty"/>
+            <DataLabel _sc_extensibility_moveOrder="16"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="extn_contentpaneOrderedQty" uId="extn_datalabelOrderedQty"/>
+            <DataLabel _sc_extensibility_moveOrder="17"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="extn_contentpaneOrderedQty" uId="extn_datalabelOrderedQty"/>
+            <DataLabel _sc_extensibility_moveOrder="22"
+                _sc_extensibility_operation="move"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="extn_contentpanePickedQty" uId="extn_datalabelOrderedQty"/>
+        </Items>
+    </ScreenExtension>
+</ExtensionMetaData>

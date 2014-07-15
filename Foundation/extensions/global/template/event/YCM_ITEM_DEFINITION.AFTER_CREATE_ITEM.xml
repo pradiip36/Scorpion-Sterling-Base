@@ -1,0 +1,5 @@
+<Item Action="" ItemID="" ItemKey="" OrganizationCode="" UnitOfMeasure="">
+  <PrimaryInformation PrimarySupplier="" />
+  <InventoryParameters OnhandSafetyFactorQuantity="" /> 
+  <Extn KohlsEligibleBulkMarkReq="" ExtnShipNodeSource="" KohlsSafetyFactorReq="" ExtnDept="" ExtnClass="" ExtnSubClass="" ExtnStyle=""/>
+</Item>

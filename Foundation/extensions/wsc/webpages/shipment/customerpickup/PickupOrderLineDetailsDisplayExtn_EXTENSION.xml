@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="PickupOrderLineDetailsDisplayExtn"
+        extnPackage="extn.shipment.customerpickup"
+        originalScreen="wsc.shipment.customerpickup.PickupOrderLineDetailsDisplay"
+        originalScreenPackage="wsc.shipment.customerpickup" type="diffrential">
+        <Items>
+            <Label _sc_extensibility_moveOrder="4"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="itemdescriptionLink"
+                class="fieldLabel blockComponent" uId="extn_itemDescription_label">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="getItemDescriptionWithSKU"
+                        namespace="ShipmentLine" path="ShipmentLine.OrderLine.ItemDetails.PrimaryInformation.ShortDescription"/>
+                </BindingData>
+            </Label>
+            <Label _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="itemdescriptionLink" renderHidden="true"/>
+            <DataLabel _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="itemdescriptionLink"
+                class="fieldLabel blockComponent"
+                label="$(_scBundle:extn_Kohls_UPC)" uId="extn_datalabel_KohlsUPC">
+                <BindingData>
+                    <SourceBinding dynamicBindingFunc="getKohlsUPC"
+                        namespace="ShipmentLine" path="ShipmentLine.OrderLine.ItemDetails.ItemAliasList"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="5"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="quantityLabelDetails"
+                label="$(_scBundle:OrderedQuantity)" uId="extn_quantityLabel">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="getOriginalOrderedQty"
+                        namespace="ShipmentLine" path="ShipmentLine.OrderLine.OriginalOrderedQty"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_moveOrder="6"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="before"
+                _sc_extensibility_referenceUId="quantityLabelDetails"
+                label="$(_scBundle:extn_Quantity_Picked)" uId="extn_quantityPicked">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="getBackroomPickedQty"
+                        namespace="ShipmentLine" path="ShipmentLine.BackroomPickedQuantity"/>
+                </BindingData>
+            </DataLabel>
+            <DataLabel _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="quantityLabelDetails" renderHidden="true"/>
+        </Items>
+    </ScreenExtension>
+</ExtensionMetaData>

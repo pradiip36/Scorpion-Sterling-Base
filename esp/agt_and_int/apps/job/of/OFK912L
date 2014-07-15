@@ -1,0 +1,116 @@
+#!/usr/bin/ksh
+#
+#     Program Name:  OFK912L
+#           Author:  Mark Yearling
+#     Date Created:  2011, January
+#  Program Purpose:  This stub calls onto a OF script for managing agent 
+#                    servers based on the arguments passed.
+#         Argument:  <process_name> <action> <release>
+#          Example:  OFK920U ShipConfirmationServer stop of
+#
+# Modification Log:
+#                    02/09/2014 - Todd Winter(TKMAZ37) - Linux Conversion
+#                          Removed ESP upload, added support for environments A-E,
+#                          fixed env variables, added echoing of the ESP log
+#
+#
+#
+########################################################################
+########################################################################
+# DATA PART OF PROGRAM
+########################################################################
+########################################################################
+
+########################################################################
+# SET PARAMETER VALUES
+readonly scriptname=${0}
+readonly process_name=${1}
+readonly action_type=${2}
+typeset -u release_env
+readonly release_env=${3}
+########################################################################
+
+echo ${release_env}
+if [[ ${release_env} == [A-E] ]] then
+  release_log="of_${release_env}"
+else
+  release_log="of"
+fi
+
+########################################################################
+# RUN REQUIRED PROFILES
+#   Execute the user's profile
+print 'BEGIN LOADING PROFILE'
+  export PATH="/usr/local/bin:$PATH"
+  . /srv/apps/profile/admin
+print 'END LOADING PROFILE'
+print
+
+#   Execute the Kohl's database environment
+print 'BEGIN LOADING ksetdblogin'
+. ${K_SH}/ksetdblogin ${release_env}
+print 'END LOADING ksetdblogin'
+print
+
+########################################################################
+
+
+########################################################################
+# SET JOB CONSTANTS
+readonly log="${K_LOG}/${release_log}/OFK912_$(date -u +%Y-%m-%dT%T)_${$}.txt"
+
+readonly oms_script="${K_SRC}/of/OF_Manage_Agent.sh"
+########################################################################
+
+
+########################################################################
+# VARIABLES THAT WILL BE SET IN THE PROCEDURE PART OF PROGRAM
+unset omsscriptrc
+unset rc
+########################################################################
+
+########################################################################
+########################################################################
+# PROCEDURE PART OF PROGRAM
+########################################################################
+########################################################################
+{
+  print "START SCRIPT'S STDOUT/STDERR"
+  print
+
+  # EXECUTE THE SCRIPT
+  cmdstr="${oms_script} ${process_name} ${action_type} ${release_env}"
+  print "OMS SCRIPT: ${cmdstr}"
+  print
+
+  ${cmdstr}
+
+  # CHECK THE RETURN CODE
+  let omsscriptrc=${?}
+
+  print
+  print "END SCRIPT'S STDOUT/STDERR"
+  print
+  print "ARG0: CALLING PROGRAM       = ${scriptname}"
+  print "ARG1: PROCESS NAME          = ${process_name}"
+  print "ARG2: ACTION TYPE           = ${action_type}"
+  print "ARG3: RELEASE ENVIRONMENT   = ${release_env}"
+  print "VAL:  LOGS DIRECTORY        = `hostname`:${K_LOG}"
+  print "VAL:  SOURCE CODE DIRECTORY = `hostname`:${K_SRC}"
+  print "VAL:  FULL PATH TO LOG FILE = `hostname`:${log}"
+  print "VAL:  FULL PATH TO SCRIPT   = `hostname`:${oms_script}"
+  print "VAR:  RC FROM THE SCRIPT    = ${omsscriptrc}"
+
+} > ${log} 2>&1
+
+########################################################################
+# Display log file for ESP
+fold -w 131 ${log}
+########################################################################
+
+
+
+########################################################################
+# Exit the script with the return code from your batch program
+exit ${rc}
+########################################################################

@@ -1,0 +1,29 @@
+<Shipment AssignedToUserId="" ExpectedShipmentDate ="" OrderNo="" ShipmentKey =""  EnterpriseCode =""  RequestedDeliveryDate =""  Currency =""  Status =""  HoldLocation =""  OriginalShipmentKey =""  RequestedShipmentDate =""  TransactionId =""  ShipmentNo =""  GiftFlag =""  ShipNode =""  SellerOrganizationCode ="" ShipDate="">
+	<ShipmentLines TotalNumberOfRecords="">
+		<ShipmentLine ItemDesc="" ItemID="" ShipmentLineKey =""  OrderHeaderKey =""  ShipmentKey =""  ShipmentSubLineNo =""  OrderLineKey =""  BackroomPickedQuantity =""  ShipmentLineNo =""  OrderNo ="" Quantity="">
+			<OrderLine IsBundleParent =""  ItemGroupCode =""  GiftFlag ="" HoldReasonCode="" OrderHeaderKey="" OrderLineKey="" OriginalOrderedQty="" RemainingQty="">
+				<LinePriceInfo UnitPrice ="" >
+				</LinePriceInfo>
+				<PersonInfoMarkFor IsCommercialAddress =""  MiddleName =""  LastName =""  DayFaxNo =""  EveningPhone =""  AddressLine1 =""  City =""  MobilePhone =""  ZipCode =""  State =""  DayPhone =""  Country =""  EveningFaxNo =""  PreferredShipAddress =""  EMailID =""  FirstName =""  PersonInfoKey ="" >
+				</PersonInfoMarkFor>
+				<ItemDetails UnitOfMeasure =""  ItemGroupCode =""  ItemID ="" >
+					<PrimaryInformation ImageLocation ="" ShortDescription="" ExtendedDisplayDescription =""  ImageID =""  ImageLabel =""/>
+					<ItemAliasList>
+						<ItemAlias AliasValue =""/>
+					</ItemAliasList>
+					<CategoryList>
+						<Category CategoryID="" CategoryKey="" CategoryPath=""/>
+					</CategoryList>
+					<Extn ExtnDept="" />
+				</ItemDetails>
+			</OrderLine>
+			<Order OrderDate="">
+				<PersonInfoBillTo/>
+					<PaymentMethods/>
+			</Order>
+		</ShipmentLine>
+	</ShipmentLines>
+	<BillToAddress IsCommercialAddress =""  MiddleName =""  LastName =""  DayFaxNo =""  EveningPhone =""  AddressLine1 =""  City =""  MobilePhone =""  ZipCode =""  State =""  DayPhone =""  Country =""  EveningFaxNo =""  PreferredShipAddress =""  EMailID =""  FirstName =""  PersonInfoKey =""/>
+	<Extn ExtnHoldLocationID="" ExtnHoldLocationDesc=""  ExtnShipmentIndicator="" ExtnStorePreencReceiptID="" ExtnSuspendedPickup=""/>
+	<Status Description="" Status=""/>
+</Shipment>

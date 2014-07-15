@@ -1,0 +1,12 @@
+<!-- ORDER_CHANGE.ON_CANCEL event xml -->
+<Order EnterpriseCode="" DocumentType="" OrderNo="" SellerOrganizationCode="" OrderHeaderKey="" >
+   <OrderLines >
+   <!--ChangeInOrderedQty is returned with sign. In case of this event it should always come with negative sign. -->
+      <OrderLine OrderedQty="" PrimeLineNo=""  SubLineNo="" ChangeInOrderedQty="">
+	 <Item ItemID="" ProductClass="" UnitOfMeasure=""/>
+		<OrderStatuses>
+                <OrderStatus Status="" StatusDate="" StatusDescription="" StatusQty=""/>
+		</OrderStatuses>
+      </OrderLine>
+   </OrderLines>
+</Order>

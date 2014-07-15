@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- 
+Licensed Materials - Property of IBM
+IBM Sterling Selling And Fulfillment Suite
+(C) Copyright IBM Corp. 2005, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+ -->
+<!--Order_change.On_Success Event XML-->
+<Order>
+    <OrderStatuses>
+        <OrderStatus 
+            OrderHeaderKey="" OrderLineKey="" 
+            OrderReleaseKey="" Status=""
+              StatusQty="" />
+    </OrderStatuses>
+</Order>

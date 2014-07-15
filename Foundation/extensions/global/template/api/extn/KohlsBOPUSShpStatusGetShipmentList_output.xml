@@ -1,0 +1,11 @@
+<Shipments>
+<Shipment Action="" ActualShipmentDate="" CarrierServiceCode="" DocumentType="" EnterpriseCode="" SCAC="" SellerOrganizationCode="" ShipNode="" ShipmentNo="" Status="" StatusDate="" >
+	<Extn ExtnDSVInvoiceNumber="" ExtnDepositLocation="" ExtnIsBypassPick="" ExtnIsHotPick="" ExtnIsPaperPick="" ExtnPickedCustFirstName="" ExtnPickedCustLastName="" ExtnPickedUpBy="" />
+	<ToAddress AddressLine1="" AddressLine2="" AddressLine3="" City="" Country="" ZipCode=""/>
+	<ShipmentLines>
+		<ShipmentLine ItemID="" OrderNo="" PrimeLineNo="" ProductClass="" PurchaseOrderNo="" Quantity="" ShipAdviceNo="" ShipmentLineNo="" SubLineNo="" UnitOfMeasure="">
+			<Extn ExtnDSVLineHandlingChrg="" ExtnDSVUnitCost=""/>
+		</ShipmentLine>
+	</ShipmentLines>
+</Shipment>
+</Shipments>

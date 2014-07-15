@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<YFS_REGION_USAGEList TableName="YFS_REGION_USAGE">
+<RegionUsage Createprogid=".YCPRegionAPI"
+    Createts="2010-10-21T20:38:19-04:00" Createuserid="admin"
+    ItemGroupCode="DS" Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-10-21T20:38:19-04:00" Modifyuserid="sterling"
+    OrganizationCode="KOHLS.COM" Purpose="SOURCING"
+    RegionSchemaKey="ALL_US" RegionUsageKey="2010102120382015074"/>
+<RegionUsage Createprogid=".YCPRegionAPI"
+    Createts="2010-10-21T20:38:19-04:00" Createuserid="admin"
+    ItemGroupCode="PS" Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-10-21T20:38:19-04:00" Modifyuserid="sterling"
+    OrganizationCode="KOHLS.COM" Purpose="SOURCING"
+    RegionSchemaKey="ALL_US" RegionUsageKey="2010102120382015077"/>
+<RegionUsage Createprogid=".YCPRegionAPI"
+    Createts="2010-10-21T20:38:19-04:00" Createuserid="admin"
+    ItemGroupCode="PROD" Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-10-21T20:38:19-04:00" Modifyuserid="sterling"
+    OrganizationCode="KOHLS.COM" Purpose="SOURCING"
+    RegionSchemaKey="ALL_US" RegionUsageKey="2010102120382015079"/>
+</YFS_REGION_USAGEList>

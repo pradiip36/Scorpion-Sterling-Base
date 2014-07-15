@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="Order">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="OrderLines"/>
+      </xs:sequence>
+      <xs:attribute name="DocumentType" use="required" type="xs:integer"/>
+      <xs:attribute name="EnterpriseCode" use="required"/>
+      <xs:attribute name="OrderNo" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OrderLines">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="OrderLine"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OrderLine">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="OrderStatuses"/>
+      </xs:sequence>
+      <xs:attribute name="CarrierServiceCode" use="required"/>
+      <xs:attribute name="ItemID" use="required" type="xs:integer"/>
+      <xs:attribute name="OrderedQty" use="required" type="xs:decimal"/>
+      <xs:attribute name="PrimeLineNo" use="required" type="xs:integer"/>
+      <xs:attribute name="PurchaseOrderNo" use="required" type="xs:NMTOKEN"/>
+      <xs:attribute name="Quantity" use="required" type="xs:decimal"/>
+      <xs:attribute name="ReceiptID" use="required"/>
+      <xs:attribute name="SCAC" use="required"/>
+      <xs:attribute name="SubLineNo" use="required" type="xs:integer"/>
+      <xs:attribute name="UnitOfMeasure" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OrderStatuses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="OrderStatus"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OrderStatus">
+    <xs:complexType>
+      <xs:attribute name="ShipNode" use="required" type="xs:integer"/>
+      <xs:attribute name="Status" use="required" type="xs:decimal"/>
+      <xs:attribute name="StatusDate" use="required"/>
+      <xs:attribute name="StatusDescription" use="required"/>
+      <xs:attribute name="StatusQty" use="required" type="xs:decimal"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

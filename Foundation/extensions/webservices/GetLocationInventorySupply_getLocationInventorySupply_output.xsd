@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema attributeFormDefault="unqualified"
+    elementFormDefault="qualified"
+    targetNamespace="http://www.sterlingcommerce.com/documentation"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:yfc="http://www.sterlingcommerce.com/documentation" xmlns:yfctype="http://www.sterlingcommerce.com/documentation/types">
+    <xsd:annotation
+        yfc:fileName="GetLocationInventorySupply_getLocationInventorySupply_output.xsd" yfc:rootElement="InventorySupplies">
+        <xsd:appinfo source="yfc:structure">
+            <InventorySupplies>
+                <Item hasAttributes="Y">
+                    <Supplies>
+                        <InventorySupply hasAttributes="Y"/>
+                    </Supplies>
+                </Item>
+            </InventorySupplies>
+        </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:import
+        namespace="http://www.sterlingcommerce.com/documentation/types" schemaLocation="datatypes.xsd"/>
+    <xsd:element name="InventorySupplies" type="yfc:InventorySuppliesXSDType"/>
+    <xsd:complexType name="InventorySuppliesXSDType">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="yfc:Item"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="Item">
+        <xsd:annotation yfc:tableName="YFS_ITEM">
+            <xsd:documentation>The table stores product information.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+            <xsd:all>
+                <xsd:element maxOccurs="1" minOccurs="0" ref="yfc:Supplies"/>
+            </xsd:all>
+            <xsd:attribute name="ItemID" type="yfctype:ItemID" use="optional">
+                <xsd:annotation yfc:columnName="ITEM_ID" yfc:tableName="YFS_ITEM">
+                    <xsd:documentation>The unique identifier for the item.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:attribute>
+            <xsd:attribute name="OrganizationCode"
+                type="yfctype:OrgCode" use="optional">
+                <xsd:annotation yfc:columnName="ORGANIZATION_CODE" yfc:tableName="YFS_ITEM">
+                    <xsd:documentation>The organization code whose product information is being stored.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:attribute>
+            <xsd:attribute name="ProductClass" type="xsd:string" use="optional"/>
+            <xsd:attribute name="UnitOfMeasure" type="yfctype:UOM" use="optional">
+                <xsd:annotation yfc:columnName="UOM" yfc:tableName="YFS_ITEM">
+                    <xsd:documentation>The unit of measure for item quantity.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:attribute>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="Supplies">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="yfc:InventorySupply"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="InventorySupply">
+        <xsd:annotation yfc:tableName="YFS_INVENTORY_SUPPLY">
+            <xsd:documentation>This table stores all inventory supply information.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+            <xsd:attribute name="Quantity"
+                type="yfctype:QuantityPositiveAndNegative" use="optional">
+                <xsd:annotation yfc:columnName="QUANTITY" yfc:tableName="YFS_INVENTORY_SUPPLY">
+                    <xsd:documentation>The quantity of this inventory supply. If inventory is not tracked, unplanned, or infinite, the value may be Java's Integer.MAX_VALUE, Java's Long.MAX_VALUE, or the RealisticQuantityForInfiniteInventory property (if set)</xsd:documentation>
+                </xsd:annotation>
+            </xsd:attribute>
+            <xsd:attribute name="SupplyType" type="yfctype:Text-40" use="optional">
+                <xsd:annotation yfc:columnName="SUPPLY_TYPE" yfc:tableName="YFS_INVENTORY_SUPPLY">
+                    <xsd:documentation>The supply type of this inventory supply.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:attribute>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

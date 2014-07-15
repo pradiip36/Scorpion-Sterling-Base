@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<YFS_DATA_SECURITY_GROUPList TableName="YFS_DATA_SECURITY_GROUP">
+<DataSecurityGroup Createprogid=".YEntityServlet"
+    Createts="2012-07-27T04:16:09-04:00" Createuserid="tkmauza"
+    CustomerAccessMode="01" DataSecurityGroupId="SIM TEAM"
+    DataSecurityGroupKey="201207270416094631412539"
+    Description="SIM TEAM" DocumentTypeAccessMode="01"
+    EnterpriseAccessMode="02" Lockid="1" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2012-07-31T14:59:41-04:00" Modifyuserid="sterling"
+    OrganizationCode="DEFAULT" ParentGroupKey=" " ShipNodeAccessMode="03"/>
+</YFS_DATA_SECURITY_GROUPList>

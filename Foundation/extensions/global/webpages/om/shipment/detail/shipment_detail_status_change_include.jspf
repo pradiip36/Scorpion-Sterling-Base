@@ -1,0 +1,30 @@
+<%@ page import="com.yantra.yfc.dom.*" %>
+<%
+	boolean bFound = false;
+	String sCurrentTranID = request.getParameter("xml:/Transaction/@TransactionId");
+	YFCElement oAllowedTransaction = null;
+	YFCElement oAllowedTransactions = null;
+	YFCElement oDropStatusList = null;
+	YFCElement oDropStatus = null;
+    YFCElement rootElement = (YFCElement)request.getAttribute("Shipment");
+    if(rootElement != null)
+	{
+        oAllowedTransactions = rootElement.getChildElement("AllowedTransactions"); 
+        if(oAllowedTransactions != null)
+		{
+			for (Iterator i = oAllowedTransactions.getChildren(); i.hasNext() && !bFound;) 
+			{
+                oAllowedTransaction = (YFCElement)i.next();
+				if( equals(oAllowedTransaction.getAttribute("Tranid"),sCurrentTranID) )
+				{
+					bFound = true;
+					break;
+				}
+			}
+			if(oAllowedTransaction != null)
+				oAllowedTransaction.setAttribute("ShowTransaction","Y");
+
+		}
+	}
+	
+%>

@@ -1,0 +1,9 @@
+<Shipments TotalNumberOfRecords="">
+<Shipment Status="1100.025" ShipmentKey="">
+ <ShipmentLines>
+ <ShipmentLine ShipmentKey="" ShipmentLineKey="">
+<Extn ExtnBatchNo=""/> 
+</ShipmentLine>
+</ShipmentLines>
+</Shipment>
+</Shipments>

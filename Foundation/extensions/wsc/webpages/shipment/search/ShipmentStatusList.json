@@ -1,0 +1,33 @@
+		/*
+ * Licensed Materials - Property of IBM
+ * IBM Call Center for Commerce
+ * (C) Copyright IBM Corp. 2013 All Rights Reserved.
+ * US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+ */
+ {
+ 	"StatusList":{
+ 		"Status":[
+ 			{
+ 				"StatusCode" : "1100.70.06.10",
+ 				"StatusKey":"ReadyForBackroomPick"
+ 			},
+ 			{
+ 				"StatusCode" : "1100.70.06.20",
+ 				"StatusKey":"PickInProgress"
+ 			},
+ 			{
+ 				"StatusCode" : "1100.70.06.30",
+ 				"StatusKey":"ReadyForCustomer"
+ 			}, 			
+ 			{
+ 				"StatusCode" : "1400",
+ 				"StatusKey":"ShipmentShipped"
+ 			},
+			{
+ 				"StatusCode" : "1400.2",
+ 				"StatusKey":"Pending Expired Orders"
+ 			}
+ 		]
+ 	}
+ }
+ 

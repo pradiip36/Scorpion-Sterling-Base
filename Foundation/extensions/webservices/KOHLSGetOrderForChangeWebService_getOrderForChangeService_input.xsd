@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema attributeFormDefault="unqualified"
+    elementFormDefault="qualified"
+    targetNamespace="http://www.sterlingcommerce.com/documentation/KOHLSGetOrderForChangeWebService/getOrderForChangeService/input"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:yfc="http://www.sterlingcommerce.com/documentation/KOHLSGetOrderForChangeWebService/getOrderForChangeService/input" xmlns:yfctype="http://www.sterlingcommerce.com/documentation/types">
+    <xsd:annotation
+        yfc:fileName="KOHLSGetOrderForChangeWebService_getOrderForChangeService_input.xsd" yfc:rootElement="Order">
+        <xsd:appinfo source="yfc:structure">
+            <Order hasAttributes="Y"/>
+        </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:import
+        namespace="http://www.sterlingcommerce.com/documentation/types" schemaLocation="datatypes.xsd"/>
+    <xsd:element name="Order" type="yfc:OrderXSDType">
+        <xsd:annotation yfc:tableName="YFS_ORDER_HEADER">
+            <xsd:documentation>This table stores all order documents in the system.  These orders can be further classified into various types of documents. For example, ORDERS, PLANNED ORDERS and any other future types that the system may provide.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:complexType name="OrderXSDType">
+        <xsd:attribute name="DocumentType" type="yfctype:Text-40" use="required">
+            <xsd:annotation yfc:columnName="DOCUMENT_TYPE" yfc:tableName="YFS_ORDER_HEADER">
+                <xsd:documentation>The document type that is associated with this order. For example, Sales Order document (0001), Planned Order document (0002), Return Order document (0003) , and Purchase Order document (0005). This field determines the order's fulfillment cycle and controls the inventory and payment updates performed on the order.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="EnterpriseCode" type="yfctype:OrgCode" use="required">
+            <xsd:annotation yfc:columnName="ENTERPRISE_KEY" yfc:tableName="YFS_ORDER_HEADER">
+                <xsd:documentation>The enterprise that is associated with this order.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="OrderNo" type="yfctype:VarcharDocumentNo" use="required">
+            <xsd:annotation yfc:columnName="ORDER_NO" yfc:tableName="YFS_ORDER_HEADER">
+                <xsd:documentation>The number of the order, which can be passed during order creation or generated based on a system rule setting.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+    </xsd:complexType>
+</xsd:schema>

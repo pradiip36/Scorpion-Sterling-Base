@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Licensed Materials - Property of IBM
+IBM Sterling Store Inventory Management
+(C) Copyright IBM Corp. 2006, 2011 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<Shipments>
+	<Shipment ShipmentNo="" DocumentType="" ExpectedDeliveryDate="" Status="" ShipmentKey="" Createts="" ManifestKey="" ShipNode="" RequestedShipmentDate="" OrderNo="" ShipmentType="" ProfileID="" OrderHeaderKey="">
+		<ToAddress LastName="" FirstName="" AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" DayPhone="" State="" City="" Country="" ZipCode=""/>	
+	<BillToAddress LastName="" FirstName="" AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" DayPhone="" State="" City="" Country="" ZipCode=""/>				
+		<Status Status="" Description=""/>
+		<Containers>
+			<Container ShipmentContainerKey="" ManifestKey=""/>
+		</Containers>
+		<AllowedTransactions>
+			<Transaction  BaseTransactionKey="" /> 
+		</AllowedTransactions>	
+		<LoadShipments >
+			<LoadShipment LoadKey="" />
+		</LoadShipments>			
+	</Shipment>	
+</Shipments>
+

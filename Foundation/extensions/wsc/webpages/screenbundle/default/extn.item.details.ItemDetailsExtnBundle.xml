@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle screenBundleId="extn.item.details.ItemDetailsExtnBundle" screenId="extn.item.details.ItemDetailsExtn">
+    <BundleEntries>
+        <BundleEntry
+            bundleEntryId="extn_locationPanel_ContentPane_title"
+            bundleKey="extn_Locations" bundleValueFn="_scSimpleBundle"
+            property="title" type="WIDGET" uId="extn_locationPanel"/>
+        <BundleEntry bundleEntryId="extn_SKUNumber_DataLabel_label"
+            bundleKey="extn_SKU_" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_SKUNumber"/>
+        <BundleEntry bundleEntryId="extn_SKUStatus_DataLabel_label"
+            bundleKey="extn_SKU_Status" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_SKUStatus"/>
+        <BundleEntry bundleEntryId="extn_UPC_DataLabel_label"
+            bundleKey="extn_UPC" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_UPC"/>
+        <BundleEntry bundleEntryId="extn_retailPrice_DataLabel_label"
+            bundleKey="extn_Retail_price"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_retailPrice"/>
+    </BundleEntries>
+</ScreenBundle>

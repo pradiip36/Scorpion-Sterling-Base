@@ -1,0 +1,34 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: KOHLS PCA Plug-in
+Bundle-SymbolicName: com.kohls.ibm.ocf.pca; singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: registry.KOHLSPlugin
+Bundle-Vendor: KOHLS
+Bundle-Localization: plugin
+Require-Bundle: com.yantra.yfc.rcp,
+ org.eclipse.ui,
+ org.eclipse.core.runtime,
+ com.yantra.yfc.rcp.common
+Eclipse-LazyStart: true
+Bundle-ClassPath: .,lib/barbecue-1.5-beta1.jar,
+ lib/barcode4j-2.0.jar,
+ lib/commons-beanutils-1.8.0.jar,
+ lib/commons-collections-2.1.1.jar,
+ lib/commons-digester-1.7.jar,
+ lib/commons-logging-1.0.4.jar,
+ lib/groovy-all-1.5.5.jar,
+ lib/iReport.jar,
+ lib/iText-2.1.0.jar,
+ lib/jasperreports-3.6.0.jar,
+ lib/xalan.jar,
+ lib/kohlsjasper.jar,
+ lib/serializer.jar,
+ lib/yrcuilib.jar,
+ lib/platform_afc.jar,
+ lib/RXTXcomm.jar,
+ lib/ycsbe.jar,
+ lib/yscpbe.jar,
+ lib/platform_baseutils.jar,
+ lib/icu4j-49_1.jar,
+ resources/reports

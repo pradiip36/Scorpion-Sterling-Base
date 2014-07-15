@@ -1,0 +1,18 @@
+Ext.namespace('sc.sbc.kohls.item.safetyfactor');
+
+sc.sbc.kohls.item.safetyfactor.KohlsCatalogDetailsScreen = function(config) {
+    sc.sbc.kohls.item.safetyfactor.KohlsCatalogDetailsScreen.superclass.constructor.call(this, config);
+}
+Ext.extend(sc.sbc.kohls.item.safetyfactor.KohlsCatalogDetailsScreen, sc.plat.ui.ExtensibleScreen, {
+    className: 'sc.sbc.kohls.item.safetyfactor.KohlsCatalogDetailsScreen',
+    getUIConfig: sc.sbc.kohls.item.safetyfactor.KohlsCatalogDetailsScreenUIConfig,
+    namespaces: {
+        target: [''],
+        source: ['']
+    },
+    namespacesDesc: {
+        targetDesc: [''],
+        sourceDesc: ['']
+    }
+});
+Ext.reg('sbcKohlsCatalogDetailsScreen', sc.sbc.kohls.item.safetyfactor.KohlsCatalogDetailsScreen);

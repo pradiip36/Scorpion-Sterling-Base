@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.shipment.details.ShipmentSummaryExtnBundle" screenId="extn.shipment.details.ShipmentSummaryExtn">
+    <BundleEntries>
+        <BundleEntry bundleEntryId="pnlShipmentLines_TitlePane_title"
+            bundleKey="extn_Items" bundleValueFn="_scSimpleBundle"
+            property="title" type="WIDGET" uId="pnlShipmentLines"/>
+        <BundleEntry
+            bundleEntryId="extn_contentpaneStartCustPick_ContentPane_title"
+            bundleKey="extn_Start_Customer_Pick_Up"
+            bundleValueFn="_scSimpleBundle" property="title"
+            type="WIDGET" uId="extn_contentpaneStartCustPick"/>
+        <BundleEntry
+            bundleEntryId="extn_buttonStartCustPickUp_Button_label"
+            bundleKey="extn_Start_Customer_Pick_Up"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_buttonStartCustPickUp"/>
+        <BundleEntry bundleEntryId="extn_buttonMarkReturn_Button_label"
+            bundleKey="extn_Mark_as_Returned"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_buttonMarkReturn"/>
+        <BundleEntry
+            bundleEntryId="extn_buttonResumePicking_Button_label"
+            bundleKey="extn_Resume_Picking"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_buttonResumePicking"/>
+        <BundleEntry
+            bundleEntryId="extn_labelPickUpLocation_Label_value"
+            bundleKey="extn_The_pick_up_location_for_this_order_is_"
+            bundleValueFn="_scSimpleBundle" property="value"
+            type="WIDGET" uId="extn_labelPickUpLocation"/>
+        <BundleEntry bundleEntryId="extn_labelStoreName_Label_value"
+            bundleKey="Name" bundleValueFn="_scSimpleBundle"
+            property="value" type="WIDGET" uId="extn_labelStoreName"/>
+        <BundleEntry bundleEntryId="extn_labelStorePhone_Label_value"
+            bundleKey="extn_Phone_Number"
+            bundleValueFn="_scSimpleBundle" property="value"
+            type="WIDGET" uId="extn_labelStorePhone"/>
+        <BundleEntry bundleEntryId="extn_labelStoreAddr_Label_value"
+            bundleKey="Addresses" bundleValueFn="_scSimpleBundle"
+            property="value" type="WIDGET" uId="extn_labelStoreAddr"/>
+        <BundleEntry bundleEntryId="extn_labelCityStateZip_Label_value"
+            bundleKey="CityStateZip" bundleValueFn="_scSimpleBundle"
+            property="value" type="WIDGET" uId="extn_labelCityStateZip"/>
+        <BundleEntry bundleEntryId="lblOrderNotFulfilled_Label_value"
+            bundleKey="extn_The_pick_up_location_for_this_order_is_"
+            bundleValueFn="_scSimpleBundle" property="value"
+            type="WIDGET" uId="lblOrderNotFulfilled"/>
+        <BundleEntry bundleEntryId="extn_labelAlertMessage_Label_value"
+            bundleKey="extn_Orders_With_Alerts"
+            bundleValueFn="_scSimpleBundle" property="value"
+            type="WIDGET" uId="extn_labelAlertMessage"/>
+        <BundleEntry
+            bundleEntryId="extn_datalabelPickedUpBy_DataLabel_label"
+            bundleKey="extn_Picked_Up_By" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_datalabelPickedUpBy"/>
+        <BundleEntry bundleEntryId="lblOrderNo_DataLabel_label"
+            bundleKey="Label_OrderNo" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="lblOrderNo"/>
+        <BundleEntry bundleEntryId="lblExpectedShipDate_DataLabel_label"
+            bundleKey="Label_ExpectedShipDate"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="lblExpectedShipDate"/>
+        <BundleEntry
+            bundleEntryId="extn_lblAssignedToUserId_DataLabel_label"
+            bundleKey="Label_AssignedToUser" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_lblAssignedToUserId"/>
+        <BundleEntry
+            bundleEntryId="extn_datalabelShipNo_DataLabel_label"
+            bundleKey="ShipmentNo" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_datalabelShipNo"/>
+        <BundleEntry
+            bundleEntryId="extn_datalabelHolLoc_DataLabel_label"
+            bundleKey="extn_Hold_Locations" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_datalabelHolLoc"/>
+        <BundleEntry
+            bundleEntryId="extn_datalabelOrderDate_DataLabel_label"
+            bundleKey="extn_Order_Date" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_datalabelOrderDate"/>
+        <BundleEntry
+            bundleEntryId="extn_datalabelExpectedPickUpDate_DataLabel_label"
+            bundleKey="extn_Pick_Up_Date" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_datalabelExpectedPickUpDate"/>
+        <BundleEntry
+            bundleEntryId="extn_datalabelPickedUpOn_DataLabel_label"
+            bundleKey="extn_Picked_Up_On"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_datalabelPickedUpOn"/>
+        <BundleEntry
+            bundleEntryId="extn_datalabelCancellationDate_DataLabel_label"
+            bundleKey="extn_Cancelled_Date"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_datalabelCancellationDate"/>
+        <BundleEntry
+            bundleEntryId="extn_datalabelClearDate_DataLabel_label"
+            bundleKey="extn_Cleared_Date" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_datalabelClearDate"/>
+    </BundleEntries>
+</ScreenBundle>

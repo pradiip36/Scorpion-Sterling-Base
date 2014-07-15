@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<InventorySnapShot>
+    <ShipNode CompleteInventoryFlag="" ShipNode="">
+		<Item ItemID="" InventoryItemKey="" ProductClass="" UnitOfMeasure="" InventoryOrganizationCode="" >
+			<SupplyDetails  ETA="" Quantity="" Segment="" SegmentType="" ShipByDate=""
+            SupplyReference="" SupplyReferenceType="" SupplyType="" Track="">			
+			</SupplyDetails>
+			<DemandDetails DemandShipDate="" DemandType="" MinShipByDate="" Quantity="" Segment="" SegmentType="" ShipNode="">  
+			</DemandDetails>
+		</Item>
+    </ShipNode>
+</InventorySnapShot>

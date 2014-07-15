@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--CREATE_ORDER_INVOICE.ON_INVOICE_CREATION XML-->
+<OrderInvoice OrderHeaderKey="">
+	<TaxBreakupList TotalNumberOfRecords="">
+		<TaxBreakup ChargeCategory="" ChargeName="" 
+			LineKey="" Tax=""  TaxName="" TaxPercentage="" />
+	</TaxBreakupList>
+	<LineDetails TotalNumberOfRecords="">
+		<LineDetail OrderLineKey="">
+			<LineChargeList TotalNumberOfRecords="">
+				<LineCharge ChargeName="" ChargeCategory=""
+					ChargePerLine="" InvoicedChargePerLine="" />
+			</LineChargeList>
+		</LineDetail>
+	</LineDetails>
+</OrderInvoice>

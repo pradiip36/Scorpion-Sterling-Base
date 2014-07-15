@@ -1,0 +1,38 @@
+#Do NOT add or remove any lines from this file!  This should be the complete list of every available Agent.
+#If you want to disable something, comment it out.  If you want to enable something, uncomment it.
+#Pulled from Production on May 15, 2014
+#The HEAP flags on the agents are from PRODUCTION.  There should be no reason to change them.
+#
+#Agents that should be running on EVERY lower level environment.  These support the basic functions of OMS.
+#
+HealthMonitor::
+ReleaseOrderAgent::
+ScheduleOrderAgent::KOHLS_HEAP_FLAGS=-Xms2048m -Xmx2048m
+#
+#Agents in this section are dependent on what the project team is testing.
+#
+KohlsATPAgent::KOHLS_HEAP_FLAGS=-Xms2048m -Xmx2048m
+KohlsCloseAgent::
+KohlsConsolidateAddnlInvAgent::
+KohlsEDWFeeds::KOHLS_HEAP_FLAGS=-Xms512m -Xmx4096m
+KohlsExceptionMonAgent::
+KohlsHardTotalsAgent::KOHLS_HEAP_FLAGS=-Xms1024m -Xmx2048m
+KohlsItemEligibilityAgent::
+KohlsItemSafetyFactorAgent::
+KohlsOMSClearanceUpdateAgent:: 
+KohlsOrderInvoiceAgent::KOHLS_HEAP_FLAGS=-Xms782m -Xmx2048m
+KohlsPOAgent::
+KohlsShipAdviceAgent::
+KohlsShipmentInvoiceAgent::
+KohlsShipmentMonitor::
+PaymentCollectionAgent::KOHLS_HEAP_FLAGS=-Xms1024m -Xmx2048m
+PaymentExecutionAgent::
+SentSAToWMoSAgent::
+SentToWMoSAgent::
+#
+# Agents that should probably NEVER need to be run on an LLE
+#
+#KohlsAuditPurgeAgent::KOHLS_HEAP_FLAGS=-Xms1024m -Xmx1024m
+#KohlsHistPurgeAgent::KOHLS_HEAP_FLAGS=-Xms2048m -Xmx2048m
+#KohlsInventoryPurgeAgent::KOHLS_HEAP_FLAGS=-Xms2048m -Xmx2048m
+#KohlsPurgeAgent::KOHLS_HEAP_FLAGS=-Xms2048m -Xmx2048m

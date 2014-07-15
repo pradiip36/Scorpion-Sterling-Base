@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle screenBundleId="extn.editors.ShipmentEditorRTExtnBundle" screenId="extn.editors.ShipmentEditorRTExtn">
+    <BundleEntries>
+        <BundleEntry
+            bundleEntryId="extn_button_RT_printPickTicket_Button_label"
+            bundleKey="PrintPickTicket" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_button_RT_printPickTicket"/>
+        <BundleEntry
+            bundleEntryId="extn_button_RT_startCustomerPick_Button_label"
+            bundleKey="RT_CustomerPickup"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_button_RT_startCustomerPick"/>
+    </BundleEntries>
+</ScreenBundle>

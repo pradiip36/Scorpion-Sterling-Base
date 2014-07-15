@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wizards>
+	<wizard id= "wsc.shipment.wizards.BackroomPickupWizard">
+		<wizardEntities>
+			<!--Modify/Replace OOB Wizard Rule -->
+			<wizardEntity id="FirstPageRule" impl="java:com.kohls.wsc.shipment.backroompick.rules.KohlsBackroomPickLandingPageWizardRule" start="true" last="false" type="RULE">
+				<output value="ItemScanReadOnly"/>
+				<output value="ItemScanMobile"/>
+		  		<output value="ItemScan"/>
+				<output value="UpdateHoldLocation"/>
+				<output value="InvalidShipmentStatus"/>
+				<output value="InvalidShipmentShipNode"/>
+			</wizardEntity>
+		</wizardEntities>
+	</wizard>
+</wizards>

@@ -1,0 +1,9 @@
+<Shipment ShipmentKey="" ShipmentNo="" ShipNode="">
+
+<Containers>
+<Container 
+    ContainerNo="" FormID="" CommitmentCode="" >
+    
+</Container>
+</Containers>
+</Shipment>

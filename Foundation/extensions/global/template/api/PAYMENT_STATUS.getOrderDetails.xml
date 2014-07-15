@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--getOrderDetail Output XML-->
+<Order DocumentType="" EnterpriseCode="" OrderNo="" >    
+    <OrderLines>
+        <!--1 or more order
+        line-->
+        <OrderLine OrderedQty="" OriginalOrderedQty=""
+            PrimeLineNo="" ShipNode="" SubLineNo="" CarrierServiceCode="" SCAC="">     
+		<OrderStatuses>
+			<OrderStatus  ShipNode="" Status="" StatusDate="" StatusDescription="" StatusQty="" />
+			</OrderStatuses>
+        </OrderLine>
+    </OrderLines>    
+    <HeaderCharges>
+        <HeaderCharge ChargeCategory="" ChargeName="" ChargeNameKey=""
+            InvoicedChargeAmount="" ChargeAmount="" Reference="" RemainingChargeAmount=""/>
+    </HeaderCharges>    
+	<ChargeTransactionDetails>
+		<ChargeTransactionDetail AuthorizationExpirationDate="" AuthorizationID="" BookAmount="" ChargeTransactionKey="" ChargeType="" 
+			CollectionDate="" CreditAmount="" HoldAgainstBook="" OpenAuthorizedAmount="" OrderHeaderKey="" 
+			RequestAmount="" SettledAmount="" Status="" StatusReason="" >
+		<InvoiceCollectionDetails>
+			<InvoiceCollectionDetail AmountCollected="" DateInvoiced="" InvoiceNo="" InvoiceType="" TotalAmount="" /> 
+		</InvoiceCollectionDetails>
+		<CreditCardTransactions>
+		  <CreditCardTransaction AuthAmount="" AuthCode="" AuthReturnCode="" AuthReturnFlag="" AuthReturnMessage="" AuthTime="" 
+		  CVVAuthCode="" ChargeTransactionKey="" TranAmount="" TranReturnCode="" TranReturnMessage="" /> 
+		 </CreditCardTransactions>
+		<PaymentMethod ChargeSequence="" CreditCardExpDate="" CreditCardName="" CreditCardNo="" CreditCardType="" DisplayCreditCardNo="" DisplaySvcNo="" FirstName="" LastName="" MaxChargeLimit="" MiddleName="" PaymentReference1="" PaymentReference2="" PaymentReference3="" PaymentType="" SvcNo="" UnlimitedCharges="" >
+		</PaymentMethod>		
+		</ChargeTransactionDetail>
+	</ChargeTransactionDetails>
+	<PaymentMethods>
+      <PaymentMethod ChargeSequence="" CreditCardExpDate="" CreditCardName="" CreditCardNo="" CreditCardType="" DisplayCreditCardNo="" DisplaySvcNo="" FirstName="" LastName="" MaxChargeLimit="" MiddleName="" PaymentReference1="" PaymentReference2="" PaymentReference3="" PaymentType="" SvcNo="" UnlimitedCharges="">
+  </PaymentMethod>
+  </PaymentMethods>
+</Order>

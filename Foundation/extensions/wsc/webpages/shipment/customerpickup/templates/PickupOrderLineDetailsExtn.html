@@ -1,0 +1,340 @@
+		<div>
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_contentpaneOrderedQty' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '6' , 
+		_sc_extensibility_referenceUId : 'shipmentLineDetailsContainer' , 
+		_sc_extensibility_position : 'last'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_contentpaneOrderedQty' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '7' , 
+		_sc_extensibility_referenceUId : 'QtyUomPanel' , 
+		_sc_extensibility_position : 'after'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_contentpanePickedQty' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '9' , 
+		_sc_extensibility_referenceUId : 'ContentPane1' , 
+		_sc_extensibility_position : 'last'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_image_shortage' , 
+		renderHidden : true , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '18' , 
+		_sc_extensibility_referenceUId : 'productScanStatusPanel' , 
+		_sc_extensibility_position : 'last'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_contentpaneScannedQty' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '11' , 
+		_sc_extensibility_referenceUId : 'ContentPane1' , 
+		_sc_extensibility_position : 'last'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/layout/ContentPane" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_contentpaneScannedQty' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '16' , 
+		_sc_extensibility_referenceUId : 'QuantityPanel' , 
+		_sc_extensibility_position : 'last'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_button_undo' , 
+		renderHidden : true , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '2' , 
+		_sc_extensibility_referenceUId : 'itemdescriptionLink' , 
+		_sc_extensibility_position : 'before'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('extn_Undo')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_button_undo' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '3' , 
+		_sc_extensibility_referenceUId : 'itemdescriptionLink' , 
+		_sc_extensibility_position : 'after'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_button_undo' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '4' , 
+		_sc_extensibility_referenceUId : 'cmbShortagesResolution' , 
+		_sc_extensibility_position : 'after'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="dijit/form/Button" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_button_undo' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '15' , 
+		_sc_extensibility_referenceUId : 'extn_contentpaneScannedQty' , 
+		_sc_extensibility_position : 'last'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'itemdescriptionLink'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Label" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_item_description' , 
+		_sc_extensibility_operation : 'insert' , 
+		'class' : 'fieldLabel blockComponent' , 
+		_sc_extensibility_moveOrder : '17' , 
+		_sc_extensibility_referenceUId : 'QtyUomPanel' , 
+		_sc_extensibility_position : 'before'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'ShipmentLine.OrderLine.ItemDetails.PrimaryInformation.ShortDescription'
+,
+		 dynamicBindingFunc : 			'getItemDescriptionWithSKU'
+,
+		 namespace : 			'ShipmentLine'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/NumberTextBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'txtScannedQuantity'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/NumberTextBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'txtScannedQuantity' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '12' , 
+		_sc_extensibility_referenceUId : 'extn_contentpaneScannedQty' , 
+		_sc_extensibility_position : 'first'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/FilteringSelect" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'cmbShortagesResolution'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_Missing_Reason')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_datalabel_KohlsUPC' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '20' , 
+		_sc_extensibility_referenceUId : 'QtyUomPanel' , 
+		_sc_extensibility_position : 'before'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_Kohls_UPC')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'ShipmentLine.OrderLine.ItemDetails.ItemAliasList'
+,
+		 dynamicBindingFunc : 			'getKohlsUPC'
+,
+		 namespace : 			'ShipmentLine'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'quantityLabelDetails'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_datalabelOrderedQty' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '5' , 
+		_sc_extensibility_referenceUId : 'QtyUomPanel' , 
+		_sc_extensibility_position : 'last'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_Ordered_Quantity')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'ShipmentLine.OrderLine.OriginalOrderedQty'
+,
+		 dynamicBindingFunc : 			'getOriginalOrderedQuantity'
+,
+		 namespace : 			'ShipmentLine'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_datalabelOrderedQty' , 
+		_sc_extensibility_operation : 'move' , 
+		_sc_extensibility_moveOrder : '8' , 
+		_sc_extensibility_referenceUId : 'extn_contentpaneOrderedQty' , 
+		_sc_extensibility_position : 'first'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								renderHidden : true , 
+		_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'OrderNoLabel'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_datalabelQtyPicked' , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '10' , 
+		_sc_extensibility_referenceUId : 'extn_contentpanePickedQty' , 
+		_sc_extensibility_position : 'first'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('extn_Picked_Quantity')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'ShipmentLine.BackroomPickedQuantity'
+,
+		 dynamicBindingFunc : 			'getBackroomPickQty'
+,
+		 namespace : 			'ShipmentLine'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_datalabel_quantityLabel' , 
+		renderHidden : true , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '1' , 
+		_sc_extensibility_referenceUId : 'lblScannedQuantity' , 
+		_sc_extensibility_position : 'before'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('OrderedQuantity')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'ShipmentLine.Quantity'
+,
+		 namespace : 			'ShipmentLine'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_datalabelScannedQty' , 
+		renderHidden : false , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '14' , 
+		_sc_extensibility_referenceUId : 'extn_contentpaneScannedQty' , 
+		_sc_extensibility_position : 'last'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('ScannedQuantity')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Quantity'
+,
+		 dynamicBindingFunc : 			'getScannedQuantity'
+,
+		 namespace : 			'PickAll_Input'
+	}
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'change' , 
+		_sc_extensibility_referenceUId : 'quantityLabel'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('OrderedQuantity')
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/DataLabel" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'quantityLabel' , 
+		_sc_extensibility_operation : 'remove' , 
+		_sc_extensibility_moveOrder : '2' , 
+		_sc_extensibility_referenceUId : '_extensibilityHiddenWidgetsHolder' , 
+		_sc_extensibility_position : 'first'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="sc/plat/dojo/widgets/Image" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								uId : 'extn_short_image' , 
+		renderHidden : false , 
+		_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '19' , 
+		imageSrc : 'wsc/resources/css/icons/images/shortLine.png' , 
+		_sc_extensibility_referenceUId : 'extn_image_shortage' , 
+		appendToContextRoot : true , 
+		_sc_extensibility_position : 'first'  
+	 					}">
+		 	</div>  
+		</div>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PLT_QUALIFIED_TAG_TYPEList TableName="PLT_QUALIFIED_TAG_TYPE">
+<QualifiedTagType Createprogid="XMLMigrator"
+    Createts="2010-10-18T16:25:55-04:00" Createuserid="SYSTEM"
+    Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-10-18T16:25:55-04:00" Modifyuserid="sterling"
+    QualifiedTagType="Y.COMPATIBILITY"
+    QualifiedTagTypeDescription="Compatibility" QualifiedTagTypeKey="201010181625553604"/>
+<QualifiedTagType Createprogid="XMLMigrator"
+    Createts="2010-10-18T16:25:55-04:00" Createuserid="SYSTEM"
+    Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-10-18T16:25:55-04:00" Modifyuserid="sterling"
+    QualifiedTagType="Y.VERSION"
+    QualifiedTagTypeDescription="Client Version" QualifiedTagTypeKey="201010181625553605"/>
+</PLT_QUALIFIED_TAG_TYPEList>

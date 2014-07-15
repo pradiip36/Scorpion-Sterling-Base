@@ -1,0 +1,48 @@
+<%@ page import="java.util.*" %>
+<%@ include file="/console/jsp/editable_table_utils.jspf" %>
+
+<%
+		String sOperation = request.getParameter("userOperation");
+		int iNumShipmentLines = 0;
+		YFCElement errors = (YFCElement)request.getAttribute("YFC_EXCEPTIONXML");
+		YFCElement oNewShipment = null;
+		YFCElement oNewShipmentLines = null;
+		YFCElement oExistingShipment = null;
+		YFCElement oExistingShipmentLines = null;
+		YFCElement detailAPIRoot = (YFCElement) request.getAttribute("Shipment"); //Detail API Output
+		//System.out.println("detailAPIRoot---------------->" + detailAPIRoot.toString());
+
+		if(detailAPIRoot != null) {
+			oExistingShipmentLines = detailAPIRoot.getChildElement("ShipmentLines");
+			//System.out.println("oExistingShipmentLines----------->" + oExistingShipmentLines.toString());
+		}
+		//System.out.println("sOperation-->" + sOperation);
+		if(!isVoid(errors) || equals(sOperation,"Y") || equals(sOperation,"DELETE"))
+		{
+			YFCElement root = (YFCElement)request.getAttribute("getRequestDOMOutput");
+			if(root != null)
+			{
+				oNewShipment = root.getChildElement("Shipment");
+				if(oNewShipment != null) {
+					oNewShipmentLines = oNewShipment.getChildElement("ShipmentLines");
+					//System.out.println("oNewShipmentLines---------------->" + oNewShipmentLines.toString());
+				}
+			}
+			mergeDOMGeneral("Shipment",oNewShipmentLines,oExistingShipmentLines,"ShipmentLines","ShipmentLine","ShipmentLineKey","chkEntityKey","ShipmentSubLineNo");
+		}
+		else
+		{
+			
+			//Need to check if it's a blank draft Shipment.if so, add 8 blank rows
+			if(oExistingShipmentLines != null)
+			{
+				YFCNodeList oLineList = oExistingShipmentLines.getElementsByTagName("ShipmentLine");
+				iNumShipmentLines = oLineList.getLength();
+				if(iNumShipmentLines <= 0) {
+					//System.out.println("Calling appendBlankTemplateNodes to append 8 blank rows");
+					appendBlankTemplateNodesGeneral(oExistingShipmentLines,"ShipmentLine","chkEntityKey");
+				}
+			}
+		}
+
+%>

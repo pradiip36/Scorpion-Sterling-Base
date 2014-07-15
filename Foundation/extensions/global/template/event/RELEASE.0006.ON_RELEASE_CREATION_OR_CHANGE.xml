@@ -1,0 +1,63 @@
+<OrderRelease BillToID="" BuyerOrganizationCode="" CarrierServiceCode=""
+    DeliveryMethod="" Division="" DocumentType="" EnterpriseCode=""
+    MinOrderReleaseStatus="" OrderDate="" OrderHeaderKey="" OrderName=""
+    OrderNo="" OrderReleaseKey="" PackListType="" ReceivingNode=""
+    ReleaseNo="" ReqDeliveryDate="" ReqShipDate="" SCAC=""
+    SalesOrderNo="" SellerOrganizationCode="" ShipAdviceNo=""
+    ShipNode="" ShipToKey="" Status="">
+    <Extn ExtnCartonType="" ExtnPickTicketNo="" ExtnRG="" ExtnShipVia=""
+        ExtnTotalReleaseUnits="" ExtnWMSInstType=""/>
+    <PersonInfoShipTo AddressLine1="" AddressLine2="" AddressLine3=""
+        AddressLine4="" AddressLine5="" AddressLine6=""
+        AlternateEmailID="" Beeper="" City="" Company="" Country=""
+        DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo=""
+        EveningPhone="" FirstName="" JobTitle="" LastName=""
+        MiddleName="" MobilePhone="" OtherPhone="" PersonID=""
+        PersonInfoKey="" State="" Suffix="" ZipCode="">
+        <Extn ExtnIsMilitary="" ExtnIsPOBox=""/>
+    </PersonInfoShipTo>
+    <Order Createts="" DocumentType="" EnterpriseCode="" OrderDate="" OrderNo="">
+        <PaymentMethods>
+            <PaymentMethod CreditCardType="" DisplayCreditCardNo=""/>
+        </PaymentMethods>
+        <Promotions>
+            <Promotion PromotionId="">
+                <Extn ExtnCouponAmount="" ExtnCouponPercentage=""/>
+            </Promotion>
+        </Promotions>
+        <Notes NumberOfNotes="">
+            <Note NoteText="" ReasonCode=""/>
+        </Notes>
+        <PersonInfoBillTo AddressLine1="" AddressLine2="" City=""
+            Country="" FirstName="" LastName="" State="" ZipCode=""/>
+        <Extn ExtnHdrGiftReceiptID=""/>
+    </Order>
+    <OrderLines>
+        <OrderLine GiftFlag="" GiftWrap="" LineType="" OpenQty=""
+            OrderHeaderKey="" OrderLineKey="" OrderedQty=""
+            PackListType="" PrimeLineNo="" ReceivingNode="" ShipNode=""
+            ShipToID="" StatusQuantity="" SubLineNo="">
+            <LinePriceInfo RetailPrice="" UnitPrice=""/>
+            <LineCharges>
+                <LineCharge ChargeAmount="" ChargeName=""/>
+            </LineCharges>
+            <LineTaxes>
+                <LineTax TaxName="" TaxPercentage=""/>
+            </LineTaxes>
+            <Instructions>
+                <Instruction InstructionText="" InstructionType=""/>
+            </Instructions>
+            <Notes>
+                <Note NoteText=""/>
+            </Notes>
+            <OrderStatuses>
+                <OrderStatus ShipNode="" Status="" StatusDate=""
+                    StatusDescription="" StatusQty="" StatusReason=""/>
+            </OrderStatuses>
+            <Item ItemDesc="" ItemID="" ItemWeight="" ItemWeightUOM=""
+                ProductClass="" ProductLine="" ShortDescription=""
+                UPCCode="" UnitOfMeasure=""/>
+        </OrderLine>
+    </OrderLines>
+</OrderRelease>
+

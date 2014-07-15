@@ -1,0 +1,24 @@
+<Shipment OrderNo="" ShipmentKey="" ExpectedShipmentDate="" Status="" ShipNode="" EnterpriseCode="">
+	<Extn ExtnHoldLocationID="" ExtnHoldLocationDesc="" ExtnFilterVal=""/>
+	<ShipmentLines TotalNumberOfRecords="">
+		<ShipmentLine ShipmentLineNo="" ShipmentLineKey ="" ItemDesc="" ItemID="" ProductClass="" Quantity="" BackroomPickedQuantity="" ShortageQty="" UnitOfMeasure="">
+			<Extn ExtnMlsLocationIdEsignID=""/>
+			<Order OrderNo="" OrderDate="" >
+				<PersonInfoBillTo AddressLine1="" AddressLine2="" AddressLine3="" AlternateEmailID="" City="" Company="" Country="" DayPhone="" EMailID="" EveningPhone="" FirstName="" LastName="" MiddleName="" State="" TaxGeoCode="" ZipCode=""/>
+			</Order>
+			<OrderLine ItemID="" OriginalOrderedQty="">
+				<ItemDetails ItemID="" OrganizationCode="" UnitOfMeasure="" ColorCode="">
+					<Extn ExtnWebID="" ExtnDept = "" ExtnColorDesc ="" ExtnVendorStyleDesc="" ExtnVendorStyleNo="" ExtnSizeDesc="" ExtnClass="" ExtnSubClass=""/>
+					<PrimaryInformation CostCurrency="" Description="" DisplayItemDescription=""/>
+					<ItemAliasList>
+						<ItemAlias AliasName="" AliasValue=""/>
+					</ItemAliasList>
+					<CategoryList>
+						<Category />
+					</CategoryList>
+				</ItemDetails>
+				<LinePriceInfo UnitPrice="" RetailPrice=""/>
+			</OrderLine>
+		</ShipmentLine>
+	</ShipmentLines>
+</Shipment>

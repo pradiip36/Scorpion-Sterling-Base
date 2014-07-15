@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<YFS_CLASS_ITEM_ATTRList TableName="YFS_CLASS_ITEM_ATTR">
+<ClassificationItemAttribute ATPRule=" "
+    CategoryKey="201010201806438313"
+    ClassificationItemAttributeKey="201010201806438314"
+    Createprogid=".YCMClassificationDtlAPI"
+    Createts="2010-10-20T18:06:43-04:00" Createuserid="admin"
+    DefaultProductClass="Good" InventoryMonitorRule=" "
+    IsSubOnOrderAllowed=" " Lockid="1"
+    Modifyprogid=".YCMClassificationDtlAPI"
+    Modifyts="2012-08-02T16:44:36-04:00" Modifyuserid="tkmayy0" NodeLevelInventoryMonitorRule=" "/>
+<ClassificationItemAttribute ATPRule=" "
+    CategoryKey="201010201807078315"
+    ClassificationItemAttributeKey="201010201807078316"
+    Createprogid=".YCMClassificationDtlAPI"
+    Createts="2010-10-20T18:07:07-04:00" Createuserid="admin"
+    DefaultProductClass=" " InventoryMonitorRule="KOHLS_RT_INV_MONITOR"
+    IsSubOnOrderAllowed=" " Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2011-09-12T17:14:24-04:00" Modifyuserid="sterling" NodeLevelInventoryMonitorRule=" "/>
+<ClassificationItemAttribute ATPRule=" "
+    CategoryKey="201010201807318317"
+    ClassificationItemAttributeKey="201010201807318318"
+    Createprogid=".YCMClassificationDtlAPI"
+    Createts="2010-10-20T18:07:30-04:00" Createuserid="admin"
+    DefaultProductClass=" " InventoryMonitorRule="KOHLS_RT_INV_MONITOR"
+    IsSubOnOrderAllowed=" " Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-10-20T18:07:30-04:00" Modifyuserid="sterling" NodeLevelInventoryMonitorRule=" "/>
+<ClassificationItemAttribute ATPRule=" "
+    CategoryKey="201010201807508319"
+    ClassificationItemAttributeKey="201010201807508320"
+    Createprogid=".YCMClassificationDtlAPI"
+    Createts="2010-10-20T18:07:49-04:00" Createuserid="admin"
+    DefaultProductClass=" " InventoryMonitorRule="KOHLS_RT_INV_MONITOR"
+    IsSubOnOrderAllowed=" " Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-10-20T18:07:49-04:00" Modifyuserid="sterling" NodeLevelInventoryMonitorRule=" "/>
+<ClassificationItemAttribute ATPRule=" "
+    CategoryKey="201010201808118321"
+    ClassificationItemAttributeKey="201010201808118322"
+    Createprogid=".YCMClassificationDtlAPI"
+    Createts="2010-10-20T18:08:11-04:00" Createuserid="admin"
+    DefaultProductClass=" " InventoryMonitorRule=" "
+    IsSubOnOrderAllowed=" " Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-10-20T18:08:11-04:00" Modifyuserid="sterling" NodeLevelInventoryMonitorRule=" "/>
+<ClassificationItemAttribute ATPRule=" "
+    CategoryKey="2010102514190316776"
+    ClassificationItemAttributeKey="2010102514190316777"
+    Createprogid=".YCMClassificationDtlAPI"
+    Createts="2010-10-25T14:19:02-04:00" Createuserid="admin"
+    DefaultProductClass=" " InventoryMonitorRule="KOHLS_RT_INV_MONITOR"
+    IsSubOnOrderAllowed=" " Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-10-25T14:19:02-04:00" Modifyuserid="sterling" NodeLevelInventoryMonitorRule=" "/>
+</YFS_CLASS_ITEM_ATTRList>

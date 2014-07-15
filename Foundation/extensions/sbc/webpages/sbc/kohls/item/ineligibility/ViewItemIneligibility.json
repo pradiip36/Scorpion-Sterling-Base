@@ -1,0 +1,632 @@
+{
+ "model": {
+  "sciId": {
+   "id": "sciId",
+   "value": "screen3",
+   "type": "string"
+  },
+  "className": {
+   "id": "className",
+   "value": "sc.sbc.kohls.item.ineligibility.KohlsViewItems",
+   "type": "string"
+  },
+  "superclassName": {
+   "id": "superclassName",
+   "value": "sc.plat.ui.ExtensibleScreen",
+   "type": "string"
+  },
+  "regXtype": {
+   "id": "regXtype",
+   "value": "seaItemSearch4",
+   "type": "string"
+  },
+  "header": {
+   "id": "header",
+   "value": "false",
+   "type": "boolean"
+  },
+  "layout": {
+   "id": "layout",
+   "value": "anchor",
+   "type": "string"
+  },
+  "autoScroll": {
+   "id": "autoScroll",
+   "value": "true",
+   "type": "boolean"
+  },
+  "items": {
+   "id": "items",
+   "value": [{
+    "id": "",
+    "value": {
+     "sciId": {
+      "id": "sciId",
+      "value": "ineligibilityGrid",
+      "type": "string"
+     },
+     "title": {
+      "id": "title",
+      "value": "Ineligible Items For Store",
+      "type": "string"
+     },
+     "columns": {
+      "id": "columns",
+      "value": [{
+       "id": "",
+       "value": "this.checkBoxSelectionModel",
+       "type": "expr"
+      },
+      {
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "ItemID",
+         "type": "string"
+        },
+        "header": {
+         "id": "header",
+         "value": "ItemID",
+         "type": "string"
+        },
+        "sortable": {
+         "id": "sortable",
+         "value": "true",
+         "type": "boolean"
+        },
+        "dataIndex": {
+         "id": "dataIndex",
+         "value": "ItemID",
+         "type": "string"
+        },
+        "width": {
+         "id": "width",
+         "value": "100",
+         "type": "number"
+        },
+        "align": {
+         "id": "align",
+         "value": "Center",
+         "type": "string"
+        },
+        "bindingData": {
+         "id": "bindingData",
+         "value": {
+          "sFieldConfig": {
+           "id": "sFieldConfig",
+           "value": {
+            "mapping": {
+             "id": "mapping",
+             "value": "ItemID",
+             "type": "string"
+            },
+            "defid": "object"
+           },
+           "type": "object"
+          },
+          "defid": "object"
+         },
+         "type": "object"
+        },
+        "defid": "grid-column"
+       },
+       "type": "grid-column"
+      },
+      {
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "ClassID",
+         "type": "string"
+        },
+        "header": {
+         "id": "header",
+         "value": "ClassID",
+         "type": "string"
+        },
+        "sortable": {
+         "id": "sortable",
+         "value": "true",
+         "type": "boolean"
+        },
+        "dataIndex": {
+         "id": "dataIndex",
+         "value": "ClassID",
+         "type": "string"
+        },
+        "width": {
+         "id": "width",
+         "value": "200",
+         "type": "number"
+        },
+        "align": {
+         "id": "align",
+         "value": "Center",
+         "type": "string"
+        },
+        "bindingData": {
+         "id": "bindingData",
+         "value": {
+          "sFieldConfig": {
+           "id": "sFieldConfig",
+           "value": {
+            "mapping": {
+             "id": "mapping",
+             "value": "ClassID",
+             "type": "string"
+            },
+            "defid": "object"
+           },
+           "type": "object"
+          },
+          "defid": "object"
+         },
+         "type": "object"
+        },
+        "defid": "grid-column"
+       },
+       "type": "grid-column"
+      },
+      {
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "Style",
+         "type": "string"
+        },
+        "header": {
+         "id": "header",
+         "value": "Style",
+         "type": "string"
+        },
+        "sortable": {
+         "id": "sortable",
+         "value": "true",
+         "type": "boolean"
+        },
+        "dataIndex": {
+         "id": "dataIndex",
+         "value": "Style",
+         "type": "string"
+        },
+        "width": {
+         "id": "width",
+         "value": "100",
+         "type": "number"
+        },
+        "align": {
+         "id": "align",
+         "value": "Center",
+         "type": "string"
+        },
+        "bindingData": {
+         "id": "bindingData",
+         "value": {
+          "sFieldConfig": {
+           "id": "sFieldConfig",
+           "value": {
+            "mapping": {
+             "id": "mapping",
+             "value": "Style",
+             "type": "string"
+            },
+            "defid": "object"
+           },
+           "type": "object"
+          },
+          "defid": "object"
+         },
+         "type": "object"
+        },
+        "defid": "grid-column"
+       },
+       "type": "grid-column"
+      },
+      {
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "StartDate",
+         "type": "string"
+        },
+        "header": {
+         "id": "header",
+         "value": "Effective Start Date",
+         "type": "string"
+        },
+        "sortable": {
+         "id": "sortable",
+         "value": "true",
+         "type": "boolean"
+        },
+        "width": {
+         "id": "width",
+         "value": "200",
+         "type": "number"
+        },
+        "dataIndex": {
+         "id": "dataIndex",
+         "value": "FromDate",
+         "type": "string"
+        },
+        "align": {
+         "id": "align",
+         "value": "Center",
+         "type": "string"
+        },
+        "bindingData": {
+         "id": "bindingData",
+         "value": {
+          "sFieldConfig": {
+           "id": "sFieldConfig",
+           "value": {
+            "mapping": {
+             "id": "mapping",
+             "value": "FromDate",
+             "type": "string"
+            },
+            "defid": "object"
+           },
+           "type": "object"
+          },
+          "defid": "object"
+         },
+         "type": "object"
+        },
+        "defid": "grid-column"
+       },
+       "type": "grid-column"
+      },
+      {
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "EndDate",
+         "type": "string"
+        },
+        "sortable": {
+         "id": "sortable",
+         "value": "true",
+         "type": "boolean"
+        },
+        "align": {
+         "id": "align",
+         "value": "Center",
+         "type": "string"
+        },
+        "header": {
+         "id": "header",
+         "value": "Effective End Date",
+         "type": "string"
+        },
+        "width": {
+         "id": "width",
+         "value": "200",
+         "type": "number"
+        },
+        "dataIndex": {
+         "id": "dataIndex",
+         "value": "ToDate",
+         "type": "string"
+        },
+        "bindingData": {
+         "id": "bindingData",
+         "value": {
+          "sFieldConfig": {
+           "id": "sFieldConfig",
+           "value": {
+            "mapping": {
+             "id": "mapping",
+             "value": "ToDate",
+             "type": "string"
+            },
+            "defid": "object"
+           },
+           "type": "object"
+          },
+          "defid": "object"
+         },
+         "type": "object"
+        },
+        "defid": "grid-column"
+       },
+       "type": "grid-column"
+      },
+      {
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "Actions",
+         "type": "string"
+        },
+        "sortable": {
+         "id": "sortable",
+         "value": "true",
+         "type": "boolean"
+        },
+        "align": {
+         "id": "align",
+         "value": "Center",
+         "type": "string"
+        },
+        "header": {
+         "id": "header",
+         "value": "Actions",
+         "type": "string"
+        },
+        "width": {
+         "id": "width",
+         "value": "200",
+         "type": "number"
+        },
+        "layout": {
+         "id": "layout",
+         "value": "anchor",
+         "type": "string"
+        },
+        "renderer": {
+         "id": "renderer",
+         "value": "this.showLinksWithImageInColumns",
+         "type": "expr"
+        },
+        "bindingData": {
+         "id": "bindingData",
+         "value": {
+          "sFieldConfig": {
+           "id": "sFieldConfig",
+           "value": {
+            "defaultValue": {
+             "id": "defaultValue",
+             "value": "this.getModifyAction()",
+             "type": "expr"
+            },
+            "defid": "object"
+           },
+           "type": "object"
+          },
+          "defid": "object"
+         },
+         "type": "object"
+        },
+        "defid": "grid-column"
+       },
+       "type": "grid-column"
+      },
+      {
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "Hidden",
+         "type": "string"
+        },
+        "align": {
+         "id": "align",
+         "value": "Center",
+         "type": "string"
+        },
+        "hidden": {
+         "id": "hidden",
+         "value": "true",
+         "type": "boolean"
+        },
+        "dataIndex": {
+         "id": "dataIndex",
+         "value": "ExtnStoreInEligblKey",
+         "type": "string"
+        },
+        "bindingData": {
+         "id": "bindingData",
+         "value": {
+          "sFieldConfig": {
+           "id": "sFieldConfig",
+           "value": {
+            "mapping": {
+             "id": "mapping",
+             "value": "ExtnStoreInEligblKey",
+             "type": "string"
+            },
+            "defid": "object"
+           },
+           "type": "object"
+          },
+          "defid": "object"
+         },
+         "type": "object"
+        },
+        "defid": "grid-column"
+       },
+       "type": "grid-column"
+      }],
+      "type": "array"
+     },
+     "border": {
+      "id": "border",
+      "value": "true",
+      "type": "boolean"
+     },
+     "stripeRows": {
+      "id": "stripeRows",
+      "value": "true",
+      "type": "boolean"
+     },
+     "selModel": {
+      "id": "selModel",
+      "value": "this.checkBoxSelectionModel",
+      "type": "expr"
+     },
+     "sctype": {
+      "id": "sctype",
+      "value": "InnerGridPanel",
+      "type": "string"
+     },
+     "width": {
+      "id": "width",
+      "value": "1000",
+      "type": "number"
+     },
+     "tbar": {
+      "id": "tbar",
+      "value": [{
+       "id": "",
+       "value": {
+        "sciId": {
+         "id": "sciId",
+         "value": "inElgDelButton",
+         "type": "string"
+        },
+        "text": {
+         "id": "text",
+         "value": "Delete",
+         "type": "string"
+        },
+        "handler": {
+         "id": "handler",
+         "value": "this.deletInelgHandler",
+         "type": "expr"
+        },
+        "scope": {
+         "id": "scope",
+         "value": "this",
+         "type": "expr"
+        },
+        "defid": "button"
+       },
+       "type": "button"
+      }],
+      "type": "array"
+     },
+     "bbar": {
+      "id": "bbar",
+      "value": "this.pagingToolbar",
+      "type": "expr"
+     },
+     "autoHeight": {
+      "id": "autoHeight",
+      "value": "true",
+      "type": "boolean"
+     },
+     "bindingData": {
+      "id": "bindingData",
+      "value": {
+       "sourceBinding": {
+        "id": "sourceBinding",
+        "value": "kohlsitemList_output:ExtnItemInEligibilityList.ExtnItemInEligibility",
+        "type": "string"
+       },
+       "pagination": {
+        "id": "pagination",
+        "value": {
+         "pageSize": {
+          "id": "pageSize",
+          "value": "15",
+          "type": "number"
+         },
+         "root": {
+          "id": "root",
+          "value": "ExtnItemInEligibilityList.ExtnItemInEligibility",
+          "type": "string"
+         },
+         "url": {
+          "id": "url",
+          "value": "this.getUrl()",
+          "type": "expr"
+         },
+         "strategy": {
+          "id": "strategy",
+          "value": "NEXTPAGE",
+          "type": "string"
+         },
+         "defid": "pagination"
+        },
+        "type": "object"
+       },
+       "defid": "object"
+      },
+      "type": "object"
+     },
+     "listeners": {
+      "id": "listeners",
+      "value": {
+       "scope": {
+        "id": "scope",
+        "value": "this",
+        "type": "expr"
+       },
+       "cellclick": {
+        "id": "cellclick",
+        "value": "this.handlerOpenModifyPopup",
+        "type": "expr"
+       },
+       "defid": "listeners"
+      },
+      "type": "object"
+     },
+     "defid": "grid"
+    },
+    "type": "grid"
+   }],
+   "type": "array"
+  },
+  "namespaces": {
+   "id": "namespaces",
+   "value": {
+    "target": {
+     "id": "target",
+     "value": [{
+      "id": "",
+      "value": {
+       "name": {
+        "id": "name",
+        "value": "",
+        "type": "string"
+       },
+       "description": {
+        "id": "description",
+        "value": "",
+        "type": "string"
+       },
+       "defid": "target"
+      },
+      "type": "target"
+     }],
+     "type": "array"
+    },
+    "source": {
+     "id": "source",
+     "value": [{
+      "id": "",
+      "value": {
+       "name": {
+        "id": "name",
+        "value": "",
+        "type": "string"
+       },
+       "description": {
+        "id": "description",
+        "value": "",
+        "type": "string"
+       },
+       "defid": "source"
+      },
+      "type": "source"
+     }],
+     "type": "array"
+    },
+    "defid": "namespaces"
+   },
+   "type": "object"
+  },
+  "defid": "screen"
+ },
+ "version": "0.3.0b",
+ "type": "SCREEN",
+ "_verificationText": "VerificationText",
+ "dataSources": {}
+}

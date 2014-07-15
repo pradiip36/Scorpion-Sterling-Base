@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<YFS_CATEGORY_DOMAINList TableName="YFS_CATEGORY_DOMAIN">
+<CategoryDomain AttributeName=" " CategoryDomain="DEFAULTMasterCatalog"
+    CategoryDomainKey="20101018162521833" Createprogid="XMLMigrator"
+    Createts="2010-10-18T16:25:21-04:00" Createuserid="SYSTEM"
+    Description="Master Catalog for DEFAULT" IsClassification="N"
+    Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-10-18T16:25:21-04:00" Modifyuserid="sterling"
+    OrganizationCode="DEFAULT" ShortDescription="Master Catalog"/>
+<CategoryDomain AttributeName="ItemType" CategoryDomain="ItemType"
+    CategoryDomainKey="201010201804588310"
+    Createprogid=".YEntityServlet" Createts="2010-10-20T18:04:57-04:00"
+    Createuserid="admin" Description="Item Type Classification"
+    IsClassification="Y" Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2010-10-20T18:04:57-04:00" Modifyuserid="sterling"
+    OrganizationCode="DEFAULT" ShortDescription="Item Type Classification"/>
+<CategoryDomain AttributeName="Extn_ExtnNomadic"
+    CategoryDomain="Nomadic" CategoryDomainKey="20120516153000376057"
+    Createprogid=".YEntityServlet" Createts="2012-05-16T15:30:00-04:00"
+    Createuserid="admin" Description="Nomadic Indicator"
+    IsClassification="Y" Lockid="0" Modifyprogid=".YEntityServlet"
+    Modifyts="2012-05-16T15:30:00-04:00" Modifyuserid="admin"
+    OrganizationCode="DEFAULT" ShortDescription="Nomadic Indicator"/>
+<CategoryDomain AttributeName="Extn_ExtnShipNodeSource"
+    CategoryDomain="Extn_ExtnShipNodeSource"
+    CategoryDomainKey="2012062614354551173"
+    Createprogid=".YEntityServlet" Createts="2012-06-26T14:35:45-04:00"
+    Createuserid="tkmayy0" Description="Ship node source"
+    IsClassification="Y" Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2012-06-26T14:35:45-04:00" Modifyuserid="sterling"
+    OrganizationCode="DEFAULT" ShortDescription="Ship node source"/>
+<CategoryDomain AttributeName=" " CategoryDomain="KohlsCatalog"
+    CategoryDomainKey="2013061523252726289707"
+    Createprogid="YDKConfigDeploy" Createts="2013-07-31T19:11:52-04:00"
+    Createuserid="oms_config" Description="Kohls Catalog"
+    IsClassification="N" Lockid="0" Modifyprogid="YDKConfigDeploy"
+    Modifyts="2013-07-31T19:11:52-04:00" Modifyuserid="oms_config"
+    OrganizationCode="DEFAULT" ShortDescription="Kohls Catalog"/>
+</YFS_CATEGORY_DOMAINList>

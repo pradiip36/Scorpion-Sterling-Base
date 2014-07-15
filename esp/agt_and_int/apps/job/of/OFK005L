@@ -1,0 +1,46 @@
+#!/usr/bin/ksh
+#
+# Name:         OFK005L
+# Author:       Craig Kehoe
+# Date Created: 2011, May
+# Date Changed: 2011, September
+# Date Changed: 2012, August
+# Date Changed: 2013, May - eFC4 Upgrade
+#
+# Purpose
+# -------
+# This script provides an interface by which a scheduling system may
+# invoke the missing order-release-picktickets monitor.
+#
+# Arguments
+# ---------
+#     -c runcommand [-p profile] [-r retvalscript] [-u loguploadscript]
+#                   [-e email address] [-1 minimum days]
+#                   [-2 maximum days]
+#
+# Note that "-c runcommand" is the only mandatory argument.
+#
+########################################################################
+
+readonly my_name="${0}"
+readonly my_invocation="${@}"
+readonly my_pid="${$}"
+readonly my_starting_datetime="$(date +%Y%m%dT%H%M%S%Z)"
+K_SRC=/prod/apps
+K_LOG=/logs/prod
+
+readonly efcsqlfilenm="${K_SRC}/of/OF_efc_pkts.sql"
+readonly efc2012sqlfilenm="${K_SRC}/of/OF_efc_pkts_2012.sql"
+readonly omssqlfilenm="${K_SRC}/of/OF_oms_pkts.sql"
+readonly efc1spoolfilenm="${K_LOG}/of/OF_efc1_pkts.spool"
+readonly efc2spoolfilenm="${K_LOG}/of/OF_efc2_pkts.spool"
+readonly efc3spoolfilenm="${K_LOG}/of/OF_efc3_pkts.spool"
+readonly efc4spoolfilenm="${K_LOG}/of/OF_efc4_pkts.spool"
+readonly omsspoolfilenm="${K_LOG}/of/OF_oms_pkts.spool"
+readonly omssortedfilenm="${K_LOG}/of/OF_oms_pkts.sorted"
+readonly allefcssortedfilenm="${K_LOG}/of/OF_all_efc_pkts.sorted"
+readonly missingdatafilenm=\
+"${K_LOG}/of/OF_missing_pkts${my_starting_datetime}.dat"
+
+. ${K_SRC}/job/OFKMRPP
+

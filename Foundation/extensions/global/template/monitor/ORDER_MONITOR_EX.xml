@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- 
+Licensed Materials - Property of IBM
+IBM Sterling Selling And Fulfillment Suite
+(C) Copyright IBM Corp. 2005, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+ -->
+<MonitorConsolidation AutoResolve="" Createprogid=""
+    Createts="" Createuserid=""  Description="" 
+	Field10IsKey="" Field1IsKey="" Field2IsKey="" 
+	Field3IsKey="" Field4IsKey="" Field5IsKey=""
+    Field6IsKey="" Field7IsKey="" Field8IsKey="" 
+	Field9IsKey="" FlowKey="" GroupByField1="" 
+	GroupByField10="" GroupByField2="" GroupByField3="" 
+	GroupByField4="" GroupByField5=""  GroupByField6="" 
+	GroupByField7="" GroupByField8="" GroupByField9=""
+    InventoryOrganizationCode=""  Modifyprogid="" Modifyts=""
+    Modifyuserid="" MonitorConsolidationId=""
+    MonitorConsolidationKey="" MonitorTypeKey=""
+    ProcessTypeKey="" RealertInterval="" RealertRequired="">
+		<Order AllocationRuleID="" AuthorizationExpirationDate="" BillToID=""
+			BuyerOrganizationCode="" CarrierAccountNo="" CarrierServiceCode=""
+			ChargeActualFreightFlag="" CustomerEMailID="" CustomerPONo=""
+			DeliveryCode="" Division="" DocumentType="" DraftOrderFlag=""
+			EnteredBy="" EnterpriseCode="" EntryType="" 
+			FreightTerms="" HoldFlag="" HoldReasonCode="" MaxOrderStatus=""
+			MaxOrderStatusDesc="" MinOrderStatus="" MinOrderStatusDesc=""
+			NotificationReference="" NotificationType=""
+			NotifyAfterShipmentFlag="" OrderDate="" OrderHeaderKey=""
+			OrderName="" OrderNo="" OrderType="" OriginalTax=""
+			OriginalTotalAmount="" OtherCharges="" PaymentStatus=""
+			PersonalizeCode="" PriceProgramKey="" PriorityCode=""
+			PriorityNumber="" Purpose="" ReceivingNode="" ReqCancelDate="" ReqDeliveryDate=""
+			ReqShipDate="" SCAC="" ScacAndService="" ScacAndServiceKey=""
+			SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode=""
+			ShipCompleteFlag="" ShipToID="" Status="" TaxExemptFlag=""
+			TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId=""
+			TermsCode="" TotalAdjustmentAmount="" isHistory="">
+			<OrderStatuses>
+				<OrderStatus  
+					OrderHeaderKey="" OrderLineKey="" OrderLineScheduleKey=""
+					OrderReleaseKey="" OrderReleaseStatusKey="" PipelineKey=""
+					Status="" StatusDate="" StatusDescription="" StatusQty=""
+					StatusReason="" TotalQuantity="" ShipNode="" ReceivingNode="">
+				 <Details ExpectedDeliveryDate="" ExpectedShipmentDate="" TagNumber=""  ShipByDate="" />
+				 <MonitorRule CalendarException="" Age="" AgeType="" ComparisonDateSubType="" ComparisonDateType="" 
+					ComparisonStatus="" ConditionKey="" Createprogid="" Createts="" 
+					Createuserid="" DateSubTypeToMonitor="" DateTypeToMonitor=""
+					FlowKey="" Modifyprogid="" Modifyts="" Modifyuserid=""
+					MonitorConsolidationKey="" MonitorRuleKey="" MonitorType=""
+					PipelineKey="" Priority="" ProcessTypeKey="" StatusToMonitor=""/>
+				 </OrderStatus>
+			</OrderStatuses>
+			<OrderLines>
+			  <OrderLine OrderLineKey="" OrderedQty="" ShipNode="" DeliveryMethod="" MaxLineStatus=""
+            MaxLineStatusDesc="" Status="">
+			    <Item ItemShortDesc="" ItemID="" >
+				 <Extn ExtnColorDesc="" ExtnSizeDesc="" />
+				</Item> 
+			    <Shipnode>
+				   <ShipNodePersonInfo AddressLine1=""
+                                    AddressLine2="" AddressLine3=""
+                                    AddressLine4="" AddressLine5=""
+                                    AddressLine6="" AlternateEmailID=""
+                                    Beeper="" City="" Company=""
+                                    Country="" DayFaxNo="" DayPhone=""
+                                    Department="" EMailID="" ErrorTxt=""
+                                    EveningFaxNo="" EveningPhone=""
+                                    FirstName="" HttpUrl=""
+                                    IsCommercialAddress="" JobTitle=""
+                                    LastName="" MiddleName=""
+                                    MobilePhone="" OtherPhone=""
+                                    PersonID="" PersonInfoKey=""
+                                    PreferredShipAddress="" State=""
+                                    Suffix="" TaxGeoCode="" Title=""
+                                    UseCount="" VerificationStatus="" ZipCode=""/>
+			    </Shipnode>
+				<Extn/>
+			  </OrderLine>
+			</OrderLines>
+			<PersonInfoBillTo FirstName="" LastName=""/>
+		</Order>
+</MonitorConsolidation>

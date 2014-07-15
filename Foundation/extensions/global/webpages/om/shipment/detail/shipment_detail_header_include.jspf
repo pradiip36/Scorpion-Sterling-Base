@@ -1,0 +1,37 @@
+<%@ page import="java.util.*" %>
+<%@ page import="com.yantra.yfc.util.*" %>
+<%@ include file="/console/jsp/editable_table_utils.jspf" %>
+
+<%
+
+	String sOperation = request.getParameter("userOperation");
+	 YFCElement errors = (YFCElement)request.getAttribute("YFC_EXCEPTIONXML");
+	 YFCElement root = null;
+	 YFCElement oNewShipment = null;
+	 YFCElement eOrigAPIElem = null;
+
+		if(equals(request.getParameter("getRequestDOM"),"Y")) //Currently, it is passed as Y from order_detail_anchor.jsp & return_detail_anchor.jsp
+		{
+			YFCElement detailAPIRoot = (YFCElement) request.getAttribute("Shipment"); //Detail API Output
+			eOrigAPIElem = (YFCElement)detailAPIRoot.cloneNode(true);
+			request.setAttribute("OrigAPIOutput",eOrigAPIElem);
+			//System.out.println("eOrigAPIElem------>" + eOrigAPIElem.toString());
+
+			HashMap shipmentLineAttrs  = new HashMap();
+			shipmentLineAttrs.put("ShipmentLine", "ShipmentLineKey");
+			
+			if(!isVoid(errors) || equals(sOperation,"Y") || equals(sOperation,"DELETE"))
+			{
+				root = getRequestDOM(); //Data that Posted from the Detail View
+				request.setAttribute("getRequestDOMOutput",root);
+				if(root != null) {
+					oNewShipment = root.getChildElement("Shipment");
+					//System.out.println("getRequestDOMOutput------>"+root.toString());
+				}
+				if(oNewShipment !=null)		
+				{
+					mergeRequestAndAPIOutput(detailAPIRoot,oNewShipment,shipmentLineAttrs);
+				}
+			}
+	}
+%>

@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!--
+Licensed Materials - Property of IBM
+IBM Sterling Selling and Fulfillment Suite
+(C) Copyright IBM Corp. 2001, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<!-- This XML will be filled in by the user at deployment time of the
+Sterling application. The desired services are to be added as named webservices.
+ The ServiceName attribute is the name of the
+service that the user has configured within the Sterling Service Builder.
+The ExposedName attribute is the name that will be used in the wsdl.
+This is the name that a webservice caller will use to programmatically
+the webservice
+The User can optionally expose only certain apis by specifing the api names
+under the Apis Node.  If the user wants to expose all the apis the 
+ExposeAllAPIs attribute should be set to "Y"
+
+NOTE:  For WebSphere, there is a strict requirement that all exposed
+webservices must start with a lower case letter. 
+
+-->
+
+<WebServices>
+	<Beans>
+		<Bean BeanName="KohlsExposeGetOrderDetailsAPI" BeanPackage="com.kohls.bopus" >
+			<Apis ExposeAllAPIs="N" >
+				<Api Name="getOrderDetails" ExposedName="exposeGetOrderDetails" />
+			</Apis>
+			<Services >
+				<Service Name="KohlsGetOrderDetailsWebService" ExposedName="exposeGetOrderDetailsWebService" />	
+			</Services>
+		</Bean>
+		<Bean BeanName="KohlsExposeGetOrderListAPI" BeanPackage="com.kohls.bopus" >
+			<Apis ExposeAllAPIs="N" >
+				<Api Name="getOrderList" ExposedName="exposeGetOrderList" />
+			</Apis>
+			<Services >
+				<Service Name="KohlsGetOrderListWebService" ExposedName="exposeGetOrderListWebService"/>	
+			</Services>
+		</Bean>
+		<Bean BeanName="KohlsExposeGetOrderForChange" BeanPackage="com.kohls.bopus" >
+			<Services >
+				<Service Name="KOHLSGetOrderForChangeWebService" ExposedName="getOrderForChangeService" />	
+			</Services>
+		</Bean>
+		<Bean BeanName="KohlsExposeEComChangeOrder" BeanPackage="com.kohls.bopus" >
+			<Services >
+				<Service Name="KOHLSEComChangeOrderWebService" ExposedName="eComChangeOrderService" />	
+			</Services>
+		</Bean>
+		<Bean BeanName="EODSettlementWebservice" BeanPackage="com.bopus.webservice" >
+			<Services >
+				<Service Name="KOHLSEODSettlementSummaryWebService" ExposedName="EODSettlement" />	
+			</Services>
+		</Bean>
+		<Bean BeanName="LocationInventorySupply" BeanPackage="com.kohls.giv.inventory.webservices" >
+			<Services>
+				<Service Name="GetLocationInventorySupply" ExposedName="getLocationInventorySupply" />	
+			</Services>
+		</Bean>
+		<Bean BeanName="InventoryDemand" BeanPackage="com.kohls.mls.inventory.webservices" >
+			<Services>
+				<Service Name="KohlsInventoryDemandService" ExposedName="getItemLocations" />
+				<Service Name="KohlsgetHoldLocationDescriptionSTUB" ExposedName="getLocationDetails" />	
+				<Service Name="KohlsInventoryUpdateToMLSSTUB" ExposedName="updateLocationItems" />
+			</Services>
+		</Bean>
+	</Beans>
+</WebServices>
